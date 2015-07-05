@@ -7,6 +7,10 @@
 
 Atom language support for NSIS
 
+![Screenshot](https://raw.github.com/idleberg/language-nsis/master/screenshot.png)
+
+*Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
+
 ## Installation
 
 ### apm
