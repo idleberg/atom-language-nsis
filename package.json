@@ -1,13 +1,12 @@
 {
   "name": "language-nsis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Atom language support for NSIS",
   "author": {
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/idleberg/language-nsis",
   "license": "MIT",
   "engines": {
