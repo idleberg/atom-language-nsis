@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetExePath'
+    'body': '\\${GetExePath} \\$${1:var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetFileExt'
+    'body': '\\${GetFileExt} \"${1:file_string}\" \\$${2:var}'

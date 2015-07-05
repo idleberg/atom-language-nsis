@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ReadEnvStr':
+    'prefix': 'ReadEnvStr'
+    'body': 'ReadEnvStr \\$${1:user_var} \"${2:name}\"'

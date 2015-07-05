@@ -1,0 +1,4 @@
+'.source.nsis':
+  'UninstallCaption':
+    'prefix': 'UninstallCaption'
+    'body': 'UninstallCaption \"${1:caption}\"'

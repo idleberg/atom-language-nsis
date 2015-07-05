@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'MultiUser'
+    'body': '!include MultiUser.nsh'

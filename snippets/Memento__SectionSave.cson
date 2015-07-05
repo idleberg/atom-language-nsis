@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Memento.nsh':
+    'prefix': 'MementoSectionSave'
+    'body': '\\${MementoSectionSave}'

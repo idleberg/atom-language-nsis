@@ -1,0 +1,4 @@
+'.source.nsis':
+  'RegDLL':
+    'prefix': 'RegDLL'
+    'body': 'RegDLL \"${1:dllfile}\" ${2:entrypoint_name}'

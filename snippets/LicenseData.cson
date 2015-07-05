@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LicenseData':
+    'prefix': 'LicenseData'
+    'body': 'LicenseData \"${1:license_file}\"'

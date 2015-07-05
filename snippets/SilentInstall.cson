@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SilentInstall':
+    'prefix': 'SilentInstall'
+    'body': 'SilentInstall ${1:normal|silent|silentlog}'

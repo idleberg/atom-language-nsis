@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!verbose':
+    'prefix': 'verbose'
+    'body': '!verbose \"${1:level}\"'

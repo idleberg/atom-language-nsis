@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ComponentText':
+    'prefix': 'ComponentText'
+    'body': 'ComponentText \"${1:text}\" \"${2:[subtext]}\" \"${3:[subtext2]}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'BGFont':
+    'prefix': 'BGFont'
+    'body': 'BGFont \"${1:font_face}\"'

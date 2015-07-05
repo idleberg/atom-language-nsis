@@ -1,0 +1,4 @@
+'.source.nsis':
+  'EnableWindow':
+    'prefix': 'EnableWindow'
+    'body': 'EnableWindow \\$${1:hwnd} ${2:1|0}'

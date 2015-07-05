@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ReadRegDWORD':
+    'prefix': 'ReadRegDWORD'
+    'body': 'ReadRegDWORD \\$${1:user_var} ${2:root_key} \"${3:sub_key}\" \"${4:name}\"'

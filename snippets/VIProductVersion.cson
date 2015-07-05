@@ -1,0 +1,4 @@
+'.source.nsis':
+  'VIProductVersion':
+    'prefix': 'VIProductVersion'
+    'body': 'VIProductVersion \"${1:version_string}\"'

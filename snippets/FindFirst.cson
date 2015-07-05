@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FindFirst':
+    'prefix': 'FindFirst'
+    'body': 'FindFirst \\$${1:handle} \\$${2:user_var} \"${2:filespec}\"'

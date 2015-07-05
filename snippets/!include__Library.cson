@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'Library'
+    'body': '!include Library.nsh'

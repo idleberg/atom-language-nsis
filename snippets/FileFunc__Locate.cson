@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'Locate'
+    'body': '\\${Locate} \"${1:path}\" \"${2:options}\" \"${3:function}\"'

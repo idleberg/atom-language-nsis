@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LicenseBkColor':
+    'prefix': 'LicenseBkColor'
+    'body': 'LicenseBkColor \"${1:color}\"'

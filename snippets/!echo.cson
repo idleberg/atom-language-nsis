@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!echo':
+    'prefix': 'echo'
+    'body': '!echo \"${1:message}\"'

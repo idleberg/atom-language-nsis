@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!searchreplace':
+    'prefix': 'searchreplace'
+    'body': '!searchreplace", "contents": "!searchparse \"${1:symbol_out}\" \"${2:source_string}\" \"${3:searchfor}\" \"${3:replacewith}\"'

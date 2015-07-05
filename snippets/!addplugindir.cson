@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!addplugindir':
+    'prefix': 'addplugindir'
+    'body': '!addincludedir \"${1:directory}\"'

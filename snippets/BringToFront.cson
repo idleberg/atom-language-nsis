@@ -1,0 +1,4 @@
+'.source.nsis':
+  'BringToFront':
+    'prefix': 'BringToFront'
+    'body': 'BringToFront'

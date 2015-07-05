@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InstallButtonText':
+    'prefix': 'InstallButtonText'
+    'body': 'InstallButtonText \"${1:button_text}\"'

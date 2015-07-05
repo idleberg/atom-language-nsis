@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ShowInstDetails':
+    'prefix': 'ShowInstDetails'
+    'body': 'ShowInstDetails ${1:hide|show|nevershow}'

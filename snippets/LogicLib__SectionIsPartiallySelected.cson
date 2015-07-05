@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'SectionIsPartiallySelected'
+    'body': '\\${SectionIsPartiallySelected} \\${${1}}'

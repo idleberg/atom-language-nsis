@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetFileAttributes':
+    'prefix': 'SetFileAttributes'
+    'body': 'SetFileAttributes \"${1:filename}\" ${2:NORMAL|ARCHIVE|HIDDEN|OFFLINE|READONLY|SYSTEM|TEMPORARY}'

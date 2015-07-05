@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetErrors':
+    'prefix': 'SetErrors'
+    'body': 'SetErrors'

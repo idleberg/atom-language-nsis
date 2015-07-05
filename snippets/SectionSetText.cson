@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SectionSetText':
+    'prefix': 'SectionSetText'
+    'body': 'SectionSetText \\${${1:section_index}} ${2:section_text}'

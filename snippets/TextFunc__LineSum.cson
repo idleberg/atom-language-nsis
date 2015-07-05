@@ -1,0 +1,4 @@
+'.source.nsis':
+  'TextFunc.nsh':
+    'prefix': 'LineSum'
+    'body': '\\${LineSum} \"${1:file}\" \\$${2:var}'

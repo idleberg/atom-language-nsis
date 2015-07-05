@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Goto':
+    'prefix': 'Goto'
+    'body': 'Goto ${1:label_to_jump_to}'

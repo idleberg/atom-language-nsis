@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Reboot':
+    'prefix': 'Reboot'
+    'body': 'Reboot'

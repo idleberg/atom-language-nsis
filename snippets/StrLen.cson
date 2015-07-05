@@ -1,0 +1,4 @@
+'.source.nsis':
+  'StrLen':
+    'prefix': 'StrLen'
+    'body': 'StrLen \\$${1:user_var} \"${2:str}\"'

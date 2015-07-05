@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!delfile':
+    'prefix': 'delfile'
+    'body': '!delfile \"${1:file}\"'

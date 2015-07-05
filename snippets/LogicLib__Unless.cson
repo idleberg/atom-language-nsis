@@ -1,0 +1,8 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'Unless'
+    'body': """
+      \\${Unless} \\$${1:var}
+        ${4:# your code here}
+      \\${EndUnless}
+    """

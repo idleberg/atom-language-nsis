@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'WordFunc'
+    'body': '!include WordFunc.nsh'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WordFunc.nsh':
+    'prefix': 'WordAdd'
+    'body': '\\${WordAdd} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" \\$${4:output}'

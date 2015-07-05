@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileOpen':
+    'prefix': 'FileOpen'
+    'body': 'FileOpen \\$${1:user_var} \"${2:filename}\" ${3:openmode}'

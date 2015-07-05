@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InstTypeSetText':
+    'prefix': 'InstTypeSetText'
+    'body': 'InstTypeSetText ${1:inst_type_idx} \"${2:text}\"'

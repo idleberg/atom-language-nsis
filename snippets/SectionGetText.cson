@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SectionGetText':
+    'prefix': 'SectionGetText'
+    'body': 'SectionGetText \\${${1:section_index}} \\$${2:user_var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'include'
+    'body': '!include \"${1:file}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Delete':
+    'prefix': 'Delete'
+    'body': 'Delete \"${1:file}\"'

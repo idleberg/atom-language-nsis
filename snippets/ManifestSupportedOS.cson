@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ManifestSupportedOS':
+    'prefix': 'ManifestSupportedOS'
+    'body': 'ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}'

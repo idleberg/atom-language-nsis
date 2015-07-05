@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Pop':
+    'prefix': 'Pop'
+    'body': 'Pop \\$${1:user_var}'

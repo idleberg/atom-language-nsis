@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Icon':
+    'prefix': 'Icon'
+    'body': 'Icon \"${1:icon}.ico\"'

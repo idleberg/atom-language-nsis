@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LicenseForceSelection':
+    'prefix': 'LicenseForceSelection'
+    'body': 'LicenseForceSelection \"${1:checkbox|radiobuttons|off}\" ${2:\"${3:accept_text}\" \"${4:decline_text}}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'RequestExecutionLevel':
+    'prefix': 'RequestExecutionLevel'
+    'body': 'RequestExecutionLevel ${1:none|user|admin|highest}'

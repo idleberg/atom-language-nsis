@@ -1,0 +1,4 @@
+'.source.nsis':
+  'DirVerify':
+    'prefix': 'DirVerify'
+    'body': 'DirVerify ${1:auto|leave}'

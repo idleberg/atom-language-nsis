@@ -1,0 +1,4 @@
+'.source.nsis':
+  'GetInstDirError':
+    'prefix': 'GetInstDirError'
+    'body': 'GetInstDirError \\$${1:user_var}'

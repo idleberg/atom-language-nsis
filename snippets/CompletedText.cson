@@ -1,0 +1,4 @@
+'.source.nsis':
+  'CompletedText':
+    'prefix': 'CompletedText'
+    'body': 'CompletedText \"${1:text}\"'

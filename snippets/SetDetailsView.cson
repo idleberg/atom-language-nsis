@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetDetailsView':
+    'prefix': 'SetDetailsView'
+    'body': 'SetDetailsView ${1:show|hide}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Nop':
+    'prefix': 'Nop'
+    'body': 'Nop'

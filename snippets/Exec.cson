@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Exec':
+    'prefix': 'Exec'
+    'body': 'Exec \"${1:command}\"'

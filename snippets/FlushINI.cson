@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FlushINI':
+    'prefix': 'FlushINI'
+    'body': 'FlushINI \"${1:ini_filename}\"'

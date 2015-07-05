@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ReadINIStr':
+    'prefix': 'ReadINIStr'
+    'body': 'ReadINIStr \\$${1:user_var} \"${2:ini_filename}\" \"${3:section_name}\" \"${4:entry_name}\"'

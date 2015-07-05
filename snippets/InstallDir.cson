@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InstallDir':
+    'prefix': 'InstallDir'
+    'body': 'InstallDir \"${1:install_directory}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Rename':
+    'prefix': 'Rename'
+    'body': 'Rename \"${1:source_file}\" \"${2:dest_file}\"'

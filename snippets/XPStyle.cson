@@ -1,0 +1,4 @@
+'.source.nsis':
+  'XPStyle':
+    'prefix': 'XPStyle'
+    'body': 'XPStyle ${1:off|on}'

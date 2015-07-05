@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InstTypeGetText':
+    'prefix': 'InstTypeGetText'
+    'body': 'InstTypeGetText ${1:inst_type_idx} \\$${2:user_var}'

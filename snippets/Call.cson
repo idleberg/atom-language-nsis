@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Call':
+    'prefix': 'Call'
+    'body': 'Call ${1:function_name}'

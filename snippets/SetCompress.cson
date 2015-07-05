@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetCompress':
+    'prefix': 'SetCompress'
+    'body': 'SetCompress ${1:auto|force|off}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Sleep':
+    'prefix': 'Sleep'
+    'body': 'Sleep ${1:sleeptime_in_ms}'

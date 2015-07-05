@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'DirState'
+    'body': '\\${DirState} \"${1:path}\" \\$${2:var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'Sections'
+    'body': '!include Sections.nsh'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetCurInstType':
+    'prefix': 'SetCurInstType'
+    'body': 'SetCurInstType ${1:inst_type_idx}'

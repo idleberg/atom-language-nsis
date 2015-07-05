@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WordFunc.nsh':
+    'prefix': 'WordInsert'
+    'body': '\\${WordInsert} \"${1:input}\" \"${2:delimiter}\" \"${3:word}\" \"${4:options}\" \\$${5:output}'

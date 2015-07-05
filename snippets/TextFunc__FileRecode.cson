@@ -1,0 +1,4 @@
+'.source.nsis':
+  'TextFunc.nsh':
+    'prefix': 'FileRecode'
+    'body': '\\${FileRecode} \"${1:file}\" \"${2:OemToChar|CharToOem}\"'

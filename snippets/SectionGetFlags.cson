@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SectionGetFlags':
+    'prefix': 'SectionGetFlags'
+    'body': 'SectionGetFlags \\${${1:section_index}} \\$${2:user_var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Page':
+    'prefix': 'Page'
+    'body': 'Page ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LangString':
+    'prefix': 'LangString'
+    'body': 'LangString ${1:name} ${2:\\${LANG_ENGLISH\\}} \"${3:string}\"'

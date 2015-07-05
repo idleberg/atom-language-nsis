@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WriteRegBin':
+    'prefix': 'WriteRegBin'
+    'body': 'WriteRegBin ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:valuedata}\"'

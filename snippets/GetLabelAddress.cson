@@ -1,0 +1,4 @@
+'.source.nsis':
+  'GetLabelAddress':
+    'prefix': 'GetLabelAddress'
+    'body': 'GetLabelAddress \\$${1:user_var} ${2:label}'

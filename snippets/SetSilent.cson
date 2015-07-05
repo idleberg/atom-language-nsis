@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetSilent':
+    'prefix': 'SetSilent'
+    'body': 'SetSilent ${1:normal|silent}'

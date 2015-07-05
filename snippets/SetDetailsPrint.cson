@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetDetailsPrint':
+    'prefix': 'SetDetailsPrint'
+    'body': 'SetDetailsPrint ${1:both|lastused|listonly|none|text}'

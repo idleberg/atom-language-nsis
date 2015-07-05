@@ -1,0 +1,4 @@
+'.source.nsis':
+  'IfRebootFlag':
+    'prefix': 'IfRebootFlag'
+    'body': 'IfRebootFlag ${1:jump_if_set} ${2:[jump_if_not_set]}'

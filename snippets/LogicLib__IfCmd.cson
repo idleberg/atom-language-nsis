@@ -1,0 +1,6 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'IfCmd'
+    'body': """
+      \\${IfCmd} ${1:command} \\${|} ${4:command} \\${|}
+    """

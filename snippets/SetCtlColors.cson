@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetCtlColors':
+    'prefix': 'SetCtlColors'
+    'body': 'SetCtlColors \\$${1:hwnd} \"0x${2:text_color}\" \"0x${3:bg_color}\"'

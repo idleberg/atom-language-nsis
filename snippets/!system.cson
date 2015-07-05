@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!system':
+    'prefix': 'system'
+    'body': '!system \"${1:command}\"'

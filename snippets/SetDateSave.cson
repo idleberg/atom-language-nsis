@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetDateSave':
+    'prefix': 'SetDateSave'
+    'body': 'SetDateSave ${1:on|off}'

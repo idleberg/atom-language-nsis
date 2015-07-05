@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetFileAttributes'
+    'body': '\\${GetFileAttributes} \"${1:file}\" \"${2:attributes}\" \\$${3:var}'

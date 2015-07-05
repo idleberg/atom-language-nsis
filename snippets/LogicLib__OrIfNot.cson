@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'OrIfNot'
+    'body': '\\${OrIfNot} ${1:condition}'

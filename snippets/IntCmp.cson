@@ -1,0 +1,4 @@
+'.source.nsis':
+  'IntCmp':
+    'prefix': 'IntCmp'
+    'body': 'IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}'

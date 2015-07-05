@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetBrandingImage':
+    'prefix': 'SetBrandingImage'
+    'body': 'SetBrandingImage \"${1:path_to_bitmap_file}.bmp\"'

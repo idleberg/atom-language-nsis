@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ChangeUI':
+    'prefix': 'ChangeUI'
+    'body': 'ChangeUI ${1:dialog} \"${2:ui_file}.exe\"'

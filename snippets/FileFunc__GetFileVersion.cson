@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetFileVersion'
+    'body': '\\${GetFileVersion} \"${1:executable}\" \\$${2:version}'

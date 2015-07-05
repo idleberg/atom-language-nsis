@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Caption':
+    'prefix': 'Caption'
+    'body': 'Caption \"${1:caption}\"'

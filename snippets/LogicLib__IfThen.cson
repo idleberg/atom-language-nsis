@@ -1,0 +1,6 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'IfThen'
+    'body': """
+      \\${IfThen} ${1:condition} \\${|} ${4:command} \\${|}
+    """

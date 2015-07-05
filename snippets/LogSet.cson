@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LogSet':
+    'prefix': 'LogSet'
+    'body': 'LogSet ${1:on|off}'

@@ -1,0 +1,8 @@
+'.source.nsis':
+  'Function':
+    'prefix': 'onInstSuccess'
+    'body': """
+      Function .onInstSuccess
+        ${3:# your code here}
+      FunctionEnd
+    """

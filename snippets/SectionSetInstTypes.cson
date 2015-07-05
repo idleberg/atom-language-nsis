@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SectionSetInstTypes':
+    'prefix': 'SectionSetInstTypes'
+    'body': 'SectionSetInstTypes \\${${1:section_index}} ${2:inst_types}'

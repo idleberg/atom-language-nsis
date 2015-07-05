@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ReserveFile':
+    'prefix': 'ReserveFile'
+    'body': 'ReserveFile \"${1:file}\"'

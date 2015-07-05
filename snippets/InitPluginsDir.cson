@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InitPluginsDir':
+    'prefix': 'InitPluginsDir'
+    'body': 'InitPluginsDir'

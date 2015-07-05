@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FindWindow':
+    'prefix': 'FindWindow'
+    'body': 'FindWindow \\$${1:user_var} \"${2:windowclass}\"${3: \"${4:windowtitle}\"${5: ${6:windowparent}${7: ${8:childafter}}}}'

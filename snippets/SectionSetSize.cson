@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SectionSetSize':
+    'prefix': 'SectionSetSize'
+    'body': 'SectionSetSize \\${${1:section_index}} ${2:new_size}'

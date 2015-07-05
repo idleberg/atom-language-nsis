@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'Cmd'
+    'body': '\\${Cmd} ${1:command}'

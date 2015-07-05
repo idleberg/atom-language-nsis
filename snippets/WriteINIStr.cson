@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WriteINIStr':
+    'prefix': 'WriteINIStr'
+    'body': 'WriteINIStr \"${1:ini_filename}\" \"${2:section_name}\" \"${3:entry_name}\" \"${4:value}\"'

@@ -1,0 +1,8 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'ForNext'
+    'body': """
+      \\${For} ${1:statement}
+        ${2:# your code here}
+      \\${Next}
+    """

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'GetErrorLevel':
+    'prefix': 'GetErrorLevel'
+    'body': 'GetErrorLevel \\$${1:user_var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'IntOp':
+    'prefix': 'IntOp'
+    'body': 'IntOp \\$${1:user_var} ${2:value1} ${3:operator} ${4:value2}'

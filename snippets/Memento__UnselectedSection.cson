@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Memento.nsh':
+    'prefix': 'MementoUnselectedSection'
+    'body': '\\${MementoUnselectedSection}  ${1:section_name} ${2:section_index}'

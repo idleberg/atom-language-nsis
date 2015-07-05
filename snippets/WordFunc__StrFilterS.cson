@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WordFunc.nsh':
+    'prefix': 'StrFilterS'
+    'body': '\\${StrFilterS} \"${1:input}\" \"${2:options}\" \"${3:symbols1}\" \"${4:symbols2}\" \\$${5:output}'

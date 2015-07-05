@@ -1,0 +1,4 @@
+'.source.nsis':
+  'GetFullPathName':
+    'prefix': 'GetFullPathName'
+    'body': 'GetFullPathName \\$${1:user_var} \"${2:filename}\"'

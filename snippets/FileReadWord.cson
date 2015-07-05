@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileReadWord':
+    'prefix': 'FileReadWord'
+    'body': 'FileReadWord \\$${1:handle} \\$${2:user_var}'

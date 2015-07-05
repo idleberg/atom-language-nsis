@@ -1,0 +1,4 @@
+'.source.nsis':
+  'UninstallSubCaption':
+    'prefix': 'UninstallSubCaption'
+    'body': 'UninstallSubCaption ${1:page_number} \"${2:subcaption}\"'

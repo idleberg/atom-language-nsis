@@ -1,0 +1,4 @@
+'.source.nsis':
+  'DeleteINISec':
+    'prefix': 'DeleteINISec'
+    'body': 'DeleteINISec \"${1:ini_filename}\" \"${2:section_name}\"'

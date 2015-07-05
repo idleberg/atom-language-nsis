@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileReadByte':
+    'prefix': 'FileReadByte'
+    'body': 'FileReadByte \\$${1:handle} \\$${2:user_var}'

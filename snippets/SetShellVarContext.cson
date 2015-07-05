@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetShellVarContext':
+    'prefix': 'SetShellVarContext'
+    'body': 'SetShellVarContext ${1:all|current}'

@@ -1,6 +1,0 @@
-'.source.nsis':
-  '${IfCmd}':
-    'prefix': 'IfCmd'
-    'body': """
-      \${IfCmd} ${1:command} \${|} ${4:command} \${|}
-    """

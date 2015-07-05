@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'FileFunc'
+    'body': '!include FileFunc.nsh'

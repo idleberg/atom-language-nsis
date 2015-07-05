@@ -1,6 +1,0 @@
-'.source.nsis':
-  '${IfThenNot}':
-    'prefix': 'IfThenNot'
-    'body': """
-      \${IfThenNot} ${1:condition} \${|} ${4:command} \${|}
-    """

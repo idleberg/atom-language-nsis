@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!searchparse':
+    'prefix': 'searchparse'
+    'body': '!searchparse \"${1:source_string_or_file}\" \"${2:substring_start}\" \"${3:OUTPUTSYMBOL1}\"'

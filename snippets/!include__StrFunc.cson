@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'StrFunc'
+    'body': '!include StrFunc.nsh'

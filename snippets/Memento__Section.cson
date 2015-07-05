@@ -1,0 +1,8 @@
+'.source.nsis':
+  'Memento.nsh':
+    'prefix': 'MementoSection'
+    'body': """
+      \\${MementoSection} \"${1:section_name}\" ${2:section_index_output}
+        ${3:# your code here}
+      \\${MementoSectionEnd}
+    """

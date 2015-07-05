@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LicenseLangString':
+    'prefix': 'LicenseLangString'
+    'body': 'LicenseLangString ${1:name} ${2:\\${LANG_ENGLISH\\}} \"${3:license_path}\"'

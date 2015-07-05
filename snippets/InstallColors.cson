@@ -1,0 +1,4 @@
+'.source.nsis':
+  'InstallColors':
+    'prefix': 'InstallColors'
+    'body': 'InstallColors \"${1:foreground_color}\" \"${2:background_color}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'ClearErrors':
+    'prefix': 'ClearErrors'
+    'body': 'ClearErrors'

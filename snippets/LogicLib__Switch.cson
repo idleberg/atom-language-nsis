@@ -1,0 +1,8 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'Switch'
+    'body': """
+      \\${Switch} \\$${1:var}
+        ${4:# your code here}
+      \\${EndSwitch}
+    """

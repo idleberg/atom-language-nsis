@@ -1,0 +1,8 @@
+'.source.nsis':
+  'Function':
+    'prefix': 'onVerifyInstDir'
+    'body': """
+      Function .onVerifyInstDir
+        ${3:# your code here}
+      FunctionEnd
+    """

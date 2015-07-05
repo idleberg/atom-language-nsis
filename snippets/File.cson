@@ -1,0 +1,4 @@
+'.source.nsis':
+  'File':
+    'prefix': 'File'
+    'body': 'File \"${1:file}\"'

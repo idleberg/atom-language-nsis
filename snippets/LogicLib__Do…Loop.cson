@@ -1,0 +1,8 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'DoLoop'
+    'body': """
+      \${Do}
+        ${1:# your code here}
+      \${Loop}
+    """

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Name':
+    'prefix': 'Name'
+    'body': 'Name \"${1:name}\"'

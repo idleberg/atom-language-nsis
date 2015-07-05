@@ -1,0 +1,8 @@
+'.source.nsis':
+  'Function':
+    'prefix': 'onGUIEnd'
+    'body': """
+      Function .onGUIEnd
+        ${3:# your code here}
+      FunctionEnd
+    """

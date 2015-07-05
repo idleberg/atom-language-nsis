@@ -1,0 +1,4 @@
+'.source.nsis':
+  'DirVar':
+    'prefix': 'DirVar'
+    'body': 'DirVar \\$${1:user_var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LockWindow':
+    'prefix': 'LockWindow'
+    'body': 'LockWindow ${1:on|off}'

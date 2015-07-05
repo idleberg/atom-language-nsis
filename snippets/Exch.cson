@@ -1,0 +1,4 @@
+'.source.nsis':
+  'Exch':
+    'prefix': 'Exch'
+    'body': 'Exch ${1:[user_var|stack_index]}'

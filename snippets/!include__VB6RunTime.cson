@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'VB6RunTime'
+    'body': '!include VB6RunTime.nsh'

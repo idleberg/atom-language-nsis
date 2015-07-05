@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'BannerTrimPath'
+    'body': '\\${BannerTrimPath} \"${1:path_string}\" \"${2:option}\" \\$${3:var}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetOptionsS'
+    'body': '\\${GetOptionsS} \"${1:parameters}\" \"${2:option}\" \\$${3:var}'

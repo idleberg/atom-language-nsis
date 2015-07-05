@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WordFunc.nsh':
+    'prefix': 'WordFind3xS'
+    'body': '\\${WordFind3xS} \"${1:input}\" \"${2:delimiter1}\" \"${3:center}\" \"${4:delimiter2}\" \"${5:options}\" \\$${6:output}'

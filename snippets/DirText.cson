@@ -1,0 +1,4 @@
+'.source.nsis':
+  'DirText':
+    'prefix': 'DirText'
+    'body': 'DirText \"${1:[text]}\" \"${2:[subtext]}\" \"${3:[browse_button_text]}\" \"${4:[browse_dlg_text]}\"'

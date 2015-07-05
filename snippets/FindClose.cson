@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FindClose':
+    'prefix': 'FindClose'
+    'body': 'FindClose \\$${1:handle}'

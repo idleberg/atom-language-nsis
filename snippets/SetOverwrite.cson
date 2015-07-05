@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SetOverwrite':
+    'prefix': 'SetOverwrite'
+    'body': 'SetOverwrite ${1:on|off|try|ifdiff|ifnewer|lastused}'

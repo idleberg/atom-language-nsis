@@ -1,0 +1,4 @@
+'.source.nsis':
+  'UninstallIcon':
+    'prefix': 'UninstallIcon'
+    'body': 'UninstallIcon \"${1:icon}.ico\"'

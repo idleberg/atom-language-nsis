@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!error':
+    'prefix': 'error'
+    'body': '!error \"${1:message}\"'

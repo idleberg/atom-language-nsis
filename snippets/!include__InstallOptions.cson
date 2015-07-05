@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!include':
+    'prefix': 'InstallOptions'
+    'body': '!include InstallOptions.nsh'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'CreateShortCut':
+    'prefix': 'CreateShortCut'
+    'body': 'CreateShortCut \"${1:link}.lnk\" ${2:target}'

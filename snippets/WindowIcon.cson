@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WindowIcon':
+    'prefix': 'WindowIcon'
+    'body': 'WindowIcon ${1:on|off}'

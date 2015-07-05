@@ -1,0 +1,4 @@
+'.source.nsis':
+  'FileFunc':
+    'prefix': 'GetRoot'
+    'body': '\\${GetRoot} \"${1:full_path}\" \\$${2:var}'

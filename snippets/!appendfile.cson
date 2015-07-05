@@ -1,0 +1,4 @@
+'.source.nsis':
+  '!appendfile':
+    'prefix': 'appendfile'
+    'body': '!appendfile \"${1:file}\" \"${2:text}\"'

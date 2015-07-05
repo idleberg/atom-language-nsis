@@ -1,0 +1,4 @@
+'.source.nsis':
+  'TextFunc.nsh':
+    'prefix': 'LineRead'
+    'body': '\\${LineRead} \"${1:file}\" \"${2:line_number}\" \\$${3:var}'

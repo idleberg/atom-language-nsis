@@ -1,0 +1,8 @@
+'.source.nsis':
+  'Function':
+    'prefix': 'onSelChange'
+    'body': """
+      Function .onSelChange
+        ${3:# your code here}
+      FunctionEnd
+    """

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LogicLib.nsh':
+    'prefix': 'Case'
+    'body': '\\${Case} ${1:case}'

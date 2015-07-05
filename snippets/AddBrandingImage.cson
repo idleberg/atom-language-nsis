@@ -1,0 +1,4 @@
+'.source.nsis':
+  'AddBrandingImage':
+    'prefix': 'AddBrandingImage'
+    'body': 'AddBrandingImage ${1:left|right|top|bottom} ${2:width|height} ${3:[padding]}'

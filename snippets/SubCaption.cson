@@ -1,0 +1,4 @@
+'.source.nsis':
+  'SubCaption':
+    'prefix': 'SubCaption'
+    'body': 'SubCaption ${1:page_number} \"${2:subcaption}\"'
