@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'FontItalic'
+    'body': 'FontItalic=${1:0|1}'

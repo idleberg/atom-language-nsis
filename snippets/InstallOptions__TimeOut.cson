@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'TimeOut'
+    'body': 'TimeOut=${1:time_in_ms}'

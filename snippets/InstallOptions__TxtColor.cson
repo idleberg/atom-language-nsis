@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'TxtColor'
+    'body': 'TxtColor=0x${1:BBGGRR}'

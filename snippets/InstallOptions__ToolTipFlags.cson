@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'ToolTipFlags'
+    'body': 'ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}'

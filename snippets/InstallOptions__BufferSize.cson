@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'BufferSize'
+    'body': 'BufferSize=${1:integer}'

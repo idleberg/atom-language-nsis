@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'HWND'
+    'body': 'HWND=${1:handle}'

@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'FontHeight'
+    'body': 'FontHeight=${1:height_in_pt}'
