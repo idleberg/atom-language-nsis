@@ -1,0 +1,3 @@
+".source.nsis":
+  editor:
+    commentStart: "; "

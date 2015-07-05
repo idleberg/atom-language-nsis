@@ -1,0 +1,23 @@
+{
+  "name": "language-nsis",
+  "version": "0.0.1",
+  "description": "Atom language support for NSIS",
+  "author": {
+    "name": "Jan T. Sott",
+    "url": "http://github.com/idleberg"
+  },
+  "keywords": [
+  ],
+  "repository": "https://github.com/idleberg/language-nsis",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-coffeelint": "^0.5.0"
+  },
+  "scripts": {
+    "test": "gulp lint"
+  }
+}
