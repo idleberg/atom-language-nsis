@@ -1,7 +1,8 @@
 # NSIS for Atom
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/apm/v/language-nsis.svg?style=flat-square)](https://atom.io/themes/language-nsis)[![Travis](https://img.shields.io/travis/idleberg/language-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/language-nsis)
+[![Version](https://img.shields.io/apm/v/language-nsis.svg?style=flat-square)](https://atom.io/themes/language-nsis)
+[![Travis](https://img.shields.io/travis/idleberg/language-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/language-nsis)
 [![David](https://img.shields.io/david/dev/idleberg/language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/language-nsis#info=devDependencies)
 
 Atom language support for NSIS
