@@ -1,5 +1,5 @@
 '.source.nsis':
-  'Scaffold basic script':
+  'Scaffold: Basic Script':
     'prefix': 'scaffold'
     'body': """
       ; Scaffolding by https://github.com/idleberg/language-nsis
