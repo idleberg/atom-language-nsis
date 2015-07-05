@@ -1,0 +1,8 @@
+'.source.nsis':
+  '${If}':
+    'prefix': 'If'
+    'body': """
+      \${If} ${1:condition}
+        ${4:# your code here}
+      \${EndIf}
+    """

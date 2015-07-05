@@ -1,0 +1,8 @@
+'.source.nsis':
+  '!if':
+    'prefix': 'if'
+    'body': """
+      !if ${1:value1} ${2:op} ${3:value2}
+        ${4:# your code here}
+      !endif
+    """

@@ -1,0 +1,8 @@
+'.source.nsis':
+  'PageEx':
+    'prefix': 'PageEx'
+    'body': """
+      PageEx \"${1:page_type}\"
+        ${3:# your code here}
+      PageExEnd
+    """

@@ -1,0 +1,10 @@
+'.source.nsis':
+  '${IfNot…Else}':
+    'prefix': 'IfNotElse'
+    'body': """
+      \${IfNot} ${1:condition}
+        ${4:# your code here}
+      \${Else}
+        ${5:# your code here}
+      \${EndIf}
+    """

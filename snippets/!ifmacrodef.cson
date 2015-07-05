@@ -1,0 +1,8 @@
+'.source.nsis':
+  '!ifmacrodef':
+    'prefix': 'ifmacrodef'
+    'body': """
+      !ifmacrodef ${1:gflag}
+        ${2:# your code here}
+      !endif
+    """

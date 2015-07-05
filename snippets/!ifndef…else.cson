@@ -1,0 +1,10 @@
+'.source.nsis':
+  '!ifndef…else':
+    'prefix': 'ifndefelse'
+    'body': """
+      !ifndef ${1:gflag}
+        ${2:# your code here}
+      !else
+        ${3:# your code here}
+      !endif
+    """

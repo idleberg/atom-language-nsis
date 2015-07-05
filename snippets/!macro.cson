@@ -1,0 +1,8 @@
+'.source.nsis':
+  '!macro':
+    'prefix': 'macro'
+    'body': """
+      !macro ${1:macro_name} ${2:parameter}
+        ${3:# your code here}
+      !macroend
+    """
