@@ -1,4 +1,4 @@
 '.source.nsis':
   'Var':
     'prefix': 'Var'
-    'body': 'Var ${1:var_name}'
+    'body': 'Var ${1:/GLOBAL }${2:var_name}'

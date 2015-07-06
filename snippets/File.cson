@@ -1,4 +1,4 @@
 '.source.nsis':
   'File':
     'prefix': 'File'
-    'body': 'File \"${1:file}\"'
+    'body': 'File ${1:${2:parameters} }\"${3:file}\"'
