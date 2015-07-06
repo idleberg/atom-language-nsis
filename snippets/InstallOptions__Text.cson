@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Text'
-    'body': 'Text=${1:text}'

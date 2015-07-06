@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Notify'
-    'body': 'Notify=${1:value}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Top'
-    'body': 'Top=${1:distance_in_px}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ReadOnlyBgColor'
-    'body': 'ReadOnlyBgColor=0x${1:BBRRGG}'

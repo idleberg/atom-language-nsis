@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'SelBgColor'
-    'body': 'SelBgColor=0x${1:BBRRGG}'

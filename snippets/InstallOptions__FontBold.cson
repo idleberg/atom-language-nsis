@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'FontBold'
-    'body': 'FontBold=${1:0|1}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ToolTipText'
-    'body': 'ToolTipText=${1:text}'

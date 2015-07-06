@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'HWND2'
-    'body': 'HWND2=${1:handle}'

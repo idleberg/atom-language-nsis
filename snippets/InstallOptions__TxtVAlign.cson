@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'TxtVAlign'
-    'body': 'TxtVAlign=${1:TOP|CENTER|BOTTOM|JUSTIFY}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ToolTipIcon'
-    'body': 'ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}'

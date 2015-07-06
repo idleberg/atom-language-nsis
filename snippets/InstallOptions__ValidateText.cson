@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ValidateText'
-    'body': 'ValidateText=${1:text}'

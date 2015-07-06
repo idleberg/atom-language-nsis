@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ToolTipTitle'
-    'body': 'ToolTipTitle=${1:title}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'FontName'
-    'body': 'FontName=${1:font_name}'

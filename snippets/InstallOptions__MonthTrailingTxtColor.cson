@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'MonthTrailingTxtColor'
-    'body': 'MonthTrailingTxtColor=0x${1:BBRRGG}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'SelTxtShwColor'
-    'body': 'SelTxtShwColor=0x${1:BBRRGG}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'RTL'
-    'body': 'RTL=${1:1}'

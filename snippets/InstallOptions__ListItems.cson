@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ListItems'
-    'body': 'ListItems=${1:item1|item2}'

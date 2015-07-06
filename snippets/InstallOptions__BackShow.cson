@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'BackShow'
-    'body': 'BackShow=${1:0|1}'

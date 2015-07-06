@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'HeaderItemsAlign'
-    'body': 'HeaderItemsAlign=${1:LEFT|RIGHT}'

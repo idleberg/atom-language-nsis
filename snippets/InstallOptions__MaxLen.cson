@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'MaxLen'
-    'body': 'MaxLen=${1:integer}'

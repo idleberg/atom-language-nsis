@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ToolTipTxtColor'
-    'body': 'ToolTipTxtColor=0x${1:BBRRGG}'

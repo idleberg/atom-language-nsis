@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'CancelEnabled'
-    'body': 'CancelEnabled=${1:0|1}'

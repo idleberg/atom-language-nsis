@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'DisTxtColor'
-    'body': 'DisTxtColor=0x${1:BBRRGG}'

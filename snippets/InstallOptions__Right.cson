@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Right'
-    'body': 'Right=${1:distance_in_px}'

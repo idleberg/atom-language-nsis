@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'BackButtonText'
-    'body': 'BackButtonText=${1:text}'

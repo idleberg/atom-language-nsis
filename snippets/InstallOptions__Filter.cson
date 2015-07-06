@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Filter'
-    'body': 'Filter=${1:All Files|*.*}'

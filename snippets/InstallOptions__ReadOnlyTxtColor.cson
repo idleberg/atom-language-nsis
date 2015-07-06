@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'ReadOnlyTxtColor'
-    'body': 'ReadOnlyTxtColor=0x${1:BBRRGG}'

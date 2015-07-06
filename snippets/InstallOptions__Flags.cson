@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'Flags'
-    'body': 'Flags=${1:flags}'

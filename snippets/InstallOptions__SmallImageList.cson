@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'SmallImageList'
-    'body': 'SmallImageList=${1:images}'

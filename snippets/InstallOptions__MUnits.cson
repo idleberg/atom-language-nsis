@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'MUnits'
-    'body': 'MUnits=${1:0|1}'

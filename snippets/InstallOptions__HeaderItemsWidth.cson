@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'HeaderItemsWidth'
-    'body': 'HeaderItemsWidth=${1:width_in_px}'

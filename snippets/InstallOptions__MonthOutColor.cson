@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions':
-    'prefix': 'MonthOutColor'
-    'body': 'MonthOutColor=0x${1:BBRRGG}'
