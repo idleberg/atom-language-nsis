@@ -1,4 +1,4 @@
 '.source.nsis':
   'BgImage.dll':
-    'prefix': 'BgImage__AddText'
+    'prefix': 'BgImage::AddText'
     'body': 'BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}'

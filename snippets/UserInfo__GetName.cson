@@ -1,4 +1,4 @@
 '.source.nsis':
   'UserInfo.dll':
-    'prefix': 'UserInfo__GetName'
+    'prefix': 'UserInfo::GetName'
     'body': 'UserInfo::GetName'

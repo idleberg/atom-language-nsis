@@ -1,4 +1,4 @@
 '.source.nsis':
   'System.dll':
-    'prefix': 'System__Get'
+    'prefix': 'System::Get'
     'body': 'System::Get \"${1:parameters}\"'

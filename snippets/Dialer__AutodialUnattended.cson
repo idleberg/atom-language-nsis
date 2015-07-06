@@ -1,4 +1,4 @@
 '.source.nsis':
   'Dialer.dll':
-    'prefix': 'Dialer__AutodialUnattended'
+    'prefix': 'Dialer::AutodialUnattended'
     'body': 'Dialer::AutodialUnattended'

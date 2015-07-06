@@ -1,4 +1,4 @@
 '.source.nsis':
   'BgImage.dll':
-    'prefix': 'BgImage__Redraw'
+    'prefix': 'BgImage::Redraw'
     'body': 'BgImage::Redraw'

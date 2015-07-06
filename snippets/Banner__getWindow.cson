@@ -1,4 +1,4 @@
 '.source.nsis':
   'Banner.dll':
-    'prefix': 'Banner__getWindow'
+    'prefix': 'Banner::getWindow'
     'body': 'Banner::getWindow \"${1:file}\"'

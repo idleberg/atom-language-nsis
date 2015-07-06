@@ -1,4 +1,4 @@
 '.source.nsis':
   'System.dll':
-    'prefix': 'System__Copy'
+    'prefix': 'System::Copy'
     'body': 'System::Copy ${1:destination} ${2:source}'

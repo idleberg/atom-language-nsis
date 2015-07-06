@@ -1,4 +1,4 @@
 '.source.nsis':
   'InstallOptions.dll':
-    'prefix': 'InstallOptions__initDialog'
+    'prefix': 'InstallOptions::initDialog'
     'body': 'InstallOptions::initDialog ${1:/NOUNLOAD }\"${2:file}.ini\"'

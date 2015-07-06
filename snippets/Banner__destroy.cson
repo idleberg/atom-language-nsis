@@ -1,4 +1,4 @@
 '.source.nsis':
   'Banner.dll':
-    'prefix': 'Banner__destroy'
+    'prefix': 'Banner::destroy'
     'body': 'Banner::destroy'

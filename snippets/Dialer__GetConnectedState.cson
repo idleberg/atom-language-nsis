@@ -1,4 +1,4 @@
 '.source.nsis':
   'Dialer.dll':
-    'prefix': 'Dialer__GetConnectedState'
+    'prefix': 'Dialer::GetConnectedState'
     'body': 'Dialer::GetConnectedState'

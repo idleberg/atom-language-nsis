@@ -1,4 +1,4 @@
 '.source.nsis':
   'Dialer.dll':
-    'prefix': 'Dialer__AutodialOnline'
+    'prefix': 'Dialer::AutodialOnline'
     'body': 'Dialer::AutodialOnline'

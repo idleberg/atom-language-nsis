@@ -1,4 +1,4 @@
 '.source.nsis':
   'Dialer.dll':
-    'prefix': 'Dialer__AttemptConnect'
+    'prefix': 'Dialer::AttemptConnect'
     'body': 'Dialer::AttemptConnect'

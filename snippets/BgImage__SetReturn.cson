@@ -1,4 +1,4 @@
 '.source.nsis':
   'BgImage.dll':
-    'prefix': 'BgImage__SetReturn'
+    'prefix': 'BgImage::SetReturn'
     'body': 'BgImage::SetReturn \"${1:on|off}\"'
