@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'Align'
+    'body': 'Align=${1:LEFT|CENTER|RIGHT}'

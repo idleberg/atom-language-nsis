@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'ListItemsHeight'
+    'body': 'ListItemsHeight=${1:height_in_px}'

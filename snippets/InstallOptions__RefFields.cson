@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'RefFields'
+    'body': 'RefFields=${1:integer}'

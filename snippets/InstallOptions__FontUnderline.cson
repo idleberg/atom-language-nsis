@@ -1,0 +1,4 @@
+'.source.ini':
+  'InstallOptions':
+    'prefix': 'FontUnderline'
+    'body': 'FontUnderline=${1:0|1}'
