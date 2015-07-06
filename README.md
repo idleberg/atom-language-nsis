@@ -11,6 +11,38 @@ Atom language support for NSIS, consisting of grammar and snippets
 
 *Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
 
+## Features
+
+* all inbuilt NSIS commands
+* Plugins:
+    * AdvSplash
+    * Banner
+    * BgImage
+    * Dialer
+    * InstallOptions
+    * LangDLL
+    * Math
+    * nsDialogs
+    * nsExec
+    * NSISdl
+    * Splash
+    * StartMenu
+    * System
+    * UserInfo
+    * VPatch
+* Macros:
+    * FileFunc
+    * WordFunc
+    * LogicLib
+    * Memento
+    * Modern
+    * MultiUser
+    * Sections
+    * WinMessages
+    * WinVer
+    * x64
+* Scaffolding Snippets
+
 ## Installation
 
 ### apm
