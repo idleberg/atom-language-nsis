@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'StateRTL'
     'body': 'StateRTL=${1:state}'

@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'CancelShow'
     'body': 'CancelShow=${1:0|1}'

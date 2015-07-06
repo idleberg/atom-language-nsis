@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'AtLeastWinME'
+    'body': '\\${AtLeastWinME}'

@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'Root'
     'body': 'Root=${1:root}'

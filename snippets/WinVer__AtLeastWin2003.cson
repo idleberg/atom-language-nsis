@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'AtLeastWin2003'
+    'body': '\\${AtLeastWin2003}'

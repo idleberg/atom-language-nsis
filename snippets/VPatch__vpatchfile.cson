@@ -1,0 +1,4 @@
+'.source.nsis':
+  'VPatch.dll':
+    'prefix': 'VPatch__vpatchfile'
+    'body': 'VPatch::vpatchfile \"${1:patch}.pat\" \"${2:old_file}\" \"${3:new_file}\"'

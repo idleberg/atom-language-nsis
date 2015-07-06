@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'IsWin7'
+    'body': '\\${IsWin7}'

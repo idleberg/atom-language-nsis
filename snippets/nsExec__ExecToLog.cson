@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsExec.dll':
+    'prefix': 'nsExec::ExecToLog'
+    'body': 'nsExec::ExecToLog ${1:${2:/OEM|/TIMEOUT} }\"${3:command}\"'

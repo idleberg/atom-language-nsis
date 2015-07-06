@@ -1,0 +1,4 @@
+'.source.nsis':
+  'StartMenu.dll':
+    'prefix': 'StartMenu__Select'
+    'body': 'StartMenu::Select \"${1}\"'

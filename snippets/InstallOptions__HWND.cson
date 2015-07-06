@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'HWND'
     'body': 'HWND=${1:handle}'

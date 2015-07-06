@@ -1,0 +1,4 @@
+'.source.nsis':
+  'System.dll':
+    'prefix': 'System__Alloc'
+    'body': 'System::Alloc ${1:size}'

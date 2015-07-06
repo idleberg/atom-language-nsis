@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'ToolTipIcon'
     'body': 'ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}'

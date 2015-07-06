@@ -1,0 +1,4 @@
+'.source.nsis':
+  'BgImage.dll':
+    'prefix': 'BgImage__Sound'
+    'body': 'BgImage::Sound \"${1:file}.wav\"'

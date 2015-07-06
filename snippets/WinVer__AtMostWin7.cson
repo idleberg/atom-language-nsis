@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'AtMostWin7'
+    'body': '\\${AtMostWin7}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'BgImage.dll':
+    'prefix': 'BgImage__AddImage'
+    'body': 'BgImage::AddImage \"${1:file}.bmp\" ${2:x} ${3:y}'

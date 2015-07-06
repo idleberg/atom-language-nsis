@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'NSD_AddStyle'
     'body': '\\${NSD_AddStyle} \\$${1:dialog} \"${2:style}\"'

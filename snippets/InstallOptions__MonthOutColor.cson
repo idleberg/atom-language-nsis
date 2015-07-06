@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'MonthOutColor'
     'body': 'MonthOutColor=0x${1:BBRRGG}'

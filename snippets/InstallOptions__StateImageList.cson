@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'StateImageList'
     'body': 'StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp'

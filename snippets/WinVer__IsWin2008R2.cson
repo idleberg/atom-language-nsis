@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'IsWin2008R2'
+    'body': '\\${IsWin2008R2}'

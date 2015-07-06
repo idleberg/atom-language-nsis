@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'nsDialogs::Show'
     'body': 'nsDialogs::Show"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'BgImage.dll':
+    'prefix': 'BgImage__SetBg'
+    'body': 'BgImage::SetBg \"${1:file}.bmp\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'System.dll':
+    'prefix': 'System__Free'
+    'body': 'System::Free \\$${1:address}'

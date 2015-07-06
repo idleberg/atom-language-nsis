@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'NSD_SetIcon'
     'body': '\\${NSD_SetIcon} \\$${1:dialog} \"${2:icon_path}\" \\$${3:output}'

@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'nsDialogs::SelectFileDialog'
     'body': 'nsDialogs::SelectFileDialog ${1:mode} \"${2:initial_selection}\" \"${3:filter}\"'

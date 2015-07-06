@@ -1,0 +1,4 @@
+'.source.nsis':
+  'WinVer.nsh':
+    'prefix': 'AtLeastWin95'
+    'body': '\\${AtLeastWin95}'

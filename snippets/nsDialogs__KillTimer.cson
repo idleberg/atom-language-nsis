@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'NSD_KillTimer'
     'body': '\\${NSD_KillTimer} \"${1:function}\"'

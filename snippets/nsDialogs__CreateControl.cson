@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'nsDialogs::CreateControl'
     'body': 'nsDialogs::CreateControl ${1:class} ${2:style} ${3:extended_style} ${4:x} ${5:y} ${6:width} ${7:height} \"${8:text}\"'

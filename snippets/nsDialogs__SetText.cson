@@ -1,4 +1,4 @@
 '.source.nsis':
-  'nsDialogs':
+  'nsDialogs.dll':
     'prefix': 'NSD_SetText'
     'body': '\\${NSD_SetText} \\$${1:dialog} \"${2:text}\"'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'UserInfo.dll':
+    'prefix': 'UserInfo__GetOriginalAccountType'
+    'body': 'UserInfo::GetOriginalAccountType'

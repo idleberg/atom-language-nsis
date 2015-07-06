@@ -1,4 +1,4 @@
 '.source.ini':
-  'InstallOptions':
+  'InstallOptions.dll':
     'prefix': 'LargeImageList'
     'body': 'LargeImageList=${1:images}'

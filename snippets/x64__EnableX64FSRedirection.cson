@@ -1,0 +1,4 @@
+'.source.nsis':
+  'x64.nsh':
+    'prefix': 'EnableX64FSRedirection'
+    'body': '\\${EnableX64FSRedirection}'
