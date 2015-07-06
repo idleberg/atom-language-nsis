@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_SetTextLimit'
+    'body': '\\${NSD_SetTextLimit} \\$${1:dialog} ${2:text}'

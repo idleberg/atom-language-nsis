@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'nsDialogs::Create'
+    'body': 'nsDialogs::Create ${1:1018}'

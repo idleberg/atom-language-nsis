@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_Check'
+    'body': '\\${NSD_Check} \\$${1:dialog}'

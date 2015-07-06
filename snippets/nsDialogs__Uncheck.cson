@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_Uncheck'
+    'body': '\\${NSD_Uncheck} \\$${1:dialog}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_OnBack'
+    'body': '\\${NSD_OnBack} \"${1:function}\"'

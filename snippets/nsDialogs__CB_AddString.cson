@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_CB_AddString'
+    'body': '\\${NSD_CB_AddString} \\$${1:dialog} \"${2:string}\"'

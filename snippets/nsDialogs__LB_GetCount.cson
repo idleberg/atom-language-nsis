@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_LB_GetCount'
+    'body': '\\${NSD_LB_GetCount} \\$${1:dialog} \\$${2:output}'

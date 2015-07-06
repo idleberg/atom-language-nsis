@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_OnClick'
+    'body': '\\${NSD_OnClick} \\$${1:dialog} \"${2:function}\"'

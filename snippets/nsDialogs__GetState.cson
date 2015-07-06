@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_GetState'
+    'body': '\\${NSD_GetState} \\$${1:dialog} \\$${2:output}'

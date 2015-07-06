@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_LB_DelString'
+    'body': '\\${NSD_LB_DelString} \\$${1:dialog} \"${2:string}\"'

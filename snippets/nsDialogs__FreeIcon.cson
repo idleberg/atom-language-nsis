@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_FreeIcon'
+    'body': '\\${NSD_FreeIcon} \\$${1:dialog}'

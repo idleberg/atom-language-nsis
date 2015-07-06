@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_CreateBitmap'
+    'body': '\\${NSD_CreateBitmap} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"'

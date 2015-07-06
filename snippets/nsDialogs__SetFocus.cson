@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_SetFocus'
+    'body': '\\${NSD_SetFocus} \\$${1:dialog}'

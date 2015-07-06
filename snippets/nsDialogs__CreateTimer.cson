@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'NSD_CreateTimer'
+    'body': '\\${NSD_CreateTimer} \"${1:function}\" ${2:interval}'

@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'nsDialogs::GetUserData'
+    'body': 'nsDialogs::GetUserData \\$${1:control_HWND}'

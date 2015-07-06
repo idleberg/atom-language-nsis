@@ -1,0 +1,4 @@
+'.source.nsis':
+  'nsDialogs':
+    'prefix': 'nsDialogs::SetRTL'
+    'body': 'nsDialogs::SetRTL ${1:rtl_setting}'
