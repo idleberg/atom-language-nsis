@@ -15,8 +15,7 @@ Atom language support for NSIS, consisting of grammar and snippets
 
 ### apm
 
-* Make sure you have [Atom](https://atom.io/) (with apm) installed
-* Install package `apm install language-nsis`
+* Install package `apm install language-nsis` or use the GUI
 
 ### GitHub
 
