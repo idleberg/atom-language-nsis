@@ -6,7 +6,12 @@
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
   },
-  "keywords": [],
+  "keywords": [
+    "nsis",
+    "nullsoft",
+    "installer",
+    "setup"
+  ],
   "repository": "https://github.com/idleberg/language-nsis",
   "license": "MIT",
   "engines": {
