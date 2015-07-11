@@ -1,0 +1,420 @@
+'.source.ini':
+  'Align':
+    'prefix': 'Align'
+    'body': 'Align=${1:LEFT|CENTER|RIGHT}'
+  'BackButtonText':
+    'prefix': 'BackButtonText'
+    'body': 'BackButtonText=${1:text}'
+  'BackEnabled':
+    'prefix': 'BackEnabled'
+    'body': 'BackEnabled=${1:0|1}'
+  'BackShow':
+    'prefix': 'BackShow'
+    'body': 'BackShow=${1:0|1}'
+  'BALLOON':
+    'prefix': 'BALLOON'
+    'body': 'BALLOON'
+  'BgColor':
+    'prefix': 'BgColor'
+    'body': 'BgColor=0x${1:BBRRGG}'
+  'BOTTOM':
+    'prefix': 'BOTTOM'
+    'body': 'BOTTOM'
+  'BufferSize':
+    'prefix': 'BufferSize'
+    'body': 'BufferSize=${1:integer}'
+  'CancelButtonText':
+    'prefix': 'CancelButtonText'
+    'body': 'CancelButtonText=${1:text}'
+  'CancelEnabled':
+    'prefix': 'CancelEnabled'
+    'body': 'CancelEnabled=${1:0|1}'
+  'CancelShow':
+    'prefix': 'CancelShow'
+    'body': 'CancelShow=${1:0|1}'
+  'CENTER':
+    'prefix': 'CENTER'
+    'body': 'CENTER'
+  'DISABLED':
+    'prefix': 'DISABLED'
+    'body': 'DISABLED'
+  'DisBgColor':
+    'prefix': 'DisBgColor'
+    'body': 'DisBgColor=0x${1:BBRRGG}'
+  'DisSelBgColor':
+    'prefix': 'DisSelBgColor'
+    'body': 'DisSelBgColor=0x${1:BBRRGG}'
+  'DisSelTxtColor':
+    'prefix': 'DisSelTxtColor'
+    'body': 'DisSelTxtColor=0x${1:BBRRGG}'
+  'DisSelTxtShwColor':
+    'prefix': 'DisSelTxtShwColor'
+    'body': 'DisSelTxtShwColor=0x${1:BBRRGG}'
+  'DisTxtColor':
+    'prefix': 'DisTxtColor'
+    'body': 'DisTxtColor=0x${1:BBRRGG}'
+  'DisTxtShwColor':
+    'prefix': 'DisTxtShwColor'
+    'body': 'DisTxtShwColor=0x${1:BBRRGG}'
+  'EXCLAMATION':
+    'prefix': 'EXCLAMATION'
+    'body': 'EXCLAMATION'
+  'EXTENDEDSELCT':
+    'prefix': 'EXTENDEDSELCT'
+    'body': 'EXTENDEDSELCT'
+  'FILE_EXPLORER':
+    'prefix': 'FILE_EXPLORER'
+    'body': 'FILE_EXPLORER'
+  'FILE_HIDEREADONLY':
+    'prefix': 'FILE_HIDEREADONLY'
+    'body': 'FILE_HIDEREADONLY'
+  'FILE_MUST_EXIST':
+    'prefix': 'FILE_MUST_EXIST'
+    'body': 'FILE_MUST_EXIST'
+  'Filter':
+    'prefix': 'Filter'
+    'body': 'Filter=${1:All Files|*.*}'
+  'Flags':
+    'prefix': 'Flags'
+    'body': 'Flags=${1:flags}'
+  'FOCUS':
+    'prefix': 'FOCUS'
+    'body': 'FOCUS'
+  'FontBold':
+    'prefix': 'FontBold'
+    'body': 'FontBold=${1:0|1}'
+  'FontHeight':
+    'prefix': 'FontHeight'
+    'body': 'FontHeight=${1:height_in_pt}'
+  'FontItalic':
+    'prefix': 'FontItalic'
+    'body': 'FontItalic=${1:0|1}'
+  'FontName':
+    'prefix': 'FontName'
+    'body': 'FontName=${1:font_name}'
+  'FontUnderline':
+    'prefix': 'FontUnderline'
+    'body': 'FontUnderline=${1:0|1}'
+  'FontWidth':
+    'prefix': 'FontWidth'
+    'body': 'FontWidth=${1:width_in_px}'
+  'GROUP':
+    'prefix': 'GROUP'
+    'body': 'GROUP'
+  'HeaderItems':
+    'prefix': 'HeaderItems'
+    'body': 'HeaderItems=${1:item1|item2}'
+  'HeaderItemsAlign':
+    'prefix': 'HeaderItemsAlign'
+    'body': 'HeaderItemsAlign=${1:LEFT|RIGHT}'
+  'HeaderItemsWidth':
+    'prefix': 'HeaderItemsWidth'
+    'body': 'HeaderItemsWidth=${1:width_in_px}'
+  'HSCROLL':
+    'prefix': 'HSCROLL'
+    'body': 'HSCROLL'
+  'HWND':
+    'prefix': 'HWND'
+    'body': 'HWND=${1:handle}'
+  'HWND2':
+    'prefix': 'HWND2'
+    'body': 'HWND2=${1:handle}'
+  'INFORMATION':
+    'prefix': 'INFORMATION'
+    'body': 'INFORMATION'
+  'JUSTIFY':
+    'prefix': 'JUSTIFY'
+    'body': 'JUSTIFY'
+  'LargeImageList':
+    'prefix': 'LargeImageList'
+    'body': 'LargeImageList=${1:images}'
+  'LEFT':
+    'prefix': 'LEFT'
+    'body': 'LEFT'
+  'ListItems':
+    'prefix': 'ListItems'
+    'body': 'ListItems=${1:item1|item2}'
+  'ListItemsHeight':
+    'prefix': 'ListItemsHeight'
+    'body': 'ListItemsHeight=${1:height_in_px}'
+  'MaxLen':
+    'prefix': 'MaxLen'
+    'body': 'MaxLen=${1:integer}'
+  'MonthOutColor':
+    'prefix': 'MonthOutColor'
+    'body': 'MonthOutColor=0x${1:BBRRGG}'
+  'MonthTrailingTxtColor':
+    'prefix': 'MonthTrailingTxtColor'
+    'body': 'MonthTrailingTxtColor=0x${1:BBRRGG}'
+  'MULTILINE':
+    'prefix': 'MULTILINE'
+    'body': 'MULTILINE'
+  'MULTISELECT':
+    'prefix': 'MULTISELECT'
+    'body': 'MULTISELECT'
+  'MUnits':
+    'prefix': 'MUnits'
+    'body': 'MUnits=${1:0|1}'
+  'NextButtonText':
+    'prefix': 'NextButtonText'
+    'body': 'NextButtonText=${1:text}'
+  'NextEnabled':
+    'prefix': 'NextEnabled'
+    'body': 'NextEnabled=${1:0|1}'
+  'NextShow':
+    'prefix': 'NextShow'
+    'body': 'NextShow=${1:0|1}'
+  'NOALWAYSTIP':
+    'prefix': 'NOALWAYSTIP'
+    'body': 'NOALWAYSTIP'
+  'NOANIMATE':
+    'prefix': 'NOANIMATE'
+    'body': 'NOANIMATE'
+  'NOFADE':
+    'prefix': 'NOFADE'
+    'body': 'NOFADE'
+  'NOPREFIX':
+    'prefix': 'NOPREFIX'
+    'body': 'NOPREFIX'
+  'NOTABSTOP':
+    'prefix': 'NOTABSTOP'
+    'body': 'NOTABSTOP'
+  'NOTIFY':
+    'prefix': 'NOTIFY'
+    'body': 'NOTIFY'
+  'NOWORDWRAP':
+    'prefix': 'NOWORDWRAP'
+    'body': 'NOWORDWRAP'
+  'NumFields':
+    'prefix': 'NumFields'
+    'body': 'NumFields=${1:integer}'
+  'ONCLICK':
+    'prefix': 'ONCLICK'
+    'body': 'ONCLICK'
+  'ONDBLCLICK':
+    'prefix': 'ONDBLCLICK'
+    'body': 'ONDBLCLICK'
+  'ONDRBLCLICK':
+    'prefix': 'ONDRBLCLICK'
+    'body': 'ONDRBLCLICK'
+  'ONKILLFOCUS':
+    'prefix': 'ONKILLFOCUS'
+    'body': 'ONKILLFOCUS'
+  'ONLISTOPEN':
+    'prefix': 'ONLISTOPEN'
+    'body': 'ONLISTOPEN'
+  'ONLY_NUMBERS':
+    'prefix': 'ONLY_NUMBERS'
+    'body': 'ONLY_NUMBERS'
+  'ONRCLICK':
+    'prefix': 'ONRCLICK'
+    'body': 'ONRCLICK'
+  'ONSELCHANGE':
+    'prefix': 'ONSELCHANGE'
+    'body': 'ONSELCHANGE'
+  'ONSETFOCUS':
+    'prefix': 'ONSETFOCUS'
+    'body': 'ONSETFOCUS'
+  'ONSTART':
+    'prefix': 'ONSTART'
+    'body': 'ONSTART'
+  'ONSTOP':
+    'prefix': 'ONSTOP'
+    'body': 'ONSTOP'
+  'ONTEXTCHANGE':
+    'prefix': 'ONTEXTCHANGE'
+    'body': 'ONTEXTCHANGE'
+  'ONTEXTSELCHANGE':
+    'prefix': 'ONTEXTSELCHANGE'
+    'body': 'ONTEXTSELCHANGE'
+  'ONTEXTTRUNCATE':
+    'prefix': 'ONTEXTTRUNCATE'
+    'body': 'ONTEXTTRUNCATE'
+  'ONTEXTUPDATE':
+    'prefix': 'ONTEXTUPDATE'
+    'body': 'ONTEXTUPDATE'
+  'ONTEXTVSCROLL':
+    'prefix': 'ONTEXTVSCROLL'
+    'body': 'ONTEXTVSCROLL'
+  'PATH_MUST_EXIST':
+    'prefix': 'PATH_MUST_EXIST'
+    'body': 'PATH_MUST_EXIST'
+  'PROMPT_CREATE':
+    'prefix': 'PROMPT_CREATE'
+    'body': 'PROMPT_CREATE'
+  'READONLY':
+    'prefix': 'READONLY'
+    'body': 'READONLY'
+  'ReadOnlyBgColor':
+    'prefix': 'ReadOnlyBgColor'
+    'body': 'ReadOnlyBgColor=0x${1:BBRRGG}'
+  'ReadOnlyTxtColor':
+    'prefix': 'ReadOnlyTxtColor'
+    'body': 'ReadOnlyTxtColor=0x${1:BBRRGG}'
+  'RefFields':
+    'prefix': 'RefFields'
+    'body': 'RefFields=${1:integer}'
+  'REQ_SAVE':
+    'prefix': 'REQ_SAVE'
+    'body': 'REQ_SAVE'
+  'RESIZETOFIT':
+    'prefix': 'RESIZETOFIT'
+    'body': 'RESIZETOFIT'
+  'RIGHT':
+    'prefix': 'RIGHT'
+    'body': 'RIGHT'
+  'Root':
+    'prefix': 'Root'
+    'body': 'Root=${1}'
+  'RTL':
+    'prefix': 'RTL'
+    'body': 'RTL=${1:1}'
+  'SelBgColor':
+    'prefix': 'SelBgColor'
+    'body': 'SelBgColor=0x${1:BBRRGG}'
+  'SelTxtColor':
+    'prefix': 'SelTxtColor'
+    'body': 'SelTxtColor=0x${1:BBRRGG}'
+  'SelTxtShwColor':
+    'prefix': 'SelTxtShwColor'
+    'body': 'SelTxtShwColor=0x${1:BBRRGG}'
+  'SmallImageList':
+    'prefix': 'SmallImageList'
+    'body': 'SmallImageList=${1:images}'
+  'State':
+    'prefix': 'State'
+    'body': 'StateRTL=${1:state}'
+  'StateImageList':
+    'prefix': 'StateImageList'
+    'body': 'StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp'
+  'STOP':
+    'prefix': 'STOP'
+    'body': 'STOP'
+  'Text':
+    'prefix': 'Text'
+    'body': 'Text=${1:text}'
+  'TimeOut':
+    'prefix': 'TimeOut'
+    'body': 'TimeOut=${1:time_in_ms}'
+  'Title':
+    'prefix': 'Title'
+    'body': 'Title=${1:title}'
+  'ToolTipBgColor':
+    'prefix': 'ToolTipBgColor'
+    'body': 'ToolTipBgColor=0x${1:BBRRGG}'
+  'ToolTipFlags':
+    'prefix': 'ToolTipFlags'
+    'body': 'ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}'
+  'ToolTipIcon':
+    'prefix': 'ToolTipIcon'
+    'body': 'ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}'
+  'ToolTipText':
+    'prefix': 'ToolTipText'
+    'body': 'ToolTipText=${1:text}'
+  'ToolTipTitle':
+    'prefix': 'ToolTipTitle'
+    'body': 'ToolTipTitle=${1:title}'
+  'ToolTipTxtColor':
+    'prefix': 'ToolTipTxtColor'
+    'body': 'ToolTipTxtColor=0x${1:BBRRGG}'
+  'ToolTipWidth':
+    'prefix': 'ToolTipWidth'
+    'body': 'ToolTipWidth=${1:width_in_px}'
+  'TOP':
+    'prefix': 'TOP'
+    'body': 'TOP'
+  'TRANSPARENT':
+    'prefix': 'TRANSPARENT'
+    'body': 'TRANSPARENT'
+  'TxtAlign':
+    'prefix': 'TxtAlign'
+    'body': 'TxtAlign=${1:LEFT|CENTER|RIGHT|JUSTIFY}'
+  'TxtColor':
+    'prefix': 'TxtColor'
+    'body': 'TxtColor=0x${1:RRGGBB}'
+  'TxtShwColor':
+    'prefix': 'TxtShwColor'
+    'body': 'TxtShwColor=0x${1:BBRRGG}'
+  'TxtVAlign':
+    'prefix': 'TxtVAlign'
+    'body': 'TxtVAlign=${1:TOP|CENTER|BOTTOM|JUSTIFY}'
+  'Type':
+    'prefix': 'Type'
+    'body': 'Type'
+  'Type Bitmap':
+    'prefix': 'Type Bitmap'
+    'body': 'Type=Bitmap'
+  'Type Button':
+    'prefix': 'Type Button'
+    'body': 'Type=Button'
+  'Type CheckBox':
+    'prefix': 'Type CheckBox'
+    'body': 'Type=CheckBox'
+  'Type Combobox':
+    'prefix': 'Type Combobox'
+    'body': 'Type=Combobox'
+  'Type DirRequest':
+    'prefix': 'Type DirRequest'
+    'body': 'Type=DirRequest'
+  'Type DropList':
+    'prefix': 'Type DropList'
+    'body': 'Type=DropList'
+  'Type FileRequest':
+    'prefix': 'Type FileRequest'
+    'body': 'Type=FileRequest'
+  'Type GroupBox':
+    'prefix': 'Type GroupBox'
+    'body': 'Type=GroupBox'
+  'Type HLine':
+    'prefix': 'Type HLine'
+    'body': 'Type=HLine'
+  'Type Icon':
+    'prefix': 'Type Icon'
+    'body': 'Type=Icon'
+  'Type Label':
+    'prefix': 'Type Label'
+    'body': 'Type=Label'
+  'Type Link':
+    'prefix': 'Type Link'
+    'body': 'Type=Link'
+  'Type Listbox':
+    'prefix': 'Type Listbox'
+    'body': 'Type=Listbox'
+  'Type Password':
+    'prefix': 'Type Password'
+    'body': 'Type=Password'
+  'Type RadioButton':
+    'prefix': 'Type RadioButton'
+    'body': 'Type=RadioButton'
+  'Type Text':
+    'prefix': 'Type Text'
+    'body': 'Type=Text'
+  'Type VLine':
+    'prefix': 'Type VLine'
+    'body': 'Type=VLine'
+  'ValidateText':
+    'prefix': 'ValidateText'
+    'body': 'ValidateText=${1:text}'
+  'VAlign':
+    'prefix': 'VAlign'
+    'body': 'VAlign=${1:TOP|CENTER|BOTTOM}'
+  'VSCROLL':
+    'prefix': 'VSCROLL'
+    'body': 'VSCROLL'
+  'WANTRETURN':
+    'prefix': 'WANTRETURN'
+    'body': 'WANTRETURN'
+  'WARN_IF_EXIST':
+    'prefix': 'WARN_IF_EXIST'
+    'body': 'WARN_IF_EXIST'
+'.source.nsis':
+  'InstallOptions::initDialog':
+    'prefix': 'InstallOptions::initDialog'
+    'body': 'InstallOptions::initDialog "${1:file}.ini"'
+  'InstallOptions::initDialog /NOUNLOAD':
+    'prefix': 'InstallOptions::initDialog /NOUNLOAD'
+    'body': 'InstallOptions::initDialog /NOUNLOAD "${1:file}.ini"'
+  'InstallOptions::show':
+    'prefix': 'InstallOptions::show'
+    'body': 'InstallOptions::show'
+

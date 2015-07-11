@@ -1,0 +1,25 @@
+'.source.nsis':
+  'BgImage::AddImage':
+    'prefix': 'BgImage::AddImage'
+    'body': 'BgImage::AddImage "${1:file}.bmp" ${2:x} ${3:y}'
+  'BgImage::AddText':
+    'prefix': 'BgImage::AddText'
+    'body': 'BgImage::AddText "${1:text}" "${2:font}" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}'
+  'BgImage::Clear':
+    'prefix': 'BgImage::Clear'
+    'body': 'BgImage::Clear'
+  'BgImage::Destroy':
+    'prefix': 'BgImage::Destroy'
+    'body': 'BgImage::Destroy'
+  'BgImage::Redraw':
+    'prefix': 'BgImage::Redraw'
+    'body': 'BgImage::Redraw'
+  'BgImage::SetBg':
+    'prefix': 'BgImage::SetBg'
+    'body': 'BgImage::SetBg "${1:file}.bmp"'
+  'BgImage::SetReturn':
+    'prefix': 'BgImage::SetReturn'
+    'body': 'BgImage::SetReturn "${1:on|off}"'
+  'BgImage::Sound':
+    'prefix': 'BgImage::Sound'
+    'body': 'BgImage::Sound "${1:file}.wav"'

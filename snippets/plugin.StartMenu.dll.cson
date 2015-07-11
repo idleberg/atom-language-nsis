@@ -1,0 +1,7 @@
+'.source.nsis':
+  'StartMenu::Init':
+    'prefix': 'StartMenu::Init'
+    'body': 'StartMenu::Init "${1:text}"'
+  'StartMenu::Select':
+    'prefix': 'StartMenu::Select'
+    'body': 'StartMenu::Select ${1}'

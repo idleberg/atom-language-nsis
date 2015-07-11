@@ -1,0 +1,1504 @@
+'.source.nsis':
+  '!addincludedir':
+    'prefix': 'addincludedir'
+    'body': '!addincludedir "${1:directory}"'
+  '!addplugindir':
+    'prefix': 'addplugindir'
+    'body': '!addplugindir "${1:directory}"'
+  '!appendfile':
+    'prefix': 'appendfile'
+    'body': '!appendfile "${1:file}" "${2:text}"'
+  '!appendfile /CHARSET':
+    'prefix': 'appendfile /CHARSET'
+    'body': '!appendfile /CHARSET=${1:charset} "${2:file}" "${3:text}"'
+  '!cd':
+    'prefix': 'cd'
+    'body': '!cd "${1:new_path}"'
+  '!define':
+    'prefix': 'define'
+    'body': '!define ${1:gflag}'
+  '!delfile':
+    'prefix': 'delfile'
+    'body': '!delfile "${1:file}"'
+  '!echo':
+    'prefix': 'echo'
+    'body': '!echo "${1:message}"'
+  '!else':
+    'prefix': 'else'
+    'body': '!else'
+  '!endif':
+    'prefix': 'endif'
+    'body': '!endif'
+  '!error':
+    'prefix': 'error'
+    'body': '!error "${1:message}"'
+  '!execute':
+    'prefix': 'execute'
+    'body': '!execute "${1:command}"'
+  '!finalize':
+    'prefix': 'finalize'
+    'body': '!finalize "${1:command}"'
+  '!getdllversion':
+    'prefix': 'getdllversion'
+    'body': '!getdllversion "${1:localfilename}" "${1:define_basename}"'
+  '!if..else':
+    'prefix': 'if..else'
+    'body': """
+      !if ${1:value1} ${2:op} ${3:value2}
+      	${4:# your code here}
+      !else
+      	${5:# your code here}
+      !endif
+    """
+  '!if':
+    'prefix': 'if'
+    'body': """
+      !if ${1:value1} ${2:op} ${3:value2}
+      	${4:# your code here}
+      !endif
+    """
+  '!ifdef..else':
+    'prefix': 'ifdef..else'
+    'body': """
+      !ifdef ${1:gflag}
+      	${2:# your code here}
+      !else
+      	${3:# your code here}
+      !endif
+    """
+  '!ifdef':
+    'prefix': 'ifdef'
+    'body': """
+      !ifdef ${1:gflag}
+      	${2:# your code here}
+      !endif
+    """
+  '!ifmacrodef..else':
+    'prefix': 'ifmacrodef..else'
+    'body': """
+      !ifmacrodef ${1:gflag}
+      	${2:# your code here}
+      !else
+      	${3:# your code here}
+      !endif
+    """
+  '!ifmacrodef':
+    'prefix': 'ifmacrodef'
+    'body': """
+      !ifmacrodef ${1:gflag}
+      	${2:# your code here}
+      !endif
+    """
+  '!ifmacrondef..else':
+    'prefix': 'ifmacrondef..else'
+    'body': """
+      !ifmacrondef ${1:gflag}
+      	${2:# your code here}
+      !else
+      	${3:# your code here}
+      !endif
+    """
+  '!ifmacrondef':
+    'prefix': 'ifmacrondef'
+    'body': """
+      !ifmacrondef ${1:gflag}
+      	${2:# your code here}
+      !endif
+    """
+  '!ifndef..else':
+    'prefix': 'ifndef..else'
+    'body': """
+      !ifndef ${1:gflag}
+      	${2:# your code here}
+      !else
+      	${3:# your code here}
+      !endif
+    """
+  '!ifndef':
+    'prefix': 'ifndef'
+    'body': """
+      !ifndef ${1:gflag}
+      	${2:# your code here}
+      !endif
+    """
+  '!include':
+    'prefix': 'include'
+    'body': '!include "${1:file}"'
+  '!include':
+    'prefix': 'Colors'
+    'body': '!include Colors.nsh'
+  '!include':
+    'prefix': 'FileFunc'
+    'body': '!include FileFunc.nsh'
+  '!include':
+    'prefix': 'InstallOptions'
+    'body': '!include InstallOptions.nsh'
+  '!include':
+    'prefix': 'LangFile'
+    'body': '!include LangFile.nsh'
+  '!include':
+    'prefix': 'Library'
+    'body': '!include Library.nsh'
+  '!include':
+    'prefix': 'LogicLib'
+    'body': '!include LogicLib.nsh'
+  '!include':
+    'prefix': 'Memento'
+    'body': '!include Memento.nsh'
+  '!include':
+    'prefix': 'MUI'
+    'body': '!include MUI.nsh'
+  '!include':
+    'prefix': 'MUI2'
+    'body': '!include MUI2.nsh'
+  '!include':
+    'prefix': 'MultiUser'
+    'body': '!include MultiUser.nsh'
+  '!include':
+    'prefix': 'nsDialogs'
+    'body': '!include nsDialogs.nsh'
+  '!include':
+    'prefix': 'Sections'
+    'body': '!include Sections.nsh'
+  '!include':
+    'prefix': 'StrFunc'
+    'body': '!include StrFunc.nsh'
+  '!include':
+    'prefix': 'TextFunc'
+    'body': '!include TextFunc.nsh'
+  '!include':
+    'prefix': 'UpgradeDLL'
+    'body': '!include UpgradeDLL.nsh'
+  '!include':
+    'prefix': 'Util'
+    'body': '!include Util.nsh'
+  '!include':
+    'prefix': 'VB6RunTime'
+    'body': '!include VB6RunTime.nsh'
+  '!include':
+    'prefix': 'VPatchLib'
+    'body': '!include VPatchLib.nsh'
+  '!include':
+    'prefix': 'WinCore'
+    'body': '!include WinCore.nsh'
+  '!include':
+    'prefix': 'WinMessages'
+    'body': '!include WinMessages.nsh'
+  '!include':
+    'prefix': 'WinVer'
+    'body': '!include WinVer.nsh'
+  '!include':
+    'prefix': 'WordFunc'
+    'body': '!include WordFunc.nsh'
+  '!include':
+    'prefix': 'x64'
+    'body': '!include x64.nsh'
+  '!insertmacro':
+    'prefix': 'insertmacro'
+    'body': '!insertmacro "${1:macro_name}" "${2:parameter}"'
+  '!macro':
+    'prefix': 'macro'
+    'body': """
+      !macro ${1:macro_name} ${2:parameter}
+      	${3:# your code here}
+      !macroend
+    """
+  '!macroend':
+    'prefix': 'macroend'
+    'body': '!macroend'
+  '!makensis':
+    'prefix': 'makensis'
+    'body': '!makensis "${1:parameters}"'
+  '!packhdr':
+    'prefix': 'packhdr'
+    'body': '!packhdr "${1:tempfile}" "${2:command}"'
+  '!searchparse':
+    'prefix': 'searchparse'
+    'body': '!searchparse "${1:source_string_or_file}" "${2:substring_start}" "${3:OUTPUTSYMBOL1}"'
+  '!searchreplace':
+    'prefix': 'searchreplace'
+    'body': '!searchparse "${1:symbol_out}" "${2:source_string}" "${3:searchfor}" "${3:replacewith}"'
+  '!system':
+    'prefix': 'system'
+    'body': '!system "${1:command}"'
+  '!tempfile':
+    'prefix': 'tempfile'
+    'body': '!tempfile "${1:symbol}"'
+  '!undef':
+    'prefix': 'undef'
+    'body': '!undef ${1:gflag}'
+  '!verbose':
+    'prefix': 'verbose'
+    'body': '!verbose "${1:level}"'
+  '!warning':
+    'prefix': 'warning'
+    'body': '!warning "${1:message}"'
+  'Abort':
+    'prefix': 'Abort'
+    'body': 'Abort'
+  'Abort [message]':
+    'prefix': 'Abort [message]'
+    'body': 'Abort "${1:message}"'
+  'AddBrandingImage':
+    'prefix': 'AddBrandingImage'
+    'body': 'AddBrandingImage ${1:left|right|top|bottom} ${2:width|height} ${3:[padding]}'
+  'AddSize':
+    'prefix': 'AddSize'
+    'body': 'AddSize ${1:size_kb}'
+  'AllowRootDirInstall':
+    'prefix': 'AllowRootDirInstall'
+    'body': 'AllowRootDirInstall ${1:false|true}'
+  'AllowRootDirInstall false (default)':
+    'prefix': 'AllowRootDirInstall false (default)'
+    'body': 'AllowRootDirInstall false'
+  'AllowRootDirInstall true':
+    'prefix': 'AllowRootDirInstall true'
+    'body': 'AllowRootDirInstall true'
+  'AllowSkipFiles':
+    'prefix': 'AllowSkipFiles'
+    'body': 'AllowSkipFiles ${1:on|off}'
+  'AllowSkipFiles off':
+    'prefix': 'AllowSkipFiles off'
+    'body': 'AllowSkipFiles off'
+  'AllowSkipFiles on (default)':
+    'prefix': 'AllowSkipFiles on (default)'
+    'body': 'AllowSkipFiles on'
+  'AutoCloseWindow':
+    'prefix': 'AutoCloseWindow'
+    'body': 'AutoCloseWindow ${1:false|true}'
+  'AutoCloseWindow false (default)':
+    'prefix': 'AutoCloseWindow false (default)'
+    'body': 'AutoCloseWindow false'
+  'AutoCloseWindow true':
+    'prefix': 'AutoCloseWindow true'
+    'body': 'AutoCloseWindow true'
+  'BGFont':
+    'prefix': 'BGFont'
+    'body': 'BGFont "${1:font_face}"'
+  'BGGradient':
+    'prefix': 'BGGradient'
+    'body': 'BGGradient ${1:top_color} ${2:bottom_color}'
+  'BGGradient off (default)':
+    'prefix': 'BGGradient off (default)'
+    'body': 'BGGradient ${1:off}'
+  'BrandingText':
+    'prefix': 'BrandingText'
+    'body': 'BrandingText "${1:text}"'
+  'BringToFront':
+    'prefix': 'BringToFront'
+    'body': 'BringToFront'
+  'Call':
+    'prefix': 'Call'
+    'body': 'Call ${1:function_name}'
+  'CallInstDLL':
+    'prefix': 'CallInstDLL'
+    'body': 'CallInstDLL "${1:dllfile}" ${2:function_name}'
+  'Caption':
+    'prefix': 'Caption'
+    'body': 'Caption "${1:caption}"'
+  'ChangeUI':
+    'prefix': 'ChangeUI'
+    'body': 'ChangeUI ${1:dialog} "${2:ui_file}.exe"'
+  'ChangeUI:default.exe':
+    'prefix': 'ChangeUI:default.exe'
+    'body': 'ChangeUI ${1:dialog} "\${NSISDIR}\\\\Contrib\\\\UIs\\\\default.bmp"'
+  'ChangeUI:modern.exe':
+    'prefix': 'ChangeUI:modern.exe'
+    'body': 'ChangeUI ${1:dialog} "\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern.bmp"'
+  'ChangeUI:modern_nodesc.exe':
+    'prefix': 'ChangeUI:modern_nodesc.exe'
+    'body': 'ChangeUI ${1:dialog} "\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_nodesc.bmp"'
+  'ChangeUI:modern_smalldesc.exe':
+    'prefix': 'ChangeUI:modern_smalldesc.exe'
+    'body': 'ChangeUI ${1:dialog} "\${NSISDIR}\\\\Contrib\\\\UIs\\\\modern_smalldesc.bmp"'
+  'ChangeUI:sdbarker_tiny.exe':
+    'prefix': 'ChangeUI:sdbarker_tiny.exe'
+    'body': 'ChangeUI ${1:dialog} "\${NSISDIR}\\\\Contrib\\\\UIs\\\\sdbarker_tiny.bmp'
+  'CheckBitmap':
+    'prefix': 'CheckBitmap'
+    'body': 'CheckBitmap "${1:bitmap}.bmp"'
+  'CheckBitmap:big.bmp':
+    'prefix': 'CheckBitmap:big.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\big.bmp"'
+  'CheckBitmap:classic-cross.bmp':
+    'prefix': 'CheckBitmap:classic-cross.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic-cross.bmp"'
+  'CheckBitmap:classic.bmp':
+    'prefix': 'CheckBitmap:classic.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\classic.bmp"'
+  'CheckBitmap:colorful.bmp':
+    'prefix': 'CheckBitmap:colorful.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\colorful.bmp"'
+  'CheckBitmap:grey-cross.bmp':
+    'prefix': 'CheckBitmap:grey-cross.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey-cross.bmp"'
+  'CheckBitmap:grey.bmp':
+    'prefix': 'CheckBitmap:grey.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\grey.bmp"'
+  'CheckBitmap:modern.bmp':
+    'prefix': 'CheckBitmap:modern.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\modern.bmp"'
+  'CheckBitmap:red-round.bmp':
+    'prefix': 'CheckBitmap:red-round.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red-round.bmp"'
+  'CheckBitmap:red.bmp':
+    'prefix': 'CheckBitmap:red.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\red.bmp"'
+  'CheckBitmap:simple-round.bmp':
+    'prefix': 'CheckBitmap:simple-round.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round.bmp"'
+  'CheckBitmap:simple-round2.bmp':
+    'prefix': 'CheckBitmap:simple-round2.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple-round2.bmp"'
+  'CheckBitmap:simple.bmp':
+    'prefix': 'CheckBitmap:simple.bmp'
+    'body': 'CheckBitmap "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Checks\\\\simple.bmp"'
+  'ClearErrors':
+    'prefix': 'ClearErrors'
+    'body': 'ClearErrors'
+  'CompletedText':
+    'prefix': 'CompletedText'
+    'body': 'CompletedText "${1:text}"'
+  'ComponentText':
+    'prefix': 'ComponentText'
+    'body': 'ComponentText "${1:text}" "${2:[subtext]}" "${3:[subtext2]}"'
+  'CopyFiles':
+    'prefix': 'CopyFiles'
+    'body': 'CopyFiles "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+  'CopyFiles /FILESONLY':
+    'prefix': 'CopyFiles /FILESONLY'
+    'body': 'CopyFiles /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+  'CopyFiles /SILENT':
+    'prefix': 'CopyFiles /SILENT'
+    'body': 'CopyFiles /SILENT "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+  'CopyFiles /SILENT /FILESONLY':
+    'prefix': 'CopyFiles /SILENT /FILESONLY'
+    'body': 'CopyFiles /SILENT /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+  'CRCCheck':
+    'prefix': 'CRCCheck'
+    'body': 'CRCCheck ${off|on}'
+  'CRCCheck off':
+    'prefix': 'CRCCheck off'
+    'body': 'CRCCheck off'
+  'CRCCheck on (default)':
+    'prefix': 'CRCCheck on (default)'
+    'body': 'CRCCheck on'
+  'CreateDirectory':
+    'prefix': 'CreateDirectory'
+    'body': 'CreateDirectory "${1:path_to_create}"'
+  'CreateFont':
+    'prefix': 'CreateFont'
+    'body': 'CreateFont \$${1:user_var} "${2:face_name}" ${3:[height] [weight]}'
+  'CreateShortCut':
+    'prefix': 'CreateShortCut'
+    'body': 'CreateShortCut "${1:link}.lnk" ${2:target}'
+  'Delete':
+    'prefix': 'Delete'
+    'body': 'Delete "${1:file}"'
+  'Delete /REBOOTOK':
+    'prefix': 'Delete /REBOOTOK'
+    'body': 'Delete /REBOOTOK "${1:file}"'
+  'DeleteINISec':
+    'prefix': 'DeleteINISec'
+    'body': 'DeleteINISec "${1:ini_filename}" "${2:section_name}"'
+  'DeleteINIStr':
+    'prefix': 'DeleteINIStr'
+    'body': 'DeleteINIStr "${1:ini_filename}" "${2:section_name}" "${3:str_name}"'
+  'DeleteRegKey':
+    'prefix': 'DeleteRegKey'
+    'body': 'DeleteRegKey ${1:root_key} "${2:subkey}"'
+  'DeleteRegKey /ifempty':
+    'prefix': 'DeleteRegKey /ifempty'
+    'body': 'DeleteRegKey /ifempty ${1:root_key} "${2:subkey}"'
+  'DeleteRegValue':
+    'prefix': 'DeleteRegValue'
+    'body': 'DeleteRegValue ${1:root_key} "${2:subkey}" "${3:key_name}"'
+  'DetailPrint':
+    'prefix': 'DetailPrint'
+    'body': 'DetailPrint "${1:user_message}"'
+  'DetailsButtonText':
+    'prefix': 'DetailsButtonText'
+    'body': 'DetailsButtonText "${1:text}"'
+  'DirText':
+    'prefix': 'DirText'
+    'body': 'DirText "${1:[text]}" "${2:[subtext]}" "${3:[browse_button_text]}" "${4:[browse_dlg_text]}"'
+  'DirVar':
+    'prefix': 'DirVar'
+    'body': 'DirVar \$${1:user_var}'
+  'DirVerify':
+    'prefix': 'DirVerify'
+    'body': 'DirVerify ${1:auto|leave}'
+  'DirVerify auto (default)':
+    'prefix': 'DirVerify auto (default)'
+    'body': 'DirVerify auto'
+  'DirVerify leave':
+    'prefix': 'DirVerify leave'
+    'body': 'DirVerify leave'
+  'EnableWindow':
+    'prefix': 'EnableWindow'
+    'body': 'EnableWindow \$${1:hwnd} ${2:1|0}'
+  'EnumRegKey':
+    'prefix': 'EnumRegKey'
+    'body': 'EnumRegKey \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}'
+  'EnumRegValue':
+    'prefix': 'EnumRegValue'
+    'body': 'EnumRegValue \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}'
+  'Exch':
+    'prefix': 'Exch'
+    'body': 'Exch ${1:[user_var|stack_index]}'
+  'Exec':
+    'prefix': 'Exec'
+    'body': 'Exec "${1:command}"'
+  'ExecShell':
+    'prefix': 'ExecShell'
+    'body': 'ExecShell ${1:action} "${2:command}"'
+  'ExecShell open':
+    'prefix': 'ExecShell open'
+    'body': 'ExecShell open "${2:command}"'
+  'ExecShell print':
+    'prefix': 'ExecShell print'
+    'body': 'ExecShell print "${2:command}"'
+  'ExecWait':
+    'prefix': 'ExecWait'
+    'body': 'ExecWait "${1:command}"'
+  'ExecWait $var':
+    'prefix': 'ExecWait $var'
+    'body': 'ExecWait "${1:command}" \$${2:user_var}'
+  'ExpandEnvStrings':
+    'prefix': 'ExpandEnvStrings'
+    'body': 'ExpandEnvStrings \$${1:user_var} "${2:string}"'
+  'File':
+    'prefix': 'File'
+    'body': 'File "${1:file}"'
+  'File /nonfatal':
+    'prefix': 'File /nonfatal'
+    'body': 'File /nonfatal "${1:file}"'
+  'File /nonfatal /r':
+    'prefix': 'File /nonfatal /r'
+    'body': 'File /nonfatal /r "${1:file}"'
+  'File /oname':
+    'prefix': 'File /oname'
+    'body': 'File "/oname=${1:file}" "${1:file}"'
+  'FileBufSize':
+    'prefix': 'FileBufSize'
+    'body': 'FileBufSize ${1:buffer_size_in_mb}'
+  'FileClose':
+    'prefix': 'FileClose'
+    'body': 'FileClose \$${1:handle}'
+  'FileErrorText':
+    'prefix': 'FileErrorText'
+    'body': 'FileErrorText "${1:error_text}"'
+  'FileOpen':
+    'prefix': 'FileOpen'
+    'body': 'FileOpen \$${1:user_var} "${2:filename}" ${3:openmode}'
+  'FileRead':
+    'prefix': 'FileRead'
+    'body': 'FileRead \$${1:handle} \$${2:user_var} ${3:[maxlen]}'
+  'FileReadByte':
+    'prefix': 'FileReadByte'
+    'body': 'FileReadByte \$${1:handle} \$${2:user_var}'
+  'FileReadUTF16LE':
+    'prefix': 'FileReadUTF16LE'
+    'body': 'FileReadUTF16LE \$${1:handle} \$${2:user_var}'
+  'FileReadWord':
+    'prefix': 'FileReadWord'
+    'body': 'FileReadWord \$${1:handle} \$${2:user_var}'
+  'FileSeek':
+    'prefix': 'FileSeek'
+    'body': 'FileSeek \$${1:handle} ${2:offset} ${3:[mode]}'
+  'FileWrite':
+    'prefix': 'FileWrite'
+    'body': 'FileWrite \$${1:handle} "${2:string}"'
+  'FileWriteByte':
+    'prefix': 'FileWriteByte'
+    'body': 'FileWriteByte \$${1:handle} "${2:string}"'
+  'FileWriteUTF16LE':
+    'prefix': 'FileWriteUTF16LE'
+    'body': 'FileWriteUTF16LE \$${1:handle} "${2:string}"'
+  'FileWriteWord':
+    'prefix': 'FileWriteWord'
+    'body': 'FileWriteWord \$${1:handle} "${2:string}"'
+  'FindClose':
+    'prefix': 'FindClose'
+    'body': 'FindClose \$${1:handle}'
+  'FindFirst':
+    'prefix': 'FindFirst'
+    'body': 'FindFirst \$${1:handle} \$${2:user_var} "${2:filespec}"'
+  'FindNext':
+    'prefix': 'FindNext'
+    'body': 'FindNext \$${1:handle} \$${2:user_var}'
+  'FindWindow':
+    'prefix': 'FindWindow'
+    'body': 'FindWindow \$${1:user_var} "${2:windowclass}"${3: "${4:windowtitle}"${5: ${6:windowparent}${7: ${8:childafter}}}}'
+  'FlushINI':
+    'prefix': 'FlushINI'
+    'body': 'FlushINI "${1:ini_filename}"'
+  'Function':
+    'prefix': 'Function'
+    'body': """
+      Function "${1:function_name}"
+      	${2:# your code here}
+      FunctionEnd
+    """
+  'FunctionEnd':
+    'prefix': 'FunctionEnd'
+    'body': 'FunctionEnd'
+  'GetCurInstType':
+    'prefix': 'GetCurInstType'
+    'body': 'GetCurInstType \$${1:user_var}'
+  'GetCurrentAddress':
+    'prefix': 'GetCurrentAddress'
+    'body': 'GetCurrentAddress \$${1:user_var}'
+  'GetDlgItem':
+    'prefix': 'GetDlgItem'
+    'body': 'GetDlgItem \$${1:user_var} ${2:\$HWNDPARENT} ${3:item_id}'
+  'GetDLLVersion':
+    'prefix': 'GetDLLVersion'
+    'body': 'GetDLLVersion "${1:filename}" \$${2:user_var_high} \$${3:user_var_low}'
+  'GetDLLVersionLocal':
+    'prefix': 'GetDLLVersionLocal'
+    'body': 'GetDLLVersionLocal "${1:filename}" \$${2:user_var_high} \$${3:user_var_low}'
+  'GetErrorLevel':
+    'prefix': 'GetErrorLevel'
+    'body': 'GetErrorLevel \$${1:user_var}'
+  'GetFileTime':
+    'prefix': 'GetFileTime'
+    'body': 'GetFileTime "${1:filename}" \$${2:user_var_high} \$${3:user_var_low}'
+  'GetFileTimeLocal':
+    'prefix': 'GetFileTimeLocal'
+    'body': 'GetFileTimeLocal "${1:filename}" \$${2:user_var_high} \$${3:user_var_low}'
+  'GetFullPathName':
+    'prefix': 'GetFullPathName'
+    'body': 'GetFullPathName \$${1:user_var} "${2:filename}"'
+  'GetFullPathName /SHORT':
+    'prefix': 'GetFullPathName /SHORT'
+    'body': 'GetFullPathName /SHORT \$${1:user_var} "${2:filename}"'
+  'GetFunctionAddress':
+    'prefix': 'GetFunctionAddress'
+    'body': 'GetFunctionAddress \$${1:user_var} "${2:function_name}"'
+  'GetInstDirError':
+    'prefix': 'GetInstDirError'
+    'body': 'GetInstDirError \$${1:user_var}'
+  'GetLabelAddress':
+    'prefix': 'GetLabelAddress'
+    'body': 'GetLabelAddress \$${1:user_var} ${2:label}'
+  'GetTempFileName':
+    'prefix': 'GetTempFileName'
+    'body': 'GetTempFileName \$${1:user_var}'
+  'Goto':
+    'prefix': 'Goto'
+    'body': 'Goto ${1:label_to_jump_to}'
+  'HideWindow':
+    'prefix': 'HideWindow'
+    'body': 'HideWindow'
+  'Icon':
+    'prefix': 'Icon'
+    'body': 'Icon "${1:icon}.ico"'
+  'Icon:arrow-install.ico':
+    'prefix': 'Icon:arrow-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-install.ico"'
+  'Icon:arrow2-install.ico':
+    'prefix': 'Icon:arrow2-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-install.ico"'
+  'Icon:box-install.ico':
+    'prefix': 'Icon:box-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-install.ico"'
+  'Icon:classic-install.ico':
+    'prefix': 'Icon:classic-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-install.ico"'
+  'Icon:llama-blue.ico':
+    'prefix': 'Icon:llama-blue.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico"'
+  'Icon:llama-grey.ico':
+    'prefix': 'Icon:llama-grey.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico"'
+  'Icon:modern-install-blue-full.ico':
+    'prefix': 'Icon:modern-install-blue-full.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue-full.ico"'
+  'Icon:modern-install-blue.ico':
+    'prefix': 'Icon:modern-install-blue.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-blue.ico"'
+  'Icon:modern-install-colorful.ico':
+    'prefix': 'Icon:modern-install-colorful.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-colorful.ico"'
+  'Icon:modern-install-full.ico':
+    'prefix': 'Icon:modern-install-full.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install-full.ico"'
+  'Icon:modern-install.ico':
+    'prefix': 'Icon:modern-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-install.ico"'
+  'Icon:nsis1-install.ico':
+    'prefix': 'Icon:nsis1-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-install.ico"'
+  'Icon:orange-install-nsis.ico':
+    'prefix': 'Icon:orange-install-nsis.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install-nsis.ico"'
+  'Icon:orange-install.ico':
+    'prefix': 'Icon:orange-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-install.ico"'
+  'Icon:pixel-install.ico':
+    'prefix': 'Icon:pixel-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-install.ico"'
+  'Icon:win-install.ico':
+    'prefix': 'Icon:win-install.ico'
+    'body': 'Icon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-install.ico"'
+  'IfAbort':
+    'prefix': 'IfAbort'
+    'body': 'IfAbort ${1:label_to_goto_if_abort} ${2:[label_to_goto_if_no_abort]}'
+  'IfErrors':
+    'prefix': 'IfErrors'
+    'body': 'IfErrors ${1:jump_to_if_error} ${2:[jump_to_if_no_error]}'
+  'IfFileExists':
+    'prefix': 'IfFileExists'
+    'body': 'IfFileExists "${1:file_to_check_for}" ${2:jump_if_present} ${3:[jump_otherwise]}'
+  'IfRebootFlag':
+    'prefix': 'IfRebootFlag'
+    'body': 'IfRebootFlag ${1:jump_if_set} ${2:[jump_if_not_set]}'
+  'IfSilent':
+    'prefix': 'IfSilent'
+    'body': 'IfSilent ${1:jump_if_silent} ${2:[jump_if_not]}'
+  'InitPluginsDir':
+    'prefix': 'InitPluginsDir'
+    'body': 'InitPluginsDir'
+  'InstallButtonText':
+    'prefix': 'InstallButtonText'
+    'body': 'InstallButtonText "${1:button_text}"'
+  'InstallColors':
+    'prefix': 'InstallColors'
+    'body': 'InstallColors "${1:foreground_color}" "${2:background_color}"'
+  'InstallColors /windows':
+    'prefix': 'InstallColors /windows'
+    'body': 'InstallColors /windows'
+  'InstallDir':
+    'prefix': 'InstallDir'
+    'body': 'InstallDir "${1:install_directory}"'
+  'InstallDirRegKey':
+    'prefix': 'InstallDirRegKey'
+    'body': 'InstallDirRegKey ${1:root_key} "${2:subkey}" "${3:key_name}"'
+  'InstProgressFlags colored':
+    'prefix': 'InstProgressFlags colored'
+    'body': 'InstProgressFlags colored'
+  'InstProgressFlags smooth':
+    'prefix': 'InstProgressFlags smooth'
+    'body': 'InstProgressFlags smooth'
+  'InstType':
+    'prefix': 'InstType'
+    'body': 'InstType "${1:install_type_name}"'
+  'InstTypeGetText':
+    'prefix': 'InstTypeGetText'
+    'body': 'InstTypeGetText ${1:inst_type_idx} \$${2:user_var}'
+  'InstTypeSetText':
+    'prefix': 'InstTypeSetText'
+    'body': 'InstTypeSetText ${1:inst_type_idx} "${2:text}"'
+  'IntCmp':
+    'prefix': 'IntCmp'
+    'body': 'IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}'
+  'IntCmpU':
+    'prefix': 'IntCmpU'
+    'body': 'IntCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}'
+  'IntFmt':
+    'prefix': 'IntFmt'
+    'body': 'IntFmt \$${1:user_var} "${2:format}" "${3:numberstring}"'
+  'IntOp':
+    'prefix': 'IntOp'
+    'body': 'IntOp \$${1:user_var} ${2:value1} ${3:operator} ${4:value2}'
+  'IsWindow':
+    'prefix': 'IsWindow'
+    'body': 'IsWindow \$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}'
+  'LangString':
+    'prefix': 'LangString'
+    'body': 'LangString ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:string}"'
+  'LicenseBkColor':
+    'prefix': 'LicenseBkColor'
+    'body': 'LicenseBkColor "${1:color}"'
+  'LicenseBkColor /gray (default)':
+    'prefix': 'LicenseBkColor /gray (default)'
+    'body': 'LicenseBkColor /gray'
+  'LicenseBkColor /windows':
+    'prefix': 'LicenseBkColor /windows'
+    'body': 'LicenseBkColor /windows'
+  'LicenseData':
+    'prefix': 'LicenseData'
+    'body': 'LicenseData "${1:license_file}"'
+  'LicenseData rtf':
+    'prefix': 'LicenseData rtf'
+    'body': 'LicenseData "${1:license_file}.rtf"'
+  'LicenseData txt':
+    'prefix': 'LicenseData txt'
+    'body': 'LicenseData "${1:license_file}.txt"'
+  'LicenseForceSelection checkbox':
+    'prefix': 'LicenseForceSelection checkbox'
+    'body': 'LicenseForceSelection checkbox "${2:accept_text}"'
+  'LicenseForceSelection off (default)':
+    'prefix': 'LicenseForceSelection off (default)'
+    'body': 'LicenseForceSelection off "${2:accept_text}" "${3:decline_text}"'
+  'LicenseForceSelection radiobuttons':
+    'prefix': 'LicenseForceSelection radiobuttons'
+    'body': 'LicenseForceSelection radiobuttons "${2:accept_text}" "${3:decline_text}"'
+  'LicenseLangString':
+    'prefix': 'LicenseLangString'
+    'body': 'LicenseLangString ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}"'
+  'LicenseLangString rtf':
+    'prefix': 'LicenseLangString rtf'
+    'body': 'LicenseLangString ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.rtf"'
+  'LicenseLangString txt':
+    'prefix': 'LicenseLangString txt'
+    'body': 'LicenseLangString ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.txt"'
+  'LicenseText':
+    'prefix': 'LicenseText'
+    'body': 'LicenseText "${1:text}" "${2:button_text}"'
+  'LoadLanguageFile':
+    'prefix': 'LoadLanguageFile'
+    'body': 'LoadLanguageFile "${1:language_file}.nlf"'
+  'LockWindow':
+    'prefix': 'LockWindow'
+    'body': 'LockWindow ${1:on|off}'
+  'LockWindow off':
+    'prefix': 'LockWindow off'
+    'body': 'LockWindow off'
+  'LockWindow on':
+    'prefix': 'LockWindow on'
+    'body': 'LockWindow on'
+  'LogSet':
+    'prefix': 'LogSet'
+    'body': 'LogSet ${1:on|off}'
+  'LogSet off':
+    'prefix': 'LogSet off'
+    'body': 'LogSet off'
+  'LogSet on':
+    'prefix': 'LogSet on'
+    'body': 'LogSet on'
+  'LogText':
+    'prefix': 'LogText'
+    'body': 'LogText "${1:text}"'
+  'ManifestDPIAware':
+    'prefix': 'ManifestDPIAware'
+    'body': 'ManifestDPIAware ${1:notset|true|false}'
+  'ManifestDPIAware false':
+    'prefix': 'ManifestDPIAware false'
+    'body': 'ManifestDPIAware false'
+  'ManifestDPIAware notset':
+    'prefix': 'ManifestDPIAware notset'
+    'body': 'ManifestDPIAware notset'
+  'ManifestDPIAware true':
+    'prefix': 'ManifestDPIAware true'
+    'body': 'ManifestDPIAware true'
+  'ManifestSupportedOS':
+    'prefix': 'ManifestSupportedOS'
+    'body': 'ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}'
+  'ManifestSupportedOS all':
+    'prefix': 'ManifestSupportedOS all'
+    'body': 'ManifestSupportedOS all'
+  'ManifestSupportedOS none':
+    'prefix': 'ManifestSupportedOS none'
+    'body': 'ManifestSupportedOS none'
+  'ManifestSupportedOS Win7':
+    'prefix': 'ManifestSupportedOS Win7'
+    'body': 'ManifestSupportedOS Win7'
+  'ManifestSupportedOS Win8':
+    'prefix': 'ManifestSupportedOS Win8'
+    'body': 'ManifestSupportedOS Win8'
+  'ManifestSupportedOS WinVista':
+    'prefix': 'ManifestSupportedOS WinVista'
+    'body': 'ManifestSupportedOS WinVista'
+  'MessageBox':
+    'prefix': 'MessageBox'
+    'body': 'MessageBox ${1:mb_option_list} "${2:messagebox_text}"'
+  'MiscButtonText':
+    'prefix': 'MiscButtonText'
+    'body': 'MiscButtonText "${1:back_button_text}" "${2:next_button_text}" "${3:cancel_button_text}" "${4:close_button_text}"'
+  'Name':
+    'prefix': 'Name'
+    'body': 'Name "${1:name}"'
+  'Name &&':
+    'prefix': 'Name &&'
+    'body': 'Name "${1:name}" "${2:name_doubled_ampersands}"'
+  'Name && +Caption':
+    'prefix': 'Name && +Caption'
+    'body': """
+      Name "${1:name}" "${2:name_doubled_ampersands}"
+      Caption "${3:${1
+}}"    """
+  'Name && +Caption +OutFile':
+    'prefix': 'Name && +Caption +OutFile'
+    'body': """
+      Name "${1:name}" "${2:name_doubled_ampersands}"
+      Caption "${3:${1}}"
+      OutFile "${4:${1}}.exe
+"    """
+  'Name && +OutFile':
+    'prefix': 'Name && +OutFile'
+    'body': """
+      Name "${1:name}" "${2:name_doubled_ampersands}"
+      OutFile "${3:${1}}.exe
+"    """
+  'Name +Caption':
+    'prefix': 'Name +Caption'
+    'body': """
+      Name "${1:name}"
+      Caption "${2:${1
+}}"    """
+  'Name +Caption +OutFile':
+    'prefix': 'Name +Caption +OutFile'
+    'body': """
+      Name "${1:name}"
+      Caption "${2:${1}}"
+      OutFile "${3:${1}}.exe
+"    """
+  'Name +OutFile':
+    'prefix': 'Name +OutFile'
+    'body': """
+      Name "${1:name}"
+      OutFile "${2:${1}}.exe
+"    """
+  'Nop':
+    'prefix': 'Nop'
+    'body': 'Nop'
+  'OutFile':
+    'prefix': 'OutFile'
+    'body': 'OutFile "${1:file_name}.exe"'
+  'Page':
+    'prefix': 'Page'
+    'body': 'Page ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}'
+  'Page /ENABLECANCEL':
+    'prefix': 'Page /ENABLECANCEL'
+    'body': 'Page ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL'
+  'Page components':
+    'prefix': 'Page components'
+    'body': 'Page components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'Page custom':
+    'prefix': 'Page custom'
+    'body': 'Page custom ${1:creator_function} ${2:[leave_function]} "${3:caption}"'
+  'Page custom /ENABLECANCEL':
+    'prefix': 'Page custom /ENABLECANCEL'
+    'body': 'Page custom ${1:creator_function} ${2:[leave_function]} "${3:caption}" /ENABLECANCEL'
+  'Page directory':
+    'prefix': 'Page directory'
+    'body': 'Page directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'Page instfiles':
+    'prefix': 'Page instfiles'
+    'body': 'Page instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+  'Page license':
+    'prefix': 'Page license'
+    'body': 'Page license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'Page uninstConfirm':
+    'prefix': 'Page uninstConfirm'
+    'body': 'Page uninstConfirm ${1:pre_function} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+  'PageCallbacks':
+    'prefix': 'PageCallbacks'
+    'body': 'PageCallbacks ${1:[creator_function]} ${2:[leave_function]}'
+  'PageEx':
+    'prefix': 'PageEx'
+    'body': """
+      PageEx ${1:page_type}
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx components':
+    'prefix': 'PageEx components'
+    'body': """
+      PageEx components
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx custom':
+    'prefix': 'PageEx custom'
+    'body': """
+      PageEx custom
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx directory':
+    'prefix': 'PageEx directory'
+    'body': """
+      PageEx directory
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx instfiles':
+    'prefix': 'PageEx instfiles'
+    'body': """
+      PageEx instfiles
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx license':
+    'prefix': 'PageEx license'
+    'body': """
+      PageEx license
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageEx uninstConfirm':
+    'prefix': 'PageEx uninstConfirm'
+    'body': """
+      PageEx uninstConfirm
+      	${2:# your code here}
+      PageExEnd
+    """
+  'PageExEnd':
+    'prefix': 'PageExEnd'
+    'body': 'PageExEnd'
+  'Pop':
+    'prefix': 'Pop'
+    'body': 'Pop \$${1:user_var}'
+  'Push':
+    'prefix': 'Push'
+    'body': 'Push "${1:string}"'
+  'Push $var':
+    'prefix': 'Push $var'
+    'body': 'Push \$${1:user_var}'
+  'Quit':
+    'prefix': 'Quit'
+    'body': 'Quit'
+  'ReadEnvStr':
+    'prefix': 'ReadEnvStr'
+    'body': 'ReadEnvStr \$${1:user_var} "${2:name}"'
+  'ReadINIStr':
+    'prefix': 'ReadINIStr'
+    'body': 'ReadINIStr \$${1:user_var} "${2:ini_filename}" "${3:section_name}" "${4:entry_name}"'
+  'ReadRegDWORD':
+    'prefix': 'ReadRegDWORD'
+    'body': 'ReadRegDWORD \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"'
+  'ReadRegStr':
+    'prefix': 'ReadRegStr'
+    'body': 'ReadRegStr \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"'
+  'Reboot':
+    'prefix': 'Reboot'
+    'body': 'Reboot'
+  'RegDLL':
+    'prefix': 'RegDLL'
+    'body': 'RegDLL "${1:dllfile}" ${2:entrypoint_name}'
+  'Rename':
+    'prefix': 'Rename'
+    'body': 'Rename "${1:source_file}" "${2:dest_file}"'
+  'Rename /REBOOTOK':
+    'prefix': 'Rename /REBOOTOK'
+    'body': 'Rename /REBOOTOK "${1:source_file}" "${2:dest_file}"'
+  'RequestExecutionLevel':
+    'prefix': 'RequestExecutionLevel'
+    'body': 'RequestExecutionLevel ${1:none|user|admin|highest}'
+  'RequestExecutionLevel admin':
+    'prefix': 'RequestExecutionLevel admin'
+    'body': 'RequestExecutionLevel admin'
+  'RequestExecutionLevel highest':
+    'prefix': 'RequestExecutionLevel highest'
+    'body': 'RequestExecutionLevel highest'
+  'RequestExecutionLevel none (default)':
+    'prefix': 'RequestExecutionLevel none (default)'
+    'body': 'RequestExecutionLevel none'
+  'RequestExecutionLevel user':
+    'prefix': 'RequestExecutionLevel user'
+    'body': 'RequestExecutionLevel user'
+  'ReserveFile':
+    'prefix': 'ReserveFile'
+    'body': 'ReserveFile "${1:file}"'
+  'ReserveFile /nonfatal':
+    'prefix': 'ReserveFile /nonfatal'
+    'body': 'ReserveFile /nonfatal "${1:file}"'
+  'ReserveFile /nonfatal /r':
+    'prefix': 'ReserveFile /nonfatal /r'
+    'body': 'ReserveFile nonfatal/r "${1:file}"'
+  'Return':
+    'prefix': 'Return'
+    'body': 'Return'
+  'RMDir':
+    'prefix': 'RMDir'
+    'body': 'RMDir "${1:directory_name}"'
+  'RMDir /r /REBOOTOK':
+    'prefix': 'RMDir /r /REBOOTOK'
+    'body': 'RMDir /r /REBOOTOK "${1:directory_name}"'
+  'RMDir /REBOOTOK':
+    'prefix': 'RMDir /REBOOTOK'
+    'body': 'RMDir /REBOOTOK "${1:directory_name}"'
+  'SearchPath':
+    'prefix': 'SearchPath'
+    'body': 'SearchPath \$${1:user_var} "${2:filename}"'
+  'Section':
+    'prefix': 'Section'
+    'body': """
+      Section "${1:section_name}" ${2:section_index_output}
+      	${3:# your code here}
+      SectionEnd
+    """
+  'SectionEnd':
+    'prefix': 'SectionEnd'
+    'body': 'SectionEnd'
+  'SectionGetFlags':
+    'prefix': 'SectionGetFlags'
+    'body': 'SectionGetFlags \${${1:section_index}} \$${2:user_var}'
+  'SectionGetInstTypes':
+    'prefix': 'SectionGetInstTypes'
+    'body': 'SectionGetInstTypes \${${1:section_index}} \$${2:user_var}'
+  'SectionGetSize':
+    'prefix': 'SectionGetSize'
+    'body': 'SectionGetSize \${${1:section_index}} \$${2:user_var}'
+  'SectionGetText':
+    'prefix': 'SectionGetText'
+    'body': 'SectionGetText \${${1:section_index}} \$${2:user_var}'
+  'SectionGroup':
+    'prefix': 'SectionGroup'
+    'body': """
+      SectionGroup ${1:section_group_name} ${2:index_output}
+      	${3:# your code here}
+      SectionGroupEnd
+    """
+  'SectionGroupEnd':
+    'prefix': 'SectionGroupEnd'
+    'body': 'SectionGroupEnd'
+  'SectionIn':
+    'prefix': 'SectionIn'
+    'body': 'SectionIn ${1:insttype_index} ${2:insttype_index}'
+  'SectionSetFlags':
+    'prefix': 'SectionSetFlags'
+    'body': 'SectionSetFlags \${${1:section_index}} ${2:section_flags}'
+  'SectionSetInstTypes':
+    'prefix': 'SectionSetInstTypes'
+    'body': 'SectionSetInstTypes \${${1:section_index}} ${2:inst_types}'
+  'SectionSetSize':
+    'prefix': 'SectionSetSize'
+    'body': 'SectionSetSize \${${1:section_index}} ${2:new_size}'
+  'SectionSetText':
+    'prefix': 'SectionSetText'
+    'body': 'SectionSetText \${${1:section_index}} ${2:section_text}'
+  'SendMessage':
+    'prefix': 'SendMessage'
+    'body': 'SendMessage \$${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}'
+  'SetAutoClose':
+    'prefix': 'SetAutoClose'
+    'body': 'SetAutoClose ${1:true|false}'
+  'SetAutoClose false':
+    'prefix': 'SetAutoClose false'
+    'body': 'SetAutoClose false'
+  'SetAutoClose true':
+    'prefix': 'SetAutoClose true'
+    'body': 'SetAutoClose true'
+  'SetBrandingImage':
+    'prefix': 'SetBrandingImage'
+    'body': 'SetBrandingImage "${1:path_to_bitmap_file}.bmp"'
+  'SetBrandingImage /RESIZETOFIT':
+    'prefix': 'SetBrandingImage /RESIZETOFIT'
+    'body': 'SetBrandingImage /RESIZETOFIT "${1:path_to_bitmap_file}.bmp"'
+  'SetCompress':
+    'prefix': 'SetCompress'
+    'body': 'SetCompress ${1:auto|force|off}'
+  'SetCompress auto (default)':
+    'prefix': 'SetCompress auto (default)'
+    'body': 'SetCompress auto'
+  'SetCompress force':
+    'prefix': 'SetCompress force'
+    'body': 'SetCompress force'
+  'SetCompress off':
+    'prefix': 'SetCompress off'
+    'body': 'SetCompress off'
+  'SetCompressor':
+    'prefix': 'SetCompressor'
+    'body': 'SetCompressor ${1:zlib|bzip2|lzma}'
+  'SetCompressor /FINAL':
+    'prefix': 'SetCompressor /FINAL'
+    'body': 'SetCompressor /FINAL ${1:zlib|bzip2|lzma}'
+  'SetCompressor /FINAL /SOLID':
+    'prefix': 'SetCompressor /FINAL /SOLID'
+    'body': 'SetCompressor /FINAL /SOLID ${1:zlib|bzip2|lzma}'
+  'SetCompressor /SOLID':
+    'prefix': 'SetCompressor /SOLID'
+    'body': 'SetCompressor /SOLID ${1:zlib|bzip2|lzma}'
+  'SetCompressorDictSize':
+    'prefix': 'SetCompressorDictSize'
+    'body': 'SetCompressorDictSize ${1:dict_size_mb}'
+  'SetCtlColors':
+    'prefix': 'SetCtlColors'
+    'body': 'SetCtlColors \$${1:hwnd} "0x${2:text_color}" "0x${3:bg_color}"'
+  'SetCtlColors /BRANDING':
+    'prefix': 'SetCtlColors /BRANDING'
+    'body': 'SetCtlColors /BRANDING \$${1:hwnd} "0x${2:text_color}" "0x${3:bg_color}"'
+  'SetCurInstType':
+    'prefix': 'SetCurInstType'
+    'body': 'SetCurInstType ${1:inst_type_idx}'
+  'SetDatablockOptimize':
+    'prefix': 'SetDatablockOptimize'
+    'body': 'SetDatablockOptimize ${1:on|off}'
+  'SetDatablockOptimize off':
+    'prefix': 'SetDatablockOptimize off'
+    'body': 'SetDatablockOptimize off'
+  'SetDatablockOptimize on':
+    'prefix': 'SetDatablockOptimize on'
+    'body': 'SetDatablockOptimize on'
+  'SetDateSave':
+    'prefix': 'SetDateSave'
+    'body': 'SetDateSave ${1:on|off}'
+  'SetDateSave off':
+    'prefix': 'SetDateSave off'
+    'body': 'SetDateSave off'
+  'SetDateSave on (default)':
+    'prefix': 'SetDateSave on (default)'
+    'body': 'SetDateSave on'
+  'SetDetailsPrint':
+    'prefix': 'SetDetailsPrint'
+    'body': 'SetDetailsPrint ${1:both|lastused|listonly|none|text}'
+  'SetDetailsPrint both':
+    'prefix': 'SetDetailsPrint both'
+    'body': 'SetDetailsPrint both'
+  'SetDetailsPrint lastused':
+    'prefix': 'SetDetailsPrint lastused'
+    'body': 'SetDetailsPrint lastused'
+  'SetDetailsPrint listonly':
+    'prefix': 'SetDetailsPrint listonly'
+    'body': 'SetDetailsPrint listonly'
+  'SetDetailsPrint none':
+    'prefix': 'SetDetailsPrint none'
+    'body': 'SetDetailsPrint none'
+  'SetDetailsPrint textonly':
+    'prefix': 'SetDetailsPrint textonly'
+    'body': 'SetDetailsPrint textonly'
+  'SetDetailsView':
+    'prefix': 'SetDetailsView'
+    'body': 'SetDetailsView ${1:show|hide}'
+  'SetDetailsView hide':
+    'prefix': 'SetDetailsView hide'
+    'body': 'SetDetailsView hide'
+  'SetDetailsView show':
+    'prefix': 'SetDetailsView show'
+    'body': 'SetDetailsView show'
+  'SetErrorLevel':
+    'prefix': 'SetErrorLevel'
+    'body': 'SetErrorLevel ${1:error_level}'
+  'SetErrors':
+    'prefix': 'SetErrors'
+    'body': 'SetErrors'
+  'SetFileAttributes':
+    'prefix': 'SetFileAttributes'
+    'body': 'SetFileAttributes "${1:filename}" ${2:NORMAL|ARCHIVE|HIDDEN|OFFLINE|READONLY|SYSTEM|TEMPORARY}'
+  'SetFont':
+    'prefix': 'SetFont'
+    'body': 'SetFont "${1:font_face_name}" ${2:font_size}'
+  'SetFont /LANG':
+    'prefix': 'SetFont /LANG'
+    'body': 'SetFont /LANG=\$\\{LANG_${1:ENGLISH}\} "${2:font_face_name}" ${3:font_size}'
+  'SetOutPath':
+    'prefix': 'SetOutPath'
+    'body': 'SetOutPath "${1:outpath}"'
+  'SetOverwrite':
+    'prefix': 'SetOverwrite'
+    'body': 'SetOverwrite ${1:on|off|try|ifdiff|ifnewer|lastused}'
+  'SetOverwrite ifdiff':
+    'prefix': 'SetOverwrite ifdiff'
+    'body': 'SetOverwrite ifdiff'
+  'SetOverwrite ifnewer':
+    'prefix': 'SetOverwrite ifnewer'
+    'body': 'SetOverwrite ifnewer'
+  'SetOverwrite lastused':
+    'prefix': 'SetOverwrite lastused'
+    'body': 'SetOverwrite lastused'
+  'SetOverwrite off':
+    'prefix': 'SetOverwrite off'
+    'body': 'SetOverwrite off'
+  'SetOverwrite on (default)':
+    'prefix': 'SetOverwrite on (default)'
+    'body': 'SetOverwrite on'
+  'SetOverwrite try':
+    'prefix': 'SetOverwrite try'
+    'body': 'SetOverwrite try'
+  'SetRebootFlag':
+    'prefix': 'SetRebootFlag'
+    'body': 'SetRebootFlag ${1:true|false}'
+  'SetRebootFlag false':
+    'prefix': 'SetRebootFlag false'
+    'body': 'SetRebootFlag false'
+  'SetRebootFlag true':
+    'prefix': 'SetRebootFlag true'
+    'body': 'SetRebootFlag true'
+  'SetRegView':
+    'prefix': 'SetRegView'
+    'body': 'SetRegView ${1:32|64|lastused}'
+  'SetRegView 32':
+    'prefix': 'SetRegView 32'
+    'body': 'SetRegView 32'
+  'SetRegView 64':
+    'prefix': 'SetRegView 64'
+    'body': 'SetRegView 64'
+  'SetRegView lastused':
+    'prefix': 'SetRegView lastused'
+    'body': 'SetRegView lastused'
+  'SetShellVarContext':
+    'prefix': 'SetShellVarContext'
+    'body': 'SetShellVarContext ${1:all|current}'
+  'SetShellVarContext all':
+    'prefix': 'SetShellVarContext all'
+    'body': 'SetShellVarContext all'
+  'SetShellVarContext current':
+    'prefix': 'SetShellVarContext current'
+    'body': 'SetShellVarContext current'
+  'SetSilent':
+    'prefix': 'SetSilent'
+    'body': 'SetSilent ${1:normal|silent}'
+  'SetSilent normal':
+    'prefix': 'SetSilent normal'
+    'body': 'SetSilent normal'
+  'SetSilent silent':
+    'prefix': 'SetSilent silent'
+    'body': 'SetSilent silent'
+  'ShowInstDetails':
+    'prefix': 'ShowInstDetails'
+    'body': 'ShowInstDetails ${1:hide|show|nevershow}'
+  'ShowInstDetails hide (default)':
+    'prefix': 'ShowInstDetails hide (default)'
+    'body': 'ShowInstDetails hide'
+  'ShowInstDetails nevershow':
+    'prefix': 'ShowInstDetails nevershow'
+    'body': 'ShowInstDetails nevershow'
+  'ShowInstDetails show':
+    'prefix': 'ShowInstDetails show'
+    'body': 'ShowInstDetails show'
+  'ShowUninstDetails':
+    'prefix': 'ShowUninstDetails'
+    'body': 'ShowUninstDetails ${1:hide|show|nevershow}'
+  'ShowUninstDetails hide (default)':
+    'prefix': 'ShowUninstDetails hide (default)'
+    'body': 'ShowUninstDetails hide'
+  'ShowUninstDetails nevershow':
+    'prefix': 'ShowUninstDetails nevershow'
+    'body': 'ShowUninstDetails nevershow'
+  'ShowUninstDetails show':
+    'prefix': 'ShowUninstDetails show'
+    'body': 'ShowUninstDetails show'
+  'ShowWindow':
+    'prefix': 'ShowWindow'
+    'body': 'ShowWindow \$${1:hwnd} ${2:show_state}'
+  'SilentInstall':
+    'prefix': 'SilentInstall'
+    'body': 'SilentInstall ${1:normal|silent|silentlog}'
+  'SilentInstall normal (default)':
+    'prefix': 'SilentInstall normal (default)'
+    'body': 'SilentInstall normal'
+  'SilentInstall silent':
+    'prefix': 'SilentInstall silent'
+    'body': 'SilentInstall silent'
+  'SilentInstall silentlog':
+    'prefix': 'SilentInstall silentlog'
+    'body': 'SilentInstall silentlog'
+  'SilentUnInstall':
+    'prefix': 'SilentUnInstall'
+    'body': 'SilentUnInstall ${1:normal|silent|silentlog}'
+  'SilentUnInstall normal (default)':
+    'prefix': 'SilentUnInstall normal (default)'
+    'body': 'SilentUnInstall normal'
+  'SilentUnInstall silent':
+    'prefix': 'SilentUnInstall silent'
+    'body': 'SilentUnInstall silent'
+  'SilentUnInstall silentlog':
+    'prefix': 'SilentUnInstall silentlog'
+    'body': 'SilentUnInstall silentlog'
+  'Sleep':
+    'prefix': 'Sleep'
+    'body': 'Sleep ${1:sleeptime_in_ms}'
+  'SpaceTexts':
+    'prefix': 'SpaceTexts'
+    'body': 'SpaceTexts ${1:req_text} ${2:avail_text}'
+  'StrCmp':
+    'prefix': 'StrCmp'
+    'body': 'StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}'
+  'StrCmpS':
+    'prefix': 'StrCmpS'
+    'body': 'StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}'
+  'StrCpy':
+    'prefix': 'StrCpy'
+    'body': 'StrCpy \$${1:user_var} "${2:str}" ${3:[maxlen]} ${4:[start_offset]}'
+  'StrLen':
+    'prefix': 'StrLen'
+    'body': 'StrLen \$${1:user_var} "${2:str}"'
+  'SubCaption':
+    'prefix': 'SubCaption'
+    'body': 'SubCaption ${1:page_number} "${2:subcaption}"'
+  'Unicode':
+    'prefix': 'Unicode'
+    'body': 'Unicode ${1:true|false}'
+  'Unicode false':
+    'prefix': 'Unicode false'
+    'body': 'Unicode false'
+  'Unicode true':
+    'prefix': 'Unicode true'
+    'body': 'Unicode true'
+  'UninstallButtonText':
+    'prefix': 'UninstallButtonText'
+    'body': 'UninstallButtonText "${1:text}"'
+  'UninstallCaption':
+    'prefix': 'UninstallCaption'
+    'body': 'UninstallCaption "${1:caption}"'
+  'UninstallIcon':
+    'prefix': 'UninstallIcon'
+    'body': 'UninstallIcon "${1:icon}.ico"'
+  'UninstallIcon:arrow-uninstall.ico':
+    'prefix': 'UninstallIcon:arrow-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow-uninstall.ico"'
+  'UninstallIcon:arrow2-uninstall.ico':
+    'prefix': 'UninstallIcon:arrow2-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\arrow2-uninstall.ico"'
+  'UninstallIcon:box-uninstall.ico':
+    'prefix': 'UninstallIcon:box-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\box-uninstall.ico"'
+  'UninstallIcon:classic-uninstall.ico':
+    'prefix': 'UninstallIcon:classic-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\classic-uninstall.ico"'
+  'UninstallIcon:llama-blue.ico':
+    'prefix': 'UninstallIcon:llama-blue.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-blue.ico"'
+  'UninstallIcon:llama-grey.ico':
+    'prefix': 'UninstallIcon:llama-grey.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\llama-grey.ico"'
+  'UninstallIcon:modern-uninstall-blue-full.ico':
+    'prefix': 'UninstallIcon:modern-uninstall-blue-full.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue-full.ico"'
+  'UninstallIcon:modern-uninstall-blue.ico':
+    'prefix': 'UninstallIcon:modern-uninstall-blue.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-blue.ico"'
+  'UninstallIcon:modern-uninstall-colorful.ico':
+    'prefix': 'UninstallIcon:modern-uninstall-colorful.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-colorful.ico"'
+  'UninstallIcon:modern-uninstall-full.ico':
+    'prefix': 'UninstallIcon:modern-uninstall-full.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall-full.ico"'
+  'UninstallIcon:modern-uninstall.ico':
+    'prefix': 'UninstallIcon:modern-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\modern-uninstall.ico"'
+  'UninstallIcon:nsis1-uninstall.ico':
+    'prefix': 'UninstallIcon:nsis1-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\nsis1-uninstall.ico"'
+  'UninstallIcon:orange-uninstall-nsis.ico':
+    'prefix': 'UninstallIcon:orange-uninstall-nsis.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall-nsis.ico"'
+  'UninstallIcon:orange-uninstall.ico':
+    'prefix': 'UninstallIcon:orange-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\orange-uninstall.ico"'
+  'UninstallIcon:pixel-uninstall.ico':
+    'prefix': 'UninstallIcon:pixel-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\pixel-uninstall.ico"'
+  'UninstallIcon:win-uninstall.ico':
+    'prefix': 'UninstallIcon:win-uninstall.ico'
+    'body': 'UninstallIcon "\${NSISDIR}\\\\Contrib\\\\Graphics\\\\Icons\\\\win-uninstall.ico"'
+  'UninstallSubCaption':
+    'prefix': 'UninstallSubCaption'
+    'body': 'UninstallSubCaption ${1:page_number} "${2:subcaption}"'
+  'UninstallText':
+    'prefix': 'UninstallText'
+    'body': 'UninstallText "${1:text}" "${2:[subtext}"'
+  'UninstPage':
+    'prefix': 'UninstPage'
+    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}'
+  'UninstPage /ENABLECANCEL':
+    'prefix': 'UninstPage /ENABLECANCEL'
+    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL'
+  'UninstPage components':
+    'prefix': 'UninstPage components'
+    'body': 'UninstPage components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'UninstPage custom':
+    'prefix': 'UninstPage custom'
+    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}"'
+  'UninstPage custom /ENABLECANCEL':
+    'prefix': 'UninstPage custom /ENABLECANCEL'
+    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}" /ENABLECANCEL'
+  'UninstPage directory':
+    'prefix': 'UninstPage directory'
+    'body': 'UninstPage directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'UninstPage instfiles':
+    'prefix': 'UninstPage instfiles'
+    'body': 'UninstPage instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+  'UninstPage license':
+    'prefix': 'UninstPage license'
+    'body': 'UninstPage license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+  'UninstPage uninstConfirm':
+    'prefix': 'UninstPage uninstConfirm'
+    'body': 'UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+  'UnRegDLL':
+    'prefix': 'UnRegDLL'
+    'body': 'UnRegDLL "${1:dllfile}"'
+  'Var':
+    'prefix': 'Var'
+    'body': 'Var ${1:var_name}'
+  'Var /GLOBAL':
+    'prefix': 'Var /GLOBAL'
+    'body': 'Var /GLOBAL ${1:var_name}'
+  'VIAddVersionKey':
+    'prefix': 'VIAddVersionKey'
+    'body': 'VIAddVersionKey "${1:keyname}" "${2:value}"'
+  'VIAddVersionKey /LANG Comments':
+    'prefix': 'VIAddVersionKey /LANG Comments'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "Comments" "${2:value}"'
+  'VIAddVersionKey /LANG CompanyName':
+    'prefix': 'VIAddVersionKey /LANG CompanyName'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "CompanyName" "${2:value}"'
+  'VIAddVersionKey /LANG FileVersion':
+    'prefix': 'VIAddVersionKey /LANG FileVersion'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "FileVersion" "${2:value}"'
+  'VIAddVersionKey /LANG LegalCopyright':
+    'prefix': 'VIAddVersionKey /LANG LegalCopyright'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "LegalCopyright" "${2:value}"'
+  'VIAddVersionKey /LANG LegalTrademarks':
+    'prefix': 'VIAddVersionKey /LANG LegalTrademarks'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "LegalTrademarks" "${2:value}"'
+  'VIAddVersionKey /LANG ProductName':
+    'prefix': 'VIAddVersionKey /LANG ProductName'
+    'body': 'VIAddVersionKey /LANG=\$\\{LANG_${1:ENGLISH}\} "ProductName" "${2:value}"'
+  'VIAddVersionKey Comments':
+    'prefix': 'VIAddVersionKey Comments'
+    'body': 'VIAddVersionKey "Comments" "${1:value}"'
+  'VIAddVersionKey CompanyName':
+    'prefix': 'VIAddVersionKey CompanyName'
+    'body': 'VIAddVersionKey "CompanyName" "${1:value}"'
+  'VIAddVersionKey FileDescription':
+    'prefix': 'VIAddVersionKey FileDescription'
+    'body': 'VIAddVersionKey "FileDescription" "${1:value}"'
+  'VIAddVersionKey FileVersion':
+    'prefix': 'VIAddVersionKey FileVersion'
+    'body': 'VIAddVersionKey "FileVersion" "${1:value}"'
+  'VIAddVersionKey LegalCopyright':
+    'prefix': 'VIAddVersionKey LegalCopyright'
+    'body': 'VIAddVersionKey "LegalCopyright" "${1:value}"'
+  'VIAddVersionKey LegalTrademarks':
+    'prefix': 'VIAddVersionKey LegalTrademarks'
+    'body': 'VIAddVersionKey "LegalTrademarks" "${1:value}"'
+  'VIAddVersionKey ProductName':
+    'prefix': 'VIAddVersionKey ProductName'
+    'body': 'VIAddVersionKey "ProductName" "${1:value}"'
+  'VIFileVersion':
+    'prefix': 'VIFileVersion'
+    'body': 'VIFileVersion "${1:version_string}"'
+  'VIProductVersion':
+    'prefix': 'VIProductVersion'
+    'body': 'VIProductVersion "${1:version_string}"'
+  'WindowIcon':
+    'prefix': 'WindowIcon'
+    'body': 'WindowIcon ${1:on|off}'
+  'WindowIcon off':
+    'prefix': 'WindowIcon off'
+    'body': 'WindowIcon off'
+  'WindowIcon on':
+    'prefix': 'WindowIcon on'
+    'body': 'WindowIcon on'
+  'WriteINIStr':
+    'prefix': 'WriteINIStr'
+    'body': 'WriteINIStr "${1:ini_filename}" "${2:section_name}" "${3:entry_name}" "${4:value}"'
+  'WriteRegBin':
+    'prefix': 'WriteRegBin'
+    'body': 'WriteRegBin ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:valuedata}"'
+  'WriteRegDWORD':
+    'prefix': 'WriteRegDWORD'
+    'body': 'WriteRegDWORD ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+  'WriteRegExpandStr':
+    'prefix': 'WriteRegExpandStr'
+    'body': 'WriteRegExpandStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+  'WriteRegStr':
+    'prefix': 'WriteRegStr'
+    'body': 'WriteRegStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+  'WriteUninstaller':
+    'prefix': 'WriteUninstaller'
+    'body': 'WriteUninstaller "${1:exename}.exe"'
+  'XPStyle':
+    'prefix': 'XPStyle'
+    'body': 'XPStyle ${1:off|on}'
+  'XPStyle off (default)':
+    'prefix': 'XPStyle off (default)'
+    'body': 'XPStyle off'
+  'XPStyle on':
+    'prefix': 'XPStyle on'
+    'body': 'XPStyle on'

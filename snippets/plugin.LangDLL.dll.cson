@@ -1,0 +1,4 @@
+'.source.nsis':
+  'LangDLL::LangDialog':
+    'prefix': 'LangDLL::LangDialog'
+    'body': 'LangDLL::LangDialog "${1:title}" "${2:text}"'

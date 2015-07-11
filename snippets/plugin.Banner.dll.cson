@@ -1,0 +1,10 @@
+'.source.nsis':
+  'Banner::destroy':
+    'prefix': 'Banner::destroy'
+    'body': 'Banner::destroy'
+  'Banner::getWindow':
+    'prefix': 'Banner::getWindow'
+    'body': 'Banner::getWindow "${1:file}"'
+  'Banner::show':
+    'prefix': 'Banner::show'
+    'body': 'Banner::show "${1:file}"'

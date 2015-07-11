@@ -1,0 +1,61 @@
+'.source.nsis':
+  '${BannerTrimPath}':
+    'prefix': 'BannerTrimPath'
+    'body': '\${BannerTrimPath} "${1:path_string}" "${2:option}" \$${3:var}'
+  '${DirState}':
+    'prefix': 'DirState'
+    'body': '\${DirState} "${1:path}" \$${2:var}'
+  '${DriveSpace}':
+    'prefix': 'DriveSpace'
+    'body': '\${DriveSpace} "${1:drive}" "${2:options}" \$${3:size}'
+  '${GetBaseName}':
+    'prefix': 'GetBaseName'
+    'body': '\${GetBaseName} "${1:file_string}" \$${2:var}'
+  '${GetDrives}':
+    'prefix': 'GetDrives'
+    'body': '\${GetDrives} "${1:option}" "${2:function}"'
+  '${GetExeName}':
+    'prefix': 'GetExeName'
+    'body': '\${GetExeName} \$${1:var}'
+  '${GetExePath}':
+    'prefix': 'GetExePath'
+    'body': '\${GetExePath} \$${1:var}'
+  '${GetFileAttributes}':
+    'prefix': 'GetFileAttributes'
+    'body': '\${GetFileAttributes} "${1:file}" "${2:attributes}" \$${3:var}'
+  '${GetFileExt}':
+    'prefix': 'GetFileExt'
+    'body': '\${GetFileExt} "${1:file_string}" \$${2:var}'
+  '${GetFileName}':
+    'prefix': 'GetFileName'
+    'body': '\${GetFileName} "${1:path_string}" \$${2:var}'
+  '${GetFileVersion}':
+    'prefix': 'GetFileVersion'
+    'body': '\${GetFileVersion} "${1:executable}" \$${2:version}'
+  '${GetOptionsS}':
+    'prefix': 'GetOptionsS'
+    'body': '\${GetOptionsS} "${1:parameters}" "${2:option}" \$${3:var}'
+  '${GetOptions}':
+    'prefix': 'GetOptions'
+    'body': '\${GetOptions} "${1:parameters}" "${2:option}" \$${3:var}'
+  '${GetParameters}':
+    'prefix': 'GetParameters'
+    'body': '\${GetParameters} \$${1:var}'
+  '${GetParent}':
+    'prefix': 'GetParent'
+    'body': '\${GetParent} "${1:path_string}" \$${2:var}'
+  '${GetRoot}':
+    'prefix': 'GetRoot'
+    'body': '\${GetRoot} "${1:full_path}" \$${2:var}'
+  '${GetSize}':
+    'prefix': 'GetSize'
+    'body': '\${GetSize} "${1:path}" "${2:options}" \$${3:size} \$${4:sum_files} \$${5:sum_directories}'
+  '${GetTime}':
+    'prefix': 'GetTime'
+    'body': '\${GetTime} "${1:file}" "${2:option}" \$${3:day} \$${4:month} \$${5:year} \$${6:weekday} \$${7:hours} \$${8:minute} \$${9:seconds}'
+  '${Locate}':
+    'prefix': 'Locate'
+    'body': '\${Locate} "${1:path}" "${2:options}" "${3:function}"'
+  '${RefreshShellIcons}':
+    'prefix': 'RefreshShellIcons'
+    'body': '\${RefreshShellIcons}'
