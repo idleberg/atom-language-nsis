@@ -804,6 +804,24 @@
   'MessageBox':
     'prefix': 'MessageBox'
     'body': 'MessageBox ${1:mb_option_list} "${2:messagebox_text}"'
+  'MessageBox MB_ABORTRETRYIGNORE':
+    'prefix': 'MB_ABORTRETRYIGNORE'
+    'body': 'MessageBox MB_ABORTRETRYIGNORE${1} "${2:messagebox_text}" ${3}'
+  'MessageBox MB_OK':
+    'prefix': 'MB_OK'
+    'body': 'MessageBox MB_OK${1} "${2:messagebox_text}" ${3}'
+  'MessageBox MB_OKCANCEL':
+    'prefix': 'MB_OKCANCEL'
+    'body': 'MessageBox MB_OKCANCEL${1} "${2:messagebox_text}" ${3}'
+  'MessageBox MB_RETRYCANCEL':
+    'prefix': 'MB_RETRYCANCEL'
+    'body': 'MessageBox MB_RETRYCANCEL${1} "${2:messagebox_text}" ${3}'
+  'MessageBox MB_YESNO':
+    'prefix': 'MB_YESNO'
+    'body': 'MessageBox MB_YESNO${1} "${2:messagebox_text}" ${3}'
+  'MessageBox MB_YESNOCANCEL':
+    'prefix': 'MB_YESNOCANCEL'
+    'body': 'MessageBox MB_YESNOCANCEL${1} "${2:messagebox_text}" ${3}'
   'MiscButtonText':
     'prefix': 'MiscButtonText'
     'body': 'MiscButtonText "${1:back_button_text}" "${2:next_button_text}" "${3:cancel_button_text}" "${4:close_button_text}"'
