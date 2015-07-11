@@ -1,89 +1,89 @@
 '.source.nsis':
-  'Abort':
+  '${Abort}':
     'prefix': 'Abort'
     'body': '\${Abort}'
-  'AndIf':
+  '${AndIf}':
     'prefix': 'AndIf'
     'body': '\${AndIf} ${1:condition}'
-  'AndIfNot':
+  '${AndIfNot}':
     'prefix': 'AndIfNot'
     'body': '\${AndIfNot} ${1:condition}'
-  'Case':
+  '${Case}':
     'prefix': 'Case'
     'body': '\${Case} ${1)'
-  'Cmd':
+  '${Cmd}':
     'prefix': 'Cmd'
     'body': '\${Cmd} `${1}`'
-  'Do…Loop':
+  '${Do…Loop}':
     'prefix': 'Do…Loop'
     'body': """
       \${Do}
       	${1:# your code here}
       \${Loop}
     """
-  'Do…LoopUntil':
+  '${Do…LoopUntil}':
     'prefix': 'Do…LoopUntil'
     'body': """
       \${Do}
       	${2:# your code here}
       \${LoopUntil} ${1:statement}
     """
-  'DoUntil…Loop':
+  '${DoUntil…Loop}':
     'prefix': 'DoUntil…Loop'
     'body': """
       \${Do} ${1:statement}
       	${2:# your code here}
       \${Loop}
     """
-  'DoUntil…LoopUntil':
+  '${DoUntil…LoopUntil}':
     'prefix': 'DoUntil…LoopUntil'
     'body': """
       \${DoUntil} ${1:statement}
       	${3:# your code here}
       \${LoopUntil} ${2:statement}
     """
-  'Else':
+  '${Else}':
     'prefix': 'Else'
     'body': '\${Else}'
-  'ElseIf':
+  '${ElseIf}':
     'prefix': 'ElseIf'
     'body': '\${ElseIf} ${1:condition}'
-  'ElseIfNot':
+  '${ElseIfNot}':
     'prefix': 'ElseIfNot'
     'body': '\${ElseIfNot} ${1:condition}'
-  'ElseUnless':
+  '${ElseUnless}':
     'prefix': 'ElseUnless'
     'body': '\${ElseUnless} ${1:condition}'
-  'EndWhile':
+  '${EndWhile}':
     'prefix': 'EndWhile'
     'body': '\${EndWhile}'
-  'Errors':
+  '${Errors}':
     'prefix': 'Errors'
     'body': '\${Errors}'
-  'ExitDo':
+  '${ExitDo}':
     'prefix': 'ExitDo'
     'body': '\${ExitDo}'
-  'ExitWhile':
+  '${ExitWhile}':
     'prefix': 'ExitWhile'
     'body': '\${ExitWhile}'
-  'FileExists':
+  '${FileExists}':
     'prefix': 'FileExists'
     'body': '\${FileExists} "${1:file}"'
-  'For…Next':
+  '${For…Next}':
     'prefix': 'For…Next'
     'body': """
       \${For} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
-  'ForEach…Next':
+  '${ForEach…Next}':
     'prefix': 'ForEach…Next'
     'body': """
       \${ForEach} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
-  'If…Else':
+  '${If…Else}':
     'prefix': 'If…Else'
     'body': """
       \${If} ${1:condition}
@@ -92,17 +92,17 @@
       	${5:# your code here}
       \${EndIf}
     """
-  'If':
+  '${If}':
     'prefix': 'If'
     'body': """
       \${If} ${1:condition}
       	${4:# your code here}
       \${EndIf}
     """
-  'IfCmd':
+  '${IfCmd}':
     'prefix': 'IfCmd'
     'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
-  'IfNot…Else':
+  '${IfNot…Else}':
     'prefix': 'IfNot…Else'
     'body': """
       \${IfNot} ${1:condition}
@@ -111,77 +111,77 @@
       	${5:# your code here}
       \${EndIf}
     """
-  'IfNot':
+  '${IfNot}':
     'prefix': 'IfNot'
     'body': """
       \${IfNot} ${1:condition}
       	${4:# your code here}
       \${EndIf}
     """
-  'IfThen':
+  '${IfThen}':
     'prefix': 'IfThen'
     'body': '\${IfThen} ${1:condition} \${|} ${4:command} \${|}'
-  'IfThenNot':
+  '${IfThenNot}':
     'prefix': 'IfThenNot'
     'body': '\${IfThenNot} ${1:condition} \${|} ${4:command} \${|}'
-  'Loop':
+  '${Loop}':
     'prefix': 'Loop'
     'body': '\${Loop}'
-  'Next':
+  '${Next}':
     'prefix': 'Next'
     'body': '\${Next}'
-  'OrIfNot':
+  '${OrIfNot}':
     'prefix': 'OrIfNot'
     'body': '\${OrIfNot} ${1:condition}'
-  'RebootFlag':
+  '${RebootFlag}':
     'prefix': 'RebootFlag'
     'body': '\${RebootFlag}'
-  'SectionIsBold':
+  '${SectionIsBold}':
     'prefix': 'SectionIsBold'
     'body': '\${SectionIsBold} \${${1}}'
-  'SectionIsExpanded':
+  '${SectionIsExpanded}':
     'prefix': 'SectionIsExpanded'
     'body': '\${SectionIsExpanded} \${${1}}'
-  'SectionIsPartiallySelected':
+  '${SectionIsPartiallySelected}':
     'prefix': 'SectionIsPartiallySelected'
     'body': '\${SectionIsPartiallySelected} \${${1}}'
-  'SectionIsReadOnly':
+  '${SectionIsReadOnly}':
     'prefix': 'SectionIsReadOnly'
     'body': '\${SectionIsReadOnly} \${${1}}'
-  'SectionIsSectionGroup':
+  '${SectionIsSectionGroup}':
     'prefix': 'SectionIsSectionGroup'
     'body': '\${SectionIsSectionGroup} \${${1}}'
-  'SectionIsSectionGroupEnd':
+  '${SectionIsSectionGroupEnd}':
     'prefix': 'SectionIsSectionGroupEnd'
     'body': '\${SectionIsSectionGroupEnd} \${${1}}'
-  'SectionIsSelected':
+  '${SectionIsSelected}':
     'prefix': 'SectionIsSelected'
     'body': '\${SectionIsSelected} \${${1}}'
-  'Select':
+  '${Select}':
     'prefix': 'Select'
     'body': """
       \${Select} \$${1:var}
       	${4:# your code here}
       \${EndSelect}
     """
-  'Silent':
+  '${Silent}':
     'prefix': 'Silent'
     'body': '\${Silent}'
-  'Switch':
+  '${Switch}':
     'prefix': 'Switch'
     'body': """
       \${Switch} \$${1:var}
       	${4:# your code here}
       \${EndSwitch}
     """
-  'Unless':
+  '${Unless}':
     'prefix': 'Unless'
     'body': """
       \${Unless} \$${1:var}
       	${4:# your code here}
       \${EndUnless}
     """
-  'While':
+  '${While}':
     'prefix': 'While'
     'body': """
       \${While} ${1:condition}

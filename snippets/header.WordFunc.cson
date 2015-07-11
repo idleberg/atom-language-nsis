@@ -1,46 +1,46 @@
 '.source.nsis':
-  'StrFilter':
+  '${StrFilter}':
     'prefix': 'StrFilter'
     'body': '\${StrFilter} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
-  'StrFilterS':
+  '${StrFilterS}':
     'prefix': 'StrFilterS'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
-  'VersionCompare':
+  '${VersionCompare}':
     'prefix': 'VersionCompare'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}'
-  'WordAdd':
+  '${WordAdd}':
     'prefix': 'WordAdd'
     'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
-  'WordAddS':
+  '${WordAddS}':
     'prefix': 'WordAddS'
     'body': '\${WordAddS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
-  'WordFind':
+  '${WordFind}':
     'prefix': 'WordFind'
     'body': '\${WordFind} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
-  'WordFind2x':
+  '${WordFind2x}':
     'prefix': 'WordFind2x'
     'body': '\${WordFind2x} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
-  'WordFind2xS':
+  '${WordFind2xS}':
     'prefix': 'WordFind2xS'
     'body': '\${WordFind2xS} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
-  'WordFind3x':
+  '${WordFind3x}':
     'prefix': 'WordFind3x'
     'body': '\${WordFind3x} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
-  'WordFind3xS':
+  '${WordFind3xS}':
     'prefix': 'WordFind3xS'
     'body': '\${WordFind3xS} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
-  'WordFindS':
+  '${WordFindS}':
     'prefix': 'WordFindS'
     'body': '\${WordFindS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
-  'WordInsert':
+  '${WordInsert}':
     'prefix': 'WordInsert'
     'body': '\${WordInsert} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
-  'WordInsertS':
+  '${WordInsertS}':
     'prefix': 'WordInsertS'
     'body': '\${WordInsertS} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
-  'WordReplace':
+  '${WordReplace}':
     'prefix': 'WordReplace'
     'body': '\${WordReplace} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
-  'WordReplaceS':
+  '${WordReplaceS}':
     'prefix': 'WordReplaceS'
     'body': '\${WordReplaceS} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'

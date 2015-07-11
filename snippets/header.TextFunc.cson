@@ -1,40 +1,40 @@
 '.source.nsis':
-  'ConfigRead':
+  '${ConfigRead}':
     'prefix': 'ConfigRead'
     'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}'
-  'ConfigReadS':
+  '${ConfigReadS}':
     'prefix': 'ConfigReadS'
     'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}'
-  'ConfigWrite':
+  '${ConfigWrite}':
     'prefix': 'ConfigWrite'
     'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
-  'ConfigWriteS':
+  '${ConfigWriteS}':
     'prefix': 'ConfigWriteS'
     'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
-  'FileJoin':
+  '${FileJoin}':
     'prefix': 'FileJoin'
     'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"'
-  'FileReadFromEnd':
+  '${FileReadFromEnd}':
     'prefix': 'FileReadFromEnd'
     'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"'
-  'FileRecode':
+  '${FileRecode}':
     'prefix': 'FileRecode'
     'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"'
-  'LineFind':
+  '${LineFind}':
     'prefix': 'LineFind'
     'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"'
-  'LineRead':
+  '${LineRead}':
     'prefix': 'LineRead'
     'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}'
-  'LineSum':
+  '${LineSum}':
     'prefix': 'LineSum'
     'body': '\${LineSum} "${1:file}" \$${2:var}'
-  'TextCompare':
+  '${TextCompare}':
     'prefix': 'TextCompare'
     'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
-  'TextCompareS':
+  '${TextCompareS}':
     'prefix': 'TextCompareS'
     'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
-  'TrimNewLines':
+  '${TrimNewLines}':
     'prefix': 'TrimNewLines'
     'body': '\${TrimNewLines} "${1:string}" \$${2:var}'
