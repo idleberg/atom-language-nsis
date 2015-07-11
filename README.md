@@ -13,7 +13,8 @@ Atom language support for NSIS, consisting of grammar and snippets
 
 ## Features
 
-* all inbuilt NSIS commands
+* all core NSIS commands
+* Drunken NSIS
 * Plugins:
     * AdvSplash
     * Banner
@@ -41,7 +42,6 @@ Atom language support for NSIS, consisting of grammar and snippets
     * WinMessages
     * WinVer
     * x64
-* Scaffolding Snippets
 
 ## Installation
 
