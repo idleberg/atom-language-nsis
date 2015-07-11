@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SectionSetFlags':
-    'prefix': 'SectionSetFlags'
-    'body': 'SectionSetFlags \\${${1:section_index}} ${2:section_flags}'

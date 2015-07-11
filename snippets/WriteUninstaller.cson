@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WriteUninstaller':
-    'prefix': 'WriteUninstaller'
-    'body': 'WriteUninstaller \"${1:exename}.exe\"'

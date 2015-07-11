@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LicenseText':
-    'prefix': 'LicenseText'
-    'body': 'LicenseText \"${1:text}\" \"${2:button_text}\"'

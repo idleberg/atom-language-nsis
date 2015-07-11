@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_Uncheck'
-    'body': '\\${NSD_Uncheck} \\$${1:dialog}'

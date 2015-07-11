@@ -1,4 +1,0 @@
-'.source.nsis':
-  'x64.nsh':
-    'prefix': 'IsWow64'
-    'body': '\\${IsWow64}'

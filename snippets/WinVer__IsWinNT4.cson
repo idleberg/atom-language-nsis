@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WinVer.nsh':
-    'prefix': 'IsWinNT4'
-    'body': '\\${IsWinNT4}'

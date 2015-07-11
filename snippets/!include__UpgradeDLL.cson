@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'UpgradeDLL'
-    'body': '!include UpgradeDLL.nsh'

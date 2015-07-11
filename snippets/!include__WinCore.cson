@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'WinCore'
-    'body': '!include WinCore.nsh'

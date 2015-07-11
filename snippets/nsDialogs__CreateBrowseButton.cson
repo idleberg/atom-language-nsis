@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_CreateBrowseButton'
-    'body': '\\${NSD_CreateBrowseButton} ${1:x} ${2:y} ${3:width} ${4:height} \"${5:text}\"'

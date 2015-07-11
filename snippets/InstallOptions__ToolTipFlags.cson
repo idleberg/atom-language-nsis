@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'ToolTipFlags'
-    'body': 'ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}'

@@ -1,8 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'DoLoopUntil'
-    'body': """
-      \\${Do}
-        ${2:# your code here}
-      \\${LoopUntil} ${1:statement}
-    """

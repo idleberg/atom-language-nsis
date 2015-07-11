@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'SectionIsReadOnly'
-    'body': '\\${SectionIsReadOnly} \\${${1}}'

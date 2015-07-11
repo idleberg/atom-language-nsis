@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetRebootFlag':
-    'prefix': 'SetRebootFlag'
-    'body': 'SetRebootFlag ${1:true|false}'

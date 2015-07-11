@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetSize'
-    'body': '\\${GetSize} \"${1:path}\" \"${2:options}\" \\$${3:size} \\$${4:sum_files} \\$${5:sum_directories}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_GetText'
-    'body': '\\${NSD_GetText} \\$${1:dialog} \\$${2:output}'

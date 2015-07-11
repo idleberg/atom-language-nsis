@@ -1,4 +1,0 @@
-'.source.nsis':
-  'CreateFont':
-    'prefix': 'CreateFont'
-    'body': 'CreateFont \\$${1:user_var} \"${2:face_name}\" ${3:[height] [weight]}'

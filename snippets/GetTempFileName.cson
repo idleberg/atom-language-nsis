@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetTempFileName':
-    'prefix': 'GetTempFileName'
-    'body': 'GetTempFileName \\$${1:user_var}'

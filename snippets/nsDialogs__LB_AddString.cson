@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_LB_AddString'
-    'body': '\\${NSD_LB_AddString} \\$${1:dialog} \"${2:string}\"'

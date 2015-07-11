@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'ToolTipText'
-    'body': 'ToolTipText=${1:text}'

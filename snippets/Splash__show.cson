@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Splash.dll':
-    'prefix': 'Splash::show'
-    'body': 'Splash::show ${1:time_in_ms} \"${2:file}.bmp\"'

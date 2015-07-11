@@ -1,4 +1,0 @@
-'.source.nsis':
-  'BgImage.dll':
-    'prefix': 'BgImage::Destroy'
-    'body': 'BgImage::Destroy'

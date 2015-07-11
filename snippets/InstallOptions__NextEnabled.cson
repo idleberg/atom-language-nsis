@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'NextEnabled'
-    'body': 'NextEnabled=${1:0|1}'

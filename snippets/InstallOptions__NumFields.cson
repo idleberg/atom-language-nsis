@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'NumFields'
-    'body': 'NumFields=${1:integer}'

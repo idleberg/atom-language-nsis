@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_FreeImage'
-    'body': '\\${NSD_FreeImage} \\$${1:dialog}'

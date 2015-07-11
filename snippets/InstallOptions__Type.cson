@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'Type'
-    'body': 'Type=${1:Bitmap|Button|CheckBox|Combobox|DirRequest|DropList|FileRequest|GroupBox|HLine|Icon|Label|Link|Listbox|Password|Radiobutton|Text|VLine}'

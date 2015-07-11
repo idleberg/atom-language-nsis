@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!addincludedir':
-    'prefix': 'addincludedir'
-    'body': '!addincludedir \"${1:directory}\"'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'NextButtonText'
-    'body': 'NextButtonText=${1:text}'

@@ -1,8 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'Select'
-    'body': """
-      \\${Select} \\$${1:var}
-        ${4:# your code here}
-      \\${EndSelect}
-    """

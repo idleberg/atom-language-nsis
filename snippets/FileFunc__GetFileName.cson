@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetFileName'
-    'body': '\\${GetFileName} \"${1:path_string}\" \\$${2:var}'

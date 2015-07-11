@@ -1,4 +1,0 @@
-'.source.nsis':
-  'VIFileVersion':
-    'prefix': 'VIFileVersion'
-    'body': 'VIFileVersion \"${1:version_string}\"'

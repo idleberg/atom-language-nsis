@@ -1,4 +1,0 @@
-'.source.nsis':
-  'IfSilent':
-    'prefix': 'IfSilent'
-    'body': 'IfSilent ${1:jump_if_silent} ${2:[jump_if_not]}'

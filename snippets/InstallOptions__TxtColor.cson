@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'TxtColor'
-    'body': 'TxtColor=0x${1:BBGGRR}'

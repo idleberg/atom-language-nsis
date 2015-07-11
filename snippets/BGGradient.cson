@@ -1,4 +1,0 @@
-'.source.nsis':
-  'BGGradient':
-    'prefix': 'BGGradient'
-    'body': 'BGGradient ${1:top_color} ${2:bottom_color}'

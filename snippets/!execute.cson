@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!execute':
-    'prefix': 'execute'
-    'body': '!execute \"${1:command}\"'

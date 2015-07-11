@@ -1,4 +1,0 @@
-'.source.nsis':
-  'UnRegDLL':
-    'prefix': 'UnRegDLL'
-    'body': 'UnRegDLL \"${1:dllfile}\"'

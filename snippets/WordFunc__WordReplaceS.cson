@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WordFunc.nsh':
-    'prefix': 'WordReplaceS'
-    'body': '\\${WordReplaceS} \"${1:input}\" \"${2:word1}\" \"${3:word2}\" \"${4:options}\" \\$${5:output}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'SectionIsSelected'
-    'body': '\\${SectionIsSelected} \\${${1}}'

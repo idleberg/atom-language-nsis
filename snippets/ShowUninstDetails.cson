@@ -1,4 +1,0 @@
-'.source.nsis':
-  'ShowUninstDetails':
-    'prefix': 'ShowUninstDetails'
-    'body': 'ShowUninstDetails ${1:hide|show|nevershow}'

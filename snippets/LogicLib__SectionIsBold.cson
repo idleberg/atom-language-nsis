@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'SectionIsBold'
-    'body': '\\${SectionIsBold} \\${${1}}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetBaseName'
-    'body': '\\${GetBaseName} \"${1:file_string}\" \\$${2:var}'

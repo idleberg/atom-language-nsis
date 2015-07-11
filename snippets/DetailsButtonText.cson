@@ -1,4 +1,0 @@
-'.source.nsis':
-  'DetailsButtonText':
-    'prefix': 'DetailsButtonText'
-    'body': 'DetailsButtonText \"${1:text}\"'

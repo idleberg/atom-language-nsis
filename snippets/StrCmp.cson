@@ -1,4 +1,0 @@
-'.source.nsis':
-  'StrCmp':
-    'prefix': 'StrCmp'
-    'body': 'StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}'

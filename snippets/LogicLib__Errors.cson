@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'Errors'
-    'body': '\\${Errors}'

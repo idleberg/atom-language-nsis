@@ -1,4 +1,0 @@
-'.source.nsis':
-  'x64.nsh':
-    'prefix': 'RunningX64'
-    'body': '\\${RunningX64}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'CallInstDLL':
-    'prefix': 'CallInstDLL'
-    'body': 'CallInstDLL \"${1:dllfile}\" ${2:function_name}'

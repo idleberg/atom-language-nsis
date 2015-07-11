@@ -1,4 +1,0 @@
-'.source.nsis':
-  'InstallDirRegKey':
-    'prefix': 'InstallDirRegKey'
-    'body': 'InstallDirRegKey ${1:root_key} \"${2:subkey}\" \"${3:key_name}\"'

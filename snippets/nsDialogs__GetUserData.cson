@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'nsDialogs::GetUserData'
-    'body': 'nsDialogs::GetUserData \\$${1:control_HWND}'

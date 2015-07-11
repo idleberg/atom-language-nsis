@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'DisSelTxtColor'
-    'body': 'DisSelTxtColor=0x${1:BBRRGG}'

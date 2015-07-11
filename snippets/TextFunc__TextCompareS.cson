@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'TextCompareS'
-    'body': '\\${TextCompareS} \"${1:file1}\" \"${2:file2}\" \"${3:option}\" \"${4:function}\"'

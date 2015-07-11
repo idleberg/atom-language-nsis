@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetFileTime':
-    'prefix': 'GetFileTime'
-    'body': 'GetFileTime \"${1:filename}\" \\$${2:user_var_high} \\$${3:user_var_low}'

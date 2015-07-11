@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'ValidateText'
-    'body': 'ValidateText=${1:text}'

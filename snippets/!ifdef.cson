@@ -1,8 +1,0 @@
-'.source.nsis':
-  '!ifdef':
-    'prefix': 'ifdef'
-    'body': """
-      !ifdef ${1:gflag}
-        ${2:# your code here}
-      !endif
-    """

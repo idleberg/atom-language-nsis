@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FindNext':
-    'prefix': 'FindNext'
-    'body': 'FindNext \\$${1:handle} \\$${2:user_var}'

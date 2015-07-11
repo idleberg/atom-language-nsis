@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'ConfigRead'
-    'body': '\\${ConfigRead} \"${1:file}\" \"${2:entry}\" \\$${3:var}'

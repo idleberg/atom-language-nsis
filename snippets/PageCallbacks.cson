@@ -1,4 +1,0 @@
-'.source.nsis':
-  'PageCallbacks':
-    'prefix': 'PageCallbacks'
-    'body': 'PageCallbacks ${1:[creator_function]} ${2:[leave_function]}'

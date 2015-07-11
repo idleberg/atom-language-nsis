@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'CancelButtonText'
-    'body': 'CancelButtonText=${1:text}'

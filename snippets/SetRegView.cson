@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetRegView':
-    'prefix': 'SetRegView'
-    'body': 'SetRegView ${1:32|62|lastused}'

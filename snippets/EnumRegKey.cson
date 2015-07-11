@@ -1,4 +1,0 @@
-'.source.nsis':
-  'EnumRegKey':
-    'prefix': 'EnumRegKey'
-    'body': 'EnumRegKey \\$${1:user_var} ${2:root_key} \"${3:subkey}\" ${4:index}'

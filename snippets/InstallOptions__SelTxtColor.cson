@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'SelTxtColor'
-    'body': 'SelTxtColor=0x${1:BBRRGG}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'LineRead'
-    'body': '\\${LineFind} \"${1:file1}\" \"${2:file2|/NUL}\" \"${3:line_numbers}\" \"${4:function}\"'

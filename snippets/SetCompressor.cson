@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetCompressor':
-    'prefix': 'SetCompressor'
-    'body': 'SetCompressor ${1:zlib|bzip2|lzma}'

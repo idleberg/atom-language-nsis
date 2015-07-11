@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetOutPath':
-    'prefix': 'SetOutPath'
-    'body': 'SetOutPath \"${1:outpath}\"'

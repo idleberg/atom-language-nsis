@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Memento.nsh':
-    'prefix': 'MementoSectionRestore'
-    'body': '\\${MementoSectionRestore}'

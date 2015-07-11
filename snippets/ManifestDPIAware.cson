@@ -1,4 +1,0 @@
-'.source.nsis':
-  'ManifestDPIAware':
-    'prefix': 'ManifestDPIAware'
-    'body': 'ManifestDPIAware ${1:notset|true|false}'

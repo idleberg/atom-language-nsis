@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'onInit'
-    'body': """
-      Function .onInit
-        ${3:# your code here}
-      FunctionEnd
-    """

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'BackButtonText'
-    'body': 'BackButtonText=${1:text}'

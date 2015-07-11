@@ -1,4 +1,0 @@
-'.source.nsis':
-  'DeleteRegValue':
-    'prefix': 'DeleteRegValue'
-    'body': 'DeleteRegValue ${1:root_key} \"${2:subkey}\" \"${3:key_name}\"'

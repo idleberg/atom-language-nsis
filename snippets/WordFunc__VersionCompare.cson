@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WordFunc.nsh':
-    'prefix': 'VersionCompare'
-    'body': '${VersionCompare}", "contents": "\\${StrFilterS} \"${1:input}\" \"${2:options}\" \\$${3:output}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Unicode':
-    'prefix': 'Unicode'
-    'body': 'SubCaption ${1:page_number} \"${2:subcaption}\"'

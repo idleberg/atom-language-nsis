@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'MUI2'
-    'body': '!include MUI2.nsh'

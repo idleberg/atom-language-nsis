@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileReadUTF16LE':
-    'prefix': 'FileReadUTF16LE'
-    'body': 'FileReadUTF16LE \\$${1:handle} \\$${2:user_var}'

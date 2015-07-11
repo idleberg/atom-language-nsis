@@ -1,4 +1,0 @@
-'.source.nsis':
-  'AllowRootDirInstall':
-    'prefix': 'AllowRootDirInstall'
-    'body': 'AllowRootDirInstall ${1:false|true}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SpaceTexts':
-    'prefix': 'SpaceTexts'
-    'body': 'SpaceTexts ${1:req_text} ${2:avail_text}'

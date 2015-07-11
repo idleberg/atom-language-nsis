@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Abort':
-    'prefix': 'Abort'
-    'body': 'Abort'

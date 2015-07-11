@@ -1,4 +1,0 @@
-'.source.nsis':
-  'CRCCheck':
-    'prefix': 'CRCCheck'
-    'body': 'CopyFiles \"${1:filespec_on_destsys}\" \"${2:destination_path}\" ${3:[size_of_files_in_kb]}'

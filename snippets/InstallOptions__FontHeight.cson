@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'FontHeight'
-    'body': 'FontHeight=${1:height_in_pt}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'Bottom'
-    'body': 'Bottom=${1:distance_in_px}'

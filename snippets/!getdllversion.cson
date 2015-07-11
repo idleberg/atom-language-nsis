@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!getdllversion':
-    'prefix': 'getdllversion'
-    'body': '!getdllversion \"${1:localfilename}\" \"${1:define_basename}\"'

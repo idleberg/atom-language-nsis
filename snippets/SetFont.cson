@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetFont':
-    'prefix': 'SetFont'
-    'body': 'SetFont \"${1:font_face_name}\" ${2:font_size}'

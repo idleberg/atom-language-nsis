@@ -1,4 +1,0 @@
-'.source.nsis':
-  'InstType':
-    'prefix': 'InstType'
-    'body': 'InstType \"${1:install_type_name}\"'

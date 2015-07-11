@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetDatablockOptimize':
-    'prefix': 'SetDatablockOptimize'
-    'body': 'SetDatablockOptimize ${1:on|off}'

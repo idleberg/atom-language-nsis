@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'TrimNewLines'
-    'body': '\\${TrimNewLines} \"${1:string}\" \\$${2:var}'

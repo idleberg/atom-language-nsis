@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'VAlign'
-    'body': 'VAlign=${1:TOP|CENTER|BOTTOM}'

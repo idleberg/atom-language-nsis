@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileClose':
-    'prefix': 'FileClose'
-    'body': 'FileClose \\$${1:handle}'

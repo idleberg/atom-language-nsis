@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Push':
-    'prefix': 'Push'
-    'body': 'Push \"${1:string}\"'

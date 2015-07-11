@@ -1,4 +1,0 @@
-'.source.nsis':
-  'OutFile':
-    'prefix': 'OutFile'
-    'body': 'OutFile \"${1:file_name}.exe\"'

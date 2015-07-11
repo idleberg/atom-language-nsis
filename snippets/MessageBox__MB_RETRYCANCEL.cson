@@ -1,6 +1,0 @@
-'.source.nsis':
-  'MessageBox':
-    'prefix': 'MB_RETRYCANCEL'
-    'body': """
-      MessageBox MB_RETRYCANCEL${1} "${2:messagebox_text}" ${3}
-    """

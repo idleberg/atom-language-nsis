@@ -1,4 +1,0 @@
-'.source.nsis':
-  'MessageBox':
-    'prefix': 'MessageBox'
-    'body': 'MessageBox ${1:mb_option_list} \"${2:messagebox_text}\"'

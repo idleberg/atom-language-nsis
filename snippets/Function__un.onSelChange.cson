@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'un.onSelChange'
-    'body': """
-      Function un.onSelChange
-        ${3:# your code here}
-      FunctionEnd
-    """

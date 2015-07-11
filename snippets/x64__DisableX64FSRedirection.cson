@@ -1,4 +1,0 @@
-'.source.nsis':
-  'x64.nsh':
-    'prefix': 'DisableX64FSRedirection'
-    'body': '\\${DisableX64FSRedirection}'

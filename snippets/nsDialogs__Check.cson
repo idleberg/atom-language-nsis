@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_Check'
-    'body': '\\${NSD_Check} \\$${1:dialog}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'InstallOptions.dll':
-    'prefix': 'InstallOptions::show'
-    'body': 'InstallOptions::show'

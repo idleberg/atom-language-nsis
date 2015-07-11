@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'DisSelTxtShwColor'
-    'body': 'DisSelTxtShwColor=0x${1:BBRRGG}'

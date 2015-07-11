@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'onMouseOverSection'
-    'body': """
-      Function .onMouseOverSection
-        ${3:# your code here}
-      FunctionEnd
-    """

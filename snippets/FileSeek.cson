@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileSeek':
-    'prefix': 'FileSeek'
-    'body': 'FileSeek \\$${1:handle} ${2:offset} ${3:[mode]}'

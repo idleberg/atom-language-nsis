@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Math.dll':
-    'prefix': 'Math::Script'
-    'body': 'Math::Script \"${1:script}\"'

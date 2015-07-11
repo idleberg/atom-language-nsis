@@ -1,4 +1,0 @@
-'.source.nsis':
-  'NSISdl':
-    'prefix': 'NSISdl::download'
-    'body': 'NSISdl::download ${1:/TIMEOUT=${2:time_in_ms} }\"${3:url}\" \"${4:local_file}\"'

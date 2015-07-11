@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_CreateTimer'
-    'body': '\\${NSD_CreateTimer} \"${1:function}\" ${2:interval}'

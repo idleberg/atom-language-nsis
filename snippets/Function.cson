@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'Function'
-    'body': """
-      Function \"${1:function_name}\"
-        ${3:# your code here}
-      FunctionEnd
-    """

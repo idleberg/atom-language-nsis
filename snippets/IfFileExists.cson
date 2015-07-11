@@ -1,4 +1,0 @@
-'.source.nsis':
-  'IfFileExists':
-    'prefix': 'IfFileExists'
-    'body': 'IfFileExists \"${1:file_to_check_for}\" ${2:jump_if_present} ${3:[jump_otherwise]}'

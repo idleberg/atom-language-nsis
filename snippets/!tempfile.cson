@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!tempfile':
-    'prefix': 'tempfile'
-    'body': '!tempfile \"${1:symbol}\"'

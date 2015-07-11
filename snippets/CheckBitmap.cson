@@ -1,4 +1,0 @@
-'.source.nsis':
-  'CheckBitmap':
-    'prefix': 'CheckBitmap'
-    'body': 'CheckBitmap \"${1:bitmap}.bmp\"'

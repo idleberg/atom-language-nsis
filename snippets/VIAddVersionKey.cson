@@ -1,4 +1,0 @@
-'.source.nsis':
-  'VIAddVersionKey':
-    'prefix': 'VIAddVersionKey'
-    'body': 'VIAddVersionKey \"${1:keyname}\" \"${2:value}\"'

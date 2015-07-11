@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Quit':
-    'prefix': 'Quit'
-    'body': 'Quit'

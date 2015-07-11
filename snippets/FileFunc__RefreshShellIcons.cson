@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'RefreshShellIcons'
-    'body': '\\${RefreshShellIcons}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'ToolTipWidth'
-    'body': 'ToolTipWidth=${1:width_in_px}'

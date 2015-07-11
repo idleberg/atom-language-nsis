@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetAutoClose':
-    'prefix': 'SetAutoClose'
-    'body': 'SetAutoClose ${1:true|false}'

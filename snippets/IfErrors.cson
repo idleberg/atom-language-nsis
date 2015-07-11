@@ -1,4 +1,0 @@
-'.source.nsis':
-  'IfErrors':
-    'prefix': 'IfErrors'
-    'body': 'IfErrors ${1:jump_to_if_error} ${2:[jump_to_if_no_error]}'

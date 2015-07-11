@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileWriteByte':
-    'prefix': 'FileWriteByte'
-    'body': 'FileWriteByte \\$${1:handle} \"${2:string}\"'

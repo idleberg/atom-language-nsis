@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileWriteUTF16LE':
-    'prefix': 'FileWriteUTF16LE'
-    'body': 'FileWriteUTF16LE \\$${1:handle} \"${2:string}\"'

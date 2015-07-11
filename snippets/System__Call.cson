@@ -1,4 +1,0 @@
-'.source.nsis':
-  'System.dll':
-    'prefix': 'System::Call'
-    'body': 'System::Call \"${1:parameters}\"'

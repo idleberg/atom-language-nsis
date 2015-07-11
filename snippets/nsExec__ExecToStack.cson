@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsExec.dll':
-    'prefix': 'nsExec::ExecToStack'
-    'body': 'nsExec::ExecToStack ${1:${2:/OEM|/TIMEOUT} }\"${3:command}\"'

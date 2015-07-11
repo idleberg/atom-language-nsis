@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SectionGetInstTypes':
-    'prefix': 'SectionGetInstTypes'
-    'body': 'SectionGetInstTypes \\${${1:section_index}} \\$${2:user_var}'

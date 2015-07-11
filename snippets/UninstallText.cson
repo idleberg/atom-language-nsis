@@ -1,4 +1,0 @@
-'.source.nsis':
-  'UninstallText':
-    'prefix': 'UninstallText'
-    'body': 'UninstallText \"${1:text}\" \"${2:[subtext}\"'

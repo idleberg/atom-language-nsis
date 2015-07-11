@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LoadLanguageFile':
-    'prefix': 'LoadLanguageFile'
-    'body': 'LoadLanguageFile \"${1:language_file}.nlf\"'

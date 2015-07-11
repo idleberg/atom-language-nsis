@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'FontUnderline'
-    'body': 'FontUnderline=${1:0|1}'

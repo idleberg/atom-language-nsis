@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_SetStretchedImage'
-    'body': '\\${NSD_SetStretchedImage} \\$${1:dialog} \"${2:image_path}\" \\$${3:output}"'

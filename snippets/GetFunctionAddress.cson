@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetFunctionAddress':
-    'prefix': 'GetFunctionAddress'
-    'body': 'GetFunctionAddress \\$${1:user_var} \"${2:function_name}\"'

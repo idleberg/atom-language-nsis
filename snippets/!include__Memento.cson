@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'Memento'
-    'body': '!include Memento.nsh'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetCurrentAddress':
-    'prefix': 'GetCurrentAddress'
-    'body': 'GetCurrentAddress \\$${1:user_var}'

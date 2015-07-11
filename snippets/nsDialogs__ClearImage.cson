@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_ClearImage'
-    'body': '\\${NSD_ClearImage} \\$${1:dialog}'

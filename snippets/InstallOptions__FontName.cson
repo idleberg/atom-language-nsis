@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'FontName'
-    'body': 'FontName=${1:font_name}'

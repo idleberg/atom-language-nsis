@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WinVer.nsh':
-    'prefix': 'IsWin98'
-    'body': '\\${IsWin98}'

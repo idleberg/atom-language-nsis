@@ -1,4 +1,0 @@
-'.source.nsis':
-  'StrCpy':
-    'prefix': 'StrCpy'
-    'body': 'StrCpy \\$${1:user_var} \"${2:str}\" ${3:[maxlen]} ${4:[start_offset]}'

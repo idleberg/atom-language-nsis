@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetDrives'
-    'body': '\\${GetDrives} \"${1:option}\" \"${2:function}\"'

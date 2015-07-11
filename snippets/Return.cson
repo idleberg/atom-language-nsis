@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Return':
-    'prefix': 'Return'
-    'body': 'Return'

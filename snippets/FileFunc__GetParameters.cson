@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetParameters'
-    'body': '\\${GetParameters} \\$${1:var}'

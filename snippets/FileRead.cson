@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileRead':
-    'prefix': 'FileRead'
-    'body': 'FileRead \\$${1:handle} \\$${2:user_var} ${3:[maxlen]}'

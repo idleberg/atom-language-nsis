@@ -1,4 +1,0 @@
-'.source.nsis':
-  'RMDir':
-    'prefix': 'RMDir'
-    'body': 'RMDir \"${1:directory_name}\"'

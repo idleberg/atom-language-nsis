@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'WinMessages'
-    'body': '!include WinMessages.nsh'

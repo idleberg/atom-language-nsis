@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'DisTxtShwColor'
-    'body': 'DisTxtShwColor=0x${1:BBRRGG}'

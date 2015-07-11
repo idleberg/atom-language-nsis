@@ -1,4 +1,0 @@
-'.source.nsis':
-  'AddSize':
-    'prefix': 'AddSize'
-    'body': 'AddSize ${1:size_kb}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'FileReadFromEnd'
-    'body': '\\${FileReadFromEnd} \"${1:file}\" \"${2:function}\"'

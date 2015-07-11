@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WordFunc.nsh':
-    'prefix': 'WordFind'
-    'body': '\\${WordFind} \"${1:input}\" \"${2:delimiter}\" \"${3:options}\" \\$${4:output}'

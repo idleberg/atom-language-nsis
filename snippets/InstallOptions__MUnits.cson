@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'MUnits'
-    'body': 'MUnits=${1:0|1}'

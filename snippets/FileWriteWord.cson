@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileWriteWord':
-    'prefix': 'FileWriteWord'
-    'body': 'FileWriteWord \\$${1:handle} \"${2:string}\"'

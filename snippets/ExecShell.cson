@@ -1,4 +1,0 @@
-'.source.nsis':
-  'ExecShell':
-    'prefix': 'ExecShell'
-    'body': 'ExecShell ${1:action} \"${2:command}\"'

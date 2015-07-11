@@ -1,4 +1,0 @@
-'.source.nsis':
-  'ShowWindow':
-    'prefix': 'ShowWindow'
-    'body': 'ShowWindow \\$${1:hwnd} ${2:show_state}'

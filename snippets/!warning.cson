@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!warning':
-    'prefix': 'warning'
-    'body': '!warning \"${1:message}\"'

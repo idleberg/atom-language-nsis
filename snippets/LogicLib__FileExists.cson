@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'FileExists'
-    'body': '\\${FileExists} ${1:file}'

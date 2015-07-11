@@ -1,4 +1,0 @@
-'.source.nsis':
-  'InstProgressFlags':
-    'prefix': 'InstProgressFlags'
-    'body': 'InstProgressFlags ${1:colored|smooth}'

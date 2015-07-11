@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'x64'
-    'body': '!include x64.nsh'

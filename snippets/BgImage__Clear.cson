@@ -1,4 +1,0 @@
-'.source.nsis':
-  'BgImage.dll':
-    'prefix': 'BgImage::Clear'
-    'body': 'BgImage::Clear'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'IntFmt':
-    'prefix': 'IntFmt'
-    'body': 'IntFmt \\$${1:user_var} \"${2:format}\" \"${3:numberstring}\"'

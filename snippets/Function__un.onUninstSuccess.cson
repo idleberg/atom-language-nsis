@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'un.onUninstSuccess'
-    'body': """
-      Function un.onUninstSuccess
-        ${3:# your code here}
-      FunctionEnd
-    """

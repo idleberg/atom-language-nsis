@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetDlgItem':
-    'prefix': 'GetDlgItem'
-    'body': 'GetDlgItem \\$${1:user_var} ${2:\\$HWNDPARENT} ${3:item_id}'

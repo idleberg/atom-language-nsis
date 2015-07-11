@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'nsDialogs::SetRTL'
-    'body': 'nsDialogs::SetRTL ${1:rtl_setting}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'GetParent'
-    'body': '\\${GetParent} \"${1:path_string}\" \\$${2:var}'

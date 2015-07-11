@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_OnChange'
-    'body': '\\${NSD_OnChange} \\$${1:dialog} \"${2:function}\"'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'AutoCloseWindow':
-    'prefix': 'AutoCloseWindow'
-    'body': 'AutoCloseWindow ${1:false|true}'

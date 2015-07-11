@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileFunc':
-    'prefix': 'DriveSpace'
-    'body': '\\${DriveSpace} \"${1:drive}\" \"${2:options}\" \\$${3:size}'

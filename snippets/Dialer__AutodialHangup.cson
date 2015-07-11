@@ -1,4 +1,0 @@
-'.source.nsis':
-  'Dialer.dll':
-    'prefix': 'Dialer::AutodialHangup'
-    'body': 'Dialer::AutodialHangup'

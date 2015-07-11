@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SectionIn':
-    'prefix': 'SectionIn'
-    'body': 'SectionIn ${1:insttype_index} ${2:insttype_index}'

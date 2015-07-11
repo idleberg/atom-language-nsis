@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SearchPath':
-    'prefix': 'SearchPath'
-    'body': 'SearchPath \\$${1:user_var} \"${2:filename}\"'

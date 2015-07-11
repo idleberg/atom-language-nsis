@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'FontWidth'
-    'body': 'FontWidth=${1:width_in_px}'

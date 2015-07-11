@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'HeaderItems'
-    'body': 'HeaderItems=${1:item1|item2}'

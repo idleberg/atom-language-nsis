@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_SetState'
-    'body': '\\${NSD_SetState} \\$${1:dialog} \"${2:state}\"'

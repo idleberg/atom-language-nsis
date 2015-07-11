@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'onUserAbort'
-    'body': """
-      Function .onUserAbort
-        ${3:# your code here}
-      FunctionEnd
-    """

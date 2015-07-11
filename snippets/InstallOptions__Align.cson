@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'Align'
-    'body': 'Align=${1:LEFT|CENTER|RIGHT}'

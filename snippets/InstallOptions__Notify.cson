@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'Notify'
-    'body': 'Notify=${1:value}'

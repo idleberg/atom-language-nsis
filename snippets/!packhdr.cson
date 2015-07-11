@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!packhdr':
-    'prefix': 'packhdr'
-    'body': '!packhdr \"${1:tempfile}\" \"${2:command}\"'

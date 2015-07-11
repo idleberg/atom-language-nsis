@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WinVer.nsh':
-    'prefix': 'IsWin2000'
-    'body': '\\${IsWin2000}'

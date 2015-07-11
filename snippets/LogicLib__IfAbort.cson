@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'IfAbort'
-    'body': 'IfAbort ${1:label_to_goto_if_abort} ${2:[label_to_goto_if_no_abort]}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!undef':
-    'prefix': 'undef'
-    'body': '!undef ${1:gflag}'

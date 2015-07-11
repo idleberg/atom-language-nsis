@@ -1,4 +1,0 @@
-'.source.nsis':
-  'SetCompressorDictSize':
-    'prefix': 'SetCompressorDictSize'
-    'body': 'SetCompressorDictSize ${1:dict_size_mb}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'IsWindow':
-    'prefix': 'IsWindow'
-    'body': 'IsWindow \\$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'MiscButtonText':
-    'prefix': 'MiscButtonText'
-    'body': 'MiscButtonText \"${1:back_button_text}\" \"${2:next_button_text}\" \"${3:cancel_button_text}\" \"${4:close_button_text}\"'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'DisBgColor'
-    'body': 'DisBgColor=0x${1:BBRRGG}'

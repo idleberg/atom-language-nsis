@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'ConfigWrite'
-    'body': '\\${ConfigWrite} \"${1:file}\" \"${2:entry}\" \"${3:value}\" \\$${4:var}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'ElseIfNot'
-    'body': '\\${ElseIfNot} ${1:condition}'

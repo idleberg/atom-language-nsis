@@ -1,4 +1,0 @@
-'.source.nsis':
-  'StartMenu.dll':
-    'prefix': 'StartMenu::Init'
-    'body': 'StartMenu::Init \"${1:text}\"'

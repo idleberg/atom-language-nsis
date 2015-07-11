@@ -1,4 +1,0 @@
-'.source.nsis':
-  'HideWindow':
-    'prefix': 'HideWindow'
-    'body': 'HideWindow'

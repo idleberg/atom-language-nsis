@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!makensis':
-    'prefix': 'makensis'
-    'body': '!makensis \"${1:parameters}\"'

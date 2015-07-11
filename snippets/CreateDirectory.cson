@@ -1,4 +1,0 @@
-'.source.nsis':
-  'CreateDirectory':
-    'prefix': 'CreateDirectory'
-    'body': 'CreateDirectory \"${1:path_to_create}\"'

@@ -1,8 +1,0 @@
-'.source.nsis':
-  'LogicLib.nsh':
-    'prefix': 'While'
-    'body': """
-      \\${While} ${1:condition}
-        ${4:# your code here}
-      \\${EndWhile}
-    """

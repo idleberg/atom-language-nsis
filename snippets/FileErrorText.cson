@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileErrorText':
-    'prefix': 'FileErrorText'
-    'body': 'FileErrorText \"${1:error_text}\"'

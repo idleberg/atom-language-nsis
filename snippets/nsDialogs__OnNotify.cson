@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_OnNotify'
-    'body': '\\${NSD_OnNotify} \\$${1:dialog} \"${2:function}\"'

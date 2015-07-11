@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'BackEnabled'
-    'body': 'BackEnabled=${1:0|1}'

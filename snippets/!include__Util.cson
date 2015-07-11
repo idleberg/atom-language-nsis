@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'Util'
-    'body': '!include Util.nsh'

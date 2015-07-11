@@ -1,4 +1,0 @@
-'.source.nsis':
-  'GetCurInstType':
-    'prefix': 'GetCurInstType'
-    'body': 'GetCurInstType \\$${1:user_var}'

@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'FontBold'
-    'body': 'FontBold=${1:0|1}'

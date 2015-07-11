@@ -1,6 +1,0 @@
-'.source.nsis':
-  'MessageBox':
-    'prefix': 'MB_OK'
-    'body': """
-      MessageBox MB_OK${1} "${2:messagebox_text}" ${3}
-    """

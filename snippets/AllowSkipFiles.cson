@@ -1,4 +1,0 @@
-'.source.nsis':
-  'AllowSkipFiles':
-    'prefix': 'AllowSkipFiles'
-    'body': 'AllowSkipFiles ${1:on|off}'

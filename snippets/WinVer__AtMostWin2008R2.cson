@@ -1,4 +1,0 @@
-'.source.nsis':
-  'WinVer.nsh':
-    'prefix': 'AtMostWin2008R2'
-    'body': '\\${AtMostWin2008R2}'

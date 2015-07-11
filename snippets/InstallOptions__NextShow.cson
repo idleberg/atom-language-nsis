@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'NextShow'
-    'body': 'NextShow=${1:0|1}'

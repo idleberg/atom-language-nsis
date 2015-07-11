@@ -1,4 +1,0 @@
-'.source.nsis':
-  'ExecWait':
-    'prefix': 'ExecWait'
-    'body': 'ExecWait \"${1:command}\"'

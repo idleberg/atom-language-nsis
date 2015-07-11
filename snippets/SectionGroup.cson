@@ -1,8 +1,0 @@
-'.source.nsis':
-  'SectionGroup':
-    'prefix': 'SectionGroup'
-    'body': """
-      SectionGroup ${1:section_group_name} ${2:index_output}
-        ${3:# your code here}
-      SectionGroupEnd
-    """

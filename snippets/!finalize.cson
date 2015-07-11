@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!finalize':
-    'prefix': 'finalize'
-    'body': '!finalize \"${1:command}\"'

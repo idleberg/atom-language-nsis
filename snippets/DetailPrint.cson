@@ -1,4 +1,0 @@
-'.source.nsis':
-  'DetailPrint':
-    'prefix': 'DetailPrint'
-    'body': 'DetailPrint \"${1:user_message}\"'

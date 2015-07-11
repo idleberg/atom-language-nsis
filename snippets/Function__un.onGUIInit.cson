@@ -1,8 +1,0 @@
-'.source.nsis':
-  'Function':
-    'prefix': 'un.onGUIInit'
-    'body': """
-      Function un.onGUIInit
-        ${3:# your code here}
-      FunctionEnd
-    """

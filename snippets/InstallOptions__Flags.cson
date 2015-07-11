@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'Flags'
-    'body': 'Flags=${1:flags}'

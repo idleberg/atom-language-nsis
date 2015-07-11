@@ -1,4 +1,0 @@
-'.source.nsis':
-  'TextFunc.nsh':
-    'prefix': 'FileJoin'
-    'body': '\\${FileJoin} \"${1:input_file1}\" \"${2:input_file2}\" \"${3:output_file}\"'

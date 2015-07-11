@@ -1,4 +1,0 @@
-'.source.ini':
-  'InstallOptions.dll':
-    'prefix': 'BufferSize'
-    'body': 'BufferSize=${1:integer}'

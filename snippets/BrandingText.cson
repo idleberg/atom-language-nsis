@@ -1,4 +1,0 @@
-'.source.nsis':
-  'BrandingText':
-    'prefix': 'BrandingText'
-    'body': 'BrandingText \"${1:text}\"'

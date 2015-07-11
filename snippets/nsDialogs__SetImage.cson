@@ -1,4 +1,0 @@
-'.source.nsis':
-  'nsDialogs.dll':
-    'prefix': 'NSD_SetImage'
-    'body': '\\${NSD_SetImage} \\$${1:dialog} \"${2:image_path}\" \\$${3:output}'

@@ -1,4 +1,0 @@
-'.source.nsis':
-  'FileWrite':
-    'prefix': 'FileWrite'
-    'body': 'FileWrite \\$${1:handle} \"${2:string}\"'

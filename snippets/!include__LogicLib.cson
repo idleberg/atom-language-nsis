@@ -1,4 +1,0 @@
-'.source.nsis':
-  '!include':
-    'prefix': 'LogicLib'
-    'body': '!include LogicLib.nsh'
