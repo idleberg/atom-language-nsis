@@ -14,29 +14,29 @@
   'Cmd':
     'prefix': 'Cmd'
     'body': '\${Cmd} `${1}`'
-  'Do..Loop':
-    'prefix': 'Do..Loop'
+  'Do…Loop':
+    'prefix': 'Do…Loop'
     'body': """
       \${Do}
       	${1:# your code here}
       \${Loop}
     """
-  'Do..LoopUntil':
-    'prefix': 'Do..LoopUntil'
+  'Do…LoopUntil':
+    'prefix': 'Do…LoopUntil'
     'body': """
       \${Do}
       	${2:# your code here}
       \${LoopUntil} ${1:statement}
     """
-  'DoUntil..Loop':
-    'prefix': 'DoUntil..Loop'
+  'DoUntil…Loop':
+    'prefix': 'DoUntil…Loop'
     'body': """
       \${Do} ${1:statement}
       	${2:# your code here}
       \${Loop}
     """
-  'DoUntil..LoopUntil':
-    'prefix': 'DoUntil..LoopUntil'
+  'DoUntil…LoopUntil':
+    'prefix': 'DoUntil…LoopUntil'
     'body': """
       \${DoUntil} ${1:statement}
       	${3:# your code here}
@@ -69,22 +69,22 @@
   'FileExists':
     'prefix': 'FileExists'
     'body': '\${FileExists} "${1:file}"'
-  'For..Next':
-    'prefix': 'For..Next'
+  'For…Next':
+    'prefix': 'For…Next'
     'body': """
       \${For} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
-  'ForEach..Next':
-    'prefix': 'ForEach..Next'
+  'ForEach…Next':
+    'prefix': 'ForEach…Next'
     'body': """
       \${ForEach} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
-  'If..Else':
-    'prefix': 'If..Else'
+  'If…Else':
+    'prefix': 'If…Else'
     'body': """
       \${If} ${1:condition}
       	${4:# your code here}
@@ -102,8 +102,8 @@
   'IfCmd':
     'prefix': 'IfCmd'
     'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
-  'IfNot..Else':
-    'prefix': 'IfNot..Else'
+  'IfNot…Else':
+    'prefix': 'IfNot…Else'
     'body': """
       \${IfNot} ${1:condition}
       	${4:# your code here}

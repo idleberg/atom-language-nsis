@@ -41,8 +41,8 @@
   '!getdllversion':
     'prefix': 'getdllversion'
     'body': '!getdllversion "${1:localfilename}" "${1:define_basename}"'
-  '!if..else':
-    'prefix': 'if..else'
+  '!if…else':
+    'prefix': 'if…else'
     'body': """
       !if ${1:value1} ${2:op} ${3:value2}
       	${4:# your code here}
@@ -57,8 +57,8 @@
       	${4:# your code here}
       !endif
     """
-  '!ifdef..else':
-    'prefix': 'ifdef..else'
+  '!ifdef…else':
+    'prefix': 'ifdef…else'
     'body': """
       !ifdef ${1:gflag}
       	${2:# your code here}
@@ -73,8 +73,8 @@
       	${2:# your code here}
       !endif
     """
-  '!ifmacrodef..else':
-    'prefix': 'ifmacrodef..else'
+  '!ifmacrodef…else':
+    'prefix': 'ifmacrodef…else'
     'body': """
       !ifmacrodef ${1:gflag}
       	${2:# your code here}
@@ -89,8 +89,8 @@
       	${2:# your code here}
       !endif
     """
-  '!ifmacrondef..else':
-    'prefix': 'ifmacrondef..else'
+  '!ifmacrondef…else':
+    'prefix': 'ifmacrondef…else'
     'body': """
       !ifmacrondef ${1:gflag}
       	${2:# your code here}
@@ -105,8 +105,8 @@
       	${2:# your code here}
       !endif
     """
-  '!ifndef..else':
-    'prefix': 'ifndef..else'
+  '!ifndef…else':
+    'prefix': 'ifndef…else'
     'body': """
       !ifndef ${1:gflag}
       	${2:# your code here}
@@ -124,49 +124,49 @@
   '!include':
     'prefix': 'include'
     'body': '!include "${1:file}"'
-  '!include':
+  '!include Colors.nsh':
     'prefix': 'Colors'
     'body': '!include Colors.nsh'
-  '!include':
+  '!include FileFunc.nsh':
     'prefix': 'FileFunc'
     'body': '!include FileFunc.nsh'
-  '!include':
+  '!include InstallOptions.nsh':
     'prefix': 'InstallOptions'
     'body': '!include InstallOptions.nsh'
-  '!include':
+  '!include LangFile.nsh':
     'prefix': 'LangFile'
     'body': '!include LangFile.nsh'
-  '!include':
+  '!include Library.nsh':
     'prefix': 'Library'
     'body': '!include Library.nsh'
-  '!include':
+  '!include LogicLib.nsh':
     'prefix': 'LogicLib'
     'body': '!include LogicLib.nsh'
-  '!include':
+  '!include Memento.nsh':
     'prefix': 'Memento'
     'body': '!include Memento.nsh'
-  '!include':
+  '!include MUI.nsh':
     'prefix': 'MUI'
     'body': '!include MUI.nsh'
-  '!include':
+  '!include MUI2.nsh':
     'prefix': 'MUI2'
     'body': '!include MUI2.nsh'
-  '!include':
+  '!include MultiUser.nsh':
     'prefix': 'MultiUser'
     'body': '!include MultiUser.nsh'
-  '!include':
+  '!include nsDialogs.nsh':
     'prefix': 'nsDialogs'
     'body': '!include nsDialogs.nsh'
-  '!include':
+  '!include Sections.nsh':
     'prefix': 'Sections'
     'body': '!include Sections.nsh'
-  '!include':
+  '!include StrFunc.nsh':
     'prefix': 'StrFunc'
     'body': '!include StrFunc.nsh'
-  '!include':
+  '!include TextFunc.nsh':
     'prefix': 'TextFunc'
     'body': '!include TextFunc.nsh'
-  '!include':
+  '!include UpgradeDLL.nsh':
     'prefix': 'UpgradeDLL'
     'body': '!include UpgradeDLL.nsh'
   '!include':
