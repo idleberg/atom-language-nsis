@@ -517,125 +517,125 @@
     'prefix': 'WriteUTF16LEFile'
     'body': 'FileWriteUTF16LE \$${1:handle} "${2:string}"'
   '%{AddWordS}':
-    'prefix': '{AddWordS}'
+    'prefix': 'AddWordS'
     'body': '\${WordAddS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '%{AddWord}':
-    'prefix': '{AddWord}'
+    'prefix': 'AddWord'
     'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '%{CmdIf}':
-    'prefix': '{CmdIf}'
+    'prefix': 'CmdIf'
     'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
   '%{CompareSText}':
-    'prefix': '{CompareSText}'
+    'prefix': 'CompareSText'
     'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
   '%{CompareText}':
-    'prefix': '{CompareText}'
+    'prefix': 'CompareText'
     'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
   '%{CompareVersion}':
-    'prefix': '{CompareVersion}'
+    'prefix': 'CompareVersion'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}'
   '%{DoExit}':
-    'prefix': '{DoExit}'
+    'prefix': 'DoExit'
     'body': '\${ExitDo}'
   '%{ExistsFile}':
-    'prefix': '{ExistsFile}'
+    'prefix': 'ExistsFile'
     'body': '\${FileExists} "${1:file}"'
   '%{FilterStrS}':
-    'prefix': '{FilterStrS}'
+    'prefix': 'FilterStrS'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
   '%{FilterStr}':
-    'prefix': '{FilterStr}'
+    'prefix': 'FilterStr'
     'body': '\${StrFilter} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
   '%{Find2xSWord}':
-    'prefix': '{Find2xSWord}'
+    'prefix': 'Find2xSWord'
     'body': '\${WordFind2xS} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
   '%{Find2xWord}':
-    'prefix': '{Find2xWord}'
+    'prefix': 'Find2xWord'
     'body': '\${WordFind2x} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
   '%{Find3xSWord}':
-    'prefix': '{Find3xSWord}'
+    'prefix': 'Find3xSWord'
     'body': '\${WordFind3xS} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
   '%{Find3xWord}':
-    'prefix': '{Find3xWord}'
+    'prefix': 'Find3xWord'
     'body': '\${WordFind3x} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
   '%{FindLine}':
-    'prefix': '{FindLine}'
+    'prefix': 'FindLine'
     'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"'
   '%{FindWordS}':
-    'prefix': '{FindWordS}'
+    'prefix': 'FindWordS'
     'body': '\${WordFindS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '%{FindWord}':
-    'prefix': '{FindWord}'
+    'prefix': 'FindWord'
     'body': '\${WordFind} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '%{IfAnd}':
-    'prefix': '{IfAnd}'
+    'prefix': 'IfAnd'
     'body': '\${AndIf} ${1:condition}'
   '%{IfElse}':
-    'prefix': '{IfElse}'
+    'prefix': 'IfElse'
     'body': '\${ElseIf} ${1:condition}'
   '%{IfNotAnd}':
-    'prefix': '{IfNotAnd}'
+    'prefix': 'IfNotAnd'
     'body': '\${AndIfNot} ${1:condition}'
   '%{IfNotElse}':
-    'prefix': '{IfNotElse}'
+    'prefix': 'IfNotElse'
     'body': '\${ElseIfNot} ${1:condition}'
   '%{IfNotOr}':
-    'prefix': '{IfNotOr}'
+    'prefix': 'IfNotOr'
     'body': '\${OrIfNot} ${1:condition}'
   '%{InsertWordS}':
-    'prefix': '{InsertWordS}'
+    'prefix': 'InsertWordS'
     'body': '\${WordInsertS} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
   '%{InsertWord}':
-    'prefix': '{InsertWord}'
+    'prefix': 'InsertWord'
     'body': '\${WordInsert} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
   '%{JoinFile}':
-    'prefix': '{JoinFile}'
+    'prefix': 'JoinFile'
     'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"'
   '%{ReadConfig}':
-    'prefix': '{ReadConfig}'
+    'prefix': 'ReadConfig'
     'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}'
   '%{ReadFromEnFiled}':
-    'prefix': '{ReadFromEnFiled}'
+    'prefix': 'ReadFromEnFiled'
     'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"'
   '%{ReadLine}':
-    'prefix': '{ReadLine}'
+    'prefix': 'ReadLine'
     'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}'
   '%{ReadSConfig}':
-    'prefix': '{ReadSConfig}'
+    'prefix': 'ReadSConfig'
     'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}'
   '%{RecodeFile}':
-    'prefix': '{RecodeFile}'
+    'prefix': 'RecodeFile'
     'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"'
   '%{ReplaceWordS}':
-    'prefix': '{ReplaceWordS}'
+    'prefix': 'ReplaceWordS'
     'body': '\${WordReplaceS} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
   '%{ReplaceWord}':
-    'prefix': '{ReplaceWord}'
+    'prefix': 'ReplaceWord'
     'body': '\${WordReplace} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
   '%{ShellIconsRefresh}':
-    'prefix': '{ShellIconsRefresh}'
+    'prefix': 'ShellIconsRefresh'
     'body': '\${RefreshShellIcons}'
   '%{SumLine}':
-    'prefix': '{SumLine}'
+    'prefix': 'SumLine'
     'body': '\${LineSum} "${1:file}" \$${2:var}'
   '%{ThenIf}':
-    'prefix': '{ThenIf}'
+    'prefix': 'ThenIf'
     'body': '\${IfThen} ${1:condition} \${|} ${4:command} \${|}'
   '%{ThenNotIf}':
-    'prefix': '{ThenNotIf}'
+    'prefix': 'ThenNotIf'
     'body': '\${IfThenNot} ${1:condition} \${|} ${4:command} \${|}'
   '%{UnlessElse}':
-    'prefix': '{UnlessElse}'
+    'prefix': 'UnlessElse'
     'body': '\${ElseUnless} ${1:condition}'
   '%{WhileEnd}':
-    'prefix': '{WhileEnd}'
+    'prefix': 'WhileEnd'
     'body': '\${ExitWhile}'
   '%{WhileExit}':
-    'prefix': '{WhileExit}'
+    'prefix': 'WhileExit'
     'body': '\${ExitWhile}'
   '%{WriteConfig}':
-    'prefix': '{WriteConfig}'
+    'prefix': 'WriteConfig'
     'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
   '%{WriteSConfig}':
-    'prefix': '{WriteSConfig}'
+    'prefix': 'WriteSConfig'
     'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
