@@ -169,28 +169,28 @@
   '!include UpgradeDLL.nsh':
     'prefix': 'UpgradeDLL'
     'body': '!include UpgradeDLL.nsh'
-  '!include':
+  '!include Util.nsh':
     'prefix': 'Util'
     'body': '!include Util.nsh'
-  '!include':
+  '!include VB6RunTime.nsh':
     'prefix': 'VB6RunTime'
     'body': '!include VB6RunTime.nsh'
-  '!include':
+  '!include VPatchLib.nsh':
     'prefix': 'VPatchLib'
     'body': '!include VPatchLib.nsh'
-  '!include':
+  '!include WinCore.nsh':
     'prefix': 'WinCore'
     'body': '!include WinCore.nsh'
-  '!include':
+  '!include WinMessages.nsh':
     'prefix': 'WinMessages'
     'body': '!include WinMessages.nsh'
-  '!include':
+  '!include WinVer.nsh':
     'prefix': 'WinVer'
     'body': '!include WinVer.nsh'
-  '!include':
+  '!include WordFunc.nsh':
     'prefix': 'WordFunc'
     'body': '!include WordFunc.nsh'
-  '!include':
+  '!include  x64.nsh':
     'prefix': 'x64'
     'body': '!include x64.nsh'
   '!insertmacro':
