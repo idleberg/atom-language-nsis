@@ -8,9 +8,15 @@
   '!appendfile':
     'prefix': 'appendfile'
     'body': '!appendfile "${1:file}" "${2:text}"'
+  '!appendfile /RawNL':
+    'prefix': 'appendfile'
+    'body': '!appendfile /RawNL "${1:file}" "${2:text}"'
   '!appendfile /CHARSET':
     'prefix': 'appendfile /CHARSET'
     'body': '!appendfile /CHARSET=${1:charset} "${2:file}" "${3:text}"'
+  '!appendfile /CHARSET /RawNL':
+    'prefix': 'appendfile /CHARSET /RawNL'
+    'body': '!appendfile /CHARSET=${1:charset} /RawNL "${2:file}" "${3:text}"'
   '!cd':
     'prefix': 'cd'
     'body': '!cd "${1:new_path}"'
