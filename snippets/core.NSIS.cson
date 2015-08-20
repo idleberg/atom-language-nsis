@@ -883,31 +883,31 @@
     'body': 'OutFile "${1:file_name}.exe"'
   'Page':
     'prefix': 'Page'
-    'body': 'Page ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}'
+    'body': 'Page ${1:internal_page_type} ${2:${3:[pre_function]} ${4:[show_function]} ${5:[leave_function]}}'
   'Page /ENABLECANCEL':
     'prefix': 'Page /ENABLECANCEL'
-    'body': 'Page ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL'
+    'body': 'Page ${1:internal_page_type} ${2:${3:[pre_function]} ${4:[show_function]} ${5:[leave_function]}} /ENABLECANCEL'
   'Page components':
     'prefix': 'Page components'
-    'body': 'Page components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'Page components ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}'
   'Page custom':
     'prefix': 'Page custom'
-    'body': 'Page custom ${1:creator_function} ${2:[leave_function]} "${3:caption}"'
+    'body': 'Page custom ${1:creator_function} ${2:${3:[leave_function]} "${4:caption}}"'
   'Page custom /ENABLECANCEL':
     'prefix': 'Page custom /ENABLECANCEL'
-    'body': 'Page custom ${1:creator_function} ${2:[leave_function]} "${3:caption}" /ENABLECANCEL'
+    'body': 'Page custom ${1:creator_function} ${2:${3:[leave_function]} "${4:caption}"} /ENABLECANCEL'
   'Page directory':
     'prefix': 'Page directory'
-    'body': 'Page directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'Page directory ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}'
   'Page instfiles':
     'prefix': 'Page instfiles'
-    'body': 'Page instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+    'body': 'Page instfiles ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} ${4:/ENABLECANCEL}}'
   'Page license':
     'prefix': 'Page license'
-    'body': 'Page license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'Page license ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}'
   'Page uninstConfirm':
     'prefix': 'Page uninstConfirm'
-    'body': 'Page uninstConfirm ${1:pre_function} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+    'body': 'Page uninstConfirm ${1:${2:pre_function} ${3:[show_function]} ${4:[leave_function]} ${5:/ENABLECANCEL}}'
   'PageCallbacks':
     'prefix': 'PageCallbacks'
     'body': 'PageCallbacks ${1:[creator_function]} ${2:[leave_function]}'
