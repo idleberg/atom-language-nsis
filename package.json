@@ -1,6 +1,6 @@
 {
   "name": "language-nsis",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Atom language support for NSIS",
   "author": {
     "name": "Jan T. Sott",
