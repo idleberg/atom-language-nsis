@@ -798,6 +798,9 @@
   'ManifestSupportedOS none':
     'prefix': 'ManifestSupportedOS none'
     'body': 'ManifestSupportedOS none'
+  'ManifestSupportedOS Win10':
+    'prefix': 'ManifestSupportedOS Win10'
+    'body': 'ManifestSupportedOS Win10'
   'ManifestSupportedOS Win7':
     'prefix': 'ManifestSupportedOS Win7'
     'body': 'ManifestSupportedOS Win7'
