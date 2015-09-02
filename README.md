@@ -31,16 +31,15 @@ Atom language support for NSIS, consisting of grammar and snippets
     * System
     * UserInfo
     * VPatch
-* Macros:
+* Headers:
     * FileFunc
-    * WordFunc
     * LogicLib
     * Memento
-    * Modern
     * MultiUser
     * Sections
     * WinMessages
     * WinVer
+    * WordFunc
     * x64
 
 You can further extend this package with snippets for [NSIS plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
