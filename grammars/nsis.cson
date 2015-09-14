@@ -1,13 +1,9 @@
-comment: '''
-  
-  	todo: - highlight functions
-  	
-'''
 fileTypes: [
   "nsi"
   "nsh"
 ]
 name: "NSIS"
+comment: "https://github.com/atom/atom-language-nsis"
 patterns: [
   {
     match: "(\\b|^\\s*)(?i)(\\!include|\\!addincludedir|\\!addplugindir|\\!appendfile|\\!cd|\\!delfile|\\!echo|\\!error|\\!execute|\\!packhdr|\\!finalize|\\!getdllversion|\\!system|\\!tempfile|\\!warning|\\!verbose|\\!define|\\!undef|\\!insertmacro|\\!macro|\\!macroend|\\!makensis|\\!searchparse|\\!searchreplace)\\b"
