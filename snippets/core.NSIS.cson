@@ -539,6 +539,132 @@
   'FlushINI':
     'prefix': 'FlushINI'
     'body': 'FlushINI "${1:ini_filename}"'
+  'Function .onGUIEnd':
+    'prefix': 'onGUIEnd'
+    'body': """
+      Function .onGUIEnd
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onGUIInit':
+    'prefix': 'onGUIInit'
+    'body': """
+      Function .onGUIInit
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onInit':
+    'prefix': 'onInit'
+    'body': """
+      Function .onInit
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onInstFailed':
+    'prefix': 'onInstFailed'
+    'body': """
+      Function .onInstFailed
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onInstSuccess':
+    'prefix': 'onInstSuccess'
+    'body': """
+      Function .onInstSuccess
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onMouseOverSection':
+    'prefix': 'onMouseOverSection'
+    'body': """
+      Function .onMouseOverSection
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onRebootFailed':
+    'prefix': 'onRebootFailed'
+    'body': """
+      Function .onRebootFailed
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onSelChange':
+    'prefix': 'onSelChange'
+    'body': """
+      Function .onSelChange
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onUserAbort':
+    'prefix': 'onUserAbort'
+    'body': """
+      Function .onUserAbort
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function .onVerifyInstDir':
+    'prefix': 'onVerifyInstDir'
+    'body': """
+      Function .onVerifyInstDir
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onGUIEnd':
+    'prefix': 'un.onGUIEnd'
+    'body': """
+      Function un.onGUIEnd
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onGUIInit':
+    'prefix': 'un.onGUIInit'
+    'body': """
+      Function un.onGUIInit
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onInit':
+    'prefix': 'un.onInit'
+    'body': """
+      Function un.onInit
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onRebootFailed':
+    'prefix': 'un.onRebootFailed'
+    'body': """
+      Function un.onRebootFailed
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onSelChange':
+    'prefix': 'un.onSelChange'
+    'body': """
+      Function un.onSelChange
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onUninstFailed':
+    'prefix': 'un.onUninstFailed'
+    'body': """
+      Function un.onUninstFailed
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onUninstSuccess':
+    'prefix': 'un.onUninstSuccess'
+    'body': """
+      Function un.onUninstSuccess
+        ${1:# your code here}
+      FunctionEnd
+    """
+  'Function un.onUserAbort':
+    'prefix': 'un.onUserAbort'
+    'body': """
+      Function un.onUserAbort
+        ${1:# your code here}
+      FunctionEnd
+    """
   'Function':
     'prefix': 'Function'
     'body': """
