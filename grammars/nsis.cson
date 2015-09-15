@@ -120,10 +120,5 @@ patterns: [
     name: "comment.block.nsis"
   }
   {
-    captures:
-      match:
-        name: "keyword.control.import.nsis"
-    match: "(\\!include|\\!insertmacro)\\b"
-  }
 ]
 scopeName: "source.nsis"
