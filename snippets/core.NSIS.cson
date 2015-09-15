@@ -51,80 +51,80 @@
     'prefix': 'if…else'
     'body': """
       !if ${1:value1} ${2:op} ${3:value2}
-      	${4:# your code here}
+        ${4:# your code here}
       !else
-      	${5:# your code here}
+        ${5:# your code here}
       !endif
     """
   '!if':
     'prefix': 'if'
     'body': """
       !if ${1:value1} ${2:op} ${3:value2}
-      	${4:# your code here}
+        ${4:# your code here}
       !endif
     """
   '!ifdef…else':
     'prefix': 'ifdef…else'
     'body': """
       !ifdef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !else
-      	${3:# your code here}
+        ${3:# your code here}
       !endif
     """
   '!ifdef':
     'prefix': 'ifdef'
     'body': """
       !ifdef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !endif
     """
   '!ifmacrodef…else':
     'prefix': 'ifmacrodef…else'
     'body': """
       !ifmacrodef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !else
-      	${3:# your code here}
+        ${3:# your code here}
       !endif
     """
   '!ifmacrodef':
     'prefix': 'ifmacrodef'
     'body': """
       !ifmacrodef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !endif
     """
   '!ifmacrondef…else':
     'prefix': 'ifmacrondef…else'
     'body': """
       !ifmacrondef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !else
-      	${3:# your code here}
+        ${3:# your code here}
       !endif
     """
   '!ifmacrondef':
     'prefix': 'ifmacrondef'
     'body': """
       !ifmacrondef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !endif
     """
   '!ifndef…else':
     'prefix': 'ifndef…else'
     'body': """
       !ifndef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !else
-      	${3:# your code here}
+        ${3:# your code here}
       !endif
     """
   '!ifndef':
     'prefix': 'ifndef'
     'body': """
       !ifndef ${1:gflag}
-      	${2:# your code here}
+        ${2:# your code here}
       !endif
     """
   '!include':
@@ -132,73 +132,73 @@
     'body': '!include "${1:file}"'
   '!include Colors.nsh':
     'prefix': 'Colors'
-    'body': '!include Colors.nsh'
+    'body': '!include "Colors.nsh"'
   '!include FileFunc.nsh':
     'prefix': 'FileFunc'
-    'body': '!include FileFunc.nsh'
+    'body': '!include "FileFunc.nsh"'
   '!include InstallOptions.nsh':
     'prefix': 'InstallOptions'
-    'body': '!include InstallOptions.nsh'
+    'body': '!include "InstallOptions.nsh"'
   '!include LangFile.nsh':
     'prefix': 'LangFile'
-    'body': '!include LangFile.nsh'
+    'body': '!include "LangFile.nsh"'
   '!include Library.nsh':
     'prefix': 'Library'
-    'body': '!include Library.nsh'
+    'body': '!include "Library.nsh"'
   '!include LogicLib.nsh':
     'prefix': 'LogicLib'
-    'body': '!include LogicLib.nsh'
+    'body': '!include "LogicLib.nsh"'
   '!include Memento.nsh':
     'prefix': 'Memento'
-    'body': '!include Memento.nsh'
+    'body': '!include "Memento.nsh"'
   '!include MUI.nsh':
     'prefix': 'MUI'
-    'body': '!include MUI.nsh'
+    'body': '!include "MUI.nsh"'
   '!include MUI2.nsh':
     'prefix': 'MUI2'
-    'body': '!include MUI2.nsh'
+    'body': '!include "MUI2.nsh"'
   '!include MultiUser.nsh':
     'prefix': 'MultiUser'
-    'body': '!include MultiUser.nsh'
+    'body': '!include "MultiUser.nsh"'
   '!include nsDialogs.nsh':
     'prefix': 'nsDialogs'
-    'body': '!include nsDialogs.nsh'
+    'body': '!include "nsDialogs.nsh"'
   '!include Sections.nsh':
     'prefix': 'Sections'
-    'body': '!include Sections.nsh'
+    'body': '!include "Sections.nsh"'
   '!include StrFunc.nsh':
     'prefix': 'StrFunc'
-    'body': '!include StrFunc.nsh'
+    'body': '!include "StrFunc.nsh"'
   '!include TextFunc.nsh':
     'prefix': 'TextFunc'
-    'body': '!include TextFunc.nsh'
+    'body': '!include "TextFunc.nsh"'
   '!include UpgradeDLL.nsh':
     'prefix': 'UpgradeDLL'
-    'body': '!include UpgradeDLL.nsh'
+    'body': '!include "UpgradeDLL.nsh"'
   '!include Util.nsh':
     'prefix': 'Util'
-    'body': '!include Util.nsh'
+    'body': '!include "Util.nsh"'
   '!include VB6RunTime.nsh':
     'prefix': 'VB6RunTime'
-    'body': '!include VB6RunTime.nsh'
+    'body': '!include "VB6RunTime.nsh"'
   '!include VPatchLib.nsh':
     'prefix': 'VPatchLib'
-    'body': '!include VPatchLib.nsh'
+    'body': '!include "VPatchLib.nsh"'
   '!include WinCore.nsh':
     'prefix': 'WinCore'
-    'body': '!include WinCore.nsh'
+    'body': '!include "WinCore.nsh"'
   '!include WinMessages.nsh':
     'prefix': 'WinMessages'
-    'body': '!include WinMessages.nsh'
+    'body': '!include "WinMessages.nsh"'
   '!include WinVer.nsh':
     'prefix': 'WinVer'
-    'body': '!include WinVer.nsh'
+    'body': '!include "WinVer.nsh"'
   '!include WordFunc.nsh':
     'prefix': 'WordFunc'
-    'body': '!include WordFunc.nsh'
+    'body': '!include "WordFunc.nsh"'
   '!include  x64.nsh':
     'prefix': 'x64'
-    'body': '!include x64.nsh'
+    'body': '!include "x64.nsh"'
   '!insertmacro':
     'prefix': 'insertmacro'
     'body': '!insertmacro "${1:macro_name}" "${2:parameter}"'
@@ -206,7 +206,7 @@
     'prefix': 'macro'
     'body': """
       !macro ${1:macro_name} ${2:parameter}
-      	${3:# your code here}
+        ${3:# your code here}
       !macroend
     """
   '!macroend':
@@ -669,7 +669,7 @@
     'prefix': 'Function'
     'body': """
       Function "${1:function_name}"
-      	${2:# your code here}
+        ${2:# your code here}
       FunctionEnd
     """
   'FunctionEnd':
@@ -1044,49 +1044,49 @@
     'prefix': 'PageEx'
     'body': """
       PageEx ${1:page_type}
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx components':
     'prefix': 'PageEx components'
     'body': """
       PageEx components
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx custom':
     'prefix': 'PageEx custom'
     'body': """
       PageEx custom
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx directory':
     'prefix': 'PageEx directory'
     'body': """
       PageEx directory
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx instfiles':
     'prefix': 'PageEx instfiles'
     'body': """
       PageEx instfiles
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx license':
     'prefix': 'PageEx license'
     'body': """
       PageEx license
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageEx uninstConfirm':
     'prefix': 'PageEx uninstConfirm'
     'body': """
       PageEx uninstConfirm
-      	${2:# your code here}
+        ${2:# your code here}
       PageExEnd
     """
   'PageExEnd':
@@ -1171,7 +1171,7 @@
     'prefix': 'Section'
     'body': """
       Section "${1:section_name}" ${2:section_index_output}
-      	${3:# your code here}
+        ${3:# your code here}
       SectionEnd
     """
   'SectionEnd':
@@ -1193,7 +1193,7 @@
     'prefix': 'SectionGroup'
     'body': """
       SectionGroup ${1:section_group_name} ${2:index_output}
-      	${3:# your code here}
+        ${3:# your code here}
       SectionGroupEnd
     """
   'SectionGroupEnd':
