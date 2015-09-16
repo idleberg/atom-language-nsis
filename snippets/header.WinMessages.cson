@@ -907,7 +907,7 @@
     'body': '\${PBST_NORMAL}'
   '${PBST_PAUSED}':
     'prefix': 'PBST_PAUSED'
-    'body': '\${PBST_PAUSE}'
+    'body': '\${PBST_PAUSED}'
   '${SB_CONST_ALPHA}':
     'prefix': 'SB_CONST_ALPHA'
     'body': '\${SB_CONST_ALPHA}'
