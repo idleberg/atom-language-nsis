@@ -82,7 +82,7 @@ There are currently two ways to build NSIS scripts within Atom, each of them req
 
 Package Dependency                                  | Build Shortcut
 ----------------------------------------------------|---------------
-[script](https://atom.io/packages/script)           | <kbd>Ctrl</kbd>+<kbd>I</kbd>
+[script](https://atom.io/packages/script)           | <kbd>Super</kbd>+<kbd>I</kbd>
 [atom-runner](https://atom.io/packages/atom-runner) | <kbd>Ctrl</kbd>+<kbd>R</kbd>
 
 **Note:** You might have to add makensis to your PATH environmental variable in order to use any of the mentioned building tools.
