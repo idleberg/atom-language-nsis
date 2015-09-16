@@ -78,7 +78,11 @@ There are several special cases for your convenience:
 
 ### Building
 
-This package comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
+Support for the [script](https://github.com/rgbkrk/atom-script) package in pending. Once the pull request has been merged, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>I</kbd> to compile open scripts.
+
+This package also comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
+
+**Note:** You might have to add makensis to your PATH environmental variable in order to use any of the mentioned building tools.
 
 ## License
 
