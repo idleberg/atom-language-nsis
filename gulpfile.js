@@ -10,7 +10,8 @@ var self = '!node_modules/**/*';
 
 // Lint CSON files
 gulp.task('coffeelint', function () {
-    gulp.src(['./**/*.cson', self])
+    gulp.src([
+        './**/*.cson', './**/*.coffee', self])
         .pipe(coffeelint())
         .pipe(coffeelint.reporter())
 });
