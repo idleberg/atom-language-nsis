@@ -78,9 +78,14 @@ There are several special cases for your convenience:
 
 ### Building
 
-Support for the [script](https://github.com/rgbkrk/atom-script) package is pending. Once the pull request has been merged, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>I</kbd> to compile open scripts.
+There are currently two ways to build NSIS scripts from within Atom, each of them requiring an additional package to be installed.
 
-This package also comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
+Package Dependency                                  | Build Shortcut
+----------------------------------------------------|---------------
+[script](https://atom.io/packages/script)           | <kbd>Ctrl</kbd>+<kbd>I</kbd>
+[atom-runner](https://atom.io/packages/atom-runner) | <kbd>Ctrl</kbd>+<kbd>R</kbd>
+
+Make sure to save new scripts before trying to compile them.
 
 **Note:** You might have to add makensis to your PATH environmental variable in order to use any of the mentioned building tools.
 
