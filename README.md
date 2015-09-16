@@ -78,7 +78,7 @@ There are several special cases for your convenience:
 
 ### Building
 
-This package comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd><kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
+This package comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd>+<kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
 
 ## License
 
