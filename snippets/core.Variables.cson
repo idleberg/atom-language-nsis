@@ -1,0 +1,130 @@
+'.source.nsis':
+  '$ADMINTOOLS':
+    'prefix': 'ADMINTOOLS'
+    'body': '\$ADMINTOOLS'
+  '$APPDATA':
+    'prefix': 'APPDATA'
+    'body': '\$APPDATA'
+  '$CDBURN_AREA':
+    'prefix': 'CDBURN_AREA'
+    'body': '\$CDBURN_AREA'
+  '$CMDLINE':
+    'prefix': 'CMDLINE'
+    'body': '\$CMDLINE'
+  '$COMMONFILES':
+    'prefix': 'COMMONFILES'
+    'body': '\$COMMONFILES'
+  '$COMMONFILES32':
+    'prefix': 'COMMONFILES32'
+    'body': '\$COMMONFILES32'
+  '$COMMONFILES64':
+    'prefix': 'COMMONFILES64'
+    'body': '\$COMMONFILES64'
+  '$COOKIES':
+    'prefix': 'COOKIES'
+    'body': '\$COOKIES'
+  '$DESKTOP':
+    'prefix': 'DESKTOP'
+    'body': '\$DESKTOP'
+  '$DOCUMENTS':
+    'prefix': 'DOCUMENTS'
+    'body': '\$DOCUMENTS'
+  '$EXEDIR':
+    'prefix': 'EXEDIR'
+    'body': '\$EXEDIR'
+  '$EXEFILE':
+    'prefix': 'EXEFILE'
+    'body': '\$EXEFILE'
+  '$EXEPATH':
+    'prefix': 'EXEPATH'
+    'body': '\$EXEPATH'
+  '$FAVORITES':
+    'prefix': 'FAVORITES'
+    'body': '\$FAVORITES'
+  '$FONTS':
+    'prefix': 'FONTS'
+    'body': '\$FONTS'
+  '$HISTORY':
+    'prefix': 'HISTORY'
+    'body': '\$HISTORY'
+  '$HWNDPARENT':
+    'prefix': 'HWNDPARENT'
+    'body': '\$HWNDPARENT'
+  '$INSTDIR':
+    'prefix': 'INSTDIR'
+    'body': '\$INSTDIR'
+  '$INTERNET_CACHE':
+    'prefix': 'INTERNET_CACHE'
+    'body': '\$INTERNET_CACHE'
+  '$LOCALAPPDATA':
+    'prefix': 'LOCALAPPDATA'
+    'body': '\$LOCALAPPDATA'
+  '$MUSIC':
+    'prefix': 'MUSIC'
+    'body': '\$MUSIC'
+  '$NETHOOD':
+    'prefix': 'NETHOOD'
+    'body': '\$NETHOOD'
+  '$OUTDIR':
+    'prefix': 'OUTDIR'
+    'body': '\$OUTDIR'
+  '$PICTURES':
+    'prefix': 'PICTURES'
+    'body': '\$PICTURES'
+  '$PLUGINSDIR':
+    'prefix': 'PLUGINSDIR'
+    'body': '\$PLUGINSDIR'
+  '$PRINTHOOD':
+    'prefix': 'PRINTHOOD'
+    'body': '\$PRINTHOOD'
+  '$PROFILE':
+    'prefix': 'PROFILE'
+    'body': '\$PROFILE'
+  '$PROGRAMFILES':
+    'prefix': 'PROGRAMFILES'
+    'body': '\$PROGRAMFILES'
+  '$PROGRAMFILES32':
+    'prefix': 'PROGRAMFILES32'
+    'body': '\$PROGRAMFILES32'
+  '$PROGRAMFILES64':
+    'prefix': 'PROGRAMFILES64'
+    'body': '\$PROGRAMFILES64'
+  '$QUICKLAUNCH':
+    'prefix': 'QUICKLAUNCH'
+    'body': '\$QUICKLAUNCH'
+  '$RECENT':
+    'prefix': 'RECENT'
+    'body': '\$RECENT'
+  '$RESOURCES':
+    'prefix': 'RESOURCES'
+    'body': '\$RESOURCES'
+  '$RESOURCES_LOCALIZED':
+    'prefix': 'RESOURCES_LOCALIZED'
+    'body': '\$RESOURCES_LOCALIZED'
+  '$SENDTO':
+    'prefix': 'SENDTO'
+    'body': '\$SENDTO'
+  '$SMPROGRAMS':
+    'prefix': 'SMPROGRAMS'
+    'body': '\$SMPROGRAMS'
+  '$SMSTARTUP':
+    'prefix': 'SMSTARTUP'
+    'body': '\$SMSTARTUP'
+  '$STARTMENU':
+    'prefix': 'STARTMENU'
+    'body': '\$STARTMENU'
+  '$SYSDIR':
+    'prefix': 'SYSDIR'
+    'body': '\$SYSDIR'
+  '$TEMP':
+    'prefix': 'TEMP'
+    'body': '\$TEMP'
+  '$TEMPLATES':
+    'prefix': 'TEMPLATES'
+    'body': '\$TEMPLATES'
+  '$VIDEOS':
+    'prefix': 'VIDEOS'
+    'body': '\$VIDEOS'
+  '$WINDIR':
+    'prefix': 'WINDIR'
+    'body': '\$WINDIR'

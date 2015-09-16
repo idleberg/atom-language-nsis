@@ -1,0 +1,83 @@
+'.source.nsis':
+  'HKCR':
+    'prefix': 'HKCR'
+    'body': 'HKCR'
+  'HKCU':
+    'prefix': 'HKCU'
+    'body': 'HKCU'
+  'HKDD':
+    'prefix': 'HKDD'
+    'body': 'HKDD'
+  'HKLM':
+    'prefix': 'HKLM'
+    'body': 'HKLM'
+  'HKPD':
+    'prefix': 'HKPD'
+    'body': 'HKPD'
+  'HKU':
+    'prefix': 'HKU'
+    'body': 'HKU'
+  'IDABORT':
+    'prefix': 'IDABORT'
+    'body': 'IDABORT'
+  'IDCANCEL':
+    'prefix': 'IDCANCEL'
+    'body': 'IDCANCEL'
+  'IDIGNORE':
+    'prefix': 'IDIGNORE'
+    'body': 'IDIGNORE'
+  'IDNO':
+    'prefix': 'IDNO'
+    'body': 'IDNO'
+  'IDOK':
+    'prefix': 'IDOK'
+    'body': 'IDOK'
+  'IDRETRY':
+    'prefix': 'IDRETRY'
+    'body': 'IDRETRY'
+  'IDYES':
+    'prefix': 'IDYES'
+    'body': 'IDYES'
+  'MB_DEFBUTTON1':
+    'prefix': 'MB_DEFBUTTON1'
+    'body': 'MB_DEFBUTTON1'
+  'MB_DEFBUTTON2':
+    'prefix': 'MB_DEFBUTTON2'
+    'body': 'MB_DEFBUTTON2'
+  'MB_DEFBUTTON3':
+    'prefix': 'MB_DEFBUTTON3'
+    'body': 'MB_DEFBUTTON3'
+  'MB_DEFBUTTON4':
+    'prefix': 'MB_DEFBUTTON4'
+    'body': 'MB_DEFBUTTON4'
+  'MB_ICONEXCLAMATION':
+    'prefix': 'MB_ICONEXCLAMATION'
+    'body': 'MB_ICONEXCLAMATION'
+  'MB_ICONINFORMATION':
+    'prefix': 'MB_ICONINFORMATION'
+    'body': 'MB_ICONINFORMATION'
+  'MB_ICONQUESTION':
+    'prefix': 'MB_ICONQUESTION'
+    'body': 'MB_ICONQUESTION'
+  'MB_ICONSTOP':
+    'prefix': 'MB_ICONSTOP'
+    'body': 'MB_ICONSTOP'
+  'MB_RIGHT':
+    'prefix': 'MB_RIGHT'
+    'body': 'MB_RIGHT'
+  'MB_RTLREADING':
+    'prefix': 'MB_RTLREADING'
+    'body': 'MB_RTLREADING'
+  'MB_SETFOREGROUND':
+    'prefix': 'MB_SETFOREGROUND'
+    'body': 'MB_SETFOREGROUND'
+  'MB_TOPMOST':
+    'prefix': 'MB_TOPMOST'
+    'body': 'MB_TOPMOST'
+  'MB_USERICON':
+    'prefix': 'MB_USERICON'
+    'body': 'MB_USERICON'
+  'SHCTX':
+    'prefix': 'SHCTX'
+    'body': 'SHCTX'
+
