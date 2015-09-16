@@ -78,7 +78,7 @@ There are several special cases for your convenience:
 
 ### Building
 
-There are currently two ways to build NSIS scripts from within Atom, each of them requiring an additional package to be installed.
+There are currently two ways to build NSIS scripts within Atom, each of them requiring an additional package to be installed.
 
 Package Dependency                                  | Build Shortcut
 ----------------------------------------------------|---------------
