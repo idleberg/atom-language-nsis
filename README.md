@@ -14,7 +14,7 @@ Atom language support for NSIS, consisting of grammar and snippets
 
 ## Features
 
-* all core NSIS commands
+* all core NSIS commands, variables and predefines
 * Drunken NSIS
 * Plugins:
     * AdvSplash
@@ -55,6 +55,30 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 1. Change directory to `~/.atom/packages/`
 2. Clone repository `git clone https://github.com/idleberg/atom-language-nsis.git`
+
+## Usage
+
+### Completion
+
+With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
+
+To complete compile time commands, variables or predefines, *leave out* special characters:
+
+* `include` completes to `!include`
+* `INSTDIR` completes to `$INSTDIR`
+* `NSIS_VERSION` completes to `${NSIS_VERSION}`
+
+However, you have to type `__LINE___` to complete to `${__LINE__}`.
+
+There are several special cases for your convenience:
+
+* `MB_OK` completes to `MessageBox MB_OK`
+* `onInit` completes to a `Function .onInit` block
+* `LogicLib` completes to `!include "LogicLib.nsh"`
+
+### Building
+
+This package comes with support for [atom-runner](https://atom.io/packages/atom-runner) to let you compile scripts within Atom. Once atom-runner is installed, you can use the default shortcut <kbd>Ctrl</kbd><kbd>R</kbd> to compile open scripts. Make sure to save new scripts before trying to compile them.
 
 ## License
 
