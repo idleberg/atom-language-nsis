@@ -13,6 +13,7 @@
     "setup"
   ],
   "repository": "https://github.com/idleberg/atom-language-nsis",
+  "main": "./lib/init",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
