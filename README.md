@@ -87,7 +87,7 @@ Package Dependency                                  | Build Shortcut
 
 If atom-runner has been detected, the user will be asked whether to use makensis as the default runner for NSIS scripts.
 
-**Note:** You might have to add makensis to your PATH environmental variable in order to use any of the mentioned building tools.
+**Note:** You might have to add makensis to your [PATH environmental variable](http://superuser.com/a/284351/195953) in order to use any of the mentioned building tools.
 
 ## License
 
