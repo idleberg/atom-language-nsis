@@ -62,7 +62,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
 
-To complete compile time commands, variables or predefines, *leave out* special characters:
+To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), *leave out* special characters:
 
 * `include` completes to `!include`
 * `INSTDIR` completes to `$INSTDIR`
