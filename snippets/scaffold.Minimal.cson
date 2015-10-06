@@ -1,6 +1,6 @@
 '.source.nsis':
-  'scaffold:Minimal Script':
-    'prefix': 'scaffoldMinimal Script'
+  'Minimal Script':
+    'prefix': 'scaffold-Minimal'
     'body': """
       ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
       
