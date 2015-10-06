@@ -1,0 +1,25 @@
+'.source.nsis':
+  'scaffold:Minimal Script':
+    'prefix': 'scaffoldMinimal Script'
+    'body': """
+      ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
+      
+      ; Settings ---------------------------------
+      OutFile "${1:installer_name}"
+      
+      ; Includes ---------------------------------
+      ${2}
+      
+      ; Pages ------------------------------------
+      ${3}
+      
+      ; Sections ---------------------------------
+      Section "${4:section_name}"
+      
+      	${5:# your code here}
+      
+      SectionEnd
+      
+      ; Functions --------------------------------
+      ${7}
+    """
