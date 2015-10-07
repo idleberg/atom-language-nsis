@@ -1,97 +1,97 @@
 '.source.nsis':
   '${Abort}':
-    'prefix': 'Abort @LogicLib'
+    'prefix': 'Abort <LogicLib>'
     'body': '\${Abort}'
   '${AndIf}':
-    'prefix': 'AndIf @LogicLib'
+    'prefix': 'AndIf <LogicLib>'
     'body': '\${AndIf} ${1:condition}'
   '${AndIfNot}':
-    'prefix': 'AndIfNot @LogicLib'
+    'prefix': 'AndIfNot <LogicLib>'
     'body': '\${AndIfNot} ${1:condition}'
   '${Case}':
-    'prefix': 'Case @LogicLib'
+    'prefix': 'Case <LogicLib>'
     'body': '\${Case} ${1)'
   '${Cmd}':
-    'prefix': 'Cmd @LogicLib'
+    'prefix': 'Cmd <LogicLib>'
     'body': '\${Cmd} `${1}`'
   '${Do…Loop}':
-    'prefix': 'Do…Loop @LogicLib'
+    'prefix': 'Do…Loop <LogicLib>'
     'body': """
       \${Do}
       	${1:# your code here}
       \${Loop}
     """
   '${Do…LoopUntil}':
-    'prefix': 'Do…LoopUntil @LogicLib'
+    'prefix': 'Do…LoopUntil <LogicLib>'
     'body': """
       \${Do}
       	${2:# your code here}
       \${LoopUntil} ${1:statement}
     """
   '${DoUntil…Loop}':
-    'prefix': 'DoUntil…Loop @LogicLib'
+    'prefix': 'DoUntil…Loop <LogicLib>'
     'body': """
       \${Do} ${1:statement}
       	${2:# your code here}
       \${Loop}
     """
   '${DoUntil…LoopUntil}':
-    'prefix': 'DoUntil…LoopUntil @LogicLib'
+    'prefix': 'DoUntil…LoopUntil <LogicLib>'
     'body': """
       \${DoUntil} ${1:statement}
       	${3:# your code here}
       \${LoopUntil} ${2:statement}
     """
   '${Else}':
-    'prefix': 'Else @LogicLib'
+    'prefix': 'Else <LogicLib>'
     'body': '\${Else}'
   '${ElseIf}':
-    'prefix': 'ElseIf @LogicLib'
+    'prefix': 'ElseIf <LogicLib>'
     'body': '\${ElseIf} ${1:condition}'
   '${ElseIfNot}':
-    'prefix': 'ElseIfNot @LogicLib'
+    'prefix': 'ElseIfNot <LogicLib>'
     'body': '\${ElseIfNot} ${1:condition}'
   '${ElseUnless}':
-    'prefix': 'ElseUnless @LogicLib'
+    'prefix': 'ElseUnless <LogicLib>'
     'body': '\${ElseUnless} ${1:condition}'
   '${EndWhile}':
-    'prefix': 'EndWhile @LogicLib'
+    'prefix': 'EndWhile <LogicLib>'
     'body': '\${EndWhile}'
   '${Errors}':
-    'prefix': 'Errors @LogicLib'
+    'prefix': 'Errors <LogicLib>'
     'body': '\${Errors}'
   '${ExitDo}':
-    'prefix': 'ExitDo @LogicLib'
+    'prefix': 'ExitDo <LogicLib>'
     'body': '\${ExitDo}'
   '${ExitWhile}':
-    'prefix': 'ExitWhile @LogicLib'
+    'prefix': 'ExitWhile <LogicLib>'
     'body': '\${ExitWhile}'
   '${FileExists}':
-    'prefix': 'FileExists @LogicLib'
+    'prefix': 'FileExists <LogicLib>'
     'body': '\${FileExists} "${1:file}"'
   '${For…Next}':
-    'prefix': 'For…Next @LogicLib'
+    'prefix': 'For…Next <LogicLib>'
     'body': """
       \${For} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
   '${ForEach…Next}':
-    'prefix': 'ForEach…Next @LogicLib'
+    'prefix': 'ForEach…Next <LogicLib>'
     'body': """
       \${ForEach} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
   '${If}':
-    'prefix': 'If @LogicLib'
+    'prefix': 'If <LogicLib>'
     'body': """
       \${If} ${1:condition}
       	${2:# your code here}
       \${EndIf}
     """
   '${If…Else}':
-    'prefix': 'If…Else @LogicLib'
+    'prefix': 'If…Else <LogicLib>'
     'body': """
       \${If} ${1:condition}
         ${2:# your code here}
@@ -100,17 +100,17 @@
       \${EndIf}
     """
   '${If…FileExists}':
-    'prefix': 'If…FileExists @LogicLib'
+    'prefix': 'If…FileExists <LogicLib>'
     'body': """
       \${If} ${FileExists} \"${1:file}\"
         ${2:# your code here}
       \${EndIf}
     """
   '${IfCmd}':
-    'prefix': 'IfCmd @LogicLib'
+    'prefix': 'IfCmd <LogicLib>'
     'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
   '${IfNot…Else}':
-    'prefix': 'IfNot…Else @LogicLib'
+    'prefix': 'IfNot…Else <LogicLib>'
     'body': """
       \${IfNot} ${1:condition}
       	${2:# your code here}
@@ -119,91 +119,91 @@
       \${EndIf}
     """
   '${IfNot}':
-    'prefix': 'IfNot @LogicLib'
+    'prefix': 'IfNot <LogicLib>'
     'body': """
       \${IfNot} ${1:condition}
       	${2:# your code here}
       \${EndIf}
     """
   '${IfNot…FileExists}':
-    'prefix': 'IfNot…FileExists @LogicLib'
+    'prefix': 'IfNot…FileExists <LogicLib>'
     'body': """
       \${IfNot} ${FileExists} \"${1:file}\"
         ${2:# your code here}
       \${EndIf}
     """
   '${IfThen}':
-    'prefix': 'IfThen @LogicLib'
+    'prefix': 'IfThen <LogicLib>'
     'body': '\${IfThen} ${1:condition} \${|} ${2:command} \${|}'
   '${IfThenNot}':
-    'prefix': 'IfThenNot @LogicLib'
+    'prefix': 'IfThenNot <LogicLib>'
     'body': '\${IfThenNot} ${1:condition} \${|} ${2:command} \${|}'
   '${Loop}':
-    'prefix': 'Loop @LogicLib'
+    'prefix': 'Loop <LogicLib>'
     'body': '\${Loop}'
   '${Next}':
-    'prefix': 'Next @LogicLib'
+    'prefix': 'Next <LogicLib>'
     'body': '\${Next}'
   '${OrIfNot}':
-    'prefix': 'OrIfNot @LogicLib'
+    'prefix': 'OrIfNot <LogicLib>'
     'body': '\${OrIfNot} ${1:condition}'
   '${RebootFlag}':
-    'prefix': 'RebootFlag @LogicLib'
+    'prefix': 'RebootFlag <LogicLib>'
     'body': '\${RebootFlag}'
   '${SectionIsBold}':
-    'prefix': 'SectionIsBold @LogicLib'
+    'prefix': 'SectionIsBold <LogicLib>'
     'body': '\${SectionIsBold} \${${1}}'
   '${SectionIsExpanded}':
-    'prefix': 'SectionIsExpanded @LogicLib'
+    'prefix': 'SectionIsExpanded <LogicLib>'
     'body': '\${SectionIsExpanded} \${${1}}'
   '${SectionIsPartiallySelected}':
-    'prefix': 'SectionIsPartiallySelected @LogicLib'
+    'prefix': 'SectionIsPartiallySelected <LogicLib>'
     'body': '\${SectionIsPartiallySelected} \${${1}}'
   '${SectionIsReadOnly}':
-    'prefix': 'SectionIsReadOnly @LogicLib'
+    'prefix': 'SectionIsReadOnly <LogicLib>'
     'body': '\${SectionIsReadOnly} \${${1}}'
   '${SectionIsSectionGroup}':
-    'prefix': 'SectionIsSectionGroup @LogicLib'
+    'prefix': 'SectionIsSectionGroup <LogicLib>'
     'body': '\${SectionIsSectionGroup} \${${1}}'
   '${SectionIsSectionGroupEnd}':
-    'prefix': 'SectionIsSectionGroupEnd @LogicLib'
+    'prefix': 'SectionIsSectionGroupEnd <LogicLib>'
     'body': '\${SectionIsSectionGroupEnd} \${${1}}'
   '${SectionIsSelected}':
-    'prefix': 'SectionIsSelected @LogicLib'
+    'prefix': 'SectionIsSelected <LogicLib>'
     'body': '\${SectionIsSelected} \${${1}}'
   '${Select}':
-    'prefix': 'Select @LogicLib'
+    'prefix': 'Select <LogicLib>'
     'body': """
       \${Select} \$${1:var}
       	${4:# your code here}
       \${EndSelect}
     """
   '${Silent}':
-    'prefix': 'Silent @LogicLib'
+    'prefix': 'Silent <LogicLib>'
     'body': '\${Silent}'
   '${Switch}':
-    'prefix': 'Switch @LogicLib'
+    'prefix': 'Switch <LogicLib>'
     'body': """
       \${Switch} \$${1:var}
       	${4:# your code here}
       \${EndSwitch}
     """
   '${Unless}':
-    'prefix': 'Unless @LogicLib'
+    'prefix': 'Unless <LogicLib>'
     'body': """
       \${Unless} \$${1:var}
       	${4:# your code here}
       \${EndUnless}
     """
     '${Unless…FileExists}':
-      'prefix': 'Unless…FileExists @LogicLib'
+      'prefix': 'Unless…FileExists <LogicLib>'
       'body': """
         \${Unless} ${FileExists} \"${1:file}\"
           ${2:# your code here}
         \${EndIf}
       """
   '${While}':
-    'prefix': 'While @LogicLib'
+    'prefix': 'While <LogicLib>'
     'body': """
       \${While} ${1:condition}
       	${4:# your code here}

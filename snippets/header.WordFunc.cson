@@ -1,46 +1,46 @@
 '.source.nsis':
   '${StrFilter}':
-    'prefix': 'StrFilter @WordFunc'
+    'prefix': 'StrFilter <WordFunc>'
     'body': '\${StrFilter} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
   '${StrFilterS}':
-    'prefix': 'StrFilterS @WordFunc'
+    'prefix': 'StrFilterS <WordFunc>'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
   '${VersionCompare}':
-    'prefix': 'VersionCompare @WordFunc'
+    'prefix': 'VersionCompare <WordFunc>'
     'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}'
   '${WordAdd}':
-    'prefix': 'WordAdd @WordFunc'
+    'prefix': 'WordAdd <WordFunc>'
     'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '${WordAddS}':
-    'prefix': 'WordAddS @WordFunc'
+    'prefix': 'WordAddS <WordFunc>'
     'body': '\${WordAddS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '${WordFind}':
-    'prefix': 'WordFind @WordFunc'
+    'prefix': 'WordFind <WordFunc>'
     'body': '\${WordFind} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '${WordFind2x}':
-    'prefix': 'WordFind2x @WordFunc'
+    'prefix': 'WordFind2x <WordFunc>'
     'body': '\${WordFind2x} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
   '${WordFind2xS}':
-    'prefix': 'WordFind2xS @WordFunc'
+    'prefix': 'WordFind2xS <WordFunc>'
     'body': '\${WordFind2xS} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
   '${WordFind3x}':
-    'prefix': 'WordFind3x @WordFunc'
+    'prefix': 'WordFind3x <WordFunc>'
     'body': '\${WordFind3x} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
   '${WordFind3xS}':
-    'prefix': 'WordFind3xS @WordFunc'
+    'prefix': 'WordFind3xS <WordFunc>'
     'body': '\${WordFind3xS} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
   '${WordFindS}':
-    'prefix': 'WordFindS @WordFunc'
+    'prefix': 'WordFindS <WordFunc>'
     'body': '\${WordFindS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
   '${WordInsert}':
-    'prefix': 'WordInsert @WordFunc'
+    'prefix': 'WordInsert <WordFunc>'
     'body': '\${WordInsert} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
   '${WordInsertS}':
-    'prefix': 'WordInsertS @WordFunc'
+    'prefix': 'WordInsertS <WordFunc>'
     'body': '\${WordInsertS} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
   '${WordReplace}':
-    'prefix': 'WordReplace @WordFunc'
+    'prefix': 'WordReplace <WordFunc>'
     'body': '\${WordReplace} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
   '${WordReplaceS}':
-    'prefix': 'WordReplaceS @WordFunc'
+    'prefix': 'WordReplaceS <WordFunc>'
     'body': '\${WordReplaceS} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
