@@ -1,61 +1,61 @@
 '.source.nsis':
   '${__COUNTER__}':
-    'prefix': '{__COUNTER__}'
+    'prefix': '__COUNTER__'
     'body': '\${__COUNTER__}'
   '${__DATE__}':
-    'prefix': '{__DATE__}'
+    'prefix': '__DATE__'
     'body': '\${__DATE__}'
   '${__FILE__}':
-    'prefix': '{__FILE__}'
+    'prefix': '__FILE__'
     'body': '\${__FILE__}'
   '${__FILEDIR__}':
-    'prefix': '{__FILEDIR__}'
+    'prefix': '__FILEDIR__'
     'body': '\${__FILEDIR__}'
   '${__FUNCTION__}':
-    'prefix': '{__FUNCTION__}'
+    'prefix': '__FUNCTION__'
     'body': '\${__FUNCTION__}'
   '${__GLOBAL__}':
-    'prefix': '{__GLOBAL__}'
+    'prefix': '__GLOBAL__'
     'body': '\${__GLOBAL__}'
   '${__LINE__}':
-    'prefix': '{__LINE__}'
+    'prefix': '__LINE__'
     'body': '\${__LINE__}'
   '${__MACRO__}':
-    'prefix': '{__MACRO__}'
+    'prefix': '__MACRO__'
     'body': '\${__MACRO__}'
   '${__PAGEEX__}':
-    'prefix': '{__PAGEEX__}'
+    'prefix': '__PAGEEX__'
     'body': '\${__PAGEEX__}'
   '${__SECTION__}':
-    'prefix': '{__SECTION__}'
+    'prefix': '__SECTION__'
     'body': '\${__SECTION__}'
   '${__TIME__}':
-    'prefix': '{__TIME__}'
+    'prefix': '__TIME__'
     'body': '\${__TIME__}'
   '${__TIMESTAMP__}':
-    'prefix': '{__TIMESTAMP__}'
+    'prefix': '__TIMESTAMP__'
     'body': '\${__TIMESTAMP__}'
   '${__UNINSTALL__}':
-    'prefix': '{__UNINSTALL__}'
+    'prefix': '__UNINSTALL__'
     'body': '\${__UNINSTALL__}'
   '${_NSIS_DEFAW}':
-    'prefix': '{_NSIS_DEFAW}'
+    'prefix': '_NSIS_DEFAW'
     'body': '\${_NSIS_DEFAW}'
   '${envVarName}':
-    'prefix': '{envVarName}'
+    'prefix': 'envVarName'
     'body': '\$%envVarName%'
   '${NSIS_CHAR_SIZE}':
-    'prefix': '{NSIS_CHAR_SIZE}'
+    'prefix': 'NSIS_CHAR_SIZE'
     'body': '\${NSIS_CHAR_SIZE}'
   '${NSIS_MAX_STRLEN}':
-    'prefix': '{NSIS_MAX_STRLEN}'
+    'prefix': 'NSIS_MAX_STRLEN'
     'body': '\${NSIS_MAX_STRLEN}'
   '${NSIS_PACKEDVERSION}':
-    'prefix': '{NSIS_PACKEDVERSION}'
+    'prefix': 'NSIS_PACKEDVERSION'
     'body': '\${NSIS_PACKEDVERSION}'
   '${NSIS_UNICODE}':
-    'prefix': '{NSIS_UNICODE}'
+    'prefix': 'NSIS_UNICODE'
     'body': '\${NSIS_UNICODE}'
   '${NSIS_VERSION}':
-    'prefix': '{NSIS_VERSION}'
+    'prefix': 'NSIS_VERSION'
     'body': '\${NSIS_VERSION}'
