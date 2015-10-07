@@ -1,61 +1,61 @@
 '.source.nsis':
   '${BannerTrimPath}':
-    'prefix': 'BannerTrimPath'
+    'prefix': 'BannerTrimPath @FileFunc'
     'body': '\${BannerTrimPath} "${1:path_string}" "${2:option}" \$${3:var}'
   '${DirState}':
-    'prefix': 'DirState'
+    'prefix': 'DirState @FileFunc'
     'body': '\${DirState} "${1:path}" \$${2:var}'
   '${DriveSpace}':
-    'prefix': 'DriveSpace'
+    'prefix': 'DriveSpace @FileFunc'
     'body': '\${DriveSpace} "${1:drive}" "${2:options}" \$${3:size}'
   '${GetBaseName}':
-    'prefix': 'GetBaseName'
+    'prefix': 'GetBaseName @FileFunc'
     'body': '\${GetBaseName} "${1:file_string}" \$${2:var}'
   '${GetDrives}':
-    'prefix': 'GetDrives'
+    'prefix': 'GetDrives @FileFunc'
     'body': '\${GetDrives} "${1:option}" "${2:function}"'
   '${GetExeName}':
-    'prefix': 'GetExeName'
+    'prefix': 'GetExeName @FileFunc'
     'body': '\${GetExeName} \$${1:var}'
   '${GetExePath}':
-    'prefix': 'GetExePath'
+    'prefix': 'GetExePath @FileFunc'
     'body': '\${GetExePath} \$${1:var}'
   '${GetFileAttributes}':
-    'prefix': 'GetFileAttributes'
+    'prefix': 'GetFileAttributes @FileFunc'
     'body': '\${GetFileAttributes} "${1:file}" "${2:attributes}" \$${3:var}'
   '${GetFileExt}':
-    'prefix': 'GetFileExt'
+    'prefix': 'GetFileExt @FileFunc'
     'body': '\${GetFileExt} "${1:file_string}" \$${2:var}'
   '${GetFileName}':
-    'prefix': 'GetFileName'
+    'prefix': 'GetFileName @FileFunc'
     'body': '\${GetFileName} "${1:path_string}" \$${2:var}'
   '${GetFileVersion}':
-    'prefix': 'GetFileVersion'
+    'prefix': 'GetFileVersion @FileFunc'
     'body': '\${GetFileVersion} "${1:executable}" \$${2:version}'
   '${GetOptionsS}':
-    'prefix': 'GetOptionsS'
+    'prefix': 'GetOptionsS @FileFunc'
     'body': '\${GetOptionsS} "${1:parameters}" "${2:option}" \$${3:var}'
   '${GetOptions}':
-    'prefix': 'GetOptions'
+    'prefix': 'GetOptions @FileFunc'
     'body': '\${GetOptions} "${1:parameters}" "${2:option}" \$${3:var}'
   '${GetParameters}':
-    'prefix': 'GetParameters'
+    'prefix': 'GetParameters @FileFunc'
     'body': '\${GetParameters} \$${1:var}'
   '${GetParent}':
-    'prefix': 'GetParent'
+    'prefix': 'GetParent @FileFunc'
     'body': '\${GetParent} "${1:path_string}" \$${2:var}'
   '${GetRoot}':
-    'prefix': 'GetRoot'
+    'prefix': 'GetRoot @FileFunc'
     'body': '\${GetRoot} "${1:full_path}" \$${2:var}'
   '${GetSize}':
-    'prefix': 'GetSize'
+    'prefix': 'GetSize @FileFunc'
     'body': '\${GetSize} "${1:path}" "${2:options}" \$${3:size} \$${4:sum_files} \$${5:sum_directories}'
   '${GetTime}':
-    'prefix': 'GetTime'
+    'prefix': 'GetTime @FileFunc'
     'body': '\${GetTime} "${1:file}" "${2:option}" \$${3:day} \$${4:month} \$${5:year} \$${6:weekday} \$${7:hours} \$${8:minute} \$${9:seconds}'
   '${Locate}':
-    'prefix': 'Locate'
+    'prefix': 'Locate @FileFunc'
     'body': '\${Locate} "${1:path}" "${2:options}" "${3:function}"'
   '${RefreshShellIcons}':
-    'prefix': 'RefreshShellIcons'
+    'prefix': 'RefreshShellIcons @FileFunc'
     'body': '\${RefreshShellIcons}'

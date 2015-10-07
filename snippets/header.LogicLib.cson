@@ -1,188 +1,195 @@
 '.source.nsis':
   '${Abort}':
-    'prefix': 'Abort'
+    'prefix': 'Abort @LogicLib'
     'body': '\${Abort}'
   '${AndIf}':
-    'prefix': 'AndIf'
+    'prefix': 'AndIf @LogicLib'
     'body': '\${AndIf} ${1:condition}'
   '${AndIfNot}':
-    'prefix': 'AndIfNot'
+    'prefix': 'AndIfNot @LogicLib'
     'body': '\${AndIfNot} ${1:condition}'
   '${Case}':
-    'prefix': 'Case'
+    'prefix': 'Case @LogicLib'
     'body': '\${Case} ${1)'
   '${Cmd}':
-    'prefix': 'Cmd'
+    'prefix': 'Cmd @LogicLib'
     'body': '\${Cmd} `${1}`'
   '${Do…Loop}':
-    'prefix': 'Do…Loop'
+    'prefix': 'Do…Loop @LogicLib'
     'body': """
       \${Do}
       	${1:# your code here}
       \${Loop}
     """
   '${Do…LoopUntil}':
-    'prefix': 'Do…LoopUntil'
+    'prefix': 'Do…LoopUntil @LogicLib'
     'body': """
       \${Do}
       	${2:# your code here}
       \${LoopUntil} ${1:statement}
     """
   '${DoUntil…Loop}':
-    'prefix': 'DoUntil…Loop'
+    'prefix': 'DoUntil…Loop @LogicLib'
     'body': """
       \${Do} ${1:statement}
       	${2:# your code here}
       \${Loop}
     """
   '${DoUntil…LoopUntil}':
-    'prefix': 'DoUntil…LoopUntil'
+    'prefix': 'DoUntil…LoopUntil @LogicLib'
     'body': """
       \${DoUntil} ${1:statement}
       	${3:# your code here}
       \${LoopUntil} ${2:statement}
     """
   '${Else}':
-    'prefix': 'Else'
+    'prefix': 'Else @LogicLib'
     'body': '\${Else}'
   '${ElseIf}':
-    'prefix': 'ElseIf'
+    'prefix': 'ElseIf @LogicLib'
     'body': '\${ElseIf} ${1:condition}'
   '${ElseIfNot}':
-    'prefix': 'ElseIfNot'
+    'prefix': 'ElseIfNot @LogicLib'
     'body': '\${ElseIfNot} ${1:condition}'
   '${ElseUnless}':
-    'prefix': 'ElseUnless'
+    'prefix': 'ElseUnless @LogicLib'
     'body': '\${ElseUnless} ${1:condition}'
   '${EndWhile}':
-    'prefix': 'EndWhile'
+    'prefix': 'EndWhile @LogicLib'
     'body': '\${EndWhile}'
   '${Errors}':
-    'prefix': 'Errors'
+    'prefix': 'Errors @LogicLib'
     'body': '\${Errors}'
   '${ExitDo}':
-    'prefix': 'ExitDo'
+    'prefix': 'ExitDo @LogicLib'
     'body': '\${ExitDo}'
   '${ExitWhile}':
-    'prefix': 'ExitWhile'
+    'prefix': 'ExitWhile @LogicLib'
     'body': '\${ExitWhile}'
   '${FileExists}':
-    'prefix': 'FileExists'
+    'prefix': 'FileExists @LogicLib'
     'body': '\${FileExists} "${1:file}"'
   '${For…Next}':
-    'prefix': 'For…Next'
+    'prefix': 'For…Next @LogicLib'
     'body': """
       \${For} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
   '${ForEach…Next}':
-    'prefix': 'ForEach…Next'
+    'prefix': 'ForEach…Next @LogicLib'
     'body': """
       \${ForEach} ${1:statement}
       	${2:# your code here}
       \${Next}
     """
-  '${If…Else}':
-    'prefix': 'If…Else'
+  '${If}':
+    'prefix': 'If @LogicLib'
     'body': """
       \${If} ${1:condition}
-      	${4:# your code here}
-      \${Else}
-      	${5:# your code here}
+      	${2:# your code here}
       \${EndIf}
     """
-  '${If}':
-    'prefix': 'If'
+  '${If…Else}':
+    'prefix': 'If…Else @LogicLib'
     'body': """
       \${If} ${1:condition}
-      	${4:# your code here}
+        ${2:# your code here}
+      \${Else}
+        ${3:# your code here}
+      \${EndIf}
+    """
+  '${If…FileExists}':
+    'prefix': 'If…FileExists @LogicLib'
+    'body': """
+      \${If} ${FileExists} \"${1:file}\"
+        ${2:# your code here}
       \${EndIf}
     """
   '${IfCmd}':
-    'prefix': 'IfCmd'
+    'prefix': 'IfCmd @LogicLib'
     'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
   '${IfNot…Else}':
-    'prefix': 'IfNot…Else'
+    'prefix': 'IfNot…Else @LogicLib'
     'body': """
       \${IfNot} ${1:condition}
-      	${4:# your code here}
+      	${2:# your code here}
       \${Else}
-      	${5:# your code here}
+      	${3:# your code here}
       \${EndIf}
     """
   '${IfNot}':
-    'prefix': 'IfNot'
+    'prefix': 'IfNot @LogicLib'
     'body': """
       \${IfNot} ${1:condition}
-      	${4:# your code here}
+      	${2:# your code here}
       \${EndIf}
     """
   '${IfThen}':
-    'prefix': 'IfThen'
-    'body': '\${IfThen} ${1:condition} \${|} ${4:command} \${|}'
+    'prefix': 'IfThen @LogicLib'
+    'body': '\${IfThen} ${1:condition} \${|} ${2:command} \${|}'
   '${IfThenNot}':
-    'prefix': 'IfThenNot'
-    'body': '\${IfThenNot} ${1:condition} \${|} ${4:command} \${|}'
+    'prefix': 'IfThenNot @LogicLib'
+    'body': '\${IfThenNot} ${1:condition} \${|} ${2:command} \${|}'
   '${Loop}':
-    'prefix': 'Loop'
+    'prefix': 'Loop @LogicLib'
     'body': '\${Loop}'
   '${Next}':
-    'prefix': 'Next'
+    'prefix': 'Next @LogicLib'
     'body': '\${Next}'
   '${OrIfNot}':
-    'prefix': 'OrIfNot'
+    'prefix': 'OrIfNot @LogicLib'
     'body': '\${OrIfNot} ${1:condition}'
   '${RebootFlag}':
-    'prefix': 'RebootFlag'
+    'prefix': 'RebootFlag @LogicLib'
     'body': '\${RebootFlag}'
   '${SectionIsBold}':
-    'prefix': 'SectionIsBold'
+    'prefix': 'SectionIsBold @LogicLib'
     'body': '\${SectionIsBold} \${${1}}'
   '${SectionIsExpanded}':
-    'prefix': 'SectionIsExpanded'
+    'prefix': 'SectionIsExpanded @LogicLib'
     'body': '\${SectionIsExpanded} \${${1}}'
   '${SectionIsPartiallySelected}':
-    'prefix': 'SectionIsPartiallySelected'
+    'prefix': 'SectionIsPartiallySelected @LogicLib'
     'body': '\${SectionIsPartiallySelected} \${${1}}'
   '${SectionIsReadOnly}':
-    'prefix': 'SectionIsReadOnly'
+    'prefix': 'SectionIsReadOnly @LogicLib'
     'body': '\${SectionIsReadOnly} \${${1}}'
   '${SectionIsSectionGroup}':
-    'prefix': 'SectionIsSectionGroup'
+    'prefix': 'SectionIsSectionGroup @LogicLib'
     'body': '\${SectionIsSectionGroup} \${${1}}'
   '${SectionIsSectionGroupEnd}':
-    'prefix': 'SectionIsSectionGroupEnd'
+    'prefix': 'SectionIsSectionGroupEnd @LogicLib'
     'body': '\${SectionIsSectionGroupEnd} \${${1}}'
   '${SectionIsSelected}':
-    'prefix': 'SectionIsSelected'
+    'prefix': 'SectionIsSelected @LogicLib'
     'body': '\${SectionIsSelected} \${${1}}'
   '${Select}':
-    'prefix': 'Select'
+    'prefix': 'Select @LogicLib'
     'body': """
       \${Select} \$${1:var}
       	${4:# your code here}
       \${EndSelect}
     """
   '${Silent}':
-    'prefix': 'Silent'
+    'prefix': 'Silent @LogicLib'
     'body': '\${Silent}'
   '${Switch}':
-    'prefix': 'Switch'
+    'prefix': 'Switch @LogicLib'
     'body': """
       \${Switch} \$${1:var}
       	${4:# your code here}
       \${EndSwitch}
     """
   '${Unless}':
-    'prefix': 'Unless'
+    'prefix': 'Unless @LogicLib'
     'body': """
       \${Unless} \$${1:var}
       	${4:# your code here}
       \${EndUnless}
     """
   '${While}':
-    'prefix': 'While'
+    'prefix': 'While @LogicLib'
     'body': """
       \${While} ${1:condition}
       	${4:# your code here}

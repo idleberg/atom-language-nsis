@@ -1,40 +1,40 @@
 '.source.nsis':
   '${ConfigRead}':
-    'prefix': 'ConfigRead'
+    'prefix': 'ConfigRead @TextFunc'
     'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}'
   '${ConfigReadS}':
-    'prefix': 'ConfigReadS'
+    'prefix': 'ConfigReadS @TextFunc'
     'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}'
   '${ConfigWrite}':
-    'prefix': 'ConfigWrite'
+    'prefix': 'ConfigWrite @TextFunc'
     'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
   '${ConfigWriteS}':
-    'prefix': 'ConfigWriteS'
+    'prefix': 'ConfigWriteS @TextFunc'
     'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
   '${FileJoin}':
-    'prefix': 'FileJoin'
+    'prefix': 'FileJoin @TextFunc'
     'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"'
   '${FileReadFromEnd}':
-    'prefix': 'FileReadFromEnd'
+    'prefix': 'FileReadFromEnd @TextFunc'
     'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"'
   '${FileRecode}':
-    'prefix': 'FileRecode'
+    'prefix': 'FileRecode @TextFunc'
     'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"'
   '${LineFind}':
-    'prefix': 'LineFind'
+    'prefix': 'LineFind @TextFunc'
     'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"'
   '${LineRead}':
-    'prefix': 'LineRead'
+    'prefix': 'LineRead @TextFunc'
     'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}'
   '${LineSum}':
-    'prefix': 'LineSum'
+    'prefix': 'LineSum @TextFunc'
     'body': '\${LineSum} "${1:file}" \$${2:var}'
   '${TextCompare}':
-    'prefix': 'TextCompare'
+    'prefix': 'TextCompare @TextFunc'
     'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
   '${TextCompareS}':
-    'prefix': 'TextCompareS'
+    'prefix': 'TextCompareS @TextFunc'
     'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
   '${TrimNewLines}':
-    'prefix': 'TrimNewLines'
+    'prefix': 'TrimNewLines @TextFunc'
     'body': '\${TrimNewLines} "${1:string}" \$${2:var}'
