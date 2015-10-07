@@ -265,7 +265,7 @@
     'body': 'RIGHT'
   'Root':
     'prefix': 'Root'
-    'body': 'Root=${1}'
+    'body': 'Root=$1'
   'RTL':
     'prefix': 'RTL'
     'body': 'RTL=${1:1}'

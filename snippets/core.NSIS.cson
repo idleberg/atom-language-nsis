@@ -941,22 +941,22 @@
     'body': 'MessageBox ${1:mb_option_list} "${2:messagebox_text}"'
   'MessageBox MB_ABORTRETRYIGNORE':
     'prefix': 'MB_ABORTRETRYIGNORE'
-    'body': 'MessageBox MB_ABORTRETRYIGNORE${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_ABORTRETRYIGNORE$1 "${2:messagebox_text}" $3'
   'MessageBox MB_OK':
     'prefix': 'MB_OK'
-    'body': 'MessageBox MB_OK${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_OK$1 "${2:messagebox_text}" $3'
   'MessageBox MB_OKCANCEL':
     'prefix': 'MB_OKCANCEL'
-    'body': 'MessageBox MB_OKCANCEL${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_OKCANCEL$1 "${2:messagebox_text}" $3'
   'MessageBox MB_RETRYCANCEL':
     'prefix': 'MB_RETRYCANCEL'
-    'body': 'MessageBox MB_RETRYCANCEL${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_RETRYCANCEL$1 "${2:messagebox_text}" $3'
   'MessageBox MB_YESNO':
     'prefix': 'MB_YESNO'
-    'body': 'MessageBox MB_YESNO${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_YESNO$1 "${2:messagebox_text}" $3'
   'MessageBox MB_YESNOCANCEL':
     'prefix': 'MB_YESNOCANCEL'
-    'body': 'MessageBox MB_YESNOCANCEL${1} "${2:messagebox_text}" ${3}'
+    'body': 'MessageBox MB_YESNOCANCEL$1 "${2:messagebox_text}" $3'
   'MiscButtonText':
     'prefix': 'MiscButtonText'
     'body': 'MiscButtonText "${1:back_button_text}" "${2:next_button_text}" "${3:cancel_button_text}" "${4:close_button_text}"'
@@ -970,40 +970,40 @@
     'prefix': 'Name && +Caption'
     'body': """
       Name "${1:name}" "${2:name_doubled_ampersands}"
-      Caption "${3:${1
-}}"    """
+      Caption "${3:${1:name}}"
+    """
   'Name && +Caption +OutFile':
     'prefix': 'Name && +Caption +OutFile'
     'body': """
       Name "${1:name}" "${2:name_doubled_ampersands}"
-      Caption "${3:${1}}"
-      OutFile "${4:${1}}.exe
-"    """
+      Caption "${3:${1:name}}"
+      OutFile "${4:${1:name}}.exe"
+    """
   'Name && +OutFile':
     'prefix': 'Name && +OutFile'
     'body': """
       Name "${1:name}" "${2:name_doubled_ampersands}"
-      OutFile "${3:${1}}.exe
-"    """
+      OutFile "${3:${1:name}}.exe"
+    """
   'Name +Caption':
     'prefix': 'Name +Caption'
     'body': """
       Name "${1:name}"
-      Caption "${2:${1
-}}"    """
+      Caption "${2:${1:name}}"
+    """
   'Name +Caption +OutFile':
     'prefix': 'Name +Caption +OutFile'
     'body': """
       Name "${1:name}"
-      Caption "${2:${1}}"
-      OutFile "${3:${1}}.exe
-"    """
+      Caption "${2:${1:name}}"
+      OutFile "${3:${1:name}}.exe"
+    """
   'Name +OutFile':
     'prefix': 'Name +OutFile'
     'body': """
       Name "${1:name}"
-      OutFile "${2:${1}}.exe
-"    """
+      OutFile "${2:${1:name}}.exe"
+    """
   'Nop':
     'prefix': 'Nop'
     'body': 'Nop'

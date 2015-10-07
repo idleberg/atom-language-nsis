@@ -10,10 +10,10 @@
     'body': '\${AndIfNot} ${1:condition}'
   '${Case}':
     'prefix': 'Case <LogicLib>'
-    'body': '\${Case} ${1)'
+    'body': '\${Case} ${1:string}'
   '${Cmd}':
     'prefix': 'Cmd <LogicLib>'
-    'body': '\${Cmd} `${1}`'
+    'body': '\${Cmd} `${1:command}`'
   '${Do…Loop}':
     'prefix': 'Do…Loop <LogicLib>'
     'body': """
@@ -152,25 +152,25 @@
     'body': '\${RebootFlag}'
   '${SectionIsBold}':
     'prefix': 'SectionIsBold <LogicLib>'
-    'body': '\${SectionIsBold} \${${1}}'
+    'body': '\${SectionIsBold} \${$1}'
   '${SectionIsExpanded}':
     'prefix': 'SectionIsExpanded <LogicLib>'
-    'body': '\${SectionIsExpanded} \${${1}}'
+    'body': '\${SectionIsExpanded} \${$1}'
   '${SectionIsPartiallySelected}':
     'prefix': 'SectionIsPartiallySelected <LogicLib>'
-    'body': '\${SectionIsPartiallySelected} \${${1}}'
+    'body': '\${SectionIsPartiallySelected} \${$1}'
   '${SectionIsReadOnly}':
     'prefix': 'SectionIsReadOnly <LogicLib>'
-    'body': '\${SectionIsReadOnly} \${${1}}'
+    'body': '\${SectionIsReadOnly} \${$1}'
   '${SectionIsSectionGroup}':
     'prefix': 'SectionIsSectionGroup <LogicLib>'
-    'body': '\${SectionIsSectionGroup} \${${1}}'
+    'body': '\${SectionIsSectionGroup} \${$1}'
   '${SectionIsSectionGroupEnd}':
     'prefix': 'SectionIsSectionGroupEnd <LogicLib>'
-    'body': '\${SectionIsSectionGroupEnd} \${${1}}'
+    'body': '\${SectionIsSectionGroupEnd} \${$1}'
   '${SectionIsSelected}':
     'prefix': 'SectionIsSelected <LogicLib>'
-    'body': '\${SectionIsSelected} \${${1}}'
+    'body': '\${SectionIsSelected} \${$1}'
   '${Select}':
     'prefix': 'Select <LogicLib>'
     'body': """

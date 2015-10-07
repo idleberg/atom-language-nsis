@@ -11,7 +11,7 @@
       InstallDir "\$PROGRAMFILES\\\\${4:${1:installer_name}}"
       
       ; Includes ---------------------------------
-      ${5}
+      $5
       
       ; Pages ------------------------------------
       Page components
