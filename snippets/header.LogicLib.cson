@@ -125,6 +125,13 @@
       	${2:# your code here}
       \${EndIf}
     """
+  '${IfNot…FileExists}':
+    'prefix': 'IfNot…FileExists @LogicLib'
+    'body': """
+      \${IfNot} ${FileExists} \"${1:file}\"
+        ${2:# your code here}
+      \${EndIf}
+    """
   '${IfThen}':
     'prefix': 'IfThen @LogicLib'
     'body': '\${IfThen} ${1:condition} \${|} ${2:command} \${|}'
@@ -188,6 +195,13 @@
       	${4:# your code here}
       \${EndUnless}
     """
+    '${Unless…FileExists}':
+      'prefix': 'Unless…FileExists @LogicLib'
+      'body': """
+        \${Unless} ${FileExists} \"${1:file}\"
+          ${2:# your code here}
+        \${EndIf}
+      """
   '${While}':
     'prefix': 'While @LogicLib'
     'body': """
