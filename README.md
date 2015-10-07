@@ -53,7 +53,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 ### GitHub
 
-1. Change directory to `~/.atom/packages/`
+1. Change directory `cd ~/.atom/packages/`
 2. Clone repository `git clone https://github.com/idleberg/atom-language-nsis language-nsis`
 
 ## Usage
