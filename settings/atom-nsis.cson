@@ -1,3 +1,20 @@
 ".source.nsis":
   editor:
     commentStart: "; "
+    increaseIndentPattern: '''
+      (?x)
+            ^\\s*
+            (
+             (!(if(n?def)?|ifmacron?def|macro))\\b .*
+             |(Function|PageEx|Section(Group)?)\\b .*
+            )\\s*?$
+        
+    '''
+    decreaseIndentPattern: '''
+      (?x)
+            ^\\s*(
+                (!(else|endif|macroend))
+                |((Function|PageEx|Section(Group)?)End)
+            )\\b .*$
+        
+    '''
