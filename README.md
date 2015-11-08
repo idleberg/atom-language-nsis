@@ -77,6 +77,21 @@ There are several special cases for your convenience:
 * `onInit` completes to a `Function .onInit` block
 * `LogicLib` completes to `!include "LogicLib.nsh"`
 
+#### Drunken NSIS
+
+Fuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies of the NSIS language, for instance word order.
+
+**Example:**
+
+Interchangable word order of NSIS language and library functions
+
+* `FileRead` / `ReadFile`
+* `ReadINIStr` / `INIStrRead`
+* `SectionSetText` / `SetSectionText`
+* `LogSet` / `SetLog`
+* `FindFirst` / `FirstFind`
+* `${FindLine}` / `${LineFind}`
+
 ### Building
 
 There are currently two ways to build NSIS scripts within Atom, each of them requiring an additional package to be installed.
