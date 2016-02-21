@@ -67,7 +67,14 @@ module.exports = NsisConfig =
     createFile = false
     currentFile = @workspace.getActivePaneItem().getPath()
 
-    unless typeof currentFile is "undefined"
+    if typeof currentFile is "undefined"
+      atom.confirm
+        message: 'File not saved'
+        detailedMessage: 'You need to save this file before you can create a build-file'
+        buttons:
+          "OK": -> return
+
+    else
 
       currentPath = path.dirname(currentFile) + "/"
 
@@ -90,12 +97,4 @@ module.exports = NsisConfig =
 
         if createFile is true
           fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
-            console.error("config-nsis: Error writing file", error) if error
-
-    else
-
-      atom.confirm
-        message: 'File not saved'
-        detailedMessage: 'You need to save this file before you can create a build-file'
-        buttons:
-          "OK": -> return
+            console.error("config-nsis: Error writing file", error) if error     
