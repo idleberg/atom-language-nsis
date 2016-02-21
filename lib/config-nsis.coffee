@@ -7,7 +7,6 @@ path = require 'path'
 # NsisConfig
 module.exports = NsisConfig =
   runner: null,
-  self: "config-nsis",
   subscriptions: null,
   workspace: atom.workspace
 
@@ -39,15 +38,15 @@ module.exports = NsisConfig =
         detailedMessage: 'To compile NSIS scripts inside Atom, you need to define a runner. Do you want to use makensis as default runner?'
         buttons:
           "Use makensis": ->
-            console.log @self + ": Set runner.scopes.nsis to 'makensis -'"
+            console.log "config-nsis: Set runner.scopes.nsis to 'makensis -'"
             atom.config.set('runner.scopes.nsis','makensis -')
           "Cancel": ->
-            console.log @self + ": Cancelled setting default runner"
+            console.log "config-nsis: Cancelled setting default runner"
             return
 
   unsetRunnerConf: ->
 
-    console.log @self + ": Unset runner.scopes.nsis"
+    console.log "config-nsis: Unset runner.scopes.nsis"
     atom.config.unset('runner.scopes.nsis')
 
 
@@ -72,7 +71,7 @@ module.exports = NsisConfig =
 
       currentPath = path.dirname(currentFile) + "/"
 
-      console.log @self + ": Saving " + currentPath + ".atom-build.json"
+      console.log "config-nsis: Saving " + currentPath + ".atom-build.json"
       
       fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
         console.error("config-nsis: Error writing file", error) if error
