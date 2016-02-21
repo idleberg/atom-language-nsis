@@ -17,8 +17,8 @@ module.exports = NsisConfig =
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Set build command for atom–runner': => @setRunnerConf()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Remove build command for atom–runner': => @unsetRunnerConf()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Set default runner for NSIS': => @setRunnerConf()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Remove default runner for NSIS': => @unsetRunnerConf()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Create .atom–build file': => @createBuildFile()
 
 
@@ -64,7 +64,7 @@ module.exports = NsisConfig =
         # env:
           # VARIABLE1: "VALUE1"
         # errorMatch: "^regexp$"
-
+    createFile = false
     currentFile = @workspace.getActivePaneItem().getPath()
 
     unless typeof currentFile is "undefined"
@@ -73,8 +73,24 @@ module.exports = NsisConfig =
 
       console.log "config-nsis: Saving " + currentPath + ".atom-build.json"
       
-      fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
-        console.error("config-nsis: Error writing file", error) if error
+      fs.exists currentPath + "/.atom-build.json", (exists) ->
+        if exists is true
+          atom.confirm
+                  message: 'File exists'
+                  detailedMessage: 'Do you really want to overwrite your existing build file?'
+                  buttons:
+                    "Overwrite": ->
+                      console.log "config-nsis: Overwriting existing build file"
+                      createFile = true
+                    "Abort": ->
+                      console.log "config-nsis: Abort overwriting build file"
+                      return
+        else
+          createFile = true
+
+        if createFile is true
+          fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
+            console.error("config-nsis: Error writing file", error) if error
 
     else
 
