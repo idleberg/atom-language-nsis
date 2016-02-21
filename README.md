@@ -43,6 +43,7 @@ Atom language support for NSIS, consisting of grammar and snippets
     * WinVer
     * WordFunc
     * x64
+* Support for build systems
 
 You can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
 
