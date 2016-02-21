@@ -99,6 +99,10 @@ There are several ways to build NSIS scripts within Atom, each of them depending
 
 **Note:** You might have to add makensis to your [PATH environmental variable](http://superuser.com/a/284351/195953) in order to use any of the mentioned building tools.
 
+#### build
+
+With the [script](https://atom.io/packages/build) package installed, you can compile scripts using the default <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd> shortcut (or <kbd>F9</kbd>).
+
 #### script
 
 With the [script](https://atom.io/packages/script) package installed, you can compile scripts using the default <kbd>Super</kbd>+<kbd>I</kbd> shortcut.
