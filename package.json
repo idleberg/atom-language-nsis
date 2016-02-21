@@ -20,8 +20,8 @@
   "main": "./lib/config-nsis",
   "activationCommands": {
     "atom-workspace": [
-      "NSIS: Set build command for atom–runner",
-      "NSIS: Remove build command for atom–runner",
+      "NSIS: Set default runner for NSIS",
+      "NSIS: Remove default runner for NSIS",
       "NSIS: Create .atom–build file"
     ]
   },
@@ -34,7 +34,8 @@
     "gulp-debug": "^2.1.2",
     "gulp-jshint": "^2.0.0",
     "gulp-jsonlint": "^1.1.2",
-    "gulp-recess": "^1.2.0"
+    "gulp-recess": "^1.2.0",
+    "jshint": "^2.9.1"
   },
   "scripts": {
     "test": "gulp lint"
@@ -45,10 +46,10 @@
     "url": "https://github.com/idleberg/atom-language-nsis/issues"
   },
   "homepage": "https://github.com/idleberg/atom-language-nsis#readme",
-  "_id": "language-nsis@3.4.1",
+  "_id": "language-nsis@3.5.0",
   "_shasum": "8956ccc760c702fea7d279333307b22e93ca16de",
-  "_resolved": "file:../d-116121-70653-sszc0p/package.tgz",
-  "_from": "../d-116121-70653-sszc0p/package.tgz",
+  "_resolved": "file:../d-116121-90698-avutyq/package.tgz",
+  "_from": "../d-116121-90698-avutyq/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
@@ -61,7 +62,7 @@
         "gulpfile.js"
       ],
       ".coffee": [
-        "lib/init.coffee"
+        "lib/config-nsis.coffee"
       ]
     },
     "folders": []
