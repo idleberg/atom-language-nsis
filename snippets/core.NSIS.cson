@@ -1463,11 +1463,11 @@
   'SubCaption':
     'prefix': 'SubCaption'
     'body': 'SubCaption ${1:page_number} "${2:subcaption}"'
-  'un.Function':
+  'Function un.*':
     'prefix': 'un.Function'
     'body': """
       Function "un.${1:function_name}"
-        ${1:# your code here}
+        ${2:# your code here}
       FunctionEnd
     """
   'Unicode':
@@ -1569,7 +1569,7 @@
   'UninstPage uninstConfirm':
     'prefix': 'UninstPage uninstConfirm'
     'body': 'UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
-  'un.Section':
+  'Section Uninstall':
     'prefix': 'un.Section'
     'body': """
       Section "Uninstall"
