@@ -94,16 +94,21 @@ Interchangable word order of NSIS language and library functions
 
 ### Building
 
-There are currently two ways to build NSIS scripts within Atom, each of them requiring an additional package to be installed.
-
-Package Dependency                                  | Build Shortcut
-----------------------------------------------------|---------------
-[script](https://atom.io/packages/script)           | <kbd>Super</kbd>+<kbd>I</kbd>
-[atom-runner](https://atom.io/packages/atom-runner) | <kbd>Ctrl</kbd>+<kbd>R</kbd>
-
-If atom-runner has been detected, the user will be asked whether to use makensis as the default runner for NSIS scripts.
+There are several ways to build NSIS scripts within Atom, each of them depending on a separate build package.
 
 **Note:** You might have to add makensis to your [PATH environmental variable](http://superuser.com/a/284351/195953) in order to use any of the mentioned building tools.
+
+#### script
+
+With the [script](https://atom.io/packages/script) package installed, you can compile scripts using the default <kbd>Super</kbd>+<kbd>I</kbd> shortcut.
+
+#### atom-runner
+
+With the [atom-runner](https://atom.io/packages/atom-runner) package installed, you need to create a runner task to compile scripts. From the [command-palette](https://atom.io/packages/command-palette) run "NSIS: Set build command for atom–runner" and `makensis` will added as runner for NSIS files. Use the default shortcut <kbd>Ctrl</kbd>+<kbd>R</kbd> to compile your scripts.
+
+#### atom-build
+
+You can also create `.atom-build.json` to use with [atom-build](https://github.com/mirhec/atom-build). From the [command-palette](https://atom.io/packages/command-palette) run "NSIS: Create .atom–build file" to add it to your current project folder. Use the default shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> to compile your scripts.
 
 ## License
 
