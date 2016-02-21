@@ -16,8 +16,7 @@ Atom language support for NSIS, consisting of grammar and snippets
 ## Features
 
 * all core NSIS commands, variables and predefines
-* Drunken NSIS
-* Plugins:
+* all core Plugins:
     * AdvSplash
     * Banner
     * BgImage
@@ -33,7 +32,7 @@ Atom language support for NSIS, consisting of grammar and snippets
     * System
     * UserInfo
     * VPatch
-* Headers:
+* all core libraries (“Useful Headers”):
     * FileFunc
     * LogicLib
     * Memento
@@ -43,7 +42,8 @@ Atom language support for NSIS, consisting of grammar and snippets
     * WinVer
     * WordFunc
     * x64
-* Support for build systems
+* Drunken NSIS (fuzzy completions)
+* Support for third-party build systems
 
 You can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
 
@@ -64,7 +64,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 With most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.
 
-To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), *leave out* special characters:
+To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), make sure to *leave out* special characters like `!`, `$` and brackets:
 
 * `include` completes to `!include`
 * `INSTDIR` completes to `$INSTDIR`
