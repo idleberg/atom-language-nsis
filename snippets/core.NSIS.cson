@@ -1130,7 +1130,7 @@
     'body': 'Rename /REBOOTOK "${1:source_file}" "${2:dest_file}"'
   'RequestExecutionLevel':
     'prefix': 'RequestExecutionLevel'
-    'body': 'RequestExecutionLevel ${1:none|user|admin|highest}'
+    'body': 'RequestExecutionLevel ${1:admin|none|user|highest}'
   'RequestExecutionLevel admin':
     'prefix': 'RequestExecutionLevel admin'
     'body': 'RequestExecutionLevel admin'
