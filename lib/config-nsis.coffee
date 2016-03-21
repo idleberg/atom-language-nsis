@@ -68,7 +68,7 @@ module.exports = NsisConfig =
         cmd: "makensis",
         args: [ "{FILE_ACTIVE}" ],
         sh: false,
-        cwd: "{PROJECT_PATH}"
+        cwd: "{FILE_ACTIVE_PATH}"
     createFile = false
     currentFile = @workspace.getActivePaneItem().getPath()
 
