@@ -21,9 +21,9 @@ module.exports = NsisConfig =
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Set default runner for NSIS': => @setRunnerConf()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Remove default runner for NSIS': => @unsetRunnerConf()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS: Create .atom–build file': => @createBuildFile()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': => @setRunnerConf()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': => @unsetRunnerConf()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': => @createBuildFile()
 
 
 ################################################################################
@@ -101,3 +101,6 @@ module.exports = NsisConfig =
         if createFile is true
           fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
             atom.notifications.addError("config-nsis", detail: error, dismissable: false) if error
+
+      # Open file
+      @workspace.open(currentPath + "/.atom-build.json")
