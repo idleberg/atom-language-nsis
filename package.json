@@ -20,9 +20,9 @@
   "main": "./lib/config-nsis",
   "activationCommands": {
     "atom-workspace": [
-      "NSIS: Set default runner for NSIS",
-      "NSIS: Remove default runner for NSIS",
-      "NSIS: Create .atom–build file"
+      "NSIS:set-default-runner",
+      "NSIS:remove-default-runner",
+      "NSIS:create-.atom–build-file"
     ]
   },
   "engines": {

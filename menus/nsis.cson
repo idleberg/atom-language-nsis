@@ -6,16 +6,16 @@
       'submenu': [
         {
           'label': 'Set default runner for NSIS'
-          'command': 'NSIS: Set default runner for NSIS'
+          'command': 'NSIS:set-default-runner'
         },
         {
           'label': 'Remove default runner for NSIS'
-          'command': 'NSIS: Remove default runner for NSIS'
+          'command': 'NSIS:remove-default-runner'
         },
         { 'type': 'separator' },
         {
           'label': 'Create .atom–build.json'
-          'command': 'NSIS: Create .atom–build file'
+          'command': 'NSIS:create-.atom–build-file'
         }
       ]
     ]
