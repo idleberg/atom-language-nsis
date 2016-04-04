@@ -70,7 +70,7 @@ To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.ht
 * `INSTDIR` completes to `$INSTDIR`
 * `NSIS_VERSION` completes to `${NSIS_VERSION}`
 
-However, you have to type `__LINE___` to complete to `${__LINE__}`.
+However, you have to type `__LINE__` to complete to `${__LINE__}`.
 
 There are several special cases for your convenience:
 
