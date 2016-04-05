@@ -53,6 +53,9 @@
   '${NSIS_PACKEDVERSION}':
     'prefix': 'NSIS_PACKEDVERSION'
     'body': '\${NSIS_PACKEDVERSION}'
+  '${NSIS_PTR_SIZE}':
+    'prefix': 'NSIS_PTR_SIZE'
+    'body': '\${NSIS_PTR_SIZE}'
   '${NSIS_UNICODE}':
     'prefix': 'NSIS_UNICODE'
     'body': '\${NSIS_UNICODE}'
