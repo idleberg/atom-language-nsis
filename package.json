@@ -1,6 +1,6 @@
 {
   "name": "language-nsis",
-  "version": "3.7.4",
+  "version": "4.0.0",
   "description": "Atom language support for NSIS",
   "license": "MIT",
   "author": {
