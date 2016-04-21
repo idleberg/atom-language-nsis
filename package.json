@@ -17,12 +17,13 @@
     "type": "git",
     "url": "git+https://github.com/idleberg/atom-language-nsis.git"
   },
-  "main": "./lib/config-nsis",
+  "main": "./lib/main",
   "activationCommands": {
     "atom-workspace": [
       "NSIS:set-default-runner",
       "NSIS:remove-default-runner",
-      "NSIS:create-.atom–build-file"
+      "NSIS:create-.atom–build-file",
+      "NSIS:save-&-compile"
     ]
   },
   "engines": {
@@ -39,32 +40,5 @@
   },
   "scripts": {
     "test": "gulp lint"
-  },
-  "readme": "# NSIS for Atom\n\n[![apm](https://img.shields.io/apm/l/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)\n[![apm](https://img.shields.io/apm/v/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)\n[![apm](https://img.shields.io/apm/dm/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)\n[![Travis](https://img.shields.io/travis/idleberg/atom-language-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-nsis)\n[![David](https://img.shields.io/david/dev/idleberg/atom-language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsis#info=devDependencies)\n[![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)\n\nAtom language support for NSIS, consisting of grammar and snippets\n\n![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)\n\n*Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*\n\n## Features\n\n* all core NSIS commands, variables and predefines\n* Drunken NSIS\n* Plugins:\n    * AdvSplash\n    * Banner\n    * BgImage\n    * Dialer\n    * InstallOptions\n    * LangDLL\n    * Math\n    * nsDialogs\n    * nsExec\n    * NSISdl\n    * Splash\n    * StartMenu\n    * System\n    * UserInfo\n    * VPatch\n* Headers:\n    * FileFunc\n    * LogicLib\n    * Memento\n    * MultiUser\n    * Sections\n    * WinMessages\n    * WinVer\n    * WordFunc\n    * x64\n\nYou can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).\n\n## Installation\n\n### apm\n\n* Install package `apm install language-nsis` (or use the GUI)\n\n### GitHub\n\n1. Change directory `cd ~/.atom/packages/`\n2. Clone repository `git clone https://github.com/idleberg/atom-language-nsis language-nsis`\n\n## Usage\n\n### Completion\n\nWith most commands, you can specify available options before completion. For instance, rather than completing `RequestExecutionLevel` and then specifying an option, you can directly choose `RequestExecutionLevel user` from the completion menu.\n\nTo complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), *leave out* special characters:\n\n* `include` completes to `!include`\n* `INSTDIR` completes to `$INSTDIR`\n* `NSIS_VERSION` completes to `${NSIS_VERSION}`\n\nHowever, you have to type `__LINE___` to complete to `${__LINE__}`.\n\nThere are several special cases for your convenience:\n\n* `MB_OK` completes to `MessageBox MB_OK`\n* `onInit` completes to a `Function .onInit` block\n* `LogicLib` completes to `!include \"LogicLib.nsh\"`\n\n#### Drunken NSIS\n\nFuzzy syntax completions are available through “Drunken NSIS”, which tries to iron out some of the inconsistencies of the NSIS language, for instance word order.\n\n**Example:**\n\nInterchangable word order of NSIS language and library functions\n\n* `FileRead` / `ReadFile`\n* `ReadINIStr` / `INIStrRead`\n* `SectionSetText` / `SetSectionText`\n* `LogSet` / `SetLog`\n* `FindFirst` / `FirstFind`\n* `${FindLine}` / `${LineFind}`\n\n### Building\n\nThere are currently two ways to build NSIS scripts within Atom, each of them requiring an additional package to be installed.\n\nPackage Dependency                                  | Build Shortcut\n----------------------------------------------------|---------------\n[script](https://atom.io/packages/script)           | <kbd>Super</kbd>+<kbd>I</kbd>\n[atom-runner](https://atom.io/packages/atom-runner) | <kbd>Ctrl</kbd>+<kbd>R</kbd>\n\nIf atom-runner has been detected, the user will be asked whether to use makensis as the default runner for NSIS scripts.\n\n**Note:** You might have to add makensis to your [PATH environmental variable](http://superuser.com/a/284351/195953) in order to use any of the mentioned building tools.\n\n## License\n\nThis work is licensed under the [The MIT License](LICENSE.md).\n\n## Donate\n\nYou are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/atom-language-nsis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/idleberg/atom-language-nsis/issues"
-  },
-  "homepage": "https://github.com/idleberg/atom-language-nsis#readme",
-  "_id": "language-nsis@3.5.0",
-  "_shasum": "8956ccc760c702fea7d279333307b22e93ca16de",
-  "_resolved": "file:../d-116121-90698-avutyq/package.tgz",
-  "_from": "../d-116121-90698-avutyq/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".json": [
-        "coffeelint.json",
-        "package.json"
-      ],
-      ".js": [
-        "gulpfile.js"
-      ],
-      ".coffee": [
-        "lib/config-nsis.coffee"
-      ]
-    },
-    "folders": []
   }
 }
