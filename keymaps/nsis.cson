@@ -1,0 +1,4 @@
+# https://atom.io/docs/latest/advanced/keymaps
+'atom-text-editor':
+  'ctrl-alt-m': 'NSIS:save-&-compile'
+  'ctrl-alt-p': 'NSIS:create-.atom–build-file'
