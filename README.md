@@ -103,7 +103,7 @@ As of `v4.0.0` of this package, you can compile scripts without relying on third
 
 In addition to that, you can choose from the following build packages to compile NSIS:
 
-* [build](https://atom.io/packages/build) with a [build provider](https://atombuild.github.io/#language-nsis)
+* [build](https://atom.io/packages/build) (plus [build provider](https://atombuild.github.io/#language-nsis))
 * [script](https://atom.io/packages/script)
 * [atom-runner](https://atom.io/packages/atom-runner)
 * [atom-build](https://github.com/mirhec/atom-build)
