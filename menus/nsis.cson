@@ -5,6 +5,10 @@
       'label': 'NSIS'
       'submenu': [
         {
+          'label': 'Compile script'
+          'command': 'NSIS:save-&-compile'
+        },
+        {
           'label': 'Set default runner for NSIS'
           'command': 'NSIS:set-default-runner'
         },
