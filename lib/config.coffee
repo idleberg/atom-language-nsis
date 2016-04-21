@@ -1,36 +1,13 @@
-# Dependencies
-{CompositeDisposable} = require 'atom'
-
-fs = require 'fs'
-path = require 'path'
-
-# NsisConfig
-module.exports = NsisConfig =
-  runner: null,
-  subscriptions: null,
-  workspace: atom.workspace
-
-  # Ask user whether to set default runner
-  activate: (state) ->
-
-    @runner =
-        path: atom.packages.resolvePackagePath('atom-runner')
-        active: atom.packages.isPackageLoaded('atom-runner')
-
-    # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
-    @subscriptions = new CompositeDisposable
-
-    # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': => @setRunnerConf()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': => @unsetRunnerConf()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': => @createBuildFile()
-
-
+module.exports = NsisConf =
+  runner: null
+    
 ################################################################################
 # atom-runner
 # https://github.com/lsegal/atom-runner
 # 
-  setRunnerConf: ->
+  setRunner: ->
+
+    @checkRunner()
 
     if (typeof @runner.path != 'undefined') and (@runner.active == true)
       atom.confirm
@@ -44,18 +21,25 @@ module.exports = NsisConfig =
             atom.notifications.addWarning("config-nsis", detail: "Cancelled setting default runner", dismissable: false)
             return
     else
-      @missingAtomRunner()
+      @missingRunner()
 
-  unsetRunnerConf: ->
+  removeRunner: ->
+
+    @checkRunner()
 
     if (typeof @runner.path != 'undefined') and (@runner.active == true)
       atom.notifications.addSuccess("config-nsis", detail: "Unset runner.scopes.nsis", dismissable: false)
       atom.config.unset('runner.scopes.nsis')
     else
-      @missingAtomRunner()
+      @missingRunner()
 
-  missingAtomRunner: ->
+  missingRunner: ->
     atom.notifications.addWarning("config-nsis", detail: "atom-runner is not installed", dismissable: false)
+
+  checkRunner: ->
+    @runner =
+        path: atom.packages.resolvePackagePath('atom-runner')
+        active: atom.packages.isPackageLoaded('atom-runner')
 
 
 ################################################################################
@@ -63,6 +47,8 @@ module.exports = NsisConfig =
 # https://github.com/mirhec/atom-build
 # 
   createBuildFile: ->
+    fs = require 'fs'
+    path = require 'path'
 
     buildFile =
         cmd: "makensis",
@@ -70,7 +56,7 @@ module.exports = NsisConfig =
         sh: false,
         cwd: "{FILE_ACTIVE_PATH}"
     createFile = false
-    currentFile = @workspace.getActivePaneItem().getPath()
+    currentFile = atom.workspace.getActivePaneItem().getPath()
 
     if typeof currentFile is "undefined"
       atom.confirm
@@ -82,25 +68,30 @@ module.exports = NsisConfig =
     else
       successMsg = null
       currentPath = path.dirname(currentFile)
+      buildFilePath = path.join(currentPath, ".atom-build.json")
      
-      fs.exists "#{currentPath}/.atom-build.json", (exists) ->
+      fs.exists "#{buildFilePath}", (exists) ->
         if exists is true
           atom.confirm
-                  message: 'File exists'
-                  detailedMessage: 'Do you really want to overwrite your existing build file?'
-                  buttons:
-                    "Overwrite": ->
-                      successMsg = "Overwriting existing build file"
-                      createFile = true
-                    "Abort": ->
-                      return
+            message: 'File exists'
+            detailedMessage: 'Do you really want to overwrite your existing build file?'
+            buttons:
+              "Overwrite": ->
+                successMsg = "Overwriting existing file"
+                createFile = true
+              "Abort": ->
+                return
         else
-          successMsg = "Saving #{currentPath}/.atom-build.json"
+          successMsg = "Saving file"
           createFile = true
 
         if createFile is true
-          fs.writeFile currentPath + "/.atom-build.json", JSON.stringify(buildFile, null, 4), (error) ->
-            atom.notifications.addError("config-nsis", detail: error, dismissable: false) if error
-
-      # Open file
-      @workspace.open(currentPath + "/.atom-build.json")
+          console.log buildFile
+          console.log buildFilePath
+          # Save build file
+          fs.writeFile buildFilePath, JSON.stringify(buildFile, null, 4), (error) ->
+            if error
+              atom.notifications.addError(".atom-build.json", detail: error, dismissable: false)
+            else
+              atom.notifications.addInfo(".atom-build.json", detail: successMsg, dismissable: false)
+              atom.workspace.open(buildFilePath)
