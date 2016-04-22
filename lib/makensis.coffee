@@ -45,7 +45,6 @@ module.exports = NsisBuild =
        else
          pathToMakensis = stdout.trim()
          atom.config.set('language-nsis.pathToMakensis', pathToMakensis)
-         console.log "Found"
          return pathToMakensis
 
   setPlatformSpecs: ->
