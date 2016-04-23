@@ -97,7 +97,7 @@ Interchangable word order of NSIS language and library functions
 
 There are many ways to compile NSIS scripts in Atom. But before we go into detail, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953).
 
-As of `v4.0.0` of this package, you can compile scripts without relying on third-party packages. To do so, select “NSIS: Save & Compile” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd> (or <kbd>Shift</kbd><kbd>Alt</kbd><kbd>M</kbd> on Windows.)
+As of `v4.0.0` of this package, you can compile scripts without relying on third-party packages. To do so, select “NSIS: Save & Compile” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd> (that's <kbd>Shift</kbd><kbd>Alt</kbd><kbd>M</kbd> on Windows.)
 
 #### Third-party packages
 
@@ -110,7 +110,7 @@ In addition to that, you can choose from the following build packages to compile
 
 You can set up `atom-runner` by executing “NSIS: Set default runner” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use “NSIS: Remove default runner”.
 
-Project files for `atom-build` and `build` can be created by executing “NSIS: Create .atom-build file” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu.
+Project files for `atom-build` and `build` can be created by executing “NSIS: Create .atom-build file” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>P</kbd> (that's <kbd>Shift</kbd><kbd>Alt</kbd><kbd>P</kbd> on Windows.)
 
 ## License
 
