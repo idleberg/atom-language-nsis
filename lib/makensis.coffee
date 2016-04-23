@@ -1,7 +1,7 @@
 module.exports = NsisBuild =
   which: null
   prefix: null
-    
+
   buildScript: ->
     {exec} = require 'child_process'
 
@@ -13,12 +13,12 @@ module.exports = NsisBuild =
       makensis = @getMakensisPath()
 
       # Output makensis version
-      exec "#{makensis} #{@prefix}VERSION", (error, stdout, stderr) ->
+      exec "\"#{makensis}\" #{@prefix}VERSION", (error, stdout, stderr) ->
         if error is null
-          console.log "makensis #{stdout}" 
-  
+          console.log "makensis #{stdout}"
+
       # Compile script
-      exec "#{makensis} #{@prefix}V2 #{script}", (error, stdout, stderr) ->
+      exec "\"#{makensis}\" #{@prefix}V2 \"#{script}\"", (error, stdout, stderr) ->
         if error isnt null
           atom.notifications.addError(script, detail: stdout, dismissable: true)
         else
@@ -26,17 +26,17 @@ module.exports = NsisBuild =
 
     else
       # Something went wrong
-      atom.beep()    
+      atom.beep()
 
   getMakensisPath: ->
     {exec} = require 'child_process'
 
     @setPlatformSpecs()
 
-    pathToMakensis = atom.config.get('language-nsis.pathToMakensis') 
+    pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
 
     if pathToMakensis?
-      return pathToMakensis 
+      return pathToMakensis
 
      exec "#{@which} makensis", (error, stdout, stderr) ->
        if error isnt null
