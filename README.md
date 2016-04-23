@@ -97,7 +97,7 @@ Interchangable word order of NSIS language and library functions
 
 There are many ways to compile NSIS scripts in Atom. But before we go into detail, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953).
 
-As of `v4.0.0` of this package, you can compile scripts without relying on third-party packages. To do so, select “NSIS: Save & Compile” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd>.
+As of `v4.0.0` of this package, you can compile scripts without relying on third-party packages. To do so, select “NSIS: Save & Compile” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd> (or <kbd>Shift</kbd><kbd>Alt</kbd><kbd>M</kbd> on Windows.)
 
 #### Third-party packages
 
