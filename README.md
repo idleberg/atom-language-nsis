@@ -99,6 +99,13 @@ There are many ways to compile NSIS scripts in Atom. But before we go into detai
 
 As of `v4.0.0` of this package, you can compile scripts without relying on third-party packages. To do so, select “NSIS: Save & Compile” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd> (that's <kbd>Shift</kbd><kbd>Alt</kbd><kbd>M</kbd> on Windows.)
 
+You can specify custom compiler arguments in `config.cson`:
+
+    "language-nsis":
+      compilerArgs: "/WX /V3"
+
+**Note**: Custom arguments will override the default verbosity setting `/V2`
+
 #### Third-party packages
 
 In addition to that, you can choose from the following build packages to compile NSIS:

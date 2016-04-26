@@ -17,8 +17,11 @@ module.exports = NsisBuild =
         if error is null
           console.log "makensis #{stdout}"
 
+      # custom makensis arguments (http://nsis.sourceforge.net/Docs/Chapter3.html#usagereference)
+      args = atom.config.get('language-nsis.compilerArgs') || "#{@prefix}V2";
+
       # Compile script
-      exec "\"#{makensis}\" #{@prefix}V2 \"#{script}\"", (error, stdout, stderr) ->
+      exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
         if error isnt null
           atom.notifications.addError(script, detail: stdout, dismissable: true)
         else
