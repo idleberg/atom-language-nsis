@@ -15,7 +15,7 @@ module.exports = NsisBuild =
       # Output makensis version
       exec "\"#{makensis}\" #{@prefix}VERSION", (error, stdout, stderr) ->
         if error is null
-          console.log "makensis #{stdout}"
+          console.log "[language-nsis] makensis #{stdout}"
 
       # custom makensis arguments (http://nsis.sourceforge.net/Docs/Chapter3.html#usagereference)
       args = atom.config.get('language-nsis.compilerArgs') || "#{@prefix}V2";
