@@ -117,7 +117,7 @@ In addition to that, you can choose from the following build packages to compile
 
 You can set up `atom-runner` by executing “NSIS: Set default runner” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use “NSIS: Remove default runner”.
 
-Project files for `atom-build` and `build` can be created by executing “NSIS: Create .atom-build file” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the shortcut <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>P</kbd> (that's <kbd>Shift</kbd><kbd>Alt</kbd><kbd>P</kbd> on Windows.)
+Project files for `atom-build` and `build` can be created by executing “NSIS: Create .atom-build file” from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut.
 
 ## License
 
