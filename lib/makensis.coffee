@@ -23,7 +23,8 @@ module.exports = NsisBuild =
       # Compile script
       exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
         if error isnt null
-          atom.notifications.addError(script, detail: error, dismissable: true)
+          # makensis error from stdout, not error!
+          atom.notifications.addError(script, detail: stdout, dismissable: true)
         else
           atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
 
