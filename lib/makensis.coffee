@@ -42,21 +42,21 @@ module.exports = NsisBuild =
     if pathToMakensis?
       return pathToMakensis
 
-     exec "#{@which} makensis", (error, stdout, stderr) ->
-       if error isnt null
-         atom.notifications.addError("language-nsis", detail: "makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
-         return false
-       else
-         pathToMakensis = stdout.trim()
-         atom.config.set('language-nsis.pathToMakensis', pathToMakensis)
-         return pathToMakensis
+    exec "#{@which} makensis", (error, stdout, stderr) ->
+      if error isnt null
+        atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
+        return false
+      else
+        pathToMakensis = stdout.trim()
+        atom.config.set('language-nsis.pathToMakensis', pathToMakensis)
+        return pathToMakensis
 
   setPlatformSpecs: ->
     os = require 'os'
 
     if os.platform() is 'win32'
-     @which = "where"
-     @prefix = "/"
+      @which = "where"
+      @prefix = "/"
     else
-     @which = "which"
-     @prefix = "-"
+      @which = "which"
+      @prefix = "-"

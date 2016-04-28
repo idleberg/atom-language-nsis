@@ -15,10 +15,10 @@ module.exports = NsisConf =
         detailedMessage: 'To compile NSIS scripts inside Atom, you need to define a runner. Do you want to use makensis as default runner?'
         buttons:
           "Use makensis": ->
-            atom.notifications.addSuccess("config-nsis", detail: "Set `runner.scopes.nsis` to 'makensis -'", dismissable: false)
+            atom.notifications.addSuccess("**language-nsis**: Set `runner.scopes.nsis` to 'makensis -'", dismissable: false)
             atom.config.set('runner.scopes.nsis','makensis -')
           "Cancel": ->
-            atom.notifications.addWarning("config-nsis", detail: "Cancelled setting default runner", dismissable: false)
+            atom.notifications.addWarning("**language-nsis**: Cancelled setting default runner", dismissable: false)
             return
     else
       @missingRunner()
@@ -28,13 +28,13 @@ module.exports = NsisConf =
     @checkRunner()
 
     if (typeof @runner.path != 'undefined') and (@runner.active == true)
-      atom.notifications.addSuccess("config-nsis", detail: "Unset `runner.scopes.nsis`", dismissable: false)
+      atom.notifications.addSuccess("**language-nsis**: Unset `runner.scopes.nsis`", dismissable: false)
       atom.config.unset('runner.scopes.nsis')
     else
       @missingRunner()
 
   missingRunner: ->
-    atom.notifications.addWarning("config-nsis", detail: "[atom-runner](https://atom.io/packages/atom-runner) is not installed", dismissable: false)
+    atom.notifications.addWarning("**language-nsis**: [atom-runner](https://atom.io/packages/atom-runner) is not installed", dismissable: false)
 
   checkRunner: ->
     @runner =
