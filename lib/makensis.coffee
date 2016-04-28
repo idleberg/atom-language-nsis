@@ -44,7 +44,7 @@ module.exports = NsisBuild =
 
      exec "#{@which} makensis", (error, stdout, stderr) ->
        if error isnt null
-         atom.notifications.addError("language-nsis", detail: "makensis is not in your PATH environmental variable", dismissable: false)
+         atom.notifications.addError("language-nsis", detail: "makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
          return false
        else
          pathToMakensis = stdout.trim()
