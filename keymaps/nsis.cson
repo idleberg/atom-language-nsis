@@ -1,8 +1,8 @@
 # https://atom.io/docs/latest/advanced/keymaps
-'.platform-darwin atom-text-editor':
+'.platform-darwin atom-text-editor, .platform-linux atom-text-editor':
   'cmd-alt-m': 'NSIS:save-&-compile'
   'cmd-alt-p': 'NSIS:create-.atom–build-file'
 
-'.platform-linux atom-text-editor, .platform-windows atom-text-editor':
+'.platform-windows atom-text-editor':
   'ctrl-alt-m': 'NSIS:save-&-compile'
   'ctrl-alt-p': 'NSIS:create-.atom–build-file'
