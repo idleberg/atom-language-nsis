@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsis#info=devDependencies)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
-Atom language support for NSIS, consisting of grammar and snippets
+Atom language support for NSIS, including grammar, snippets and a rudimentary build system
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
