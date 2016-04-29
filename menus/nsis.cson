@@ -5,7 +5,7 @@
       'label': 'NSIS'
       'submenu': [
         {
-          'label': 'Compile script'
+          'label': 'Save && compile script'
           'command': 'NSIS:save-&-compile'
         },
         {
