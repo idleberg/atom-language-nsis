@@ -102,9 +102,7 @@ As of `v4.0.0` of this package, you can compile scripts without relying on third
 You can specify custom compiler arguments in `config.cson`:
 
     "language-nsis":
-      compilerArgs: "/WX /V3"
-
-**Note**: Custom arguments will override the default verbosity setting `/V2`
+      compilerArguments: "/WX /V3"
 
 #### Third-party packages
 
