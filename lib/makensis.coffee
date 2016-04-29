@@ -13,7 +13,6 @@ module.exports = NsisBuild =
       editor.save()
 
       @getPath (stdout) ->
-
         args      = atom.config.get('language-nsis.compilerArguments')
         makensis  = atom.config.get('language-nsis.pathToMakensis')
 

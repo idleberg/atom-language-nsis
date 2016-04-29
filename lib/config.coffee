@@ -6,7 +6,6 @@ module.exports = NsisConf =
 # https://github.com/lsegal/atom-runner
 # 
   setRunner: ->
-
     @checkRunner()
 
     if (typeof @runner.path != 'undefined') and (@runner.active == true)
@@ -24,7 +23,6 @@ module.exports = NsisConf =
       @missingRunner()
 
   removeRunner: ->
-
     @checkRunner()
 
     if (typeof @runner.path != 'undefined') and (@runner.active == true)
