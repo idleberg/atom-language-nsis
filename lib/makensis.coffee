@@ -1,62 +1,60 @@
+{exec} = require 'child_process'
+
 module.exports = NsisBuild =
   which: null
   prefix: null
 
   buildScript: ->
-    {exec} = require 'child_process'
-
     editor = atom.workspace.getActiveTextEditor()
     script = editor.getPath()
+    scope  = editor.getGrammar().scopeName
 
-    if script?
+    if script? and scope.startsWith 'source.nsis'
       editor.save()
-      makensis = @getMakensisPath()
 
-      # Output makensis version
-      exec "\"#{makensis}\" #{@prefix}VERSION", (error, stdout, stderr) ->
-        if error is null
-          console.log "[language-nsis] makensis #{stdout}"
+      @getPath (stdout) ->
 
-      # custom makensis arguments (http://nsis.sourceforge.net/Docs/Chapter3.html#usagereference)
-      args = atom.config.get('language-nsis.compilerArgs') || "#{@prefix}V2";
+        args      = atom.config.get('language-nsis.compilerArguments')
+        makensis  = atom.config.get('language-nsis.pathToMakensis')
 
-      # Compile script
-      exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
-        if error isnt null
-          # makensis error from stdout, not error!
-          atom.notifications.addError(script, detail: stdout, dismissable: true)
-        else
-          atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
-
+        exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
+          if error isnt null
+            # makensis error from stdout, not error!
+            atom.notifications.addError(script, detail: stdout, dismissable: true)
+          else
+            atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
     else
       # Something went wrong
       atom.beep()
 
-  getMakensisPath: ->
-    {exec} = require 'child_process'
+  getPath: (callback) ->
+    @getPlatform()
 
-    @setPlatformSpecs()
+    # If undefined, set default arguments
+    if not atom.config.get('language-nsis.compilerArguments')?
+      atom.config.set('language-nsis.compilerArguments', "#{@prefix}V2")
 
+    # If stored, return pathToMakensis
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
-
     if pathToMakensis?
-      return pathToMakensis
+      callback pathToMakensis
+      return
 
-    exec "#{@which} makensis", (error, stdout, stderr) ->
+    # Find makensis
+    exec "\"#{@which}\" makensis", (error, stdout, stderr) ->
       if error isnt null
         atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
-        return false
       else
-        pathToMakensis = stdout.trim()
-        atom.config.set('language-nsis.pathToMakensis', pathToMakensis)
-        return pathToMakensis
+        atom.config.set('language-nsis.pathToMakensis', stdout.trim())
+        callback stdout
+      return
 
-  setPlatformSpecs: ->
+  getPlatform: ->
     os = require 'os'
 
     if os.platform() is 'win32'
-      @which = "where"
+      @which  = "where"
       @prefix = "/"
     else
-      @which = "which"
+      @which  = "which"
       @prefix = "-"
