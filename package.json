@@ -1,7 +1,7 @@
 {
   "name": "language-nsis",
   "version": "4.2.0",
-  "description": "Atom language support for NSIS",
+  "description": "Atom language support for NSIS, including grammar, snippets and rudimentary build system",
   "license": "MIT",
   "author": {
     "name": "Jan T. Sott",
