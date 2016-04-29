@@ -2,7 +2,7 @@
   'ModernUI':
     'prefix': 'scaffold-MUI'
     'body': """
-      ; Scaffolding by https://github.com/idleberg/atom-language-nsis
+      ; Scaffolding by https://atom.io/packages/language-nsis
       
       ; Includes ---------------------------------
       !include MUI2.nsh

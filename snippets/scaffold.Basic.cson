@@ -2,7 +2,7 @@
   'Basic Script':
     'prefix': 'scaffold'
     'body': """
-      ; Scaffolding by https://github.com/idleberg/NSIS-Sublime-Text
+      ; Scaffolding by https://atom.io/packages/language-nsis
       
       ; Settings ---------------------------------
       Name "${1:installer_name}"
