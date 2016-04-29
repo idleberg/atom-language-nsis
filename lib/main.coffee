@@ -1,6 +1,3 @@
-# Dependencies
-{CompositeDisposable} = require 'atom'
-
 Makensis = require './makensis'
 Config = require './config'
 
@@ -8,6 +5,7 @@ module.exports = NsisCore =
   subscriptions: null
 
   activate: (state) ->
+    {CompositeDisposable} = require 'atom'
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
