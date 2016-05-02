@@ -4,5 +4,5 @@
   'cmd-alt-p': 'NSIS:create-.atom–build-file'
 
 '.platform-win32 atom-text-editor':
-  'ctrl-alt-m': 'NSIS:save-&-compile'
-  'ctrl-alt-p': 'NSIS:create-.atom–build-file'
+  'shift-alt-m': 'NSIS:save-&-compile'
+  'shift-alt-p': 'NSIS:create-.atom–build-file'
