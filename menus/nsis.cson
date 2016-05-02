@@ -8,6 +8,7 @@
           'label': 'Save && compile script'
           'command': 'NSIS:save-&-compile'
         },
+        { 'type': 'separator' },
         {
           'label': 'Set default runner for NSIS'
           'command': 'NSIS:set-default-runner'
