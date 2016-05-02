@@ -3,6 +3,6 @@
   'cmd-alt-m': 'NSIS:save-&-compile'
   'cmd-alt-p': 'NSIS:create-.atom–build-file'
 
-'.platform-windows atom-text-editor':
+'.platform-win32 atom-text-editor':
   'ctrl-alt-m': 'NSIS:save-&-compile'
   'ctrl-alt-p': 'NSIS:create-.atom–build-file'
