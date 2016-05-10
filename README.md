@@ -121,7 +121,7 @@ Project files for `atom-build` and `build` can be created by executing *“NSIS:
 
 ## License
 
-This work is dual-licensed under the [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0)
+This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0)
 
 ## Donate
 
