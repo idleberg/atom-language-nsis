@@ -1,1744 +1,1744 @@
 '.source.nsis':
   '${ABM_ACTIVATE}':
     'prefix': 'ABM_ACTIVATE'
-    'body': '\${ABM_ACTIVATE}'
+    'body': '\${ABM_ACTIVATE}$1'
   '${ABM_GETAUTOHIDEBAR}':
     'prefix': 'ABM_GETAUTOHIDEBAR'
-    'body': '\${ABM_GETAUTOHIDEBAR}'
+    'body': '\${ABM_GETAUTOHIDEBAR}$1'
   '${ABM_GETSTATE}':
     'prefix': 'ABM_GETSTATE'
-    'body': '\${ABM_GETSTATE}'
+    'body': '\${ABM_GETSTATE}$1'
   '${ABM_GETTASKBARPOS}':
     'prefix': 'ABM_GETTASKBARPOS'
-    'body': '\${ABM_GETTASKBARPOS}'
+    'body': '\${ABM_GETTASKBARPOS}$1'
   '${ABM_NEW}':
     'prefix': 'ABM_NEW'
-    'body': '\${ABM_NEW}'
+    'body': '\${ABM_NEW}$1'
   '${ABM_QUERYPOS}':
     'prefix': 'ABM_QUERYPOS'
-    'body': '\${ABM_QUERYPOS}'
+    'body': '\${ABM_QUERYPOS}$1'
   '${ABM_REMOVE}':
     'prefix': 'ABM_REMOVE'
-    'body': '\${ABM_REMOVE}'
+    'body': '\${ABM_REMOVE}$1'
   '${ABM_SETAUTOHIDEBAR}':
     'prefix': 'ABM_SETAUTOHIDEBAR'
-    'body': '\${ABM_SETAUTOHIDEBAR}'
+    'body': '\${ABM_SETAUTOHIDEBAR}$1'
   '${ABM_SETPOS}':
     'prefix': 'ABM_SETPOS'
-    'body': '\${ABM_SETPOS}'
+    'body': '\${ABM_SETPOS}$1'
   '${ABM_WINDOWPOSCHANGED}':
     'prefix': 'ABM_WINDOWPOSCHANGED'
-    'body': '\${ABM_WINDOWPOSCHANGED}'
+    'body': '\${ABM_WINDOWPOSCHANGED}$1'
   '${BCM_SETSHIELD}':
     'prefix': 'BCM_SETSHIELD'
-    'body': '\${BCM_SETSHIELD}'
+    'body': '\${BCM_SETSHIELD}$1'
   '${BM_CLICK}':
     'prefix': 'BM_CLICK'
-    'body': '\${BM_CLICK}'
+    'body': '\${BM_CLICK}$1'
   '${BM_GETCHECK}':
     'prefix': 'BM_GETCHECK'
-    'body': '\${BM_GETCHECK}'
+    'body': '\${BM_GETCHECK}$1'
   '${BM_GETIMAGE}':
     'prefix': 'BM_GETIMAGE'
-    'body': '\${BM_GETIMAGE}'
+    'body': '\${BM_GETIMAGE}$1'
   '${BM_GETSTATE}':
     'prefix': 'BM_GETSTATE'
-    'body': '\${BM_GETSTATE}'
+    'body': '\${BM_GETSTATE}$1'
   '${BM_SETCHECK}':
     'prefix': 'BM_SETCHECK'
-    'body': '\${BM_SETCHECK}'
+    'body': '\${BM_SETCHECK}$1'
   '${BM_SETIMAGE}':
     'prefix': 'BM_SETIMAGE'
-    'body': '\${BM_SETIMAGE}'
+    'body': '\${BM_SETIMAGE}$1'
   '${BM_SETSTATE}':
     'prefix': 'BM_SETSTATE'
-    'body': '\${BM_SETSTATE}'
+    'body': '\${BM_SETSTATE}$1'
   '${BM_SETSTYLE}':
     'prefix': 'BM_SETSTYLE'
-    'body': '\${BM_SETSTYLE}'
+    'body': '\${BM_SETSTYLE}$1'
   '${BST_CHECKED}':
     'prefix': 'BST_CHECKED'
-    'body': '\${BST_CHECKED}'
+    'body': '\${BST_CHECKED}$1'
   '${BST_FOCUS}':
     'prefix': 'BST_FOCUS'
-    'body': '\${BST_FOCUS}'
+    'body': '\${BST_FOCUS}$1'
   '${BST_INDETERMINATE}':
     'prefix': 'BST_INDETERMINATE'
-    'body': '\${BST_INDETERMINATE}'
+    'body': '\${BST_INDETERMINATE}$1'
   '${BST_PUSHED}':
     'prefix': 'BST_PUSHED'
-    'body': '\${BST_PUSHED}'
+    'body': '\${BST_PUSHED}$1'
   '${BST_UNCHECKED}':
     'prefix': 'BST_UNCHECKED'
-    'body': '\${BST_UNCHECKED}'
+    'body': '\${BST_UNCHECKED}$1'
   '${CB_ADDSTRING}':
     'prefix': 'CB_ADDSTRING'
-    'body': '\${CB_ADDSTRING}'
+    'body': '\${CB_ADDSTRING}$1'
   '${CB_DELETESTRING}':
     'prefix': 'CB_DELETESTRING'
-    'body': '\${CB_DELETESTRING}'
+    'body': '\${CB_DELETESTRING}$1'
   '${CB_DIR}':
     'prefix': 'CB_DIR'
-    'body': '\${CB_DIR}'
+    'body': '\${CB_DIR}$1'
   '${CB_ERR}':
     'prefix': 'CB_ERR'
-    'body': '\${CB_ERR}'
+    'body': '\${CB_ERR}$1'
   '${CB_FINDSTRING}':
     'prefix': 'CB_FINDSTRING'
-    'body': '\${CB_FINDSTRING}'
+    'body': '\${CB_FINDSTRING}$1'
   '${CB_FINDSTRINGEXACT}':
     'prefix': 'CB_FINDSTRINGEXACT'
-    'body': '\${CB_FINDSTRINGEXACT}'
+    'body': '\${CB_FINDSTRINGEXACT}$1'
   '${CB_GETCOUNT}':
     'prefix': 'CB_GETCOUNT'
-    'body': '\${CB_GETCOUNT}'
+    'body': '\${CB_GETCOUNT}$1'
   '${CB_GETCURSEL}':
     'prefix': 'CB_GETCURSEL'
-    'body': '\${CB_GETCURSEL}'
+    'body': '\${CB_GETCURSEL}$1'
   '${CB_GETDROPPEDCONTROLRECT}':
     'prefix': 'CB_GETDROPPEDCONTROLRECT'
-    'body': '\${CB_GETDROPPEDCONTROLRECT}'
+    'body': '\${CB_GETDROPPEDCONTROLRECT}$1'
   '${CB_GETDROPPEDSTATE}':
     'prefix': 'CB_GETDROPPEDSTATE'
-    'body': '\${CB_GETDROPPEDSTATE}'
+    'body': '\${CB_GETDROPPEDSTATE}$1'
   '${CB_GETDROPPEDWIDTH}':
     'prefix': 'CB_GETDROPPEDWIDTH'
-    'body': '\${CB_GETDROPPEDWIDTH}'
+    'body': '\${CB_GETDROPPEDWIDTH}$1'
   '${CB_GETEDITSEL}':
     'prefix': 'CB_GETEDITSEL'
-    'body': '\${CB_GETEDITSEL}'
+    'body': '\${CB_GETEDITSEL}$1'
   '${CB_GETEXTENDEDUI}':
     'prefix': 'CB_GETEXTENDEDUI'
-    'body': '\${CB_GETEXTENDEDUI}'
+    'body': '\${CB_GETEXTENDEDUI}$1'
   '${CB_GETHORIZONTALEXTENT}':
     'prefix': 'CB_GETHORIZONTALEXTENT'
-    'body': '\${CB_GETHORIZONTALEXTENT}'
+    'body': '\${CB_GETHORIZONTALEXTENT}$1'
   '${CB_GETITEMDATA}':
     'prefix': 'CB_GETITEMDATA'
-    'body': '\${CB_GETITEMDATA}'
+    'body': '\${CB_GETITEMDATA}$1'
   '${CB_GETITEMHEIGHT}':
     'prefix': 'CB_GETITEMHEIGHT'
-    'body': '\${CB_GETITEMHEIGHT}'
+    'body': '\${CB_GETITEMHEIGHT}$1'
   '${CB_GETLBTEXT}':
     'prefix': 'CB_GETLBTEXT'
-    'body': '\${CB_GETLBTEXT}'
+    'body': '\${CB_GETLBTEXT}$1'
   '${CB_GETLBTEXTLEN}':
     'prefix': 'CB_GETLBTEXTLEN'
-    'body': '\${CB_GETLBTEXTLEN}'
+    'body': '\${CB_GETLBTEXTLEN}$1'
   '${CB_GETLOCALE}':
     'prefix': 'CB_GETLOCALE'
-    'body': '\${CB_GETLOCALE}'
+    'body': '\${CB_GETLOCALE}$1'
   '${CB_GETTOPINDEX}':
     'prefix': 'CB_GETTOPINDEX'
-    'body': '\${CB_GETTOPINDEX}'
+    'body': '\${CB_GETTOPINDEX}$1'
   '${CB_INITSTORAGE}':
     'prefix': 'CB_INITSTORAGE'
-    'body': '\${CB_INITSTORAGE}'
+    'body': '\${CB_INITSTORAGE}$1'
   '${CB_INSERTSTRING}':
     'prefix': 'CB_INSERTSTRING'
-    'body': '\${CB_INSERTSTRING}'
+    'body': '\${CB_INSERTSTRING}$1'
   '${CB_LIMITTEXT}':
     'prefix': 'CB_LIMITTEXT'
-    'body': '\${CB_LIMITTEXT}'
+    'body': '\${CB_LIMITTEXT}$1'
   '${CB_MSGMAX}':
     'prefix': 'CB_MSGMAX'
-    'body': '\${CB_MSGMAX}'
+    'body': '\${CB_MSGMAX}$1'
   '${CB_MULTIPLEADDSTRING}':
     'prefix': 'CB_MULTIPLEADDSTRING'
-    'body': '\${CB_MULTIPLEADDSTRING}'
+    'body': '\${CB_MULTIPLEADDSTRING}$1'
   '${CB_RESETCONTENT}':
     'prefix': 'CB_RESETCONTENT'
-    'body': '\${CB_RESETCONTENT}'
+    'body': '\${CB_RESETCONTENT}$1'
   '${CB_SELECTSTRING}':
     'prefix': 'CB_SELECTSTRING'
-    'body': '\${CB_SELECTSTRING}'
+    'body': '\${CB_SELECTSTRING}$1'
   '${CB_SETCURSEL}':
     'prefix': 'CB_SETCURSEL'
-    'body': '\${CB_SETCURSEL}'
+    'body': '\${CB_SETCURSEL}$1'
   '${CB_SETDROPPEDWIDTH}':
     'prefix': 'CB_SETDROPPEDWIDTH'
-    'body': '\${CB_SETDROPPEDWIDTH}'
+    'body': '\${CB_SETDROPPEDWIDTH}$1'
   '${CB_SETEDITSEL}':
     'prefix': 'CB_SETEDITSEL'
-    'body': '\${CB_SETEDITSEL}'
+    'body': '\${CB_SETEDITSEL}$1'
   '${CB_SETEXTENDEDUI}':
     'prefix': 'CB_SETEXTENDEDUI'
-    'body': '\${CB_SETEXTENDEDUI}'
+    'body': '\${CB_SETEXTENDEDUI}$1'
   '${CB_SETHORIZONTALEXTENT}':
     'prefix': 'CB_SETHORIZONTALEXTENT'
-    'body': '\${CB_SETHORIZONTALEXTENT}'
+    'body': '\${CB_SETHORIZONTALEXTENT}$1'
   '${CB_SETITEMDATA}':
     'prefix': 'CB_SETITEMDATA'
-    'body': '\${CB_SETITEMDATA}'
+    'body': '\${CB_SETITEMDATA}$1'
   '${CB_SETITEMHEIGHT}':
     'prefix': 'CB_SETITEMHEIGHT'
-    'body': '\${CB_SETITEMHEIGHT}'
+    'body': '\${CB_SETITEMHEIGHT}$1'
   '${CB_SETLOCALE}':
     'prefix': 'CB_SETLOCALE'
-    'body': '\${CB_SETLOCALE}'
+    'body': '\${CB_SETLOCALE}$1'
   '${CB_SETTOPINDEX}':
     'prefix': 'CB_SETTOPINDEX'
-    'body': '\${CB_SETTOPINDEX}'
+    'body': '\${CB_SETTOPINDEX}$1'
   '${CB_SHOWDROPDOWN}':
     'prefix': 'CB_SHOWDROPDOWN'
-    'body': '\${CB_SHOWDROPDOWN}'
+    'body': '\${CB_SHOWDROPDOWN}$1'
   '${CCM_DPISCALE}':
     'prefix': 'CCM_DPISCALE'
-    'body': '\${CCM_DPISCALE}'
+    'body': '\${CCM_DPISCALE}$1'
   '${CCM_FIRST}':
     'prefix': 'CCM_FIRST'
-    'body': '\${CCM_FIRST}'
+    'body': '\${CCM_FIRST}$1'
   '${CCM_GETUNICODEFORMAT}':
     'prefix': 'CCM_GETUNICODEFORMAT'
-    'body': '\${CCM_GETUNICODEFORMAT}'
+    'body': '\${CCM_GETUNICODEFORMAT}$1'
   '${CCM_GETVERSION}':
     'prefix': 'CCM_GETVERSION'
-    'body': '\${CCM_GETVERSION}'
+    'body': '\${CCM_GETVERSION}$1'
   '${CCM_SETBKCOLOR}':
     'prefix': 'CCM_SETBKCOLOR'
-    'body': '\${CCM_SETBKCOLOR}'
+    'body': '\${CCM_SETBKCOLOR}$1'
   '${CCM_SETUNICODEFORMAT}':
     'prefix': 'CCM_SETUNICODEFORMAT'
-    'body': '\${CCM_SETUNICODEFORMAT}'
+    'body': '\${CCM_SETUNICODEFORMAT}$1'
   '${CCM_SETVERSION}':
     'prefix': 'CCM_SETVERSION'
-    'body': '\${CCM_SETVERSION}'
+    'body': '\${CCM_SETVERSION}$1'
   '${CCM_SETWINDOWTHEME}':
     'prefix': 'CCM_SETWINDOWTHEME'
-    'body': '\${CCM_SETWINDOWTHEME}'
+    'body': '\${CCM_SETWINDOWTHEME}$1'
   '${CCS_BOTTOM}':
     'prefix': 'CCS_BOTTOM'
-    'body': '\${CCS_BOTTOM}'
+    'body': '\${CCS_BOTTOM}$1'
   '${CCS_LEFT}':
     'prefix': 'CCS_LEFT'
-    'body': '\${CCS_LEFT}'
+    'body': '\${CCS_LEFT}$1'
   '${CCS_NODIVIDER}':
     'prefix': 'CCS_NODIVIDER'
-    'body': '\${CCS_NODIVIDER}'
+    'body': '\${CCS_NODIVIDER}$1'
   '${CCS_RIGHT}':
     'prefix': 'CCS_RIGHT'
-    'body': '\${CCS_RIGHT}'
+    'body': '\${CCS_RIGHT}$1'
   '${CCS_TOP}':
     'prefix': 'CCS_TOP'
-    'body': '\${CCS_TOP}'
+    'body': '\${CCS_TOP}$1'
   '${DBT_APPYBEGIN}':
     'prefix': 'DBT_APPYBEGIN'
-    'body': '\${DBT_APPYBEGIN}'
+    'body': '\${DBT_APPYBEGIN}$1'
   '${DBT_APPYEND}':
     'prefix': 'DBT_APPYEND'
-    'body': '\${DBT_APPYEND}'
+    'body': '\${DBT_APPYEND}$1'
   '${DBT_CONFIGCHANGECANCELED}':
     'prefix': 'DBT_CONFIGCHANGECANCELED'
-    'body': '\${DBT_CONFIGCHANGECANCELED}'
+    'body': '\${DBT_CONFIGCHANGECANCELED}$1'
   '${DBT_CONFIGCHANGED}':
     'prefix': 'DBT_CONFIGCHANGED'
-    'body': '\${DBT_CONFIGCHANGED}'
+    'body': '\${DBT_CONFIGCHANGED}$1'
   '${DBT_CONFIGMGAPI32}':
     'prefix': 'DBT_CONFIGMGAPI32'
-    'body': '\${DBT_CONFIGMGAPI32}'
+    'body': '\${DBT_CONFIGMGAPI32}$1'
   '${DBT_CONFIGMGPRIVATE}':
     'prefix': 'DBT_CONFIGMGPRIVATE'
-    'body': '\${DBT_CONFIGMGPRIVATE}'
+    'body': '\${DBT_CONFIGMGPRIVATE}$1'
   '${DBT_CUSTOMEVENT}':
     'prefix': 'DBT_CUSTOMEVENT'
-    'body': '\${DBT_CUSTOMEVENT}'
+    'body': '\${DBT_CUSTOMEVENT}$1'
   '${DBT_DEVICEARRIVAL}':
     'prefix': 'DBT_DEVICEARRIVAL'
-    'body': '\${DBT_DEVICEARRIVAL}'
+    'body': '\${DBT_DEVICEARRIVAL}$1'
   '${DBT_DEVICEQUERYREMOVE}':
     'prefix': 'DBT_DEVICEQUERYREMOVE'
-    'body': '\${DBT_DEVICEQUERYREMOVE}'
+    'body': '\${DBT_DEVICEQUERYREMOVE}$1'
   '${DBT_DEVICEQUERYREMOVEFAILED}':
     'prefix': 'DBT_DEVICEQUERYREMOVEFAILED'
-    'body': '\${DBT_DEVICEQUERYREMOVEFAILED}'
+    'body': '\${DBT_DEVICEQUERYREMOVEFAILED}$1'
   '${DBT_DEVICEREMOVECOMPLETE}':
     'prefix': 'DBT_DEVICEREMOVECOMPLETE'
-    'body': '\${DBT_DEVICEREMOVECOMPLETE}'
+    'body': '\${DBT_DEVICEREMOVECOMPLETE}$1'
   '${DBT_DEVICEREMOVEPENDING}':
     'prefix': 'DBT_DEVICEREMOVEPENDING'
-    'body': '\${DBT_DEVICEREMOVEPENDING}'
+    'body': '\${DBT_DEVICEREMOVEPENDING}$1'
   '${DBT_DEVICETYPESPECIFIC}':
     'prefix': 'DBT_DEVICETYPESPECIFIC'
-    'body': '\${DBT_DEVICETYPESPECIFIC}'
+    'body': '\${DBT_DEVICETYPESPECIFIC}$1'
   '${DBT_DEVNODES_CHANGED}':
     'prefix': 'DBT_DEVNODES_CHANGED'
-    'body': '\${DBT_DEVNODES_CHANGED}'
+    'body': '\${DBT_DEVNODES_CHANGED}$1'
   '${DBT_DEVTYP_DEVICEINTERFACE}':
     'prefix': 'DBT_DEVTYP_DEVICEINTERFACE'
-    'body': '\${DBT_DEVTYP_DEVICEINTERFACE}'
+    'body': '\${DBT_DEVTYP_DEVICEINTERFACE}$1'
   '${DBT_DEVTYP_DEVNODE}':
     'prefix': 'DBT_DEVTYP_DEVNODE'
-    'body': '\${DBT_DEVTYP_DEVNODE}'
+    'body': '\${DBT_DEVTYP_DEVNODE}$1'
   '${DBT_DEVTYP_HANDLE}':
     'prefix': 'DBT_DEVTYP_HANDLE'
-    'body': '\${DBT_DEVTYP_HANDLE}'
+    'body': '\${DBT_DEVTYP_HANDLE}$1'
   '${DBT_DEVTYP_NET}':
     'prefix': 'DBT_DEVTYP_NET'
-    'body': '\${DBT_DEVTYP_NET}'
+    'body': '\${DBT_DEVTYP_NET}$1'
   '${DBT_DEVTYP_OEM}':
     'prefix': 'DBT_DEVTYP_OEM'
-    'body': '\${DBT_DEVTYP_OEM}'
+    'body': '\${DBT_DEVTYP_OEM}$1'
   '${DBT_DEVTYP_PORT}':
     'prefix': 'DBT_DEVTYP_PORT'
-    'body': '\${DBT_DEVTYP_PORT}'
+    'body': '\${DBT_DEVTYP_PORT}$1'
   '${DBT_DEVTYP_VOLUME}':
     'prefix': 'DBT_DEVTYP_VOLUME'
-    'body': '\${DBT_DEVTYP_VOLUME}'
+    'body': '\${DBT_DEVTYP_VOLUME}$1'
   '${DBT_LOW_DISK_SPACE}':
     'prefix': 'DBT_LOW_DISK_SPACE'
-    'body': '\${DBT_LOW_DISK_SPACE}'
+    'body': '\${DBT_LOW_DISK_SPACE}$1'
   '${DBT_MONITORCHANGE}':
     'prefix': 'DBT_MONITORCHANGE'
-    'body': '\${DBT_MONITORCHANGE}'
+    'body': '\${DBT_MONITORCHANGE}$1'
   '${DBT_NO_DISK_SPACE}':
     'prefix': 'DBT_NO_DISK_SPACE'
-    'body': '\${DBT_NO_DISK_SPACE}'
+    'body': '\${DBT_NO_DISK_SPACE}$1'
   '${DBT_QUERYCHANGECONFIG}':
     'prefix': 'DBT_QUERYCHANGECONFIG'
-    'body': '\${DBT_QUERYCHANGECONFIG}'
+    'body': '\${DBT_QUERYCHANGECONFIG}$1'
   '${DBT_SHELLLOGGEDON}':
     'prefix': 'DBT_SHELLLOGGEDON'
-    'body': '\${DBT_SHELLLOGGEDON}'
+    'body': '\${DBT_SHELLLOGGEDON}$1'
   '${DBT_USERDEFINED}':
     'prefix': 'DBT_USERDEFINED'
-    'body': '\${DBT_USERDEFINED}'
+    'body': '\${DBT_USERDEFINED}$1'
   '${DBT_VOLLOCKLOCKFAILED}':
     'prefix': 'DBT_VOLLOCKLOCKFAILED'
-    'body': '\${DBT_VOLLOCKLOCKFAILED}'
+    'body': '\${DBT_VOLLOCKLOCKFAILED}$1'
   '${DBT_VOLLOCKLOCKRELEASED}':
     'prefix': 'DBT_VOLLOCKLOCKRELEASED'
-    'body': '\${DBT_VOLLOCKLOCKRELEASED}'
+    'body': '\${DBT_VOLLOCKLOCKRELEASED}$1'
   '${DBT_VOLLOCKLOCKTAKEN}':
     'prefix': 'DBT_VOLLOCKLOCKTAKEN'
-    'body': '\${DBT_VOLLOCKLOCKTAKEN}'
+    'body': '\${DBT_VOLLOCKLOCKTAKEN}$1'
   '${DBT_VOLLOCKQUERYLOCK}':
     'prefix': 'DBT_VOLLOCKQUERYLOCK'
-    'body': '\${DBT_VOLLOCKQUERYLOCK}'
+    'body': '\${DBT_VOLLOCKQUERYLOCK}$1'
   '${DBT_VOLLOCKQUERYUNLOCK}':
     'prefix': 'DBT_VOLLOCKQUERYUNLOCK'
-    'body': '\${DBT_VOLLOCKQUERYUNLOCK}'
+    'body': '\${DBT_VOLLOCKQUERYUNLOCK}$1'
   '${DBT_VOLLOCKUNLOCKFAILED}':
     'prefix': 'DBT_VOLLOCKUNLOCKFAILED'
-    'body': '\${DBT_VOLLOCKUNLOCKFAILED}'
+    'body': '\${DBT_VOLLOCKUNLOCKFAILED}$1'
   '${DBT_VPOWERDAPI}':
     'prefix': 'DBT_VPOWERDAPI'
-    'body': '\${DBT_VPOWERDAPI}'
+    'body': '\${DBT_VPOWERDAPI}$1'
   '${DBT_VXDINITCOMPLETE}':
     'prefix': 'DBT_VXDINITCOMPLETE'
-    'body': '\${DBT_VXDINITCOMPLETE}'
+    'body': '\${DBT_VXDINITCOMPLETE}$1'
   '${DM_BITSPERPEL}':
     'prefix': 'DM_BITSPERPEL'
-    'body': '\${DM_BITSPERPEL}'
+    'body': '\${DM_BITSPERPEL}$1'
   '${DM_COLLATE}':
     'prefix': 'DM_COLLATE'
-    'body': '\${DM_COLLATE}'
+    'body': '\${DM_COLLATE}$1'
   '${DM_COLOR}':
     'prefix': 'DM_COLOR'
-    'body': '\${DM_COLOR}'
+    'body': '\${DM_COLOR}$1'
   '${DM_COPIES}':
     'prefix': 'DM_COPIES'
-    'body': '\${DM_COPIES}'
+    'body': '\${DM_COPIES}$1'
   '${DM_DEFAULTSOURCE}':
     'prefix': 'DM_DEFAULTSOURCE'
-    'body': '\${DM_DEFAULTSOURCE}'
+    'body': '\${DM_DEFAULTSOURCE}$1'
   '${DM_DISPLAYFLAGS}':
     'prefix': 'DM_DISPLAYFLAGS'
-    'body': '\${DM_DISPLAYFLAGS}'
+    'body': '\${DM_DISPLAYFLAGS}$1'
   '${DM_DISPLAYFREQUENCY}':
     'prefix': 'DM_DISPLAYFREQUENCY'
-    'body': '\${DM_DISPLAYFREQUENCY}'
+    'body': '\${DM_DISPLAYFREQUENCY}$1'
   '${DM_DITHERTYPE}':
     'prefix': 'DM_DITHERTYPE'
-    'body': '\${DM_DITHERTYPE}'
+    'body': '\${DM_DITHERTYPE}$1'
   '${DM_DUPLEX}':
     'prefix': 'DM_DUPLEX'
-    'body': '\${DM_DUPLEX}'
+    'body': '\${DM_DUPLEX}$1'
   '${DM_FORMNAME}':
     'prefix': 'DM_FORMNAME'
-    'body': '\${DM_FORMNAME}'
+    'body': '\${DM_FORMNAME}$1'
   '${DM_GRAYSCALE}':
     'prefix': 'DM_GRAYSCALE'
-    'body': '\${DM_GRAYSCALE}'
+    'body': '\${DM_GRAYSCALE}$1'
   '${DM_ICMINTENT}':
     'prefix': 'DM_ICMINTENT'
-    'body': '\${DM_ICMINTENT}'
+    'body': '\${DM_ICMINTENT}$1'
   '${DM_ICMMETHOD}':
     'prefix': 'DM_ICMMETHOD'
-    'body': '\${DM_ICMMETHOD}'
+    'body': '\${DM_ICMMETHOD}$1'
   '${DM_INTERLACED}':
     'prefix': 'DM_INTERLACED'
-    'body': '\${DM_INTERLACED}'
+    'body': '\${DM_INTERLACED}$1'
   '${DM_LOGPIXELS}':
     'prefix': 'DM_LOGPIXELS'
-    'body': '\${DM_LOGPIXELS}'
+    'body': '\${DM_LOGPIXELS}$1'
   '${DM_MEDIATYPE}':
     'prefix': 'DM_MEDIATYPE'
-    'body': '\${DM_MEDIATYPE}'
+    'body': '\${DM_MEDIATYPE}$1'
   '${DM_NUP}':
     'prefix': 'DM_NUP'
-    'body': '\${DM_NUP}'
+    'body': '\${DM_NUP}$1'
   '${DM_ORIENTATION}':
     'prefix': 'DM_ORIENTATION'
-    'body': '\${DM_ORIENTATION}'
+    'body': '\${DM_ORIENTATION}$1'
   '${DM_PANNINGHEIGHT}':
     'prefix': 'DM_PANNINGHEIGHT'
-    'body': '\${DM_PANNINGHEIGHT}'
+    'body': '\${DM_PANNINGHEIGHT}$1'
   '${DM_PANNINGWIDTH}':
     'prefix': 'DM_PANNINGWIDTH'
-    'body': '\${DM_PANNINGWIDTH}'
+    'body': '\${DM_PANNINGWIDTH}$1'
   '${DM_PAPERLENGTH}':
     'prefix': 'DM_PAPERLENGTH'
-    'body': '\${DM_PAPERLENGTH}'
+    'body': '\${DM_PAPERLENGTH}$1'
   '${DM_PAPERSIZE}':
     'prefix': 'DM_PAPERSIZE'
-    'body': '\${DM_PAPERSIZE}'
+    'body': '\${DM_PAPERSIZE}$1'
   '${DM_PAPERWIDTH}':
     'prefix': 'DM_PAPERWIDTH'
-    'body': '\${DM_PAPERWIDTH}'
+    'body': '\${DM_PAPERWIDTH}$1'
   '${DM_PELSHEIGHT}':
     'prefix': 'DM_PELSHEIGHT'
-    'body': '\${DM_PELSHEIGHT}'
+    'body': '\${DM_PELSHEIGHT}$1'
   '${DM_PELSWIDTH}':
     'prefix': 'DM_PELSWIDTH'
-    'body': '\${DM_PELSWIDTH}'
+    'body': '\${DM_PELSWIDTH}$1'
   '${DM_POSITION}':
     'prefix': 'DM_POSITION'
-    'body': '\${DM_POSITION}'
+    'body': '\${DM_POSITION}$1'
   '${DM_PRINTQUALITY}':
     'prefix': 'DM_PRINTQUALITY'
-    'body': '\${DM_PRINTQUALITY}'
+    'body': '\${DM_PRINTQUALITY}$1'
   '${DM_SCALE}':
     'prefix': 'DM_SCALE'
-    'body': '\${DM_SCALE}'
+    'body': '\${DM_SCALE}$1'
   '${DM_SPECVERSION}':
     'prefix': 'DM_SPECVERSION'
-    'body': '\${DM_SPECVERSION}'
+    'body': '\${DM_SPECVERSION}$1'
   '${DM_TTOPTION}':
     'prefix': 'DM_TTOPTION'
-    'body': '\${DM_TTOPTION}'
+    'body': '\${DM_TTOPTION}$1'
   '${DM_YRESOLUTION}':
     'prefix': 'DM_YRESOLUTION'
-    'body': '\${DM_YRESOLUTION}'
+    'body': '\${DM_YRESOLUTION}$1'
   '${EM_CANUNDO}':
     'prefix': 'EM_CANUNDO'
-    'body': '\${EM_CANUNDO}'
+    'body': '\${EM_CANUNDO}$1'
   '${EM_CHARFROMPOS}':
     'prefix': 'EM_CHARFROMPOS'
-    'body': '\${EM_CHARFROMPOS}'
+    'body': '\${EM_CHARFROMPOS}$1'
   '${EM_EMPTYUNDOBUFFER}':
     'prefix': 'EM_EMPTYUNDOBUFFER'
-    'body': '\${EM_EMPTYUNDOBUFFER}'
+    'body': '\${EM_EMPTYUNDOBUFFER}$1'
   '${EM_EXLIMITTEXT}':
     'prefix': 'EM_EXLIMITTEXT'
-    'body': '\${EM_EXLIMITTEXT}'
+    'body': '\${EM_EXLIMITTEXT}$1'
   '${EM_FMTLINES}':
     'prefix': 'EM_FMTLINES'
-    'body': '\${EM_FMTLINES}'
+    'body': '\${EM_FMTLINES}$1'
   '${EM_GETFIRSTVISIBLELINE}':
     'prefix': 'EM_GETFIRSTVISIBLELINE'
-    'body': '\${EM_GETFIRSTVISIBLELINE}'
+    'body': '\${EM_GETFIRSTVISIBLELINE}$1'
   '${EM_GETHANDLE}':
     'prefix': 'EM_GETHANDLE'
-    'body': '\${EM_GETHANDLE}'
+    'body': '\${EM_GETHANDLE}$1'
   '${EM_GETIMESTATUS}':
     'prefix': 'EM_GETIMESTATUS'
-    'body': '\${EM_GETIMESTATUS}'
+    'body': '\${EM_GETIMESTATUS}$1'
   '${EM_GETLIMITTEXT}':
     'prefix': 'EM_GETLIMITTEXT'
-    'body': '\${EM_GETLIMITTEXT}'
+    'body': '\${EM_GETLIMITTEXT}$1'
   '${EM_GETLINE}':
     'prefix': 'EM_GETLINE'
-    'body': '\${EM_GETLINE}'
+    'body': '\${EM_GETLINE}$1'
   '${EM_GETLINECOUNT}':
     'prefix': 'EM_GETLINECOUNT'
-    'body': '\${EM_GETLINECOUNT}'
+    'body': '\${EM_GETLINECOUNT}$1'
   '${EM_GETMARGINS}':
     'prefix': 'EM_GETMARGINS'
-    'body': '\${EM_GETMARGINS}'
+    'body': '\${EM_GETMARGINS}$1'
   '${EM_GETMODIFY}':
     'prefix': 'EM_GETMODIFY'
-    'body': '\${EM_GETMODIFY}'
+    'body': '\${EM_GETMODIFY}$1'
   '${EM_GETPASSWORDCHAR}':
     'prefix': 'EM_GETPASSWORDCHAR'
-    'body': '\${EM_GETPASSWORDCHAR}'
+    'body': '\${EM_GETPASSWORDCHAR}$1'
   '${EM_GETRECT}':
     'prefix': 'EM_GETRECT'
-    'body': '\${EM_GETRECT}'
+    'body': '\${EM_GETRECT}$1'
   '${EM_GETSEL}':
     'prefix': 'EM_GETSEL'
-    'body': '\${EM_GETSEL}'
+    'body': '\${EM_GETSEL}$1'
   '${EM_GETTHUMB}':
     'prefix': 'EM_GETTHUMB'
-    'body': '\${EM_GETTHUMB}'
+    'body': '\${EM_GETTHUMB}$1'
   '${EM_GETWORDBREAKPROC}':
     'prefix': 'EM_GETWORDBREAKPROC'
-    'body': '\${EM_GETWORDBREAKPROC}'
+    'body': '\${EM_GETWORDBREAKPROC}$1'
   '${EM_LIMITTEXT}':
     'prefix': 'EM_LIMITTEXT'
-    'body': '\${EM_LIMITTEXT}'
+    'body': '\${EM_LIMITTEXT}$1'
   '${EM_LINEFROMCHAR}':
     'prefix': 'EM_LINEFROMCHAR'
-    'body': '\${EM_LINEFROMCHAR}'
+    'body': '\${EM_LINEFROMCHAR}$1'
   '${EM_LINEINDEX}':
     'prefix': 'EM_LINEINDEX'
-    'body': '\${EM_LINEINDEX}'
+    'body': '\${EM_LINEINDEX}$1'
   '${EM_LINELENGTH}':
     'prefix': 'EM_LINELENGTH'
-    'body': '\${EM_LINELENGTH}'
+    'body': '\${EM_LINELENGTH}$1'
   '${EM_LINESCROLL}':
     'prefix': 'EM_LINESCROLL'
-    'body': '\${EM_LINESCROLL}'
+    'body': '\${EM_LINESCROLL}$1'
   '${EM_POSFROMCHAR}':
     'prefix': 'EM_POSFROMCHAR'
-    'body': '\${EM_POSFROMCHAR}'
+    'body': '\${EM_POSFROMCHAR}$1'
   '${EM_REPLACESEL}':
     'prefix': 'EM_REPLACESEL'
-    'body': '\${EM_REPLACESEL}'
+    'body': '\${EM_REPLACESEL}$1'
   '${EM_SCROLL}':
     'prefix': 'EM_SCROLL'
-    'body': '\${EM_SCROLL}'
+    'body': '\${EM_SCROLL}$1'
   '${EM_SCROLLCARET}':
     'prefix': 'EM_SCROLLCARET'
-    'body': '\${EM_SCROLLCARET}'
+    'body': '\${EM_SCROLLCARET}$1'
   '${EM_SETHANDLE}':
     'prefix': 'EM_SETHANDLE'
-    'body': '\${EM_SETHANDLE}'
+    'body': '\${EM_SETHANDLE}$1'
   '${EM_SETIMESTATUS}':
     'prefix': 'EM_SETIMESTATUS'
-    'body': '\${EM_SETIMESTATUS}'
+    'body': '\${EM_SETIMESTATUS}$1'
   '${EM_SETLIMITTEXT}':
     'prefix': 'EM_SETLIMITTEXT'
-    'body': '\${EM_SETLIMITTEXT}'
+    'body': '\${EM_SETLIMITTEXT}$1'
   '${EM_SETMARGINS}':
     'prefix': 'EM_SETMARGINS'
-    'body': '\${EM_SETMARGINS}'
+    'body': '\${EM_SETMARGINS}$1'
   '${EM_SETMODIFY}':
     'prefix': 'EM_SETMODIFY'
-    'body': '\${EM_SETMODIFY}'
+    'body': '\${EM_SETMODIFY}$1'
   '${EM_SETPASSWORDCHAR}':
     'prefix': 'EM_SETPASSWORDCHAR'
-    'body': '\${EM_SETPASSWORDCHAR}'
+    'body': '\${EM_SETPASSWORDCHAR}$1'
   '${EM_SETREADONLY}':
     'prefix': 'EM_SETREADONLY'
-    'body': '\${EM_SETREADONLY}'
+    'body': '\${EM_SETREADONLY}$1'
   '${EM_SETRECT}':
     'prefix': 'EM_SETRECT'
-    'body': '\${EM_SETRECT}'
+    'body': '\${EM_SETRECT}$1'
   '${EM_SETRECTNP}':
     'prefix': 'EM_SETRECTNP'
-    'body': '\${EM_SETRECTNP}'
+    'body': '\${EM_SETRECTNP}$1'
   '${EM_SETSEL}':
     'prefix': 'EM_SETSEL'
-    'body': '\${EM_SETSEL}'
+    'body': '\${EM_SETSEL}$1'
   '${EM_SETTABSTOPS}':
     'prefix': 'EM_SETTABSTOPS'
-    'body': '\${EM_SETTABSTOPS}'
+    'body': '\${EM_SETTABSTOPS}$1'
   '${EM_SETWORDBREAKPROC}':
     'prefix': 'EM_SETWORDBREAKPROC'
-    'body': '\${EM_SETWORDBREAKPROC}'
+    'body': '\${EM_SETWORDBREAKPROC}$1'
   '${EM_UNDO}':
     'prefix': 'EM_UNDO'
-    'body': '\${EM_UNDO}'
+    'body': '\${EM_UNDO}$1'
   '${HDM_FIRST}':
     'prefix': 'HDM_FIRST'
-    'body': '\${HDM_FIRST}'
+    'body': '\${HDM_FIRST}$1'
   '${HWND_BROADCAST}':
     'prefix': 'HWND_BROADCAST'
-    'body': '\${HWND_BROADCAST}'
+    'body': '\${HWND_BROADCAST}$1'
   '${I_IMAGENONE}':
     'prefix': 'I_IMAGENONE'
-    'body': '\${I_IMAGENONE}'
+    'body': '\${I_IMAGENONE}$1'
   '${LB_ADDFILE}':
     'prefix': 'LB_ADDFILE'
-    'body': '\${LB_ADDFILE}'
+    'body': '\${LB_ADDFILE}$1'
   '${LB_ADDSTRING}':
     'prefix': 'LB_ADDSTRING'
-    'body': '\${LB_ADDSTRING}'
+    'body': '\${LB_ADDSTRING}$1'
   '${LB_DELETESTRING}':
     'prefix': 'LB_DELETESTRING'
-    'body': '\${LB_DELETESTRING}'
+    'body': '\${LB_DELETESTRING}$1'
   '${LB_DIR}':
     'prefix': 'LB_DIR'
-    'body': '\${LB_DIR}'
+    'body': '\${LB_DIR}$1'
   '${LB_ERR}':
     'prefix': 'LB_ERR'
-    'body': '\${LB_ERR}'
+    'body': '\${LB_ERR}$1'
   '${LB_FINDSTRING}':
     'prefix': 'LB_FINDSTRING'
-    'body': '\${LB_FINDSTRING}'
+    'body': '\${LB_FINDSTRING}$1'
   '${LB_FINDSTRINGEXACT}':
     'prefix': 'LB_FINDSTRINGEXACT'
-    'body': '\${LB_FINDSTRINGEXACT}'
+    'body': '\${LB_FINDSTRINGEXACT}$1'
   '${LB_GETANCHORINDEX}':
     'prefix': 'LB_GETANCHORINDEX'
-    'body': '\${LB_GETANCHORINDEX}'
+    'body': '\${LB_GETANCHORINDEX}$1'
   '${LB_GETCARETINDEX}':
     'prefix': 'LB_GETCARETINDEX'
-    'body': '\${LB_GETCARETINDEX}'
+    'body': '\${LB_GETCARETINDEX}$1'
   '${LB_GETCOUNT}':
     'prefix': 'LB_GETCOUNT'
-    'body': '\${LB_GETCOUNT}'
+    'body': '\${LB_GETCOUNT}$1'
   '${LB_GETCURSEL}':
     'prefix': 'LB_GETCURSEL'
-    'body': '\${LB_GETCURSEL}'
+    'body': '\${LB_GETCURSEL}$1'
   '${LB_GETHORIZONTALEXTENT}':
     'prefix': 'LB_GETHORIZONTALEXTENT'
-    'body': '\${LB_GETHORIZONTALEXTENT}'
+    'body': '\${LB_GETHORIZONTALEXTENT}$1'
   '${LB_GETITEMDATA}':
     'prefix': 'LB_GETITEMDATA'
-    'body': '\${LB_GETITEMDATA}'
+    'body': '\${LB_GETITEMDATA}$1'
   '${LB_GETITEMHEIGHT}':
     'prefix': 'LB_GETITEMHEIGHT'
-    'body': '\${LB_GETITEMHEIGHT}'
+    'body': '\${LB_GETITEMHEIGHT}$1'
   '${LB_GETITEMRECT}':
     'prefix': 'LB_GETITEMRECT'
-    'body': '\${LB_GETITEMRECT}'
+    'body': '\${LB_GETITEMRECT}$1'
   '${LB_GETLOCALE}':
     'prefix': 'LB_GETLOCALE'
-    'body': '\${LB_GETLOCALE}'
+    'body': '\${LB_GETLOCALE}$1'
   '${LB_GETSEL}':
     'prefix': 'LB_GETSEL'
-    'body': '\${LB_GETSEL}'
+    'body': '\${LB_GETSEL}$1'
   '${LB_GETSELCOUNT}':
     'prefix': 'LB_GETSELCOUNT'
-    'body': '\${LB_GETSELCOUNT}'
+    'body': '\${LB_GETSELCOUNT}$1'
   '${LB_GETSELITEMS}':
     'prefix': 'LB_GETSELITEMS'
-    'body': '\${LB_GETSELITEMS}'
+    'body': '\${LB_GETSELITEMS}$1'
   '${LB_GETTEXT}':
     'prefix': 'LB_GETTEXT'
-    'body': '\${LB_GETTEXT}'
+    'body': '\${LB_GETTEXT}$1'
   '${LB_GETTEXTLEN}':
     'prefix': 'LB_GETTEXTLEN'
-    'body': '\${LB_GETTEXTLEN}'
+    'body': '\${LB_GETTEXTLEN}$1'
   '${LB_GETTOPINDEX}':
     'prefix': 'LB_GETTOPINDEX'
-    'body': '\${LB_GETTOPINDEX}'
+    'body': '\${LB_GETTOPINDEX}$1'
   '${LB_INITSTORAGE}':
     'prefix': 'LB_INITSTORAGE'
-    'body': '\${LB_INITSTORAGE}'
+    'body': '\${LB_INITSTORAGE}$1'
   '${LB_INSERTSTRING}':
     'prefix': 'LB_INSERTSTRING'
-    'body': '\${LB_INSERTSTRING}'
+    'body': '\${LB_INSERTSTRING}$1'
   '${LB_ITEMFROMPOINT}':
     'prefix': 'LB_ITEMFROMPOINT'
-    'body': '\${LB_ITEMFROMPOINT}'
+    'body': '\${LB_ITEMFROMPOINT}$1'
   '${LB_MSGMAX}':
     'prefix': 'LB_MSGMAX'
-    'body': '\${LB_MSGMAX}'
+    'body': '\${LB_MSGMAX}$1'
   '${LB_MULTIPLEADDSTRING}':
     'prefix': 'LB_MULTIPLEADDSTRING'
-    'body': '\${LB_MULTIPLEADDSTRING}'
+    'body': '\${LB_MULTIPLEADDSTRING}$1'
   '${LB_RESETCONTENT}':
     'prefix': 'LB_RESETCONTENT'
-    'body': '\${LB_RESETCONTENT}'
+    'body': '\${LB_RESETCONTENT}$1'
   '${LB_SELECTSTRING}':
     'prefix': 'LB_SELECTSTRING'
-    'body': '\${LB_SELECTSTRING}'
+    'body': '\${LB_SELECTSTRING}$1'
   '${LB_SELITEMRANGE}':
     'prefix': 'LB_SELITEMRANGE'
-    'body': '\${LB_SELITEMRANGE}'
+    'body': '\${LB_SELITEMRANGE}$1'
   '${LB_SELITEMRANGEEX}':
     'prefix': 'LB_SELITEMRANGEEX'
-    'body': '\${LB_SELITEMRANGEEX}'
+    'body': '\${LB_SELITEMRANGEEX}$1'
   '${LB_SETANCHORINDEX}':
     'prefix': 'LB_SETANCHORINDEX'
-    'body': '\${LB_SETANCHORINDEX}'
+    'body': '\${LB_SETANCHORINDEX}$1'
   '${LB_SETCARETINDEX}':
     'prefix': 'LB_SETCARETINDEX'
-    'body': '\${LB_SETCARETINDEX}'
+    'body': '\${LB_SETCARETINDEX}$1'
   '${LB_SETCOLUMNWIDTH}':
     'prefix': 'LB_SETCOLUMNWIDTH'
-    'body': '\${LB_SETCOLUMNWIDTH}'
+    'body': '\${LB_SETCOLUMNWIDTH}$1'
   '${LB_SETCOUNT}':
     'prefix': 'LB_SETCOUNT'
-    'body': '\${LB_SETCOUNT}'
+    'body': '\${LB_SETCOUNT}$1'
   '${LB_SETCURSEL}':
     'prefix': 'LB_SETCURSEL'
-    'body': '\${LB_SETCURSEL}'
+    'body': '\${LB_SETCURSEL}$1'
   '${LB_SETHORIZONTALEXTENT}':
     'prefix': 'LB_SETHORIZONTALEXTENT'
-    'body': '\${LB_SETHORIZONTALEXTENT}'
+    'body': '\${LB_SETHORIZONTALEXTENT}$1'
   '${LB_SETITEMDATA}':
     'prefix': 'LB_SETITEMDATA'
-    'body': '\${LB_SETITEMDATA}'
+    'body': '\${LB_SETITEMDATA}$1'
   '${LB_SETITEMHEIGHT}':
     'prefix': 'LB_SETITEMHEIGHT'
-    'body': '\${LB_SETITEMHEIGHT}'
+    'body': '\${LB_SETITEMHEIGHT}$1'
   '${LB_SETLOCALE}':
     'prefix': 'LB_SETLOCALE'
-    'body': '\${LB_SETLOCALE}'
+    'body': '\${LB_SETLOCALE}$1'
   '${LB_SETSEL}':
     'prefix': 'LB_SETSEL'
-    'body': '\${LB_SETSEL}'
+    'body': '\${LB_SETSEL}$1'
   '${LB_SETTABSTOPS}':
     'prefix': 'LB_SETTABSTOPS'
-    'body': '\${LB_SETTABSTOPS}'
+    'body': '\${LB_SETTABSTOPS}$1'
   '${LB_SETTOPINDEX}':
     'prefix': 'LB_SETTOPINDEX'
-    'body': '\${LB_SETTOPINDEX}'
+    'body': '\${LB_SETTOPINDEX}$1'
   '${LVCF_FMT}':
     'prefix': 'LVCF_FMT'
-    'body': '\${LVCF_FMT}'
+    'body': '\${LVCF_FMT}$1'
   '${LVCF_SUBITEM}':
     'prefix': 'LVCF_SUBITEM'
-    'body': '\${LVCF_SUBITEM}'
+    'body': '\${LVCF_SUBITEM}$1'
   '${LVCF_TEXT}':
     'prefix': 'LVCF_TEXT'
-    'body': '\${LVCF_TEXT}'
+    'body': '\${LVCF_TEXT}$1'
   '${LVCF_WIDTH}':
     'prefix': 'LVCF_WIDTH'
-    'body': '\${LVCF_WIDTH}'
+    'body': '\${LVCF_WIDTH}$1'
   '${LVIF_IMAGE}':
     'prefix': 'LVIF_IMAGE'
-    'body': '\${LVIF_IMAGE}'
+    'body': '\${LVIF_IMAGE}$1'
   '${LVIF_PARAM}':
     'prefix': 'LVIF_PARAM'
-    'body': '\${LVIF_PARAM}'
+    'body': '\${LVIF_PARAM}$1'
   '${LVIF_STATE}':
     'prefix': 'LVIF_STATE'
-    'body': '\${LVIF_STATE}'
+    'body': '\${LVIF_STATE}$1'
   '${LVIF_TEXT}':
     'prefix': 'LVIF_TEXT'
-    'body': '\${LVIF_TEXT}'
+    'body': '\${LVIF_TEXT}$1'
   '${LVIS_STATEIMAGEMASK}':
     'prefix': 'LVIS_STATEIMAGEMASK'
-    'body': '\${LVIS_STATEIMAGEMASK}'
+    'body': '\${LVIS_STATEIMAGEMASK}$1'
   '${LVM_DELETEALLITEMS}':
     'prefix': 'LVM_DELETEALLITEMS'
-    'body': '\${LVM_DELETEALLITEMS}'
+    'body': '\${LVM_DELETEALLITEMS}$1'
   '${LVM_DELETEITEM}':
     'prefix': 'LVM_DELETEITEM'
-    'body': '\${LVM_DELETEITEM}'
+    'body': '\${LVM_DELETEITEM}$1'
   '${LVM_FIRST}':
     'prefix': 'LVM_FIRST'
-    'body': '\${LVM_FIRST}'
+    'body': '\${LVM_FIRST}$1'
   '${LVM_GETEXTENDEDLISTVIEWSTYLE}':
     'prefix': 'LVM_GETEXTENDEDLISTVIEWSTYLE'
-    'body': '\${LVM_GETEXTENDEDLISTVIEWSTYLE}'
+    'body': '\${LVM_GETEXTENDEDLISTVIEWSTYLE}$1'
   '${LVM_GETIMAGELIST}':
     'prefix': 'LVM_GETIMAGELIST'
-    'body': '\${LVM_GETIMAGELIST}'
+    'body': '\${LVM_GETIMAGELIST}$1'
   '${LVM_GETITEM}':
     'prefix': 'LVM_GETITEM'
-    'body': '\${LVM_GETITEM}'
+    'body': '\${LVM_GETITEM}$1'
   '${LVM_GETITEMA}':
     'prefix': 'LVM_GETITEMA'
-    'body': '\${LVM_GETITEMA}'
+    'body': '\${LVM_GETITEMA}$1'
   '${LVM_GETITEMCOUNT}':
     'prefix': 'LVM_GETITEMCOUNT'
-    'body': '\${LVM_GETITEMCOUNT}'
+    'body': '\${LVM_GETITEMCOUNT}$1'
   '${LVM_GETITEMSTATE}':
     'prefix': 'LVM_GETITEMSTATE'
-    'body': '\${LVM_GETITEMSTATE}'
+    'body': '\${LVM_GETITEMSTATE}$1'
   '${LVM_GETITEMW}':
     'prefix': 'LVM_GETITEMW'
-    'body': '\${LVM_GETITEMW}'
+    'body': '\${LVM_GETITEMW}$1'
   '${LVM_INSERTCOLUMN}':
     'prefix': 'LVM_INSERTCOLUMN'
-    'body': '\${LVM_INSERTCOLUMN}'
+    'body': '\${LVM_INSERTCOLUMN}$1'
   '${LVM_INSERTCOLUMNA}':
     'prefix': 'LVM_INSERTCOLUMNA'
-    'body': '\${LVM_INSERTCOLUMNA}'
+    'body': '\${LVM_INSERTCOLUMNA}$1'
   '${LVM_INSERTCOLUMNW}':
     'prefix': 'LVM_INSERTCOLUMNW'
-    'body': '\${LVM_INSERTCOLUMNW}'
+    'body': '\${LVM_INSERTCOLUMNW}$1'
   '${LVM_INSERTITEM}':
     'prefix': 'LVM_INSERTITEM'
-    'body': '\${LVM_INSERTITEM}'
+    'body': '\${LVM_INSERTITEM}$1'
   '${LVM_INSERTITEMA}':
     'prefix': 'LVM_INSERTITEMA'
-    'body': '\${LVM_INSERTITEMA}'
+    'body': '\${LVM_INSERTITEMA}$1'
   '${LVM_INSERTITEMW}':
     'prefix': 'LVM_INSERTITEMW'
-    'body': '\${LVM_INSERTITEMW}'
+    'body': '\${LVM_INSERTITEMW}$1'
   '${LVM_SETCOLUMNWIDTH}':
     'prefix': 'LVM_SETCOLUMNWIDTH'
-    'body': '\${LVM_SETCOLUMNWIDTH}'
+    'body': '\${LVM_SETCOLUMNWIDTH}$1'
   '${LVM_SETEXTENDEDLISTVIEWSTYLE}':
     'prefix': 'LVM_SETEXTENDEDLISTVIEWSTYLE'
-    'body': '\${LVM_SETEXTENDEDLISTVIEWSTYLE}'
+    'body': '\${LVM_SETEXTENDEDLISTVIEWSTYLE}$1'
   '${LVM_SETIMAGELIST}':
     'prefix': 'LVM_SETIMAGELIST'
-    'body': '\${LVM_SETIMAGELIST}'
+    'body': '\${LVM_SETIMAGELIST}$1'
   '${LVM_SETITEM}':
     'prefix': 'LVM_SETITEM'
-    'body': '\${LVM_SETITEM}'
+    'body': '\${LVM_SETITEM}$1'
   '${LVM_SETITEMA}':
     'prefix': 'LVM_SETITEMA'
-    'body': '\${LVM_SETITEMA}'
+    'body': '\${LVM_SETITEMA}$1'
   '${LVM_SETITEMCOUNT}':
     'prefix': 'LVM_SETITEMCOUNT'
-    'body': '\${LVM_SETITEMCOUNT}'
+    'body': '\${LVM_SETITEMCOUNT}$1'
   '${LVM_SETITEMSTATE}':
     'prefix': 'LVM_SETITEMSTATE'
-    'body': '\${LVM_SETITEMSTATE}'
+    'body': '\${LVM_SETITEMSTATE}$1'
   '${LVM_SETITEMTEXT}':
     'prefix': 'LVM_SETITEMTEXT'
-    'body': '\${LVM_SETITEMTEXT}'
+    'body': '\${LVM_SETITEMTEXT}$1'
   '${LVM_SETITEMTEXTA}':
     'prefix': 'LVM_SETITEMTEXTA'
-    'body': '\${LVM_SETITEMTEXTA}'
+    'body': '\${LVM_SETITEMTEXTA}$1'
   '${LVM_SETITEMTEXTW}':
     'prefix': 'LVM_SETITEMTEXTW'
-    'body': '\${LVM_SETITEMTEXTW}'
+    'body': '\${LVM_SETITEMTEXTW}$1'
   '${LVM_SETITEMW}':
     'prefix': 'LVM_SETITEMW'
-    'body': '\${LVM_SETITEMW}'
+    'body': '\${LVM_SETITEMW}$1'
   '${LVM_SETSELECTEDCOLUMN}':
     'prefix': 'LVM_SETSELECTEDCOLUMN'
-    'body': '\${LVM_SETSELECTEDCOLUMN}'
+    'body': '\${LVM_SETSELECTEDCOLUMN}$1'
   '${LVM_SORTITEMS}':
     'prefix': 'LVM_SORTITEMS'
-    'body': '\${LVM_SORTITEMS}'
+    'body': '\${LVM_SORTITEMS}$1'
   '${LVS_EDITLABELS}':
     'prefix': 'LVS_EDITLABELS'
-    'body': '\${LVS_EDITLABELS}'
+    'body': '\${LVS_EDITLABELS}$1'
   '${LVS_EX_CHECKBOXES}':
     'prefix': 'LVS_EX_CHECKBOXES'
-    'body': '\${LVS_EX_CHECKBOXES}'
+    'body': '\${LVS_EX_CHECKBOXES}$1'
   '${LVS_EX_DOUBLEBUFFER}':
     'prefix': 'LVS_EX_DOUBLEBUFFER'
-    'body': '\${LVS_EX_DOUBLEBUFFER}'
+    'body': '\${LVS_EX_DOUBLEBUFFER}$1'
   '${LVS_EX_FULLROWSELECT}':
     'prefix': 'LVS_EX_FULLROWSELECT'
-    'body': '\${LVS_EX_FULLROWSELECT}'
+    'body': '\${LVS_EX_FULLROWSELECT}$1'
   '${LVS_EX_INFOTIP}':
     'prefix': 'LVS_EX_INFOTIP'
-    'body': '\${LVS_EX_INFOTIP}'
+    'body': '\${LVS_EX_INFOTIP}$1'
   '${LVS_EX_LABELTIP}':
     'prefix': 'LVS_EX_LABELTIP'
-    'body': '\${LVS_EX_LABELTIP}'
+    'body': '\${LVS_EX_LABELTIP}$1'
   '${LVS_ICON}':
     'prefix': 'LVS_ICON'
-    'body': '\${LVS_ICON}'
+    'body': '\${LVS_ICON}$1'
   '${LVS_LIST}':
     'prefix': 'LVS_LIST'
-    'body': '\${LVS_LIST}'
+    'body': '\${LVS_LIST}$1'
   '${LVS_NOCOLUMNHEADER}':
     'prefix': 'LVS_NOCOLUMNHEADER'
-    'body': '\${LVS_NOCOLUMNHEADER}'
+    'body': '\${LVS_NOCOLUMNHEADER}$1'
   '${LVS_NOSCROLL}':
     'prefix': 'LVS_NOSCROLL'
-    'body': '\${LVS_NOSCROLL}'
+    'body': '\${LVS_NOSCROLL}$1'
   '${LVS_NOSORTHEADER}':
     'prefix': 'LVS_NOSORTHEADER'
-    'body': '\${LVS_NOSORTHEADER}'
+    'body': '\${LVS_NOSORTHEADER}$1'
   '${LVS_REPORT}':
     'prefix': 'LVS_REPORT'
-    'body': '\${LVS_REPORT}'
+    'body': '\${LVS_REPORT}$1'
   '${LVS_SHAREIMAGELISTS}':
     'prefix': 'LVS_SHAREIMAGELISTS'
-    'body': '\${LVS_SHAREIMAGELISTS}'
+    'body': '\${LVS_SHAREIMAGELISTS}$1'
   '${LVS_SHOWSELALWAYS}':
     'prefix': 'LVS_SHOWSELALWAYS'
-    'body': '\${LVS_SHOWSELALWAYS}'
+    'body': '\${LVS_SHOWSELALWAYS}$1'
   '${LVS_SINGLESEL}':
     'prefix': 'LVS_SINGLESEL'
-    'body': '\${LVS_SINGLESEL}'
+    'body': '\${LVS_SINGLESEL}$1'
   '${LVS_SMALLICON}':
     'prefix': 'LVS_SMALLICON'
-    'body': '\${LVS_SMALLICON}'
+    'body': '\${LVS_SMALLICON}$1'
   '${LVS_SORTASCENDING}':
     'prefix': 'LVS_SORTASCENDING'
-    'body': '\${LVS_SORTASCENDING}'
+    'body': '\${LVS_SORTASCENDING}$1'
   '${LVS_SORTDESCENDING}':
     'prefix': 'LVS_SORTDESCENDING'
-    'body': '\${LVS_SORTDESCENDING}'
+    'body': '\${LVS_SORTDESCENDING}$1'
   '${LVSCW_AUTOSIZE}':
     'prefix': 'LVSCW_AUTOSIZE'
-    'body': '\${LVSCW_AUTOSIZE}'
+    'body': '\${LVSCW_AUTOSIZE}$1'
   '${LVSCW_AUTOSIZE_USEHEADER}':
     'prefix': 'LVSCW_AUTOSIZE_USEHEADER'
-    'body': '\${LVSCW_AUTOSIZE_USEHEADER}'
+    'body': '\${LVSCW_AUTOSIZE_USEHEADER}$1'
   '${PBM_DELTAPOS}':
     'prefix': 'PBM_DELTAPOS'
-    'body': '\${PBM_DELTAPOS}'
+    'body': '\${PBM_DELTAPOS}$1'
   '${PBM_GETBARCOLOR}':
     'prefix': 'PBM_GETBARCOLOR'
-    'body': '\${PBM_GETBARCOLOR}'
+    'body': '\${PBM_GETBARCOLOR}$1'
   '${PBM_GETBKCOLOR}':
     'prefix': 'PBM_GETBKCOLOR'
-    'body': '\${PBM_GETBKCOLOR}'
+    'body': '\${PBM_GETBKCOLOR}$1'
   '${PBM_GETPOS}':
     'prefix': 'PBM_GETPOS'
-    'body': '\${PBM_GETPOS}'
+    'body': '\${PBM_GETPOS}$1'
   '${PBM_GETRANGE}':
     'prefix': 'PBM_GETRANGE'
-    'body': '\${PBM_GETRANGE}'
+    'body': '\${PBM_GETRANGE}$1'
   '${PBM_GETSTATE}':
     'prefix': 'PBM_GETSTATE'
-    'body': '\${PBM_GETSTATE}'
+    'body': '\${PBM_GETSTATE}$1'
   '${PBM_GETSTEP}':
     'prefix': 'PBM_GETSTEP'
-    'body': '\${PBM_GETSTEP}'
+    'body': '\${PBM_GETSTEP}$1'
   '${PBM_SETBARCOLOR}':
     'prefix': 'PBM_SETBARCOLOR'
-    'body': '\${PBM_SETBARCOLOR}'
+    'body': '\${PBM_SETBARCOLOR}$1'
   '${PBM_SETBKCOLOR}':
     'prefix': 'PBM_SETBKCOLOR'
-    'body': '\${PBM_SETBKCOLOR}'
+    'body': '\${PBM_SETBKCOLOR}$1'
   '${PBM_SETMARQUEE}':
     'prefix': 'PBM_SETMARQUEE'
-    'body': '\${PBM_SETMARQUEE}'
+    'body': '\${PBM_SETMARQUEE}$1'
   '${PBM_SETPOS}':
     'prefix': 'PBM_SETPOS'
-    'body': '\${PBM_SETPOS}'
+    'body': '\${PBM_SETPOS}$1'
   '${PBM_SETRANGE}':
     'prefix': 'PBM_SETRANGE'
-    'body': '\${PBM_SETRANGE}'
+    'body': '\${PBM_SETRANGE}$1'
   '${PBM_SETRANGE32}':
     'prefix': 'PBM_SETRANGE32'
-    'body': '\${PBM_SETRANGE32}'
+    'body': '\${PBM_SETRANGE32}$1'
   '${PBM_SETSTATE}':
     'prefix': 'PBM_SETSTATE'
-    'body': '\${PBM_SETSTATE}'
+    'body': '\${PBM_SETSTATE}$1'
   '${PBM_SETSTEP}':
     'prefix': 'PBM_SETSTEP'
-    'body': '\${PBM_SETSTEP}'
+    'body': '\${PBM_SETSTEP}$1'
   '${PBM_STEPIT}':
     'prefix': 'PBM_STEPIT'
-    'body': '\${PBM_STEPIT}'
+    'body': '\${PBM_STEPIT}$1'
   '${PBST_ERROR}':
     'prefix': 'PBST_ERROR'
-    'body': '\${PBST_ERROR}'
+    'body': '\${PBST_ERROR}$1'
   '${PBST_NORMAL}':
     'prefix': 'PBST_NORMAL'
-    'body': '\${PBST_NORMAL}'
+    'body': '\${PBST_NORMAL}$1'
   '${PBST_PAUSED}':
     'prefix': 'PBST_PAUSED'
-    'body': '\${PBST_PAUSED}'
+    'body': '\${PBST_PAUSED}$1'
   '${SB_CONST_ALPHA}':
     'prefix': 'SB_CONST_ALPHA'
-    'body': '\${SB_CONST_ALPHA}'
+    'body': '\${SB_CONST_ALPHA}$1'
   '${SB_GRAD_RECT}':
     'prefix': 'SB_GRAD_RECT'
-    'body': '\${SB_GRAD_RECT}'
+    'body': '\${SB_GRAD_RECT}$1'
   '${SB_GRAD_TRI}':
     'prefix': 'SB_GRAD_TRI'
-    'body': '\${SB_GRAD_TRI}'
+    'body': '\${SB_GRAD_TRI}$1'
   '${SB_NONE}':
     'prefix': 'SB_NONE'
-    'body': '\${SB_NONE}'
+    'body': '\${SB_NONE}$1'
   '${SB_PIXEL_ALPHA}':
     'prefix': 'SB_PIXEL_ALPHA'
-    'body': '\${SB_PIXEL_ALPHA}'
+    'body': '\${SB_PIXEL_ALPHA}$1'
   '${SB_PREMULT_ALPHA}':
     'prefix': 'SB_PREMULT_ALPHA'
-    'body': '\${SB_PREMULT_ALPHA}'
+    'body': '\${SB_PREMULT_ALPHA}$1'
   '${SB_SIMPLEID}':
     'prefix': 'SB_SIMPLEID'
-    'body': '\${SB_SIMPLEID}'
+    'body': '\${SB_SIMPLEID}$1'
   '${SBM_ENABLE_ARROWS}':
     'prefix': 'SBM_ENABLE_ARROWS'
-    'body': '\${SBM_ENABLE_ARROWS}'
+    'body': '\${SBM_ENABLE_ARROWS}$1'
   '${SBM_GETPOS}':
     'prefix': 'SBM_GETPOS'
-    'body': '\${SBM_GETPOS}'
+    'body': '\${SBM_GETPOS}$1'
   '${SBM_GETRANGE}':
     'prefix': 'SBM_GETRANGE'
-    'body': '\${SBM_GETRANGE}'
+    'body': '\${SBM_GETRANGE}$1'
   '${SBM_GETSCROLLINFO}':
     'prefix': 'SBM_GETSCROLLINFO'
-    'body': '\${SBM_GETSCROLLINFO}'
+    'body': '\${SBM_GETSCROLLINFO}$1'
   '${SBM_SETPOS}':
     'prefix': 'SBM_SETPOS'
-    'body': '\${SBM_SETPOS}'
+    'body': '\${SBM_SETPOS}$1'
   '${SBM_SETRANGE}':
     'prefix': 'SBM_SETRANGE'
-    'body': '\${SBM_SETRANGE}'
+    'body': '\${SBM_SETRANGE}$1'
   '${SBM_SETRANGEREDRAW}':
     'prefix': 'SBM_SETRANGEREDRAW'
-    'body': '\${SBM_SETRANGEREDRAW}'
+    'body': '\${SBM_SETRANGEREDRAW}$1'
   '${SBM_SETSCROLLINFO}':
     'prefix': 'SBM_SETSCROLLINFO'
-    'body': '\${SBM_SETSCROLLINFO}'
+    'body': '\${SBM_SETSCROLLINFO}$1'
   '${STM_GETICON}':
     'prefix': 'STM_GETICON'
-    'body': '\${STM_GETICON}'
+    'body': '\${STM_GETICON}$1'
   '${STM_GETIMAGE}':
     'prefix': 'STM_GETIMAGE'
-    'body': '\${STM_GETIMAGE}'
+    'body': '\${STM_GETIMAGE}$1'
   '${STM_MSGMAX}':
     'prefix': 'STM_MSGMAX'
-    'body': '\${STM_MSGMAX}'
+    'body': '\${STM_MSGMAX}$1'
   '${STM_ONLY_THIS_INTERFACE}':
     'prefix': 'STM_ONLY_THIS_INTERFACE'
-    'body': '\${STM_ONLY_THIS_INTERFACE}'
+    'body': '\${STM_ONLY_THIS_INTERFACE}$1'
   '${STM_ONLY_THIS_NAME}':
     'prefix': 'STM_ONLY_THIS_NAME'
-    'body': '\${STM_ONLY_THIS_NAME}'
+    'body': '\${STM_ONLY_THIS_NAME}$1'
   '${STM_ONLY_THIS_PROTOCOL}':
     'prefix': 'STM_ONLY_THIS_PROTOCOL'
-    'body': '\${STM_ONLY_THIS_PROTOCOL}'
+    'body': '\${STM_ONLY_THIS_PROTOCOL}$1'
   '${STM_ONLY_THIS_TYPE}':
     'prefix': 'STM_ONLY_THIS_TYPE'
-    'body': '\${STM_ONLY_THIS_TYPE}'
+    'body': '\${STM_ONLY_THIS_TYPE}$1'
   '${STM_SETICON}':
     'prefix': 'STM_SETICON'
-    'body': '\${STM_SETICON}'
+    'body': '\${STM_SETICON}$1'
   '${STM_SETIMAGE}':
     'prefix': 'STM_SETIMAGE'
-    'body': '\${STM_SETIMAGE}'
+    'body': '\${STM_SETIMAGE}$1'
   '${SW_FORCEMINIMIZE}':
     'prefix': 'SW_FORCEMINIMIZE'
-    'body': '\${SW_FORCEMINIMIZE}'
+    'body': '\${SW_FORCEMINIMIZE}$1'
   '${SW_HIDE}':
     'prefix': 'SW_HIDE'
-    'body': '\${SW_HIDE}'
+    'body': '\${SW_HIDE}$1'
   '${SW_MAX}':
     'prefix': 'SW_MAX'
-    'body': '\${SW_MAX}'
+    'body': '\${SW_MAX}$1'
   '${SW_MAXIMIZE}':
     'prefix': 'SW_MAXIMIZE'
-    'body': '\${SW_MAXIMIZE}'
+    'body': '\${SW_MAXIMIZE}$1'
   '${SW_MINIMIZE}':
     'prefix': 'SW_MINIMIZE'
-    'body': '\${SW_MINIMIZE}'
+    'body': '\${SW_MINIMIZE}$1'
   '${SW_NORMAL}':
     'prefix': 'SW_NORMAL'
-    'body': '\${SW_NORMAL}'
+    'body': '\${SW_NORMAL}$1'
   '${SW_RESTORE}':
     'prefix': 'SW_RESTORE'
-    'body': '\${SW_RESTORE}'
+    'body': '\${SW_RESTORE}$1'
   '${SW_SHOW}':
     'prefix': 'SW_SHOW'
-    'body': '\${SW_SHOW}'
+    'body': '\${SW_SHOW}$1'
   '${SW_SHOWMAXIMIZED}':
     'prefix': 'SW_SHOWMAXIMIZED'
-    'body': '\${SW_SHOWMAXIMIZED}'
+    'body': '\${SW_SHOWMAXIMIZED}$1'
   '${SW_SHOWMINIMIZED}':
     'prefix': 'SW_SHOWMINIMIZED'
-    'body': '\${SW_SHOWMINIMIZED}'
+    'body': '\${SW_SHOWMINIMIZED}$1'
   '${SW_SHOWMINNOACTIVE}':
     'prefix': 'SW_SHOWMINNOACTIVE'
-    'body': '\${SW_SHOWMINNOACTIVE}'
+    'body': '\${SW_SHOWMINNOACTIVE}$1'
   '${SW_SHOWNA}':
     'prefix': 'SW_SHOWNA'
-    'body': '\${SW_SHOWNA}'
+    'body': '\${SW_SHOWNA}$1'
   '${SW_SHOWNOACTIVATE}':
     'prefix': 'SW_SHOWNOACTIVATE'
-    'body': '\${SW_SHOWNOACTIVATE}'
+    'body': '\${SW_SHOWNOACTIVATE}$1'
   '${SW_SHOWNORMAL}':
     'prefix': 'SW_SHOWNORMAL'
-    'body': '\${SW_SHOWNORMAL}'
+    'body': '\${SW_SHOWNORMAL}$1'
   '${SYSSTRUCT_LVITEM_V1}':
     'prefix': 'SYSSTRUCT_LVITEM_V1'
-    'body': '\${SYSSTRUCT_LVITEM_V1}'
+    'body': '\${SYSSTRUCT_LVITEM_V1}$1'
   '${SYSSTRUCT_LVITEM_V2}':
     'prefix': 'SYSSTRUCT_LVITEM_V2'
-    'body': '\${SYSSTRUCT_LVITEM_V2}'
+    'body': '\${SYSSTRUCT_LVITEM_V2}$1'
   '${SYSSTRUCT_LVITEM_V3}':
     'prefix': 'SYSSTRUCT_LVITEM_V3'
-    'body': '\${SYSSTRUCT_LVITEM_V3}'
+    'body': '\${SYSSTRUCT_LVITEM_V3}$1'
   '${SYSSTRUCT_LVITEM_V4}':
     'prefix': 'SYSSTRUCT_LVITEM_V4'
-    'body': '\${SYSSTRUCT_LVITEM_V4}'
+    'body': '\${SYSSTRUCT_LVITEM_V4}$1'
   '${SYSSTRUCT_TCITEM}':
     'prefix': 'SYSSTRUCT_TCITEM'
-    'body': '\${SYSSTRUCT_TCITEM}'
+    'body': '\${SYSSTRUCT_TCITEM}$1'
   '${TCIF_PARAM}':
     'prefix': 'TCIF_PARAM'
-    'body': '\${TCIF_PARAM}'
+    'body': '\${TCIF_PARAM}$1'
   '${TCIF_TEXT}':
     'prefix': 'TCIF_TEXT'
-    'body': '\${TCIF_TEXT}'
+    'body': '\${TCIF_TEXT}$1'
   '${TCM_ADJUSTRECT}':
     'prefix': 'TCM_ADJUSTRECT'
-    'body': '\${TCM_ADJUSTRECT}'
+    'body': '\${TCM_ADJUSTRECT}$1'
   '${TCM_FIRST}':
     'prefix': 'TCM_FIRST'
-    'body': '\${TCM_FIRST}'
+    'body': '\${TCM_FIRST}$1'
   '${TCM_GETCURSEL}':
     'prefix': 'TCM_GETCURSEL'
-    'body': '\${TCM_GETCURSEL}'
+    'body': '\${TCM_GETCURSEL}$1'
   '${TCM_INSERTITEM}':
     'prefix': 'TCM_INSERTITEM'
-    'body': '\${TCM_INSERTITEM}'
+    'body': '\${TCM_INSERTITEM}$1'
   '${TCM_INSERTITEMA}':
     'prefix': 'TCM_INSERTITEMA'
-    'body': '\${TCM_INSERTITEMA}'
+    'body': '\${TCM_INSERTITEMA}$1'
   '${TCM_INSERTITEMW}':
     'prefix': 'TCM_INSERTITEMW'
-    'body': '\${TCM_INSERTITEMW}'
+    'body': '\${TCM_INSERTITEMW}$1'
   '${TCN_SELCHANGE}':
     'prefix': 'TCN_SELCHANGE'
-    'body': '\${TCN_SELCHANGE}'
+    'body': '\${TCN_SELCHANGE}$1'
   '${TCN_SELCHANGING}':
     'prefix': 'TCN_SELCHANGING'
-    'body': '\${TCN_SELCHANGING}'
+    'body': '\${TCN_SELCHANGING}$1'
   '${TCS_SCROLLOPPOSITE}':
     'prefix': 'TCS_SCROLLOPPOSITE'
-    'body': '\${TCS_SCROLLOPPOSITE}'
+    'body': '\${TCS_SCROLLOPPOSITE}$1'
   '${WM_ACTIVATE}':
     'prefix': 'WM_ACTIVATE'
-    'body': '\${WM_ACTIVATE}'
+    'body': '\${WM_ACTIVATE}$1'
   '${WM_ACTIVATEAPP}':
     'prefix': 'WM_ACTIVATEAPP'
-    'body': '\${WM_ACTIVATEAPP}'
+    'body': '\${WM_ACTIVATEAPP}$1'
   '${WM_AFXFIRST}':
     'prefix': 'WM_AFXFIRST'
-    'body': '\${WM_AFXFIRST}'
+    'body': '\${WM_AFXFIRST}$1'
   '${WM_AFXLAST}':
     'prefix': 'WM_AFXLAST'
-    'body': '\${WM_AFXLAST}'
+    'body': '\${WM_AFXLAST}$1'
   '${WM_APP}':
     'prefix': 'WM_APP'
-    'body': '\${WM_APP}'
+    'body': '\${WM_APP}$1'
   '${WM_APPCOMMAND}':
     'prefix': 'WM_APPCOMMAND'
-    'body': '\${WM_APPCOMMAND}'
+    'body': '\${WM_APPCOMMAND}$1'
   '${WM_ASKCBFORMATNAME}':
     'prefix': 'WM_ASKCBFORMATNAME'
-    'body': '\${WM_ASKCBFORMATNAME}'
+    'body': '\${WM_ASKCBFORMATNAME}$1'
   '${WM_CANCELJOURNAL}':
     'prefix': 'WM_CANCELJOURNAL'
-    'body': '\${WM_CANCELJOURNAL}'
+    'body': '\${WM_CANCELJOURNAL}$1'
   '${WM_CANCELMODE}':
     'prefix': 'WM_CANCELMODE'
-    'body': '\${WM_CANCELMODE}'
+    'body': '\${WM_CANCELMODE}$1'
   '${WM_CAPTURECHANGED}':
     'prefix': 'WM_CAPTURECHANGED'
-    'body': '\${WM_CAPTURECHANGED}'
+    'body': '\${WM_CAPTURECHANGED}$1'
   '${WM_CHANGECBCHAIN}':
     'prefix': 'WM_CHANGECBCHAIN'
-    'body': '\${WM_CHANGECBCHAIN}'
+    'body': '\${WM_CHANGECBCHAIN}$1'
   '${WM_CHANGEUISTATE}':
     'prefix': 'WM_CHANGEUISTATE'
-    'body': '\${WM_CHANGEUISTATE}'
+    'body': '\${WM_CHANGEUISTATE}$1'
   '${WM_CHAR}':
     'prefix': 'WM_CHAR'
-    'body': '\${WM_CHAR}'
+    'body': '\${WM_CHAR}$1'
   '${WM_CHARTOITEM}':
     'prefix': 'WM_CHARTOITEM'
-    'body': '\${WM_CHARTOITEM}'
+    'body': '\${WM_CHARTOITEM}$1'
   '${WM_CHILDACTIVATE}':
     'prefix': 'WM_CHILDACTIVATE'
-    'body': '\${WM_CHILDACTIVATE}'
+    'body': '\${WM_CHILDACTIVATE}$1'
   '${WM_CLEAR}':
     'prefix': 'WM_CLEAR'
-    'body': '\${WM_CLEAR}'
+    'body': '\${WM_CLEAR}$1'
   '${WM_CLOSE}':
     'prefix': 'WM_CLOSE'
-    'body': '\${WM_CLOSE}'
+    'body': '\${WM_CLOSE}$1'
   '${WM_COMMAND}':
     'prefix': 'WM_COMMAND'
-    'body': '\${WM_COMMAND}'
+    'body': '\${WM_COMMAND}$1'
   '${WM_COMMNOTIFY}':
     'prefix': 'WM_COMMNOTIFY'
-    'body': '\${WM_COMMNOTIFY}'
+    'body': '\${WM_COMMNOTIFY}$1'
   '${WM_COMPACTING}':
     'prefix': 'WM_COMPACTING'
-    'body': '\${WM_COMPACTING}'
+    'body': '\${WM_COMPACTING}$1'
   '${WM_COMPAREITEM}':
     'prefix': 'WM_COMPAREITEM'
-    'body': '\${WM_COMPAREITEM}'
+    'body': '\${WM_COMPAREITEM}$1'
   '${WM_CONTEXTMENU}':
     'prefix': 'WM_CONTEXTMENU'
-    'body': '\${WM_CONTEXTMENU}'
+    'body': '\${WM_CONTEXTMENU}$1'
   '${WM_CONVERTREQUESTEX}':
     'prefix': 'WM_CONVERTREQUESTEX'
-    'body': '\${WM_CONVERTREQUESTEX}'
+    'body': '\${WM_CONVERTREQUESTEX}$1'
   '${WM_COPY}':
     'prefix': 'WM_COPY'
-    'body': '\${WM_COPY}'
+    'body': '\${WM_COPY}$1'
   '${WM_COPYDATA}':
     'prefix': 'WM_COPYDATA'
-    'body': '\${WM_COPYDATA}'
+    'body': '\${WM_COPYDATA}$1'
   '${WM_CREATE}':
     'prefix': 'WM_CREATE'
-    'body': '\${WM_CREATE}'
+    'body': '\${WM_CREATE}$1'
   '${WM_CTLCOLOR}':
     'prefix': 'WM_CTLCOLOR'
-    'body': '\${WM_CTLCOLOR}'
+    'body': '\${WM_CTLCOLOR}$1'
   '${WM_CTLCOLORBTN}':
     'prefix': 'WM_CTLCOLORBTN'
-    'body': '\${WM_CTLCOLORBTN}'
+    'body': '\${WM_CTLCOLORBTN}$1'
   '${WM_CTLCOLORDLG}':
     'prefix': 'WM_CTLCOLORDLG'
-    'body': '\${WM_CTLCOLORDLG}'
+    'body': '\${WM_CTLCOLORDLG}$1'
   '${WM_CTLCOLOREDIT}':
     'prefix': 'WM_CTLCOLOREDIT'
-    'body': '\${WM_CTLCOLOREDIT}'
+    'body': '\${WM_CTLCOLOREDIT}$1'
   '${WM_CTLCOLORLISTBOX}':
     'prefix': 'WM_CTLCOLORLISTBOX'
-    'body': '\${WM_CTLCOLORLISTBOX}'
+    'body': '\${WM_CTLCOLORLISTBOX}$1'
   '${WM_CTLCOLORMSGBOX}':
     'prefix': 'WM_CTLCOLORMSGBOX'
-    'body': '\${WM_CTLCOLORMSGBOX}'
+    'body': '\${WM_CTLCOLORMSGBOX}$1'
   '${WM_CTLCOLORSCROLLBAR}':
     'prefix': 'WM_CTLCOLORSCROLLBAR'
-    'body': '\${WM_CTLCOLORSCROLLBAR}'
+    'body': '\${WM_CTLCOLORSCROLLBAR}$1'
   '${WM_CTLCOLORSTATIC}':
     'prefix': 'WM_CTLCOLORSTATIC'
-    'body': '\${WM_CTLCOLORSTATIC}'
+    'body': '\${WM_CTLCOLORSTATIC}$1'
   '${WM_CUT}':
     'prefix': 'WM_CUT'
-    'body': '\${WM_CUT}'
+    'body': '\${WM_CUT}$1'
   '${WM_DDE_FIRST}':
     'prefix': 'WM_DDE_FIRST'
-    'body': '\${WM_DDE_FIRST}'
+    'body': '\${WM_DDE_FIRST}$1'
   '${WM_DEADCHAR}':
     'prefix': 'WM_DEADCHAR'
-    'body': '\${WM_DEADCHAR}'
+    'body': '\${WM_DEADCHAR}$1'
   '${WM_DELETEITEM}':
     'prefix': 'WM_DELETEITEM'
-    'body': '\${WM_DELETEITEM}'
+    'body': '\${WM_DELETEITEM}$1'
   '${WM_DESTROY}':
     'prefix': 'WM_DESTROY'
-    'body': '\${WM_DESTROY}'
+    'body': '\${WM_DESTROY}$1'
   '${WM_DESTROYCLIPBOARD}':
     'prefix': 'WM_DESTROYCLIPBOARD'
-    'body': '\${WM_DESTROYCLIPBOARD}'
+    'body': '\${WM_DESTROYCLIPBOARD}$1'
   '${WM_DEVICECHANGE}':
     'prefix': 'WM_DEVICECHANGE'
-    'body': '\${WM_DEVICECHANGE}'
+    'body': '\${WM_DEVICECHANGE}$1'
   '${WM_DEVMODECHANGE}':
     'prefix': 'WM_DEVMODECHANGE'
-    'body': '\${WM_DEVMODECHANGE}'
+    'body': '\${WM_DEVMODECHANGE}$1'
   '${WM_DISPLAYCHANGE}':
     'prefix': 'WM_DISPLAYCHANGE'
-    'body': '\${WM_DISPLAYCHANGE}'
+    'body': '\${WM_DISPLAYCHANGE}$1'
   '${WM_DRAWCLIPBOARD}':
     'prefix': 'WM_DRAWCLIPBOARD'
-    'body': '\${WM_DRAWCLIPBOARD}'
+    'body': '\${WM_DRAWCLIPBOARD}$1'
   '${WM_DRAWITEM}':
     'prefix': 'WM_DRAWITEM'
-    'body': '\${WM_DRAWITEM}'
+    'body': '\${WM_DRAWITEM}$1'
   '${WM_DROPFILES}':
     'prefix': 'WM_DROPFILES'
-    'body': '\${WM_DROPFILES}'
+    'body': '\${WM_DROPFILES}$1'
   '${WM_ENABLE}':
     'prefix': 'WM_ENABLE'
-    'body': '\${WM_ENABLE}'
+    'body': '\${WM_ENABLE}$1'
   '${WM_ENDSESSION}':
     'prefix': 'WM_ENDSESSION'
-    'body': '\${WM_ENDSESSION}'
+    'body': '\${WM_ENDSESSION}$1'
   '${WM_ENTERIDLE}':
     'prefix': 'WM_ENTERIDLE'
-    'body': '\${WM_ENTERIDLE}'
+    'body': '\${WM_ENTERIDLE}$1'
   '${WM_ENTERMENULOOP}':
     'prefix': 'WM_ENTERMENULOOP'
-    'body': '\${WM_ENTERMENULOOP}'
+    'body': '\${WM_ENTERMENULOOP}$1'
   '${WM_ENTERSIZEMOVE}':
     'prefix': 'WM_ENTERSIZEMOVE'
-    'body': '\${WM_ENTERSIZEMOVE}'
+    'body': '\${WM_ENTERSIZEMOVE}$1'
   '${WM_ERASEBKGND}':
     'prefix': 'WM_ERASEBKGND'
-    'body': '\${WM_ERASEBKGND}'
+    'body': '\${WM_ERASEBKGND}$1'
   '${WM_EXITMENULOOP}':
     'prefix': 'WM_EXITMENULOOP'
-    'body': '\${WM_EXITMENULOOP}'
+    'body': '\${WM_EXITMENULOOP}$1'
   '${WM_EXITSIZEMOVE}':
     'prefix': 'WM_EXITSIZEMOVE'
-    'body': '\${WM_EXITSIZEMOVE}'
+    'body': '\${WM_EXITSIZEMOVE}$1'
   '${WM_FONTCHANGE}':
     'prefix': 'WM_FONTCHANGE'
-    'body': '\${WM_FONTCHANGE}'
+    'body': '\${WM_FONTCHANGE}$1'
   '${WM_GETDLGCODE}':
     'prefix': 'WM_GETDLGCODE'
-    'body': '\${WM_GETDLGCODE}'
+    'body': '\${WM_GETDLGCODE}$1'
   '${WM_GETFONT}':
     'prefix': 'WM_GETFONT'
-    'body': '\${WM_GETFONT}'
+    'body': '\${WM_GETFONT}$1'
   '${WM_GETHOTKEY}':
     'prefix': 'WM_GETHOTKEY'
-    'body': '\${WM_GETHOTKEY}'
+    'body': '\${WM_GETHOTKEY}$1'
   '${WM_GETICON}':
     'prefix': 'WM_GETICON'
-    'body': '\${WM_GETICON}'
+    'body': '\${WM_GETICON}$1'
   '${WM_GETMINMAXINFO}':
     'prefix': 'WM_GETMINMAXINFO'
-    'body': '\${WM_GETMINMAXINFO}'
+    'body': '\${WM_GETMINMAXINFO}$1'
   '${WM_GETOBJECT}':
     'prefix': 'WM_GETOBJECT'
-    'body': '\${WM_GETOBJECT}'
+    'body': '\${WM_GETOBJECT}$1'
   '${WM_GETTEXT}':
     'prefix': 'WM_GETTEXT'
-    'body': '\${WM_GETTEXT}'
+    'body': '\${WM_GETTEXT}$1'
   '${WM_GETTEXTLENGTH}':
     'prefix': 'WM_GETTEXTLENGTH'
-    'body': '\${WM_GETTEXTLENGTH}'
+    'body': '\${WM_GETTEXTLENGTH}$1'
   '${WM_HANDHELDFIRST}':
     'prefix': 'WM_HANDHELDFIRST'
-    'body': '\${WM_HANDHELDFIRST}'
+    'body': '\${WM_HANDHELDFIRST}$1'
   '${WM_HANDHELDLAST}':
     'prefix': 'WM_HANDHELDLAST'
-    'body': '\${WM_HANDHELDLAST}'
+    'body': '\${WM_HANDHELDLAST}$1'
   '${WM_HELP}':
     'prefix': 'WM_HELP'
-    'body': '\${WM_HELP}'
+    'body': '\${WM_HELP}$1'
   '${WM_HOTKEY}':
     'prefix': 'WM_HOTKEY'
-    'body': '\${WM_HOTKEY}'
+    'body': '\${WM_HOTKEY}$1'
   '${WM_HSCROLL}':
     'prefix': 'WM_HSCROLL'
-    'body': '\${WM_HSCROLL}'
+    'body': '\${WM_HSCROLL}$1'
   '${WM_HSCROLLCLIPBOARD}':
     'prefix': 'WM_HSCROLLCLIPBOARD'
-    'body': '\${WM_HSCROLLCLIPBOARD}'
+    'body': '\${WM_HSCROLLCLIPBOARD}$1'
   '${WM_ICONERASEBKGND}':
     'prefix': 'WM_ICONERASEBKGND'
-    'body': '\${WM_ICONERASEBKGND}'
+    'body': '\${WM_ICONERASEBKGND}$1'
   '${WM_IME_CHAR}':
     'prefix': 'WM_IME_CHAR'
-    'body': '\${WM_IME_CHAR}'
+    'body': '\${WM_IME_CHAR}$1'
   '${WM_IME_COMPOSITION}':
     'prefix': 'WM_IME_COMPOSITION'
-    'body': '\${WM_IME_COMPOSITION}'
+    'body': '\${WM_IME_COMPOSITION}$1'
   '${WM_IME_COMPOSITIONFULL}':
     'prefix': 'WM_IME_COMPOSITIONFULL'
-    'body': '\${WM_IME_COMPOSITIONFULL}'
+    'body': '\${WM_IME_COMPOSITIONFULL}$1'
   '${WM_IME_CONTROL}':
     'prefix': 'WM_IME_CONTROL'
-    'body': '\${WM_IME_CONTROL}'
+    'body': '\${WM_IME_CONTROL}$1'
   '${WM_IME_ENDCOMPOSITION}':
     'prefix': 'WM_IME_ENDCOMPOSITION'
-    'body': '\${WM_IME_ENDCOMPOSITION}'
+    'body': '\${WM_IME_ENDCOMPOSITION}$1'
   '${WM_IME_KEYDOWN}':
     'prefix': 'WM_IME_KEYDOWN'
-    'body': '\${WM_IME_KEYDOWN}'
+    'body': '\${WM_IME_KEYDOWN}$1'
   '${WM_IME_KEYLAST}':
     'prefix': 'WM_IME_KEYLAST'
-    'body': '\${WM_IME_KEYLAST}'
+    'body': '\${WM_IME_KEYLAST}$1'
   '${WM_IME_KEYUP}':
     'prefix': 'WM_IME_KEYUP'
-    'body': '\${WM_IME_KEYUP}'
+    'body': '\${WM_IME_KEYUP}$1'
   '${WM_IME_NOTIFY}':
     'prefix': 'WM_IME_NOTIFY'
-    'body': '\${WM_IME_NOTIFY}'
+    'body': '\${WM_IME_NOTIFY}$1'
   '${WM_IME_REQUEST}':
     'prefix': 'WM_IME_REQUEST'
-    'body': '\${WM_IME_REQUEST}'
+    'body': '\${WM_IME_REQUEST}$1'
   '${WM_IME_SELECT}':
     'prefix': 'WM_IME_SELECT'
-    'body': '\${WM_IME_SELECT}'
+    'body': '\${WM_IME_SELECT}$1'
   '${WM_IME_SETCONTEXT}':
     'prefix': 'WM_IME_SETCONTEXT'
-    'body': '\${WM_IME_SETCONTEXT}'
+    'body': '\${WM_IME_SETCONTEXT}$1'
   '${WM_IME_STARTCOMPOSITION}':
     'prefix': 'WM_IME_STARTCOMPOSITION'
-    'body': '\${WM_IME_STARTCOMPOSITION}'
+    'body': '\${WM_IME_STARTCOMPOSITION}$1'
   '${WM_INITDIALOG}':
     'prefix': 'WM_INITDIALOG'
-    'body': '\${WM_INITDIALOG}'
+    'body': '\${WM_INITDIALOG}$1'
   '${WM_INITMENU}':
     'prefix': 'WM_INITMENU'
-    'body': '\${WM_INITMENU}'
+    'body': '\${WM_INITMENU}$1'
   '${WM_INITMENUPOPUP}':
     'prefix': 'WM_INITMENUPOPUP'
-    'body': '\${WM_INITMENUPOPUP}'
+    'body': '\${WM_INITMENUPOPUP}$1'
   '${WM_INPUT}':
     'prefix': 'WM_INPUT'
-    'body': '\${WM_INPUT}'
+    'body': '\${WM_INPUT}$1'
   '${WM_INPUTLANGCHANGE}':
     'prefix': 'WM_INPUTLANGCHANGE'
-    'body': '\${WM_INPUTLANGCHANGE}'
+    'body': '\${WM_INPUTLANGCHANGE}$1'
   '${WM_INPUTLANGCHANGEREQUEST}':
     'prefix': 'WM_INPUTLANGCHANGEREQUEST'
-    'body': '\${WM_INPUTLANGCHANGEREQUEST}'
+    'body': '\${WM_INPUTLANGCHANGEREQUEST}$1'
   '${WM_KEYDOWN}':
     'prefix': 'WM_KEYDOWN'
-    'body': '\${WM_KEYDOWN}'
+    'body': '\${WM_KEYDOWN}$1'
   '${WM_KEYFIRST}':
     'prefix': 'WM_KEYFIRST'
-    'body': '\${WM_KEYFIRST}'
+    'body': '\${WM_KEYFIRST}$1'
   '${WM_KEYLAST}':
     'prefix': 'WM_KEYLAST'
-    'body': '\${WM_KEYLAST}'
+    'body': '\${WM_KEYLAST}$1'
   '${WM_KEYUP}':
     'prefix': 'WM_KEYUP'
-    'body': '\${WM_KEYUP}'
+    'body': '\${WM_KEYUP}$1'
   '${WM_KILLFOCUS}':
     'prefix': 'WM_KILLFOCUS'
-    'body': '\${WM_KILLFOCUS}'
+    'body': '\${WM_KILLFOCUS}$1'
   '${WM_LBUTTONDBLCLK}':
     'prefix': 'WM_LBUTTONDBLCLK'
-    'body': '\${WM_LBUTTONDBLCLK}'
+    'body': '\${WM_LBUTTONDBLCLK}$1'
   '${WM_LBUTTONDOWN}':
     'prefix': 'WM_LBUTTONDOWN'
-    'body': '\${WM_LBUTTONDOWN}'
+    'body': '\${WM_LBUTTONDOWN}$1'
   '${WM_LBUTTONUP}':
     'prefix': 'WM_LBUTTONUP'
-    'body': '\${WM_LBUTTONUP}'
+    'body': '\${WM_LBUTTONUP}$1'
   '${WM_MBUTTONDBLCLK}':
     'prefix': 'WM_MBUTTONDBLCLK'
-    'body': '\${WM_MBUTTONDBLCLK}'
+    'body': '\${WM_MBUTTONDBLCLK}$1'
   '${WM_MBUTTONDOWN}':
     'prefix': 'WM_MBUTTONDOWN'
-    'body': '\${WM_MBUTTONDOWN}'
+    'body': '\${WM_MBUTTONDOWN}$1'
   '${WM_MBUTTONUP}':
     'prefix': 'WM_MBUTTONUP'
-    'body': '\${WM_MBUTTONUP}'
+    'body': '\${WM_MBUTTONUP}$1'
   '${WM_MDIACTIVATE}':
     'prefix': 'WM_MDIACTIVATE'
-    'body': '\${WM_MDIACTIVATE}'
+    'body': '\${WM_MDIACTIVATE}$1'
   '${WM_MDICASCADE}':
     'prefix': 'WM_MDICASCADE'
-    'body': '\${WM_MDICASCADE}'
+    'body': '\${WM_MDICASCADE}$1'
   '${WM_MDICREATE}':
     'prefix': 'WM_MDICREATE'
-    'body': '\${WM_MDICREATE}'
+    'body': '\${WM_MDICREATE}$1'
   '${WM_MDIDESTROY}':
     'prefix': 'WM_MDIDESTROY'
-    'body': '\${WM_MDIDESTROY}'
+    'body': '\${WM_MDIDESTROY}$1'
   '${WM_MDIGETACTIVE}':
     'prefix': 'WM_MDIGETACTIVE'
-    'body': '\${WM_MDIGETACTIVE}'
+    'body': '\${WM_MDIGETACTIVE}$1'
   '${WM_MDIICONARRANGE}':
     'prefix': 'WM_MDIICONARRANGE'
-    'body': '\${WM_MDIICONARRANGE}'
+    'body': '\${WM_MDIICONARRANGE}$1'
   '${WM_MDIMAXIMIZE}':
     'prefix': 'WM_MDIMAXIMIZE'
-    'body': '\${WM_MDIMAXIMIZE}'
+    'body': '\${WM_MDIMAXIMIZE}$1'
   '${WM_MDINEXT}':
     'prefix': 'WM_MDINEXT'
-    'body': '\${WM_MDINEXT}'
+    'body': '\${WM_MDINEXT}$1'
   '${WM_MDIREFRESHMENU}':
     'prefix': 'WM_MDIREFRESHMENU'
-    'body': '\${WM_MDIREFRESHMENU}'
+    'body': '\${WM_MDIREFRESHMENU}$1'
   '${WM_MDIRESTORE}':
     'prefix': 'WM_MDIRESTORE'
-    'body': '\${WM_MDIRESTORE}'
+    'body': '\${WM_MDIRESTORE}$1'
   '${WM_MDISETMENU}':
     'prefix': 'WM_MDISETMENU'
-    'body': '\${WM_MDISETMENU}'
+    'body': '\${WM_MDISETMENU}$1'
   '${WM_MDITILE}':
     'prefix': 'WM_MDITILE'
-    'body': '\${WM_MDITILE}'
+    'body': '\${WM_MDITILE}$1'
   '${WM_MEASUREITEM}':
     'prefix': 'WM_MEASUREITEM'
-    'body': '\${WM_MEASUREITEM}'
+    'body': '\${WM_MEASUREITEM}$1'
   '${WM_MENUCHAR}':
     'prefix': 'WM_MENUCHAR'
-    'body': '\${WM_MENUCHAR}'
+    'body': '\${WM_MENUCHAR}$1'
   '${WM_MENUCOMMAND}':
     'prefix': 'WM_MENUCOMMAND'
-    'body': '\${WM_MENUCOMMAND}'
+    'body': '\${WM_MENUCOMMAND}$1'
   '${WM_MENUDRAG}':
     'prefix': 'WM_MENUDRAG'
-    'body': '\${WM_MENUDRAG}'
+    'body': '\${WM_MENUDRAG}$1'
   '${WM_MENUGETOBJECT}':
     'prefix': 'WM_MENUGETOBJECT'
-    'body': '\${WM_MENUGETOBJECT}'
+    'body': '\${WM_MENUGETOBJECT}$1'
   '${WM_MENURBUTTONUP}':
     'prefix': 'WM_MENURBUTTONUP'
-    'body': '\${WM_MENURBUTTONUP}'
+    'body': '\${WM_MENURBUTTONUP}$1'
   '${WM_MENUSELECT}':
     'prefix': 'WM_MENUSELECT'
-    'body': '\${WM_MENUSELECT}'
+    'body': '\${WM_MENUSELECT}$1'
   '${WM_MOUSEACTIVATE}':
     'prefix': 'WM_MOUSEACTIVATE'
-    'body': '\${WM_MOUSEACTIVATE}'
+    'body': '\${WM_MOUSEACTIVATE}$1'
   '${WM_MOUSEFIRST}':
     'prefix': 'WM_MOUSEFIRST'
-    'body': '\${WM_MOUSEFIRST}'
+    'body': '\${WM_MOUSEFIRST}$1'
   '${WM_MOUSEHOVER}':
     'prefix': 'WM_MOUSEHOVER'
-    'body': '\${WM_MOUSEHOVER}'
+    'body': '\${WM_MOUSEHOVER}$1'
   '${WM_MOUSELAST}':
     'prefix': 'WM_MOUSELAST'
-    'body': '\${WM_MOUSELAST}'
+    'body': '\${WM_MOUSELAST}$1'
   '${WM_MOUSELEAVE}':
     'prefix': 'WM_MOUSELEAVE'
-    'body': '\${WM_MOUSELEAVE}'
+    'body': '\${WM_MOUSELEAVE}$1'
   '${WM_MOUSEMOVE}':
     'prefix': 'WM_MOUSEMOVE'
-    'body': '\${WM_MOUSEMOVE}'
+    'body': '\${WM_MOUSEMOVE}$1'
   '${WM_MOUSEWHEEL}':
     'prefix': 'WM_MOUSEWHEEL'
-    'body': '\${WM_MOUSEWHEEL}'
+    'body': '\${WM_MOUSEWHEEL}$1'
   '${WM_MOVE}':
     'prefix': 'WM_MOVE'
-    'body': '\${WM_MOVE}'
+    'body': '\${WM_MOVE}$1'
   '${WM_MOVING}':
     'prefix': 'WM_MOVING'
-    'body': '\${WM_MOVING}'
+    'body': '\${WM_MOVING}$1'
   '${WM_NCACTIVATE}':
     'prefix': 'WM_NCACTIVATE'
-    'body': '\${WM_NCACTIVATE}'
+    'body': '\${WM_NCACTIVATE}$1'
   '${WM_NCCALCSIZE}':
     'prefix': 'WM_NCCALCSIZE'
-    'body': '\${WM_NCCALCSIZE}'
+    'body': '\${WM_NCCALCSIZE}$1'
   '${WM_NCCREATE}':
     'prefix': 'WM_NCCREATE'
-    'body': '\${WM_NCCREATE}'
+    'body': '\${WM_NCCREATE}$1'
   '${WM_NCDESTROY}':
     'prefix': 'WM_NCDESTROY'
-    'body': '\${WM_NCDESTROY}'
+    'body': '\${WM_NCDESTROY}$1'
   '${WM_NCHITTEST}':
     'prefix': 'WM_NCHITTEST'
-    'body': '\${WM_NCHITTEST}'
+    'body': '\${WM_NCHITTEST}$1'
   '${WM_NCLBUTTONDBLCLK}':
     'prefix': 'WM_NCLBUTTONDBLCLK'
-    'body': '\${WM_NCLBUTTONDBLCLK}'
+    'body': '\${WM_NCLBUTTONDBLCLK}$1'
   '${WM_NCLBUTTONDOWN}':
     'prefix': 'WM_NCLBUTTONDOWN'
-    'body': '\${WM_NCLBUTTONDOWN}'
+    'body': '\${WM_NCLBUTTONDOWN}$1'
   '${WM_NCLBUTTONUP}':
     'prefix': 'WM_NCLBUTTONUP'
-    'body': '\${WM_NCLBUTTONUP}'
+    'body': '\${WM_NCLBUTTONUP}$1'
   '${WM_NCMBUTTONDBLCLK}':
     'prefix': 'WM_NCMBUTTONDBLCLK'
-    'body': '\${WM_NCMBUTTONDBLCLK}'
+    'body': '\${WM_NCMBUTTONDBLCLK}$1'
   '${WM_NCMBUTTONDOWN}':
     'prefix': 'WM_NCMBUTTONDOWN'
-    'body': '\${WM_NCMBUTTONDOWN}'
+    'body': '\${WM_NCMBUTTONDOWN}$1'
   '${WM_NCMBUTTONUP}':
     'prefix': 'WM_NCMBUTTONUP'
-    'body': '\${WM_NCMBUTTONUP}'
+    'body': '\${WM_NCMBUTTONUP}$1'
   '${WM_NCMOUSEHOVER}':
     'prefix': 'WM_NCMOUSEHOVER'
-    'body': '\${WM_NCMOUSEHOVER}'
+    'body': '\${WM_NCMOUSEHOVER}$1'
   '${WM_NCMOUSELEAVE}':
     'prefix': 'WM_NCMOUSELEAVE'
-    'body': '\${WM_NCMOUSELEAVE}'
+    'body': '\${WM_NCMOUSELEAVE}$1'
   '${WM_NCMOUSEMOVE}':
     'prefix': 'WM_NCMOUSEMOVE'
-    'body': '\${WM_NCMOUSEMOVE}'
+    'body': '\${WM_NCMOUSEMOVE}$1'
   '${WM_NCPAINT}':
     'prefix': 'WM_NCPAINT'
-    'body': '\${WM_NCPAINT}'
+    'body': '\${WM_NCPAINT}$1'
   '${WM_NCRBUTTONDBLCLK}':
     'prefix': 'WM_NCRBUTTONDBLCLK'
-    'body': '\${WM_NCRBUTTONDBLCLK}'
+    'body': '\${WM_NCRBUTTONDBLCLK}$1'
   '${WM_NCRBUTTONDOWN}':
     'prefix': 'WM_NCRBUTTONDOWN'
-    'body': '\${WM_NCRBUTTONDOWN}'
+    'body': '\${WM_NCRBUTTONDOWN}$1'
   '${WM_NCRBUTTONUP}':
     'prefix': 'WM_NCRBUTTONUP'
-    'body': '\${WM_NCRBUTTONUP}'
+    'body': '\${WM_NCRBUTTONUP}$1'
   '${WM_NCXBUTTONDBLCLK}':
     'prefix': 'WM_NCXBUTTONDBLCLK'
-    'body': '\${WM_NCXBUTTONDBLCLK}'
+    'body': '\${WM_NCXBUTTONDBLCLK}$1'
   '${WM_NCXBUTTONDOWN}':
     'prefix': 'WM_NCXBUTTONDOWN'
-    'body': '\${WM_NCXBUTTONDOWN}'
+    'body': '\${WM_NCXBUTTONDOWN}$1'
   '${WM_NCXBUTTONUP}':
     'prefix': 'WM_NCXBUTTONUP'
-    'body': '\${WM_NCXBUTTONUP}'
+    'body': '\${WM_NCXBUTTONUP}$1'
   '${WM_NEXTDLGCTL}':
     'prefix': 'WM_NEXTDLGCTL'
-    'body': '\${WM_NEXTDLGCTL}'
+    'body': '\${WM_NEXTDLGCTL}$1'
   '${WM_NEXTMENU}':
     'prefix': 'WM_NEXTMENU'
-    'body': '\${WM_NEXTMENU}'
+    'body': '\${WM_NEXTMENU}$1'
   '${WM_NOTIFY}':
     'prefix': 'WM_NOTIFY'
-    'body': '\${WM_NOTIFY}'
+    'body': '\${WM_NOTIFY}$1'
   '${WM_NOTIFYFORMAT}':
     'prefix': 'WM_NOTIFYFORMAT'
-    'body': '\${WM_NOTIFYFORMAT}'
+    'body': '\${WM_NOTIFYFORMAT}$1'
   '${WM_NULL}':
     'prefix': 'WM_NULL'
-    'body': '\${WM_NULL}'
+    'body': '\${WM_NULL}$1'
   '${WM_PAINT}':
     'prefix': 'WM_PAINT'
-    'body': '\${WM_PAINT}'
+    'body': '\${WM_PAINT}$1'
   '${WM_PAINTCLIPBOARD}':
     'prefix': 'WM_PAINTCLIPBOARD'
-    'body': '\${WM_PAINTCLIPBOARD}'
+    'body': '\${WM_PAINTCLIPBOARD}$1'
   '${WM_PAINTICON}':
     'prefix': 'WM_PAINTICON'
-    'body': '\${WM_PAINTICON}'
+    'body': '\${WM_PAINTICON}$1'
   '${WM_PALETTECHANGED}':
     'prefix': 'WM_PALETTECHANGED'
-    'body': '\${WM_PALETTECHANGED}'
+    'body': '\${WM_PALETTECHANGED}$1'
   '${WM_PALETTEISCHANGING}':
     'prefix': 'WM_PALETTEISCHANGING'
-    'body': '\${WM_PALETTEISCHANGING}'
+    'body': '\${WM_PALETTEISCHANGING}$1'
   '${WM_PARENTNOTIFY}':
     'prefix': 'WM_PARENTNOTIFY'
-    'body': '\${WM_PARENTNOTIFY}'
+    'body': '\${WM_PARENTNOTIFY}$1'
   '${WM_PASTE}':
     'prefix': 'WM_PASTE'
-    'body': '\${WM_PASTE}'
+    'body': '\${WM_PASTE}$1'
   '${WM_PENWINFIRST}':
     'prefix': 'WM_PENWINFIRST'
-    'body': '\${WM_PENWINFIRST}'
+    'body': '\${WM_PENWINFIRST}$1'
   '${WM_PENWINLAST}':
     'prefix': 'WM_PENWINLAST'
-    'body': '\${WM_PENWINLAST}'
+    'body': '\${WM_PENWINLAST}$1'
   '${WM_POWER}':
     'prefix': 'WM_POWER'
-    'body': '\${WM_POWER}'
+    'body': '\${WM_POWER}$1'
   '${WM_POWERBROADCAST}':
     'prefix': 'WM_POWERBROADCAST'
-    'body': '\${WM_POWERBROADCAST}'
+    'body': '\${WM_POWERBROADCAST}$1'
   '${WM_PRINT}':
     'prefix': 'WM_PRINT'
-    'body': '\${WM_PRINT}'
+    'body': '\${WM_PRINT}$1'
   '${WM_PRINTCLIENT}':
     'prefix': 'WM_PRINTCLIENT'
-    'body': '\${WM_PRINTCLIENT}'
+    'body': '\${WM_PRINTCLIENT}$1'
   '${WM_QUERYDRAGICON}':
     'prefix': 'WM_QUERYDRAGICON'
-    'body': '\${WM_QUERYDRAGICON}'
+    'body': '\${WM_QUERYDRAGICON}$1'
   '${WM_QUERYENDSESSION}':
     'prefix': 'WM_QUERYENDSESSION'
-    'body': '\${WM_QUERYENDSESSION}'
+    'body': '\${WM_QUERYENDSESSION}$1'
   '${WM_QUERYNEWPALETTE}':
     'prefix': 'WM_QUERYNEWPALETTE'
-    'body': '\${WM_QUERYNEWPALETTE}'
+    'body': '\${WM_QUERYNEWPALETTE}$1'
   '${WM_QUERYOPEN}':
     'prefix': 'WM_QUERYOPEN'
-    'body': '\${WM_QUERYOPEN}'
+    'body': '\${WM_QUERYOPEN}$1'
   '${WM_QUERYUISTATE}':
     'prefix': 'WM_QUERYUISTATE'
-    'body': '\${WM_QUERYUISTATE}'
+    'body': '\${WM_QUERYUISTATE}$1'
   '${WM_QUEUESYNC}':
     'prefix': 'WM_QUEUESYNC'
-    'body': '\${WM_QUEUESYNC}'
+    'body': '\${WM_QUEUESYNC}$1'
   '${WM_QUIT}':
     'prefix': 'WM_QUIT'
-    'body': '\${WM_QUIT}'
+    'body': '\${WM_QUIT}$1'
   '${WM_RASDIALEVENT}':
     'prefix': 'WM_RASDIALEVENT'
-    'body': '\${WM_RASDIALEVENT}'
+    'body': '\${WM_RASDIALEVENT}$1'
   '${WM_RBUTTONDBLCLK}':
     'prefix': 'WM_RBUTTONDBLCLK'
-    'body': '\${WM_RBUTTONDBLCLK}'
+    'body': '\${WM_RBUTTONDBLCLK}$1'
   '${WM_RBUTTONDOWN}':
     'prefix': 'WM_RBUTTONDOWN'
-    'body': '\${WM_RBUTTONDOWN}'
+    'body': '\${WM_RBUTTONDOWN}$1'
   '${WM_RBUTTONUP}':
     'prefix': 'WM_RBUTTONUP'
-    'body': '\${WM_RBUTTONUP}'
+    'body': '\${WM_RBUTTONUP}$1'
   '${WM_RENDERALLFORMATS}':
     'prefix': 'WM_RENDERALLFORMATS'
-    'body': '\${WM_RENDERALLFORMATS}'
+    'body': '\${WM_RENDERALLFORMATS}$1'
   '${WM_RENDERFORMAT}':
     'prefix': 'WM_RENDERFORMAT'
-    'body': '\${WM_RENDERFORMAT}'
+    'body': '\${WM_RENDERFORMAT}$1'
   '${WM_SETCURSOR}':
     'prefix': 'WM_SETCURSOR'
-    'body': '\${WM_SETCURSOR}'
+    'body': '\${WM_SETCURSOR}$1'
   '${WM_SETFOCUS}':
     'prefix': 'WM_SETFOCUS'
-    'body': '\${WM_SETFOCUS}'
+    'body': '\${WM_SETFOCUS}$1'
   '${WM_SETFONT}':
     'prefix': 'WM_SETFONT'
-    'body': '\${WM_SETFONT}'
+    'body': '\${WM_SETFONT}$1'
   '${WM_SETHOTKEY}':
     'prefix': 'WM_SETHOTKEY'
-    'body': '\${WM_SETHOTKEY}'
+    'body': '\${WM_SETHOTKEY}$1'
   '${WM_SETICON}':
     'prefix': 'WM_SETICON'
-    'body': '\${WM_SETICON}'
+    'body': '\${WM_SETICON}$1'
   '${WM_SETREDRAW}':
     'prefix': 'WM_SETREDRAW'
-    'body': '\${WM_SETREDRAW}'
+    'body': '\${WM_SETREDRAW}$1'
   '${WM_SETTEXT}':
     'prefix': 'WM_SETTEXT'
-    'body': '\${WM_SETTEXT}'
+    'body': '\${WM_SETTEXT}$1'
   '${WM_SETTINGCHANGE}':
     'prefix': 'WM_SETTINGCHANGE'
-    'body': '\${WM_SETTINGCHANGE}'
+    'body': '\${WM_SETTINGCHANGE}$1'
   '${WM_SHOWWINDOW}':
     'prefix': 'WM_SHOWWINDOW'
-    'body': '\${WM_SHOWWINDOW}'
+    'body': '\${WM_SHOWWINDOW}$1'
   '${WM_SIZE}':
     'prefix': 'WM_SIZE'
-    'body': '\${WM_SIZE}'
+    'body': '\${WM_SIZE}$1'
   '${WM_SIZECLIPBOARD}':
     'prefix': 'WM_SIZECLIPBOARD'
-    'body': '\${WM_SIZECLIPBOARD}'
+    'body': '\${WM_SIZECLIPBOARD}$1'
   '${WM_SIZING}':
     'prefix': 'WM_SIZING'
-    'body': '\${WM_SIZING}'
+    'body': '\${WM_SIZING}$1'
   '${WM_SPOOLERSTATUS}':
     'prefix': 'WM_SPOOLERSTATUS'
-    'body': '\${WM_SPOOLERSTATUS}'
+    'body': '\${WM_SPOOLERSTATUS}$1'
   '${WM_STYLECHANGED}':
     'prefix': 'WM_STYLECHANGED'
-    'body': '\${WM_STYLECHANGED}'
+    'body': '\${WM_STYLECHANGED}$1'
   '${WM_STYLECHANGING}':
     'prefix': 'WM_STYLECHANGING'
-    'body': '\${WM_STYLECHANGING}'
+    'body': '\${WM_STYLECHANGING}$1'
   '${WM_SYNCPAINT}':
     'prefix': 'WM_SYNCPAINT'
-    'body': '\${WM_SYNCPAINT}'
+    'body': '\${WM_SYNCPAINT}$1'
   '${WM_SYSCHAR}':
     'prefix': 'WM_SYSCHAR'
-    'body': '\${WM_SYSCHAR}'
+    'body': '\${WM_SYSCHAR}$1'
   '${WM_SYSCOLORCHANGE}':
     'prefix': 'WM_SYSCOLORCHANGE'
-    'body': '\${WM_SYSCOLORCHANGE}'
+    'body': '\${WM_SYSCOLORCHANGE}$1'
   '${WM_SYSCOMMAND}':
     'prefix': 'WM_SYSCOMMAND'
-    'body': '\${WM_SYSCOMMAND}'
+    'body': '\${WM_SYSCOMMAND}$1'
   '${WM_SYSDEADCHAR}':
     'prefix': 'WM_SYSDEADCHAR'
-    'body': '\${WM_SYSDEADCHAR}'
+    'body': '\${WM_SYSDEADCHAR}$1'
   '${WM_SYSKEYDOWN}':
     'prefix': 'WM_SYSKEYDOWN'
-    'body': '\${WM_SYSKEYDOWN}'
+    'body': '\${WM_SYSKEYDOWN}$1'
   '${WM_SYSKEYUP}':
     'prefix': 'WM_SYSKEYUP'
-    'body': '\${WM_SYSKEYUP}'
+    'body': '\${WM_SYSKEYUP}$1'
   '${WM_TABLET_FIRST}':
     'prefix': 'WM_TABLET_FIRST'
-    'body': '\${WM_TABLET_FIRST}'
+    'body': '\${WM_TABLET_FIRST}$1'
   '${WM_TABLET_LAST}':
     'prefix': 'WM_TABLET_LAST'
-    'body': '\${WM_TABLET_LAST}'
+    'body': '\${WM_TABLET_LAST}$1'
   '${WM_TCARD}':
     'prefix': 'WM_TCARD'
-    'body': '\${WM_TCARD}'
+    'body': '\${WM_TCARD}$1'
   '${WM_THEMECHANGED}':
     'prefix': 'WM_THEMECHANGED'
-    'body': '\${WM_THEMECHANGED}'
+    'body': '\${WM_THEMECHANGED}$1'
   '${WM_TIMECHANGE}':
     'prefix': 'WM_TIMECHANGE'
-    'body': '\${WM_TIMECHANGE}'
+    'body': '\${WM_TIMECHANGE}$1'
   '${WM_TIMER}':
     'prefix': 'WM_TIMER'
-    'body': '\${WM_TIMER}'
+    'body': '\${WM_TIMER}$1'
   '${WM_UNDO}':
     'prefix': 'WM_UNDO'
-    'body': '\${WM_UNDO}'
+    'body': '\${WM_UNDO}$1'
   '${WM_UNICHAR}':
     'prefix': 'WM_UNICHAR'
-    'body': '\${WM_UNICHAR}'
+    'body': '\${WM_UNICHAR}$1'
   '${WM_UNINITMENUPOPUP}':
     'prefix': 'WM_UNINITMENUPOPUP'
-    'body': '\${WM_UNINITMENUPOPUP}'
+    'body': '\${WM_UNINITMENUPOPUP}$1'
   '${WM_UPDATEUISTATE}':
     'prefix': 'WM_UPDATEUISTATE'
-    'body': '\${WM_UPDATEUISTATE}'
+    'body': '\${WM_UPDATEUISTATE}$1'
   '${WM_USER}':
     'prefix': 'WM_USER'
-    'body': '\${WM_USER}'
+    'body': '\${WM_USER}$1'
   '${WM_USERCHANGED}':
     'prefix': 'WM_USERCHANGED'
-    'body': '\${WM_USERCHANGED}'
+    'body': '\${WM_USERCHANGED}$1'
   '${WM_VKEYTOITEM}':
     'prefix': 'WM_VKEYTOITEM'
-    'body': '\${WM_VKEYTOITEM}'
+    'body': '\${WM_VKEYTOITEM}$1'
   '${WM_VSCROLL}':
     'prefix': 'WM_VSCROLL'
-    'body': '\${WM_VSCROLL}'
+    'body': '\${WM_VSCROLL}$1'
   '${WM_VSCROLLCLIPBOARD}':
     'prefix': 'WM_VSCROLLCLIPBOARD'
-    'body': '\${WM_VSCROLLCLIPBOARD}'
+    'body': '\${WM_VSCROLLCLIPBOARD}$1'
   '${WM_WINDOWPOSCHANGED}':
     'prefix': 'WM_WINDOWPOSCHANGED'
-    'body': '\${WM_WINDOWPOSCHANGED}'
+    'body': '\${WM_WINDOWPOSCHANGED}$1'
   '${WM_WINDOWPOSCHANGING}':
     'prefix': 'WM_WINDOWPOSCHANGING'
-    'body': '\${WM_WINDOWPOSCHANGING}'
+    'body': '\${WM_WINDOWPOSCHANGING}$1'
   '${WM_WININICHANGE}':
     'prefix': 'WM_WININICHANGE'
-    'body': '\${WM_WININICHANGE}'
+    'body': '\${WM_WININICHANGE}$1'
   '${WM_WTSSESSION_CHANGE}':
     'prefix': 'WM_WTSSESSION_CHANGE'
-    'body': '\${WM_WTSSESSION_CHANGE}'
+    'body': '\${WM_WTSSESSION_CHANGE}$1'
   '${WM_XBUTTONDBLCLK}':
     'prefix': 'WM_XBUTTONDBLCLK'
-    'body': '\${WM_XBUTTONDBLCLK}'
+    'body': '\${WM_XBUTTONDBLCLK}$1'
   '${WM_XBUTTONDOWN}':
     'prefix': 'WM_XBUTTONDOWN'
-    'body': '\${WM_XBUTTONDOWN}'
+    'body': '\${WM_XBUTTONDOWN}$1'
   '${WM_XBUTTONUP}':
     'prefix': 'WM_XBUTTONUP'
-    'body': '\${WM_XBUTTONUP}'
+    'body': '\${WM_XBUTTONUP}$1'

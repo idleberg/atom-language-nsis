@@ -1,16 +1,16 @@
 '.source.nsis':
   'System::Alloc':
     'prefix': 'System::Alloc'
-    'body': 'System::Alloc ${1:size}'
+    'body': 'System::Alloc ${1:size}$2'
   'System::Call':
     'prefix': 'System::Call'
-    'body': 'System::Call "${1:parameters}"'
+    'body': 'System::Call "${1:parameters}"$2'
   'System::Copy':
     'prefix': 'System::Copy'
-    'body': 'System::Copy ${1:destination} ${2:source}'
+    'body': 'System::Copy ${1:destination} ${2:source}$3'
   'System::Free':
     'prefix': 'System::Free'
-    'body': 'System::Free \$${1:address}'
+    'body': 'System::Free \$${1:address}$2'
   'System::Get':
     'prefix': 'System::Get'
-    'body': 'System::Get "${1:parameters}"'
+    'body': 'System::Get "${1:parameters}"$2'

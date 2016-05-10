@@ -1,641 +1,641 @@
 '.source.nsis':
   '%BitmapCheck':
     'prefix': 'BitmapCheck'
-    'body': 'CheckBitmap "${1:bitmap}.bmp"'
+    'body': 'CheckBitmap "${1:bitmap}.bmp"$2'
   '%BkColorLicense':
     'prefix': 'BkColorLicense'
-    'body': 'LicenseBkColor "${1:color}"'
+    'body': 'LicenseBkColor "${1:color}"$2'
   '%BkColorLicense /gray (default)':
     'prefix': 'BkColorLicense /gray (default)'
-    'body': 'LicenseBkColor /gray'
+    'body': 'LicenseBkColor /gray$1'
   '%BkColorLicense /windows':
     'prefix': 'BkColorLicense /windows'
-    'body': 'LicenseBkColor /windows'
+    'body': 'LicenseBkColor /windows$1'
   '%Bring2Front':
     'prefix': 'Bring2Front'
-    'body': 'BringToFront'
+    'body': 'BringToFront$1'
   '%BufSizeFile':
     'prefix': 'BufSizeFile'
-    'body': 'FileBufSize ${1:buffer_size_in_mb}'
+    'body': 'FileBufSize ${1:buffer_size_in_mb}$2'
   '%ButtonTextInstall':
     'prefix': 'ButtonTextInstall'
-    'body': 'InstallButtonText "${1:button_text}"'
+    'body': 'InstallButtonText "${1:button_text}"$2'
   '%ButtonTextMisc':
     'prefix': 'ButtonTextMisc'
-    'body': 'MiscButtonText "${1:back_button_text}" "${2:next_button_text}" "${3:cancel_button_text}" "${4:close_button_text}"'
+    'body': 'MiscButtonText "${1:back_button_text}" "${2:next_button_text}" "${3:cancel_button_text}" "${4:close_button_text}"$5'
   '%ButtonTextUninstall':
     'prefix': 'ButtonTextUninstall'
-    'body': 'UninstallButtonText "${1:text}"'
+    'body': 'UninstallButtonText "${1:text}"$2'
   '%CallbacksPage':
     'prefix': 'CallbacksPage'
-    'body': 'PageCallbacks ${1:[creator_function]} ${2:[leave_function]}'
+    'body': 'PageCallbacks ${1:[creator_function]} ${2:[leave_function]}$3'
   '%CaptionUninstall':
     'prefix': 'CaptionUninstall'
-    'body': 'UninstallCaption "${1:caption}"'
+    'body': 'UninstallCaption "${1:caption}"$2'
   '%CheckCRC':
     'prefix': 'CheckCRC'
-    'body': 'CRCCheck ${off|on}'
+    'body': 'CRCCheck ${1:off|on}$2'
   '%CheckCRC off':
     'prefix': 'CheckCRC off'
-    'body': 'CRCCheck off'
+    'body': 'CRCCheck off$1'
   '%CheckCRC on (default)':
     'prefix': 'CheckCRC on (default)'
-    'body': 'CRCCheck on'
+    'body': 'CRCCheck on$1'
   '%CloseFile':
     'prefix': 'CloseFile'
-    'body': 'FileClose \$${1:handle}'
+    'body': 'FileClose \$${1:handle}$2'
   '%CloseFind':
     'prefix': 'CloseFind'
-    'body': 'FindClose \$${1:handle}'
+    'body': 'FindClose \$${1:handle}$2'
   '%CmpInt':
     'prefix': 'CmpInt'
-    'body': 'IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}'
+    'body': 'IntCmp ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6'
   '%CmpSStr':
     'prefix': 'CmpSStr'
-    'body': 'StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}'
+    'body': 'StrCmpS ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5'
   '%CmpStr':
     'prefix': 'CmpStr'
-    'body': 'StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}'
+    'body': 'StrCmp ${1:str1} ${2:str2} ${3:jump_if_equal} ${4:[jump_if_not_equal]}$5'
   '%CmpUInt':
     'prefix': 'CmpUInt'
-    'body': 'IntCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}'
+    'body': 'IntCmpU ${1:val1} ${2:val2} ${3:jump_if_equal} ${4:[jump_if_val1_less]} ${5:[jump_if_val1_more]}$6'
   '%CpyStr':
     'prefix': 'CpyStr'
-    'body': 'StrCpy \$${1:user_var} "${2:str}" ${3:[maxlen]} ${4:[start_offset]}'
+    'body': 'StrCpy \$${1:user_var} "${2:str}" ${3:[maxlen]} ${4:[start_offset]}$5'
   '%DataLicense':
     'prefix': 'DataLicense'
-    'body': 'LicenseData "${1:license_file}"'
+    'body': 'LicenseData "${1:license_file}"$2'
   '%DataLicense rtf':
     'prefix': 'DataLicense rtf'
-    'body': 'LicenseData "${1:license_file}.rtf"'
+    'body': 'LicenseData "${1:license_file}.rtf"$2'
   '%DataLicense txt':
     'prefix': 'DataLicense txt'
-    'body': 'LicenseData "${1:license_file}.txt"'
+    'body': 'LicenseData "${1:license_file}.txt"$2'
   '%DirectoryCreate':
     'prefix': 'DirectoryCreate'
-    'body': 'CreateDirectory "${1:path_to_create}"'
+    'body': 'CreateDirectory "${1:path_to_create}"$2'
   '%DirRM':
     'prefix': 'DirRM'
-    'body': 'RMDir "${1:directory_name}"'
+    'body': 'RMDir "${1:directory_name}"$2'
   '%DirRM /r /REBOOTOK':
     'prefix': 'DirRM /r /REBOOTOK'
-    'body': 'RMDir /r /REBOOTOK "${1:directory_name}"'
+    'body': 'RMDir /r /REBOOTOK "${1:directory_name}"$2'
   '%DirRM /REBOOTOK':
     'prefix': 'DirRM /REBOOTOK'
-    'body': 'RMDir /REBOOTOK "${1:directory_name}"'
+    'body': 'RMDir /REBOOTOK "${1:directory_name}"$2'
   '%DLLReg':
     'prefix': 'DLLReg'
-    'body': 'RegDLL "${1:dllfile}" ${2:entrypoint_name}'
+    'body': 'RegDLL "${1:dllfile}" ${2:entrypoint_name}$2'
   '%DPIAwareManifest':
     'prefix': 'DPIAwareManifest'
-    'body': 'ManifestDPIAware ${1:notset|true|false}'
+    'body': 'ManifestDPIAware ${1:notset|true|false}$2'
   '%DPIAwareManifest false':
     'prefix': 'DPIAwareManifest false'
-    'body': 'ManifestDPIAware false'
+    'body': 'ManifestDPIAware false$1'
   '%DPIAwareManifest notset':
     'prefix': 'DPIAwareManifest notset'
-    'body': 'ManifestDPIAware notset'
+    'body': 'ManifestDPIAware notset$1'
   '%DPIAwareManifest true':
     'prefix': 'DPIAwareManifest true'
-    'body': 'ManifestDPIAware true'
+    'body': 'ManifestDPIAware true$1'
   '%EnvStringsExpand':
     'prefix': 'EnvStringsExpand'
-    'body': 'ExpandEnvStrings \$${1:user_var} "${2:string}"'
+    'body': 'ExpandEnvStrings \$${1:user_var} "${2:string}"$3'
   '%EnvStrRead':
     'prefix': 'EnvStrRead'
-    'body': 'ReadEnvStr \$${1:user_var} "${2:name}"'
+    'body': 'ReadEnvStr \$${1:user_var} "${2:name}"$3'
   '%ErrorsClear':
     'prefix': 'ErrorsClear'
-    'body': 'ClearErrors'
+    'body': 'ClearErrors$1'
   '%ErrorTextFile':
     'prefix': 'ErrorTextFile'
-    'body': 'FileErrorText "${1:error_text}"'
+    'body': 'FileErrorText "${1:error_text}"$2'
   '%ExecutionLevelRequest':
     'prefix': 'ExecutionLevelRequest'
-    'body': 'RequestExecutionLevel ${1:none|user|admin|highest}'
+    'body': 'RequestExecutionLevel ${1:admin|none|user|highest}$2'
   '%ExecutionLevelRequest admin':
-    'prefix': 'ExecutionLevelRequest admin'
-    'body': 'RequestExecutionLevel admin'
+    'prefix': 'ExecutionLevelRequest admin (default)'
+    'body': 'RequestExecutionLevel admin$1'
   '%ExecutionLevelRequest highest':
     'prefix': 'ExecutionLevelRequest highest'
-    'body': 'RequestExecutionLevel highest'
+    'body': 'RequestExecutionLevel highest$1'
   '%ExecutionLevelRequest none (default)':
-    'prefix': 'ExecutionLevelRequest none (default)'
-    'body': 'RequestExecutionLevel none'
+    'prefix': 'ExecutionLevelRequest none'
+    'body': 'RequestExecutionLevel none$1'
   '%ExecutionLevelRequest user':
     'prefix': 'ExecutionLevelRequest user'
-    'body': 'RequestExecutionLevel user'
+    'body': 'RequestExecutionLevel user$1'
   '%FileCopy':
     'prefix': 'FileCopy'
-    'body': 'CopyFiles "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+    'body': 'CopyFiles "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}$4'
   '%FileCopy /FILESONLY':
     'prefix': 'FileCopy /FILESONLY'
-    'body': 'CopyFiles /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+    'body': 'CopyFiles /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}$4'
   '%FileCopy /SILENT':
     'prefix': 'FileCopy /SILENT'
-    'body': 'CopyFiles /SILENT "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+    'body': 'CopyFiles /SILENT "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}$4'
   '%FileCopy /SILENT /FILESONLY':
     'prefix': 'FileCopy /SILENT /FILESONLY'
-    'body': 'CopyFiles /SILENT /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}'
+    'body': 'CopyFiles /SILENT /FILESONLY "${1:filespec_on_destsys}" "${2:destination_path}" ${3:[size_of_files_in_kb]}$4'
   '%FileReserve':
     'prefix': 'FileReserve'
-    'body': 'ReserveFile "${1:file}"'
+    'body': 'ReserveFile "${1:file}"$2'
   '%FileReserve /nonfatal':
     'prefix': 'FileReserve /nonfatal'
-    'body': 'ReserveFile /nonfatal "${1:file}"'
+    'body': 'ReserveFile /nonfatal "${1:file}"$2'
   '%FileReserve /nonfatal /r':
     'prefix': 'FileReserve /nonfatal /r'
-    'body': 'ReserveFile nonfatal/r "${1:file}"'
+    'body': 'ReserveFile nonfatal/r "${1:file}"$2'
   '%FirstFind':
     'prefix': 'FirstFind'
-    'body': 'FindFirst \$${1:handle} \$${2:user_var} "${2:filespec}"'
+    'body': 'FindFirst \$${1:handle} \$${2:user_var} "${3:filespec}"$4'
   '%FmtInt':
     'prefix': 'FmtInt'
-    'body': 'IntFmt \$${1:user_var} "${2:format}" "${3:numberstring}"'
+    'body': 'IntFmt \$${1:user_var} "${2:format}" "${3:numberstring}"$4'
   '%FontCreate':
     'prefix': 'FontCreate'
-    'body': 'CreateFont \$${1:user_var} "${2:face_name}" ${3:[height] [weight]}'
+    'body': 'CreateFont \$${1:user_var} "${2:face_name}" ${3:[height] [weight]}$4'
   '%ForceSelectionLicense checkbox':
     'prefix': 'ForceSelectionLicense checkbox'
-    'body': 'LicenseForceSelection checkbox "${2:accept_text}"'
+    'body': 'LicenseForceSelection checkbox "${2:accept_text}"$3'
   '%ForceSelectionLicense off (default)':
     'prefix': 'ForceSelectionLicense off (default)'
-    'body': 'LicenseForceSelection off "${2:accept_text}" "${3:decline_text}"'
+    'body': 'LicenseForceSelection off "${2:accept_text}" "${3:decline_text}"$4'
   '%ForceSelectionLicense radiobuttons':
     'prefix': 'ForceSelectionLicense radiobuttons'
-    'body': 'LicenseForceSelection radiobuttons "${2:accept_text}" "${3:decline_text}"'
+    'body': 'LicenseForceSelection radiobuttons "${2:accept_text}" "${3:decline_text}"$4'
   '%GetInstTypeText':
     'prefix': 'GetInstTypeText'
-    'body': 'InstTypeGetText ${1:inst_type_idx} \$${2:user_var}'
+    'body': 'InstTypeGetText ${1:inst_type_idx} \$${2:user_var}$3'
   '%GetSectionFlags':
     'prefix': 'GetSectionFlags'
-    'body': 'SectionGetFlags \${${1:section_index}} \$${2:user_var}'
+    'body': 'SectionGetFlags \${${1:section_index}} \$${2:user_var}$3'
   '%GetSectionInstTypes':
     'prefix': 'GetSectionInstTypes'
-    'body': 'SectionGetInstTypes \${${1:section_index}} \$${2:user_var}'
+    'body': 'SectionGetInstTypes \${${1:section_index}} \$${2:user_var}$3'
   '%GetSectionSize':
     'prefix': 'GetSectionSize'
-    'body': 'SectionGetSize \${${1:section_index}} \$${2:user_var}'
+    'body': 'SectionGetSize \${${1:section_index}} \$${2:user_var}$3'
   '%GetSectionText':
     'prefix': 'GetSectionText'
-    'body': 'SectionGetText \${${1:section_index}} \$${2:user_var}'
+    'body': 'SectionGetText \${${1:section_index}} \$${2:user_var}$3'
   '%Go2':
     'prefix': 'Go2'
-    'body': 'Goto ${1:label_to_jump_to}'
+    'body': 'Goto ${1:label_to_jump_to}$2'
   '%IconUninstall':
     'prefix': 'IconUninstall'
-    'body': 'UninstallIcon "${1:icon}.ico"'
+    'body': 'UninstallIcon "${1:icon}.ico"$2'
 
   '%IconWindow':
     'prefix': 'IconWindow'
-    'body': 'WindowIcon ${1:on|off}'
+    'body': 'WindowIcon ${1:on|off}$2'
   '%IconWindow off':
     'prefix': 'IconWindow off'
-    'body': 'WindowIcon off'
+    'body': 'WindowIcon off$1'
   '%IconWindow on':
     'prefix': 'IconWindow on'
-    'body': 'WindowIcon on'
+    'body': 'WindowIcon on$1'
   '%INIFlush':
     'prefix': 'INIFlush'
-    'body': 'FlushINI "${1:ini_filename}"'
+    'body': 'FlushINI "${1:ini_filename}"$2'
   '%INISecDelete':
     'prefix': 'INISecDelete'
-    'body': 'DeleteINISec "${1:ini_filename}" "${2:section_name}"'
+    'body': 'DeleteINISec "${1:ini_filename}" "${2:section_name}"$3'
   '%INIStrDelete':
     'prefix': 'INIStrDelete'
-    'body': 'DeleteINIStr "${1:ini_filename}" "${2:section_name}" "${3:str_name}"'
+    'body': 'DeleteINIStr "${1:ini_filename}" "${2:section_name}" "${3:str_name}"$4'
   '%INIStrRead':
     'prefix': 'INIStrRead'
-    'body': 'ReadINIStr \$${1:user_var} "${2:ini_filename}" "${3:section_name}" "${4:entry_name}"'
+    'body': 'ReadINIStr \$${1:user_var} "${2:ini_filename}" "${3:section_name}" "${4:entry_name}"$5'
   '%INIStrWrite':
     'prefix': 'INIStrWrite'
-    'body': 'WriteINIStr "${1:ini_filename}" "${2:section_name}" "${3:entry_name}" "${4:value}"'
+    'body': 'WriteINIStr "${1:ini_filename}" "${2:section_name}" "${3:entry_name}" "${4:value}"$5'
   '%InstallSilent':
     'prefix': 'InstallSilent'
-    'body': 'SilentInstall ${1:normal|silent|silentlog}'
+    'body': 'SilentInstall ${1:normal|silent|silentlog}$2'
   '%InstallSilent normal (default)':
     'prefix': 'InstallSilent normal (default)'
-    'body': 'SilentInstall normal'
+    'body': 'SilentInstall normal$1'
   '%InstallSilent silent':
     'prefix': 'InstallSilent silent'
-    'body': 'SilentInstall silent'
+    'body': 'SilentInstall silent$1'
   '%InstallSilent silentlog':
     'prefix': 'InstallSilent silentlog'
-    'body': 'SilentInstall silentlog'
+    'body': 'SilentInstall silentlog$1'
   '%InstDetailsShow':
     'prefix': 'InstDetailsShow'
-    'body': 'ShowInstDetails hide|show|nevershow'
+    'body': 'ShowInstDetails ${1:hide|show|nevershow}$2'
   '%InstDetailsShow hide (default)':
     'prefix': 'InstDetailsShow hide (default)'
-    'body': 'ShowInstDetails hide'
+    'body': 'ShowInstDetails hide$1'
   '%InstDetailsShow nevershow':
     'prefix': 'InstDetailsShow nevershow'
-    'body': 'ShowInstDetails nevershow'
+    'body': 'ShowInstDetails nevershow$1'
   '%InstDetailsShow show':
     'prefix': 'InstDetailsShow show'
-    'body': 'ShowInstDetails show'
+    'body': 'ShowInstDetails show$1'
   '%LangString License':
     'prefix': 'LangString License'
-    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}"'
+    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}"$4'
   '%LangString License rtf':
     'prefix': 'LangString License rtf'
-    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.rtf"'
+    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.rtf"$4'
   '%LangString License txt':
     'prefix': 'LangString License txt'
-    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.txt"'
+    'body': 'LicenseBkColor ${1:name} \$\\{LANG_${2:ENGLISH}\} "${3:license_path}.txt"$4'
   '%LanguageFileLoad':
     'prefix': 'LanguageFileLoad'
-    'body': 'LoadLanguageFile "${1:language_file}.nlf"'
+    'body': 'LoadLanguageFile "${1:language_file}.nlf"$2'
   '%LenStr':
     'prefix': 'LenStr'
-    'body': 'StrLen \$${1:user_var} "${2:str}"'
+    'body': 'StrLen \$${1:user_var} "${2:str}"$3'
   '%MessageSend':
     'prefix': 'MessageSend'
-    'body': 'SendMessage \$${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}'
+    'body': 'SendMessage \$${1:HWND} ${2:msg} ${3:wparam} ${4:lparam}$5'
   '%NextFind':
     'prefix': 'NextFind'
-    'body': 'FindNext \$${1:handle} \$${2:user_var}'
+    'body': 'FindNext \$${1:handle} \$${2:user_var}$3'
   '%OpenFile':
     'prefix': 'OpenFile'
-    'body': 'FileOpen \$${1:user_var} "${2:filename}" ${3:openmode}'
+    'body': 'FileOpen \$${1:user_var} "${2:filename}" ${3:openmode}$4'
   '%OpInt':
     'prefix': 'OpInt'
-    'body': 'IntOp \$${1:user_var} ${2:value1} ${3:operator} ${4:value2}'
+    'body': 'IntOp \$${1:user_var} ${2:value1} ${3:operator} ${4:value2}$5'
   '%PageUninst':
     'prefix': 'PageUninst'
-    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}'
+    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}$5'
   '%PageUninst /ENABLECANCEL':
     'prefix': 'PageUninst /ENABLECANCEL'
-    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL'
+    'body': 'UninstPage ${1:internal_page_type} ${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} /ENABLECANCEL$5'
   '%PageUninst components':
     'prefix': 'PageUninst components'
-    'body': 'UninstPage components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'UninstPage components ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4'
   '%PageUninst custom':
     'prefix': 'PageUninst custom'
-    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}"'
+    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}"$4'
   '%PageUninst custom /ENABLECANCEL':
     'prefix': 'PageUninst custom /ENABLECANCEL'
-    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}" /ENABLECANCEL'
+    'body': 'UninstPage custom ${1:creator_function} ${2:[leave_function]} "${3:caption}" /ENABLECANCEL$4'
   '%PageUninst directory':
     'prefix': 'PageUninst directory'
-    'body': 'UninstPage directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'UninstPage directory ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4'
   '%PageUninst instfiles':
     'prefix': 'PageUninst instfiles'
-    'body': 'UninstPage instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+    'body': 'UninstPage instfiles ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5'
   '%PageUninst license':
     'prefix': 'PageUninst license'
-    'body': 'UninstPage license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}'
+    'body': 'UninstPage license ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]}$4'
   '%PageUninst uninstConfirm':
     'prefix': 'PageUninst uninstConfirm'
-    'body': 'UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}'
+    'body': 'UninstPage uninstConfirm ${1:[pre_function]} ${2:[show_function]} ${3:[leave_function]} ${4:/ENABLECANCEL}$5'
   '%PathSearch':
     'prefix': 'PathSearch'
-    'body': 'SearchPath \$${1:user_var} "${2:filename}"'
+    'body': 'SearchPath \$${1:user_var} "${2:filename}"$3'
   '%PluginsDirInit':
     'prefix': 'PluginsDirInit'
-    'body': 'InitPluginsDir'
+    'body': 'InitPluginsDir$1'
   '%PrintDetail':
     'prefix': 'PrintDetail'
-    'body': 'DetailPrint "${1:user_message}"'
+    'body': 'DetailPrint "${1:user_message}"$2'
   '%ReadByteFile':
     'prefix': 'ReadByteFile'
-    'body': 'FileReadByte \$${1:handle} \$${2:user_var}'
+    'body': 'FileReadByte \$${1:handle} \$${2:user_var}$3'
   '%ReadFile':
     'prefix': 'ReadFile'
-    'body': 'FileRead \$${1:handle} \$${2:user_var} ${3:[maxlen]}'
+    'body': 'FileRead \$${1:handle} \$${2:user_var} ${3:[maxlen]}$4'
   '%ReadUTF16LEFile':
     'prefix': 'ReadUTF16LEFile'
-    'body': 'FileReadUTF16LE \$${1:handle} \$${2:user_var}'
+    'body': 'FileReadUTF16LE \$${1:handle} \$${2:user_var}$3'
   '%ReadWordFile':
     'prefix': 'ReadWordFile'
-    'body': 'FileReadWord \$${1:handle} \$${2:user_var}'
+    'body': 'FileReadWord \$${1:handle} \$${2:user_var}$3'
   '%RegBinWrite':
     'prefix': 'RegBinWrite'
-    'body': 'WriteRegBin ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:valuedata}"'
+    'body': 'WriteRegBin ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:valuedata}"$5'
   '%RegDLLUn':
     'prefix': 'RegDLLUn'
-    'body': 'UnRegDLL "${1:dllfile}"'
+    'body': 'UnRegDLL "${1:dllfile}"$2'
   '%RegDWORDRead':
     'prefix': 'RegDWORDRead'
-    'body': 'ReadRegDWORD \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"'
+    'body': 'ReadRegDWORD \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"$5'
   '%RegDWORDWrite':
     'prefix': 'RegDWORDWrite'
-    'body': 'WriteRegDWORD ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+    'body': 'WriteRegDWORD ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"$5'
   '%RegExpandStrWrite':
     'prefix': 'RegExpandStrWrite'
-    'body': 'WriteRegExpandStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+    'body': 'WriteRegExpandStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"$5'
   '%RegKeyDelete':
     'prefix': 'RegKeyDelete'
-    'body': 'DeleteRegKey ${1:root_key} "${2:subkey}"'
+    'body': 'DeleteRegKey ${1:root_key} "${2:subkey}"$3'
   '%RegKeyDelete /ifempty':
     'prefix': 'RegKeyDelete /ifempty'
-    'body': 'DeleteRegKey /ifempty ${1:root_key} "${2:subkey}"'
+    'body': 'DeleteRegKey /ifempty ${1:root_key} "${2:subkey}"$3'
   '%RegKeyEnum':
     'prefix': 'RegKeyEnum'
-    'body': 'EnumRegKey \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}'
+    'body': 'EnumRegKey \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}$5'
   '%RegStrRead':
     'prefix': 'RegStrRead'
-    'body': 'ReadRegStr \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"'
+    'body': 'ReadRegStr \$${1:user_var} ${2:root_key} "${3:sub_key}" "${4:name}"$5'
   '%RegStrWrite':
     'prefix': 'RegStrWrite'
-    'body': 'WriteRegStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"'
+    'body': 'WriteRegStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"$5'
   '%RegValueDelete':
     'prefix': 'RegValueDelete'
-    'body': 'DeleteRegValue ${1:root_key} "${2:subkey}" "${3:key_name}"'
+    'body': 'DeleteRegValue ${1:root_key} "${2:subkey}" "${3:key_name}"$3'
   '%RegValueEnum':
     'prefix': 'RegValueEnum'
-    'body': 'EnumRegValue \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}'
+    'body': 'EnumRegValue \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}$5'
   '%SeekFile':
     'prefix': 'SeekFile'
-    'body': 'FileSeek \$${1:handle} ${2:offset} ${3:[mode]}'
+    'body': 'FileSeek \$${1:handle} ${2:offset} ${3:[mode]}$4'
   '%SetInstTypeText':
     'prefix': 'SetInstTypeText'
-    'body': 'InstTypeSetText ${1:inst_type_idx} "${2:text}"'
+    'body': 'InstTypeSetText ${1:inst_type_idx} "${2:text}"$3'
   '%SetLog':
     'prefix': 'SetLog'
-    'body': 'LogSet ${1:on|off}'
+    'body': 'LogSet ${1:on|off}$2'
   '%SetLog off':
     'prefix': 'SetLog off'
-    'body': 'LogSet off'
+    'body': 'LogSet off$1'
   '%SetLog on':
     'prefix': 'SetLog on'
-    'body': 'LogSet on'
+    'body': 'LogSet on$1'
   '%SetSectionFlags':
     'prefix': 'SetSectionFlags'
-    'body': 'SectionSetFlags \${${1:section_index}} ${2:section_flags}'
+    'body': 'SectionSetFlags \${${1:section_index}} ${2:section_flags}$3'
   '%SetSectionInstTypes':
     'prefix': 'SetSectionInstTypes'
-    'body': 'SectionSetInstTypes \${${1:section_index}} ${2:inst_types}'
+    'body': 'SectionSetInstTypes \${${1:section_index}} ${2:inst_types}$3'
   '%SetSectionSize':
     'prefix': 'SetSectionSize'
-    'body': 'SectionSetSize \${${1:section_index}} ${2:new_size}'
+    'body': 'SectionSetSize \${${1:section_index}} ${2:new_size}$3'
   '%SetSectionText':
     'prefix': 'SetSectionText'
-    'body': 'SectionSetText \${${1:section_index}} ${2:section_text}'
+    'body': 'SectionSetText \${${1:section_index}} ${2:section_text}$3'
   '%ShellExec':
     'prefix': 'ShellExec'
-    'body': 'ExecShell ${1:action} "${2:command}"'
+    'body': 'ExecShell ${1:action} "${2:command}"$3'
   '%ShellExec open':
     'prefix': 'ShellExec open'
-    'body': 'ExecShell open "${2:command}"'
+    'body': 'ExecShell open "${2:command}"$3'
   '%ShellExec print':
     'prefix': 'ShellExec print'
-    'body': 'ExecShell print "${2:command}"'
+    'body': 'ExecShell print "${2:command}"$3'
   '%ShortCutCreate':
     'prefix': 'ShortCutCreate'
-    'body': 'CreateShortCut "${1:link}.lnk" ${2:target}'
+    'body': 'CreateShortCut "${1:link}.lnk" ${2:target}$3'
   '%StyleXP':
     'prefix': 'StyleXP'
-    'body': 'XPStyle ${1:off|on}'
+    'body': 'XPStyle ${1:off|on}$2'
   '%StyleXP off (default)':
     'prefix': 'StyleXP off (default)'
-    'body': 'XPStyle off'
+    'body': 'XPStyle off$1'
   '%StyleXP on':
     'prefix': 'StyleXP on'
-    'body': 'XPStyle on'
+    'body': 'XPStyle on$1'
   '%SubCaptionUninstall':
     'prefix': 'SubCaptionUninstall'
-    'body': 'UninstallSubCaption ${1:page_number} "${2:subcaption}"'
+    'body': 'UninstallSubCaption ${1:page_number} "${2:subcaption}"$3'
   '%SupportedOSManifest':
     'prefix': 'SupportedOSManifest'
-    'body': 'ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}'
+    'body': 'ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}$2'
   '%SupportedOSManifest all':
     'prefix': 'SupportedOSManifest all'
-    'body': 'ManifestSupportedOS all'
+    'body': 'ManifestSupportedOS all$1'
   '%SupportedOSManifest none':
     'prefix': 'SupportedOSManifest none'
-    'body': 'ManifestSupportedOS none'
+    'body': 'ManifestSupportedOS none$1'
   '%SupportedOSManifest Win7':
     'prefix': 'SupportedOSManifest Win7'
-    'body': 'ManifestSupportedOS Win7'
+    'body': 'ManifestSupportedOS Win7$1'
   '%SupportedOSManifest Win8':
     'prefix': 'SupportedOSManifest Win8'
-    'body': 'ManifestSupportedOS Win8'
+    'body': 'ManifestSupportedOS Win8$1'
   '%SupportedOSManifest WinVista':
     'prefix': 'SupportedOSManifest WinVista'
-    'body': 'ManifestSupportedOS WinVista'
+    'body': 'ManifestSupportedOS WinVista$1'
   '%TextCompleted':
     'prefix': 'TextCompleted'
-    'body': 'ComponentText "${1:text}" "${2:[subtext]}" "${3:[subtext2]}"'
+    'body': 'ComponentText "${1:text}" "${2:[subtext]}" "${3:[subtext2]}"$4'
   '%TextDetailsButton':
     'prefix': 'TextDetailsButton'
-    'body': 'DetailsButtonText "${1:text}"'
+    'body': 'DetailsButtonText "${1:text}"$2'
   '%TextDir':
     'prefix': 'TextDir'
-    'body': 'DirText "${1:[text]}" "${2:[subtext]}" "${3:[browse_button_text]}" "${4:[browse_dlg_text]}"'
+    'body': 'DirText "${1:[text]}" "${2:[subtext]}" "${3:[browse_button_text]}" "${4:[browse_dlg_text]}"$5'
   '%TextLicense':
     'prefix': 'TextLicense'
-    'body': 'LicenseText "${1:text}" "${2:button_text}"'
+    'body': 'LicenseText "${1:text}" "${2:button_text}"$3'
   '%TextLog':
     'prefix': 'TextLog'
-    'body': 'LogText "${1:text}"'
+    'body': 'LogText "${1:text}"$2'
   '%TextSpace':
     'prefix': 'TextSpace'
-    'body': 'SpaceTexts ${1:req_text} ${2:avail_text}'
+    'body': 'SpaceTexts ${1:req_text} ${2:avail_text}$3'
   '%TextUninstall':
     'prefix': 'TextUninstall'
-    'body': 'UninstallText "${1:text}" "${2:[subtext}"'
+    'body': 'UninstallText "${1:text}" "${2:[subtext}"$3'
   '%UIChange':
     'prefix': 'UIChange'
-    'body': 'ChangeUI ${1:dialog} "${2:ui_file}.exe"'
+    'body': 'ChangeUI ${1:dialog} "${2:ui_file}.exe"$3'
   '%UninstallerWrite':
     'prefix': 'UninstallerWrite'
-    'body': 'WriteUninstaller "${1:exename}.exe"'
+    'body': 'WriteUninstaller "${1:exename}.exe"$2'
   '%UnInstallSilent':
     'prefix': 'UnInstallSilent'
-    'body': 'SilentUnInstall ${1:normal|silent|silentlog}'
+    'body': 'SilentUnInstall ${1:normal|silent|silentlog}$2'
   '%UnInstallSilent normal (default)':
     'prefix': 'UnInstallSilent normal (default)'
-    'body': 'SilentUnInstall normal'
+    'body': 'SilentUnInstall normal$1'
   '%UnInstallSilent silent':
     'prefix': 'UnInstallSilent silent'
-    'body': 'SilentUnInstall silent'
+    'body': 'SilentUnInstall silent$1'
   '%UnInstallSilent silentlog':
     'prefix': 'UnInstallSilent silentlog'
-    'body': 'SilentUnInstall silentlog'
+    'body': 'SilentUnInstall silentlog$1'
   '%UninstDetailsShow':
     'prefix': 'UninstDetailsShow'
-    'body': 'ShowUninstDetails hide|show|nevershow'
+    'body': 'ShowUninstDetails ${1:hide|show|nevershow}$2'
   '%UninstDetailsShow hide (default)':
     'prefix': 'UninstDetailsShow hide (default)'
-    'body': 'ShowUninstDetails hide'
+    'body': 'ShowUninstDetails hide$1'
   '%UninstDetailsShow nevershow':
     'prefix': 'UninstDetailsShow nevershow'
-    'body': 'ShowUninstDetails nevershow'
+    'body': 'ShowUninstDetails nevershow$1'
   '%UninstDetailsShow show':
     'prefix': 'UninstDetailsShow show'
-    'body': 'ShowUninstDetails show'
+    'body': 'ShowUninstDetails show$1'
   '%VarDir':
     'prefix': 'VarDir'
-    'body': 'DirVar \$${1:user_var}'
+    'body': 'DirVar \$${1:user_var}$2'
   '%VerifyDir':
     'prefix': 'VerifyDir'
-    'body': 'DirVerify ${1:auto|leave}'
+    'body': 'DirVerify ${1:auto|leave}$2'
   '%VerifyDir auto (default)':
     'prefix': 'VerifyDir auto (default)'
-    'body': 'DirVerify auto'
+    'body': 'DirVerify auto$1'
   '%VerifyDir leave':
     'prefix': 'VerifyDir leave'
-    'body': 'DirVerify leave'
+    'body': 'DirVerify leave$1'
   '%WaitExec':
     'prefix': 'WaitExec'
-    'body': 'ExecShell "${1:command}"'
+    'body': 'ExecShell "${1:command}"$2'
   '%WaitExec $var':
     'prefix': 'WaitExec $var'
-    'body': 'ExecShell "${1:command}" \$${2:user_var}'
+    'body': 'ExecShell "${1:command}" \$${2:user_var}$3'
   '%WindowEnable':
     'prefix': 'WindowEnable'
-    'body': 'EnableWindow \$${1:hwnd} ${2:1|0}'
+    'body': 'EnableWindow \$${1:hwnd} ${2:1|0}$3'
   '%WindowFind':
     'prefix': 'WindowFind'
-    'body': 'FindWindow \$${1:user_var} "${2:windowclass}"'
+    'body': 'FindWindow \$${1:user_var} "${2:windowclass}"$3'
   '%WindowHide':
     'prefix': 'WindowHide'
-    'body': 'HideWindow'
+    'body': 'HideWindow$1'
   '%WindowIs':
     'prefix': 'WindowIs'
-    'body': 'IsWindow \$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}'
+    'body': 'IsWindow \$${1:HWND} ${2:jump_if_window} ${3:[jump_if_not_window]}$4'
   '%WindowLock':
     'prefix': 'WindowLock'
-    'body': 'LockWindow ${on|off}'
+    'body': 'LockWindow ${1:on|off}$2'
   '%WindowLock off':
     'prefix': 'WindowLock off'
-    'body': 'LockWindow off'
+    'body': 'LockWindow off$1'
   '%WindowLock on':
     'prefix': 'WindowLock on'
-    'body': 'LockWindow on'
+    'body': 'LockWindow on$1'
   '%WindowShow':
     'prefix': 'WindowShow'
-    'body': 'ShowWindow \$${1:hwnd} ${2:show_state}'
+    'body': 'ShowWindow \$${1:hwnd} ${2:show_state}$3'
   '%WriteByteFile':
     'prefix': 'WriteByteFile'
-    'body': 'FileWriteByte \$${1:handle} "${2:string}"'
+    'body': 'FileWriteByte \$${1:handle} "${2:string}"$3'
   '%WriteFile':
     'prefix': 'WriteFile'
-    'body': 'FileWrite \$${1:handle} "${2:string}"'
+    'body': 'FileWrite \$${1:handle} "${2:string}"$3'
   '%WriteUTF16LEFile':
     'prefix': 'WriteUTF16LEFile'
-    'body': 'FileWriteUTF16LE \$${1:handle} "${2:string}"'
+    'body': 'FileWriteUTF16LE \$${1:handle} "${2:string}"$3'
   '%{AddWordS}':
     'prefix': 'AddWordS'
-    'body': '\${WordAddS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
+    'body': '\${WordAddS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}$5'
   '%{AddWord}':
     'prefix': 'AddWord'
-    'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
+    'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}$5'
   '%{CmdIf}':
     'prefix': 'CmdIf'
-    'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}'
+    'body': '\${IfCmd} ${1:command} \${|} ${2:command} \${|}$3'
   '%{CompareSText}':
     'prefix': 'CompareSText'
-    'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
+    'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"$5'
   '%{CompareText}':
     'prefix': 'CompareText'
-    'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
+    'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"$5'
   '%{CompareVersion}':
     'prefix': 'CompareVersion'
-    'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}'
+    'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}$4'
   '%{DoExit}':
     'prefix': 'DoExit'
-    'body': '\${ExitDo}'
+    'body': '\${ExitDo}$1'
   '%{ExistsFile}':
     'prefix': 'ExistsFile'
-    'body': '\${FileExists} "${1:file}"'
+    'body': '\${FileExists} "${1:file}"$2'
   '%{FilterStrS}':
     'prefix': 'FilterStrS'
-    'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
+    'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}$6'
   '%{FilterStr}':
     'prefix': 'FilterStr'
-    'body': '\${StrFilter} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}'
+    'body': '\${StrFilter} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}$6'
   '%{Find2xSWord}':
     'prefix': 'Find2xSWord'
-    'body': '\${WordFind2xS} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
+    'body': '\${WordFind2xS} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}$6'
   '%{Find2xWord}':
     'prefix': 'Find2xWord'
-    'body': '\${WordFind2x} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}'
+    'body': '\${WordFind2x} "${1:input}" "${2:delimiter1}" "${3:delimiter2}" "${4:options}" \$${5:output}$6'
   '%{Find3xSWord}':
     'prefix': 'Find3xSWord'
-    'body': '\${WordFind3xS} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
+    'body': '\${WordFind3xS} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}$7'
   '%{Find3xWord}':
     'prefix': 'Find3xWord'
-    'body': '\${WordFind3x} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}'
+    'body': '\${WordFind3x} "${1:input}" "${2:delimiter1}" "${3:center}" "${4:delimiter2}" "${5:options}" \$${6:output}$7'
   '%{FindLine}':
     'prefix': 'FindLine'
-    'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"'
+    'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"$5'
   '%{FindWordS}':
     'prefix': 'FindWordS'
-    'body': '\${WordFindS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
+    'body': '\${WordFindS} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}$5'
   '%{FindWord}':
     'prefix': 'FindWord'
-    'body': '\${WordFind} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}'
+    'body': '\${WordFind} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}$5'
   '%{IfAnd}':
     'prefix': 'IfAnd'
-    'body': '\${AndIf} ${1:condition}'
+    'body': '\${AndIf} ${1:condition}$2'
   '%{IfElse}':
     'prefix': 'IfElse'
-    'body': '\${ElseIf} ${1:condition}'
+    'body': '\${ElseIf} ${1:condition}$2'
   '%{IfNotAnd}':
     'prefix': 'IfNotAnd'
-    'body': '\${AndIfNot} ${1:condition}'
+    'body': '\${AndIfNot} ${1:condition}$2'
   '%{IfNotElse}':
     'prefix': 'IfNotElse'
-    'body': '\${ElseIfNot} ${1:condition}'
+    'body': '\${ElseIfNot} ${1:condition}$2'
   '%{IfNotOr}':
     'prefix': 'IfNotOr'
-    'body': '\${OrIfNot} ${1:condition}'
+    'body': '\${OrIfNot} ${1:condition}$2'
   '%{InsertWordS}':
     'prefix': 'InsertWordS'
-    'body': '\${WordInsertS} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
+    'body': '\${WordInsertS} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}$6'
   '%{InsertWord}':
     'prefix': 'InsertWord'
-    'body': '\${WordInsert} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}'
+    'body': '\${WordInsert} "${1:input}" "${2:delimiter}" "${3:word}" "${4:options}" \$${5:output}$6'
   '%{JoinFile}':
     'prefix': 'JoinFile'
-    'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"'
+    'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"$4'
   '%{ReadConfig}':
     'prefix': 'ReadConfig'
-    'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}'
+    'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}$4'
   '%{ReadFromEnFiled}':
     'prefix': 'ReadFromEnFiled'
-    'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"'
+    'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"$3'
   '%{ReadLine}':
     'prefix': 'ReadLine'
-    'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}'
+    'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}$4'
   '%{ReadSConfig}':
     'prefix': 'ReadSConfig'
-    'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}'
+    'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}$4'
   '%{RecodeFile}':
     'prefix': 'RecodeFile'
-    'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"'
+    'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"$3'
   '%{ReplaceWordS}':
     'prefix': 'ReplaceWordS'
-    'body': '\${WordReplaceS} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
+    'body': '\${WordReplaceS} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}$6'
   '%{ReplaceWord}':
     'prefix': 'ReplaceWord'
-    'body': '\${WordReplace} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}'
+    'body': '\${WordReplace} "${1:input}" "${2:word1}" "${3:word2}" "${4:options}" \$${5:output}$6'
   '%{ShellIconsRefresh}':
     'prefix': 'ShellIconsRefresh'
-    'body': '\${RefreshShellIcons}'
+    'body': '\${RefreshShellIcons}$1'
   '%{SumLine}':
     'prefix': 'SumLine'
-    'body': '\${LineSum} "${1:file}" \$${2:var}'
+    'body': '\${LineSum} "${1:file}" \$${2:var}$3'
   '%{ThenIf}':
     'prefix': 'ThenIf'
-    'body': '\${IfThen} ${1:condition} \${|} ${4:command} \${|}'
+    'body': '\${IfThen} ${1:condition} \${|} ${2:command} \${|}$3'
   '%{ThenNotIf}':
     'prefix': 'ThenNotIf'
-    'body': '\${IfThenNot} ${1:condition} \${|} ${4:command} \${|}'
+    'body': '\${IfThenNot} ${1:condition} \${|} ${2:command} \${|}$3'
   '%{UnlessElse}':
     'prefix': 'UnlessElse'
-    'body': '\${ElseUnless} ${1:condition}'
+    'body': '\${ElseUnless} ${1:condition}$2'
   '%{WhileEnd}':
     'prefix': 'WhileEnd'
-    'body': '\${ExitWhile}'
+    'body': '\${ExitWhile}$1'
   '%{WhileExit}':
     'prefix': 'WhileExit'
-    'body': '\${ExitWhile}'
+    'body': '\${ExitWhile}$1'
   '%{WriteConfig}':
     'prefix': 'WriteConfig'
-    'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
+    'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}$5'
   '%{WriteSConfig}':
     'prefix': 'WriteSConfig'
-    'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
+    'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}$5'

@@ -4,17 +4,17 @@
     'body': """
       \${MementoSection} "${1:section_name}" ${2:section_index}
       	${3:# your code here}
-      \${MementoSectionEnd}
+      \${MementoSectionEnd}$4
     """
   '${MementoSectionEnd}':
     'prefix': 'MementoSectionEnd'
-    'body': '\${MementoSectionEnd}'
+    'body': '\${MementoSectionEnd}$1'
   '${MementoSectionRestore}':
     'prefix': 'MementoSectionRestore'
-    'body': '\${MementoSectionRestore}'
+    'body': '\${MementoSectionRestore}$1'
   '${MementoSectionSave}':
     'prefix': 'MementoSectionSave'
-    'body': '\${MementoSectionSave}'
+    'body': '\${MementoSectionSave}$1'
   '${MementoUnselectedSection}':
     'prefix': 'MementoUnselectedSection'
-    'body': '\${MementoUnselectedSection} ${1:section_name} ${2:section_index}'
+    'body': '\${MementoUnselectedSection} ${1:section_name} ${2:section_index}$3'

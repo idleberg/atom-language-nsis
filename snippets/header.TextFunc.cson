@@ -1,40 +1,40 @@
 '.source.nsis':
   '${ConfigRead}':
     'prefix': 'ConfigRead <TextFunc>'
-    'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}'
+    'body': '\${ConfigRead} "${1:file}" "${2:entry}" \$${3:var}$4'
   '${ConfigReadS}':
     'prefix': 'ConfigReadS <TextFunc>'
-    'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}'
+    'body': '\${ConfigReadS} "${1:file}" "${2:entry}" \$${3:var}$4'
   '${ConfigWrite}':
     'prefix': 'ConfigWrite <TextFunc>'
-    'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
+    'body': '\${ConfigWrite} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}$5'
   '${ConfigWriteS}':
     'prefix': 'ConfigWriteS <TextFunc>'
-    'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}'
+    'body': '\${ConfigWriteS} "${1:file}" "${2:entry}" "${3:value}" \$${4:var}$5'
   '${FileJoin}':
     'prefix': 'FileJoin <TextFunc>'
-    'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"'
+    'body': '\${FileJoin} "${1:input_file1}" "${2:input_file2}" "${3:output_file}"$4'
   '${FileReadFromEnd}':
     'prefix': 'FileReadFromEnd <TextFunc>'
-    'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"'
+    'body': '\${FileReadFromEnd} "${1:file}" "${2:function}"$3'
   '${FileRecode}':
     'prefix': 'FileRecode <TextFunc>'
-    'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"'
+    'body': '\${FileRecode} "${1:file}" "${2:OemToChar|CharToOem}"$3'
   '${LineFind}':
     'prefix': 'LineFind <TextFunc>'
-    'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"'
+    'body': '\${LineFind} "${1:file1}" "${2:file2|/NUL}" "${3:line_numbers}" "${4:function}"$5'
   '${LineRead}':
     'prefix': 'LineRead <TextFunc>'
-    'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}'
+    'body': '\${LineRead} "${1:file}" "${2:line_number}" \$${3:var}$4'
   '${LineSum}':
     'prefix': 'LineSum <TextFunc>'
-    'body': '\${LineSum} "${1:file}" \$${2:var}'
+    'body': '\${LineSum} "${1:file}" \$${2:var}$3'
   '${TextCompare}':
     'prefix': 'TextCompare <TextFunc>'
-    'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
+    'body': '\${TextCompare} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"$5'
   '${TextCompareS}':
     'prefix': 'TextCompareS <TextFunc>'
-    'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"'
+    'body': '\${TextCompareS} "${1:file1}" "${2:file2}" "${3:option}" "${4:function}"$5'
   '${TrimNewLines}':
     'prefix': 'TrimNewLines <TextFunc>'
-    'body': '\${TrimNewLines} "${1:string}" \$${2:var}'
+    'body': '\${TrimNewLines} "${1:string}" \$${2:var}$3'

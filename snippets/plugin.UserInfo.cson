@@ -1,10 +1,10 @@
 '.source.nsis':
   'UserInfo::GetAccountType':
     'prefix': 'UserInfo::GetAccountType'
-    'body': 'UserInfo::GetAccountType'
+    'body': 'UserInfo::GetAccountType$1'
   'UserInfo::GetName':
     'prefix': 'UserInfo::GetName'
-    'body': 'UserInfo::GetName'
+    'body': 'UserInfo::GetName$1'
   'UserInfo::GetOriginalAccountType':
     'prefix': 'UserInfo::GetOriginalAccountType'
-    'body': 'UserInfo::GetOriginalAccountType'
+    'body': 'UserInfo::GetOriginalAccountType$1'

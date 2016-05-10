@@ -1,28 +1,28 @@
 '.source.nsis':
   'nsExec::Exec':
     'prefix': 'nsExec::Exec'
-    'body': 'nsExec::Exec "${1:command}"'
+    'body': 'nsExec::Exec "${1:command}"$2'
   'nsExec::Exec /OEM':
     'prefix': 'nsExec::Exec /OEM'
-    'body': 'nsExec::Exec /OEM "${1:command}"'
+    'body': 'nsExec::Exec /OEM "${1:command}"$2'
   'nsExec::Exec /TIMEOUT':
     'prefix': 'nsExec::Exec /TIMEOUT'
-    'body': 'nsExec::Exec /TIMEOUT=${1:time_in_ms} "${2:command}"'
+    'body': 'nsExec::Exec /TIMEOUT=${1:time_in_ms} "${2:command}"$3'
   'nsExec::ExecToLog':
     'prefix': 'nsExec::ExecToLog'
-    'body': 'nsExec::ExecToLog "${1:command}"'
+    'body': 'nsExec::ExecToLog "${1:command}"$2'
   'nsExec::ExecToLog /OEM':
     'prefix': 'nsExec::ExecToLog /OEM'
-    'body': 'nsExec::ExecToLog /OEM "${1:command}"'
+    'body': 'nsExec::ExecToLog /OEM "${1:command}"$2'
   'nsExec::ExecToLog /TIMEOUT':
     'prefix': 'nsExec::ExecToLog /TIMEOUT'
-    'body': 'nsExec::ExecToLog /TIMEOUT=${1:time_in_ms} "${2:command}"'
+    'body': 'nsExec::ExecToLog /TIMEOUT=${1:time_in_ms} "${2:command}"$3'
   'nsExec::ExecToStack':
     'prefix': 'nsExec::ExecToStack'
-    'body': 'nsExec::ExecToStack "${1:command}"'
+    'body': 'nsExec::ExecToStack "${1:command}"$2'
   'nsExec::ExecToStack /OEM':
     'prefix': 'nsExec::ExecToStack /OEM'
-    'body': 'nsExec::ExecToStack /OEM"${1:command}"'
+    'body': 'nsExec::ExecToStack /OEM"${1:command}"$2'
   'nsExec::ExecToStack /TIMEOUT':
     'prefix': 'nsExec::ExecToStack /TIMEOUT'
-    'body': 'nsExec::ExecToStack /TIMEOUT=${1:time_in_ms} "${2:command}"'
+    'body': 'nsExec::ExecToStack /TIMEOUT=${1:time_in_ms} "${2:command}"$3'

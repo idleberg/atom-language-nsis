@@ -1,130 +1,130 @@
 '.source.nsis':
   '$ADMINTOOLS':
     'prefix': 'ADMINTOOLS'
-    'body': '\$ADMINTOOLS'
+    'body': '\$ADMINTOOLS$1'
   '$APPDATA':
     'prefix': 'APPDATA'
-    'body': '\$APPDATA'
+    'body': '\$APPDATA$1'
   '$CDBURN_AREA':
     'prefix': 'CDBURN_AREA'
-    'body': '\$CDBURN_AREA'
+    'body': '\$CDBURN_AREA$1'
   '$CMDLINE':
     'prefix': 'CMDLINE'
-    'body': '\$CMDLINE'
+    'body': '\$CMDLINE$1'
   '$COMMONFILES':
     'prefix': 'COMMONFILES'
-    'body': '\$COMMONFILES'
+    'body': '\$COMMONFILES$1'
   '$COMMONFILES32':
     'prefix': 'COMMONFILES32'
-    'body': '\$COMMONFILES32'
+    'body': '\$COMMONFILES32$1'
   '$COMMONFILES64':
     'prefix': 'COMMONFILES64'
-    'body': '\$COMMONFILES64'
+    'body': '\$COMMONFILES64$1'
   '$COOKIES':
     'prefix': 'COOKIES'
-    'body': '\$COOKIES'
+    'body': '\$COOKIES$1'
   '$DESKTOP':
     'prefix': 'DESKTOP'
-    'body': '\$DESKTOP'
+    'body': '\$DESKTOP$1'
   '$DOCUMENTS':
     'prefix': 'DOCUMENTS'
-    'body': '\$DOCUMENTS'
+    'body': '\$DOCUMENTS$1'
   '$EXEDIR':
     'prefix': 'EXEDIR'
-    'body': '\$EXEDIR'
+    'body': '\$EXEDIR$1'
   '$EXEFILE':
     'prefix': 'EXEFILE'
-    'body': '\$EXEFILE'
+    'body': '\$EXEFILE$1'
   '$EXEPATH':
     'prefix': 'EXEPATH'
-    'body': '\$EXEPATH'
+    'body': '\$EXEPATH$1'
   '$FAVORITES':
     'prefix': 'FAVORITES'
-    'body': '\$FAVORITES'
+    'body': '\$FAVORITES$1'
   '$FONTS':
     'prefix': 'FONTS'
-    'body': '\$FONTS'
+    'body': '\$FONTS$1'
   '$HISTORY':
     'prefix': 'HISTORY'
-    'body': '\$HISTORY'
+    'body': '\$HISTORY$1'
   '$HWNDPARENT':
     'prefix': 'HWNDPARENT'
-    'body': '\$HWNDPARENT'
+    'body': '\$HWNDPARENT$1'
   '$INSTDIR':
     'prefix': 'INSTDIR'
-    'body': '\$INSTDIR'
+    'body': '\$INSTDIR$1'
   '$INTERNET_CACHE':
     'prefix': 'INTERNET_CACHE'
-    'body': '\$INTERNET_CACHE'
+    'body': '\$INTERNET_CACHE$1'
   '$LOCALAPPDATA':
     'prefix': 'LOCALAPPDATA'
-    'body': '\$LOCALAPPDATA'
+    'body': '\$LOCALAPPDATA$1'
   '$MUSIC':
     'prefix': 'MUSIC'
-    'body': '\$MUSIC'
+    'body': '\$MUSIC$1'
   '$NETHOOD':
     'prefix': 'NETHOOD'
-    'body': '\$NETHOOD'
+    'body': '\$NETHOOD$1'
   '$OUTDIR':
     'prefix': 'OUTDIR'
-    'body': '\$OUTDIR'
+    'body': '\$OUTDIR$1'
   '$PICTURES':
     'prefix': 'PICTURES'
-    'body': '\$PICTURES'
+    'body': '\$PICTURES$1'
   '$PLUGINSDIR':
     'prefix': 'PLUGINSDIR'
-    'body': '\$PLUGINSDIR'
+    'body': '\$PLUGINSDIR$1'
   '$PRINTHOOD':
     'prefix': 'PRINTHOOD'
-    'body': '\$PRINTHOOD'
+    'body': '\$PRINTHOOD$1'
   '$PROFILE':
     'prefix': 'PROFILE'
-    'body': '\$PROFILE'
+    'body': '\$PROFILE$1'
   '$PROGRAMFILES':
     'prefix': 'PROGRAMFILES'
-    'body': '\$PROGRAMFILES'
+    'body': '\$PROGRAMFILES$1'
   '$PROGRAMFILES32':
     'prefix': 'PROGRAMFILES32'
-    'body': '\$PROGRAMFILES32'
+    'body': '\$PROGRAMFILES32$1'
   '$PROGRAMFILES64':
     'prefix': 'PROGRAMFILES64'
-    'body': '\$PROGRAMFILES64'
+    'body': '\$PROGRAMFILES64$1'
   '$QUICKLAUNCH':
     'prefix': 'QUICKLAUNCH'
-    'body': '\$QUICKLAUNCH'
+    'body': '\$QUICKLAUNCH$1'
   '$RECENT':
     'prefix': 'RECENT'
-    'body': '\$RECENT'
+    'body': '\$RECENT$1'
   '$RESOURCES':
     'prefix': 'RESOURCES'
-    'body': '\$RESOURCES'
+    'body': '\$RESOURCES$1'
   '$RESOURCES_LOCALIZED':
     'prefix': 'RESOURCES_LOCALIZED'
-    'body': '\$RESOURCES_LOCALIZED'
+    'body': '\$RESOURCES_LOCALIZED$1'
   '$SENDTO':
     'prefix': 'SENDTO'
-    'body': '\$SENDTO'
+    'body': '\$SENDTO$1'
   '$SMPROGRAMS':
     'prefix': 'SMPROGRAMS'
-    'body': '\$SMPROGRAMS'
+    'body': '\$SMPROGRAMS$1'
   '$SMSTARTUP':
     'prefix': 'SMSTARTUP'
-    'body': '\$SMSTARTUP'
+    'body': '\$SMSTARTUP$1'
   '$STARTMENU':
     'prefix': 'STARTMENU'
-    'body': '\$STARTMENU'
+    'body': '\$STARTMENU$1'
   '$SYSDIR':
     'prefix': 'SYSDIR'
-    'body': '\$SYSDIR'
+    'body': '\$SYSDIR$1'
   '$TEMP':
     'prefix': 'TEMP'
-    'body': '\$TEMP'
+    'body': '\$TEMP$1'
   '$TEMPLATES':
     'prefix': 'TEMPLATES'
-    'body': '\$TEMPLATES'
+    'body': '\$TEMPLATES$1'
   '$VIDEOS':
     'prefix': 'VIDEOS'
-    'body': '\$VIDEOS'
+    'body': '\$VIDEOS$1'
   '$WINDIR':
     'prefix': 'WINDIR'
     'body': '\$WINDIR'

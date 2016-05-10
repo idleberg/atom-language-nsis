@@ -1,13 +1,13 @@
 '.source.nsis':
   '${DisableX64FSRedirection}':
     'prefix': 'DisableX64FSRedirection'
-    'body': '\${DisableX64FSRedirection}'
+    'body': '\${DisableX64FSRedirection}$1'
   '${EnableX64FSRedirection}':
     'prefix': 'EnableX64FSRedirection'
-    'body': '\${EnableX64FSRedirection}'
+    'body': '\${EnableX64FSRedirection}$1'
   '${IsWow64}':
     'prefix': 'IsWow64'
-    'body': '\${IsWow64}'
+    'body': '\${IsWow64}$1'
   '${RunningX64}':
     'prefix': 'RunningX64'
-    'body': '\${RunningX64}'
+    'body': '\${RunningX64}$1'

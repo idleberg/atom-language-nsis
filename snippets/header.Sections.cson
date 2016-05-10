@@ -1,37 +1,37 @@
 '.source.nsis':
   '${SECTION_OFF}':
     'prefix': 'SECTION_OFF'
-    'body': '\${SECTION_OFF}'
+    'body': '\${SECTION_OFF}$1'
   '${SF_BOLD}':
     'prefix': 'SF_BOLD'
-    'body': '\${SF_BOLD}'
+    'body': '\${SF_BOLD}$1'
   '${SF_EXPAND}':
     'prefix': 'SF_EXPAND'
-    'body': '\${SF_EXPAND}'
+    'body': '\${SF_EXPAND}$1'
   '${SF_NAMECHG}':
     'prefix': 'SF_NAMECHG'
-    'body': '\${SF_NAMECHG}'
+    'body': '\${SF_NAMECHG}$1'
   '${SF_PSELECTED}':
     'prefix': 'SF_PSELECTED'
-    'body': '\${SF_PSELECTED}'
+    'body': '\${SF_PSELECTED}$1'
   '${SF_RO}':
     'prefix': 'SF_RO'
-    'body': '\${SF_RO}'
+    'body': '\${SF_RO}$1'
   '${SF_SECGRP}':
     'prefix': 'SF_SECGRP'
-    'body': '\${SF_SECGRP}'
+    'body': '\${SF_SECGRP}$1'
   '${SF_SECGRPEND}':
     'prefix': 'SF_SECGRPEND'
-    'body': '\${SF_SECGRPEND}'
+    'body': '\${SF_SECGRPEND}$1'
   '${SF_SELECTED}':
     'prefix': 'SF_SELECTED'
-    'body': '\${SF_SELECTED}'
+    'body': '\${SF_SELECTED}$1'
   '${SF_SUBSEC}':
     'prefix': 'SF_SUBSEC'
-    'body': '\${SF_SUBSEC}'
+    'body': '\${SF_SUBSEC}$1'
   '${SF_SUBSECEND}':
     'prefix': 'SF_SUBSECEND'
-    'body': '\${SF_SUBSECEND}'
+    'body': '\${SF_SUBSECEND}$1'
   '${SF_TOGGLED}':
     'prefix': 'SF_TOGGLED'
-    'body': '\${SF_TOGGLED}'
+    'body': '\${SF_TOGGLED}$1'

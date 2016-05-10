@@ -1,4 +1,4 @@
 '.source.nsis':
   'Math::Script':
     'prefix': 'Math::Script'
-    'body': 'Math::Script "${1:script}"'
+    'body': 'Math::Script "${1:script}"$2'

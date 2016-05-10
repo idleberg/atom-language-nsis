@@ -1,16 +1,16 @@
 '.source.nsis':
   'Dialer::AttemptConnect':
     'prefix': 'Dialer::AttemptConnect'
-    'body': 'Dialer::AttemptConnect'
+    'body': 'Dialer::AttemptConnect$1'
   'Dialer::AutodialHangup':
     'prefix': 'Dialer::AutodialHangup'
-    'body': 'Dialer::AutodialHangup'
+    'body': 'Dialer::AutodialHangup$1'
   'Dialer::AutodialOnline':
     'prefix': 'Dialer::AutodialOnline'
-    'body': 'Dialer::AutodialOnline'
+    'body': 'Dialer::AutodialOnline$1'
   'Dialer::AutodialUnattended':
     'prefix': 'Dialer::AutodialUnattended'
-    'body': 'Dialer::AutodialUnattended'
+    'body': 'Dialer::AutodialUnattended$1'
   'Dialer::GetConnectedState':
     'prefix': 'Dialer::GetConnectedState'
-    'body': 'Dialer::GetConnectedState'
+    'body': 'Dialer::GetConnectedState$1'

@@ -1,82 +1,82 @@
 '.source.nsis':
   'HKCR':
     'prefix': 'HKCR'
-    'body': 'HKCR'
+    'body': 'HKCR$1'
   'HKCU':
     'prefix': 'HKCU'
-    'body': 'HKCU'
+    'body': 'HKCU$1'
   'HKDD':
     'prefix': 'HKDD'
-    'body': 'HKDD'
+    'body': 'HKDD$1'
   'HKLM':
     'prefix': 'HKLM'
-    'body': 'HKLM'
+    'body': 'HKLM$1'
   'HKPD':
     'prefix': 'HKPD'
-    'body': 'HKPD'
+    'body': 'HKPD$1'
   'HKU':
     'prefix': 'HKU'
-    'body': 'HKU'
+    'body': 'HKU$1'
   'IDABORT':
     'prefix': 'IDABORT'
-    'body': 'IDABORT'
+    'body': 'IDABORT$1'
   'IDCANCEL':
     'prefix': 'IDCANCEL'
-    'body': 'IDCANCEL'
+    'body': 'IDCANCEL$1'
   'IDIGNORE':
     'prefix': 'IDIGNORE'
-    'body': 'IDIGNORE'
+    'body': 'IDIGNORE$1'
   'IDNO':
     'prefix': 'IDNO'
-    'body': 'IDNO'
+    'body': 'IDNO$1'
   'IDOK':
     'prefix': 'IDOK'
-    'body': 'IDOK'
+    'body': 'IDOK$1'
   'IDRETRY':
     'prefix': 'IDRETRY'
-    'body': 'IDRETRY'
+    'body': 'IDRETRY$1'
   'IDYES':
     'prefix': 'IDYES'
-    'body': 'IDYES'
+    'body': 'IDYES$1'
   'MB_DEFBUTTON1':
     'prefix': 'MB_DEFBUTTON1'
-    'body': 'MB_DEFBUTTON1'
+    'body': 'MB_DEFBUTTON1$1'
   'MB_DEFBUTTON2':
     'prefix': 'MB_DEFBUTTON2'
-    'body': 'MB_DEFBUTTON2'
+    'body': 'MB_DEFBUTTON2$1'
   'MB_DEFBUTTON3':
     'prefix': 'MB_DEFBUTTON3'
-    'body': 'MB_DEFBUTTON3'
+    'body': 'MB_DEFBUTTON3$1'
   'MB_DEFBUTTON4':
     'prefix': 'MB_DEFBUTTON4'
-    'body': 'MB_DEFBUTTON4'
+    'body': 'MB_DEFBUTTON4$1'
   'MB_ICONEXCLAMATION':
     'prefix': 'MB_ICONEXCLAMATION'
-    'body': 'MB_ICONEXCLAMATION'
+    'body': 'MB_ICONEXCLAMATION$1'
   'MB_ICONINFORMATION':
     'prefix': 'MB_ICONINFORMATION'
-    'body': 'MB_ICONINFORMATION'
+    'body': 'MB_ICONINFORMATION$1'
   'MB_ICONQUESTION':
     'prefix': 'MB_ICONQUESTION'
-    'body': 'MB_ICONQUESTION'
+    'body': 'MB_ICONQUESTION$1'
   'MB_ICONSTOP':
     'prefix': 'MB_ICONSTOP'
-    'body': 'MB_ICONSTOP'
+    'body': 'MB_ICONSTOP$1'
   'MB_RIGHT':
     'prefix': 'MB_RIGHT'
-    'body': 'MB_RIGHT'
+    'body': 'MB_RIGHT$1'
   'MB_RTLREADING':
     'prefix': 'MB_RTLREADING'
-    'body': 'MB_RTLREADING'
+    'body': 'MB_RTLREADING$1'
   'MB_SETFOREGROUND':
     'prefix': 'MB_SETFOREGROUND'
-    'body': 'MB_SETFOREGROUND'
+    'body': 'MB_SETFOREGROUND$1'
   'MB_TOPMOST':
     'prefix': 'MB_TOPMOST'
-    'body': 'MB_TOPMOST'
+    'body': 'MB_TOPMOST$1'
   'MB_USERICON':
     'prefix': 'MB_USERICON'
-    'body': 'MB_USERICON'
+    'body': 'MB_USERICON$1'
   'SHCTX':
     'prefix': 'SHCTX'
     'body': 'SHCTX'

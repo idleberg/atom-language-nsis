@@ -1,25 +1,25 @@
 '.source.nsis':
   'BgImage::AddImage':
     'prefix': 'BgImage::AddImage'
-    'body': 'BgImage::AddImage "${1:file}.bmp" ${2:x} ${3:y}'
+    'body': 'BgImage::AddImage "${1:file}.bmp" ${2:x} ${3:y}$4'
   'BgImage::AddText':
     'prefix': 'BgImage::AddText'
-    'body': 'BgImage::AddText "${1:text}" "${2:font}" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}'
+    'body': 'BgImage::AddText "${1:text}" "${2:font}" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$8'
   'BgImage::Clear':
     'prefix': 'BgImage::Clear'
-    'body': 'BgImage::Clear'
+    'body': 'BgImage::Clear$1'
   'BgImage::Destroy':
     'prefix': 'BgImage::Destroy'
-    'body': 'BgImage::Destroy'
+    'body': 'BgImage::Destroy$1'
   'BgImage::Redraw':
     'prefix': 'BgImage::Redraw'
-    'body': 'BgImage::Redraw'
+    'body': 'BgImage::Redraw$1'
   'BgImage::SetBg':
     'prefix': 'BgImage::SetBg'
-    'body': 'BgImage::SetBg "${1:file}.bmp"'
+    'body': 'BgImage::SetBg "${1:file}.bmp"$2'
   'BgImage::SetReturn':
     'prefix': 'BgImage::SetReturn'
-    'body': 'BgImage::SetReturn "${1:on|off}"'
+    'body': 'BgImage::SetReturn "${1:on|off}"$2'
   'BgImage::Sound':
     'prefix': 'BgImage::Sound'
-    'body': 'BgImage::Sound "${1:file}.wav"'
+    'body': 'BgImage::Sound "${1:file}.wav"$2'

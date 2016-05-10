@@ -1,64 +1,64 @@
 '.source.nsis':
   '${__COUNTER__}':
     'prefix': '__COUNTER__'
-    'body': '\${__COUNTER__}'
+    'body': '\${__COUNTER__}$1'
   '${__DATE__}':
     'prefix': '__DATE__'
-    'body': '\${__DATE__}'
+    'body': '\${__DATE__}$1'
   '${__FILE__}':
     'prefix': '__FILE__'
-    'body': '\${__FILE__}'
+    'body': '\${__FILE__}$1'
   '${__FILEDIR__}':
     'prefix': '__FILEDIR__'
-    'body': '\${__FILEDIR__}'
+    'body': '\${__FILEDIR__}$1'
   '${__FUNCTION__}':
     'prefix': '__FUNCTION__'
-    'body': '\${__FUNCTION__}'
+    'body': '\${__FUNCTION__}$1'
   '${__GLOBAL__}':
     'prefix': '__GLOBAL__'
-    'body': '\${__GLOBAL__}'
+    'body': '\${__GLOBAL__}$1'
   '${__LINE__}':
     'prefix': '__LINE__'
-    'body': '\${__LINE__}'
+    'body': '\${__LINE__}$1'
   '${__MACRO__}':
     'prefix': '__MACRO__'
-    'body': '\${__MACRO__}'
+    'body': '\${__MACRO__}$1'
   '${__PAGEEX__}':
     'prefix': '__PAGEEX__'
-    'body': '\${__PAGEEX__}'
+    'body': '\${__PAGEEX__}$1'
   '${__SECTION__}':
     'prefix': '__SECTION__'
-    'body': '\${__SECTION__}'
+    'body': '\${__SECTION__}$1'
   '${__TIME__}':
     'prefix': '__TIME__'
-    'body': '\${__TIME__}'
+    'body': '\${__TIME__}$1'
   '${__TIMESTAMP__}':
     'prefix': '__TIMESTAMP__'
-    'body': '\${__TIMESTAMP__}'
+    'body': '\${__TIMESTAMP__}$1'
   '${__UNINSTALL__}':
     'prefix': '__UNINSTALL__'
-    'body': '\${__UNINSTALL__}'
+    'body': '\${__UNINSTALL__}$1'
   '${_NSIS_DEFAW}':
     'prefix': '_NSIS_DEFAW'
-    'body': '\${_NSIS_DEFAW}'
+    'body': '\${_NSIS_DEFAW}$1'
   '${envVarName}':
     'prefix': 'envVarName'
-    'body': '\$%envVarName%'
+    'body': '\$%envVarName%$1'
   '${NSIS_CHAR_SIZE}':
     'prefix': 'NSIS_CHAR_SIZE'
-    'body': '\${NSIS_CHAR_SIZE}'
+    'body': '\${NSIS_CHAR_SIZE}$1'
   '${NSIS_MAX_STRLEN}':
     'prefix': 'NSIS_MAX_STRLEN'
-    'body': '\${NSIS_MAX_STRLEN}'
+    'body': '\${NSIS_MAX_STRLEN}$1'
   '${NSIS_PACKEDVERSION}':
     'prefix': 'NSIS_PACKEDVERSION'
-    'body': '\${NSIS_PACKEDVERSION}'
+    'body': '\${NSIS_PACKEDVERSION}$1'
   '${NSIS_PTR_SIZE}':
     'prefix': 'NSIS_PTR_SIZE'
-    'body': '\${NSIS_PTR_SIZE}'
+    'body': '\${NSIS_PTR_SIZE}$1'
   '${NSIS_UNICODE}':
     'prefix': 'NSIS_UNICODE'
-    'body': '\${NSIS_UNICODE}'
+    'body': '\${NSIS_UNICODE}$1'
   '${NSIS_VERSION}':
     'prefix': 'NSIS_VERSION'
     'body': '\${NSIS_VERSION}'
