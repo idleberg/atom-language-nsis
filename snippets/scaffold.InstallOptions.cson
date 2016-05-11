@@ -36,19 +36,17 @@
 
 			FunctionEnd
 
-			Function "${6}"
+			Function "${6:iopage}"
 
-			 	Push \\$R0
+				Push \\$R0
 				InstallOptions::dialog "\\$PLUGINSDIR\\\\${9:ioFile}.ini"
-			    Pop \\$R0
-
 				Pop \\$R0
 
 			FunctionEnd
 
-			Function "${7}"
+			Function "${7:${6:iopage}_validation}"
 
 			 	${10:# your code here}
 
-			FunctionEnd$11
+			FunctionEnd$14
 		"""
