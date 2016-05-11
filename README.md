@@ -51,7 +51,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 ### apm
 
-Install using the package manager `apm install language-nsis` (or use the GUI)
+Install `language-nsis` from the [Package Manager](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or using the command-line `apm install language-nsis`
 
 ### GitHub
 
