@@ -49,6 +49,7 @@ module.exports = NsisConf =
     path = require 'path'
 
     buildFile =
+        name: 'makensis',
         cmd: "makensis",
         args: [ "{FILE_ACTIVE}" ],
         sh: false,
