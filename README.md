@@ -42,8 +42,8 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * WinVer
     * WordFunc
     * x64
-* Drunken NSIS (fuzzy completions)
-* Building
+* [Drunken NSIS](#drunken-nsis) (fuzzy completions)
+* [Build Tools](#building)
 
 You can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
 
@@ -86,20 +86,20 @@ Fuzzy syntax completions are available through “Drunken NSIS”, which tries t
 
 Interchangable word order of NSIS language and library functions
 
-* `FileRead` / `ReadFile`
-* `ReadINIStr` / `INIStrRead`
-* `SectionSetText` / `SetSectionText`
-* `LogSet` / `SetLog`
-* `FindFirst` / `FirstFind`
-* `${FindLine}` / `${LineFind}`
+* `FileRead` == `ReadFile`
+* `ReadINIStr` == `INIStrRead`
+* `SectionSetText` == `SetSectionText`
+* `LogSet` == `SetLog`
+* `FindFirst` == `FirstFind`
+* `${FindLine}` == `${LineFind}`
 
-### Building
+### Build Tools
 
 There are many ways to compile NSIS scripts in Atom. But before we go into detail, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953).
 
 As of `v4.0.0`, this package contains a rudimentary build system to compile your NSIS scripts. To do so, select *“NSIS: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
-If you prefer working with specific compiler arguments, you can specify them in `config.cson`.
+If you prefer working with specific compiler arguments, you can specify them in your `config.cson`.
 
 **Example:**
 
@@ -110,7 +110,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 In addition to that, the following build packages already support NSIS:
 
-* [build](https://atom.io/packages/build) (plus [build provider](https://atombuild.github.io/#language-nsis))
+* [build](https://atom.io/packages/build) with provider (e.g. [build-makensis](https://atom.io/packages/build-makensis))
 * [script](https://atom.io/packages/script)
 * [atom-runner](https://atom.io/packages/atom-runner)
 * [atom-build](https://github.com/mirhec/atom-build)
