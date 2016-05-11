@@ -57,7 +57,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 Change to your Atom packages directory:
 
-```
+```bash
 # Windows
 $ cd %USERPROFILE%/.atom/packages
 
