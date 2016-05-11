@@ -55,7 +55,7 @@ You can further extend this package with snippets for [plug-ins](https://atom.io
 
 ### GitHub
 
-* Change to your packages directory
+Change to your Atom packages directory:
 
 ```
 # Windows
@@ -65,7 +65,7 @@ cd %USERPROFILE%/.atom/packages
 $ cd ~/.atom/packages/
 ```
 
-* Clone repository
+Clone repository the repository:
 
 `$ git clone https://github.com/idleberg/atom-language-nsis language-nsis`
 
