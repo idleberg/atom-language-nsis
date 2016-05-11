@@ -59,7 +59,7 @@ Change to your Atom packages directory:
 
 ```
 # Windows
-cd %USERPROFILE%/.atom/packages
+$ cd %USERPROFILE%/.atom/packages
 
 # Mac OS X & Linux
 $ cd ~/.atom/packages/
