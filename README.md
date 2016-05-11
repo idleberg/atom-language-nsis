@@ -65,7 +65,7 @@ cd %USERPROFILE%/.atom/packages
 $ cd ~/.atom/packages/
 ```
 
-Clone repository the repository:
+Clone repository as `language-nsis`:
 
 `$ git clone https://github.com/idleberg/atom-language-nsis language-nsis`
 
