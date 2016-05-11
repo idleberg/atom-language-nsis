@@ -119,7 +119,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 #### Third-party packages
 
-In addition to that, the following build packages already support NSIS:
+Should you prefer working with an existing third-party build system, the following already support NSIS.
 
 * [build](https://atom.io/packages/build) combined with a provider (e.g. [build-makensis](https://atom.io/packages/build-makensis))
 * [script](https://atom.io/packages/script)
