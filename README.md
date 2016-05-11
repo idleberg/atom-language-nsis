@@ -110,7 +110,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 In addition to that, the following build packages already support NSIS:
 
-* [build](https://atom.io/packages/build) with provider (e.g. [build-makensis](https://atom.io/packages/build-makensis))
+* [build](https://atom.io/packages/build) combined with a provider (e.g. [build-makensis](https://atom.io/packages/build-makensis))
 * [script](https://atom.io/packages/script)
 * [atom-runner](https://atom.io/packages/atom-runner)
 * [atom-build](https://github.com/mirhec/atom-build)
