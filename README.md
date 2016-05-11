@@ -116,7 +116,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 **Example:**
 
-```json
+```cson
 "language-nsis":
   compilerArguments: "/WX /V3"
 ```
