@@ -114,8 +114,10 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 **Example:**
 
-    "language-nsis":
-      compilerArguments: "/WX /V3"
+```json
+"language-nsis":
+  compilerArguments: "/WX /V3"
+```
 
 #### Third-party packages
 
