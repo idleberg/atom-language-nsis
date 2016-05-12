@@ -1,28 +1,34 @@
-'menu': [
+menu: [
   {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'NSIS'
-      'submenu': [
-        {
-          'label': 'Save && compile script'
-          'command': 'NSIS:save-&-compile'
-        },
-        { 'type': 'separator' },
-        {
-          'label': 'Set default runner for NSIS'
-          'command': 'NSIS:set-default-runner'
-        },
-        {
-          'label': 'Remove default runner for NSIS'
-          'command': 'NSIS:remove-default-runner'
-        },
-        { 'type': 'separator' },
-        {
-          'label': 'Create .atom–build.json'
-          'command': 'NSIS:create-.atom–build-file'
-        }
-      ]
+    label: "Packages"
+    submenu: [
+      {
+        label: "NSIS"
+        submenu: [
+          {
+            label: "Save && compile script"
+            command: "NSIS:save-&-compile"
+          }
+          {
+            type: "separator"
+          }
+          {
+            label: "Set default runner for NSIS"
+            command: "NSIS:set-default-runner"
+          }
+          {
+            label: "Remove default runner for NSIS"
+            command: "NSIS:remove-default-runner"
+          }
+          {
+            type: "separator"
+          }
+          {
+            label: "Create .atom–build.json"
+            command: "NSIS:create-.atom–build-file"
+          }
+        ]
+      }
     ]
   }
 ]
