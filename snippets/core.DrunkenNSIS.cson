@@ -85,7 +85,7 @@
     'body': 'RMDir /REBOOTOK "${1:directory_name}"$2'
   '%DLLReg':
     'prefix': 'DLLReg'
-    'body': 'RegDLL "${1:dllfile}" ${2:entrypoint_name}$2'
+    'body': 'RegDLL "${1:dllfile}" ${2:entrypoint_name}$3'
   '%DPIAwareManifest':
     'prefix': 'DPIAwareManifest'
     'body': 'ManifestDPIAware ${1:notset|true|false}$2'
@@ -341,7 +341,7 @@
     'body': 'WriteRegStr ${1:root_key} "${2:subkey}" "${3:key_name}" "${4:value}"$5'
   '%RegValueDelete':
     'prefix': 'RegValueDelete'
-    'body': 'DeleteRegValue ${1:root_key} "${2:subkey}" "${3:key_name}"$3'
+    'body': 'DeleteRegValue ${1:root_key} "${2:subkey}" "${3:key_name}"$4'
   '%RegValueEnum':
     'prefix': 'RegValueEnum'
     'body': 'EnumRegValue \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}$5'

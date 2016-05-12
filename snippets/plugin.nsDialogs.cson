@@ -22,7 +22,7 @@
     'body': '\${NSD_ClearImage} \$${1:dialog}$2'
   '${NSD_CreateBitmap}':
     'prefix': 'NSD_CreateBitmap'
-    'body': '\${NSD_CreateBitmap} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}"$4'
+    'body': '\${NSD_CreateBitmap} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}"$6'
   '${NSD_CreateBrowseButton}':
     'prefix': 'NSD_CreateBrowseButton'
     'body': '\${NSD_CreateBrowseButton} ${1:x} ${2:y} ${3:width} ${4:height} "${5:text}"$6'
@@ -181,7 +181,7 @@
     'body': 'nsDialogs::OnNotify \$${1:control_HWND} "${2:function_address}"$3'
   'nsDialogs::SelectFileDialog':
     'prefix': 'nsDialogs::SelectFileDialog'
-    'body': 'nsDialogs::SelectFileDialog ${1:mode} "${2:initial_selection}" "${3:filter}"$3'
+    'body': 'nsDialogs::SelectFileDialog ${1:mode} "${2:initial_selection}" "${3:filter}"$4'
   'nsDialogs::SelectFolderDialog':
     'prefix': 'nsDialogs::SelectFolderDialog'
     'body': 'nsDialogs::SelectFolderDialog "${1:title}" "${2:initial_selection}"$3'

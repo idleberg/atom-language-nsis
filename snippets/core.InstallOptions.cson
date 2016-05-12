@@ -286,7 +286,7 @@
     'body': 'StateRTL=${1:state}$2'
   'StateImageList':
     'prefix': 'StateImageList'
-    'body': 'StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp$2'
+    'body': 'StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp$7'
   'STOP':
     'prefix': 'STOP'
     'body': 'STOP$1'

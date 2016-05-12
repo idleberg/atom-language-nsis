@@ -280,10 +280,10 @@
     'body': 'AutoCloseWindow true$1'
   'BGFont':
     'prefix': 'BGFont'
-    'body': 'BGFont "${1:font_face}"$1'
+    'body': 'BGFont "${1:font_face}"$2'
   'BGGradient':
     'prefix': 'BGGradient'
-    'body': 'BGGradient ${1:top_color} ${2:bottom_color}$2'
+    'body': 'BGGradient ${1:top_color} ${2:bottom_color}$3'
   'BGGradient off (default)':
     'prefix': 'BGGradient off (default)'
     'body': 'BGGradient ${1:off}$2'
@@ -397,7 +397,7 @@
     'body': 'CreateFont \$${1:user_var} "${2:face_name}" ${3:[height] [weight]}$4'
   'CreateShortCut':
     'prefix': 'CreateShortCut'
-    'body': 'CreateShortCut "${1:link}.lnk" ${2:target}$2'
+    'body': 'CreateShortCut "${1:link}.lnk" ${2:target}$3'
   'Delete':
     'prefix': 'Delete'
     'body': 'Delete "${1:file}"$2'
@@ -965,12 +965,12 @@
     'body': 'Name "${1:name}"$2'
   'Name &&':
     'prefix': 'Name &&'
-    'body': 'Name "${1:name}" "${2:name_doubled_ampersands}"$2'
+    'body': 'Name "${1:name}" "${2:name_doubled_ampersands}"$3'
   'Name && +Caption':
     'prefix': 'Name && +Caption'
     'body': """
       Name "${1:name}" "${2:name_doubled_ampersands}"
-      Caption "${3:${1:name}}"$3
+      Caption "${3:${1:name}}"$4
     """
   'Name && +Caption +OutFile':
     'prefix': 'Name && +Caption +OutFile'
@@ -996,7 +996,7 @@
     'body': """
       Name "${1:name}"
       Caption "${2:${1:name}}"
-      OutFile "${3:${1:name}}.exe"$3
+      OutFile "${3:${1:name}}.exe"$4
     """
   'Name +OutFile':
     'prefix': 'Name +OutFile'
@@ -1279,7 +1279,7 @@
     'body': 'SetDatablockOptimize on$1'
   'SetDateSave':
     'prefix': 'SetDateSave'
-    'body': 'SetDateSave ${1:on|off}$1'
+    'body': 'SetDateSave ${1:on|off}$2'
   'SetDateSave off':
     'prefix': 'SetDateSave off'
     'body': 'SetDateSave off$1'
