@@ -108,7 +108,7 @@
     """
   '${IfCmd}':
     'prefix': 'IfCmd <LogicLib>'
-    'body': '\${IfCmd} ${1:command} \${|} ${4:command} \${|}$1'
+    'body': '\${IfCmd} ${1:command} \${|} ${2:command} \${|}$3'
   '${IfNot…Else}':
     'prefix': 'IfNot…Else <LogicLib>'
     'body': """

@@ -223,7 +223,7 @@
     'body': '!searchparse "${1:source_string_or_file}" "${2:substring_start}" "${3:OUTPUTSYMBOL1}"$4'
   '!searchreplace':
     'prefix': 'searchreplace'
-    'body': '!searchparse "${1:symbol_out}" "${2:source_string}" "${3:searchfor}" "${3:replacewith}"$4'
+    'body': '!searchparse "${1:symbol_out}" "${2:source_string}" "${3:searchfor}" "${4:replacewith}"$5'
   '!system':
     'prefix': 'system'
     'body': '!system "${1:command}"$2'
@@ -484,7 +484,7 @@
     'body': 'File /nonfatal /r "${1:file}"$2'
   'File /oname':
     'prefix': 'File /oname'
-    'body': 'File "/oname=${1:file}" "${1:file}"$2'
+    'body': 'File "/oname=${1:file}" "${1:${2:file}}"$3'
   'FileBufSize':
     'prefix': 'FileBufSize'
     'body': 'FileBufSize ${1:buffer_size_in_mb}$2'
@@ -529,7 +529,7 @@
     'body': 'FindClose \$${1:handle}$2'
   'FindFirst':
     'prefix': 'FindFirst'
-    'body': 'FindFirst \$${1:handle} \$${2:user_var} "${2:filespec}"$3'
+    'body': 'FindFirst \$${1:handle} \$${2:user_var} "${3:filespec}"$4'
   'FindNext':
     'prefix': 'FindNext'
     'body': 'FindNext \$${1:handle} \$${2:user_var}$3'
@@ -1030,7 +1030,7 @@
     'body': 'Page directory ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}$5'
   'Page instfiles':
     'prefix': 'Page instfiles'
-    'body': 'Page instfiles ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} ${4:/ENABLECANCEL}}$5'
+    'body': 'Page instfiles ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]} ${5:/ENABLECANCEL}}$6'
   'Page license':
     'prefix': 'Page license'
     'body': 'Page license ${1:${2:[pre_function]} ${3:[show_function]} ${4:[leave_function]}}$5'
