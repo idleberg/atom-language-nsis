@@ -112,13 +112,14 @@ There are many ways to compile NSIS scripts in Atom. But before you read on, mak
 
 As of recently, this package contains a rudimentary build system to compile your NSIS scripts. To do so, select *“NSIS: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
-If you prefer working with specific compiler arguments, you can specify them in your `config.cson`.
+If you prefer working with specific compiler arguments, you can specify them in your `config.cson`. Optionally, you can specify the path to `makensis`.
 
 **Example:**
 
 ```cson
 "language-nsis":
   compilerArguments: "/WX /V3"
+  pathToMakensis: "/usr/local/bin/makensis"
 ```
 
 #### Third-party packages
