@@ -85,8 +85,6 @@ module.exports = NsisConf =
           createFile = true
 
         if createFile is true
-          console.log buildFile
-          console.log buildFilePath
           # Save build file
           fs.writeFile buildFilePath, JSON.stringify(buildFile, null, 4), (error) ->
             if error
