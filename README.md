@@ -87,7 +87,7 @@ However, you have to type `__LINE__` to complete to `${__LINE__}`.
 
 There are several special cases for your convenience:
 
-* `MB_OK` completes to `MessageBox MB_OK`
+* `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
 * `onInit` completes to a `Function .onInit` block
 * `LogicLib` completes to `!include "LogicLib.nsh"`
 
