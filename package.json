@@ -23,6 +23,7 @@
       "NSIS:set-default-runner",
       "NSIS:remove-default-runner",
       "NSIS:create-.atom–build-file",
+      "NSIS:create-.atom–build-file-for-wine",
       "NSIS:save-&-compile"
     ]
   },

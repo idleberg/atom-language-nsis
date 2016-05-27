@@ -44,7 +44,7 @@ module.exports = NsisConf =
 # atom-build
 # https://github.com/mirhec/atom-build
 # 
-  createBuildFile: ->
+  createBuildFile: (wine) ->
     fs = require 'fs'
     path = require 'path'
     
@@ -80,9 +80,17 @@ module.exports = NsisConf =
           createFile = true
 
         if createFile is true
+
+          if wine is false
+            makeNsis ="makensis"
+          else
+            pathToScript =  atom.config.get('build-makensis-wine.pathToScript')
+            packageDir = atom.packages.getPackageDirPaths().toString()
+            makeNsis = if pathToScript then "\"#{pathToScript}\"" else path.join(packageDir, 'build-makensis-wine', 'lib', 'makensis-wine.sh')
+
           buildFile =
               name: "#{currentFile}",
-              cmd: "makensis",
+              cmd: makeNsis,
               args: [ "{FILE_ACTIVE}" ],
               sh: false,
               cwd: "{FILE_ACTIVE_PATH}",

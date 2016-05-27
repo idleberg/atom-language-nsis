@@ -27,6 +27,10 @@ menu: [
             label: "Create .atom–build.json"
             command: "NSIS:create-.atom–build-file"
           }
+          {
+            label: "Create .atom–build.json for Wine"
+            command: "NSIS:create-.atom–build-file-for-wine"
+          }
         ]
       }
     ]

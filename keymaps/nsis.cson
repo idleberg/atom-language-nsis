@@ -2,6 +2,7 @@
 '.platform-darwin atom-text-editor, .platform-linux atom-text-editor':
   'cmd-alt-m': 'NSIS:save-&-compile'
   'cmd-alt-p': 'NSIS:create-.atom–build-file'
+  'ctrl-cmd-alt-p': 'NSIS:create-.atom–build-file-for-wine'
 
 '.platform-win32 atom-text-editor':
   'shift-alt-m': 'NSIS:save-&-compile'

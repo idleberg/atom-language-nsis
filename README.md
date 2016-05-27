@@ -133,7 +133,7 @@ Should you prefer working with an existing third-party build system, the followi
 
 You can set up `atom-runner` by executing *“NSIS: Set default runner”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use *“NSIS: Remove default runner”*.
 
-Project files for `atom-build` and `build` can be created by executing *“NSIS: Create .atom-build file”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut.
+Project files for `atom-build` and `build` can be created by executing *“NSIS: Create .atom-build file”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. An equivalent for [building on Wine](https://atom.io/packages/build-makensis-wine) is also available.
 
 ## License
 
