@@ -47,17 +47,12 @@ module.exports = NsisConf =
   createBuildFile: ->
     fs = require 'fs'
     path = require 'path'
-
-    buildFile =
-        name: 'makensis',
-        cmd: "makensis",
-        args: [ "{FILE_ACTIVE}" ],
-        sh: false,
-        cwd: "{FILE_ACTIVE_PATH}"
+    
     createFile = false
-    currentFile = atom.workspace.getActivePaneItem().getPath()
+    currentPath = atom.workspace.getActivePaneItem().getPath()
+    currentFile = path.basename(currentPath)
 
-    if typeof currentFile is "undefined"
+    if typeof currentPath is "undefined"
       atom.confirm
         message: 'File not saved'
         detailedMessage: 'You need to save this file before you can create a build-file'
@@ -66,7 +61,7 @@ module.exports = NsisConf =
 
     else
       successMsg = null
-      currentPath = path.dirname(currentFile)
+      currentPath = path.dirname(currentPath)
       buildFilePath = path.join(currentPath, ".atom-build.json")
      
       fs.exists "#{buildFilePath}", (exists) ->
@@ -85,6 +80,13 @@ module.exports = NsisConf =
           createFile = true
 
         if createFile is true
+          buildFile =
+              name: "makensis #{currentFile}",
+              cmd: "makensis",
+              args: [ "{FILE_ACTIVE}" ],
+              sh: false,
+              cwd: "{FILE_ACTIVE_PATH}"
+
           # Save build file
           fs.writeFile buildFilePath, JSON.stringify(buildFile, null, 4), (error) ->
             if error
