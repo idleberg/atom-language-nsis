@@ -47,6 +47,11 @@ module.exports = NsisConf =
   createBuildFile: (wine) ->
     fs = require 'fs'
     path = require 'path'
+
+    editor = atom.workspace.getActiveTextEditor()
+    if typeof editor is "undefined" or editor.getGrammar().scopeName isnt "source.nsis"
+      atom.beep()
+      return
     
     createFile = false
     currentPath = atom.workspace.getActivePaneItem().getPath()
