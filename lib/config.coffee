@@ -81,7 +81,7 @@ module.exports = NsisConf =
 
         if createFile is true
           buildFile =
-              name: "makensis #{currentFile}",
+              name: "#{currentFile}",
               cmd: "makensis",
               args: [ "{FILE_ACTIVE}" ],
               sh: false,
