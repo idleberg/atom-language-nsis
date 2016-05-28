@@ -86,7 +86,7 @@ module.exports = NsisConf =
 
         if createFile is true
 
-          if wine is false
+          if wine isnt true
             makeNsis ="makensis"
           else
             pathToScript =  atom.config.get('build-makensis-wine.pathToScript')
