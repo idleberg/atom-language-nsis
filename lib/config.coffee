@@ -88,19 +88,21 @@ module.exports = NsisConf =
 
           if wine isnt true
             makeNsis ="makensis"
+            sh = false
           else
             pathToScript =  atom.config.get('build-makensis-wine.pathToScript')
             packageDir = atom.packages.getPackageDirPaths().toString()
             makeNsis = if pathToScript then "\"#{pathToScript}\"" else path.join(packageDir, 'build-makensis-wine', 'lib', 'makensis-wine.sh')
+            sh = true
 
           buildFile =
-              name: "#{currentFile}",
-              cmd: makeNsis,
-              args: [ "{FILE_ACTIVE}" ],
-              sh: false,
-              cwd: "{FILE_ACTIVE_PATH}",
-              errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
-              warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
+            name: "#{currentFile}",
+            cmd: makeNsis,
+            args: [ "{FILE_ACTIVE}" ],
+            sh: sh,
+            cwd: "{FILE_ACTIVE_PATH}",
+            errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
+            warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
 
           # Save build file
           fs.writeFile buildFilePath, JSON.stringify(buildFile, null, 4), (error) ->
