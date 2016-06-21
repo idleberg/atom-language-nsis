@@ -7,7 +7,10 @@
     'body': '\${StrFilterS} "${1:input}" "${2:options}" "${3:symbols1}" "${4:symbols2}" \$${5:output}$6'
   '${VersionCompare}':
     'prefix': 'VersionCompare <WordFunc>'
-    'body': '\${StrFilterS} "${1:input}" "${2:options}" \$${3:output}$4'
+    'body': '\${VersionCompare} "${1:version1}" "${2:version2}" \$${3:result}$4'
+  '${VersionConvert}':
+    'prefix': 'VersionConvert <WordFunc>'
+    'body': '\${VersionConvert} "${1:version}" "${2:charlist}" \$${3:result}$4'
   '${WordAdd}':
     'prefix': 'WordAdd <WordFunc>'
     'body': '\${WordAdd} "${1:input}" "${2:delimiter}" "${3:options}" \$${4:output}$5'
