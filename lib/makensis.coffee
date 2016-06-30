@@ -10,7 +10,7 @@ module.exports = NsisBuild =
     scope  = editor.getGrammar().scopeName
 
     if script? and scope.startsWith 'source.nsis'
-      editor.save()
+      editor.save() if editor.isModified()
 
       @getPath (stdout) ->
         args      = atom.config.get('language-nsis.compilerArguments')
