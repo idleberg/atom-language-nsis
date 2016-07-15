@@ -185,7 +185,6 @@
   '%IconUninstall':
     'prefix': 'IconUninstall'
     'body': 'UninstallIcon "${1:icon}.ico"$2'
-
   '%IconWindow':
     'prefix': 'IconWindow'
     'body': 'WindowIcon ${1:on|off}$2'
@@ -345,6 +344,16 @@
   '%RegValueEnum':
     'prefix': 'RegValueEnum'
     'body': 'EnumRegValue \$${1:user_var} ${2:root_key} "${3:subkey}" ${4:index}$5'
+  '%SubSection':
+    'prefix': 'SubSection'
+    'body': """
+      SectionGroup ${1:section_group_name} ${2:index_output}
+        ${3:# your code here}
+      SectionGroupEnd$4
+    """
+  '%SubSectionEnd':
+    'prefix': 'SubSectionEnd'
+    'body': 'SectionGroupEnd$1'
   '%SeekFile':
     'prefix': 'SeekFile'
     'body': 'FileSeek \$${1:handle} ${2:offset} ${3:[mode]}$4'
