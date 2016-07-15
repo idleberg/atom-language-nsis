@@ -86,9 +86,9 @@
   '${IsNT}':
     'prefix': 'IsNT'
     'body': '\${IsNT}$1'
-  '${IsServer}':
-    'prefix': 'IsServer'
-    'body': '\${IsServer}$1'
+  '${IsServerOS}':
+    'prefix': 'IsServerOS'
+    'body': '\${IsServerOS}$1'
   '${IsServicePack}':
     'prefix': 'IsServicePack'
     'body': '\${IsServicePack}$1'
