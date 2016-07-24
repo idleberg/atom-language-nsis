@@ -45,6 +45,7 @@ module.exports = NsisConf =
 # https://github.com/mirhec/atom-build
 # 
   createBuildFile: (wine) ->
+    CSON = require 'cson'
     fs = require 'fs'
     path = require 'path'
 
@@ -67,7 +68,7 @@ module.exports = NsisConf =
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFilePath = path.join(currentPath, ".atom-build.json")
+      buildFilePath = path.join(currentPath, ".atom-build.cson")
      
       fs.exists "#{buildFilePath}", (exists) ->
         if exists is true
@@ -105,7 +106,7 @@ module.exports = NsisConf =
             warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
 
           # Save build file
-          fs.writeFile buildFilePath, JSON.stringify(buildFile, null, 4), (error) ->
+          fs.writeFile buildFilePath, CSON.stringify(buildFile, null, 4), (error) ->
             if error
               atom.notifications.addError(".atom-build.json", detail: error, dismissable: false)
             else

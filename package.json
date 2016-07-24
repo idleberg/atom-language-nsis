@@ -30,6 +30,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "dependencies": {
+    "cson": "^3.0.2"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-coffeelint": "^0.6.0",
