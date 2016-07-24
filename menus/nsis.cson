@@ -24,11 +24,11 @@ menu: [
             type: "separator"
           }
           {
-            label: "Create .atom–build.json"
+            label: "Create .atom–build.cson"
             command: "NSIS:create-.atom–build-file"
           }
           {
-            label: "Create .atom–build.json for Wine"
+            label: "Create .atom–build.cson for Wine"
             command: "NSIS:create-.atom–build-file-for-wine"
           }
         ]
