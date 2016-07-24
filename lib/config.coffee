@@ -108,7 +108,7 @@ module.exports = NsisConf =
           # Save build file
           fs.writeFile buildFilePath, CSON.stringify(buildFile, null, 4), (error) ->
             if error
-              atom.notifications.addError(".atom-build.json", detail: error, dismissable: false)
+              atom.notifications.addError(".atom-build.cson", detail: error, dismissable: false)
             else
-              atom.notifications.addInfo(".atom-build.json", detail: successMsg, dismissable: false)
+              atom.notifications.addInfo(".atom-build.cson", detail: successMsg, dismissable: false)
               atom.workspace.open(buildFilePath)
