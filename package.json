@@ -11,7 +11,13 @@
     "nsis",
     "nullsoft",
     "installer",
-    "setup"
+    "setup",
+    "windows",
+    "build",
+    "build tool",
+    "compiler",
+    "grammar",
+    "language syntax",
   ],
   "repository": {
     "type": "git",
