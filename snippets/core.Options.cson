@@ -5,9 +5,9 @@
   'HKCU':
     'prefix': 'HKCU'
     'body': 'HKCU$1'
-  'HKDD':
-    'prefix': 'HKDD'
-    'body': 'HKDD$1'
+  'HKCC':
+    'prefix': 'HKCC'
+    'body': 'HKCC$1'
   'HKLM':
     'prefix': 'HKLM'
     'body': 'HKLM$1'
