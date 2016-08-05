@@ -407,13 +407,4 @@
   'WARN_IF_EXIST':
     'prefix': 'WARN_IF_EXIST'
     'body': 'WARN_IF_EXIST$1'
-'.source.nsis':
-  'InstallOptions::initDialog':
-    'prefix': 'InstallOptions::initDialog'
-    'body': 'InstallOptions::initDialog "${1:file}.ini"$2'
-  'InstallOptions::initDialog /NOUNLOAD':
-    'prefix': 'InstallOptions::initDialog /NOUNLOAD'
-    'body': 'InstallOptions::initDialog /NOUNLOAD "${1:file}.ini"$2'
-  'InstallOptions::show':
-    'prefix': 'InstallOptions::show'
-    'body': 'InstallOptions::show$1'
+
