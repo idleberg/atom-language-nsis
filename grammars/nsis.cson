@@ -55,11 +55,11 @@ patterns: [
   }
   {
     match: "\\${[\\w]+}"
-    name: "entity.name.function.nsis"
+    name: "constant.nsis"
   }
   {
     match: "\\$[\\w]+"
-    name: "storage.type.function.nsis"
+    name: "variable.nsis"
   }
   {
     begin: "`"
