@@ -1,53 +1,53 @@
 ".source.nsis":
-	InstallOptions:
-		body: '''
-			; Scaffolding by https://atom.io/packages/language-nsis
+  InstallOptions:
+    body: '''
+      ; Scaffolding by https://atom.io/packages/language-nsis
 
-			; Settings ---------------------------------
-			Name "${1:installer_name}"
-			OutFile "${2:${1:installer_name}}.exe"
-			RequestExecutionLevel ${3:admin}
-			InstallDir "\\$PROGRAMFILES\\\\${4:${1:installer_name}}"
+      ; Settings ---------------------------------
+      Name "${1:installer_name}"
+      OutFile "${2:${1:installer_name}}.exe"
+      RequestExecutionLevel ${3:admin}
+      InstallDir "\\$PROGRAMFILES\\\\${4:${1:installer_name}}"
 
-			; Includes ---------------------------------
-			ReserveFile "\\${NSISDIR}\\\\Plugins\\\\InstallOptions.dll"
-			ReserveFile "${5:\\${NSISDIR\\}\\\\Examples\\\\InstallOptions\\\\test}.ini"
+      ; Includes ---------------------------------
+      ReserveFile "\\${NSISDIR}\\\\Plugins\\\\InstallOptions.dll"
+      ReserveFile "${5:\\${NSISDIR\\}\\\\Examples\\\\InstallOptions\\\\test}.ini"
 
-			; Pages ------------------------------------
-			Page custom "${6:iopage}" "${7:${6:iopage}_validation}" ": ${8:iopage_caption}"
-			Page components
-			Page directory
-			Page instfiles
+      ; Pages ------------------------------------
+      Page custom "${6:iopage}" "${7:${6:iopage}_validation}" ": ${8:iopage_caption}"
+      Page components
+      Page directory
+      Page instfiles
 
 
-			; Sections ---------------------------------
-			Section "${11:section_name}" ${12:section_index}
+      ; Sections ---------------------------------
+      Section "${11:section_name}" ${12:section_index}
 
-				${13:# your code here}
+      \t${13:# your code here}
 
-			SectionEnd
+      SectionEnd
 
-			; Functions --------------------------------
-			Function .onInit
+      ; Functions --------------------------------
+      Function .onInit
 
-				InitPluginsDir
-				File "/oname=\\$PLUGINSDIR\\\\${9:ioFile}.ini" "${5:\\${NSISDIR\\}\\\\Examples\\\\InstallOptions\\\\test}.ini"
+      \tInitPluginsDir
+      \tFile "/oname=\\$PLUGINSDIR\\\\${9:ioFile}.ini" "${5:\\${NSISDIR\\}\\\\Examples\\\\InstallOptions\\\\test}.ini"
 
-			FunctionEnd
+      FunctionEnd
 
-			Function "${6:iopage}"
+      Function "${6:iopage}"
 
-				Push \\$R0
-				InstallOptions::dialog "\\$PLUGINSDIR\\\\${9:ioFile}.ini"
-				Pop \\$R0
+      \tPush \\$R0
+      \tInstallOptions::dialog "\\$PLUGINSDIR\\\\${9:ioFile}.ini"
+      \tPop \\$R0
 
-			FunctionEnd
+      FunctionEnd
 
-			Function "${7:${6:iopage}_validation}"
+      Function "${7:${6:iopage}_validation}"
 
-			 	${10:# your code here}
+      \t${10:# your code here}
 
-			FunctionEnd$14
-		'''
-		description: "Creates an installer template with InstallOptions support" 
-		prefix: "scaffold-InstallOptions"
+      FunctionEnd$14
+    '''
+    description: "Creates an installer template with InstallOptions support" 
+    prefix: "scaffold-InstallOptions"

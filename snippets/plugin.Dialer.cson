@@ -1,21 +1,21 @@
 ".source.nsis":
-	"Dialer::AttemptConnect":
-		body: "Dialer::AttemptConnect$1"
-		leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
-		prefix: "Dialer::AttemptConnect"
-	"Dialer::AutodialHangup":
-		body: "Dialer::AutodialHangup$1"
-		leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
-		prefix: "Dialer::AutodialHangup"
-	"Dialer::AutodialOnline":
-		body: "Dialer::AutodialOnline$1"
-		leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
-		prefix: "Dialer::AutodialOnline"
-	"Dialer::AutodialUnattended":
-		body: "Dialer::AutodialUnattended$1"
-		leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
-		prefix: "Dialer::AutodialUnattended"
-	"Dialer::GetConnectedState":
-		body: "Dialer::GetConnectedState$1"
-		leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
-		prefix: "Dialer::GetConnectedState"
+  "Dialer::AttemptConnect":
+    body: "Dialer::AttemptConnect$1"
+    leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
+    prefix: "Dialer::AttemptConnect"
+  "Dialer::AutodialHangup":
+    body: "Dialer::AutodialHangup$1"
+    leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
+    prefix: "Dialer::AutodialHangup"
+  "Dialer::AutodialOnline":
+    body: "Dialer::AutodialOnline$1"
+    leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
+    prefix: "Dialer::AutodialOnline"
+  "Dialer::AutodialUnattended":
+    body: "Dialer::AutodialUnattended$1"
+    leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
+    prefix: "Dialer::AutodialUnattended"
+  "Dialer::GetConnectedState":
+    body: "Dialer::GetConnectedState$1"
+    leftLabelHTML: "<span class='support class'>Dialer.dll</span>"
+    prefix: "Dialer::GetConnectedState"

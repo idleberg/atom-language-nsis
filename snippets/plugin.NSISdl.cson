@@ -1,9 +1,9 @@
 ".source.nsis":
-	"NSISdl::download":
-		body: "NSISdl::download \"${1:url}\" \"${2:local_file}\"$3"
-		leftLabelHTML: "<span class='support class'>NSISdl.dll</span>"
-		prefix: "NSISdl::download"
-	"NSISdl::download /TIMEOUT":
-		body: "NSISdl::download /TIMEOUT=${1:time_in_ms} \"${2:url}\" \"${3:local_file}\"$4"
-		leftLabelHTML: "<span class='support class'>NSISdl.dll</span>"
-		prefix: "NSISdl::download /TIMEOUT"
+  "NSISdl::download":
+    body: "NSISdl::download \"${1:url}\" \"${2:local_file}\"$3"
+    leftLabelHTML: "<span class='support class'>NSISdl.dll</span>"
+    prefix: "NSISdl::download"
+  "NSISdl::download /TIMEOUT":
+    body: "NSISdl::download /TIMEOUT=${1:time_in_ms} \"${2:url}\" \"${3:local_file}\"$4"
+    leftLabelHTML: "<span class='support class'>NSISdl.dll</span>"
+    prefix: "NSISdl::download /TIMEOUT"

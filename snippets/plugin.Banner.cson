@@ -1,13 +1,13 @@
 ".source.nsis":
-	"Banner::destroy":
-		body: "Banner::destroy$1"
-		leftLabelHTML: "<span class='support class'>Banner.dll</span>"
-		prefix: "Banner::destroy"
-	"Banner::getWindow":
-		body: "Banner::getWindow \"${1:file}\"$2"
-		leftLabelHTML: "<span class='support class'>Banner.dll</span>"
-		prefix: "Banner::getWindow"
-	"Banner::show":
-		body: "Banner::show \"${1:file}\"$2"
-		leftLabelHTML: "<span class='support class'>Banner.dll</span>"
-		prefix: "Banner::show"
+  "Banner::destroy":
+    body: "Banner::destroy$1"
+    leftLabelHTML: "<span class='support class'>Banner.dll</span>"
+    prefix: "Banner::destroy"
+  "Banner::getWindow":
+    body: "Banner::getWindow \"${1:file}\"$2"
+    leftLabelHTML: "<span class='support class'>Banner.dll</span>"
+    prefix: "Banner::getWindow"
+  "Banner::show":
+    body: "Banner::show \"${1:file}\"$2"
+    leftLabelHTML: "<span class='support class'>Banner.dll</span>"
+    prefix: "Banner::show"

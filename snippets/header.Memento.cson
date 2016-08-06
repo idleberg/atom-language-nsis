@@ -1,41 +1,41 @@
 ".source.nsis":
-	"${MementoSectionDone}":
-		body: "${MementoSectionDone}$1"
-		description: "Usage: ${MementoSectionDone}"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionDone.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoSectionDone"
-	"${MementoSectionEnd}":
-		body: "${MementoSectionEnd}$1"
-		description: "Usage: ${MementoSectionEnd}"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionEnd.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoSectionEnd"
-	"${MementoSectionRestore}":
-		body: "${MementoSectionRestore}$1"
-		description: "Usage: ${MementoSectionRestore}"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionRestore.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoSectionRestore"
-	"${MementoSectionSave}":
-		body: "${MementoSectionSave}$1"
-		description: "Usage: ${MementoSectionSave}"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionSave.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoSectionSave"
-	"${MementoSection}":
-		body: '''
-			${MementoSection} "${1:section_name}" ${2:section_index}
-				${3:# your code here}
-			${MementoSectionEnd}$4
-		'''
-		description: "Usage: ${MementoSection} [section_name] [section_index_output]"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSection.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoSection"
-	"${MementoUnselectedSection}":
-		body: "${MementoUnselectedSection} ${1:section_name} ${2:section_index}$3"
-		description: "Usage: ${MementoUnselectedSection} [section_name] [section_index_output]"
-		descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoUnselectedSection.md"
-		leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
-		prefix: "MementoUnselectedSection"
+  "${MementoSectionDone}":
+    body: "${MementoSectionDone}$1"
+    description: "Usage: ${MementoSectionDone}"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionDone.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoSectionDone"
+  "${MementoSectionEnd}":
+    body: "${MementoSectionEnd}$1"
+    description: "Usage: ${MementoSectionEnd}"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionEnd.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoSectionEnd"
+  "${MementoSectionRestore}":
+    body: "${MementoSectionRestore}$1"
+    description: "Usage: ${MementoSectionRestore}"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionRestore.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoSectionRestore"
+  "${MementoSectionSave}":
+    body: "${MementoSectionSave}$1"
+    description: "Usage: ${MementoSectionSave}"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionSave.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoSectionSave"
+  "${MementoSection}":
+    body: '''
+      ${MementoSection} "${1:section_name}" ${2:section_index}
+        ${3:# your code here}
+      ${MementoSectionEnd}$4
+    '''
+    description: "Usage: ${MementoSection} [section_name] [section_index_output]"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSection.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoSection"
+  "${MementoUnselectedSection}":
+    body: "${MementoUnselectedSection} ${1:section_name} ${2:section_index}$3"
+    description: "Usage: ${MementoUnselectedSection} [section_name] [section_index_output]"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoUnselectedSection.md"
+    leftLabelHTML: "<span class='support function'>Memento.nsh</span>"
+    prefix: "MementoUnselectedSection"

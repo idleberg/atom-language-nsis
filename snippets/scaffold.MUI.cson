@@ -1,45 +1,45 @@
 ".source.nsis":
-	ModernUI:
-		body: '''
-			; Scaffolding by https://atom.io/packages/language-nsis
+  ModernUI:
+    body: '''
+      ; Scaffolding by https://atom.io/packages/language-nsis
 
-			; Includes ---------------------------------
-			!include MUI2.nsh
+      ; Includes ---------------------------------
+      !include MUI2.nsh
 
-			; Settings ---------------------------------
-			Name "${1:installer_name}"
-			OutFile "${2:${1:installer_name}}.exe"
-			RequestExecutionLevel ${3:admin}
-			InstallDir "$PROGRAMFILES\\\\${4:${1:installer_name}}"
+      ; Settings ---------------------------------
+      Name "${1:installer_name}"
+      OutFile "${2:${1:installer_name}}.exe"
+      RequestExecutionLevel ${3:admin}
+      InstallDir "$PROGRAMFILES\\\\${4:${1:installer_name}}"
 
-			; Pages ------------------------------------
-			!insertmacro MUI_PAGE_COMPONENTS
-			!insertmacro MUI_PAGE_DIRECTORY
-			!insertmacro MUI_PAGE_INSTFILES
+      ; Pages ------------------------------------
+      !insertmacro MUI_PAGE_COMPONENTS
+      !insertmacro MUI_PAGE_DIRECTORY
+      !insertmacro MUI_PAGE_INSTFILES
 
-			; Languages --------------------------------
-			!insertmacro MUI_LANGUAGE "${5:English}"
+      ; Languages --------------------------------
+      !insertmacro MUI_LANGUAGE "${5:English}"
 
-			; Sections ---------------------------------
-			Section "${6:section}" ${7:${6:section}_INDEX}
+      ; Sections ---------------------------------
+      Section "${6:section}" ${7:${6:section}_INDEX}
 
-			  ${8:# your code here}
+      \t${8:# your code here}
 
-			SectionEnd
+      SectionEnd
 
-			; Descriptions -----------------------------
-			LangString DESC_${7:${6:section}_INDEX} ${LANG_${5:ENGLISH}} "${9:section_description}"
+      ; Descriptions -----------------------------
+      LangString DESC_${7:${6:section}_INDEX} ${LANG_${5:ENGLISH}} "${9:section_description}"
 
-			!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-			  !insertmacro MUI_DESCRIPTION_TEXT ${${7:${6:section}_INDEX}} $(DESC_${7:${6:section}_INDEX})
-			!insertmacro MUI_FUNCTION_DESCRIPTION_END
+      !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+      \t!insertmacro MUI_DESCRIPTION_TEXT ${${7:${6:section}_INDEX}} $(DESC_${7:${6:section}_INDEX})
+      !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
-			; Functions --------------------------------
-			${10:Function .onInit
+      ; Functions --------------------------------
+      ${10:Function .onInit
 
-			  ${11:# your code here}
+      \t${11:# your code here}
 
-			FunctionEnd}$12
-		'''
-		description: "Creates a Modern UI installer template" 
-		prefix: "scaffold-MUI"
+      FunctionEnd}$12
+    '''
+    description: "Creates a Modern UI installer template" 
+    prefix: "scaffold-MUI"

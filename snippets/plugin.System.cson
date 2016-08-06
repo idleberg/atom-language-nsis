@@ -1,21 +1,21 @@
 ".source.nsis":
-	"System::Alloc":
-		body: "System::Alloc ${1:size}$2"
-		leftLabelHTML: "<span class='support class'>System.dll</span>"
-		prefix: "System::Alloc"
-	"System::Call":
-		body: "System::Call \"${1:parameters}\"$2"
-		leftLabelHTML: "<span class='support class'>System.dll</span>"
-		prefix: "System::Call"
-	"System::Copy":
-		body: "System::Copy ${1:destination} ${2:source}$3"
-		leftLabelHTML: "<span class='support class'>System.dll</span>"
-		prefix: "System::Copy"
-	"System::Free":
-		body: "System::Free $${1:address}$2"
-		leftLabelHTML: "<span class='support class'>System.dll</span>"
-		prefix: "System::Free"
-	"System::Get":
-		body: "System::Get \"${1:parameters}\"$2"
-		leftLabelHTML: "<span class='support class'>System.dll</span>"
-		prefix: "System::Get"
+  "System::Alloc":
+    body: "System::Alloc ${1:size}$2"
+    leftLabelHTML: "<span class='support class'>System.dll</span>"
+    prefix: "System::Alloc"
+  "System::Call":
+    body: "System::Call \"${1:parameters}\"$2"
+    leftLabelHTML: "<span class='support class'>System.dll</span>"
+    prefix: "System::Call"
+  "System::Copy":
+    body: "System::Copy ${1:destination} ${2:source}$3"
+    leftLabelHTML: "<span class='support class'>System.dll</span>"
+    prefix: "System::Copy"
+  "System::Free":
+    body: "System::Free $${1:address}$2"
+    leftLabelHTML: "<span class='support class'>System.dll</span>"
+    prefix: "System::Free"
+  "System::Get":
+    body: "System::Get \"${1:parameters}\"$2"
+    leftLabelHTML: "<span class='support class'>System.dll</span>"
+    prefix: "System::Get"

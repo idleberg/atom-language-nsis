@@ -1,21 +1,21 @@
 ".source.nsis":
-	"${DisableX64FSRedirection}":
-		body: "${DisableX64FSRedirection}$1"
-		description: "Usage: ${DisableX64FSRedirection}"
-		leftLabelHTML: "<span class='support function'>x64.nsh</span>"
-		prefix: "DisableX64FSRedirection"
-	"${EnableX64FSRedirection}":
-		body: "${EnableX64FSRedirection}$1"
-		description: "Usage: ${EnableX64FSRedirection}"
-		leftLabelHTML: "<span class='support function'>x64.nsh</span>"
-		prefix: "EnableX64FSRedirection"
-	"${IsWow64}":
-		body: "${IsWow64}$1"
-		description: "Usage: logic_lib_statement ${IsWow64}"
-		leftLabelHTML: "<span class='support function'>x64.nsh</span>"
-		prefix: "IsWow64"
-	"${RunningX64}":
-		body: "${RunningX64}$1"
-		description: "Usage: logic_lib_statement ${RunningX64}"
-		leftLabelHTML: "<span class='support function'>x64.nsh</span>"
-		prefix: "RunningX64"
+  "${DisableX64FSRedirection}":
+    body: "${DisableX64FSRedirection}$1"
+    description: "Usage: ${DisableX64FSRedirection}"
+    leftLabelHTML: "<span class='support function'>x64.nsh</span>"
+    prefix: "DisableX64FSRedirection"
+  "${EnableX64FSRedirection}":
+    body: "${EnableX64FSRedirection}$1"
+    description: "Usage: ${EnableX64FSRedirection}"
+    leftLabelHTML: "<span class='support function'>x64.nsh</span>"
+    prefix: "EnableX64FSRedirection"
+  "${IsWow64}":
+    body: "${IsWow64}$1"
+    description: "Usage: logic_lib_statement ${IsWow64}"
+    leftLabelHTML: "<span class='support function'>x64.nsh</span>"
+    prefix: "IsWow64"
+  "${RunningX64}":
+    body: "${RunningX64}$1"
+    description: "Usage: logic_lib_statement ${RunningX64}"
+    leftLabelHTML: "<span class='support function'>x64.nsh</span>"
+    prefix: "RunningX64"

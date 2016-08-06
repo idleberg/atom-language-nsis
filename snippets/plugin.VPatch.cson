@@ -1,5 +1,5 @@
 ".source.nsis":
-	"VPatch::vpatchfile":
-		body: "VPatch::vpatchfile \"${1:patch}.pat\" \"${2:old_file}\" \"${3:new_file}$4\""
-		leftLabelHTML: "<span class='support class'>VPatch.dll</span>"
-		prefix: "VPatch::vpatchfile"
+  "VPatch::vpatchfile":
+    body: "VPatch::vpatchfile \"${1:patch}.pat\" \"${2:old_file}\" \"${3:new_file}$4\""
+    leftLabelHTML: "<span class='support class'>VPatch.dll</span>"
+    prefix: "VPatch::vpatchfile"
