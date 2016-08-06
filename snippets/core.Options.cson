@@ -1,86 +1,85 @@
-'.source.nsis':
-  'HKCR':
-    'prefix': 'HKCR'
-    'body': 'HKCR$1'
-  'HKCU':
-    'prefix': 'HKCU'
-    'body': 'HKCU$1'
-  'HKCC':
-    'prefix': 'HKCC'
-    'body': 'HKCC$1'
-  'HKDD':
-    'prefix': 'HKDD'
-    'body': 'HKDD$1'
-  'HKLM':
-    'prefix': 'HKLM'
-    'body': 'HKLM$1'
-  'HKPD':
-    'prefix': 'HKPD'
-    'body': 'HKPD$1'
-  'HKU':
-    'prefix': 'HKU'
-    'body': 'HKU$1'
-  'IDABORT':
-    'prefix': 'IDABORT'
-    'body': 'IDABORT$1'
-  'IDCANCEL':
-    'prefix': 'IDCANCEL'
-    'body': 'IDCANCEL$1'
-  'IDIGNORE':
-    'prefix': 'IDIGNORE'
-    'body': 'IDIGNORE$1'
-  'IDNO':
-    'prefix': 'IDNO'
-    'body': 'IDNO$1'
-  'IDOK':
-    'prefix': 'IDOK'
-    'body': 'IDOK$1'
-  'IDRETRY':
-    'prefix': 'IDRETRY'
-    'body': 'IDRETRY$1'
-  'IDYES':
-    'prefix': 'IDYES'
-    'body': 'IDYES$1'
-  'MB_DEFBUTTON1':
-    'prefix': 'MB_DEFBUTTON1'
-    'body': 'MB_DEFBUTTON1$1'
-  'MB_DEFBUTTON2':
-    'prefix': 'MB_DEFBUTTON2'
-    'body': 'MB_DEFBUTTON2$1'
-  'MB_DEFBUTTON3':
-    'prefix': 'MB_DEFBUTTON3'
-    'body': 'MB_DEFBUTTON3$1'
-  'MB_DEFBUTTON4':
-    'prefix': 'MB_DEFBUTTON4'
-    'body': 'MB_DEFBUTTON4$1'
-  'MB_ICONEXCLAMATION':
-    'prefix': 'MB_ICONEXCLAMATION'
-    'body': 'MB_ICONEXCLAMATION$1'
-  'MB_ICONINFORMATION':
-    'prefix': 'MB_ICONINFORMATION'
-    'body': 'MB_ICONINFORMATION$1'
-  'MB_ICONQUESTION':
-    'prefix': 'MB_ICONQUESTION'
-    'body': 'MB_ICONQUESTION$1'
-  'MB_ICONSTOP':
-    'prefix': 'MB_ICONSTOP'
-    'body': 'MB_ICONSTOP$1'
-  'MB_RIGHT':
-    'prefix': 'MB_RIGHT'
-    'body': 'MB_RIGHT$1'
-  'MB_RTLREADING':
-    'prefix': 'MB_RTLREADING'
-    'body': 'MB_RTLREADING$1'
-  'MB_SETFOREGROUND':
-    'prefix': 'MB_SETFOREGROUND'
-    'body': 'MB_SETFOREGROUND$1'
-  'MB_TOPMOST':
-    'prefix': 'MB_TOPMOST'
-    'body': 'MB_TOPMOST$1'
-  'MB_USERICON':
-    'prefix': 'MB_USERICON'
-    'body': 'MB_USERICON$1'
-  'SHCTX':
-    'prefix': 'SHCTX'
-    'body': 'SHCTX'
-
+".source.nsis":
+	HKCC:
+		body: "HKCC$1"
+		prefix: "HKCC"
+	HKCR:
+		body: "HKCR$1"
+		prefix: "HKCR"
+	HKCU:
+		body: "HKCU$1"
+		prefix: "HKCU"
+	HKDD:
+		body: "HKDD$1"
+		prefix: "HKDD"
+	HKLM:
+		body: "HKLM$1"
+		prefix: "HKLM"
+	HKPD:
+		body: "HKPD$1"
+		prefix: "HKPD"
+	HKU:
+		body: "HKU$1"
+		prefix: "HKU"
+	IDABORT:
+		body: "IDABORT$1"
+		prefix: "IDABORT"
+	IDCANCEL:
+		body: "IDCANCEL$1"
+		prefix: "IDCANCEL"
+	IDIGNORE:
+		body: "IDIGNORE$1"
+		prefix: "IDIGNORE"
+	IDNO:
+		body: "IDNO$1"
+		prefix: "IDNO"
+	IDOK:
+		body: "IDOK$1"
+		prefix: "IDOK"
+	IDRETRY:
+		body: "IDRETRY$1"
+		prefix: "IDRETRY"
+	IDYES:
+		body: "IDYES$1"
+		prefix: "IDYES"
+	MB_DEFBUTTON1:
+		body: "MB_DEFBUTTON1$1"
+		prefix: "MB_DEFBUTTON1"
+	MB_DEFBUTTON2:
+		body: "MB_DEFBUTTON2$1"
+		prefix: "MB_DEFBUTTON2"
+	MB_DEFBUTTON3:
+		body: "MB_DEFBUTTON3$1"
+		prefix: "MB_DEFBUTTON3"
+	MB_DEFBUTTON4:
+		body: "MB_DEFBUTTON4$1"
+		prefix: "MB_DEFBUTTON4"
+	MB_ICONEXCLAMATION:
+		body: "MB_ICONEXCLAMATION$1"
+		prefix: "MB_ICONEXCLAMATION"
+	MB_ICONINFORMATION:
+		body: "MB_ICONINFORMATION$1"
+		prefix: "MB_ICONINFORMATION"
+	MB_ICONQUESTION:
+		body: "MB_ICONQUESTION$1"
+		prefix: "MB_ICONQUESTION"
+	MB_ICONSTOP:
+		body: "MB_ICONSTOP$1"
+		prefix: "MB_ICONSTOP"
+	MB_RIGHT:
+		body: "MB_RIGHT$1"
+		prefix: "MB_RIGHT"
+	MB_RTLREADING:
+		body: "MB_RTLREADING$1"
+		prefix: "MB_RTLREADING"
+	MB_SETFOREGROUND:
+		body: "MB_SETFOREGROUND$1"
+		prefix: "MB_SETFOREGROUND"
+	MB_TOPMOST:
+		body: "MB_TOPMOST$1"
+		prefix: "MB_TOPMOST"
+	MB_USERICON:
+		body: "MB_USERICON$1"
+		prefix: "MB_USERICON"
+	SHCTX:
+		body: "SHCTX"
+		prefix: "SHCTX"

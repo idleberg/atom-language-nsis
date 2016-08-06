@@ -1,25 +1,26 @@
-'.source.nsis':
-  'Minimal Script':
-    'prefix': 'scaffold-Minimal'
-    'body': """
-      ; Scaffolding by https://atom.io/packages/language-nsis
-      
-      ; Settings ---------------------------------
-      OutFile "${1:installer_name}"
-      
-      ; Includes ---------------------------------
-      $2
-      
-      ; Pages ------------------------------------
-      $3
-      
-      ; Sections ---------------------------------
-      Section "${4:section_name}"
-      
-      	${5:# your code here}
-      
-      SectionEnd
-      
-      ; Functions --------------------------------
-      $6
-    """
+".source.nsis":
+	"Minimal Script":
+		body: '''
+			; Scaffolding by https://atom.io/packages/language-nsis
+
+			; Settings ---------------------------------
+			OutFile "${1:installer_name}"
+
+			; Includes ---------------------------------
+			$2
+
+			; Pages ------------------------------------
+			$3
+
+			; Sections ---------------------------------
+			Section "${4:section_name}"
+
+				${5:# your code here}
+
+			SectionEnd
+
+			; Functions --------------------------------
+			$6
+		'''
+		description: "Creates a minimal installer template" 
+		prefix: "scaffold-Minimal"

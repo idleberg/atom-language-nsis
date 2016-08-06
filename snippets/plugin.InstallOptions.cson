@@ -1,10 +1,13 @@
-'.source.nsis':
-  'InstallOptions::initDialog':
-    'prefix': 'InstallOptions::initDialog'
-    'body': 'InstallOptions::initDialog "${1:file}.ini"$2'
-  'InstallOptions::initDialog /NOUNLOAD':
-    'prefix': 'InstallOptions::initDialog /NOUNLOAD'
-    'body': 'InstallOptions::initDialog /NOUNLOAD "${1:file}.ini"$2'
-  'InstallOptions::show':
-    'prefix': 'InstallOptions::show'
-    'body': 'InstallOptions::show$1'
+".source.nsis":
+	"InstallOptions::initDialog":
+		body: "InstallOptions::initDialog \"${1:file}.ini\"$2"
+		leftLabelHTML: "<span class='support class'>InstallOptions.dll</span>"
+		prefix: "InstallOptions::initDialog"
+	"InstallOptions::initDialog /NOUNLOAD":
+		body: "InstallOptions::initDialog /NOUNLOAD \"${1:file}.ini\"$2"
+		leftLabelHTML: "<span class='support class'>InstallOptions.dll</span>"
+		prefix: "InstallOptions::initDialog /NOUNLOAD"
+	"InstallOptions::show":
+		body: "InstallOptions::show$1"
+		leftLabelHTML: "<span class='support class'>InstallOptions.dll</span>"
+		prefix: "InstallOptions::show"

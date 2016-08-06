@@ -1,13 +1,12 @@
 ".source.nsis":
-	"InstallOptions":
-		prefix: "scaffold-InstallOptions"
-		body: """
+	InstallOptions:
+		body: '''
 			; Scaffolding by https://atom.io/packages/language-nsis
 
 			; Settings ---------------------------------
 			Name "${1:installer_name}"
 			OutFile "${2:${1:installer_name}}.exe"
-			RequestExecutionLevel ${3:user}
+			RequestExecutionLevel ${3:admin}
 			InstallDir "\\$PROGRAMFILES\\\\${4:${1:installer_name}}"
 
 			; Includes ---------------------------------
@@ -49,4 +48,6 @@
 			 	${10:# your code here}
 
 			FunctionEnd$14
-		"""
+		'''
+		description: "Creates an installer template with InstallOptions support" 
+		prefix: "scaffold-InstallOptions"

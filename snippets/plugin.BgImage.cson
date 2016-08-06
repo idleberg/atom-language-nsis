@@ -1,25 +1,33 @@
-'.source.nsis':
-  'BgImage::AddImage':
-    'prefix': 'BgImage::AddImage'
-    'body': 'BgImage::AddImage "${1:file}.bmp" ${2:x} ${3:y}$4'
-  'BgImage::AddText':
-    'prefix': 'BgImage::AddText'
-    'body': 'BgImage::AddText "${1:text}" "${2:font}" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$8'
-  'BgImage::Clear':
-    'prefix': 'BgImage::Clear'
-    'body': 'BgImage::Clear$1'
-  'BgImage::Destroy':
-    'prefix': 'BgImage::Destroy'
-    'body': 'BgImage::Destroy$1'
-  'BgImage::Redraw':
-    'prefix': 'BgImage::Redraw'
-    'body': 'BgImage::Redraw$1'
-  'BgImage::SetBg':
-    'prefix': 'BgImage::SetBg'
-    'body': 'BgImage::SetBg "${1:file}.bmp"$2'
-  'BgImage::SetReturn':
-    'prefix': 'BgImage::SetReturn'
-    'body': 'BgImage::SetReturn "${1:on|off}"$2'
-  'BgImage::Sound':
-    'prefix': 'BgImage::Sound'
-    'body': 'BgImage::Sound "${1:file}.wav"$2'
+".source.nsis":
+	"BgImage::AddImage":
+		body: "BgImage::AddImage \"${1:file}.bmp\" ${2:x} ${3:y}$4"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::AddImage"
+	"BgImage::AddText":
+		body: "BgImage::AddText \"${1:text}\" \"${2:font}\" ${3:R} ${4:G} ${5:B} ${6:x} ${7:x}$8"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::AddText"
+	"BgImage::Clear":
+		body: "BgImage::Clear$1"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::Clear"
+	"BgImage::Destroy":
+		body: "BgImage::Destroy$1"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::Destroy"
+	"BgImage::Redraw":
+		body: "BgImage::Redraw$1"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::Redraw"
+	"BgImage::SetBg":
+		body: "BgImage::SetBg \"${1:file}.bmp\"$2"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::SetBg"
+	"BgImage::SetReturn":
+		body: "BgImage::SetReturn \"${1:on|off}\"$2"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::SetReturn"
+	"BgImage::Sound":
+		body: "BgImage::Sound \"${1:file}.wav\"$2"
+		leftLabelHTML: "<span class='support class'>BgImage.dll</span>"
+		prefix: "BgImage::Sound"

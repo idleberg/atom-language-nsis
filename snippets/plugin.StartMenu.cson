@@ -1,7 +1,9 @@
-'.source.nsis':
-  'StartMenu::Init':
-    'prefix': 'StartMenu::Init'
-    'body': 'StartMenu::Init "${1:text}"$2'
-  'StartMenu::Select':
-    'prefix': 'StartMenu::Select'
-    'body': 'StartMenu::Select $1$2'
+".source.nsis":
+	"StartMenu::Init":
+		body: "StartMenu::Init \"${1:text}\"$2"
+		leftLabelHTML: "<span class='support class'>StartMenu.dll</span>"
+		prefix: "StartMenu::Init"
+	"StartMenu::Select":
+		body: "StartMenu::Select $1$2"
+		leftLabelHTML: "<span class='support class'>StartMenu.dll</span>"
+		prefix: "StartMenu::Select"

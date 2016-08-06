@@ -1,410 +1,545 @@
-'.source.ini':
-  'Align':
-    'prefix': 'Align'
-    'body': 'Align=${1:LEFT|CENTER|RIGHT}$2'
-  'BackButtonText':
-    'prefix': 'BackButtonText'
-    'body': 'BackButtonText=${1:text}$2'
-  'BackEnabled':
-    'prefix': 'BackEnabled'
-    'body': 'BackEnabled=${1:0|1}$2'
-  'BackShow':
-    'prefix': 'BackShow'
-    'body': 'BackShow=${1:0|1}$2'
-  'BALLOON':
-    'prefix': 'BALLOON'
-    'body': 'BALLOON$1'
-  'BgColor':
-    'prefix': 'BgColor'
-    'body': 'BgColor=0x${1:BBRRGG}$2'
-  'BOTTOM':
-    'prefix': 'BOTTOM'
-    'body': 'BOTTOM$1'
-  'BufferSize':
-    'prefix': 'BufferSize'
-    'body': 'BufferSize=${1:integer}$2'
-  'CancelButtonText':
-    'prefix': 'CancelButtonText'
-    'body': 'CancelButtonText=${1:text}$2'
-  'CancelEnabled':
-    'prefix': 'CancelEnabled'
-    'body': 'CancelEnabled=${1:0|1}$2'
-  'CancelShow':
-    'prefix': 'CancelShow'
-    'body': 'CancelShow=${1:0|1}$2'
-  'CENTER':
-    'prefix': 'CENTER'
-    'body': 'CENTER$1'
-  'DISABLED':
-    'prefix': 'DISABLED'
-    'body': 'DISABLED$1'
-  'DisBgColor':
-    'prefix': 'DisBgColor'
-    'body': 'DisBgColor=0x${1:BBRRGG}$2'
-  'DisSelBgColor':
-    'prefix': 'DisSelBgColor'
-    'body': 'DisSelBgColor=0x${1:BBRRGG}$2'
-  'DisSelTxtColor':
-    'prefix': 'DisSelTxtColor'
-    'body': 'DisSelTxtColor=0x${1:BBRRGG}$2'
-  'DisSelTxtShwColor':
-    'prefix': 'DisSelTxtShwColor'
-    'body': 'DisSelTxtShwColor=0x${1:BBRRGG}$2'
-  'DisTxtColor':
-    'prefix': 'DisTxtColor'
-    'body': 'DisTxtColor=0x${1:BBRRGG}$2'
-  'DisTxtShwColor':
-    'prefix': 'DisTxtShwColor'
-    'body': 'DisTxtShwColor=0x${1:BBRRGG}$2'
-  'EXCLAMATION':
-    'prefix': 'EXCLAMATION'
-    'body': 'EXCLAMATION$1'
-  'EXTENDEDSELCT':
-    'prefix': 'EXTENDEDSELCT'
-    'body': 'EXTENDEDSELCT$1'
-  'FILE_EXPLORER':
-    'prefix': 'FILE_EXPLORER'
-    'body': 'FILE_EXPLORER$1'
-  'FILE_HIDEREADONLY':
-    'prefix': 'FILE_HIDEREADONLY'
-    'body': 'FILE_HIDEREADONLY$1'
-  'FILE_MUST_EXIST':
-    'prefix': 'FILE_MUST_EXIST'
-    'body': 'FILE_MUST_EXIST$1'
-  'Filter':
-    'prefix': 'Filter'
-    'body': 'Filter=${1:All Files|*.*}$2'
-  'Flags':
-    'prefix': 'Flags'
-    'body': 'Flags=${1:flags}$2'
-  'FOCUS':
-    'prefix': 'FOCUS'
-    'body': 'FOCUS$1'
-  'FontBold':
-    'prefix': 'FontBold'
-    'body': 'FontBold=${1:0|1}$2'
-  'FontHeight':
-    'prefix': 'FontHeight'
-    'body': 'FontHeight=${1:height_in_pt}$2'
-  'FontItalic':
-    'prefix': 'FontItalic'
-    'body': 'FontItalic=${1:0|1}$2'
-  'FontName':
-    'prefix': 'FontName'
-    'body': 'FontName=${1:font_name}$2'
-  'FontUnderline':
-    'prefix': 'FontUnderline'
-    'body': 'FontUnderline=${1:0|1}$2'
-  'FontWidth':
-    'prefix': 'FontWidth'
-    'body': 'FontWidth=${1:width_in_px}$2'
-  'GROUP':
-    'prefix': 'GROUP'
-    'body': 'GROUP$1'
-  'HeaderItems':
-    'prefix': 'HeaderItems'
-    'body': 'HeaderItems=${1:item1|item2}$2'
-  'HeaderItemsAlign':
-    'prefix': 'HeaderItemsAlign'
-    'body': 'HeaderItemsAlign=${1:LEFT|RIGHT}$2'
-  'HeaderItemsWidth':
-    'prefix': 'HeaderItemsWidth'
-    'body': 'HeaderItemsWidth=${1:width_in_px}$2'
-  'HSCROLL':
-    'prefix': 'HSCROLL'
-    'body': 'HSCROLL$1'
-  'HWND':
-    'prefix': 'HWND'
-    'body': 'HWND=${1:handle}$2'
-  'HWND2':
-    'prefix': 'HWND2'
-    'body': 'HWND2=${1:handle}$2'
-  'INFORMATION':
-    'prefix': 'INFORMATION'
-    'body': 'INFORMATION$1'
-  'JUSTIFY':
-    'prefix': 'JUSTIFY'
-    'body': 'JUSTIFY$1'
-  'LargeImageList':
-    'prefix': 'LargeImageList'
-    'body': 'LargeImageList=${1:images}$2'
-  'LEFT':
-    'prefix': 'LEFT'
-    'body': 'LEFT$1'
-  'ListItems':
-    'prefix': 'ListItems'
-    'body': 'ListItems=${1:item1|item2}$2'
-  'ListItemsHeight':
-    'prefix': 'ListItemsHeight'
-    'body': 'ListItemsHeight=${1:height_in_px}$2'
-  'MaxLen':
-    'prefix': 'MaxLen'
-    'body': 'MaxLen=${1:integer}$2'
-  'MonthOutColor':
-    'prefix': 'MonthOutColor'
-    'body': 'MonthOutColor=0x${1:BBRRGG}$2'
-  'MonthTrailingTxtColor':
-    'prefix': 'MonthTrailingTxtColor'
-    'body': 'MonthTrailingTxtColor=0x${1:BBRRGG}$2'
-  'MULTILINE':
-    'prefix': 'MULTILINE'
-    'body': 'MULTILINE$1'
-  'MULTISELECT':
-    'prefix': 'MULTISELECT'
-    'body': 'MULTISELECT$1'
-  'MUnits':
-    'prefix': 'MUnits'
-    'body': 'MUnits=${1:0|1}$2'
-  'NextButtonText':
-    'prefix': 'NextButtonText'
-    'body': 'NextButtonText=${1:text}$2'
-  'NextEnabled':
-    'prefix': 'NextEnabled'
-    'body': 'NextEnabled=${1:0|1}$2'
-  'NextShow':
-    'prefix': 'NextShow'
-    'body': 'NextShow=${1:0|1}$2'
-  'NOALWAYSTIP':
-    'prefix': 'NOALWAYSTIP'
-    'body': 'NOALWAYSTIP$1'
-  'NOANIMATE':
-    'prefix': 'NOANIMATE'
-    'body': 'NOANIMATE$1'
-  'NOFADE':
-    'prefix': 'NOFADE'
-    'body': 'NOFADE$1'
-  'NOPREFIX':
-    'prefix': 'NOPREFIX'
-    'body': 'NOPREFIX$1'
-  'NOTABSTOP':
-    'prefix': 'NOTABSTOP'
-    'body': 'NOTABSTOP$1'
-  'NOTIFY':
-    'prefix': 'NOTIFY'
-    'body': 'NOTIFY$1'
-  'NOWORDWRAP':
-    'prefix': 'NOWORDWRAP'
-    'body': 'NOWORDWRAP$1'
-  'NumFields':
-    'prefix': 'NumFields'
-    'body': 'NumFields=${1:integer}$2'
-  'ONCLICK':
-    'prefix': 'ONCLICK'
-    'body': 'ONCLICK$1'
-  'ONDBLCLICK':
-    'prefix': 'ONDBLCLICK'
-    'body': 'ONDBLCLICK$1'
-  'ONDRBLCLICK':
-    'prefix': 'ONDRBLCLICK'
-    'body': 'ONDRBLCLICK$1'
-  'ONKILLFOCUS':
-    'prefix': 'ONKILLFOCUS'
-    'body': 'ONKILLFOCUS$1'
-  'ONLISTOPEN':
-    'prefix': 'ONLISTOPEN'
-    'body': 'ONLISTOPEN$1'
-  'ONLY_NUMBERS':
-    'prefix': 'ONLY_NUMBERS'
-    'body': 'ONLY_NUMBERS$1'
-  'ONRCLICK':
-    'prefix': 'ONRCLICK'
-    'body': 'ONRCLICK$1'
-  'ONSELCHANGE':
-    'prefix': 'ONSELCHANGE'
-    'body': 'ONSELCHANGE$1'
-  'ONSETFOCUS':
-    'prefix': 'ONSETFOCUS'
-    'body': 'ONSETFOCUS$1'
-  'ONSTART':
-    'prefix': 'ONSTART'
-    'body': 'ONSTART$1'
-  'ONSTOP':
-    'prefix': 'ONSTOP'
-    'body': 'ONSTOP$1'
-  'ONTEXTCHANGE':
-    'prefix': 'ONTEXTCHANGE'
-    'body': 'ONTEXTCHANGE$1'
-  'ONTEXTSELCHANGE':
-    'prefix': 'ONTEXTSELCHANGE'
-    'body': 'ONTEXTSELCHANGE$1'
-  'ONTEXTTRUNCATE':
-    'prefix': 'ONTEXTTRUNCATE'
-    'body': 'ONTEXTTRUNCATE$1'
-  'ONTEXTUPDATE':
-    'prefix': 'ONTEXTUPDATE'
-    'body': 'ONTEXTUPDATE$1'
-  'ONTEXTVSCROLL':
-    'prefix': 'ONTEXTVSCROLL'
-    'body': 'ONTEXTVSCROLL$1'
-  'PATH_MUST_EXIST':
-    'prefix': 'PATH_MUST_EXIST'
-    'body': 'PATH_MUST_EXIST$1'
-  'PROMPT_CREATE':
-    'prefix': 'PROMPT_CREATE'
-    'body': 'PROMPT_CREATE$1'
-  'READONLY':
-    'prefix': 'READONLY'
-    'body': 'READONLY$1'
-  'ReadOnlyBgColor':
-    'prefix': 'ReadOnlyBgColor'
-    'body': 'ReadOnlyBgColor=0x${1:BBRRGG}$2'
-  'ReadOnlyTxtColor':
-    'prefix': 'ReadOnlyTxtColor'
-    'body': 'ReadOnlyTxtColor=0x${1:BBRRGG}$2'
-  'RefFields':
-    'prefix': 'RefFields'
-    'body': 'RefFields=${1:integer}$2'
-  'REQ_SAVE':
-    'prefix': 'REQ_SAVE'
-    'body': 'REQ_SAVE$1'
-  'RESIZETOFIT':
-    'prefix': 'RESIZETOFIT'
-    'body': 'RESIZETOFIT$1'
-  'RIGHT':
-    'prefix': 'RIGHT'
-    'body': 'RIGHT$1'
-  'Root':
-    'prefix': 'Root'
-    'body': 'Root=$1'
-  'RTL':
-    'prefix': 'RTL'
-    'body': 'RTL=${1:1}$2'
-  'SelBgColor':
-    'prefix': 'SelBgColor'
-    'body': 'SelBgColor=0x${1:BBRRGG}$2'
-  'SelTxtColor':
-    'prefix': 'SelTxtColor'
-    'body': 'SelTxtColor=0x${1:BBRRGG}$2'
-  'SelTxtShwColor':
-    'prefix': 'SelTxtShwColor'
-    'body': 'SelTxtShwColor=0x${1:BBRRGG}$2'
-  'SmallImageList':
-    'prefix': 'SmallImageList'
-    'body': 'SmallImageList=${1:images}$2'
-  'State':
-    'prefix': 'State'
-    'body': 'StateRTL=${1:state}$2'
-  'StateImageList':
-    'prefix': 'StateImageList'
-    'body': 'StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp$7'
-  'STOP':
-    'prefix': 'STOP'
-    'body': 'STOP$1'
-  'Text':
-    'prefix': 'Text'
-    'body': 'Text=${1:text}$2'
-  'TimeOut':
-    'prefix': 'TimeOut'
-    'body': 'TimeOut=${1:time_in_ms}$2'
-  'Title':
-    'prefix': 'Title'
-    'body': 'Title=${1:title}$2'
-  'ToolTipBgColor':
-    'prefix': 'ToolTipBgColor'
-    'body': 'ToolTipBgColor=0x${1:BBRRGG}$2'
-  'ToolTipFlags':
-    'prefix': 'ToolTipFlags'
-    'body': 'ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}$2'
-  'ToolTipIcon':
-    'prefix': 'ToolTipIcon'
-    'body': 'ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}$2'
-  'ToolTipText':
-    'prefix': 'ToolTipText'
-    'body': 'ToolTipText=${1:text}$2'
-  'ToolTipTitle':
-    'prefix': 'ToolTipTitle'
-    'body': 'ToolTipTitle=${1:title}$2'
-  'ToolTipTxtColor':
-    'prefix': 'ToolTipTxtColor'
-    'body': 'ToolTipTxtColor=0x${1:BBRRGG}$2'
-  'ToolTipWidth':
-    'prefix': 'ToolTipWidth'
-    'body': 'ToolTipWidth=${1:width_in_px}$2'
-  'TOP':
-    'prefix': 'TOP'
-    'body': 'TOP$1'
-  'TRANSPARENT':
-    'prefix': 'TRANSPARENT'
-    'body': 'TRANSPARENT$1'
-  'TxtAlign':
-    'prefix': 'TxtAlign'
-    'body': 'TxtAlign=${1:LEFT|CENTER|RIGHT|JUSTIFY}$2'
-  'TxtColor':
-    'prefix': 'TxtColor'
-    'body': 'TxtColor=0x${1:RRGGBB}$2'
-  'TxtShwColor':
-    'prefix': 'TxtShwColor'
-    'body': 'TxtShwColor=0x${1:BBRRGG}$2'
-  'TxtVAlign':
-    'prefix': 'TxtVAlign'
-    'body': 'TxtVAlign=${1:TOP|CENTER|BOTTOM|JUSTIFY}$2'
-  'Type':
-    'prefix': 'Type'
-    'body': 'Type$2'
-  'Type Bitmap':
-    'prefix': 'Type Bitmap'
-    'body': 'Type=Bitmap$1'
-  'Type Button':
-    'prefix': 'Type Button'
-    'body': 'Type=Button$1'
-  'Type CheckBox':
-    'prefix': 'Type CheckBox'
-    'body': 'Type=CheckBox$1'
-  'Type Combobox':
-    'prefix': 'Type Combobox'
-    'body': 'Type=Combobox$1'
-  'Type DirRequest':
-    'prefix': 'Type DirRequest'
-    'body': 'Type=DirRequest$1'
-  'Type DropList':
-    'prefix': 'Type DropList'
-    'body': 'Type=DropList$1'
-  'Type FileRequest':
-    'prefix': 'Type FileRequest'
-    'body': 'Type=FileRequest$1'
-  'Type GroupBox':
-    'prefix': 'Type GroupBox'
-    'body': 'Type=GroupBox$1'
-  'Type HLine':
-    'prefix': 'Type HLine'
-    'body': 'Type=HLine$1'
-  'Type Icon':
-    'prefix': 'Type Icon'
-    'body': 'Type=Icon$1'
-  'Type Label':
-    'prefix': 'Type Label'
-    'body': 'Type=Label$1'
-  'Type Link':
-    'prefix': 'Type Link'
-    'body': 'Type=Link$1'
-  'Type Listbox':
-    'prefix': 'Type Listbox'
-    'body': 'Type=Listbox$1'
-  'Type Password':
-    'prefix': 'Type Password'
-    'body': 'Type=Password$1'
-  'Type RadioButton':
-    'prefix': 'Type RadioButton'
-    'body': 'Type=RadioButton$1'
-  'Type Text':
-    'prefix': 'Type Text'
-    'body': 'Type=Text$1'
-  'Type VLine':
-    'prefix': 'Type VLine'
-    'body': 'Type=VLine$1'
-  'ValidateText':
-    'prefix': 'ValidateText'
-    'body': 'ValidateText=${1:text}$2'
-  'VAlign':
-    'prefix': 'VAlign'
-    'body': 'VAlign=${1:TOP|CENTER|BOTTOM}$2'
-  'VSCROLL':
-    'prefix': 'VSCROLL'
-    'body': 'VSCROLL$1'
-  'WANTRETURN':
-    'prefix': 'WANTRETURN'
-    'body': 'WANTRETURN$1'
-  'WARN_IF_EXIST':
-    'prefix': 'WARN_IF_EXIST'
-    'body': 'WARN_IF_EXIST$1'
-
+".source.ini":
+	Align:
+		body: "Align=${1:LEFT|CENTER|RIGHT}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Align"
+	BALLOON:
+		body: "BALLOON$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BALLOON"
+	BOTTOM:
+		body: "BOTTOM$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BOTTOM"
+	BackButtonText:
+		body: "BackButtonText=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BackButtonText"
+	BackEnabled:
+		body: "BackEnabled=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BackEnabled"
+	BackShow:
+		body: "BackShow=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BackShow"
+	BgColor:
+		body: "BgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BgColor"
+	BufferSize:
+		body: "BufferSize=${1:integer}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "BufferSize"
+	CENTER:
+		body: "CENTER$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "CENTER"
+	CancelButtonText:
+		body: "CancelButtonText=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "CancelButtonText"
+	CancelEnabled:
+		body: "CancelEnabled=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "CancelEnabled"
+	CancelShow:
+		body: "CancelShow=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "CancelShow"
+	DISABLED:
+		body: "DISABLED$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DISABLED"
+	DisBgColor:
+		body: "DisBgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisBgColor"
+	DisSelBgColor:
+		body: "DisSelBgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisSelBgColor"
+	DisSelTxtColor:
+		body: "DisSelTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisSelTxtColor"
+	DisSelTxtShwColor:
+		body: "DisSelTxtShwColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisSelTxtShwColor"
+	DisTxtColor:
+		body: "DisTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisTxtColor"
+	DisTxtShwColor:
+		body: "DisTxtShwColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "DisTxtShwColor"
+	EXCLAMATION:
+		body: "EXCLAMATION$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "EXCLAMATION"
+	EXTENDEDSELCT:
+		body: "EXTENDEDSELCT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "EXTENDEDSELCT"
+	FILE_EXPLORER:
+		body: "FILE_EXPLORER$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FILE_EXPLORER"
+	FILE_HIDEREADONLY:
+		body: "FILE_HIDEREADONLY$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FILE_HIDEREADONLY"
+	FILE_MUST_EXIST:
+		body: "FILE_MUST_EXIST$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FILE_MUST_EXIST"
+	FOCUS:
+		body: "FOCUS$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FOCUS"
+	Filter:
+		body: "Filter=${1:All Files|*.*}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Filter"
+	Flags:
+		body: "Flags=${1:flags}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Flags"
+	FontBold:
+		body: "FontBold=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontBold"
+	FontHeight:
+		body: "FontHeight=${1:height_in_pt}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontHeight"
+	FontItalic:
+		body: "FontItalic=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontItalic"
+	FontName:
+		body: "FontName=${1:font_name}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontName"
+	FontUnderline:
+		body: "FontUnderline=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontUnderline"
+	FontWidth:
+		body: "FontWidth=${1:width_in_px}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "FontWidth"
+	GROUP:
+		body: "GROUP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "GROUP"
+	HSCROLL:
+		body: "HSCROLL$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HSCROLL"
+	HWND:
+		body: "HWND=${1:handle}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HWND"
+	HWND2:
+		body: "HWND2=${1:handle}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HWND2"
+	HeaderItems:
+		body: "HeaderItems=${1:item1|item2}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HeaderItems"
+	HeaderItemsAlign:
+		body: "HeaderItemsAlign=${1:LEFT|RIGHT}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HeaderItemsAlign"
+	HeaderItemsWidth:
+		body: "HeaderItemsWidth=${1:width_in_px}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "HeaderItemsWidth"
+	INFORMATION:
+		body: "INFORMATION$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "INFORMATION"
+	JUSTIFY:
+		body: "JUSTIFY$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "JUSTIFY"
+	LEFT:
+		body: "LEFT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "LEFT"
+	LargeImageList:
+		body: "LargeImageList=${1:images}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "LargeImageList"
+	ListItems:
+		body: "ListItems=${1:item1|item2}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ListItems"
+	ListItemsHeight:
+		body: "ListItemsHeight=${1:height_in_px}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ListItemsHeight"
+	MULTILINE:
+		body: "MULTILINE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MULTILINE"
+	MULTISELECT:
+		body: "MULTISELECT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MULTISELECT"
+	MUnits:
+		body: "MUnits=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MUnits"
+	MaxLen:
+		body: "MaxLen=${1:integer}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MaxLen"
+	MonthOutColor:
+		body: "MonthOutColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MonthOutColor"
+	MonthTrailingTxtColor:
+		body: "MonthTrailingTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "MonthTrailingTxtColor"
+	NOALWAYSTIP:
+		body: "NOALWAYSTIP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOALWAYSTIP"
+	NOANIMATE:
+		body: "NOANIMATE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOANIMATE"
+	NOFADE:
+		body: "NOFADE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOFADE"
+	NOPREFIX:
+		body: "NOPREFIX$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOPREFIX"
+	NOTABSTOP:
+		body: "NOTABSTOP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOTABSTOP"
+	NOTIFY:
+		body: "NOTIFY$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOTIFY"
+	NOWORDWRAP:
+		body: "NOWORDWRAP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NOWORDWRAP"
+	NextButtonText:
+		body: "NextButtonText=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NextButtonText"
+	NextEnabled:
+		body: "NextEnabled=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NextEnabled"
+	NextShow:
+		body: "NextShow=${1:0|1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NextShow"
+	NumFields:
+		body: "NumFields=${1:integer}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "NumFields"
+	ONCLICK:
+		body: "ONCLICK$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONCLICK"
+	ONDBLCLICK:
+		body: "ONDBLCLICK$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONDBLCLICK"
+	ONDRBLCLICK:
+		body: "ONDRBLCLICK$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONDRBLCLICK"
+	ONKILLFOCUS:
+		body: "ONKILLFOCUS$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONKILLFOCUS"
+	ONLISTOPEN:
+		body: "ONLISTOPEN$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONLISTOPEN"
+	ONLY_NUMBERS:
+		body: "ONLY_NUMBERS$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONLY_NUMBERS"
+	ONRCLICK:
+		body: "ONRCLICK$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONRCLICK"
+	ONSELCHANGE:
+		body: "ONSELCHANGE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONSELCHANGE"
+	ONSETFOCUS:
+		body: "ONSETFOCUS$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONSETFOCUS"
+	ONSTART:
+		body: "ONSTART$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONSTART"
+	ONSTOP:
+		body: "ONSTOP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONSTOP"
+	ONTEXTCHANGE:
+		body: "ONTEXTCHANGE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONTEXTCHANGE"
+	ONTEXTSELCHANGE:
+		body: "ONTEXTSELCHANGE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONTEXTSELCHANGE"
+	ONTEXTTRUNCATE:
+		body: "ONTEXTTRUNCATE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONTEXTTRUNCATE"
+	ONTEXTUPDATE:
+		body: "ONTEXTUPDATE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONTEXTUPDATE"
+	ONTEXTVSCROLL:
+		body: "ONTEXTVSCROLL$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ONTEXTVSCROLL"
+	PATH_MUST_EXIST:
+		body: "PATH_MUST_EXIST$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "PATH_MUST_EXIST"
+	PROMPT_CREATE:
+		body: "PROMPT_CREATE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "PROMPT_CREATE"
+	READONLY:
+		body: "READONLY$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "READONLY"
+	REQ_SAVE:
+		body: "REQ_SAVE$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "REQ_SAVE"
+	RESIZETOFIT:
+		body: "RESIZETOFIT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "RESIZETOFIT"
+	RIGHT:
+		body: "RIGHT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "RIGHT"
+	RTL:
+		body: "RTL=${1:1}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "RTL"
+	ReadOnlyBgColor:
+		body: "ReadOnlyBgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ReadOnlyBgColor"
+	ReadOnlyTxtColor:
+		body: "ReadOnlyTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ReadOnlyTxtColor"
+	RefFields:
+		body: "RefFields=${1:integer}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "RefFields"
+	Root:
+		body: "Root=$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Root"
+	STOP:
+		body: "STOP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "STOP"
+	SelBgColor:
+		body: "SelBgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "SelBgColor"
+	SelTxtColor:
+		body: "SelTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "SelTxtColor"
+	SelTxtShwColor:
+		body: "SelTxtShwColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "SelTxtShwColor"
+	SmallImageList:
+		body: "SmallImageList=${1:images}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "SmallImageList"
+	State:
+		body: "StateRTL=${1:state}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "State"
+	StateImageList:
+		body: "StateImageList=${1:nothing}.bmp|${2:unchecked}.bmp|${3:checked}.bmp|${4:intermediate}.bmp|${5:unchecked_disabled}.bmp|${6:checked_disabled}.bmp$7"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "StateImageList"
+	TOP:
+		body: "TOP$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TOP"
+	TRANSPARENT:
+		body: "TRANSPARENT$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TRANSPARENT"
+	Text:
+		body: "Text=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Text"
+	TimeOut:
+		body: "TimeOut=${1:time_in_ms}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TimeOut"
+	Title:
+		body: "Title=${1:title}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Title"
+	ToolTipBgColor:
+		body: "ToolTipBgColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipBgColor"
+	ToolTipFlags:
+		body: "ToolTipFlags=${1:BALLOON|NOALWAYSTIP|NOANIMATE|NOFADE|NOPREFIX}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipFlags"
+	ToolTipIcon:
+		body: "ToolTipIcon=${1:EXCLAMATION|INFORMATION|STOP}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipIcon"
+	ToolTipText:
+		body: "ToolTipText=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipText"
+	ToolTipTitle:
+		body: "ToolTipTitle=${1:title}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipTitle"
+	ToolTipTxtColor:
+		body: "ToolTipTxtColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipTxtColor"
+	ToolTipWidth:
+		body: "ToolTipWidth=${1:width_in_px}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ToolTipWidth"
+	TxtAlign:
+		body: "TxtAlign=${1:LEFT|CENTER|RIGHT|JUSTIFY}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TxtAlign"
+	TxtColor:
+		body: "TxtColor=0x${1:RRGGBB}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TxtColor"
+	TxtShwColor:
+		body: "TxtShwColor=0x${1:BBRRGG}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TxtShwColor"
+	TxtVAlign:
+		body: "TxtVAlign=${1:TOP|CENTER|BOTTOM|JUSTIFY}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "TxtVAlign"
+	Type:
+		body: "Type$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type"
+	"Type Bitmap":
+		body: "Type=Bitmap$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Bitmap"
+	"Type Button":
+		body: "Type=Button$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Button"
+	"Type CheckBox":
+		body: "Type=CheckBox$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type CheckBox"
+	"Type Combobox":
+		body: "Type=Combobox$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Combobox"
+	"Type DirRequest":
+		body: "Type=DirRequest$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type DirRequest"
+	"Type DropList":
+		body: "Type=DropList$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type DropList"
+	"Type FileRequest":
+		body: "Type=FileRequest$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type FileRequest"
+	"Type GroupBox":
+		body: "Type=GroupBox$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type GroupBox"
+	"Type HLine":
+		body: "Type=HLine$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type HLine"
+	"Type Icon":
+		body: "Type=Icon$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Icon"
+	"Type Label":
+		body: "Type=Label$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Label"
+	"Type Link":
+		body: "Type=Link$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Link"
+	"Type Listbox":
+		body: "Type=Listbox$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Listbox"
+	"Type Password":
+		body: "Type=Password$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Password"
+	"Type RadioButton":
+		body: "Type=RadioButton$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type RadioButton"
+	"Type Text":
+		body: "Type=Text$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type Text"
+	"Type VLine":
+		body: "Type=VLine$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "Type VLine"
+	VAlign:
+		body: "VAlign=${1:TOP|CENTER|BOTTOM}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "VAlign"
+	VSCROLL:
+		body: "VSCROLL$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "VSCROLL"
+	ValidateText:
+		body: "ValidateText=${1:text}$2"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "ValidateText"
+	WANTRETURN:
+		body: "WANTRETURN$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "WANTRETURN"
+	WARN_IF_EXIST:
+		body: "WARN_IF_EXIST$1"
+		leftLabelHTML: "InstallOptions.dll"
+		prefix: "WARN_IF_EXIST"
