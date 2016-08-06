@@ -3,7 +3,7 @@
     body: "${NSISDIR}$1"
     description: "A symbol that contains the path where NSIS is installed"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Variables/NSISDIR.md"
-    leftLabelHTML: "{}"
+    leftLabelHTML: "<span class='constant'>${}</span>"
     prefix: "NSISDIR"
   $ADMINTOOLS:
     body: "$ADMINTOOLS$1"
