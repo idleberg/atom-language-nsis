@@ -1,4 +1,5 @@
 {exec} = require 'child_process'
+os = require 'os'
 
 module.exports = NsisBuild =
   which: null
@@ -49,7 +50,6 @@ module.exports = NsisBuild =
       return
 
   getPlatform: ->
-    os = require 'os'
 
     if os.platform() is 'win32'
       @which  = "where"
@@ -57,3 +57,11 @@ module.exports = NsisBuild =
     else
       @which  = "which"
       @prefix = "-"
+
+  showVersion: ->
+    pathToMakensis = atom.config.get('language-nsis.pathToMakensis') ? 'makensis'
+    
+    @getPlatform()
+    exec "\"#{pathToMakensis}\" #{@prefix}VERSION", (error, stdout, stderr) ->
+      unless error isnt null
+        atom.notifications.addInfo("**language-nsis**", detail: "makensis #{stdout} (#{pathToMakensis})", dismissable: true)
