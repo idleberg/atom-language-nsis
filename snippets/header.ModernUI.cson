@@ -1,4 +1,3 @@
-# Generated with Atomizr – https://atom.io/packages/atomizr
 ".source.nsis":
   MUI_ABORTWARNING:
     body: "!define MUI_ABORTWARNING$1"
