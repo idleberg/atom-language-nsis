@@ -1,4 +1,3 @@
-# Generated with Atomizr – https://atom.io/packages/atomizr
 ".source.nsis":
   "!addincludedir":
     body: "!addincludedir \"${1:directory}\"$2"

@@ -1,634 +1,1068 @@
-'.source.nsis':
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp'
-  '!define:MUI_FINISHPAGE_TITLE_3LINES':
-    body: '!define MUI_FINISHPAGE_TITLE_3LINES'
-    prefix: 'MUI_FINISHPAGE_TITLE_3LINES'
-  '!define:MUI_WELCOMEFINISHPAGE_INI':
-    body: '!define MUI_WELCOMEFINISHPAGE_INI \"${1:file}.ini\"'
-    prefix: 'MUI_WELCOMEFINISHPAGE_INI'
-  '!define:MUI_ICON':
-    body: '!define MUI_ICON \"${1:file}.ico\"'
-    prefix: 'MUI_ICON'
-  '!define:MUI_FINISHPAGE_RUN_NOTCHECKED':
-    body: '!define MUI_FINISHPAGE_RUN_NOTCHECKED'
-    prefix: 'MUI_FINISHPAGE_RUN_NOTCHECKED'
-  '!define:MUI_COMPONENTSPAGE_SMALLDESC':
-    body: '!define MUI_COMPONENTSPAGE_SMALLDESC'
-    prefix: 'MUI_COMPONENTSPAGE_SMALLDESC'
-  '!define:MUI_WELCOMEPAGE_TEXT':
-    body: '!define MUI_WELCOMEPAGE_TEXT \"${1:text}\"'
-    prefix: 'MUI_WELCOMEPAGE_TEXT'
-  '!insertmacro:MUI_LANGDLL_INFO':
-    body: '!define MUI_LANGDLL_INFO \"${1:text}\"'
-    prefix: 'MUI_LANGDLL_INFO'
-  '!define:MUI_FINISHPAGE_NOAUTOCLOSE':
-    body: '!define MUI_FINISHPAGE_NOAUTOCLOSE'
-    prefix: 'MUI_FINISHPAGE_NOAUTOCLOSE'
-  '!define:MUI_FINISHPAGE_TEXT_REBOOT':
-    body: '!define MUI_FINISHPAGE_TEXT_REBOOT \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_TEXT_REBOOT'
-  '!define:MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT':
-    body: '!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT'
-  '!insertmacro:MUI_CUSTOMFUNCTION_ABORT':
-    body: '!define MUI_CUSTOMFUNCTION_ABORT \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_ABORT'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp'
-  '!define:MUI_INSTFILESPAGE_COLORS':
-    body: '!define MUI_INSTFILESPAGE_COLORS \"${1:foreground_color}\" \"${2:background_color}\"'
-    prefix: 'MUI_INSTFILESPAGE_COLORS'
-  '!define:MUI_FINISHPAGE_BUTTON':
-    body: '!define MUI_FINISHPAGE_BUTTON \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_BUTTON'
-  '!insertmacro:MUI_PAGE_STARTMENU':
-    body: '!insertmacro MUI_PAGE_STARTMENU ${1:page_id} \\$${2:var}'
-    prefix: 'MUI_PAGE_STARTMENU'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp'
-  '!define:MUI_UNICON:box-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-uninstall.ico\"'
-    prefix: 'MUI_UNICON:box-uninstall.ico'
-  '!define:MUI_UNCONFIRMPAGE_TEXT_TOP':
-    body: '!define MUI_UNCONFIRMPAGE_TEXT_TOP \"${1:text}\"'
-    prefix: 'MUI_UNCONFIRMPAGE_TEXT_TOP'
-  '!define:MUI_COMPONENTSPAGE_TEXT_INSTTYPE':
-    body: '!define MUI_COMPONENTSPAGE_TEXT_INSTTYPE \"${1:text}\"'
-    prefix: 'MUI_COMPONENTSPAGE_TEXT_INSTTYPE'
-  '!define:MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO':
-    body: '!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO \"${1:text}\"'
-    prefix: 'MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO'
-  '!define:MUI_ICON:modern-install-colorful.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-colorful.ico\"'
-    prefix: 'MUI_ICON:modern-install-colorful.ico'
-  '!define:MUI_ICON:modern-install-full.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-full.ico\"'
-    prefix: 'MUI_ICON:modern-install-full.ico'
-  '!insertmacro:MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION':
-    body: '!define MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION'
-  '!insertmacro:MUI_UNFUNCTION_DESCRIPTION_BEGIN':
-    body: '!insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN\n\t${1:# your code here}\n!insertmacro MUI_UNFUNCTION_DESCRIPTION_END'
-    prefix: 'MUI_UNFUNCTION_DESCRIPTION_BEGIN'
-  '!define:MUI_UNABORTWARNING_TEXT':
-    body: '!define MUI_UNABORTWARNING_TEXT \"${1:text}\"'
-    prefix: 'MUI_UNABORTWARNING_TEXT'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange.bmp'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp'
-  '!define:MUI_ICON:modern-install-blue.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue.ico\"'
-    prefix: 'MUI_ICON:modern-install-blue.ico'
-  '!insertmacro:MUI_RESERVEFILE_INSTALLOPTIONS':
-    body: '!insertmacro MUI_RESERVEFILE_INSTALLOPTIONS'
-    prefix: 'MUI_RESERVEFILE_INSTALLOPTIONS'
-  '!define:MUI_FINISHPAGE_LINK':
-    body: '!define MUI_FINISHPAGE_LINK \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_LINK'
-  '!define:MUI_BGCOLOR':
-    body: '!define MUI_BGCOLOR \"${1:RRGGBB}\"'
-    prefix: 'MUI_BGCOLOR'
-  '!insertmacro:MUI_UNFUNCTION_DESCRIPTION_END':
-    body: '!insertmacro MUI_UNFUNCTION_DESCRIPTION_END'
-    prefix: 'MUI_UNFUNCTION_DESCRIPTION_END'
-  '!define:MUI_UNABORTWARNING':
-    body: '!define MUI_UNABORTWARNING'
-    prefix: 'MUI_UNABORTWARNING'
-  '!define:MUI_COMPONENTSPAGE_TEXT_TOP':
-    body: '!define MUI_COMPONENTSPAGE_TEXT_TOP \"${1:text}\"'
-    prefix: 'MUI_COMPONENTSPAGE_TEXT_TOP'
-  '!define:MUI_ICON:box-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-install.ico\"'
-    prefix: 'MUI_ICON:box-install.ico'
-  '!define:MUI_DIRECTORYPAGE_TEXT_TOP':
-    body: '!define MUI_DIRECTORYPAGE_TEXT_TOP \"${1:text}\"'
-    prefix: 'MUI_DIRECTORYPAGE_TEXT_TOP'
-  '!insertmacro:MUI_RESERVEFILE_LANGDLL':
-    body: '!insertmacro MUI_RESERVEFILE_LANGDLL'
-    prefix: 'MUI_RESERVEFILE_LANGDLL'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"${1:file}.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:nsis.bmp'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:win.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:win.bmp'
-  '!define:MUI_INSTFILESPAGE_PROGRESSBAR':
-    body: '!define MUI_INSTFILESPAGE_PROGRESSBAR \"${1:colored|smooth}\"'
-    prefix: 'MUI_INSTFILESPAGE_PROGRESSBAR'
-  '!define:MUI_UNICON:llama-blue.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\"'
-    prefix: 'MUI_UNICON:llama-blue.ico'
-  '!insertmacro:MUI_UNPAGE_COMPONENTS':
-    body: '!insertmacro MUI_UNPAGE_COMPONENTS'
-    prefix: 'MUI_UNPAGE_COMPONENTS'
-  '!define:MUI_FINISHPAGE_LINK_COLOR':
-    body: '!define MUI_FINISHPAGE_LINK_COLOR \"${1:RRGGBB}\"'
-    prefix: 'MUI_FINISHPAGE_LINK_COLOR'
-  '!define:MUI_UNWELCOMEFINISHPAGE_INI':
-    body: '!define MUI_UNWELCOMEFINISHPAGE_INI \"${1:file}.ini\"'
-    prefix: 'MUI_UNWELCOMEFINISHPAGE_INI'
-  '!define:MUI_ICON:llama-grey.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\"'
-    prefix: 'MUI_ICON:llama-grey.ico'
-  '!define:MUI_FINISHPAGE_TITLE':
-    body: '!define MUI_FINISHPAGE_TITLE \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_TITLE'
-  '!define:MUI_WELCOMEPAGE_TITLE':
-    body: '!define MUI_WELCOMEPAGE_TITLE \"${1:title}\"'
-    prefix: 'MUI_WELCOMEPAGE_TITLE'
-  '!insertmacro:MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT':
-    body: '!define MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT \"${1:function}\"'
-    prefix: 'MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT'
-  '!insertmacro:MUI_LANGDLL_DISPLAY':
-    body: '!insertmacro MUI_LANGDLL_DISPLAY'
-    prefix: 'MUI_LANGDLL_DISPLAY'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp'
-  '!define:MUI_UNICON:arrow-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-uninstall.ico\"'
-    prefix: 'MUI_UNICON:arrow-uninstall.ico'
-  '!define:MUI_INSTFILESPAGE_FINISHHEADER_TEXT':
-    body: '!define MUI_INSTFILESPAGE_FINISHHEADER_TEXT \"${1:text}\"'
-    prefix: 'MUI_INSTFILESPAGE_FINISHHEADER_TEXT'
-  '!define:MUI_STARTMENUPAGE_DEFAULTFOLDER':
-    body: '!define MUI_STARTMENUPAGE_DEFAULTFOLDER \"${1:folder}\"'
-    prefix: 'MUI_STARTMENUPAGE_DEFAULTFOLDER'
-  '!define:MUI_UNICON:modern-uninstall-blue-full.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue-full.ico\"'
-    prefix: 'MUI_UNICON:modern-uninstall-blue-full.ico'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp'
-  '!define:MUI_ICON:modern-install-blue-full.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue-full.ico\"'
-    prefix: 'MUI_ICON:modern-install-blue-full.ico'
-  '!define:MUI_LICENSEPAGE_RADIOBUTTONS':
-    body: '!define MUI_LICENSEPAGE_RADIOBUTTONS'
-    prefix: 'MUI_LICENSEPAGE_RADIOBUTTONS'
-  '!define:MUI_FINISHPAGE_TEXT_REBOOTLATER':
-    body: '!define MUI_FINISHPAGE_TEXT_REBOOTLATER \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_TEXT_REBOOTLATER'
-  '!define:MUI_ICON:win-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-install.ico\"'
-    prefix: 'MUI_ICON:win-install.ico'
-  '!define:MUI_ICON:arrow-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-install.ico\"'
-    prefix: 'MUI_ICON:arrow-install.ico'
-  '!insertmacro:MUI_PAGE_CUSTOMFUNCTION_LEAVE':
-    body: '!insertmacro MUI_PAGE_CUSTOMFUNCTION_LEAVE \"${1:function}\"'
-    prefix: 'MUI_PAGE_CUSTOMFUNCTION_LEAVE'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp'
-  '!define:MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH':
-    body: '!define MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH'
-    prefix: 'MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH'
-  '!define:MUI_HEADERIMAGE_BITMAP:nsis-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:nsis-r.bmp'
-  '!define:MUI_UNWELCOMEFINISHPAGE_BITMAP':
-    body: '!define MUI_UNWELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\"'
-    prefix: 'MUI_UNWELCOMEFINISHPAGE_BITMAP'
-  '!define:MUI_DIRECTORYPAGE_TEXT_DESTINATION':
-    body: '!define MUI_DIRECTORYPAGE_TEXT_DESTINATION \"${1:text}\"'
-    prefix: 'MUI_DIRECTORYPAGE_TEXT_DESTINATION'
-  '!define:MUI_WELCOMEFINISHPAGE_BITMAP':
-    body: '!define MUI_WELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\"'
-    prefix: 'MUI_WELCOMEFINISHPAGE_BITMAP'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp'
-  '!define:MUI_FINISHPAGE_REBOOTLATER_DEFAULT':
-    body: '!define MUI_FINISHPAGE_REBOOTLATER_DEFAULT'
-    prefix: 'MUI_FINISHPAGE_REBOOTLATER_DEFAULT'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp'
-  '!define:MUI_UNICON:modern-uninstall-colorful.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-colorful.ico\"'
-    prefix: 'MUI_UNICON:modern-uninstall-colorful.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"${1:file}.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL'
-  '!define:MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE':
-    body: '!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE'
-  '!define:MUI_COMPONENTSPAGE_CHECKBITMAP':
-    body: '!define MUI_COMPONENTSPAGE_CHECKBITMAP \"${1:file}.bmp\"'
-    prefix: 'MUI_COMPONENTSPAGE_CHECKBITMAP'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp'
-  '!define:MUI_UNFINISHPAGE_NOAUTOCLOSE':
-    body: '!define MUI_UNFINISHPAGE_NOAUTOCLOSE'
-    prefix: 'MUI_UNFINISHPAGE_NOAUTOCLOSE'
-  '!define:MUI_HEADER_TRANSPARENT_TEXT':
-    body: '!define MUI_HEADER_TRANSPARENT_TEXT'
-    prefix: 'MUI_HEADER_TRANSPARENT_TEXT'
-  '!insertmacro:MUI_LANGDLL_ALLLANGUAGES':
-    body: '!define MUI_LANGDLL_ALLLANGUAGES'
-    prefix: 'MUI_LANGDLL_ALLLANGUAGES'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL_STRETCH':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL_STRETCH ${1:mode}'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL_STRETCH'
-  '!define:MUI_UI_COMPONENTSPAGE_NODESC':
-    body: '!define MUI_UI_COMPONENTSPAGE_NODESC \"${1:file}.exe\"'
-    prefix: 'MUI_UI_COMPONENTSPAGE_NODESC'
-  '!define:MUI_ICON:orange-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install.ico\"'
-    prefix: 'MUI_ICON:orange-install.ico'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp'
-  '!define:MUI_FINISHPAGE_SHOWREADME_NOTCHECKED':
-    body: '!define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED'
-    prefix: 'MUI_FINISHPAGE_SHOWREADME_NOTCHECKED'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp'
-  '!define:MUI_PAGE_HEADER_SUBTEXT':
-    body: '!define MUI_PAGE_HEADER_SUBTEXT \"${1:text}\"'
-    prefix: 'MUI_PAGE_HEADER_SUBTEXT'
-  '!define:MUI_ICON:classic-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-install.ico\"'
-    prefix: 'MUI_ICON:classic-install.ico'
-  '!define:MUI_UNICON:modern-uninstall-full.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-full.ico\"'
-    prefix: 'MUI_UNICON:modern-uninstall-full.ico'
-  '!define:MUI_FINISHPAGE_RUN':
-    body: '!define MUI_FINISHPAGE_RUN \"${1:file}.exe\"'
-    prefix: 'MUI_FINISHPAGE_RUN'
-  '!insertmacro:MUI_LANGDLL_WINDOWTITLE':
-    body: '!define MUI_LANGDLL_WINDOWTITLE \"${1:text}\"'
-    prefix: 'MUI_LANGDLL_WINDOWTITLE'
-  '!define:MUI_UI':
-    body: '!define MUI_UI \"${1:file}.exe\"'
-    prefix: 'MUI_UI'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp'
-  '!insertmacro:MUI_PAGE_DIRECTORY':
-    body: '!insertmacro MUI_PAGE_DIRECTORY'
-    prefix: 'MUI_PAGE_DIRECTORY'
-  '!define:MUI_STARTMENUPAGE_REGISTRY_ROOT':
-    body: '!define MUI_STARTMENUPAGE_REGISTRY_ROOT ${1:root_key}'
-    prefix: 'MUI_STARTMENUPAGE_REGISTRY_ROOT'
-  '!define:MUI_LICENSEPAGE_CHECKBOX_TEXT':
-    body: '!define MUI_LICENSEPAGE_CHECKBOX_TEXT \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_CHECKBOX_TEXT'
-  '!insertmacro:MUI_LANGUAGE':
-    body: '!insertmacro MUI_LANGUAGE \"${1:language}\"'
-    prefix: 'MUI_LANGUAGE'
-  '!define:MUI_ICON:orange-install-nsis.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install-nsis.ico\"'
-    prefix: 'MUI_ICON:orange-install-nsis.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp'
-  '!define:MUI_FINISHPAGE_RUN_TEXT':
-    body: '!define MUI_FINISHPAGE_RUN_TEXT \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_RUN_TEXT'
-  '!define:MUI_HEADERIMAGE_BITMAP_STRETCH':
-    body: '!define MUI_HEADERIMAGE_BITMAP_STRETCH ${1:mode}'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_STRETCH'
-  '!insertmacro:MUI_PAGE_CUSTOMFUNCTION_SHOW':
-    body: '!insertmacro MUI_PAGE_CUSTOMFUNCTION_SHOW \"${1:function}\"'
-    prefix: 'MUI_PAGE_CUSTOMFUNCTION_SHOW'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP:win.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:win.bmp'
-  '!define:MUI_UNICON:arrow2-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-uninstall.ico\"'
-    prefix: 'MUI_UNICON:arrow2-uninstall.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"${1:file}.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp'
-  '!define:MUI_ICON:llama-blue.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\"'
-    prefix: 'MUI_ICON:llama-blue.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:win.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:win.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP:nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:nsis.bmp'
-  '!define:MUI_FINISHPAGE_NOREBOOTSUPPORT':
-    body: '!define MUI_FINISHPAGE_NOREBOOTSUPPORT'
-    prefix: 'MUI_FINISHPAGE_NOREBOOTSUPPORT'
-  '!insertmacro:MUI_UNGETLANGUAGE':
-    body: '!insertmacro MUI_UNGETLANGUAGE'
-    prefix: 'MUI_UNGETLANGUAGE'
-  '!define:MUI_UNCONFIRMPAGE_TEXT_LOCATION':
-    body: '!define MUI_UNCONFIRMPAGE_TEXT_LOCATION \"${1:text}\"'
-    prefix: 'MUI_UNCONFIRMPAGE_TEXT_LOCATION'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp'
-  '!define:MUI_UNICON:modern-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall.ico\"'
-    prefix: 'MUI_UNICON:modern-uninstall.ico'
-  '!define:MUI_STARTMENUPAGE_REGISTRY_KEY':
-    body: '!define MUI_STARTMENUPAGE_REGISTRY_KEY \"${1:key_name}\"'
-    prefix: 'MUI_STARTMENUPAGE_REGISTRY_KEY'
-  '!define:MUI_DIRECTORYPAGE_VARIABLE':
-    body: '!define MUI_DIRECTORYPAGE_VARIABLE \\$${1:var}'
-    prefix: 'MUI_DIRECTORYPAGE_VARIABLE'
-  '!define:MUI_ABORTWARNING_TEXT':
-    body: '!define MUI_ABORTWARNING_TEXT \"${1:text}\"'
-    prefix: 'MUI_ABORTWARNING_TEXT'
-  '!insertmacro:MUI_UNPAGE_DIRECTORY':
-    body: '!insertmacro MUI_UNPAGE_DIRECTORY'
-    prefix: 'MUI_UNPAGE_DIRECTORY'
-  '!define:MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE':
-    body: '!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE \"${1:text}\"'
-    prefix: 'MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE'
-  '!define:MUI_ICON:modern-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install.ico\"'
-    prefix: 'MUI_ICON:modern-install.ico'
-  '!define:MUI_COMPONENTSPAGE_NODESC':
-    body: '!define MUI_COMPONENTSPAGE_NODESC'
-    prefix: 'MUI_COMPONENTSPAGE_NODESC'
-  '!define:MUI_DIRECTORYPAGE_BGCOLOR':
-    body: '!define MUI_DIRECTORYPAGE_BGCOLOR \"${1:RRGGBB}\"'
-    prefix: 'MUI_DIRECTORYPAGE_BGCOLOR'
-  '!define:MUI_UNICON:nsis1-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-uninstall.ico\"'
-    prefix: 'MUI_UNICON:nsis1-uninstall.ico'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp'
-  '!define:MUI_UNICON:win-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-uninstall.ico\"'
-    prefix: 'MUI_UNICON:win-uninstall.ico'
-  '!define:MUI_DIRECTORYPAGE_VERIFYONLEAVE':
-    body: '!define MUI_DIRECTORYPAGE_VERIFYONLEAVE'
-    prefix: 'MUI_DIRECTORYPAGE_VERIFYONLEAVE'
-  '!insertmacro:MUI_PAGE_INSTFILES':
-    body: '!insertmacro MUI_PAGE_INSTFILES'
-    prefix: 'MUI_PAGE_INSTFILES'
-  '!define:MUI_FINISHPAGE_RUN_PARAMETERS':
-    body: '!define MUI_FINISHPAGE_RUN_PARAMETERS \"${1:parameters}\"'
-    prefix: 'MUI_FINISHPAGE_RUN_PARAMETERS'
-  '!define:MUI_HEADERIMAGE':
-    body: '!define MUI_HEADERIMAGE'
-    prefix: 'MUI_HEADERIMAGE'
-  '!define:MUI_UI_COMPONENTSPAGE_SMALLDESC':
-    body: '!define MUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:file}.exe\"'
-    prefix: 'MUI_UI_COMPONENTSPAGE_SMALLDESC'
-  '!insertmacro:MUI_PAGE_CUSTOMFUNCTION_PRE':
-    body: '!insertmacro MUI_PAGE_CUSTOMFUNCTION_PRE \"${1:function}\"'
-    prefix: 'MUI_PAGE_CUSTOMFUNCTION_PRE'
-  '!insertmacro:MUI_PAGE_LICENSE':
-    body: '!insertmacro MUI_PAGE_LICENSE \"${1:text}\"'
-    prefix: 'MUI_PAGE_LICENSE'
-  '!define:MUI_FINISHPAGE_TEXT':
-    body: '!define MUI_FINISHPAGE_TEXT \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_TEXT'
-  '!insertmacro:MUI_UNPAGE_WELCOME':
-    body: '!insertmacro MUI_UNPAGE_WELCOME'
-    prefix: 'MUI_UNPAGE_WELCOME'
-  '!define:MUI_UNICON':
-    body: '!define MUI_UNICON \"${1:file}.ico\"'
-    prefix: 'MUI_UNICON'
-  '!define:MUI_FINISHPAGE_TEXT_REBOOTNOW':
-    body: '!define MUI_FINISHPAGE_TEXT_REBOOTNOW \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_TEXT_REBOOTNOW'
-  '!define:MUI_ICON:arrow2-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-install.ico\"'
-    prefix: 'MUI_ICON:arrow2-install.ico'
-  '!define:MUI_STARTMENUPAGE_NODISABLE':
-    body: '!define MUI_STARTMENUPAGE_NODISABLE'
-    prefix: 'MUI_STARTMENUPAGE_NODISABLE'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp'
-  '!insertmacro:MUI_PAGE_COMPONENTS':
-    body: '!insertmacro MUI_PAGE_COMPONENTS'
-    prefix: 'MUI_PAGE_COMPONENTS'
-  '!define:MUI_STARTMENUPAGE_REGISTRY_VALUENAME':
-    body: '!define MUI_STARTMENUPAGE_REGISTRY_VALUENAME \"${1:value}\"'
-    prefix: 'MUI_STARTMENUPAGE_REGISTRY_VALUENAME'
-  '!define:MUI_FINISHPAGE_LINK_LOCATION':
-    body: '!define MUI_FINISHPAGE_LINK_LOCATION \"${1:file_or_url}\"'
-    prefix: 'MUI_FINISHPAGE_LINK_LOCATION'
-  '!define:MUI_UI_HEADERIMAGE':
-    body: '!define MUI_UI_HEADERIMAGE \"${1:file}.exe\"'
-    prefix: 'MUI_UI_HEADERIMAGE'
-  '!define:MUI_INSTFILESPAGE_ABORTHEADER_TEXT':
-    body: '!define MUI_INSTFILESPAGE_ABORTHEADER_TEXT \"${1:text}\"'
-    prefix: 'MUI_INSTFILESPAGE_ABORTHEADER_TEXT'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp'
-  '!insertmacro:MUI_UNPAGE_INSTFILES':
-    body: '!insertmacro MUI_UNPAGE_INSTFILES'
-    prefix: 'MUI_UNPAGE_INSTFILES'
-  '!define:MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH':
-    body: '!define MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH'
-    prefix: 'MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH'
-  '!define:MUI_UI_HEADERIMAGE_RIGHT':
-    body: '!define MUI_UI_HEADERIMAGE_RIGHT \"${1:file}.exe\"'
-    prefix: 'MUI_UI_HEADERIMAGE_RIGHT'
-  '!define:MUI_COMPONENTSPAGE_TEXT_COMPLIST':
-    body: '!define MUI_COMPONENTSPAGE_TEXT_COMPLIST \"${1:text}\"'
-    prefix: 'MUI_COMPONENTSPAGE_TEXT_COMPLIST'
-  '!insertmacro:MUI_UNPAGE_CONFIRM':
-    body: '!insertmacro MUI_UNPAGE_CONFIRM'
-    prefix: 'MUI_UNPAGE_CONFIRM'
-  '!define:MUI_UNICON:orange-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall.ico\"'
-    prefix: 'MUI_UNICON:orange-uninstall.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp'
-  '!define:MUI_FINISHPAGE_SHOWREADME_FUNCTION':
-    body: '!define MUI_FINISHPAGE_SHOWREADME_FUNCTION \"${1:function}\"'
-    prefix: 'MUI_FINISHPAGE_SHOWREADME_FUNCTION'
-  '!define:MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT':
-    body: '!define MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT \"${1:text}\"'
-    prefix: 'MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp'
-  '!insertmacro:MUI_CUSTOMFUNCTION_GUIINIT':
-    body: '!define MUI_CUSTOMFUNCTION_GUIINIT \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_GUIINIT'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp'
-  '!insertmacro:MUI_FUNCTION_DESCRIPTION_BEGIN':
-    body: '!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN\n\t${1:# your code here}\n!insertmacro MUI_FUNCTION_DESCRIPTION_END'
-    prefix: 'MUI_FUNCTION_DESCRIPTION_BEGIN'
-  '!define:MUI_FINISHPAGE_SHOWREADME_TEXT':
-    body: '!define MUI_FINISHPAGE_SHOWREADME_TEXT \"${1:text}\"'
-    prefix: 'MUI_FINISHPAGE_SHOWREADME_TEXT'
-  '!insertmacro:MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION':
-    body: '!define MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION'
-  '!define:MUI_FINISHPAGE_CANCEL_ENABLED':
-    body: '!define MUI_FINISHPAGE_CANCEL_ENABLED'
-    prefix: 'MUI_FINISHPAGE_CANCEL_ENABLED'
-  '!define:MUI_PAGE_HEADER_TEXT':
-    body: '!define MUI_PAGE_HEADER_TEXT \"${1:text}\"'
-    prefix: 'MUI_PAGE_HEADER_TEXT'
-  '!define:MUI_FINISHPAGE_RUN_FUNCTION':
-    body: '!define MUI_FINISHPAGE_RUN_FUNCTION \"${1:function}\"'
-    prefix: 'MUI_FINISHPAGE_RUN_FUNCTION'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp'
-  '!define:MUI_STARTMENUPAGE_TEXT_TOP':
-    body: '!define MUI_STARTMENUPAGE_TEXT_TOP \"${1:text}\"'
-    prefix: 'MUI_STARTMENUPAGE_TEXT_TOP'
-  '!define:MUI_UNICON:classic-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-uninstall.ico\"'
-    prefix: 'MUI_UNICON:classic-uninstall.ico'
-  '!define:MUI_WELCOMEPAGE_TITLE_3LINES':
-    body: '!define MUI_WELCOMEPAGE_TITLE_3LINES'
-    prefix: 'MUI_WELCOMEPAGE_TITLE_3LINES'
-  '!insertmacro:MUI_UNPAGE_LICENSE':
-    body: '!insertmacro MUI_UNPAGE_LICENSE \"${1:text}\"'
-    prefix: 'MUI_UNPAGE_LICENSE'
-  '!insertmacro:MUI_UNPAGE_FINISH':
-    body: '!insertmacro MUI_UNPAGE_FINISH'
-    prefix: 'MUI_UNPAGE_FINISH'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange.bmp'
-  '!define:MUI_LICENSEPAGE_TEXT_BOTTOM':
-    body: '!define MUI_LICENSEPAGE_TEXT_BOTTOM \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_TEXT_BOTTOM'
-  '!insertmacro:MUI_CUSTOMFUNCTION_UNABORT':
-    body: '!define MUI_CUSTOdefineMFUNCTION_UNABORT \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_UNABORT'
-  '!insertmacro:MUI_PAGE_FINISH':
-    body: '!insertmacro MUI_PAGE_FINISH'
-    prefix: 'MUI_PAGE_FINISH'
-  '!define:MUI_ICON:pixel-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-install.ico\"'
-    prefix: 'MUI_ICON:pixel-install.ico'
-  '!define:MUI_FINISHPAGE_TEXT_LARGE':
-    body: '!define MUI_FINISHPAGE_TEXT_LARGE'
-    prefix: 'MUI_FINISHPAGE_TEXT_LARGE'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp'
-  '!insertmacro:MUI_LANGDLL_ALWAYSSHOW':
-    body: '!define MUI_LANGDLL_ALWAYSSHOW'
-    prefix: 'MUI_LANGDLL_ALWAYSSHOW'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp'
-  '!define:MUI_ICON:nsis1-install.ico':
-    body: '!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-install.ico\"'
-    prefix: 'MUI_ICON:nsis1-install.ico'
-  '!define:MUI_LICENSEPAGE_CHECKBOX':
-    body: '!define MUI_LICENSEPAGE_CHECKBOX'
-    prefix: 'MUI_LICENSEPAGE_CHECKBOX'
-  '!define:MUI_UNABORTWARNING_CANCEL_DEFAULT':
-    body: '!define MUI_UNABORTWARNING_CANCEL_DEFAULT'
-    prefix: 'MUI_UNABORTWARNING_CANCEL_DEFAULT'
-  '!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp'
-  '!define:MUI_HEADERIMAGE_UNBITMAP':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP \"${1:file}.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP'
-  '!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp'
-  '!define:MUI_STARTMENUPAGE_TEXT_CHECKBOX':
-    body: '!define MUI_STARTMENUPAGE_TEXT_CHECKBOX \"${1:text}\"'
-    prefix: 'MUI_STARTMENUPAGE_TEXT_CHECKBOX'
-  '!insertmacro:MUI_FUNCTION_DESCRIPTION_END':
-    body: '!insertmacro MUI_FUNCTION_DESCRIPTION_END'
-    prefix: 'MUI_FUNCTION_DESCRIPTION_END'
-  '!define:MUI_LICENSEPAGE_TEXT_TOP':
-    body: '!define MUI_LICENSEPAGE_TEXT_TOP \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_TEXT_TOP'
-  '!define:MUI_UNICON:llama-grey.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\"'
-    prefix: 'MUI_UNICON:llama-grey.ico'
-  '!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp'
-  '!insertmacro:MUI_CUSTOMFUNCTION_UNGUIINIT':
-    body: '!define MUI_CUSTOMFUNCTION_UNGUIINIT \"${1:function}\"'
-    prefix: 'MUI_CUSTOMFUNCTION_UNGUIINIT'
-  '!define:MUI_HEADERIMAGE_RIGHT':
-    body: '!define MUI_HEADERIMAGE_RIGHT'
-    prefix: 'MUI_HEADERIMAGE_RIGHT'
-  '!define:MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT':
-    body: '!define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT \"${1:text}\"'
-    prefix: 'MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT'
-  '!insertmacro:MUI_STARTMENU_WRITE_BEGIN':
-    body: '!insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}\n\t${2:# your code here}\n!insertmacro MUI_STARTMENU_WRITE_END'
-    prefix: 'MUI_STARTMENU_WRITE_BEGIN'
-  '!define:MUI_UNICON:pixel-uninstall.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-uninstall.ico\"'
-    prefix: 'MUI_UNICON:pixel-uninstall.ico'
-  '!define:MUI_ABORTWARNING':
-    body: '!define MUI_ABORTWARNING'
-    prefix: 'MUI_ABORTWARNING'
-  '!insertmacro:MUI_PAGE_WELCOME':
-    body: '!insertmacro MUI_PAGE_WELCOME'
-    prefix: 'MUI_PAGE_WELCOME'
-  '!define:MUI_HEADERIMAGE_BITMAP:orange-r.bmp':
-    body: '!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\"'
-    prefix: 'MUI_HEADERIMAGE_BITMAP:orange-r.bmp'
-  '!define:MUI_LICENSEPAGE_BGCOLOR':
-    body: '!define MUI_LICENSEPAGE_BGCOLOR \"${1:RRGGBB}\"'
-    prefix: 'MUI_LICENSEPAGE_BGCOLOR'
-  '!define:MUI_LICENSEPAGE_BUTTON':
-    body: '!define MUI_LICENSEPAGE_BUTTON \"${1:text}\"'
-    prefix: 'MUI_LICENSEPAGE_BUTTON'
-  '!define:MUI_UNICON:modern-uninstall-blue.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue.ico\"'
-    prefix: 'MUI_UNICON:modern-uninstall-blue.ico'
-  '!define:MUI_UNICON:orange-uninstall-nsis.ico':
-    body: '!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall-nsis.ico\"'
-    prefix: 'MUI_UNICON:orange-uninstall-nsis.ico'
-  '!define:MUI_FINISHPAGE_SHOWREADME':
-    body: '!define MUI_FINISHPAGE_SHOWREADME \"${1:file_or_url}\"'
-    prefix: 'MUI_FINISHPAGE_SHOWREADME'
+".source.nsis":
+  "!define:MUI_ABORTWARNING":
+    body: "!define MUI_ABORTWARNING"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ABORTWARNING"
+  "!define:MUI_ABORTWARNING_TEXT":
+    body: "!define MUI_ABORTWARNING_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ABORTWARNING_TEXT"
+  "!define:MUI_BGCOLOR":
+    body: "!define MUI_BGCOLOR \"${1:RRGGBB}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_BGCOLOR"
+  "!define:MUI_COMPONENTSPAGE_CHECKBITMAP":
+    body: "!define MUI_COMPONENTSPAGE_CHECKBITMAP \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_CHECKBITMAP"
+  "!define:MUI_COMPONENTSPAGE_NODESC":
+    body: "!define MUI_COMPONENTSPAGE_NODESC"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_NODESC"
+  "!define:MUI_COMPONENTSPAGE_SMALLDESC":
+    body: "!define MUI_COMPONENTSPAGE_SMALLDESC"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_SMALLDESC"
+  "!define:MUI_COMPONENTSPAGE_TEXT_COMPLIST":
+    body: "!define MUI_COMPONENTSPAGE_TEXT_COMPLIST \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_TEXT_COMPLIST"
+  "!define:MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO":
+    body: "!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO"
+  "!define:MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE":
+    body: "!define MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE"
+  "!define:MUI_COMPONENTSPAGE_TEXT_INSTTYPE":
+    body: "!define MUI_COMPONENTSPAGE_TEXT_INSTTYPE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_TEXT_INSTTYPE"
+  "!define:MUI_COMPONENTSPAGE_TEXT_TOP":
+    body: "!define MUI_COMPONENTSPAGE_TEXT_TOP \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_COMPONENTSPAGE_TEXT_TOP"
+  "!define:MUI_DIRECTORYPAGE_BGCOLOR":
+    body: "!define MUI_DIRECTORYPAGE_BGCOLOR \"${1:RRGGBB}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_DIRECTORYPAGE_BGCOLOR"
+  "!define:MUI_DIRECTORYPAGE_TEXT_DESTINATION":
+    body: "!define MUI_DIRECTORYPAGE_TEXT_DESTINATION \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_DIRECTORYPAGE_TEXT_DESTINATION"
+  "!define:MUI_DIRECTORYPAGE_TEXT_TOP":
+    body: "!define MUI_DIRECTORYPAGE_TEXT_TOP \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_DIRECTORYPAGE_TEXT_TOP"
+  "!define:MUI_DIRECTORYPAGE_VARIABLE":
+    body: "!define MUI_DIRECTORYPAGE_VARIABLE \\$${1:var}"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_DIRECTORYPAGE_VARIABLE"
+  "!define:MUI_DIRECTORYPAGE_VERIFYONLEAVE":
+    body: "!define MUI_DIRECTORYPAGE_VERIFYONLEAVE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_DIRECTORYPAGE_VERIFYONLEAVE"
+  "!define:MUI_FINISHPAGE_BUTTON":
+    body: "!define MUI_FINISHPAGE_BUTTON \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_BUTTON"
+  "!define:MUI_FINISHPAGE_CANCEL_ENABLED":
+    body: "!define MUI_FINISHPAGE_CANCEL_ENABLED"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_CANCEL_ENABLED"
+  "!define:MUI_FINISHPAGE_LINK":
+    body: "!define MUI_FINISHPAGE_LINK \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_LINK"
+  "!define:MUI_FINISHPAGE_LINK_COLOR":
+    body: "!define MUI_FINISHPAGE_LINK_COLOR \"${1:RRGGBB}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_LINK_COLOR"
+  "!define:MUI_FINISHPAGE_LINK_LOCATION":
+    body: "!define MUI_FINISHPAGE_LINK_LOCATION \"${1:file_or_url}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_LINK_LOCATION"
+  "!define:MUI_FINISHPAGE_NOAUTOCLOSE":
+    body: "!define MUI_FINISHPAGE_NOAUTOCLOSE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_NOAUTOCLOSE"
+  "!define:MUI_FINISHPAGE_NOREBOOTSUPPORT":
+    body: "!define MUI_FINISHPAGE_NOREBOOTSUPPORT"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_NOREBOOTSUPPORT"
+  "!define:MUI_FINISHPAGE_REBOOTLATER_DEFAULT":
+    body: "!define MUI_FINISHPAGE_REBOOTLATER_DEFAULT"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_REBOOTLATER_DEFAULT"
+  "!define:MUI_FINISHPAGE_RUN":
+    body: "!define MUI_FINISHPAGE_RUN \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_RUN"
+  "!define:MUI_FINISHPAGE_RUN_FUNCTION":
+    body: "!define MUI_FINISHPAGE_RUN_FUNCTION \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_RUN_FUNCTION"
+  "!define:MUI_FINISHPAGE_RUN_NOTCHECKED":
+    body: "!define MUI_FINISHPAGE_RUN_NOTCHECKED"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_RUN_NOTCHECKED"
+  "!define:MUI_FINISHPAGE_RUN_PARAMETERS":
+    body: "!define MUI_FINISHPAGE_RUN_PARAMETERS \"${1:parameters}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_RUN_PARAMETERS"
+  "!define:MUI_FINISHPAGE_RUN_TEXT":
+    body: "!define MUI_FINISHPAGE_RUN_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_RUN_TEXT"
+  "!define:MUI_FINISHPAGE_SHOWREADME":
+    body: "!define MUI_FINISHPAGE_SHOWREADME \"${1:file_or_url}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_SHOWREADME"
+  "!define:MUI_FINISHPAGE_SHOWREADME_FUNCTION":
+    body: "!define MUI_FINISHPAGE_SHOWREADME_FUNCTION \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_SHOWREADME_FUNCTION"
+  "!define:MUI_FINISHPAGE_SHOWREADME_NOTCHECKED":
+    body: "!define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_SHOWREADME_NOTCHECKED"
+  "!define:MUI_FINISHPAGE_SHOWREADME_TEXT":
+    body: "!define MUI_FINISHPAGE_SHOWREADME_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_SHOWREADME_TEXT"
+  "!define:MUI_FINISHPAGE_TEXT":
+    body: "!define MUI_FINISHPAGE_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TEXT"
+  "!define:MUI_FINISHPAGE_TEXT_LARGE":
+    body: "!define MUI_FINISHPAGE_TEXT_LARGE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TEXT_LARGE"
+  "!define:MUI_FINISHPAGE_TEXT_REBOOT":
+    body: "!define MUI_FINISHPAGE_TEXT_REBOOT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TEXT_REBOOT"
+  "!define:MUI_FINISHPAGE_TEXT_REBOOTLATER":
+    body: "!define MUI_FINISHPAGE_TEXT_REBOOTLATER \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TEXT_REBOOTLATER"
+  "!define:MUI_FINISHPAGE_TEXT_REBOOTNOW":
+    body: "!define MUI_FINISHPAGE_TEXT_REBOOTNOW \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TEXT_REBOOTNOW"
+  "!define:MUI_FINISHPAGE_TITLE":
+    body: "!define MUI_FINISHPAGE_TITLE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TITLE"
+  "!define:MUI_FINISHPAGE_TITLE_3LINES":
+    body: "!define MUI_FINISHPAGE_TITLE_3LINES"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FINISHPAGE_TITLE_3LINES"
+  "!define:MUI_HEADERIMAGE":
+    body: "!define MUI_HEADERIMAGE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE"
+  "!define:MUI_HEADERIMAGE_BITMAP":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP"
+  "!define:MUI_HEADERIMAGE_BITMAP:nsis-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:nsis-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-uninstall-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-uninstall-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange-uninstall.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:orange.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:orange.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP:win.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP:win.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:nsis-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall-r.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange-uninstall.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:orange.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL:win.bmp":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL:win.bmp"
+  "!define:MUI_HEADERIMAGE_BITMAP_RTL_STRETCH":
+    body: "!define MUI_HEADERIMAGE_BITMAP_RTL_STRETCH ${1:mode}"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_RTL_STRETCH"
+  "!define:MUI_HEADERIMAGE_BITMAP_STRETCH":
+    body: "!define MUI_HEADERIMAGE_BITMAP_STRETCH ${1:mode}"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_BITMAP_STRETCH"
+  "!define:MUI_HEADERIMAGE_RIGHT":
+    body: "!define MUI_HEADERIMAGE_RIGHT"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_RIGHT"
+  "!define:MUI_HEADERIMAGE_UNBITMAP":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:nsis-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange-uninstall.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:orange.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:orange.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP:win.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP:win.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_NOSTRETCH"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r-nsis.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r-nsis.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall-r.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall-r.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange-uninstall.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange-uninstall.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\orange.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:orange.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL \"\\${NSISDIR}\\Contrib\\Graphics\\Header\\win.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL:win.bmp"
+  "!define:MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH":
+    body: "!define MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADERIMAGE_UNBITMAP_RTL_NOSTRETCH"
+  "!define:MUI_HEADER_TRANSPARENT_TEXT":
+    body: "!define MUI_HEADER_TRANSPARENT_TEXT"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_HEADER_TRANSPARENT_TEXT"
+  "!define:MUI_ICON":
+    body: "!define MUI_ICON \"${1:file}.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON"
+  "!define:MUI_ICON:arrow-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:arrow-install.ico"
+  "!define:MUI_ICON:arrow2-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:arrow2-install.ico"
+  "!define:MUI_ICON:box-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:box-install.ico"
+  "!define:MUI_ICON:classic-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:classic-install.ico"
+  "!define:MUI_ICON:llama-blue.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:llama-blue.ico"
+  "!define:MUI_ICON:llama-grey.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:llama-grey.ico"
+  "!define:MUI_ICON:modern-install-blue-full.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue-full.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:modern-install-blue-full.ico"
+  "!define:MUI_ICON:modern-install-blue.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-blue.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:modern-install-blue.ico"
+  "!define:MUI_ICON:modern-install-colorful.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-colorful.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:modern-install-colorful.ico"
+  "!define:MUI_ICON:modern-install-full.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install-full.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:modern-install-full.ico"
+  "!define:MUI_ICON:modern-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:modern-install.ico"
+  "!define:MUI_ICON:nsis1-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:nsis1-install.ico"
+  "!define:MUI_ICON:orange-install-nsis.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install-nsis.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:orange-install-nsis.ico"
+  "!define:MUI_ICON:orange-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:orange-install.ico"
+  "!define:MUI_ICON:pixel-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:pixel-install.ico"
+  "!define:MUI_ICON:win-install.ico":
+    body: "!define MUI_ICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-install.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_ICON:win-install.ico"
+  "!define:MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT":
+    body: "!define MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_ABORTHEADER_SUBTEXT"
+  "!define:MUI_INSTFILESPAGE_ABORTHEADER_TEXT":
+    body: "!define MUI_INSTFILESPAGE_ABORTHEADER_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_ABORTHEADER_TEXT"
+  "!define:MUI_INSTFILESPAGE_COLORS":
+    body: "!define MUI_INSTFILESPAGE_COLORS \"${1:foreground_color}\" \"${2:background_color}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_COLORS"
+  "!define:MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT":
+    body: "!define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT"
+  "!define:MUI_INSTFILESPAGE_FINISHHEADER_TEXT":
+    body: "!define MUI_INSTFILESPAGE_FINISHHEADER_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_FINISHHEADER_TEXT"
+  "!define:MUI_INSTFILESPAGE_PROGRESSBAR":
+    body: "!define MUI_INSTFILESPAGE_PROGRESSBAR \"${1:colored|smooth}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_INSTFILESPAGE_PROGRESSBAR"
+  "!define:MUI_LICENSEPAGE_BGCOLOR":
+    body: "!define MUI_LICENSEPAGE_BGCOLOR \"${1:RRGGBB}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_BGCOLOR"
+  "!define:MUI_LICENSEPAGE_BUTTON":
+    body: "!define MUI_LICENSEPAGE_BUTTON \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_BUTTON"
+  "!define:MUI_LICENSEPAGE_CHECKBOX":
+    body: "!define MUI_LICENSEPAGE_CHECKBOX"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_CHECKBOX"
+  "!define:MUI_LICENSEPAGE_CHECKBOX_TEXT":
+    body: "!define MUI_LICENSEPAGE_CHECKBOX_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_CHECKBOX_TEXT"
+  "!define:MUI_LICENSEPAGE_RADIOBUTTONS":
+    body: "!define MUI_LICENSEPAGE_RADIOBUTTONS"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_RADIOBUTTONS"
+  "!define:MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT":
+    body: "!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_ACCEPT"
+  "!define:MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE":
+    body: "!define MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_RADIOBUTTONS_TEXT_DECLINE"
+  "!define:MUI_LICENSEPAGE_TEXT_BOTTOM":
+    body: "!define MUI_LICENSEPAGE_TEXT_BOTTOM \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_TEXT_BOTTOM"
+  "!define:MUI_LICENSEPAGE_TEXT_TOP":
+    body: "!define MUI_LICENSEPAGE_TEXT_TOP \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LICENSEPAGE_TEXT_TOP"
+  "!define:MUI_PAGE_HEADER_SUBTEXT":
+    body: "!define MUI_PAGE_HEADER_SUBTEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_HEADER_SUBTEXT"
+  "!define:MUI_PAGE_HEADER_TEXT":
+    body: "!define MUI_PAGE_HEADER_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_HEADER_TEXT"
+  "!define:MUI_STARTMENUPAGE_DEFAULTFOLDER":
+    body: "!define MUI_STARTMENUPAGE_DEFAULTFOLDER \"${1:folder}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_DEFAULTFOLDER"
+  "!define:MUI_STARTMENUPAGE_NODISABLE":
+    body: "!define MUI_STARTMENUPAGE_NODISABLE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_NODISABLE"
+  "!define:MUI_STARTMENUPAGE_REGISTRY_KEY":
+    body: "!define MUI_STARTMENUPAGE_REGISTRY_KEY \"${1:key_name}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_REGISTRY_KEY"
+  "!define:MUI_STARTMENUPAGE_REGISTRY_ROOT":
+    body: "!define MUI_STARTMENUPAGE_REGISTRY_ROOT ${1:root_key}"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_REGISTRY_ROOT"
+  "!define:MUI_STARTMENUPAGE_REGISTRY_VALUENAME":
+    body: "!define MUI_STARTMENUPAGE_REGISTRY_VALUENAME \"${1:value}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_REGISTRY_VALUENAME"
+  "!define:MUI_STARTMENUPAGE_TEXT_CHECKBOX":
+    body: "!define MUI_STARTMENUPAGE_TEXT_CHECKBOX \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_TEXT_CHECKBOX"
+  "!define:MUI_STARTMENUPAGE_TEXT_TOP":
+    body: "!define MUI_STARTMENUPAGE_TEXT_TOP \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENUPAGE_TEXT_TOP"
+  "!define:MUI_UI":
+    body: "!define MUI_UI \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UI"
+  "!define:MUI_UI_COMPONENTSPAGE_NODESC":
+    body: "!define MUI_UI_COMPONENTSPAGE_NODESC \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UI_COMPONENTSPAGE_NODESC"
+  "!define:MUI_UI_COMPONENTSPAGE_SMALLDESC":
+    body: "!define MUI_UI_COMPONENTSPAGE_SMALLDESC \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UI_COMPONENTSPAGE_SMALLDESC"
+  "!define:MUI_UI_HEADERIMAGE":
+    body: "!define MUI_UI_HEADERIMAGE \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UI_HEADERIMAGE"
+  "!define:MUI_UI_HEADERIMAGE_RIGHT":
+    body: "!define MUI_UI_HEADERIMAGE_RIGHT \"${1:file}.exe\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UI_HEADERIMAGE_RIGHT"
+  "!define:MUI_UNABORTWARNING":
+    body: "!define MUI_UNABORTWARNING"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNABORTWARNING"
+  "!define:MUI_UNABORTWARNING_CANCEL_DEFAULT":
+    body: "!define MUI_UNABORTWARNING_CANCEL_DEFAULT"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNABORTWARNING_CANCEL_DEFAULT"
+  "!define:MUI_UNABORTWARNING_TEXT":
+    body: "!define MUI_UNABORTWARNING_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNABORTWARNING_TEXT"
+  "!define:MUI_UNCONFIRMPAGE_TEXT_LOCATION":
+    body: "!define MUI_UNCONFIRMPAGE_TEXT_LOCATION \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNCONFIRMPAGE_TEXT_LOCATION"
+  "!define:MUI_UNCONFIRMPAGE_TEXT_TOP":
+    body: "!define MUI_UNCONFIRMPAGE_TEXT_TOP \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNCONFIRMPAGE_TEXT_TOP"
+  "!define:MUI_UNFINISHPAGE_NOAUTOCLOSE":
+    body: "!define MUI_UNFINISHPAGE_NOAUTOCLOSE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNFINISHPAGE_NOAUTOCLOSE"
+  "!define:MUI_UNICON":
+    body: "!define MUI_UNICON \"${1:file}.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON"
+  "!define:MUI_UNICON:arrow-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:arrow-uninstall.ico"
+  "!define:MUI_UNICON:arrow2-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\arrow2-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:arrow2-uninstall.ico"
+  "!define:MUI_UNICON:box-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\box-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:box-uninstall.ico"
+  "!define:MUI_UNICON:classic-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\classic-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:classic-uninstall.ico"
+  "!define:MUI_UNICON:llama-blue.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-blue.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:llama-blue.ico"
+  "!define:MUI_UNICON:llama-grey.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\llama-grey.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:llama-grey.ico"
+  "!define:MUI_UNICON:modern-uninstall-blue-full.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue-full.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:modern-uninstall-blue-full.ico"
+  "!define:MUI_UNICON:modern-uninstall-blue.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-blue.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:modern-uninstall-blue.ico"
+  "!define:MUI_UNICON:modern-uninstall-colorful.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-colorful.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:modern-uninstall-colorful.ico"
+  "!define:MUI_UNICON:modern-uninstall-full.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall-full.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:modern-uninstall-full.ico"
+  "!define:MUI_UNICON:modern-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\modern-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:modern-uninstall.ico"
+  "!define:MUI_UNICON:nsis1-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\nsis1-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:nsis1-uninstall.ico"
+  "!define:MUI_UNICON:orange-uninstall-nsis.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall-nsis.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:orange-uninstall-nsis.ico"
+  "!define:MUI_UNICON:orange-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\orange-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:orange-uninstall.ico"
+  "!define:MUI_UNICON:pixel-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\pixel-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:pixel-uninstall.ico"
+  "!define:MUI_UNICON:win-uninstall.ico":
+    body: "!define MUI_UNICON \"\\${NSISDIR}\\Contrib\\Graphics\\Icons\\win-uninstall.ico\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNICON:win-uninstall.ico"
+  "!define:MUI_UNWELCOMEFINISHPAGE_BITMAP":
+    body: "!define MUI_UNWELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNWELCOMEFINISHPAGE_BITMAP"
+  "!define:MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH":
+    body: "!define MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNWELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+  "!define:MUI_UNWELCOMEFINISHPAGE_INI":
+    body: "!define MUI_UNWELCOMEFINISHPAGE_INI \"${1:file}.ini\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNWELCOMEFINISHPAGE_INI"
+  "!define:MUI_WELCOMEFINISHPAGE_BITMAP":
+    body: "!define MUI_WELCOMEFINISHPAGE_BITMAP \"${1:file}.bmp\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEFINISHPAGE_BITMAP"
+  "!define:MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH":
+    body: "!define MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEFINISHPAGE_BITMAP_NOSTRETCH"
+  "!define:MUI_WELCOMEFINISHPAGE_INI":
+    body: "!define MUI_WELCOMEFINISHPAGE_INI \"${1:file}.ini\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEFINISHPAGE_INI"
+  "!define:MUI_WELCOMEPAGE_TEXT":
+    body: "!define MUI_WELCOMEPAGE_TEXT \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEPAGE_TEXT"
+  "!define:MUI_WELCOMEPAGE_TITLE":
+    body: "!define MUI_WELCOMEPAGE_TITLE \"${1:title}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEPAGE_TITLE"
+  "!define:MUI_WELCOMEPAGE_TITLE_3LINES":
+    body: "!define MUI_WELCOMEPAGE_TITLE_3LINES"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEPAGE_TITLE_3LINES"
+  "!insertmacro:MUI_CUSTOMFUNCTION_ABORT":
+    body: "!define MUI_CUSTOMFUNCTION_ABORT \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_ABORT"
+  "!insertmacro:MUI_CUSTOMFUNCTION_GUIINIT":
+    body: "!define MUI_CUSTOMFUNCTION_GUIINIT \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_GUIINIT"
+  "!insertmacro:MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION":
+    body: "!define MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_ONMOUSEOVERSECTION"
+  "!insertmacro:MUI_CUSTOMFUNCTION_UNABORT":
+    body: "!define MUI_CUSTOdefineMFUNCTION_UNABORT \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_UNABORT"
+  "!insertmacro:MUI_CUSTOMFUNCTION_UNGUIINIT":
+    body: "!define MUI_CUSTOMFUNCTION_UNGUIINIT \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_UNGUIINIT"
+  "!insertmacro:MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION":
+    body: "!define MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_CUSTOMFUNCTION_UNONMOUSEOVERSECTION"
+  "!insertmacro:MUI_FUNCTION_DESCRIPTION_BEGIN":
+    body: '''
+      !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+        ${1:# your code here}
+      !insertmacro MUI_FUNCTION_DESCRIPTION_END
+    '''
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FUNCTION_DESCRIPTION_BEGIN"
+  "!insertmacro:MUI_FUNCTION_DESCRIPTION_END":
+    body: "!insertmacro MUI_FUNCTION_DESCRIPTION_END"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_FUNCTION_DESCRIPTION_END"
+  "!insertmacro:MUI_LANGDLL_ALLLANGUAGES":
+    body: "!define MUI_LANGDLL_ALLLANGUAGES"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGDLL_ALLLANGUAGES"
+  "!insertmacro:MUI_LANGDLL_ALWAYSSHOW":
+    body: "!define MUI_LANGDLL_ALWAYSSHOW"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGDLL_ALWAYSSHOW"
+  "!insertmacro:MUI_LANGDLL_DISPLAY":
+    body: "!insertmacro MUI_LANGDLL_DISPLAY"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGDLL_DISPLAY"
+  "!insertmacro:MUI_LANGDLL_INFO":
+    body: "!define MUI_LANGDLL_INFO \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGDLL_INFO"
+  "!insertmacro:MUI_LANGDLL_WINDOWTITLE":
+    body: "!define MUI_LANGDLL_WINDOWTITLE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGDLL_WINDOWTITLE"
+  "!insertmacro:MUI_LANGUAGE":
+    body: "!insertmacro MUI_LANGUAGE \"${1:language}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_LANGUAGE"
+  "!insertmacro:MUI_PAGE_COMPONENTS":
+    body: "!insertmacro MUI_PAGE_COMPONENTS"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_COMPONENTS"
+  "!insertmacro:MUI_PAGE_CUSTOMFUNCTION_LEAVE":
+    body: "!insertmacro MUI_PAGE_CUSTOMFUNCTION_LEAVE \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_CUSTOMFUNCTION_LEAVE"
+  "!insertmacro:MUI_PAGE_CUSTOMFUNCTION_PRE":
+    body: "!insertmacro MUI_PAGE_CUSTOMFUNCTION_PRE \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_CUSTOMFUNCTION_PRE"
+  "!insertmacro:MUI_PAGE_CUSTOMFUNCTION_SHOW":
+    body: "!insertmacro MUI_PAGE_CUSTOMFUNCTION_SHOW \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_CUSTOMFUNCTION_SHOW"
+  "!insertmacro:MUI_PAGE_DIRECTORY":
+    body: "!insertmacro MUI_PAGE_DIRECTORY"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_DIRECTORY"
+  "!insertmacro:MUI_PAGE_FINISH":
+    body: "!insertmacro MUI_PAGE_FINISH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_FINISH"
+  "!insertmacro:MUI_PAGE_INSTFILES":
+    body: "!insertmacro MUI_PAGE_INSTFILES"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_INSTFILES"
+  "!insertmacro:MUI_PAGE_LICENSE":
+    body: "!insertmacro MUI_PAGE_LICENSE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_LICENSE"
+  "!insertmacro:MUI_PAGE_STARTMENU":
+    body: "!insertmacro MUI_PAGE_STARTMENU ${1:page_id} \\$${2:var}"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_STARTMENU"
+  "!insertmacro:MUI_PAGE_WELCOME":
+    body: "!insertmacro MUI_PAGE_WELCOME"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_PAGE_WELCOME"
+  "!insertmacro:MUI_RESERVEFILE_INSTALLOPTIONS":
+    body: "!insertmacro MUI_RESERVEFILE_INSTALLOPTIONS"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_RESERVEFILE_INSTALLOPTIONS"
+  "!insertmacro:MUI_RESERVEFILE_LANGDLL":
+    body: "!insertmacro MUI_RESERVEFILE_LANGDLL"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_RESERVEFILE_LANGDLL"
+  "!insertmacro:MUI_STARTMENU_WRITE_BEGIN":
+    body: '''
+      !insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}
+        ${2:# your code here}
+      !insertmacro MUI_STARTMENU_WRITE_END
+    '''
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_STARTMENU_WRITE_BEGIN"
+  "!insertmacro:MUI_UNFUNCTION_DESCRIPTION_BEGIN":
+    body: '''
+      !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN
+        ${1:# your code here}
+      !insertmacro MUI_UNFUNCTION_DESCRIPTION_END
+    '''
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNFUNCTION_DESCRIPTION_BEGIN"
+  "!insertmacro:MUI_UNFUNCTION_DESCRIPTION_END":
+    body: "!insertmacro MUI_UNFUNCTION_DESCRIPTION_END"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNFUNCTION_DESCRIPTION_END"
+  "!insertmacro:MUI_UNGETLANGUAGE":
+    body: "!insertmacro MUI_UNGETLANGUAGE"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNGETLANGUAGE"
+  "!insertmacro:MUI_UNPAGE_COMPONENTS":
+    body: "!insertmacro MUI_UNPAGE_COMPONENTS"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_COMPONENTS"
+  "!insertmacro:MUI_UNPAGE_CONFIRM":
+    body: "!insertmacro MUI_UNPAGE_CONFIRM"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_CONFIRM"
+  "!insertmacro:MUI_UNPAGE_DIRECTORY":
+    body: "!insertmacro MUI_UNPAGE_DIRECTORY"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_DIRECTORY"
+  "!insertmacro:MUI_UNPAGE_FINISH":
+    body: "!insertmacro MUI_UNPAGE_FINISH"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_FINISH"
+  "!insertmacro:MUI_UNPAGE_INSTFILES":
+    body: "!insertmacro MUI_UNPAGE_INSTFILES"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_INSTFILES"
+  "!insertmacro:MUI_UNPAGE_LICENSE":
+    body: "!insertmacro MUI_UNPAGE_LICENSE \"${1:text}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_LICENSE"
+  "!insertmacro:MUI_UNPAGE_WELCOME":
+    body: "!insertmacro MUI_UNPAGE_WELCOME"
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_UNPAGE_WELCOME"
+  "!insertmacro:MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT":
+    body: "!define MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT \"${1:function}\""
+    description: "Usage: "
+    leftLabelHTML: "<span class='support function'>MUI2.nsh</span>"
+    prefix: "MUI_WELCOMEFINISHPAGE_CUSTOMFUNCTION_INIT"
