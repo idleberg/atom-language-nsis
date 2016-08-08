@@ -36,7 +36,10 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * FileFunc
     * LogicLib
     * Memento
+    * Modern UI
+    * MultiUser
     * Sections
+    * StrFunc
     * WinMessages
     * WinVer
     * WordFunc
