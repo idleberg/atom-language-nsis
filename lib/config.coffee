@@ -50,7 +50,12 @@ module.exports = NsisConf =
     path = require 'path'
 
     editor = atom.workspace.getActiveTextEditor()
-    if typeof editor is "undefined" or editor.getGrammar().scopeName isnt "source.nsis"
+
+    unless editor?
+       atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false)
+       return
+
+    if editor.getGrammar().scopeName isnt "source.nsis"
       atom.beep()
       return
     
