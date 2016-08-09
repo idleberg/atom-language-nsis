@@ -13,7 +13,7 @@ else
 module.exports = NsisCore =
   config:
     pathToMakensis:
-      title: "Path To Makensis"
+      title: "Path To MakeNSIS"
       description: "Specify the full path to `makensis`"
       type: "string"
       default: ""
