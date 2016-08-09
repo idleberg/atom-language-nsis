@@ -1,7 +1,27 @@
 Makensis = require './makensis'
 Config = require './config'
 
+os = require 'os'
+
+if os.platform() is 'win32'
+  which  = "where"
+  prefix = "/"
+else
+  which  = "which"
+  prefix = "-"
+
 module.exports = NsisCore =
+  config:
+    pathToMakensis:
+      title: "Path To Makensis"
+      description: "Specify the full path to `makensis`"
+      type: "string"
+      default: ""
+    compilerArguments:
+      title: "Compiler Arguments"
+      description: "Specify the default arguments for `makensis`"
+      type: "string"
+      default: "#{prefix}V2"
   subscriptions: null
 
   activate: (state) ->
