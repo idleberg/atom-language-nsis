@@ -96,7 +96,7 @@ module.exports = NsisConf =
             makeNsis ="makensis"
             sh = false
           else
-            pathToScript =  atom.config.get('build-makensis-wine.pathToScript')
+            pathToScript = atom.config.get('build-makensis-wine.pathToScript')
             packageDir = atom.packages.getPackageDirPaths().toString()
             makeNsis = if pathToScript then "\"#{pathToScript}\"" else path.join(packageDir, 'build-makensis-wine', 'lib', 'makensis-wine.sh')
             sh = true
