@@ -19,4 +19,5 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': => Config.removeRunner()
 
   deactivate: ->
-    @subscriptions.dispose()
+    @subscriptions?.dispose()
+    @subscriptions = null
