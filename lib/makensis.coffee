@@ -1,9 +1,6 @@
 {exec} = require 'child_process'
-os = require 'os'
 
 module.exports = NsisBuild =
-  which: null
-  prefix: null
 
   buildScript: ->
     editor = atom.workspace.getActiveTextEditor()
@@ -25,7 +22,7 @@ module.exports = NsisBuild =
         exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
             # makensis error from stdout, not error!
-            atom.notifications.addError(script, detail: stdout, dismissable: true)
+            atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
           else
             atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
     else
@@ -33,12 +30,6 @@ module.exports = NsisBuild =
       atom.beep()
 
   getPath: (callback) ->
-    @getPlatform()
-
-    # If undefined, set default arguments
-    if not atom.config.get('language-nsis.compilerArguments')?
-      atom.config.set('language-nsis.compilerArguments', "#{@prefix}V2")
-
     # If stored, return pathToMakensis
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
     if pathToMakensis?
@@ -46,7 +37,7 @@ module.exports = NsisBuild =
       return
 
     # Find makensis
-    exec "\"#{@which}\" makensis", (error, stdout, stderr) ->
+    exec "\"#{which}\" makensis", (error, stdout, stderr) ->
       if error isnt null
         atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
       else
@@ -54,19 +45,10 @@ module.exports = NsisBuild =
         callback stdout
       return
 
-  getPlatform: ->
-
-    if os.platform() is 'win32'
-      @which  = "where"
-      @prefix = "/"
-    else
-      @which  = "which"
-      @prefix = "-"
 
   showVersion: ->
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis') ? 'makensis'
     
-    @getPlatform()
-    exec "\"#{pathToMakensis}\" #{@prefix}VERSION", (error, stdout, stderr) ->
+    exec "\"#{pathToMakensis}\" #{prefix}VERSION", (error, stdout, stderr) ->
       unless error isnt null
         atom.notifications.addInfo("**language-nsis**", detail: "makensis #{stdout} (#{pathToMakensis})", dismissable: true)
