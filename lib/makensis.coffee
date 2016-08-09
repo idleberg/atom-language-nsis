@@ -45,7 +45,6 @@ module.exports = NsisBuild =
         callback stdout
       return
 
-
   showVersion: ->
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis') ? 'makensis'
     
