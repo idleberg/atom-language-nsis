@@ -40,7 +40,7 @@ module.exports = NsisBuild =
   getPath: (callback) ->
     # If stored, return pathToMakensis
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
-    if pathToMakensis
+    if pathToMakensis is not "makensis"
       callback pathToMakensis
       return
 
