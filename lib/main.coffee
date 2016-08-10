@@ -14,12 +14,12 @@ module.exports = NsisCore =
   config:
     pathToMakensis:
       title: "Path To MakeNSIS"
-      description: "Specify the full path to `makensis`"
+      description: "Specify the full path to `makensis`. On first compile, the package will run `#{which} makensis` in order to detect it."
       type: "string"
-      default: ""
+      default: "makensis"
     compilerArguments:
       title: "Compiler Arguments"
-      description: "Specify the default arguments for `makensis`"
+      description: "Specify the default arguments for `makensis` ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
       type: "string"
       default: "#{prefix}V2"
   subscriptions: null
