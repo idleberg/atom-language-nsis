@@ -1,4 +1,12 @@
 {exec} = require 'child_process'
+os = require 'os'
+
+if os.platform() is 'win32'
+  which  = "where"
+  prefix = "/"
+else
+  which  = "which"
+  prefix = "-"
 
 module.exports = NsisBuild =
 
