@@ -38,7 +38,8 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "cson": "^3.0.2"
+    "cson": "^3.0.2",
+    "jshint": "^2.9.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
