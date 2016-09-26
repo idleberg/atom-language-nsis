@@ -1,6 +1,6 @@
 module.exports = NsisConf =
   runner: null
-    
+
 ################################################################################
 # atom-runner
 # https://github.com/lsegal/atom-runner
@@ -39,7 +39,6 @@ module.exports = NsisConf =
         path: atom.packages.resolvePackagePath('atom-runner')
         active: atom.packages.isPackageLoaded('atom-runner')
 
-
 ################################################################################
 # atom-build
 # https://github.com/mirhec/atom-build
@@ -76,6 +75,8 @@ module.exports = NsisConf =
 
       if buildFileSyntax is "CSON"
         buildFileBase = ".atom-build.cson"
+      else if buildFileSyntax is "YAML"
+        buildFileBase = ".atom-build.yml"
       else
         buildFileBase = ".atom-build.json"
 
@@ -118,6 +119,9 @@ module.exports = NsisConf =
           if buildFileSyntax is "CSON"
             CSON = require 'cson'
             stringify = CSON.stringify(buildFile, null, 2)
+          if buildFileSyntax is "YAML"
+            YAML = require 'yaml-js'
+            stringify = YAML.dump(buildFile)
           else
             stringify = JSON.stringify(buildFile, null, 2)
 

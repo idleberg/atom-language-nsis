@@ -31,7 +31,8 @@ module.exports = NsisCore =
       type: "string",
       enum: [
         "CSON",
-        "JSON"
+        "JSON",
+        "YAML"
       ],
   subscriptions: null
 
