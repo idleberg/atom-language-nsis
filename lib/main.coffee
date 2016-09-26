@@ -26,7 +26,7 @@ module.exports = NsisCore =
       order: 1
     buildFileSyntax:
       title: "Build File Syntax"
-      description: "Specify the default syntax for your `build` file"
+      description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
       default: "JSON",
       type: "string",
       enum: [
