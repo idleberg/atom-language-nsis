@@ -17,11 +17,22 @@ module.exports = NsisCore =
       description: "Specify the full path to `makensis`. On first compile, the package will run `#{which} makensis` in order to detect it."
       type: "string"
       default: "makensis"
+      order: 0
     compilerArguments:
       title: "Compiler Arguments"
       description: "Specify the default arguments for `makensis` ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
       type: "string"
       default: "#{prefix}V2"
+      order: 1
+    buildFileSyntax:
+      title: "Build File Syntax"
+      description: "Specify the default format to save your `build` file in"
+      default: "CSON",
+      type: "string",
+      enum: [
+        "CSON",
+        "JSON"
+      ],
   subscriptions: null
 
   activate: (state) ->

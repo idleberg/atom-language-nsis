@@ -45,7 +45,6 @@ module.exports = NsisConf =
 # https://github.com/mirhec/atom-build
 # 
   createBuildFile: (wine) ->
-    CSON = require 'cson'
     fs = require 'fs'
     path = require 'path'
 
@@ -73,7 +72,14 @@ module.exports = NsisConf =
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFilePath = path.join(currentPath, ".atom-build.cson")
+      buildFileSyntax = atom.config.get('language-nsis.buildFileSyntax')
+
+      if buildFileSyntax is "JSON"
+        buildFileBase = ".atom-build.json"
+      else
+        buildFileBase = ".atom-build.cson"
+
+      buildFilePath = path.join(currentPath, buildFileBase)
      
       fs.exists "#{buildFilePath}", (exists) ->
         if exists is true
@@ -91,7 +97,6 @@ module.exports = NsisConf =
           createFile = true
 
         if createFile is true
-
           if wine isnt true
             makeNsis ="makensis"
             sh = false
@@ -110,10 +115,16 @@ module.exports = NsisConf =
             errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
             warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
 
+          if buildFileSyntax is "JSON"
+            stringify = JSON.stringify(buildFile, null, 2)
+          else
+            CSON = require 'cson'
+            stringify = CSON.stringify(buildFile, null, 2)
+
           # Save build file
-          fs.writeFile buildFilePath, CSON.stringify(buildFile, null, 4), (error) ->
+          fs.writeFile buildFilePath, stringify, (error) ->
             if error
-              atom.notifications.addError(".atom-build.cson", detail: error, dismissable: false)
+              atom.notifications.addError(buildFileBase, detail: error, dismissable: false)
             else
-              atom.notifications.addInfo(".atom-build.cson", detail: successMsg, dismissable: false)
+              atom.notifications.addInfo(buildFileBase, detail: successMsg, dismissable: false)
               atom.workspace.open(buildFilePath)
