@@ -36,8 +36,8 @@ module.exports = NsisConf =
 
   checkRunner: ->
     @runner =
-        path: atom.packages.resolvePackagePath('atom-runner')
-        active: atom.packages.isPackageLoaded('atom-runner')
+      path: atom.packages.resolvePackagePath('atom-runner')
+      active: atom.packages.isPackageLoaded('atom-runner')
 
 ################################################################################
 # atom-build
@@ -50,8 +50,8 @@ module.exports = NsisConf =
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-       atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false)
-       return
+      atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false)
+      return
 
     if editor.getGrammar().scopeName isnt "source.nsis"
       atom.beep()
