@@ -34,6 +34,7 @@ module.exports = NsisCore =
         "JSON",
         "YAML"
       ],
+      order: 2
   subscriptions: null
 
   activate: (state) ->
