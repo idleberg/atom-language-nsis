@@ -26,7 +26,7 @@ module.exports = NsisCore =
       order: 1
     buildFileSyntax:
       title: "Build File Syntax"
-      description: "Specify the default format to save your `build` file in"
+      description: "Specify the default syntax for your `build` file"
       default: "CSON",
       type: "string",
       enum: [
