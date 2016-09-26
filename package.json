@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "cson": "^3.0.2",
-    "jshint": "^2.9.3"
+    "jshint": "^2.9.3",
+    "yaml-js": "^0.1.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
