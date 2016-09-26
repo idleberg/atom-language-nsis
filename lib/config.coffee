@@ -74,10 +74,10 @@ module.exports = NsisConf =
       currentPath = path.dirname(currentPath)
       buildFileSyntax = atom.config.get('language-nsis.buildFileSyntax')
 
-      if buildFileSyntax is "JSON"
-        buildFileBase = ".atom-build.json"
-      else
+      if buildFileSyntax is "CSON"
         buildFileBase = ".atom-build.cson"
+      else
+        buildFileBase = ".atom-build.json"
 
       buildFilePath = path.join(currentPath, buildFileBase)
      
@@ -115,11 +115,11 @@ module.exports = NsisConf =
             errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
             warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
 
-          if buildFileSyntax is "JSON"
-            stringify = JSON.stringify(buildFile, null, 2)
-          else
+          if buildFileSyntax is "CSON"
             CSON = require 'cson'
             stringify = CSON.stringify(buildFile, null, 2)
+          else
+            stringify = JSON.stringify(buildFile, null, 2)
 
           # Save build file
           fs.writeFile buildFilePath, stringify, (error) ->
