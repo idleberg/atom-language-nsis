@@ -44,8 +44,8 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * WinVer
     * WordFunc
     * x64
-* [Drunken NSIS](#drunken-nsis) (fuzzy completions)
-* [Build Tools](#building)
+* [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis) (fuzzy completions)
+* [Build Tools](https://github.com/idleberg/atom-language-nsis#building)
 
 You can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
 
