@@ -4,7 +4,6 @@ module.exports = NsisConf =
 ################################################################################
 # atom-runner
 # https://github.com/lsegal/atom-runner
-# 
   setRunner: ->
     @checkRunner()
 
@@ -42,7 +41,6 @@ module.exports = NsisConf =
 ################################################################################
 # atom-build
 # https://github.com/mirhec/atom-build
-# 
   createBuildFile: (wine) ->
     fs = require 'fs'
     path = require 'path'

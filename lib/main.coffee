@@ -44,12 +44,12 @@ module.exports = NsisCore =
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile': => Makensis.buildScript()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:show-version': => Makensis.showVersion()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': => Config.createBuildFile(false)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file-for-wine': => Config.createBuildFile(true)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': => Config.setRunner()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': => Config.removeRunner()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile': -> Makensis.buildScript()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:show-version': -> Makensis.showVersion()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': -> Config.createBuildFile(false)
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file-for-wine': -> Config.createBuildFile(true)
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': -> Config.setRunner()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': -> Config.removeRunner()
 
   deactivate: ->
     @subscriptions?.dispose()
