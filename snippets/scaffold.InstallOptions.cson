@@ -49,5 +49,5 @@
 
       FunctionEnd$14
     '''
-    description: "Creates an installer template with InstallOptions support" 
+    description: "Creates an installer template with InstallOptions support"
     prefix: "scaffold-InstallOptions"

@@ -22,5 +22,5 @@
       ; Functions --------------------------------
       $6
     '''
-    description: "Creates a minimal installer template" 
+    description: "Creates a minimal installer template"
     prefix: "scaffold-Minimal"

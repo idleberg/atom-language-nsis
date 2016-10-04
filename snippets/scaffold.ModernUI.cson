@@ -41,5 +41,5 @@
 
       FunctionEnd}$12
     '''
-    description: "Creates a Modern UI installer template" 
+    description: "Creates a Modern UI installer template"
     prefix: "scaffold-MUI"

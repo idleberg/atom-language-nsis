@@ -31,5 +31,5 @@
 
       FunctionEnd$11}
     '''
-    description: "Creates a basic installer template" 
+    description: "Creates a basic installer template"
     prefix: "scaffold"
