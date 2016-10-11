@@ -15,8 +15,8 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
 
 ## Features
 
-* all core NSIS commands, variables and predefines
-* all core Plugins:
+* auto-complete for core NSIS commands, variables and predefines
+* auto-complete core Plugins:
     * AdvSplash
     * Banner
     * BgImage
@@ -32,7 +32,7 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * System
     * UserInfo
     * VPatch
-* all core libraries (“Useful Headers”):
+* auto-complete core libraries (“Useful Headers”):
     * FileFunc
     * LogicLib
     * Memento
@@ -44,7 +44,7 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * WinVer
     * WordFunc
     * x64
-* [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis) (fuzzy completions)
+* [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/atom-language-nsis#building)
 
 You can further extend this package with snippets for [plug-ins](https://atom.io/packages/nsis-plugins) and [localization](https://atom.io/packages/language-nlf).
