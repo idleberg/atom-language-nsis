@@ -6,7 +6,7 @@ name: "NSIS"
 comment: "https://github.com/atom/atom-language-nsis"
 patterns: [
   {
-    match: "^\\s*(SubSection(End)?)\\b"
+    match: "^\\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginsUnload|SubSection(End)?)\\b"
     name: "invalid.illegal.nsis"
   }
   {
