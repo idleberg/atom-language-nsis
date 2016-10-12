@@ -6,6 +6,10 @@ name: "NSIS"
 comment: "https://github.com/atom/atom-language-nsis"
 patterns: [
   {
+    match: "^\\s*(SubSection(End)?)\\b"
+    name: "invalid.illegal.nsis"
+  }
+  {
     match: "^\\s*(\\!include|\\!addincludedir|\\!addplugindir|\\!appendfile|\\!cd|\\!delfile|\\!echo|\\!error|\\!execute|\\!packhdr|\\!finalize|\\!getdllversion|\\!system|\\!tempfile|\\!warning|\\!verbose|\\!define|\\!undef|\\!insertmacro|\\!macro|\\!macroend|\\!makensis|\\!searchparse|\\!searchreplace)\\b"
     name: "keyword.compiler.nsis"
   }
@@ -26,7 +30,7 @@ patterns: [
     name: "keyword.operator.comparison.nsis"
   }
   {
-    match: "^\\s*(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|SubSection|SubSectionEnd|PageEx|PageExEnd)\\b"
+    match: "^\\s*(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|PageEx|PageExEnd)\\b"
     name: "support.function.nsis"
   }
   {
