@@ -61,7 +61,38 @@ patterns: [
     name: "constant.other.nsis"
   }
   {
-    match: "(?:^\\s*)\\${(And(If(Not)?|Unless)|Break|Case(Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While|BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons|Memento(Section(Done|End|Restore|Save)?|UnselectedSection)|Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines|(At(Least|Most)|Is)(ServicePack|Win(7|8|10|95|98|20(0(0|3|8(R2)?)|12)|ME|NT4|Vista|XP))|Is(NT|Server)|StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?)|RunningX64|(Disable|Enable)X64FSRedirection)}(?:\\s+)"
+    # FileFunc.nsh
+    match: "(?:^\s*)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?:\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # LogicLib.nsh
+    match: "(?:^\s*)\${(And(If(Not)?|Unless)|Break|Case(Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?:\s+)}(?:\\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # Memento.nsh
+    match: "(?:^\s*)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?:\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # TextFunc.nsh
+    match: "(?:^\s*)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?:\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # WinVer.nsh
+    match: "(?:^\s*)\${((At(Least|Most)|Is)(ServicePack|Win(7|8|10|95|98|200(0|3|8(R2)?)|2012|ME|NT4|Vista|XP))|Is(NT|Server))}(?:\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # WordFunc.nsh
+    match: "(?:^\s*)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?:\s+)"
+    name: "constant.language.nsis"
+  }
+  {
+    # x64.nsh
+    match: "(?:^\s*)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?:\s+)"
     name: "constant.language.nsis"
   }
   {
