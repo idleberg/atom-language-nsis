@@ -329,6 +329,12 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/LicenseForceSelection.md"
     leftLabelHTML: "<span class='keyword'>%</span>"
     prefix: "ForceSelectionLicense radiobuttons"
+  "%GetFullDLLPath":
+    body: "SearchPath $${1:user_var} \"${2:filename}\"$3"
+    description: "Usage: SearchPath $(user_var: result) filename"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/SearchPath.md"
+    leftLabelHTML: "<span class='keyword'>K</span>"
+    prefix: "SearchPath"
   "%GetInstTypeText":
     body: "InstTypeGetText ${1:inst_type_idx} $${2:user_var}$3"
     description: "Usage: InstTypeGetText insttype_index $(user_var: output text)"
