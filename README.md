@@ -15,9 +15,9 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
 
 ## Features
 
-* grammar for NSIS and NSIS Language Files (.nlf)
-* auto-complete and syntax grammar or core NSIS commands, variables and predefines
-* auto-complete core Plugins:
+* syntax grammar for NSIS and NSIS Language Files (.nlf)
+* auto-complete core NSIS commands, variables and predefines
+* auto-complete bundled plugins:
     * AdvSplash
     * Banner
     * BgImage
@@ -33,7 +33,7 @@ Atom language support for NSIS, including grammar, snippets and a rudimentary bu
     * System
     * UserInfo
     * VPatch
-* auto-complete core libraries (“Useful Headers”):
+* auto-complete bundled libraries (“Useful Headers”):
     * FileFunc
     * LogicLib
     * Memento
