@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsis?type=dev)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
-Atom language support for NSIS, including grammar, snippets and a rudimentary build system
+Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files (NLF).
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
@@ -58,7 +58,7 @@ Install `language-nsis` from Atom's [Package Manager](http://flight-manual.atom.
 
 `$ apm install language-nsis`
 
-### GitHub
+### Using Git
 
 Change to your Atom packages directory:
 
