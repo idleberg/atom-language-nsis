@@ -10,7 +10,7 @@ patterns: [
   }
   {
     match: "^\\s*(Function(End)?|Section(End)?|SectionGroup|SectionGroup(End)?|PageEx(End)?)\\b"
-    name: "keyword.control.nsis"
+    name: "entity.name.section.nsis"
   }
   {
     match: "^\\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginUnload|SubSection(End)?)\\b"
