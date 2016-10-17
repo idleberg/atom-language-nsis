@@ -15,9 +15,9 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
 
 ## Features
 
-* grammar for NSIS and NSIS Language Files (.nlf)
-* auto-complete and syntax grammar or core NSIS commands, variables and predefines
-* auto-complete core Plugins:
+* syntax grammar for NSIS and NSIS Language Files (.nlf)
+* auto-complete core NSIS commands, variables and predefines
+* auto-complete bundled plugins:
     * AdvSplash
     * Banner
     * BgImage
@@ -33,7 +33,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
     * System
     * UserInfo
     * VPatch
-* auto-complete core libraries (“Useful Headers”):
+* auto-complete bundled libraries (“Useful Headers”):
     * FileFunc
     * LogicLib
     * Memento
