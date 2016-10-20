@@ -1,4 +1,10 @@
 ".source.nsis":
+  "%PackEXEHeader":
+    body: "!packhdr \"${1:tempfile}\" \"${2:command}\"$3"
+    description: "Usage: !packhdr temp_file_name command_line_to_compress_that_temp_file"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!packhdr.md"
+    leftLabelHTML: "<span class='keyword'>!</span>"
+    prefix: "PackEXEHeader"
   "%BitmapCheck":
     body: "CheckBitmap \"${1:bitmap}.bmp\"$2"
     description: "Usage: CheckBitmap local_bitmap.bmp"
