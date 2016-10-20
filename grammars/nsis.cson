@@ -13,7 +13,7 @@ patterns: [
     name: "entity.name.section.nsis"
   }
   {
-    match: "^\\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginUnload|SubSection(End)?)\\b"
+    match: "^\\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|GetWinampInstPath|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\\b"
     name: "invalid.illegal.nsis"
   }
   {
