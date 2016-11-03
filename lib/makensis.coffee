@@ -10,7 +10,7 @@ else
 
 module.exports = NsisBuild =
 
-  buildScript: ->
+  buildScript: (strictMode) ->
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
@@ -24,13 +24,17 @@ module.exports = NsisBuild =
       editor.save() if editor.isModified()
 
       @getPath (stdout) ->
-        args      = atom.config.get('language-nsis.compilerArguments')
-        makensis  = atom.config.get('language-nsis.pathToMakensis')
+        makensis = atom.config.get('language-nsis.pathToMakensis')
+        compilerArguments = atom.config.get('language-nsis.compilerArguments')
 
-        exec "\"#{makensis}\" #{args} \"#{script}\"", (error, stdout, stderr) ->
+        # only add WX flag if not already specified
+        if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
+          compilerArguments = "#{compilerArguments} #{prefix}WX"
+
+        exec "\"#{makensis}\" #{compilerArguments} \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
             # makensis error from stdout, not error!
-            atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
+            atom.notifications.addError("**#{script}**", detail: stdout, dismissable: true)
           else
             atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
     else
