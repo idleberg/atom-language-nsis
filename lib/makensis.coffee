@@ -23,15 +23,14 @@ module.exports = NsisBuild =
     if script? and scope.startsWith 'source.nsis'
       editor.save() if editor.isModified()
 
-      @getPath (stdout) ->
-        makensis = atom.config.get('language-nsis.pathToMakensis')
+      @getPath (pathToMakensis) ->
         compilerArguments = atom.config.get('language-nsis.compilerArguments')
 
         # only add WX flag if not already specified
         if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
           compilerArguments = "#{compilerArguments} #{prefix}WX"
 
-        exec "\"#{makensis}\" #{compilerArguments} \"#{script}\"", (error, stdout, stderr) ->
+        exec "\"#{pathToMakensis.trim()}\" #{compilerArguments} \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
             # makensis error from stdout, not error!
             atom.notifications.addError("Compile Error", detail: stdout, dismissable: true)
@@ -62,7 +61,7 @@ module.exports = NsisBuild =
 
   showVersion: ->
     pathToMakensis = atom.config.get('language-nsis.pathToMakensis') ? 'makensis'
-    
+
     exec "\"#{pathToMakensis}\" #{prefix}VERSION", (error, stdout, stderr) ->
-      unless error isnt null
+      if error is null
         atom.notifications.addInfo("**language-nsis**", detail: "makensis #{stdout} (#{pathToMakensis})", dismissable: true)
