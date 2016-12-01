@@ -806,7 +806,7 @@
   "%SubSection":
     body: '''
       SectionGroup ${1:section_group_name} ${2:index_output}
-        ${3:# your code here}
+      \t${3:# your code here}
       SectionGroupEnd$4
     '''
     description: "Usage: SectionGroup [/e] [un.]section_group_name [section index output]"

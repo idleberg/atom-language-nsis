@@ -98,7 +98,7 @@
   "!if":
     body: '''
       !if ${1:value1} ${2:op} ${3:value2}
-        ${4:# your code here}
+      \t${4:# your code here}
       !endif$5
     '''
     description: "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)"
@@ -108,7 +108,7 @@
   "!ifdef":
     body: '''
       !ifdef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !endif$3
     '''
     description: "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]"
@@ -118,9 +118,9 @@
   "!ifdef…else":
     body: '''
       !ifdef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !else
-        ${3:# your code here}
+      \t${3:# your code here}
       !endif$4
     '''
     description: "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]"
@@ -130,7 +130,7 @@
   "!ifmacrodef":
     body: '''
       !ifmacrodef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !endif$3
     '''
     description: "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]"
@@ -140,9 +140,9 @@
   "!ifmacrodef…else":
     body: '''
       !ifmacrodef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !else
-        ${3:# your code here}
+      \t${3:# your code here}
       !endif$4
     '''
     description: "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]"
@@ -152,7 +152,7 @@
   "!ifmacrondef":
     body: '''
       !ifmacrondef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !endif$3
     '''
     description: "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]"
@@ -162,9 +162,9 @@
   "!ifmacrondef…else":
     body: '''
       !ifmacrondef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !else
-        ${3:# your code here}
+      \t${3:# your code here}
       !endif$4
     '''
     description: "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]"
@@ -174,7 +174,7 @@
   "!ifndef":
     body: '''
       !ifndef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !endif$3
     '''
     description: "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]"
@@ -184,9 +184,9 @@
   "!ifndef…else":
     body: '''
       !ifndef ${1:gflag}
-        ${2:# your code here}
+      \t${2:# your code here}
       !else
-        ${3:# your code here}
+      \t${3:# your code here}
       !endif$4
     '''
     description: "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]"
@@ -196,9 +196,9 @@
   "!if…else":
     body: '''
       !if ${1:value1} ${2:op} ${3:value2}
-        ${4:# your code here}
+      \t${4:# your code here}
       !else
-        ${5:# your code here}
+      \t${5:# your code here}
       !endif$6
     '''
     description: "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)"
@@ -358,7 +358,7 @@
   "!macro":
     body: '''
       !macro ${1:macro_name} ${2:parameter}
-        ${3:# your code here}
+      \t${3:# your code here}
       !macroend$4
     '''
     description: "Usage: !macro macroname [parms ...]"
@@ -1028,7 +1028,7 @@
   Function:
     body: '''
       Function "${1:function_name}"
-        ${2:# your code here}
+      \t${2:# your code here}
       FunctionEnd$3
     '''
     description: "Usage: Function function_name"
@@ -1038,7 +1038,7 @@
   "Function .onGUIEnd":
     body: '''
       Function .onGUIEnd
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1048,7 +1048,7 @@
   "Function .onGUIInit":
     body: '''
       Function .onGUIInit
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1058,7 +1058,7 @@
   "Function .onInit":
     body: '''
       Function .onInit
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1068,7 +1068,7 @@
   "Function .onInstFailed":
     body: '''
       Function .onInstFailed
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1078,7 +1078,7 @@
   "Function .onInstSuccess":
     body: '''
       Function .onInstSuccess
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1088,7 +1088,7 @@
   "Function .onMouseOverSection":
     body: '''
       Function .onMouseOverSection
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1098,7 +1098,7 @@
   "Function .onRebootFailed":
     body: '''
       Function .onRebootFailed
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1108,7 +1108,7 @@
   "Function .onSelChange":
     body: '''
       Function .onSelChange
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1118,7 +1118,7 @@
   "Function .onUserAbort":
     body: '''
       Function .onUserAbort
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1128,7 +1128,7 @@
   "Function .onVerifyInstDir":
     body: '''
       Function .onVerifyInstDir
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1138,7 +1138,7 @@
   "Function un.*":
     body: '''
       Function "un.${1:function_name}"
-        ${2:# your code here}
+      \t${2:# your code here}
       FunctionEnd$3
     '''
     description: "Usage: Function function_name"
@@ -1148,7 +1148,7 @@
   "Function un.onGUIEnd":
     body: '''
       Function un.onGUIEnd
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1158,7 +1158,7 @@
   "Function un.onGUIInit":
     body: '''
       Function un.onGUIInit
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1168,7 +1168,7 @@
   "Function un.onInit":
     body: '''
       Function un.onInit
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1178,7 +1178,7 @@
   "Function un.onRebootFailed":
     body: '''
       Function un.onRebootFailed
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1188,7 +1188,7 @@
   "Function un.onSelChange":
     body: '''
       Function un.onSelChange
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1198,7 +1198,7 @@
   "Function un.onUninstFailed":
     body: '''
       Function un.onUninstFailed
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1208,7 +1208,7 @@
   "Function un.onUninstSuccess":
     body: '''
       Function un.onUninstSuccess
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1218,7 +1218,7 @@
   "Function un.onUserAbort":
     body: '''
       Function un.onUserAbort
-        ${1:# your code here}
+      \t${1:# your code here}
       FunctionEnd$2
     '''
     description: "Usage: Function function_name"
@@ -1944,7 +1944,7 @@
   PageEx:
     body: '''
       PageEx ${1:page_type}
-        ${2:# your code here}
+      \t${2:# your code here}
       PageExEnd$3
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -1954,7 +1954,7 @@
   "PageEx components":
     body: '''
       PageEx components
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -1964,7 +1964,7 @@
   "PageEx custom":
     body: '''
       PageEx custom
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -1974,7 +1974,7 @@
   "PageEx directory":
     body: '''
       PageEx directory
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -1984,7 +1984,7 @@
   "PageEx instfiles":
     body: '''
       PageEx instfiles
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -1994,7 +1994,7 @@
   "PageEx license":
     body: '''
       PageEx license
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -2004,7 +2004,7 @@
   "PageEx uninstConfirm":
     body: '''
       PageEx uninstConfirm
-        ${1:# your code here}
+      \t${1:# your code here}
       PageExEnd$2
     '''
     description: "Usage: PageEx [un.](custom|uninstConfirm|license|components|directory|instfiles)"
@@ -2170,7 +2170,7 @@
   Section:
     body: '''
       Section "${1:section_name}" ${2:section_index_output}
-        ${3:# your code here}
+      \t${3:# your code here}
       SectionEnd$4
     '''
     description: "Usage: Section [/o] [-][un.][section_name] [section index output]"
@@ -2180,7 +2180,7 @@
   "Section Uninstall":
     body: '''
       Section "Uninstall"
-        ${1:# your code here}
+      \t${1:# your code here}
       SectionEnd$2
     '''
     description: "Usage: Section [/o] [-][un.][section_name] [section index output]"
@@ -2220,7 +2220,7 @@
   SectionGroup:
     body: '''
       SectionGroup ${1:section_group_name} ${2:index_output}
-        ${3:# your code here}
+      \t${3:# your code here}
       SectionGroupEnd$4
     '''
     description: "Usage: SectionGroup [/e] [un.]section_group_name [section index output]"

@@ -26,7 +26,7 @@
   "${MementoSection}":
     body: '''
       ${MementoSection} "${1:section_name}" ${2:section_index}
-        ${3:# your code here}
+      \t${3:# your code here}
       ${MementoSectionEnd}$4
     '''
     description: "Usage: ${MementoSection} [section_name] [section_index_output]"

@@ -278,7 +278,7 @@
   MUI_FUNCTION_DESCRIPTION_BEGIN:
     body: '''
       !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-        ${1:# your code here}
+      \t${1:# your code here}
       !insertmacro MUI_FUNCTION_DESCRIPTION_END
     '''
     description: "Usage: !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN"
@@ -996,7 +996,7 @@
   MUI_STARTMENU_WRITE_BEGIN:
     body: '''
       !insertmacro MUI_STARTMENU_WRITE_BEGIN ${1:page_id}
-        ${2:# your code here}
+      \t${2:# your code here}
       !insertmacro MUI_STARTMENU_WRITE_END$3
     '''
     description: "Usage: !insertmacro MUI_STARTMENU_WRITE_BEGIN pageid"
@@ -1072,7 +1072,7 @@
   MUI_UNFUNCTION_DESCRIPTION_BEGIN:
     body: '''
       !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN
-        ${1:# your code here}
+      \t${1:# your code here}
       !insertmacro MUI_UNFUNCTION_DESCRIPTION_END
     '''
     description: "Usage: !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN"

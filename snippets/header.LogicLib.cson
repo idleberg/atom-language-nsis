@@ -28,7 +28,7 @@
   "${DoUntil…LoopUntil}":
     body: '''
       ${DoUntil} ${1:statement}
-        ${3:# your code here}
+      \t${3:# your code here}
       ${LoopUntil} ${2:statement}$4
     '''
     leftLabelHTML: "<span class='support function'>LogicLib.nsh</span>"
@@ -36,7 +36,7 @@
   "${DoUntil…Loop}":
     body: '''
       ${Do} ${1:statement}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${Loop}$3
     '''
     leftLabelHTML: "<span class='support function'>LogicLib.nsh</span>"
@@ -44,7 +44,7 @@
   "${Do…LoopUntil}":
     body: '''
       ${Do}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${LoopUntil} ${1:statement}$3
     '''
     leftLabelHTML: "<span class='support function'>LogicLib.nsh</span>"
@@ -52,7 +52,7 @@
   "${Do…Loop}":
     body: '''
       ${Do}
-        ${1:# your code here}
+      \t${1:# your code here}
       ${Loop}$2
     '''
     leftLabelHTML: "<span class='support function'>LogicLib.nsh</span>"
@@ -124,7 +124,7 @@
   "${ForEach…Next}":
     body: '''
       ${ForEach} ${1:statement}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${Next}$3
     '''
     description: "Usage: ${ForEach} expression"
@@ -134,7 +134,7 @@
   "${For…Next}":
     body: '''
       ${For} ${1:statement}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${Next}$3
     '''
     description: "Usage: ${For} expression"
@@ -150,7 +150,7 @@
   "${IfNot}":
     body: '''
       ${IfNot} ${1:expression}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndIf}$3
     '''
     description: "Usage: ${IfNot} expression"
@@ -160,9 +160,9 @@
   "${IfNot…Else}":
     body: '''
       ${IfNot} ${1:expression}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${Else}
-        ${3:# your code here}
+      \t${3:# your code here}
       ${EndIf}$4
     '''
     description: "Usage: ${IfNot} expression"
@@ -172,7 +172,7 @@
   "${IfNot…FileExists}":
     body: '''
       ${IfNot} ${FileExists} "${1:file}"
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndIf}$3
     '''
     description: "Usage: ${IfNot} ${FileExists} file_path"
@@ -194,7 +194,7 @@
   "${If}":
     body: '''
       ${If} ${1:expression}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndIf}$3
     '''
     description: "Usage: ${If} expression"
@@ -204,9 +204,9 @@
   "${If…Else}":
     body: '''
       ${If} ${1:expression}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${Else}
-        ${3:# your code here}
+      \t${3:# your code here}
       ${EndIf}$4
     '''
     description: "Usage: ${If} expression"
@@ -216,7 +216,7 @@
   "${If…FileExists}":
     body: '''
       ${If} ${FileExists} "${1:file}"
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndIf}$3
     '''
     description: "Usage: ${If} ${FileExists} file_path"
@@ -287,7 +287,7 @@
   "${Select}":
     body: '''
       ${Select} $${1:var}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndSelect}$3
     '''
     description: "Usage: ${Select} expression"
@@ -303,7 +303,7 @@
   "${Switch}":
     body: '''
       ${Switch} $${1:var}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndSwitch}$3
     '''
     description: "Usage: ${Switch} expression"
@@ -313,7 +313,7 @@
   "${Unless}":
     body: '''
       ${Unless} $${1:var}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndUnless}$3
     '''
     description: "Usage: ${Unless} expression"
@@ -323,7 +323,7 @@
   "${Unless…FileExists}":
     body: '''
       ${Unless} ${FileExists} "${1:file}"
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndIf}$3
     '''
     description: "Usage: ${Unless} ${FileExists} file_path"
@@ -333,7 +333,7 @@
   "${While}":
     body: '''
       ${While} ${1:expression}
-        ${2:# your code here}
+      \t${2:# your code here}
       ${EndWhile}$3
     '''
     description: "Usage: ${While} expression"
