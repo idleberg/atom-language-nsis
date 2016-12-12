@@ -80,8 +80,8 @@ module.exports = NsisConf =
 
       buildFilePath = path.join(currentPath, buildFileBase)
      
-      fs.exists "#{buildFilePath}", (exists) ->
-        if exists is true
+      fs.access "#{buildFilePath}", fs.constants.R_OK, (error) ->
+        if error is null
           atom.confirm
             message: 'File exists'
             detailedMessage: 'Do you really want to overwrite your existing build file?'
