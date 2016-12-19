@@ -24,21 +24,21 @@
     "url": "git+https://github.com/idleberg/atom-language-nsis.git"
   },
   "main": "./lib/main",
-  "activationCommands": {
-    "atom-workspace": [
-      "NSIS:set-default-runner",
-      "NSIS:remove-default-runner",
-      "NSIS:create-.atom–build-file",
-      "NSIS:create-.atom–build-file-for-wine",
-      "NSIS:show-version",
-      "NSIS:save-&-compile",
-      "NSIS:save-&-compile-strict"
-    ]
-  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "package-deps": [
+    "console-panel"
+  ],
+  "consumedServices": {
+    "console-panel": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
+    }
+  },
   "dependencies": {
+    "atom-package-deps": "^4.3.1",
     "cson": "^3.0.2",
     "jshint": "^2.9.3",
     "yaml-js": "^0.1.4"
