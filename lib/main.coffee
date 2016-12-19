@@ -96,7 +96,7 @@ module.exports = NsisCore =
       stdOut = ""
 
       makensis.stdout.on 'data', (data) ->
-        stdOut += "\n#{data}";
+        stdOut += "\n#{data}"
         if data.indexOf("warning: ") isnt -1
           hasWarning = true
           consolePanel.raw(data.toString(), level="warn", lineEnding="\n")
