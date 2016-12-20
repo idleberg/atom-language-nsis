@@ -1,14 +1,12 @@
-Config = require './config'
+dConfig = require './config'
 meta = require '../package.json'
 
 os = require 'os'
 {spawn} = require 'child_process'
 
 if os.platform() is 'win32'
-  which  = "where"
   prefix = "/"
 else
-  which  = "which"
   prefix = "-"
 
 module.exports = NsisCore =
@@ -25,11 +23,18 @@ module.exports = NsisCore =
       type: "string"
       default: "#{prefix}V3"
       order: 1
-    showBuildNotifications:
-      title: "Show Build Notifications"
+    alwaysShowOutput:
+      title: "Always Show Output"
+      description: "Displays compiler output in console panel. When deactivated, it will only show on errors"
       type: "boolean"
       default: true
       order: 2
+    showBuildNotifications:
+      title: "Show Build Notifications"
+      description: "Displays color-coded notifications that close automatically after 5 seconds"
+      type: "boolean"
+      default: true
+      order: 3
     buildFileSyntax:
       title: "Build File Syntax"
       description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
@@ -40,7 +45,7 @@ module.exports = NsisCore =
         "JSON",
         "YAML"
       ],
-      order: 3
+      order: 4
   subscriptions: null
 
   activate: (state) ->
@@ -96,9 +101,9 @@ module.exports = NsisCore =
       makensis.stdout.on 'data', (data) ->
         if data.indexOf("warning: ") isnt -1
           hasWarning = true
-          consolePanel.warn(data.toString())
+          consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
         else
-          consolePanel.log(data.toString())
+          consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
 
       makensis.stderr.on 'data', (data) ->
         consolePanel.error(data.toString())
