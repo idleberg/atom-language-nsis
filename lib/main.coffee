@@ -35,6 +35,12 @@ module.exports = NsisCore =
       type: "boolean"
       default: true
       order: 3
+    clearConsole:
+      title: "Clear Console"
+      description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
+      type: "boolean"
+      default: true
+      order: 4
     buildFileSyntax:
       title: "Build File Syntax"
       description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
@@ -45,7 +51,7 @@ module.exports = NsisCore =
         "JSON",
         "YAML"
       ],
-      order: 4
+      order: 5
   subscriptions: null
 
   activate: (state) ->
@@ -92,7 +98,10 @@ module.exports = NsisCore =
         compilerArguments.push "#{prefix}WX"
       compilerArguments.push script
 
-      consolePanel.clear()
+      try
+        consolePanel.clear()
+      catch
+        console.clear() if atom.config.get('language-nsis.clearConsole')
 
       # Let's go
       makensis = spawn pathToMakensis, compilerArguments
@@ -101,12 +110,21 @@ module.exports = NsisCore =
       makensis.stdout.on 'data', (data) ->
         if data.indexOf("warning: ") isnt -1
           hasWarning = true
-          consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+          try
+            consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+          catch
+            console.warn(data.toString())
         else
-          consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+          try
+            consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+          catch
+            console.log(data.toString())
 
       makensis.stderr.on 'data', (data) ->
-        consolePanel.error(data.toString())
+        try
+          consolePanel.error(data.toString())
+        catch
+          console.error(data.toString())    
 
       makensis.on 'close', ( errorCode ) ->
         if errorCode is 0
