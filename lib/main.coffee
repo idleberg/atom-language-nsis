@@ -124,7 +124,7 @@ module.exports = NsisCore =
         try
           consolePanel.error(data.toString())
         catch
-          console.error(data.toString())    
+          console.error(data.toString())
 
       makensis.on 'close', ( errorCode ) ->
         if errorCode is 0
