@@ -82,6 +82,10 @@ Inside the cloned directory, install Node dependencies:
 $ yarn || npm install
 ```
 
+### Package Dependencies
+
+This package automatically installs third-party packages it depends on (currently that's `console-panel`). You can prevent this by disabling the *Manage Dependencies* option in the package settings. Once set, Atom will no longer try to re-install these dependencies.
+
 ## Usage
 
 ### Completion
@@ -131,7 +135,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
   pathToMakensis: "/usr/local/bin/makensis"
 ```
 
-#### Third-party packages
+#### Third-party Build Tools
 
 Should you prefer working with an existing third-party build system, the following packages already have support for NSIS.
 
