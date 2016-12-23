@@ -35,6 +35,13 @@ menu: [
             label: "Create .atom–build.cson for Wine"
             command: "NSIS:create-.atom–build-file-for-wine"
           }
+          {
+            type: "separator"
+          }
+          {
+            label: "Setup Package Dependencies"
+            command: "NSIS:setup-package-dependencies"
+          }
         ]
       }
     ]

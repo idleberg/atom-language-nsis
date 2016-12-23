@@ -52,11 +52,15 @@ module.exports = NsisCore =
         "YAML"
       ],
       order: 5
+    manageDependencies:
+      title: "Manage Dependencies"
+      description: "When enabled, this will automatically install third-party dependencies"
+      type: "boolean"
+      default: true
+      order: 6
   subscriptions: null
 
   activate: (state) ->
-    require('atom-package-deps').install(meta.name)
- 
     {CompositeDisposable} = require 'atom'
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -66,14 +70,26 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile': => @buildScript(false, @consolePanel)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile-strict': => @buildScript(true, @consolePanel)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:show-version': => @showVersion()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:setup-package-dependencies': => @setupPackageDeps()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': -> Config.createBuildFile(false)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file-for-wine': -> Config.createBuildFile(true)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': -> Config.setRunner()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': -> Config.removeRunner()
 
+    if atom.config.get('language-nsis.manageDependencies')
+      @setupPackageDeps()
+
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
+
+  setupPackageDeps: () ->
+    require('atom-package-deps').install(meta.name)
+
+    for k, v of meta["package-deps"]
+      if atom.packages.isPackageDisabled(v)
+        console.log "Enabling package '#{v}'" if atom.inDevMode()
+        atom.packages.enablePackage(v)
 
   consumeConsolePanel: (@consolePanel) ->
 
