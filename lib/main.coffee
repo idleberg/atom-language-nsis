@@ -160,4 +160,3 @@ module.exports = NsisCore =
     version = spawn pathToMakensis, ["#{prefix}VERSION"]
     version.stdout.on 'data', ( data ) ->
       atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{data} (#{pathToMakensis})", dismissable: true)
-
