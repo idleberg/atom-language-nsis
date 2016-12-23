@@ -1,4 +1,4 @@
-dConfig = require './config'
+Config = require './config'
 meta = require '../package.json'
 
 os = require 'os'
