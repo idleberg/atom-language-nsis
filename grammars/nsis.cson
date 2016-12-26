@@ -119,6 +119,10 @@ patterns: [
     name: "string.quoted.double.nsis"
     patterns: [
       {
+        match: "\\${2}\\w*"
+        name: "constant.character.escape.nsis"
+      }
+      {
         match: "\\$\\\\."
         name: "constant.character.escape.nsis"
       }
@@ -152,6 +156,10 @@ patterns: [
     name: "string.quoted.single.nsis"
     patterns: [
       {
+        match: "\\${2}\\w*"
+        name: "constant.character.escape.nsis"
+      }
+      {
         match: "\\$\\\\."
         name: "constant.character.escape.nsis"
       }
@@ -184,6 +192,10 @@ patterns: [
         name: "punctuation.definition.string.end.nsis"
     name: "string.quoted.back.nsis"
     patterns: [
+      {
+        match: "\\${2}\\w*"
+        name: "constant.character.escape.nsis"
+      }
       {
         match: "\\$\\\\."
         name: "constant.character.escape.nsis"
