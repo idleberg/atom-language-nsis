@@ -40,7 +40,7 @@ menu: [
           }
           {
             label: "Setup Package Dependencies"
-            command: "NSIS:setup-package-dependencies"
+            command: "NSIS:satisfy-package-dependencies"
           }
         ]
       }
