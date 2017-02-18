@@ -6,8 +6,10 @@ os = require 'os'
 
 if os.platform() is 'win32'
   prefix = "/"
+  which = "where"
 else
   prefix = "-"
+  which = "which"
 
 module.exports = NsisCore =
   config:
@@ -107,60 +109,78 @@ module.exports = NsisCore =
     if script? and scope.startsWith 'source.nsis'
       editor.save() if editor.isModified()
 
-      pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
-      compilerArguments = atom.config.get('language-nsis.compilerArguments').trim().split(" ")
+      @getPath (pathToMakensis) ->
+        compilerArguments = atom.config.get('language-nsis.compilerArguments').trim().split(" ")
 
-      # only add WX flag if not already specified
-      if strictMode == true and compilerArguments.indexOf(prefix + 'WX') == -1
-        compilerArguments.push "#{prefix}WX"
-      compilerArguments.push script
+        # only add WX flag if not already specified
+        if strictMode == true and compilerArguments.indexOf(prefix + 'WX') == -1
+          compilerArguments.push "#{prefix}WX"
+        compilerArguments.push script
 
-      try
-        consolePanel.clear()
-      catch
-        console.clear() if atom.config.get('language-nsis.clearConsole')
-
-      # Let's go
-      makensis = spawn pathToMakensis, compilerArguments
-      hasWarning = false
-
-      makensis.stdout.on 'data', (data) ->
-        if data.indexOf("warning: ") isnt -1
-          hasWarning = true
-          try
-            consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
-          catch
-            console.warn(data.toString())
-        else
-          try
-            consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
-          catch
-            console.log(data.toString())
-
-      makensis.stderr.on 'data', (data) ->
         try
-          consolePanel.error(data.toString())
+          consolePanel.clear()
         catch
-          console.error(data.toString())
+          console.clear() if atom.config.get('language-nsis.clearConsole')
 
-      makensis.on 'close', ( errorCode ) ->
-        if errorCode is 0
-          if hasWarning is true
-            return atom.notifications.addWarning("Compiled with warnings", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+        # Let's go
+        makensis = spawn pathToMakensis, compilerArguments
+        hasWarning = false
+
+        makensis.stdout.on 'data', (data) ->
+          if data.indexOf("warning: ") isnt -1
+            hasWarning = true
+            try
+              consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+            catch
+              console.warn(data.toString())
           else
-            return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+            try
+              consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+            catch
+              console.log(data.toString())
 
-        return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+        makensis.stderr.on 'data', (data) ->
+          try
+            consolePanel.error(data.toString())
+          catch
+            console.error(data.toString())
+
+        makensis.on 'close', ( errorCode ) ->
+          if errorCode is 0
+            if hasWarning is true
+              return atom.notifications.addWarning("Compiled with warnings", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+            else
+              return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+
+          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
     else
       # Something went wrong
       atom.beep()
 
-  showVersion: () ->
-    pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
+  getPath: (callback) ->
+      # If stored, return pathToMakensis
+      pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
+      if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
+        return callback(pathToMakensis)
 
-    version = spawn pathToMakensis, ["#{prefix}VERSION"]
-    version.stdout.on 'data', ( version ) ->
-      atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
+      # Find makensis
+      which = spawn which, ["makensis"]
+
+      which.stdout.on 'data', ( data ) ->
+        path = data.toString().trim()
+        atom.config.set('language-nsis.pathToMakensis', path)
+        return callback(path)
+
+      which.on 'close', ( errorCode ) ->
+        if errorCode > 0
+          atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+
+  showVersion: () ->
+    @getPath (pathToMakensis) ->
+
+      version = spawn pathToMakensis, ["#{prefix}VERSION"]
+      version.stdout.on 'data', ( version ) ->
+        atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
