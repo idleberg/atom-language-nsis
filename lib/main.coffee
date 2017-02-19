@@ -158,22 +158,22 @@ module.exports = NsisCore =
       atom.beep()
 
   getPath: (callback) ->
-      # If stored, return pathToMakensis
-      pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
-      if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
-        return callback(pathToMakensis)
+    # If stored, return pathToMakensis
+    pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
+    if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
+      return callback(pathToMakensis)
 
-      # Find makensis
-      which = spawn which, ["makensis"]
+    # Find makensis
+    which = spawn which, ["makensis"]
 
-      which.stdout.on 'data', ( data ) ->
-        path = data.toString().trim()
-        atom.config.set('language-nsis.pathToMakensis', path)
-        return callback(path)
+    which.stdout.on 'data', ( data ) ->
+      path = data.toString().trim()
+      atom.config.set('language-nsis.pathToMakensis', path)
+      return callback(path)
 
-      which.on 'close', ( errorCode ) ->
-        if errorCode > 0
-          atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+    which.on 'close', ( errorCode ) ->
+      if errorCode > 0
+        atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
   showVersion: () ->
     @getPath (pathToMakensis) ->
