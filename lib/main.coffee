@@ -1,15 +1,8 @@
 Config = require './config'
 meta = require '../package.json'
 
-os = require 'os'
-{spawn} = require 'child_process'
-
-if os.platform() is 'win32'
-  prefix = "/"
-  which = "where"
-else
-  prefix = "-"
-  which = "which"
+{ platform } = require 'os'
+{ spawn } = require 'child_process'
 
 module.exports = NsisCore =
   config:
@@ -23,7 +16,7 @@ module.exports = NsisCore =
       title: "Compiler Arguments"
       description: "Specify the default arguments for `makensis` ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
       type: "string"
-      default: "#{prefix}V3"
+      default: "-V3"
       order: 1
     alwaysShowOutput:
       title: "Always Show Output"
@@ -113,8 +106,8 @@ module.exports = NsisCore =
         compilerArguments = atom.config.get('language-nsis.compilerArguments').trim().split(" ")
 
         # only add WX flag if not already specified
-        if strictMode == true and compilerArguments.indexOf(prefix + 'WX') == -1
-          compilerArguments.push "#{prefix}WX"
+        if strictMode == true and compilerArguments.indexOf('-WX') == -1
+          compilerArguments.push "-WX"
         compilerArguments.push script
 
         try
@@ -164,7 +157,7 @@ module.exports = NsisCore =
       return callback(pathToMakensis)
 
     # Find makensis
-    which = spawn which, ["makensis"]
+    which = spawn @which(), ["makensis"]
 
     which.stdout.on 'data', ( data ) ->
       path = data.toString().trim()
@@ -178,9 +171,15 @@ module.exports = NsisCore =
   showVersion: () ->
     @getPath (pathToMakensis) ->
 
-      version = spawn pathToMakensis, ["#{prefix}VERSION"]
+      version = spawn pathToMakensis, ["-VERSION"]
       version.stdout.on 'data', ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
+
+  which: ->
+    if platform() is "win32"
+      return "where"
+    
+    return "which"
