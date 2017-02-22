@@ -4,6 +4,11 @@ meta = require '../package.json'
 { platform } = require 'os'
 { spawn } = require 'child_process'
 
+if platform() is 'win32'
+  prefix = "/"
+else
+  prefix = "-"
+
 module.exports = NsisCore =
   config:
     pathToMakensis:
@@ -16,7 +21,7 @@ module.exports = NsisCore =
       title: "Compiler Arguments"
       description: "Specify the default arguments for `makensis` ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
       type: "string"
-      default: "-V3"
+      default: "#{prefix}V3"
       order: 1
     alwaysShowOutput:
       title: "Always Show Output"
@@ -106,8 +111,8 @@ module.exports = NsisCore =
         compilerArguments = atom.config.get('language-nsis.compilerArguments').trim().split(" ")
 
         # only add WX flag if not already specified
-        if strictMode == true and compilerArguments.indexOf('-WX') == -1
-          compilerArguments.push "-WX"
+        if strictMode == true and compilerArguments.indexOf("#{prefix}WX") == -1
+          compilerArguments.push "#{prefix}WX"
         compilerArguments.push script
 
         try
@@ -171,7 +176,7 @@ module.exports = NsisCore =
   showVersion: () ->
     @getPath (pathToMakensis) ->
 
-      version = spawn pathToMakensis, ["-VERSION"]
+      version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on 'data', ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
