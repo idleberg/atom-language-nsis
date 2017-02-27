@@ -27,6 +27,18 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "activationCommands": {
+    "atom-workspace": [
+      "NSIS:save-&-compile",
+      "NSIS:save-&-compile-strict",
+      "NSIS:show-version",
+      "NSIS:open-package-settings",
+      "NSIS:create-.atom–build-file",
+      "NSIS:create-.atom–build-file-for-wine",
+      "NSIS:set-default-runner",
+      "NSIS:remove-default-runner"
+    ]
+  },
   "package-deps": [
     "console-panel"
   ],
