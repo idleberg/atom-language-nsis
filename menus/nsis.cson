@@ -42,6 +42,10 @@ menu: [
             label: "Open Package Settings"
             command: "NSIS:open-package-settings"
           }
+          {
+            label: "Setup Package Dependencies"
+            command: "NSIS:satisfy-package-dependencies"
+          }
         ]
       }
     ]

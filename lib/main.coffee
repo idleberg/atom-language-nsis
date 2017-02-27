@@ -71,16 +71,26 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile-strict': => @buildScript(true, @consolePanel)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:show-version': => @showVersion()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:open-package-settings': => @openSettings()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:satisfy-package-dependencies': => @satisfyDependencies()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': -> Config.createBuildFile(false)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file-for-wine': -> Config.createBuildFile(true)
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': -> Config.setRunner()
     @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': -> Config.removeRunner()
 
-    require('atom-package-deps').install(meta.name, true)
+    if atom.config.get('language-nsis.manageDependencies')
+      @satisfyDependencies()
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
+
+  satisfyDependencies: () ->
+    require('atom-package-deps').install(meta.name, true)
+
+    for k, v of meta["package-deps"]
+      if atom.packages.isPackageDisabled(v)
+        console.log "Enabling package '#{v}'" if atom.inDevMode()
+        atom.packages.enablePackage(v)
 
   consumeConsolePanel: (@consolePanel) ->
 
@@ -176,5 +186,5 @@ module.exports = NsisCore =
   which: ->
     if platform() is "win32"
       return "where"
-    
+
     return "which"
