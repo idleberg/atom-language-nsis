@@ -13,7 +13,7 @@ patterns: [
     name: "constant.numeric.nlf"
   }
   {
-    match: "\\$_CLICK"
+    match: "(?i)\\$_CLICK"
     name: "variable.language.nlf"
   }
   {
