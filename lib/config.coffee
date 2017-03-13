@@ -111,7 +111,7 @@ module.exports = NsisConf =
             args: [ "{FILE_ACTIVE}" ],
             sh: sh,
             cwd: "{FILE_ACTIVE_PATH}",
-            errorMatch: "(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process",
+            errorMatch: "(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script \"(?<file>[^\"]+)\" on line (?<line>\\d+) -- aborting creation process",
             warningMatch: "[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)"
 
           if buildFileSyntax is "CSON"
