@@ -1,10 +1,10 @@
-Config = require './config'
-meta = require '../package.json'
+Config = require "./config"
+meta = require "../package.json"
 
-{ platform } = require 'os'
-{ spawn } = require 'child_process'
+{ platform } = require "os"
+{ spawn } = require "child_process"
 
-if platform() is 'win32'
+if platform() is "win32"
   prefix = "/"
 else
   prefix = "-"
@@ -61,23 +61,23 @@ module.exports = NsisCore =
   subscriptions: null
 
   activate: (state) ->
-    {CompositeDisposable} = require 'atom'
+    {CompositeDisposable} = require "atom"
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile': => @buildScript(false, @consolePanel)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:save-&-compile-strict': => @buildScript(true, @consolePanel)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:show-version': => @showVersion()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:open-package-settings': => @openSettings()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:satisfy-package-dependencies': => @satisfyDependencies()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file': -> Config.createBuildFile(false)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:create-.atom–build-file-for-wine': -> Config.createBuildFile(true)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:set-default-runner': -> Config.setRunner()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'NSIS:remove-default-runner': -> Config.removeRunner()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile": => @buildScript(false, @consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile-strict": => @buildScript(true, @consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => @showVersion()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:open-package-settings": => @openSettings()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": => @satisfyDependencies()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file": -> Config.createBuildFile(false)
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file-for-wine": -> Config.createBuildFile(true)
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Config.setRunner()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:remove-default-runner": -> Config.removeRunner()
 
-    if atom.config.get('language-nsis.manageDependencies')
+    if atom.config.get("language-nsis.manageDependencies") and atom.inSpecMode is false
       @satisfyDependencies()
 
   deactivate: ->
@@ -85,7 +85,7 @@ module.exports = NsisCore =
     @subscriptions = null
 
   satisfyDependencies: () ->
-    require('atom-package-deps').install(meta.name, true)
+    require("atom-package-deps").install(meta.name, true)
 
     for k, v of meta["package-deps"]
       if atom.packages.isPackageDisabled(v)
@@ -104,11 +104,11 @@ module.exports = NsisCore =
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
 
-    if script? and scope.startsWith 'source.nsis'
+    if script? and scope.startsWith "source.nsis"
       editor.save() if editor.isModified()
 
       @getPath (pathToMakensis) ->
-        compilerArguments = atom.config.get('language-nsis.compilerArguments').trim().split(" ")
+        compilerArguments = atom.config.get("language-nsis.compilerArguments").trim().split(" ")
 
         # only add WX flag if not already specified
         if strictMode == true and compilerArguments.indexOf("#{prefix}WX") == -1
@@ -118,58 +118,58 @@ module.exports = NsisCore =
         try
           consolePanel.clear()
         catch
-          console.clear() if atom.config.get('language-nsis.clearConsole')
+          console.clear() if atom.config.get("language-nsis.clearConsole")
 
         # Let's go
         makensis = spawn pathToMakensis, compilerArguments
         hasWarning = false
 
-        makensis.stdout.on 'data', (data) ->
+        makensis.stdout.on "data", (data) ->
           if data.indexOf("warning: ") isnt -1
             hasWarning = true
             try
-              consolePanel.warn(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+              consolePanel.warn(data.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
             catch
               console.warn(data.toString())
           else
             try
-              consolePanel.log(data.toString()) if atom.config.get('language-nsis.alwaysShowOutput')
+              consolePanel.log(data.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
             catch
               console.log(data.toString())
 
-        makensis.stderr.on 'data', (data) ->
+        makensis.stderr.on "data", (data) ->
           try
             consolePanel.error(data.toString())
           catch
             console.error(data.toString())
 
-        makensis.on 'close', ( errorCode ) ->
+        makensis.on "close", ( errorCode ) ->
           if errorCode is 0
             if hasWarning is true
-              return atom.notifications.addWarning("Compiled with warnings", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+              return atom.notifications.addWarning("Compiled with warnings", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
             else
-              return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+              return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
 
-          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-nsis.showBuildNotifications')
+          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
 
   getPath: (callback) ->
     # If stored, return pathToMakensis
-    pathToMakensis = atom.config.get('language-nsis.pathToMakensis')
+    pathToMakensis = atom.config.get("language-nsis.pathToMakensis")
     if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
       return callback(pathToMakensis)
 
     # Find makensis
     which = spawn @which(), ["makensis"]
 
-    which.stdout.on 'data', ( data ) ->
+    which.stdout.on "data", ( data ) ->
       path = data.toString().trim()
-      atom.config.set('language-nsis.pathToMakensis', path)
+      atom.config.set("language-nsis.pathToMakensis", path)
       return callback(path)
 
-    which.on 'close', ( errorCode ) ->
+    which.on "close", ( errorCode ) ->
       if errorCode > 0
         atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
@@ -177,7 +177,7 @@ module.exports = NsisCore =
     @getPath (pathToMakensis) ->
 
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
-      version.stdout.on 'data', ( version ) ->
+      version.stdout.on "data", ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
   openSettings: ->

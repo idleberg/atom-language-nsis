@@ -7,14 +7,14 @@ module.exports = NsisConf =
   setRunner: ->
     @checkRunner()
 
-    if (typeof @runner.path != 'undefined') and (@runner.active == true)
+    if (typeof @runner.path != "undefined") and (@runner.active == true)
       atom.confirm
-        message: 'Set default runner for NSIS'
-        detailedMessage: 'To compile NSIS scripts inside Atom, you need to define a runner. Do you want to use makensis as default runner?'
+        message: "Set default runner for NSIS"
+        detailedMessage: "To compile NSIS scripts inside Atom, you need to define a runner. Do you want to use makensis as default runner?"
         buttons:
           "Use makensis": ->
             atom.notifications.addSuccess("**language-nsis**: Set `runner.scopes.nsis` to 'makensis -'", dismissable: false)
-            atom.config.set('runner.scopes.nsis','makensis -')
+            atom.config.set("runner.scopes.nsis", "makensis -")
           "Cancel": ->
             atom.notifications.addWarning("**language-nsis**: Cancelled setting default runner", dismissable: false)
             return
@@ -24,9 +24,9 @@ module.exports = NsisConf =
   removeRunner: ->
     @checkRunner()
 
-    if (typeof @runner.path != 'undefined') and (@runner.active == true)
+    if (typeof @runner.path != "undefined") and (@runner.active == true)
       atom.notifications.addSuccess("**language-nsis**: Unset `runner.scopes.nsis`", dismissable: false)
-      atom.config.unset('runner.scopes.nsis')
+      atom.config.unset("runner.scopes.nsis")
     else
       @missingRunner()
 
@@ -35,15 +35,15 @@ module.exports = NsisConf =
 
   checkRunner: ->
     @runner =
-      path: atom.packages.resolvePackagePath('atom-runner')
-      active: atom.packages.isPackageLoaded('atom-runner')
+      path: atom.packages.resolvePackagePath("atom-runner")
+      active: atom.packages.isPackageLoaded("atom-runner")
 
 ################################################################################
 # atom-build
 # https://github.com/mirhec/atom-build
   createBuildFile: (wine) ->
-    fs = require 'fs'
-    path = require 'path'
+    fs = require "fs"
+    path = require "path"
 
     editor = atom.workspace.getActiveTextEditor()
 
@@ -61,15 +61,15 @@ module.exports = NsisConf =
 
     if typeof currentPath is "undefined"
       atom.confirm
-        message: 'File not saved'
-        detailedMessage: 'You need to save this file before you can create a build-file'
+        message: "File not saved"
+        detailedMessage: "You need to save this file before you can create a build-file"
         buttons:
           "OK": -> return
 
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFileSyntax = atom.config.get('language-nsis.buildFileSyntax')
+      buildFileSyntax = atom.config.get("language-nsis.buildFileSyntax")
 
       if buildFileSyntax is "CSON"
         buildFileBase = ".atom-build.cson"
@@ -83,8 +83,8 @@ module.exports = NsisConf =
       fs.access "#{buildFilePath}", fs.constants.R_OK, (error) ->
         if error is null
           atom.confirm
-            message: 'File exists'
-            detailedMessage: 'Do you really want to overwrite your existing build file?'
+            message: "File exists"
+            detailedMessage: "Do you really want to overwrite your existing build file?"
             buttons:
               "Overwrite": ->
                 successMsg = "Overwriting existing file"
@@ -100,9 +100,9 @@ module.exports = NsisConf =
             makeNsis ="makensis"
             sh = false
           else
-            pathToScript = atom.config.get('build-makensis-wine.pathToScript')
+            pathToScript = atom.config.get("build-makensis-wine.pathToScript")
             packageDir = atom.packages.getPackageDirPaths().toString()
-            makeNsis = if pathToScript then "\"#{pathToScript}\"" else path.join(packageDir, 'build-makensis-wine', 'lib', 'makensis-wine.sh')
+            makeNsis = if pathToScript then "\"#{pathToScript}\"" else path.join(packageDir, "build-makensis-wine", "lib", "makensis-wine.sh")
             sh = true
 
           buildFile =
@@ -111,14 +111,14 @@ module.exports = NsisConf =
             args: [ "{FILE_ACTIVE}" ],
             sh: sh,
             cwd: "{FILE_ACTIVE_PATH}",
-            errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
-            warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
+            errorMatch: "(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process",
+            warningMatch: "[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)"
 
           if buildFileSyntax is "CSON"
-            CSON = require 'cson'
+            CSON = require "cson"
             stringify = CSON.stringify(buildFile, null, 2)
           if buildFileSyntax is "YAML"
-            YAML = require 'yaml-js'
+            YAML = require "yaml-js"
             stringify = YAML.dump(buildFile)
           else
             stringify = JSON.stringify(buildFile, null, 2)
