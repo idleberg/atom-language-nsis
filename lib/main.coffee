@@ -2,7 +2,6 @@ Config = require "./config"
 meta = require "../package.json"
 
 { platform } = require "os"
-{ spawn } = require "child_process"
 
 if platform() is "win32"
   prefix = "/"
@@ -95,11 +94,10 @@ module.exports = NsisCore =
   consumeConsolePanel: (@consolePanel) ->
 
   buildScript: (strictMode, consolePanel) ->
-    editor = atom.workspace.getActiveTextEditor()
+    { spawn } = require "child_process"
 
-    unless editor?
-      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
-      return
+    editor = atom.workspace.getActiveTextEditor()
+    return atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false) unless editor?
 
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
@@ -111,7 +109,7 @@ module.exports = NsisCore =
         compilerArguments = atom.config.get("language-nsis.compilerArguments").trim().split(" ")
 
         # only add WX flag if not already specified
-        if strictMode == true and compilerArguments.indexOf("#{prefix}WX") == -1
+        if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
           compilerArguments.push "#{prefix}WX"
         compilerArguments.push script
 
@@ -156,6 +154,8 @@ module.exports = NsisCore =
       atom.beep()
 
   getPath: (callback) ->
+    { spawn } = require "child_process"
+
     # If stored, return pathToMakensis
     pathToMakensis = atom.config.get("language-nsis.pathToMakensis")
     if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
@@ -175,7 +175,6 @@ module.exports = NsisCore =
 
   showVersion: () ->
     @getPath (pathToMakensis) ->
-
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on "data", ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
