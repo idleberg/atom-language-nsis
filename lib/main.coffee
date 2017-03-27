@@ -174,6 +174,8 @@ module.exports = NsisCore =
         atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
   showVersion: () ->
+    { spawn } = require "child_process"
+
     @getPath (pathToMakensis) ->
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on "data", ( version ) ->
