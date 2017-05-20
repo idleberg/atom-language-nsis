@@ -69,6 +69,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile": => @buildScript(false, @consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile-strict": => @buildScript(true, @consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => @showVersion()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:log-compiler-flags": => @logCompilerFlags()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:open-package-settings": => @openSettings()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": => @satisfyDependencies()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file": -> Config.createBuildFile(false)
@@ -180,6 +181,22 @@ module.exports = NsisCore =
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on "data", ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
+
+  logCompilerFlags: () ->
+    { spawn } = require "child_process"
+
+    @getPath (pathToMakensis) ->
+      flags = spawn pathToMakensis, ["#{prefix}HDRINFO"]
+      flags.stdout.on "data", ( data ) ->
+
+        data = String(data)
+        string = data.slice(0, data.indexOf("Defined symbols:")).trim()
+
+        flags.raw = data.split("Defined symbols: ")[1]
+        flags.array = flags.raw.split(",")
+
+        console.info "#{string}\n\nDefined symbols:"
+        console.info flags.array
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
