@@ -115,7 +115,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifdef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
     prefix: "ifdef"
-  "!ifdef…else":
+  "!ifdef..else":
     body: '''
       !ifdef ${1:gflag}
       \t${2:# your code here}
@@ -124,9 +124,9 @@
       !endif$4
     '''
     description: "Usage: !ifdef symbol [| symbol2 [& symbol3 [...]]]"
-    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifdef…else.md"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifdef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
-    prefix: "ifdef…else"
+    prefix: "ifdef..else"
   "!ifmacrodef":
     body: '''
       !ifmacrodef ${1:gflag}
@@ -137,7 +137,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrodef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
     prefix: "ifmacrodef"
-  "!ifmacrodef…else":
+  "!ifmacrodef..else":
     body: '''
       !ifmacrodef ${1:gflag}
       \t${2:# your code here}
@@ -146,9 +146,9 @@
       !endif$4
     '''
     description: "Usage: !ifmacrodef macro [| macro2 [& macro3 [...]]]"
-    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrodef…else.md"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrodef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
-    prefix: "ifmacrodef…else"
+    prefix: "ifmacrodef..else"
   "!ifmacrondef":
     body: '''
       !ifmacrondef ${1:gflag}
@@ -159,7 +159,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrondef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
     prefix: "ifmacrondef"
-  "!ifmacrondef…else":
+  "!ifmacrondef..else":
     body: '''
       !ifmacrondef ${1:gflag}
       \t${2:# your code here}
@@ -168,9 +168,9 @@
       !endif$4
     '''
     description: "Usage: !ifmacrondef macro [| macro2 [& macro3 [...]]]"
-    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrondef…else.md"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifmacrondef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
-    prefix: "ifmacrondef…else"
+    prefix: "ifmacrondef..else"
   "!ifndef":
     body: '''
       !ifndef ${1:gflag}
@@ -181,7 +181,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifndef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
     prefix: "ifndef"
-  "!ifndef…else":
+  "!ifndef..else":
     body: '''
       !ifndef ${1:gflag}
       \t${2:# your code here}
@@ -190,10 +190,10 @@
       !endif$4
     '''
     description: "Usage: !ifndef symbol [| symbol2 [& symbol3 [...]]]"
-    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifndef…else.md"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!ifndef.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
-    prefix: "ifndef…else"
-  "!if…else":
+    prefix: "ifndef..else"
+  "!if..else":
     body: '''
       !if ${1:value1} ${2:op} ${3:value2}
       \t${4:# your code here}
@@ -202,9 +202,9 @@
       !endif$6
     '''
     description: "Usage: !if [!] (value [(==,!=,S==,S!=,=,<>,<=,<,>,>=,&,&&,||) value2] | /FILEEXISTS path)"
-    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!if…else.md"
+    descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/!if.md"
     leftLabelHTML: "<span class='syntax--keyword'>!</span>"
-    prefix: "if…else"
+    prefix: "if..else"
   "!include":
     body: "!include \"${1:file}\"$2"
     description: "Usage: !include [/NONFATAL] [/CHARSET=<ACP|OEM|CP#|UTF8|UTF16<LE|BE>>] filename.nsh"
