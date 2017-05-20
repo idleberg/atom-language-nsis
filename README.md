@@ -147,6 +147,17 @@ Project files for `build` can be created by executing *“NSIS: Create .atom-bui
 
 You can set up `atom-runner` by executing *“NSIS: Set default runner”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use *“NSIS: Remove default runner”*.
 
+### Commands
+
+There are several other, previously unmentioned commands are available from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette):
+
+Command                              | Description
+-------------------------------------|-----------------------------------------
+`NSIS: Open Package Settings`        | Opens settings page
+`NSIS: Satisfy Package Dependencies` | Install missing package dependencies
+`NSIS: Show Version Info`            | Show currently used NSIS version
+`NSIS: Log Compiler Flags`           | Log `makensis` compiler flags to console
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0)
