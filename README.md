@@ -147,9 +147,9 @@ Project files for `build` can be created by executing *“NSIS: Create .atom-bui
 
 You can set up `atom-runner` by executing *“NSIS: Set default runner”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use *“NSIS: Remove default runner”*.
 
-### Commands
+### Other Commands
 
-There are several other, previously unmentioned commands are available from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette):
+There are several other, previously unmentioned commands available from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette):
 
 Command                              | Description
 -------------------------------------|-----------------------------------------
