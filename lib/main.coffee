@@ -43,20 +43,30 @@ module.exports = NsisCore =
     buildFileSyntax:
       title: "Build File Syntax"
       description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
-      default: "JSON",
       type: "string",
+      default: "JSON",
       enum: [
         "CSON",
         "JSON",
         "YAML"
       ],
       order: 5
+    compilerFlags:
+      title: "Compiler Flags"
+      description: "Specify whether to print the output of `makensis #{prefix}HDRINFO` in a native notification or the developer tools"
+      type: "string",
+      default: "Notification",
+      enum: [
+        "Notification",
+        "Console"
+      ],
+      order: 6
     manageDependencies:
       title: "Manage Dependencies"
       description: "When enabled, third-party dependencies will be installed automatically"
       type: "boolean"
       default: true
-      order: 6
+      order: 7
   subscriptions: null
 
   activate: (state) ->
@@ -69,7 +79,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile": => @buildScript(false, @consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile-strict": => @buildScript(true, @consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => @showVersion()
-    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:log-compiler-flags": => @logCompilerFlags()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-compiler-flags": => @showCompilerFlags()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:open-package-settings": => @openSettings()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": => @satisfyDependencies()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file": -> Config.createBuildFile(false)
@@ -182,7 +192,7 @@ module.exports = NsisCore =
       version.stdout.on "data", ( version ) ->
         atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
-  logCompilerFlags: () ->
+  showCompilerFlags: () ->
     { spawn } = require "child_process"
 
     @getPath (pathToMakensis) ->
@@ -195,8 +205,12 @@ module.exports = NsisCore =
         flags.raw = data.split("Defined symbols: ")[1]
         flags.array = flags.raw.split(",")
 
-        console.info "#{string}\n\nDefined symbols:"
-        console.info flags.array
+        flags.string = "#{string}\n\nDefined symbols:#{JSON.stringify(flags.array, null, 4)}"
+
+        if atom.config.get("language-nsis.compilerFlags") is "Console"
+          console.info flags.string
+        else
+          atom.notifications.addInfo("**#{meta.name}**<pre>#{flags.string}</pre>", dismissable: true)
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
