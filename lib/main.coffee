@@ -78,8 +78,8 @@ module.exports = NsisCore =
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile": => @buildScript(false, @consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:save-&-compile-strict": => @buildScript(true, @consolePanel)
-    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => @showVersion()
-    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-compiler-flags": => @showCompilerFlags()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => @showVersion(@consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-compiler-flags": => @showCompilerFlags(@consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:open-package-settings": => @openSettings()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": => @satisfyDependencies()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file": -> Config.createBuildFile(false)
@@ -124,10 +124,7 @@ module.exports = NsisCore =
           compilerArguments.push "#{prefix}WX"
         compilerArguments.push script
 
-        try
-          consolePanel.clear()
-        catch
-          console.clear() if atom.config.get("language-nsis.clearConsole")
+        @clearConsole
 
         # Let's go
         makensis = spawn pathToMakensis, compilerArguments
@@ -184,22 +181,30 @@ module.exports = NsisCore =
       if errorCode > 0
         atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
-  showVersion: () ->
+  showVersion: (consolePanel) ->
     { spawn } = require "child_process"
 
     @getPath (pathToMakensis) ->
+      @clearConsole
+
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on "data", ( version ) ->
+
         if atom.config.get("language-nsis.compilerOutput") is "Console"
-          atom.getCurrentWindow().openDevTools()
-          console.info "makensis #{version} (#{pathToMakensis})"
+          try
+            consolePanel.log("makensis #{version} (#{pathToMakensis})")
+          catch
+            console.info "makensis #{version} (#{pathToMakensis})"
+            atom.getCurrentWindow().openDevTools()
         else
           atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
-  showCompilerFlags: () ->
+  showCompilerFlags: (consolePanel) ->
     { spawn } = require "child_process"
 
     @getPath (pathToMakensis) ->
+      @clearConsole
+
       flags = spawn pathToMakensis, ["#{prefix}HDRINFO"]
       flags.stdout.on "data", ( data ) ->
 
@@ -208,12 +213,15 @@ module.exports = NsisCore =
 
         flags.raw = data.split("Defined symbols: ")[1]
         flags.array = flags.raw.split(",")
-
         flags.string = "#{string}\n\nDefined symbols:#{JSON.stringify(flags.array, null, 4)}"
 
+
         if atom.config.get("language-nsis.compilerOutput") is "Console"
-          atom.getCurrentWindow().openDevTools()
-          console.info flags.string
+          try
+            consolePanel.log(flags.string)
+          catch
+            console.info flags.string
+            atom.getCurrentWindow().openDevTools()
         else
           atom.notifications.addInfo("**#{meta.name}**", detail: flags.string, dismissable: true)
 
@@ -225,3 +233,9 @@ module.exports = NsisCore =
       return "where"
 
     return "which"
+
+  clearConsole: ->
+    try
+      consolePanel.clear()
+    catch
+      console.clear() if atom.config.get("language-nsis.clearConsole")
