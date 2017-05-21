@@ -51,9 +51,9 @@ module.exports = NsisCore =
         "YAML"
       ],
       order: 5
-    compilerFlags:
-      title: "Compiler Flags"
-      description: "Specify whether to print the output of `makensis #{prefix}HDRINFO` in a native notification or the developer tools"
+    compilerOutput:
+      title: "Compiler Output"
+      description: "Specify whether `makensis` outputs its version or compiler flags to notifications the console"
       type: "string",
       default: "Notification",
       enum: [
@@ -190,7 +190,11 @@ module.exports = NsisCore =
     @getPath (pathToMakensis) ->
       version = spawn pathToMakensis, ["#{prefix}VERSION"]
       version.stdout.on "data", ( version ) ->
-        atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
+        if atom.config.get("language-nsis.compilerOutput") is "Console"
+          atom.getCurrentWindow().openDevTools()
+          console.info "makensis #{version} (#{pathToMakensis})"
+        else
+          atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
 
   showCompilerFlags: () ->
     { spawn } = require "child_process"
@@ -207,10 +211,11 @@ module.exports = NsisCore =
 
         flags.string = "#{string}\n\nDefined symbols:#{JSON.stringify(flags.array, null, 4)}"
 
-        if atom.config.get("language-nsis.compilerFlags") is "Console"
+        if atom.config.get("language-nsis.compilerOutput") is "Console"
+          atom.getCurrentWindow().openDevTools()
           console.info flags.string
         else
-          atom.notifications.addInfo("**#{meta.name}**<pre>#{flags.string}</pre>", dismissable: true)
+          atom.notifications.addInfo("**#{meta.name}**", detail: flags.string, dismissable: true)
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
