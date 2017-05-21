@@ -46,6 +46,21 @@ menu: [
             label: "Setup Package Dependencies"
             command: "NSIS:satisfy-package-dependencies"
           }
+
+          {
+            type: "separator"
+          }
+          label: "Developer"
+          submenu: [
+            {
+              label: "Show NSIS Version"
+              command: "NSIS:show-version"
+            }
+            {
+              label: "Show Compiler Flags"
+              command: "NSIS:show-compiler-flags"
+            }
+          ]
         ]
       }
     ]
