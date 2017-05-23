@@ -213,17 +213,18 @@ module.exports = NsisCore =
 
         flags.raw = data.split("Defined symbols: ")[1]
         flags.array = flags.raw.split(",")
-        flags.string = "#{string}\n\nDefined symbols:#{JSON.stringify(flags.array, null, 4)}"
+        flags.string = "#{string}\n\nDefined symbols:"
+        flags.json = JSON.stringify(flags.array, null, 4)
 
 
         if atom.config.get("language-nsis.compilerOutput") is "Console"
           try
-            consolePanel.log(flags.string)
+            consolePanel.log("#{flags.string} #{flags.json}")
           catch
-            console.info flags.string
+            console.info flags.string, flags.array
             atom.getCurrentWindow().openDevTools()
         else
-          atom.notifications.addInfo("**#{meta.name}**", detail: flags.string, dismissable: true)
+          atom.notifications.addInfo("**#{meta.name}**", detail: "#{flags.string} #{flags.json}", dismissable: true)
 
   openSettings: ->
     atom.workspace.open("atom://config/packages/#{meta.name}")
