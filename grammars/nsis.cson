@@ -1,8 +1,8 @@
 fileTypes: [
   "nsi"
   "nsh"
-  "bbnsi"
-  "bbnsh"
+  "bnsi"
+  "bnsh"
 ]
 name: "NSIS"
 patterns: [
