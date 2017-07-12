@@ -1,47 +1,6 @@
-module.exports = NsisConf =
-  runner: null
+module.exports = Build =
 
-################################################################################
-# atom-runner
-# https://github.com/lsegal/atom-runner
-  setRunner: ->
-    @checkRunner()
-
-    if (typeof @runner.path != "undefined") and (@runner.active == true)
-      atom.confirm
-        message: "Set default runner for NSIS"
-        detailedMessage: "To compile NSIS scripts inside Atom, you need to define a runner. Do you want to use makensis as default runner?"
-        buttons:
-          "Use makensis": ->
-            atom.notifications.addSuccess("**language-nsis**: Set `runner.scopes.nsis` to 'makensis -'", dismissable: false)
-            atom.config.set("runner.scopes.nsis", "makensis -")
-          "Cancel": ->
-            atom.notifications.addWarning("**language-nsis**: Cancelled setting default runner", dismissable: false)
-            return
-    else
-      @missingRunner()
-
-  removeRunner: ->
-    @checkRunner()
-
-    if (typeof @runner.path != "undefined") and (@runner.active == true)
-      atom.notifications.addSuccess("**language-nsis**: Unset `runner.scopes.nsis`", dismissable: false)
-      atom.config.unset("runner.scopes.nsis")
-    else
-      @missingRunner()
-
-  missingRunner: ->
-    atom.notifications.addWarning("**language-nsis**: [atom-runner](https://atom.io/packages/atom-runner) is not installed", dismissable: false)
-
-  checkRunner: ->
-    @runner =
-      path: atom.packages.resolvePackagePath("atom-runner")
-      active: atom.packages.isPackageLoaded("atom-runner")
-
-################################################################################
-# atom-build
-# https://github.com/mirhec/atom-build
-  createBuildFile: (wine) ->
+  createFile: (wine) ->
     fs = require "fs"
     path = require "path"
 
