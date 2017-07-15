@@ -3,6 +3,7 @@ fileTypes: [
   "nsh"
   "bnsi"
   "bnsh"
+  "nsdinc"
 ]
 name: "NSIS"
 patterns: [
