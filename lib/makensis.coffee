@@ -1,5 +1,4 @@
 module.exports = Makensis =
-
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
     { clearConsole, detectOutfile, getPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"

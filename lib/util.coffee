@@ -1,5 +1,4 @@
 module.exports = Util =
-
   clearConsole: (consolePanel) ->
     try
       consolePanel.clear()
