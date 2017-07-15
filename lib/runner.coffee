@@ -1,9 +1,8 @@
+# atom runner - https://atom.io/packages/atom-runner
+
 module.exports = Runner =
   runner: null
 
-################################################################################
-# atom-runner
-# https://github.com/lsegal/atom-runner
   set: ->
     @check()
 

@@ -1,3 +1,5 @@
+# build - https://atom.io/packages/build
+
 module.exports = Build =
 
   createFile: (wine) ->
