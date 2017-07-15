@@ -1,6 +1,3 @@
-Build = require "./build"
-Makensis = require "./makensis"
-Runner = require "./runner"
 { getPrefix, openSettings, satisfyDependencies } = require "./util"
 
 module.exports = NsisCore =
@@ -71,7 +68,10 @@ module.exports = NsisCore =
   subscriptions: null
 
   activate: (state) ->
-    {CompositeDisposable} = require "atom"
+    { CompositeDisposable } = require "atom"
+    Build = require "./build"
+    Makensis = require "./makensis"
+    Runner = require "./runner"
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
