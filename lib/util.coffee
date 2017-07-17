@@ -87,7 +87,7 @@ module.exports = Util =
           text: openButton
           onDidClick: ->
             notification.dismiss()
-            Util.runInstaller outFile
+            Util.runInstaller(outFile)
 
         }
         {
@@ -115,9 +115,16 @@ module.exports = Util =
     { platform } = require "os"
 
     if platform() is "win32"
-      return spawn outFile
+      try
+        spawn outFile
+      catch error
+        atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
-    return spawn "wine", [ outFile ]
+    else if atom.config.get("language-nsis.useWineToRun") is true
+      try
+        spawn "wine", [ outFile ]
+      catch error
+        atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
   satisfyDependencies: () ->
     meta = require "../package.json"
