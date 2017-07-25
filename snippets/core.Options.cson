@@ -11,12 +11,28 @@
     descriptionMoreURL: "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx"
     leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
     prefix: "HKCR"
+  HKCR32:
+    body: "HKCR32$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKCR32"
+  HKCR64:
+    body: "HKCR64$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKCR64"
   HKCU:
     body: "HKCU$1"
     description: "Short for HKEY_CURRENT_USER"
     descriptionMoreURL: "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx"
     leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
     prefix: "HKCU"
+  HKCU32:
+    body: "HKCU32$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKCU32"
+  HKCU64:
+    body: "HKCU64$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKCU64"
   HKDD:
     body: "HKDD$1"
     description: "Short for HKEY_DYN_DATA"
@@ -29,6 +45,14 @@
     descriptionMoreURL: "https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836.aspx"
     leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
     prefix: "HKLM"
+  HKLM32:
+    body: "HKLM32$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKLM32"
+  HKLM64:
+    body: "HKLM64$1"
+    leftLabelHTML: "<span class='syntax--entity other attribute-name'>P</span>"
+    prefix: "HKLM64"
   HKPD:
     body: "HKPD$1"
     description: "Short for HKEY_PERFORMANCE_DATA"
