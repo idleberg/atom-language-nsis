@@ -887,7 +887,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md"
     leftLabelHTML: "<span class='syntax--keyword'>K</span>"
     prefix: "ExecShellWait"
-  ExecShellWait:
+  "ExecShellWait  /INVOKEIDLIST":
     body: "ExecShellWait /INVOKEIDLIST ${1:action} \"${2:command}\"$3"
     description: "Usage: ExecShellWait [/INVOKEIDLIST] action command [parameters] [SW_SHOWDEFAULT | SW_SHOWNORMAL | SW_SHOWMAXIMIZED | SW_SHOWMINIMIZED | SW_HIDE]"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/ExecShellWait.md"
@@ -3133,7 +3133,7 @@
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/WriteRegExpandStr.md"
     leftLabelHTML: "<span class='syntax--keyword'>K</span>"
     prefix: "WriteRegExpandStr"
-   WriteRegMultiStr:
+  WriteRegMultiStr:
     body: "WriteRegMultiStr /REGEDIT5 ${1:root_key} \"${2:subkey}\" \"${3:key_name}\" \"${4:value}\"$5"
     description: "Usage: WriteRegMultiStr /REGEDIT5 root_key subkey key_name value"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/WriteRegMultiStr.md"
