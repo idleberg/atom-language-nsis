@@ -1,5 +1,5 @@
 ".source.nsis":
   "Math::Script":
-    body: "Math::Script \"${1:script}\"$2"
+    body: "Math::Script \"${1:script}\"$0"
     leftLabelHTML: "<span class='syntax--support class'>Math.dll</span>"
     prefix: "Math::Script"

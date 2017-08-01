@@ -1,24 +1,24 @@
 ".source.nsis":
   "${MementoSectionDone}":
-    body: "${MementoSectionDone}$1"
+    body: "${MementoSectionDone}$0"
     description: "Usage: ${MementoSectionDone}"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionDone.md"
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"
     prefix: "MementoSectionDone"
   "${MementoSectionEnd}":
-    body: "${MementoSectionEnd}$1"
+    body: "${MementoSectionEnd}$0"
     description: "Usage: ${MementoSectionEnd}"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionEnd.md"
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"
     prefix: "MementoSectionEnd"
   "${MementoSectionRestore}":
-    body: "${MementoSectionRestore}$1"
+    body: "${MementoSectionRestore}$0"
     description: "Usage: ${MementoSectionRestore}"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionRestore.md"
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"
     prefix: "MementoSectionRestore"
   "${MementoSectionSave}":
-    body: "${MementoSectionSave}$1"
+    body: "${MementoSectionSave}$0"
     description: "Usage: ${MementoSectionSave}"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoSectionSave.md"
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"
@@ -34,7 +34,7 @@
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"
     prefix: "MementoSection"
   "${MementoUnselectedSection}":
-    body: "${MementoUnselectedSection} ${1:section_name} ${2:section_index}$3"
+    body: "${MementoUnselectedSection} ${1:section_name} ${2:section_index}$0"
     description: "Usage: ${MementoUnselectedSection} [section_name] [section_index_output]"
     descriptionMoreURL: "https://github.com/NSIS-Dev/Documentation/blob/master/Includes/Memento/MementoUnselectedSection.md"
     leftLabelHTML: "<span class='syntax--support function'>Memento.nsh</span>"

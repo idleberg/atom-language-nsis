@@ -1,5 +1,5 @@
 ".source.nsis":
   "LangDLL::LangDialog":
-    body: "LangDLL::LangDialog \"${1:title}\" \"${2:text}\"$3"
+    body: "LangDLL::LangDialog \"${1:title}\" \"${2:text}\"$0"
     leftLabelHTML: "<span class='syntax--support class'>LangDLL.dll</span>"
     prefix: "LangDLL::LangDialog"
