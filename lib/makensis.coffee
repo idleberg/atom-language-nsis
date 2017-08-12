@@ -10,55 +10,56 @@ module.exports = Makensis =
     scope  = editor.getGrammar().scopeName
 
     if script? and scope.startsWith "source.nsis"
-      editor.save() if editor.isModified()
+      editor.save()
+      .then( () ->
+        getPath (pathToMakensis) ->
+          prefix = getPrefix()
+          compilerArguments = atom.config.get("language-nsis.compilerArguments")?.trim().split(" ")
 
-      getPath (pathToMakensis) ->
-        prefix = getPrefix()
-        compilerArguments = atom.config.get("language-nsis.compilerArguments")?.trim().split(" ")
+          # only add WX flag if not already specified
+          if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
+            compilerArguments.push "#{prefix}WX"
+          compilerArguments.push script
 
-        # only add WX flag if not already specified
-        if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
-          compilerArguments.push "#{prefix}WX"
-        compilerArguments.push script
+          clearConsole(consolePanel)
 
-        clearConsole(consolePanel)
+          # Let's go
+          makensis = spawn pathToMakensis, compilerArguments
+          hasWarning = false
+          outFile = ""
 
-        # Let's go
-        makensis = spawn pathToMakensis, compilerArguments
-        hasWarning = false
-        outFile = ""
-
-        makensis.stdout.on "data", (line) ->
-          if line.indexOf("warning: ") isnt -1
-            hasWarning = true
-            try
-              consolePanel.warn(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
-            catch
-              console.warn(line.toString())
-          else
-            try
-              consolePanel.log(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
-            catch
-              console.log(line.toString())
-
-          if outFile is ""
-            outFile = detectOutfile(line)
-
-        makensis.stderr.on "data", (line) ->
-          try
-            consolePanel.error(line.toString())
-          catch
-            console.error(line.toString())
-
-        makensis.on "close", ( errorCode ) ->
-          openButton = if isWindowsCompatible() is true then "Run" else ""
-          if errorCode is 0
-            if hasWarning is true
-              return notifyOnWarning(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+          makensis.stdout.on "data", (line) ->
+            if line.indexOf("warning: ") isnt -1
+              hasWarning = true
+              try
+                consolePanel.warn(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
+              catch
+                console.warn(line.toString())
             else
-              return notifyOnSuccess(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+              try
+                consolePanel.log(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
+              catch
+                console.log(line.toString())
 
-          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
+            if outFile is ""
+              outFile = detectOutfile(line)
+
+          makensis.stderr.on "data", (line) ->
+            try
+              consolePanel.error(line.toString())
+            catch
+              console.error(line.toString())
+
+          makensis.on "close", ( errorCode ) ->
+            openButton = if isWindowsCompatible() is true then "Run" else ""
+            if errorCode is 0
+              if hasWarning is true
+                return notifyOnWarning(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+              else
+                return notifyOnSuccess(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+
+            return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications"))
+
     else
       # Something went wrong
       atom.beep()
