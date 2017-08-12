@@ -10,8 +10,7 @@ module.exports = Makensis =
     scope  = editor.getGrammar().scopeName
 
     if script? and scope.startsWith "source.nsis"
-      editor.save()
-      .then( () ->
+      editor.save().then ->
         getPath (pathToMakensis) ->
           prefix = getPrefix()
           compilerArguments = atom.config.get("language-nsis.compilerArguments")?.trim().split(" ")
@@ -58,8 +57,7 @@ module.exports = Makensis =
               else
                 return notifyOnSuccess(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
 
-            return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications"))
-
+            return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
