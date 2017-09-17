@@ -108,7 +108,11 @@ module.exports = Util =
     )
 
   openSettings: ->
-    atom.workspace.open("atom://config/packages/language-nsis")
+    options =
+      pending: true
+      searchAllPanes: true
+
+    atom.workspace.open("atom://config/packages/language-nsis", options)
 
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
