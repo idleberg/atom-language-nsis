@@ -14,7 +14,7 @@ module.exports = Build =
     if editor.getGrammar().scopeName isnt "source.nsis"
       atom.beep()
       return
-    
+
     createFile = false
     currentPath = atom.workspace.getActivePaneItem().getPath()
     currentFile = path.basename(currentPath)
@@ -39,7 +39,7 @@ module.exports = Build =
         buildFileBase = ".atom-build.json"
 
       buildFilePath = path.join(currentPath, buildFileBase)
-     
+
       fs.access "#{buildFilePath}", fs.constants.R_OK, (error) ->
         if error is null
           atom.confirm
