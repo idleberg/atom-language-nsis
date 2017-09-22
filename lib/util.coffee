@@ -108,6 +108,8 @@ module.exports = Util =
     )
 
   openSettings: ->
+    require("./ga").sendEvent("language-nsis", "Open Settings")
+
     options =
       pending: true
       searchAllPanes: true
@@ -117,6 +119,8 @@ module.exports = Util =
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"
+
+    require("./ga").sendEvent("language-nsis", "Run Installer")
 
     if platform() is "win32"
       try
@@ -133,6 +137,7 @@ module.exports = Util =
   satisfyDependencies: () ->
     meta = require "../package.json"
 
+    require("./ga").sendEvent("language-nsis", "Satisfy Dependencies")
     require("atom-package-deps").install(meta.name, true)
 
     for k, v of meta["package-deps"]
