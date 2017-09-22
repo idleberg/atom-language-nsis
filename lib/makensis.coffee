@@ -4,9 +4,9 @@ module.exports = Makensis =
     { clearConsole, detectOutfile, getPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
 
     if strictMode is true
-      require("./ga").sendEvent("language-nsis", "Save & Compile (strict)")
+      require("./ga").sendEvent "makensis", "Save & Compile (strict)"
     else
-      require("./ga").sendEvent("language-nsis", "Save & Compile")
+      require("./ga").sendEvent "makensis", "Save & Compile"
 
     editor = atom.workspace.getActiveTextEditor()
     return atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false) unless editor?
@@ -71,7 +71,7 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getPath, getPrefix } = require "./util"
 
-    require("./ga").sendEvent("language-nsis", "Show Version")
+    require("./ga").sendEvent "makensis", "Show Version"
 
     getPath (pathToMakensis) ->
       clearConsole(consolePanel)
@@ -93,7 +93,7 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getPath, getPrefix } = require "./util"
 
-    require("./ga").sendEvent("language-nsis", "Show Compiler Flags")
+    require("./ga").sendEvent "makensis", "Show Compiler Flags"
 
     getPath (pathToMakensis) ->
       clearConsole(consolePanel)

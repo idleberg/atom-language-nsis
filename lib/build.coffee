@@ -6,9 +6,9 @@ module.exports = Build =
     path = require "path"
 
     if wine is true
-      require("./ga").sendEvent("language-nsis", "Create .atom Build File for Wine")
+      require("./ga").sendEvent "build", "Create .atom Build File for Wine"
     else
-      require("./ga").sendEvent("language-nsis", "Create .atom Build File")
+      require("./ga").sendEvent "build", "Create .atom Build File"
 
     editor = atom.workspace.getActiveTextEditor()
 

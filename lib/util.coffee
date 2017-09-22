@@ -108,7 +108,7 @@ module.exports = Util =
     )
 
   openSettings: ->
-    require("./ga").sendEvent("language-nsis", "Open Settings")
+    require("./ga").sendEvent "util", "Open Settings"
 
     options =
       pending: true
@@ -120,7 +120,7 @@ module.exports = Util =
     { spawn } = require "child_process"
     { platform } = require "os"
 
-    require("./ga").sendEvent("language-nsis", "Run Installer")
+    require("./ga").sendEvent "util", "Run Installer"
 
     if platform() is "win32"
       try
@@ -137,7 +137,7 @@ module.exports = Util =
   satisfyDependencies: () ->
     meta = require "../package.json"
 
-    require("./ga").sendEvent("language-nsis", "Satisfy Dependencies")
+    require("./ga").sendEvent "util", "Satisfy Dependencies"
     require("atom-package-deps").install(meta.name, true)
 
     for k, v of meta["package-deps"]
