@@ -158,6 +158,10 @@ Command                              | Description
 `NSIS: Show Version Info`            | Shows current version of NSIS
 `NSIS: Show Compiler Flags`          | Shows output of `makensis /HDRINFO`
 
+## Metrics
+
+With Atom's default [`metrics`](https://atom.io/packages/metrics) package enabled, this package sends anonymized usage statistics to Google Analytics. This is limited to the name of the methods called by the user. This helps me getting an understanding how this package is used. If you don't want this, you probably already disabled the `metrics` package. Otherwise, please do.
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0)
