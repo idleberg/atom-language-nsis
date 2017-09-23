@@ -88,7 +88,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Runner.set()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:remove-default-runner": -> Runner.remove()
 
-    satisfyDependencies() if atom.config.get("language-nsis.manageDependencies") is true
+    satisfyDependencies(true) if atom.config.get("language-nsis.manageDependencies") is true
 
   deactivate: ->
     @subscriptions?.dispose()

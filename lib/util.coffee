@@ -134,10 +134,14 @@ module.exports = Util =
       catch error
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
-  satisfyDependencies: () ->
+  satisfyDependencies: (autoRun = false) ->
     meta = require "../package.json"
 
-    require("./ga").sendEvent "util", "Satisfy Dependencies"
+    if autoRun is true
+      require("./ga").sendEvent "util", "Satisfy Dependencies (auto)"
+    else
+      require("./ga").sendEvent "util", "Satisfy Dependencies (manual)"
+
     require("atom-package-deps").install(meta.name, true)
 
     for k, v of meta["package-deps"]
