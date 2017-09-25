@@ -53,9 +53,3 @@ module.exports = GoogleAnalytics =
       v: 1
       tid: "UA-53539506-11"
     }
-
-atom.packages.onDidActivatePackage (pkg) ->
-  if "metrics" == pkg.name
-    meta = atom.packages.getLoadedPackage("language-nsis").metadata
-    require("./ga").sendEvent "ga", "Package Activated (v#{meta.version})",
-  return
