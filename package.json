@@ -28,7 +28,9 @@
     "atom": ">=1.19.0 <2.0.0"
   },
   "package-deps": [
-    "console-panel"
+    "console-panel",
+    "linter",
+    "linter-makensis"
   ],
   "consumedServices": {
     "console-panel": {

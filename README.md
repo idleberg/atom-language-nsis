@@ -47,6 +47,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
     * x64
 * [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/atom-language-nsis#building)
+* [Linter](https://github.com/idleberg/atom-language-nsis#linting)
 
 You can further extend this package with snippets for [third-party plug-ins](https://atom.io/packages/nsis-plugins).
 
@@ -146,6 +147,10 @@ Should you prefer working with an existing third-party build system, the followi
 Project files for `build` can be created by executing *“NSIS: Create .atom-build file”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. An equivalent for [building on Wine](https://atom.io/packages/build-makensis-wine) is also available. You can specify your preferred build file syntax (CSON/JSON/YAML) in the package settings.
 
 You can set up `atom-runner` by executing *“NSIS: Set default runner”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use *“NSIS: Remove default runner”*.
+
+### Linting
+
+As of `v6.5.0`, a basic [Atom linter](https://github.com/idleberg/atom-linter-makensis/) provider for `makensis` is included. Please refer to the [Atom Linter Documentation](https://github.com/steelbrain/linter/tree/master/docs) for details.
 
 ### Other Commands
 

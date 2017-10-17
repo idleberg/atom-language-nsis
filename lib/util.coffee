@@ -108,13 +108,14 @@ module.exports = Util =
     )
 
   openSettings: ->
+    meta = require "../package.json"
     require("./ga").sendEvent "util", "Open Settings"
 
     options =
       pending: true
       searchAllPanes: true
 
-    atom.workspace.open("atom://config/packages/language-nsis", options)
+    atom.workspace.open("atom://config/packages/#{meta.name}", options)
 
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
