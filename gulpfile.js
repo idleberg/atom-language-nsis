@@ -2,9 +2,7 @@
 const coffeelint = require('gulp-coffeelint');
 const debug = require('gulp-debug');
 const gulp = require('gulp');
-const jshint = require('gulp-jshint');
 const jsonlint = require('gulp-jsonlint');
-const lesshint = require('gulp-lesshint');
 const stylish = require('coffeelint-stylish');
 
 // Files
@@ -16,10 +14,6 @@ const coffeeFiles = [
     './snippets/*.cson'
 ];
 
-const jsFiles = [
-    './lib/**/*.js'
-];
-
 const jsonFiles = [
     './grammars/*.json',
     './keymaps/*.json',
@@ -28,12 +22,8 @@ const jsonFiles = [
     './package.json'
 ];
 
-const lessFiles = [
-    './styles/**/*.less'
-];
-
 // Lint CoffeeScript & CSON files
-gulp.task('lint:coffee', gulp.series(function(done) { 
+gulp.task('lint:coffee', gulp.series(function(done) {
     gulp.src(coffeeFiles)
         .pipe(debug({title: 'coffeelint:'}))
         .pipe(coffeelint())
@@ -42,25 +32,8 @@ gulp.task('lint:coffee', gulp.series(function(done) {
     done();
 }));
 
-// Lint LESS files
-gulp.task('lint:less', gulp.series(function(done) { 
-    gulp.src(lessFiles)
-        .pipe(debug({title: 'lesshint:'}))
-        .pipe(lesshint())
-        .pipe(lesshint.reporter());
-    done();
-}));
-
-// Lint JavaScript files
-gulp.task('lint:js', gulp.series(function(done) { 
-    gulp.src(jsFiles)
-        .pipe(debug({title: 'jshint:'}))
-        .pipe(jshint());
-    done();
-}));
-
 // Lint JSON files
-gulp.task('lint:json', gulp.series(function(done) { 
+gulp.task('lint:json', gulp.series(function(done) {
     gulp.src(jsonFiles)
         .pipe(debug({title: 'jsonlint:'}))
         .pipe(jsonlint())
@@ -70,7 +43,7 @@ gulp.task('lint:json', gulp.series(function(done) {
 }));
 
 // Tasks
-gulp.task('lint', gulp.parallel('lint:coffee', 'lint:js', 'lint:json', 'lint:less', function(done) {
+gulp.task('lint', gulp.parallel('lint:coffee', 'lint:json', function(done) {
   done();
 }));
 
