@@ -58,6 +58,7 @@ module.exports = Util =
       buttons = [
         {
           text: openButton
+          className: "icon icon-playback-play"
           onDidClick: ->
             notification.dismiss()
             Util.runInstaller outFile
@@ -85,6 +86,7 @@ module.exports = Util =
       buttons = [
         {
           text: openButton
+          className: "icon icon-playback-play"
           onDidClick: ->
             notification.dismiss()
             Util.runInstaller(outFile)
