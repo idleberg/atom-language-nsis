@@ -4,7 +4,7 @@
       ; Scaffolding by https://atom.io/packages/language-nsis
 
       ; Settings ---------------------------------
-      OutFile "${1:installer_name}"
+      OutFile "${1:installer_name}.exe"
 
       ; Includes ---------------------------------
       $2
