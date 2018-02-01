@@ -93,7 +93,7 @@ module.exports = Makensis =
 
   showCompilerFlags: (consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, getMakensisPath, getPrefix } = require "./util"
+    { clearConsole, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { hdrInfo } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Compiler Flags"
@@ -102,17 +102,7 @@ module.exports = Makensis =
       clearConsole(consolePanel)
 
       hdrInfo({pathToMakensis: pathToMakensis, json: true}).then((output) ->
-        stdOut = JSON.stringify output.stdout, null, 2
-
-        if atom.config.get("language-nsis.compilerOutput") is "Console"
-          try
-            consolePanel.raw(stdOut)
-          catch
-            console.info stdOut
-            atom.getCurrentWindow().openDevTools()
-        else
-          atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
-
-        return
+        return logCompilerFlags(output, consolePanel)
       ).catch (output) ->
-        return console.error output
+        # fallback for legacy NSIS
+        return logCompilerFlags(output, consolePanel)

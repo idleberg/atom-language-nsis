@@ -53,6 +53,18 @@ module.exports = Util =
 
     return false
 
+  logCompilerFlags: (output, consolePanel) ->
+    stdOut = JSON.stringify output.stdout, null, 2
+
+    if atom.config.get("language-nsis.compilerOutput") is "Console"
+      try
+        consolePanel.raw(stdOut)
+      catch
+        console.info stdOut
+        atom.getCurrentWindow().openDevTools()
+    else
+      atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
+
   notifyOnSuccess: (openButton, outFile) ->
     if openButton is "Run"
       buttons = [
