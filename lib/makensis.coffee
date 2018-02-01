@@ -33,7 +33,7 @@ module.exports = Makensis =
           outFile = ""
 
           makensis.stdout.on "data", (line) ->
-            if line.indexOf("warning: ") isnt -1
+            if hasWarning is false and line.indexOf("warning: ") isnt -1
               hasWarning = true
               try
                 consolePanel.warn(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
