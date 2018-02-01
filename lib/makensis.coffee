@@ -1,7 +1,7 @@
 module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, detectOutfile, getPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
+    { clearConsole, detectOutfile, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
 
     if strictMode is true
       require("./ga").sendEvent "makensis", "Save & Compile (strict)"
@@ -16,7 +16,7 @@ module.exports = Makensis =
 
     if script? and scope.startsWith "source.nsis"
       editor.save().then ->
-        getPath (pathToMakensis) ->
+        getMakensisPath (pathToMakensis) ->
           prefix = getPrefix()
           compilerArguments = atom.config.get("language-nsis.compilerArguments")?.trim().split(" ")
 
@@ -69,12 +69,12 @@ module.exports = Makensis =
 
   showVersion: (consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, getPath, getPrefix } = require "./util"
+    { clearConsole, getMakensisPath, getPrefix } = require "./util"
     { version } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Version"
 
-    getPath (pathToMakensis) ->
+    getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
 
       version({pathToMakensis: pathToMakensis}).then((output) ->
@@ -93,12 +93,12 @@ module.exports = Makensis =
 
   showCompilerFlags: (consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, getPath, getPrefix } = require "./util"
+    { clearConsole, getMakensisPath, getPrefix } = require "./util"
     { hdrInfo } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Compiler Flags"
 
-    getPath (pathToMakensis) ->
+    getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
 
       hdrInfo({pathToMakensis: pathToMakensis, json: true}).then((output) ->

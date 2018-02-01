@@ -17,7 +17,7 @@ module.exports = Util =
 
     return ""
 
-  getPath: (callback) ->
+  getMakensisPath: (callback) ->
     { spawn } = require "child_process"
 
     # If stored, return pathToMakensis
