@@ -43,6 +43,7 @@
     "atom-package-deps": "^4.4.1",
     "cson": "^4.1.0",
     "getmac": "^1.2.1",
+    "makensis": "^0.11.0",
     "yaml-js": "^0.2.0"
   },
   "devDependencies": {

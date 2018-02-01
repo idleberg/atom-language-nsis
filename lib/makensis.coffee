@@ -70,52 +70,49 @@ module.exports = Makensis =
   showVersion: (consolePanel) ->
     { spawn } = require "child_process"
     { clearConsole, getPath, getPrefix } = require "./util"
+    { version } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Version"
 
     getPath (pathToMakensis) ->
       clearConsole(consolePanel)
 
-      prefix = getPrefix()
-      version = spawn pathToMakensis, ["#{prefix}VERSION"]
-      version.stdout.on "data", ( version ) ->
-
+      version({pathToMakensis: pathToMakensis}).then((output) ->
         if atom.config.get("language-nsis.compilerOutput") is "Console"
           try
-            consolePanel.log("makensis #{version} (#{pathToMakensis})")
+            consolePanel.log("makensis #{output.stdout} (#{pathToMakensis})")
           catch
-            console.info "makensis #{version} (#{pathToMakensis})"
+            console.info "makensis #{output.stdout} (#{pathToMakensis})"
             atom.getCurrentWindow().openDevTools()
         else
-          atom.notifications.addInfo("**language-nsis**", detail: "makensis #{version} (#{pathToMakensis})", dismissable: true)
+          atom.notifications.addInfo("**language-nsis**", detail: "makensis #{output.stdout} (#{pathToMakensis})", dismissable: true)
+
+        return
+      ).catch (output) ->
+        return console.error output
 
   showCompilerFlags: (consolePanel) ->
     { spawn } = require "child_process"
     { clearConsole, getPath, getPrefix } = require "./util"
+    { hdrInfo } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Compiler Flags"
 
     getPath (pathToMakensis) ->
       clearConsole(consolePanel)
 
-      prefix = getPrefix()
-      flags = spawn pathToMakensis, ["#{prefix}HDRINFO"]
-      flags.stdout.on "data", ( data ) ->
-
-        data = String(data)
-        string = data.slice(0, data.indexOf("Defined symbols:")).trim()
-
-        flags.raw = data.split("Defined symbols: ")[1]
-        flags.array = flags.raw.split(",")
-        flags.string = "#{string}\n\nDefined symbols:"
-        flags.json = JSON.stringify(flags.array, null, 4)
-
+      hdrInfo({pathToMakensis: pathToMakensis, json: true}).then((output) ->
+        stdOut = JSON.stringify output.stdout, null, 2
 
         if atom.config.get("language-nsis.compilerOutput") is "Console"
           try
-            consolePanel.raw("#{flags.string} #{flags.json}")
+            consolePanel.raw(stdOut)
           catch
-            console.info flags.string, flags.array
+            console.info stdOut
             atom.getCurrentWindow().openDevTools()
         else
-          atom.notifications.addInfo("**language-nsis**", detail: "#{flags.string} #{flags.json}", dismissable: true)
+          atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
+
+        return
+      ).catch (output) ->
+        return console.error output
