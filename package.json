@@ -30,8 +30,8 @@
   "package-deps": [
     "console-panel",
     "linter:2.0.0",
-    "linter-makensis:0.7.0"
-    "linter-ui-default",
+    "linter-makensis:0.7.0",
+    "linter-ui-default"
   ],
   "consumedServices": {
     "console-panel": {
