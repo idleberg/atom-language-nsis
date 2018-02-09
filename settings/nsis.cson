@@ -1,6 +1,6 @@
 ".source.nsis":
   editor:
-    commentStart: "# "
+    commentStart: "; "
     increaseIndentPattern: '''
       (?x)
         ^\\s*
