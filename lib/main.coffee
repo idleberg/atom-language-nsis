@@ -26,15 +26,15 @@ module.exports = NsisCore =
       type: "boolean"
       default: true
       order: 3
-    showFlagsAsObject:
-      title: "Show Flags as Object"
-      description: "Displays compiler flags as JSON"
-      type: "boolean"
-      default: true
-      order: 3
     clearConsole:
       title: "Clear Console"
       description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
+      type: "boolean"
+      default: true
+      order: 4
+    showFlagsAsObject:
+      title: "Show Flags as Object"
+      description: "Displays compiler flags as JSON"
       type: "boolean"
       default: true
       order: 5
