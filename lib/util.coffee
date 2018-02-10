@@ -53,8 +53,11 @@ module.exports = Util =
 
     return false
 
-  logCompilerFlags: (output, consolePanel) ->
-    stdOut = JSON.stringify output.stdout, null, 2
+  logCompilerFlags: (output, showFlagsAsObject, consolePanel) ->
+    if showFlagsAsObject is true
+      stdOut = JSON.stringify output.stdout, null, 2
+    else
+      stdOut = output.stdout
 
     if atom.config.get("language-nsis.compilerOutput") is "Console"
       try

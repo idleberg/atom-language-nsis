@@ -26,12 +26,18 @@ module.exports = NsisCore =
       type: "boolean"
       default: true
       order: 3
+    showFlagsAsObject:
+      title: "Show Flags as Object"
+      description: "Displays compiler flags as JSON"
+      type: "boolean"
+      default: true
+      order: 3
     clearConsole:
       title: "Clear Console"
       description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
       type: "boolean"
       default: true
-      order: 4
+      order: 5
     buildFileSyntax:
       title: "Build File Syntax"
       description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
@@ -42,7 +48,7 @@ module.exports = NsisCore =
         "JSON",
         "YAML"
       ],
-      order: 5
+      order: 6
     compilerOutput:
       title: "Compiler Output"
       description: "Specify whether `makensis` outputs its version or compiler flags to notifications the console"
@@ -52,19 +58,19 @@ module.exports = NsisCore =
         "Notification",
         "Console"
       ],
-      order: 6
+      order: 7
     useWineToRun:
       title: "Use Wine to run"
       description: "When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)"
       type: "boolean"
       default: false
-      order: 7
+      order: 8
     manageDependencies:
       title: "Manage Dependencies"
       description: "When enabled, third-party dependencies will be installed automatically"
       type: "boolean"
       default: true
-      order: 8
+      order: 9
   subscriptions: null
 
   activate: (state) ->

@@ -101,8 +101,10 @@ module.exports = Makensis =
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
 
-      hdrInfo({pathToMakensis: pathToMakensis, json: true}).then((output) ->
-        return logCompilerFlags(output, consolePanel)
+      showFlagsAsObject = atom.config.get("language-nsis.showFlagsAsObject")
+
+      hdrInfo({pathToMakensis: pathToMakensis, json: showFlagsAsObject}).then((output) ->
+        return logCompilerFlags(output, showFlagsAsObject, consolePanel)
       ).catch (output) ->
         # fallback for legacy NSIS
-        return logCompilerFlags(output, consolePanel)
+        return logCompilerFlags(output, showFlagsAsObject, consolePanel)
