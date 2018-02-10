@@ -1,40 +1,40 @@
 ".source.nsis":
   ModernUI:
     body: '''
-      ; Scaffolding by https://atom.io/packages/language-nsis
+      # Scaffolding by https://atom.io/packages/language-nsis
 
-      ; Includes ---------------------------------
+      # Includes ---------------------------------
       !include MUI2.nsh
 
-      ; Settings ---------------------------------
+      # Settings ---------------------------------
       Name "${1:installer_name}"
       OutFile "${2:${1:installer_name}}.exe"
       RequestExecutionLevel ${3:admin}
       InstallDir "$PROGRAMFILES\\\\${4:${1:installer_name}}"
 
-      ; Pages ------------------------------------
+      # Pages ------------------------------------
       !insertmacro MUI_PAGE_COMPONENTS
       !insertmacro MUI_PAGE_DIRECTORY
       !insertmacro MUI_PAGE_INSTFILES
 
-      ; Languages --------------------------------
+      # Languages --------------------------------
       !insertmacro MUI_LANGUAGE "${5:English}"
 
-      ; Sections ---------------------------------
+      # Sections ---------------------------------
       Section "${6:section}" ${7:${6:section}_INDEX}
 
       \t${8:# your code here}
 
       SectionEnd
 
-      ; Descriptions -----------------------------
+      # Descriptions -----------------------------
       LangString DESC_${7:${6:section}_INDEX} ${LANG_${5:ENGLISH}} "${9:section_description}"
 
       !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
       \t!insertmacro MUI_DESCRIPTION_TEXT ${${7:${6:section}_INDEX}} $(DESC_${7:${6:section}_INDEX})
       !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
-      ; Functions --------------------------------
+      # Functions --------------------------------
       ${10:Function .onInit
 
       \t${11:# your code here}
