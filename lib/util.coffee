@@ -144,7 +144,7 @@ module.exports = Util =
 
   openURL: (cmd) ->
     opn = require "opn"
-    opn "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/#{cmd}.md"
+    opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html"
 
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
