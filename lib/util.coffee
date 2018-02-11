@@ -142,6 +142,10 @@ module.exports = Util =
 
     atom.workspace.open("atom://config/packages/#{meta.name}", options)
 
+  openURL: (cmd) ->
+    opn = require "opn"
+    opn "https://github.com/NSIS-Dev/Documentation/blob/master/Reference/#{cmd}.md"
+
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"

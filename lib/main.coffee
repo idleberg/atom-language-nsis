@@ -76,6 +76,7 @@ module.exports = NsisCore =
   activate: (state) ->
     { CompositeDisposable } = require "atom"
     Build = require "./build"
+    Lookup = require "./lookup"
     Makensis = require "./makensis"
     Runner = require "./runner"
 
@@ -93,6 +94,9 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file-for-wine": -> Build.createFile(true)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Runner.set()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:remove-default-runner": -> Runner.remove()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:lookup-commands-online": =>
+      Lookup.init()
+      Lookup.toggle()
 
     satisfyDependencies(true) if getConfig("manageDependencies") is true
 

@@ -109,3 +109,17 @@ module.exports = Makensis =
       ).catch (output) ->
         # fallback for legacy NSIS
         return logCompilerFlags(output, showFlagsAsObject, consolePanel)
+
+  showHelp: (selectListView) ->
+    { spawn } = require "child_process"
+    { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
+    { cmdHelp } = require "makensis"
+
+    require("./ga").sendEvent "makensis", "Lookup Command Online"
+
+    getMakensisPath (pathToMakensis) ->
+      cmdHelp('', {pathToMakensis: pathToMakensis, json: true}).then((output) ->
+        selectListView.update({items: Object.keys(output.stdout)})
+      ).catch (output) ->
+        # fallback for legacy NSIS
+        selectListView.update({items: Object.keys(output.stdout)})
