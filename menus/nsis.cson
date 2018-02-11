@@ -14,6 +14,10 @@ menu: [
             command: "NSIS:save-&-compile-strict"
           }
           {
+            label: "Look up command online"
+            command: "NSIS:look-up-command-online"
+          }
+          {
             type: "separator"
           }
           {
