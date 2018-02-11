@@ -1913,9 +1913,9 @@ make-iterator@^1.0.0:
   dependencies:
     kind-of "^3.1.0"
 
-makensis@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.12.1.tgz#5ea0b5aba12845cdc0256ff2a984e492ea58831d"
+makensis@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/makensis/-/makensis-0.12.2.tgz#1d6c2171d9f28c3852c3d7356f5c75183098a4fa"
 
 map-cache@^0.2.0, map-cache@^0.2.2:
   version "0.2.2"
