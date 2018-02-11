@@ -94,7 +94,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file-for-wine": -> Build.createFile(true)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Runner.set()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:remove-default-runner": -> Runner.remove()
-    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:look-up-command-online": =>
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:look-up-command-online": ->
       Lookup.init()
       Lookup.toggle()
 
