@@ -159,6 +159,7 @@ There are several other, previously unmentioned commands available from the [com
 
 Command                              | Description
 -------------------------------------|-------------------------------------
+`NSIS: Look Up Command Online`       | Look up NSIS command online
 `NSIS: Open Package Settings`        | Opens settings page
 `NSIS: Satisfy Package Dependencies` | Install missing package dependencies
 `NSIS: Show Version Info`            | Shows current version of NSIS
