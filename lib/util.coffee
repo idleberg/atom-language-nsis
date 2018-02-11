@@ -3,7 +3,7 @@ module.exports = Util =
     try
       consolePanel.clear()
     catch
-      console.clear() if atom.config.get("language-nsis.clearConsole")
+      console.clear() if Util.getConfig("clearConsole")
 
   detectOutfile: (line) ->
     { existsSync } = require "fs"
@@ -17,11 +17,19 @@ module.exports = Util =
 
     return ""
 
+  getConfig: (key = "") ->
+    meta = require "../package.json"
+
+    if key?
+      return atom.config.get("#{meta.name}.#{key}")
+
+    return atom.config.get("#{meta.name}")
+
   getMakensisPath: (callback) ->
     { spawn } = require "child_process"
 
     # If stored, return pathToMakensis
-    pathToMakensis = atom.config.get("language-nsis.pathToMakensis")
+    pathToMakensis = Util.getConfig("pathToMakensis")
     if pathToMakensis.length > 0 and pathToMakensis isnt "makensis"
       return callback(pathToMakensis)
 
@@ -48,7 +56,7 @@ module.exports = Util =
   isWindowsCompatible: ->
     { platform } = require "os"
 
-    if platform() is "win32" or atom.config.get("language-nsis.useWineToRun") is true
+    if platform() is "win32" or Util.getConfig("useWineToRun") is true
       return true
 
     return false
@@ -59,7 +67,7 @@ module.exports = Util =
     else
       stdOut = output.stdout
 
-    if atom.config.get("language-nsis.compilerOutput") is "Console"
+    if Util.getConfig("compilerOutput") is "Console"
       try
         consolePanel.raw(stdOut)
       catch
@@ -146,7 +154,7 @@ module.exports = Util =
       catch error
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
-    else if atom.config.get("language-nsis.useWineToRun") is true
+    else if Util.getConfig("useWineToRun") is true
       try
         spawn "wine", [ outFile ]
       catch error

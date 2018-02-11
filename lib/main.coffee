@@ -1,4 +1,4 @@
-{ getPrefix, openSettings, satisfyDependencies } = require "./util"
+{ getConfig, getPrefix, openSettings, satisfyDependencies } = require "./util"
 
 module.exports = NsisCore =
   config:
@@ -94,7 +94,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Runner.set()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:remove-default-runner": -> Runner.remove()
 
-    satisfyDependencies(true) if atom.config.get("language-nsis.manageDependencies") is true
+    satisfyDependencies(true) if getConfig("manageDependencies") is true
 
   deactivate: ->
     @subscriptions?.dispose()

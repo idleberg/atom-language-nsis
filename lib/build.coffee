@@ -1,9 +1,9 @@
 # build - https://atom.io/packages/build
-
 module.exports = Build =
   createFile: (wine) ->
     fs = require "fs"
     path = require "path"
+    { getConfig } = require "./util"
 
     editor = atom.workspace.getActiveTextEditor()
 
@@ -29,7 +29,7 @@ module.exports = Build =
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFileSyntax = atom.config.get("language-nsis.buildFileSyntax")
+      buildFileSyntax = getConfig("buildFileSyntax")
 
       if wine is true
         require("./ga").sendEvent "build", "Create .atom Build File for Wine (#{buildFileSyntax})"

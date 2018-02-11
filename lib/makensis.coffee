@@ -1,7 +1,7 @@
 module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, detectOutfile, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
+    { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
 
     if strictMode is true
       require("./ga").sendEvent "makensis", "Save & Compile (strict)"
@@ -18,7 +18,7 @@ module.exports = Makensis =
       editor.save().then ->
         getMakensisPath (pathToMakensis) ->
           prefix = getPrefix()
-          compilerArguments = atom.config.get("language-nsis.compilerArguments")?.trim().split(" ")
+          compilerArguments = getConfig("compilerArguments")?.trim().split(" ")
 
           # only add WX flag if not already specified
           if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
@@ -36,12 +36,12 @@ module.exports = Makensis =
             if hasWarning is false and line.indexOf("warning: ") isnt -1
               hasWarning = true
               try
-                consolePanel.warn(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
+                consolePanel.warn(line.toString()) if getConfig("alwaysShowOutput")
               catch
                 console.warn(line.toString())
             else
               try
-                consolePanel.log(line.toString()) if atom.config.get("language-nsis.alwaysShowOutput")
+                consolePanel.log(line.toString()) if getConfig("alwaysShowOutput")
               catch
                 console.log(line.toString())
 
@@ -58,18 +58,18 @@ module.exports = Makensis =
             openButton = if isWindowsCompatible() is true then "Run" else ""
             if errorCode is 0
               if hasWarning is true
-                return notifyOnWarning(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+                return notifyOnWarning(openButton, outFile) if getConfig("showBuildNotifications")
               else
-                return notifyOnSuccess(openButton, outFile) if atom.config.get("language-nsis.showBuildNotifications")
+                return notifyOnSuccess(openButton, outFile) if getConfig("showBuildNotifications")
 
-            return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-nsis.showBuildNotifications")
+            return atom.notifications.addError("Compile Error", dismissable: false) if getConfig("showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
 
   showVersion: (consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, getMakensisPath, getPrefix } = require "./util"
+    { clearConsole, getConfig, getMakensisPath, getPrefix } = require "./util"
     { version } = require "makensis"
 
     require("./ga").sendEvent "makensis", "Show Version"
@@ -78,7 +78,7 @@ module.exports = Makensis =
       clearConsole(consolePanel)
 
       version({pathToMakensis: pathToMakensis}).then((output) ->
-        if atom.config.get("language-nsis.compilerOutput") is "Console"
+        if getConfig("compilerOutput") is "Console"
           try
             consolePanel.log("makensis #{output.stdout} (#{pathToMakensis})")
           catch
@@ -93,15 +93,16 @@ module.exports = Makensis =
 
   showCompilerFlags: (consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
+    { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { hdrInfo } = require "makensis"
 
-    require("./ga").sendEvent "makensis", "Show Compiler Flags"
+    showFlagsAsObject = getConfig("showFlagsAsObject")
+    flagFormat = " (JSON)" if showFlagsAsObject
+
+    require("./ga").sendEvent "makensis", "Show Compiler Flags#{flagFormat}"
 
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
-
-      showFlagsAsObject = atom.config.get("language-nsis.showFlagsAsObject")
 
       hdrInfo({pathToMakensis: pathToMakensis, json: showFlagsAsObject}).then((output) ->
         return logCompilerFlags(output, showFlagsAsObject, consolePanel)
