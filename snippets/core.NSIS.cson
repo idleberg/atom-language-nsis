@@ -2259,8 +2259,8 @@
     prefix: "SearchPath"
   Section:
     body: '''
-      Section "${1:section_name}" ${2:section_index_output}
-        ${3:# your code here}
+      Section $1"${2:section_name}" ${3:section_index_output}
+        ${4:# your code here}
       SectionEnd$0
     '''
     description: "Usage: Section [/o] [-][un.][section_name] [section index output]"
