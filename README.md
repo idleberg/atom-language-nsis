@@ -151,7 +151,7 @@ You can set up `atom-runner` by executing *“NSIS: Set default runner”* from 
 
 ### Linting
 
-As of `v6.5.0`, a basic [Atom linter](https://github.com/idleberg/atom-linter-makensis/) provider for `makensis` is included. By default, NSIS documents get linted when opened or saved. Make sure to refer to the [linter-makensis](https://github.com/idleberg/atom-linter-makensis#settings) documentation to learn about available lint modes and other settings.
+As of `v6.5.0`, a basic [Atom linter](https://github.com/idleberg/atom-linter-makensis/) provider for `makensis` is included. By default, NSIS documents get linted when opened or saved. Make sure to refer to the [`linter-makensis`](https://github.com/idleberg/atom-linter-makensis#settings) documentation to learn about available lint modes and other settings.
 
 ### Other Commands
 
