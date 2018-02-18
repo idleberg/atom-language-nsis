@@ -2,12 +2,12 @@
 '.platform-darwin atom-text-editor, .platform-linux atom-text-editor':
   'cmd-alt-m': 'NSIS:save-&-compile'
   'cmd-alt-shift-m': 'NSIS:save-&-compile-strict'
-  'cmd-alt-l': 'NSIS:look-up-command-online'
+  'cmd-alt-l': 'NSIS:command-reference'
   'cmd-alt-k': 'NSIS:create-.atom–build-file'
   'cmd-shift-alt-k': 'NSIS:create-.atom–build-file-for-wine'
 
 '.platform-win32 atom-text-editor':
   'shift-alt-m': 'NSIS:save-&-compile'
   'ctrl-alt-shift-m': 'NSIS:save-&-compile-strict'
-  'shift-alt-l': 'NSIS:look-up-command-online'
+  'shift-alt-l': 'NSIS:command-reference'
   'shift-alt-k': 'NSIS:create-.atom–build-file'

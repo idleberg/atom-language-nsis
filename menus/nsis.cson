@@ -14,8 +14,8 @@ menu: [
             command: "NSIS:save-&-compile-strict"
           }
           {
-            label: "Look up command online"
-            command: "NSIS:look-up-command-online"
+            label: "Command Reference"
+            command: "NSIS:command-reference"
           }
           {
             type: "separator"
