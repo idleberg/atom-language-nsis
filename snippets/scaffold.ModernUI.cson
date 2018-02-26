@@ -1,4 +1,4 @@
-".source.nsis":
+'.source.nsis':
   ModernUI:
     body: '''
       # Scaffolding by https://atom.io/packages/language-nsis
@@ -41,5 +41,5 @@
 
       FunctionEnd}$12
     '''
-    description: "Creates a Modern UI installer template"
-    prefix: "scaffold-MUI"
+    description: 'Creates a Modern UI installer template'
+    prefix: 'scaffold-MUI'

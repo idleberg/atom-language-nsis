@@ -1,5 +1,5 @@
-".source.nsis":
-  "Basic Script":
+'.source.nsis':
+  'Basic Script':
     body: '''
       # Scaffolding by https://atom.io/packages/language-nsis
 
@@ -31,5 +31,5 @@
 
       FunctionEnd$11}
     '''
-    description: "Creates a basic installer template"
-    prefix: "scaffold"
+    description: 'Creates a basic installer template'
+    prefix: 'scaffold'

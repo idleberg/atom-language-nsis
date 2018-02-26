@@ -1,5 +1,5 @@
-".source.nsis":
-  "Minimal Script":
+'.source.nsis':
+  'Minimal Script':
     body: '''
       # Scaffolding by https://atom.io/packages/language-nsis
 
@@ -22,5 +22,5 @@
       # Functions --------------------------------
       $6
     '''
-    description: "Creates a minimal installer template"
-    prefix: "scaffold-Minimal"
+    description: 'Creates a minimal installer template'
+    prefix: 'scaffold-Minimal'

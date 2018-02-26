@@ -1,13 +1,13 @@
-".source.nsis":
-  "InstallOptions::initDialog":
-    body: "InstallOptions::initDialog \"${1:file}.ini\"$0"
-    leftLabelHTML: "<span class='syntax--support syntax--class'>InstallOptions.dll</span>"
-    prefix: "InstallOptions::initDialog"
-  "InstallOptions::initDialog /NOUNLOAD":
-    body: "InstallOptions::initDialog /NOUNLOAD \"${1:file}.ini\"$0"
-    leftLabelHTML: "<span class='syntax--support syntax--class'>InstallOptions.dll</span>"
-    prefix: "InstallOptions::initDialog /NOUNLOAD"
-  "InstallOptions::show":
-    body: "InstallOptions::show$0"
-    leftLabelHTML: "<span class='syntax--support syntax--class'>InstallOptions.dll</span>"
-    prefix: "InstallOptions::show"
+'.source.nsis':
+  'InstallOptions::initDialog /NOUNLOAD':
+    body: 'InstallOptions::initDialog /NOUNLOAD \"${1:file}.ini\"$0'
+    leftLabelHTML: '<span class=\'syntax--support syntax--class\'>InstallOptions.dll</span>'
+    prefix: 'InstallOptions::initDialog /NOUNLOAD'
+  'InstallOptions::initDialog':
+    body: 'InstallOptions::initDialog \"${1:file}.ini\"$0'
+    leftLabelHTML: '<span class=\'syntax--support syntax--class\'>InstallOptions.dll</span>'
+    prefix: 'InstallOptions::initDialog'
+  'InstallOptions::show':
+    body: 'InstallOptions::show$0'
+    leftLabelHTML: '<span class=\'syntax--support syntax--class\'>InstallOptions.dll</span>'
+    prefix: 'InstallOptions::show'

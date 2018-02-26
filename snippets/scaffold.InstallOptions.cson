@@ -1,4 +1,4 @@
-".source.nsis":
+'.source.nsis':
   InstallOptions:
     body: '''
       # Scaffolding by https://atom.io/packages/language-nsis
@@ -49,5 +49,5 @@
 
       FunctionEnd$14
     '''
-    description: "Creates an installer template with InstallOptions support"
-    prefix: "scaffold-InstallOptions"
+    description: 'Creates an installer template with InstallOptions support'
+    prefix: 'scaffold-InstallOptions'
