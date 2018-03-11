@@ -77,30 +77,38 @@ module.exports = Util =
       atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
 
   notifyOnSuccess: (openButton, outFile) ->
-    if openButton is "Run"
-      buttons = [
-        {
-          text: openButton
-          className: "icon icon-playback-play"
-          onDidClick: ->
-            notification.dismiss()
-            Util.runInstaller outFile
+    buttons = []
 
-        }
-        {
-          text: "Cancel"
-          onDidClick: ->
-            notification.dismiss()
-        }
-      ]
-      dismissable = true
-    else
-      dismissable = false
-      buttons = null
+    if openButton is "Run"
+      openButton =
+        text: openButton
+        className: "icon icon-playback-play"
+        onDidClick: ->
+          notification.dismiss()
+          Util.runInstaller outFile
+
+      buttons.push openButton
+
+    revealButton =
+      text: "Reveal"
+      className: "icon icon-location"
+
+      onDidClick: ->
+        notification.dismiss()
+        Util.showInstaller outFile
+
+    cancelButton =
+        text: "Cancel"
+
+        onDidClick: ->
+          notification.dismiss()
+
+    buttons.push revealButton
+    buttons.push cancelButton
 
     notification = atom.notifications.addSuccess(
       "Compiled successfully",
-      dismissable: dismissable,
+      dismissable: true,
       buttons: buttons
     )
 
@@ -178,6 +186,15 @@ module.exports = Util =
       if atom.packages.isPackageDisabled(v)
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
+
+  showInstaller: (path) ->
+    { access, F_OK } = require "fs"
+    { shell } = require "electron"
+
+    access path, F_OK, (error) ->
+      return atom.notifications.addError(name, detail: error, dismissable: true) if error
+
+      shell.showItemInFolder(path)
 
   which: ->
     { platform } = require "os"
