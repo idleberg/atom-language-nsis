@@ -222,7 +222,7 @@ atob@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.0.3.tgz#19c7a760473774468f20b2d2d03372ad7d4cbf5d"
 
-atom-package-deps@^4.5.1:
+atom-package-deps@^4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/atom-package-deps/-/atom-package-deps-4.6.1.tgz#36559e70db25d077b005f0278c8e17a679686adb"
   dependencies:
@@ -236,9 +236,9 @@ atom-package-path@^1.1.0:
   dependencies:
     sb-callsite "^1.1.2"
 
-atom-select-list@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/atom-select-list/-/atom-select-list-0.7.0.tgz#8b7a7781f4f6a9b3ba89772d1b481096241efbb1"
+atom-select-list@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/atom-select-list/-/atom-select-list-0.7.1.tgz#c1793b7d4666ddda2782b4c0bb6a07f7d1197fe3"
   dependencies:
     etch "^0.12.6"
     fuzzaldrin "^2.1.0"
@@ -3171,9 +3171,9 @@ y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
 
-yaml-js@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/yaml-js/-/yaml-js-0.2.3.tgz#f4cf6c1b3c784f59f55547d7dfcdd06418303291"
+yaml-js@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/yaml-js/-/yaml-js-0.3.0.tgz#ad0893d9de881a93fd6bf936e8d89cdde309e848"
 
 yargs-parser@^5.0.0:
   version "5.0.0"
