@@ -95,7 +95,7 @@ module.exports = Util =
 
       onDidClick: ->
         notification.dismiss()
-        Util.showInstaller outFile
+        Util.revealInstaller outFile
 
     cancelButton =
         text: "Cancel"
@@ -154,6 +154,15 @@ module.exports = Util =
     opn = require "opn"
     opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference"
 
+  revealInstaller: (outFile) ->
+    { access, F_OK } = require "fs"
+    { shell } = require "electron"
+
+    access outFile, F_OK, (error) ->
+      return console.log error if error or outFile is ""
+
+      shell.showItemInFolder(outFile)
+
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"
@@ -186,15 +195,6 @@ module.exports = Util =
       if atom.packages.isPackageDisabled(v)
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
-
-  showInstaller: (path) ->
-    { access, F_OK } = require "fs"
-    { shell } = require "electron"
-
-    access path, F_OK, (error) ->
-      return console.error error if error
-
-      shell.showItemInFolder(path)
 
   which: ->
     { platform } = require "os"
