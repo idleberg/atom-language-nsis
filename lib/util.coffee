@@ -192,7 +192,7 @@ module.exports = Util =
     { shell } = require "electron"
 
     access path, F_OK, (error) ->
-      return console.log error if error
+      return console.error error if error
 
       shell.showItemInFolder(path)
 
