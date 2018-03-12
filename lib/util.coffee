@@ -192,7 +192,7 @@ module.exports = Util =
     { shell } = require "electron"
 
     access path, F_OK, (error) ->
-      return atom.notifications.addError(name, detail: error, dismissable: true) if error
+      return console.log error if error
 
       shell.showItemInFolder(path)
 
