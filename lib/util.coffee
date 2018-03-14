@@ -154,6 +154,16 @@ module.exports = Util =
     opn = require "opn"
     opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference"
 
+  revealInstaller: (outFile) ->
+    { access, F_OK } = require "fs"
+    { shell } = require "electron"
+
+    access outFile, F_OK, (error) ->
+      return console.log error if error or outFile is ""
+
+      require("./ga").sendEvent "util", "Reveal Installer"
+      shell.showItemInFolder(outFile)
+
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"
@@ -186,15 +196,6 @@ module.exports = Util =
       if atom.packages.isPackageDisabled(v)
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
-
-  revealInstaller: (outFile) ->
-    { access, F_OK } = require "fs"
-    { shell } = require "electron"
-
-    access outFile, F_OK, (error) ->
-      return atom.notifications.addError(name, detail: error, dismissable: true) if error
-
-      shell.showItemInFolder(outFile)
 
   which: ->
     { platform } = require "os"
