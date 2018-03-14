@@ -95,7 +95,7 @@ module.exports = Util =
 
       onDidClick: ->
         notification.dismiss()
-        Util.showInstaller outFile
+        Util.revealInstaller outFile
 
     cancelButton =
         text: "Cancel"
@@ -187,14 +187,14 @@ module.exports = Util =
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
 
-  showInstaller: (path) ->
+  revealInstaller: (outFile) ->
     { access, F_OK } = require "fs"
     { shell } = require "electron"
 
-    access path, F_OK, (error) ->
+    access outFile, F_OK, (error) ->
       return atom.notifications.addError(name, detail: error, dismissable: true) if error
 
-      shell.showItemInFolder(path)
+      shell.showItemInFolder(outFile)
 
   which: ->
     { platform } = require "os"
