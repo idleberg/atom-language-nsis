@@ -6,14 +6,11 @@ module.exports = Util =
       console.clear() if Util.getConfig("clearConsole")
 
   detectOutfile: (line) ->
-    { existsSync } = require "fs"
-
     if line.indexOf('Output: "') isnt -1
       regex = /Output: \"(.*\.exe)\"\r?\n/g
       result = regex.exec(line.toString())
-      doesExist = existsSync result[1]
-      if doesExist is true
-        return result[1]
+
+      return result[1]
 
     return ""
 
@@ -76,73 +73,57 @@ module.exports = Util =
     else
       atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
 
-  notifyOnSuccess: (openButton, outFile) ->
+  notifyOnCompletion: (type, openButton, outFile) ->
     buttons = []
+    dismissable = false
 
-    if openButton is "Run"
-      openButton =
-        text: openButton
-        className: "icon icon-playback-play"
-        onDidClick: ->
-          notification.dismiss()
-          Util.runInstaller outFile
+    if outFile
+      if openButton is "Run"
+        dismissable = true
 
-      buttons.push openButton
-
-    revealButton =
-      text: "Reveal"
-      className: "icon icon-location"
-
-      onDidClick: ->
-        notification.dismiss()
-        Util.revealInstaller outFile
-
-    cancelButton =
-        text: "Cancel"
-
-        onDidClick: ->
-          notification.dismiss()
-
-    buttons.push revealButton
-    buttons.push cancelButton
-
-    notification = atom.notifications.addSuccess(
-      "Compiled successfully",
-      dismissable: true,
-      buttons: buttons
-    )
-
-  notifyOnWarning: (openButton, outFile) ->
-    if openButton is "Run"
-      buttons = [
-        {
+        openButton =
           text: openButton
           className: "icon icon-playback-play"
           onDidClick: ->
             notification.dismiss()
-            Util.runInstaller(outFile)
+            Util.runInstaller outFile
 
-        }
-        {
+        buttons.push openButton
+
+      revealButton =
+        text: "Reveal"
+        className: "icon icon-location"
+
+        onDidClick: ->
+          notification.dismiss()
+          Util.revealInstaller outFile
+
+      cancelButton =
           text: "Cancel"
+
           onDidClick: ->
             notification.dismiss()
-        }
-      ]
-      dismissable = true
-    else
-      buttons = null
-      dismissable = false
 
-    notification = atom.notifications.addWarning(
-      "Compiled with warnings",
-      dismissable: dismissable,
-      buttons: buttons
-    )
+      buttons.push revealButton
+      buttons.push cancelButton
+
+    if type is "warning"
+      notification = atom.notifications.addWarning(
+        "Compiled with warnings",
+        dismissable: dismissable,
+        buttons: buttons
+      )
+    else
+      notification = atom.notifications.addSuccess(
+        "Compiled successfully",
+        dismissable: dismissable,
+        buttons: buttons
+      )
 
   openSettings: ->
+    ga = require "./ga"
     meta = require "../package.json"
-    require("./ga").sendEvent "util", "Open Settings"
+    ga.sendEvent "util", "Open Settings"
 
     options =
       pending: true
@@ -155,20 +136,22 @@ module.exports = Util =
     opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference"
 
   revealInstaller: (outFile) ->
-    { access, F_OK } = require "fs"
+    { access, existsSync, F_OK } = require "fs"
     { shell } = require "electron"
+    ga = require "./ga"
 
     access outFile, F_OK, (error) ->
       return console.log error if error or outFile is ""
 
-      require("./ga").sendEvent "util", "Reveal Installer"
+      ga.sendEvent "util", "Reveal Installer"
       shell.showItemInFolder(outFile)
 
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"
+    ga = require "./ga"
 
-    require("./ga").sendEvent "util", "Run Installer"
+    ga.sendEvent "util", "Run Installer"
 
     if platform() is "win32"
       try
@@ -183,12 +166,13 @@ module.exports = Util =
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
   satisfyDependencies: (autoRun = false) ->
+    ga = require "./ga"
     meta = require "../package.json"
 
     if autoRun is true
-      require("./ga").sendEvent "util", "Satisfy Dependencies (auto)"
+     ga.sendEvent "util", "Satisfy Dependencies (auto)"
     else
-      require("./ga").sendEvent "util", "Satisfy Dependencies (manual)"
+     ga.sendEvent "util", "Satisfy Dependencies (manual)"
 
     require("atom-package-deps").install(meta.name, true)
 

@@ -1,12 +1,13 @@
 module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
-    { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnSuccess, notifyOnWarning } = require "./util"
+    { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnCompletion } = require "./util"
+    ga = require "./ga"
 
     if strictMode is true
-      require("./ga").sendEvent "makensis", "Save & Compile (strict)"
+      ga.sendEvent "makensis", "Save & Compile (strict)"
     else
-      require("./ga").sendEvent "makensis", "Save & Compile"
+      ga.sendEvent "makensis", "Save & Compile"
 
     editor = atom.workspace.getActiveTextEditor()
     return atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false) unless editor?
@@ -35,32 +36,34 @@ module.exports = Makensis =
           makensis.stdout.on "data", (line) ->
             if hasWarning is false and line.indexOf("warning: ") isnt -1
               hasWarning = true
+
               try
                 consolePanel.warn(line.toString()) if getConfig("alwaysShowOutput")
               catch
-                console.warn(line.toString())
+                console.warn line.toString()
             else
               try
                 consolePanel.log(line.toString()) if getConfig("alwaysShowOutput")
               catch
-                console.log(line.toString())
+                console.log line.toString()
 
             if outFile is ""
-              outFile = detectOutfile(line)
+              outFile = detectOutfile line
 
           makensis.stderr.on "data", (line) ->
             try
-              consolePanel.error(line.toString())
+              consolePanel.error line.toString()
             catch
-              console.error(line.toString())
+              console.error line.toString()
 
           makensis.on "close", ( errorCode ) ->
-            openButton = if isWindowsCompatible() is true then "Run" else ""
             if errorCode is 0
+              openButton = if isWindowsCompatible() is true then "Run" else ""
+
               if hasWarning is true
-                return notifyOnWarning(openButton, outFile) if getConfig("showBuildNotifications")
-              else
-                return notifyOnSuccess(openButton, outFile) if getConfig("showBuildNotifications")
+                return notifyOnCompletion("warning", openButton, outFile) if getConfig("showBuildNotifications")
+
+              return notifyOnCompletion("success", openButton, outFile) if getConfig("showBuildNotifications")
 
             return atom.notifications.addError("Compile Error", dismissable: false) if getConfig("showBuildNotifications")
     else
@@ -71,8 +74,9 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix } = require "./util"
     { version } = require "makensis"
+    ga = require "./ga"
 
-    require("./ga").sendEvent "makensis", "Show Version"
+    ga.sendEvent "makensis", "Show Version"
 
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
@@ -95,11 +99,12 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { hdrInfo } = require "makensis"
+    ga = require "./ga"
 
     showFlagsAsObject = getConfig("showFlagsAsObject")
     flagFormat = " (JSON)" if showFlagsAsObject
 
-    require("./ga").sendEvent "makensis", "Show Compiler Flags#{flagFormat}"
+    ga.sendEvent "makensis", "Show Compiler Flags#{flagFormat}"
 
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
@@ -114,12 +119,13 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { cmdHelp } = require "makensis"
+    ga = require "./ga"
 
-    require("./ga").sendEvent "makensis", "Lookup Command Online"
+    ga.sendEvent "makensis", "Command Reference"
 
     getMakensisPath (pathToMakensis) ->
       cmdHelp('', {pathToMakensis: pathToMakensis, json: true}).then((output) ->
-        selectListView.update({items: Object.keys(output.stdout)})
+        selectListView.update({items: Object.keys output.stdout})
       ).catch (output) ->
         # fallback for legacy NSIS
-        selectListView.update({items: Object.keys(output.stdout)})
+        selectListView.update({items: Object.keys output.stdout})

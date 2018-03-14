@@ -2,6 +2,7 @@
 module.exports = Build =
   createFile: (wine) ->
     fs = require "fs"
+    ga = require "./ga"
     path = require "path"
     { getConfig } = require "./util"
 
@@ -32,9 +33,9 @@ module.exports = Build =
       buildFileSyntax = getConfig("buildFileSyntax")
 
       if wine is true
-        require("./ga").sendEvent "build", "Create .atom Build File for Wine (#{buildFileSyntax})"
+        ga.sendEvent "build", "Create .atom Build File for Wine (#{buildFileSyntax})"
       else
-        require("./ga").sendEvent "build", "Create .atom Build File (#{buildFileSyntax})"
+        ga.sendEvent "build", "Create .atom Build File (#{buildFileSyntax})"
 
       if buildFileSyntax is "CSON"
         buildFileBase = ".atom-build.cson"

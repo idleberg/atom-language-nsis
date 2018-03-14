@@ -4,9 +4,10 @@ module.exports = Runner =
   runner: null
 
   set: ->
-    @check()
+    ga = require "./ga"
 
-    require("./ga").sendEvent "runner", "Set default Runner"
+    @check()
+    ga.sendEvent "runner", "Set default Runner"
 
     if (typeof @runner.path != "undefined") and (@runner.active == true)
       atom.confirm
@@ -23,9 +24,10 @@ module.exports = Runner =
       @notify()
 
   remove: ->
-    @check()
+    ga = require "./ga"
 
-    require("./ga").sendEvent "runner", "Remove default Runner"
+    @check()
+    ga.sendEvent "runner", "Remove default Runner"
 
     if (typeof @runner.path != "undefined") and (@runner.active == true)
       atom.notifications.addSuccess("**language-nsis**: Unset `runner.scopes.nsis`", dismissable: false)
