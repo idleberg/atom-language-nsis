@@ -15,6 +15,29 @@ module.exports = Makensis =
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
 
+    if getConfig("disallowHeaderCompilation") is true and !script.endsWith "nsi"
+      notification = atom.notifications.addWarning(
+          "Compiling header files is blocked by default. You can allow it in the package settings.",
+          dismissable: true,
+          buttons: [
+            {
+              text: "Open Settings"
+              className: "icon icon-gear"
+              onDidClick: ->
+                require("./ga").sendEvent "util", "Open Settings"
+                atom.workspace.open("atom://config/packages/language-nsis", {pending: true, searchAllPanes: true})
+                notification.dismiss()
+            }
+            {
+              text: "Cancel",
+              onDidClick: ->
+                notification.dismiss()
+            }
+          ]
+        )
+
+      return atom.beep()
+
     if script? and scope.startsWith "source.nsis"
       editor.save().then ->
         getMakensisPath (pathToMakensis) ->
