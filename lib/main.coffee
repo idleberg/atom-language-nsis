@@ -32,11 +32,11 @@ module.exports = NsisCore =
       type: "boolean"
       default: true
       order: 4
-    disallowHeaderCompilation:
-      title: "Disallow Header Compilation"
-      description: "Limits compilation to `.nsi` files exclusively"
+    allowHeaderCompilation:
+      title: "Allow Header Compilation"
+      description: "By default, only `.nsi` will be compiled. This setting enables it for header files as well."
       type: "boolean"
-      default: true
+      default: false
       order: 5
     showFlagsAsObject:
       title: "Show Flags as Object"
