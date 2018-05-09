@@ -169,6 +169,11 @@ Command                              | Description
 
 With Atom's default [`metrics`](https://atom.io/packages/metrics) package enabled, this package sends anonymized usage statistics to Google Analytics. The data transferred is limited to the name of the methods called by the user ([see for yourself](https://github.com/idleberg/atom-language-nsis/search?q=ga+sendEvent&l=CoffeeScript)!) This helps me getting an understanding how this package is used. If you oppose data collection of that kind, you have probably disabled the `metrics` package already. Otherwise, please do.
 
+## Related
+
+- [node-makensis](https://www.npmjs.com/package/makensis) - Node wrapper for `makensis`
+- [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
+
 ## License
 
 This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT) and the [GNU General Public License, version 2.0](https://opensource.org/licenses/GPL-2.0)
