@@ -12,7 +12,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
-*Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
+*Screenshot of NSIS in Atom with [Fira Code](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://atom.io/themes/hopscotch) theme*
 
 ## Features
 
