@@ -3,6 +3,10 @@
   "version": "6.16.1",
   "description": "Atom language support for NSIS, including grammar, snippets and build system",
   "license": "MIT OR GPL-2.0",
+  "scripts": {
+    "precommit": "gulp lint",
+    "test": "gulp lint"
+  },
   "author": {
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
@@ -57,9 +61,7 @@
     "gulp-jshint": "^2.1.0",
     "gulp-jsonlint": "^1.2.1",
     "gulp-lesshint": "^5.0.0",
+    "husky": "^0.14.3",
     "jshint": "^2.9.5"
-  },
-  "scripts": {
-    "test": "gulp lint"
   }
 }
