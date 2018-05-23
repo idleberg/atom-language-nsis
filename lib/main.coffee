@@ -1,4 +1,4 @@
-{ getConfig, getPrefix, openSettings, satisfyDependencies } = require "./util"
+{ consentReminder, getConfig, getPrefix, openSettings, satisfyDependencies } = require "./util"
 
 module.exports = NsisCore =
   config:
@@ -105,6 +105,7 @@ module.exports = NsisCore =
       Lookup.toggle()
 
     satisfyDependencies(true) if getConfig("manageDependencies") is true
+    consentReminder() if localStorage.getItem("@idleberg.reviewTelemetryConsent") is "true"
 
   deactivate: ->
     @subscriptions?.dispose()
