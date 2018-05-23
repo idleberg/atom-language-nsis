@@ -43,6 +43,6 @@ gulp.task('lint:json', (done) => {
 });
 
 // Tasks
-gulp.task('lint', gulp.parallel('lint:coffee', 'lint:json', function(done) {
+gulp.task('lint', gulp.parallel('lint:coffee', 'lint:json', done => {
   done();
 }));
