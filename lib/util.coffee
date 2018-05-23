@@ -5,21 +5,6 @@ module.exports = Util =
     catch
       console.clear() if Util.getConfig("clearConsole")
 
-  consentReminder: ->
-    notification = atom.notifications.addInfo(
-      "<p>The [General Data Protection Regulation](https://www.wikiwand.com/en/General_Data_Protection_Regulation) will be applicable as of May 25th, 2018 in all member states of the European Union to harmonize data privacy laws.</p><p>In order to comply with the regulation, you are required to confirm your current telemetry settings.</p>"
-      dismissable: true
-      buttons: [
-        {
-          text: "Review"
-          onDidClick: ->
-            localStorage.setItem("@idleberg.reviewTelemetryConsent", true)
-            atom.workspace.open "atom://welcome/consent"
-            notification.dismiss()
-        }
-      ]
-    )
-
   detectOutfile: (line) ->
     if line.indexOf('Output: "') isnt -1
       regex = /Output: \"(.*\.exe)\"\r?\n/g
