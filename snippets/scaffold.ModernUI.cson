@@ -4,7 +4,7 @@
       # Scaffolding by https://atom.io/packages/language-nsis
 
       # Includes ---------------------------------
-      !include MUI2.nsh
+      !include "MUI2.nsh"
 
       # Settings ---------------------------------
       Name "${1:installer_name}"
