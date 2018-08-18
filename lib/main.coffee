@@ -84,6 +84,7 @@ module.exports = NsisCore =
     Build = require "./build"
     Lookup = require "./lookup"
     Makensis = require "./makensis"
+    NLF = require "./nlf"
     Runner = require "./runner"
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -103,6 +104,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:command-reference": ->
       Lookup.init()
       Lookup.toggle()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:convert-language-file": -> NLF.convert()
 
     satisfyDependencies(true) if getConfig("manageDependencies") is true
 
