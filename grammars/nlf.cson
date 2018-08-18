@@ -1,7 +1,7 @@
 fileTypes: [
   "nlf"
 ]
-name: "nlf Language File"
+name: "NSIS Language File"
 comment: "https://github.com/atom/atom-language-nlf"
 patterns: [
   {
