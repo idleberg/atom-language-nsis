@@ -1,12 +1,12 @@
 # atom-language-nsis
 
-[![apm](https://img.shields.io/apm/l/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)
-[![apm](https://img.shields.io/apm/v/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)
-[![apm](https://img.shields.io/apm/dm/language-nsis.svg?style=flat-square)](https://atom.io/packages/language-nsis)
-[![Travis](https://img.shields.io/travis/idleberg/atom-language-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-nsis)
-[![David](https://img.shields.io/david/idleberg/atom-language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsis)
-[![David](https://img.shields.io/david/dev/idleberg/atom-language-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsis?type=dev)
-[![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
+[![apm](https://flat.badgen.net/apm/license/language-nsis)](https://atom.io/packages/language-nsis)
+[![apm](https://flat.badgen.net/apm/v/language-nsis)](https://atom.io/packages/language-nsis)
+[![apm](https://flat.badgen.net/apm/dl/language-nsis)](https://atom.io/packages/language-nsis)
+[![CircleCI](https://flat.badgen.net/circleci/github/atom-language-nsis)](https://circleci.com/gh/atom-language-nsis)
+[![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsis)](https://david-dm.org/idleberg/atom-language-nsis)
+[![David](https://flat.badgen.net/david/dev/idleberg/atom-language-nsis)](https://david-dm.org/idleberg/atom-language-nsis?type=dev)
+[![Gitter](https://flat.badgen.net/badge/chat-Gitter-ed1965)](https://gitter.im/NSIS-Dev/Atom)
 
 Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files (NLF).
 
