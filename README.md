@@ -164,6 +164,7 @@ Command                              | Description
 `NSIS: Satisfy Package Dependencies` | Install missing package dependencies
 `NSIS: Show Version Info`            | Shows current version of NSIS
 `NSIS: Show Compiler Flags`          | Shows output of `makensis /HDRINFO`
+`NSIS: Convert Language File`        | Converts NLF to JSON and vice versa
 
 ## Metrics
 
