@@ -3,7 +3,7 @@
 [![apm](https://flat.badgen.net/apm/license/language-nsis)](https://atom.io/packages/language-nsis)
 [![apm](https://flat.badgen.net/apm/v/language-nsis)](https://atom.io/packages/language-nsis)
 [![apm](https://flat.badgen.net/apm/dl/language-nsis)](https://atom.io/packages/language-nsis)
-[![CircleCI](https://flat.badgen.net/circleci/github/atom-language-nsis)](https://circleci.com/gh/atom-language-nsis)
+[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-language-nsis)](https://circleci.com/gh/idleberg/atom-language-nsis)
 [![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsis)](https://david-dm.org/idleberg/atom-language-nsis)
 [![David](https://flat.badgen.net/david/dev/idleberg/atom-language-nsis)](https://david-dm.org/idleberg/atom-language-nsis?type=dev)
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/cyan)](https://gitter.im/NSIS-Dev/Atom)
