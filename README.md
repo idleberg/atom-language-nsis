@@ -12,7 +12,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
-*Screenshot of NSIS in Atom with [Fira Code](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://atom.io/themes/hopscotch) theme*
+*Screenshot of NSIS in Atom with [Fira Mono](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://atom.io/themes/hopscotch) theme*
 
 ## Features
 
@@ -168,7 +168,7 @@ Command                              | Description
 
 ## Metrics
 
-With Atom's default [`metrics`](https://atom.io/packages/metrics) package enabled, this package sends anonymized usage statistics to Google Analytics. The data transferred is limited to the name of the methods called by the user ([see for yourself](https://github.com/idleberg/atom-language-nsis/search?q=ga+sendEvent&l=CoffeeScript)!) This helps me getting an understanding how this package is used. If you oppose data collection of that kind, you have probably disabled the `metrics` package already. Otherwise, please do.
+With Atom's built-in [`metrics`](https://atom.io/packages/metrics) package enabled, this package sends anonymized usage statistics to Google Analytics. The data transferred is limited to the name of the methods called by the user ([see for yourself](https://github.com/idleberg/atom-language-nsis/search?q=ga+sendEvent&l=CoffeeScript)!) with IP adresses anoymized. This helps me getting an understanding how this package is used. If you oppose data collection of that kind, you have probably disabled the `metrics` package already. Otherwise, please do.
 
 ## Related
 
