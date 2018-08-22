@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "@nsis/nlf": "^0.3.0",
+    "@nsis/nlf": "^0.4.1",
     "atom-package-deps": "^4.6.2",
     "atom-select-list": "^0.7.1",
     "cson": "^5.1.0",
