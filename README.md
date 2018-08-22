@@ -78,11 +78,13 @@ Clone repository as `language-nsis`:
 $ git clone https://github.com/idleberg/atom-language-nsis language-nsis
 ```
 
-Inside the cloned directory, install Node dependencies:
+Inside the cloned directory, install dependencies using your preferered Node package manager:
 
 ```bash
 $ yarn || npm install
 ```
+
+With Atom shell commands installed, you can use `apm install` rather than relying on third-party package managers.
 
 ### Package Dependencies
 
