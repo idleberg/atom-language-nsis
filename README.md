@@ -84,7 +84,7 @@ Inside the cloned directory, install dependencies using your preferered Node pac
 $ yarn || npm install
 ```
 
-With Atom shell commands installed, you can use `apm install` rather than relying on third-party package managers.
+With [shell commands](https://flight-manual.atom.io/getting-started/sections/installing-atom/#installing-atom-on-mac) installed, you can use `apm install` rather than relying on third-party package managers.
 
 ### Package Dependencies
 
