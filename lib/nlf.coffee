@@ -1,7 +1,5 @@
 NLF = require "@nsis/nlf"
 
-counter = 0
-
 module.exports = NSISLanguageFile =
   convert: ->
     editor = atom.workspace.getActiveTextEditor()
@@ -22,7 +20,7 @@ module.exports = NSISLanguageFile =
       console.error e
       return atom.notifications.addError("Conversion Failed", detail: e, dismissable: true)
 
-    @createNewTab(editor, output, "source.json")
+    @openNewFile(editor, output, "json")
 
   convertJSON: (editor) ->
     try
@@ -32,13 +30,17 @@ module.exports = NSISLanguageFile =
       console.error e
       return atom.notifications.addError("Conversion Failed", detail: e, dismissable: true)
 
-    @createNewTab(editor, output, "source.nlf")
+    @openNewFile(editor, output, "nlf")
 
-  createNewTab: (editor, input, targetExt) ->
-    atom.workspace.open(null, { pending: true })
+  openNewFile: (editor, input, targetExt) ->
+    { basename, extname } = require "path"
+
+    fileName = editor.getFileName().toString()
+    newFileName = basename(fileName, extname(fileName))
+
+    atom.workspace.open("#{newFileName}.#{targetExt}", { pending: true })
       .then (newTab) ->
-        newTab.setGrammar(atom.grammars.grammarForScopeName(targetExt))
-        newTab.insertText(input)
+        newTab.setText(input)
 
       .catch (error) ->
         atom.notifications.addError(error, dismissable: true)
