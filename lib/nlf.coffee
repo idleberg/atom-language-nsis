@@ -20,7 +20,7 @@ module.exports = NSISLanguageFile =
       console.error e
       return atom.notifications.addError("Conversion Failed", detail: e, dismissable: true)
 
-    @openNewFile(editor, output, "json")
+    @openNewFile(editor, output, "source.json")
 
   convertJSON: (editor) ->
     try
@@ -30,16 +30,12 @@ module.exports = NSISLanguageFile =
       console.error e
       return atom.notifications.addError("Conversion Failed", detail: e, dismissable: true)
 
-    @openNewFile(editor, output, "nlf")
+    @openNewFile(editor, output, "source.nlf")
 
   openNewFile: (editor, input, targetExt) ->
-    { basename, extname } = require "path"
-
-    fileName = editor.getFileName().toString()
-    newTabName = basename(fileName, extname(fileName))
-
-    atom.workspace.open("#{newTabName}.#{targetExt}", { pending: true })
+    atom.workspace.open(null, { pending: true })
       .then (newTab) ->
+        newTab.setGrammar(atom.grammars.grammarForScopeName(targetExt))
         newTab.insertText(input)
 
       .catch (error) ->
