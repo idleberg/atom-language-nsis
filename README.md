@@ -78,13 +78,11 @@ Clone repository as `language-nsis`:
 $ git clone https://github.com/idleberg/atom-language-nsis language-nsis
 ```
 
-Inside the cloned directory, install dependencies using your preferered Node package manager:
+Inside the cloned directory, install dependencies using your preferred Node package manager:
 
 ```bash
 $ yarn || npm install
 ```
-
-With [shell commands](https://flight-manual.atom.io/getting-started/sections/installing-atom/#installing-atom-on-mac) installed, you can use `apm install` rather than relying on third-party package managers.
 
 ### Package Dependencies
 
