@@ -15,7 +15,7 @@ module.exports = NSISLanguageFile =
   convertNLF: (editor) ->
     try
       input = editor.getText()
-      output = NLF.parse(input, true)
+      output = NLF.parse(input, { stringify: true })
     catch e
       console.error e
       return atom.notifications.addError("Conversion Failed", detail: e, dismissable: true)
