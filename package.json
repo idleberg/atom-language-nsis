@@ -60,6 +60,6 @@
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^4.0.0",
     "gulp-jsonlint": "^1.2.2",
-    "husky": "^0.14.3"
+    "husky": "^1.0.0"
   }
 }
