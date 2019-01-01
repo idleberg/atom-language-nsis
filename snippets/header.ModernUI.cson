@@ -1097,6 +1097,12 @@
     descriptionMoreURL: 'http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html'
     leftLabelHTML: '<span class=\'syntax--support function\'>MUI2.nsh</span>'
     prefix: 'MUI_STARTMENU_WRITE_BEGIN'
+  MUI_TEXTCOLOR:
+    body: '!define MUI_TEXTCOLOR \"${1:RRGGBB}\"$0'
+    description: 'Usage: !define MUI_TEXTCOLOR ui_file'
+    descriptionMoreURL: 'http://nsis.sourceforge.net/Docs/Modern%20UI/Readme.html'
+    leftLabelHTML: '<span class=\'syntax--support function\'>MUI2.nsh</span>'
+    prefix: 'MUI_TEXTCOLOR'
   MUI_UI:
     body: '!define MUI_UI \"${1:ui_file}.exe\"$0'
     description: 'Usage: !define MUI_UI ui_file'
