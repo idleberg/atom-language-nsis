@@ -4,6 +4,7 @@
   "description": "Atom language support for NSIS, including grammar, snippets and build system",
   "license": "MIT OR GPL-2.0",
   "scripts": {
+    "postinstall": "node tools/build > ./snippets/core.NLF.cson",
     "precommit": "npm run test",
     "test": "gulp lint"
   },
