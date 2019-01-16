@@ -1,5 +1,11 @@
+# Package Managers
 bower_components/
 node_modules/
 npm-debug.log*
-todo.md
+shrinkwrap.yaml
 vendor/
+yarn-error.log
+
+# Project specific
+snippets/core.NLF.cson
+todo.md

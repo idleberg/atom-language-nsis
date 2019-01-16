@@ -11,7 +11,8 @@ const coffeeFiles = [
     './keymaps/*.cson',
     './lib/**/*.coffee',
     './menus/*.cson',
-    './snippets/*.cson'
+    './snippets/*.cson',
+    '!./snippets/core.NLF.cson'
 ];
 
 const jsonFiles = [
