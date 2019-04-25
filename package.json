@@ -4,8 +4,6 @@
   "description": "Atom language support for NSIS, including grammar, snippets and build system",
   "license": "MIT OR GPL-2.0",
   "scripts": {
-    "postinstall": "node tools/build > ./snippets/core.NLF.cson",
-    "precommit": "npm run test",
     "test": "gulp lint"
   },
   "author": {
@@ -46,21 +44,26 @@
     }
   },
   "dependencies": {
-    "@nsis/nlf": "^0.5.0",
-    "atom-package-deps": "^5.0.0",
+    "@nsis/nlf": "^0.6.1",
+    "atom-package-deps": "^5.1.0",
     "atom-select-list": "^0.7.2",
     "cson": "^5.1.0",
     "getmac": "^1.4.6",
     "makensis": "^0.17.0",
-    "opn": "^5.4.0",
+    "open": "^6.0.0",
     "yaml-js": "^0.3.0"
   },
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.1",
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^4.0.0",
-    "gulp-jsonlint": "^1.2.2",
-    "husky": "^1.3.1"
+    "gulp-jsonlint": "^1.3.0",
+    "husky": "^2.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
