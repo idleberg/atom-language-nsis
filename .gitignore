@@ -7,5 +7,4 @@ vendor/
 yarn-error.log
 
 # Project specific
-snippets/core.NLF.cson
 todo.md
