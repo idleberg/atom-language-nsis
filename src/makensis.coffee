@@ -2,12 +2,6 @@ module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
     { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnCompletion } = require "./util"
-    ga = require "./ga"
-
-    if strictMode is true
-      ga.sendEvent "makensis", "Save & Compile (strict)"
-    else
-      ga.sendEvent "makensis", "Save & Compile"
 
     editor = atom.workspace.getActiveTextEditor()
     return atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false) unless editor?
@@ -24,7 +18,6 @@ module.exports = Makensis =
             text: "Open Settings"
             className: "icon icon-gear"
             onDidClick: ->
-              require("./ga").sendEvent "util", "Open Settings"
               atom.workspace.open("atom://config/packages/language-nsis", {pending: true, searchAllPanes: true})
               notification.dismiss()
           }
@@ -97,9 +90,6 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix } = require "./util"
     { version } = require "makensis"
-    ga = require "./ga"
-
-    ga.sendEvent "makensis", "Show Version"
 
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
@@ -122,12 +112,9 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { hdrInfo } = require "makensis"
-    ga = require "./ga"
 
     showFlagsAsObject = getConfig("showFlagsAsObject")
     flagFormat = " (JSON)" if showFlagsAsObject
-
-    ga.sendEvent "makensis", "Show Compiler Flags#{flagFormat}"
 
     getMakensisPath (pathToMakensis) ->
       clearConsole(consolePanel)
@@ -142,9 +129,6 @@ module.exports = Makensis =
     { spawn } = require "child_process"
     { clearConsole, getConfig, getMakensisPath, getPrefix, logCompilerFlags } = require "./util"
     { cmdHelp } = require "makensis"
-    ga = require "./ga"
-
-    ga.sendEvent "makensis", "Command Reference"
 
     getMakensisPath (pathToMakensis) ->
       cmdHelp('', {pathToMakensis: pathToMakensis, json: true}).then((output) ->

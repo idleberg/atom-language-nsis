@@ -15,7 +15,7 @@ module.exports = Util =
     return ""
 
   getConfig: (key = "") ->
-    meta = require "../package.json"
+    meta = require("atom-read-manifest").readManifestSync('language-nsis')
 
     if key?
       return atom.config.get("#{meta.name}.#{key}")
@@ -121,9 +121,7 @@ module.exports = Util =
       )
 
   openSettings: ->
-    ga = require "./ga"
-    meta = require "../package.json"
-    ga.sendEvent "util", "Open Settings"
+    meta = require("atom-read-manifest").readManifestSync('language-nsis')
 
     options =
       pending: true
@@ -138,20 +136,15 @@ module.exports = Util =
   revealInstaller: (outFile) ->
     { access, existsSync, F_OK } = require "fs"
     { shell } = require "electron"
-    ga = require "./ga"
 
     access outFile, F_OK, (error) ->
       return console.log error if error or outFile is ""
 
-      ga.sendEvent "util", "Reveal Installer"
       shell.showItemInFolder(outFile)
 
   runInstaller: (outFile) ->
     { spawn } = require "child_process"
     { platform } = require "os"
-    ga = require "./ga"
-
-    ga.sendEvent "util", "Run Installer"
 
     if platform() is "win32"
       try
@@ -166,13 +159,7 @@ module.exports = Util =
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
   satisfyDependencies: (autoRun = false) ->
-    ga = require "./ga"
-    meta = require "../package.json"
-
-    if autoRun is true
-      ga.sendEvent "util", "Satisfy Dependencies (auto)"
-    else
-      ga.sendEvent "util", "Satisfy Dependencies (manual)"
+    meta = require("atom-read-manifest").readManifestSync('language-nsis')
 
     require("atom-package-deps").install(meta.name, true)
 
