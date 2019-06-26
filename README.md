@@ -165,10 +165,6 @@ Command                              | Description
 `NSIS: Show Compiler Flags`          | Shows output of `makensis /HDRINFO`
 `NSIS: Convert Language File`        | Converts NLF to JSON and vice versa
 
-## Metrics
-
-With Atom's built-in [`metrics`](https://atom.io/packages/metrics) package enabled, this package sends anonymized usage statistics to Google Analytics. The data transferred is limited to the name of the methods called by the user ([see for yourself](https://github.com/idleberg/atom-language-nsis/search?q=ga+sendEvent&l=CoffeeScript)!) with IP adresses anoymized. This helps me getting an understanding how this package is used. If you oppose data collection of that kind, you have probably disabled the `metrics` package already. Otherwise, please do.
-
 ## Related
 
 - [node-makensis](https://www.npmjs.com/package/makensis) - Node wrapper for `makensis`
