@@ -1,10 +1,13 @@
+{ readManifestSync } = require("atom-read-manifest")
+meta = readManifestSync("language-nsis")
+
 module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
     { spawn } = require "child_process"
     { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, isWindowsCompatible, notifyOnCompletion } = require "./util"
 
     editor = atom.workspace.getActiveTextEditor()
-    return atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false) unless editor?
+    return atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false) unless editor?
 
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
@@ -102,7 +105,7 @@ module.exports = Makensis =
             console.info "makensis #{output.stdout} (#{pathToMakensis})"
             atom.getCurrentWindow().openDevTools()
         else
-          atom.notifications.addInfo("**language-nsis**", detail: "makensis #{output.stdout} (#{pathToMakensis})", dismissable: true)
+          atom.notifications.addInfo("**#{meta.name}**", detail: "makensis #{output.stdout} (#{pathToMakensis})", dismissable: true)
 
         return
       ).catch (output) ->

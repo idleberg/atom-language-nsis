@@ -1,3 +1,6 @@
+{ readManifestSync } = require("atom-read-manifest")
+meta = readManifestSync('language-nsis')
+
 module.exports = Util =
   clearConsole: (consolePanel) ->
     try
@@ -15,8 +18,6 @@ module.exports = Util =
     return ""
 
   getConfig: (key = "") ->
-    meta = require("atom-read-manifest").readManifestSync('language-nsis')
-
     if key?
       return atom.config.get("#{meta.name}.#{key}")
 
@@ -121,8 +122,6 @@ module.exports = Util =
       )
 
   openSettings: ->
-    meta = require("atom-read-manifest").readManifestSync('language-nsis')
-
     options =
       pending: true
       searchAllPanes: true
@@ -159,7 +158,6 @@ module.exports = Util =
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
   satisfyDependencies: (autoRun = false) ->
-    meta = require("atom-read-manifest").readManifestSync('language-nsis')
 
     require("atom-package-deps").install(meta.name, true)
 
