@@ -39,6 +39,21 @@
     "linter-makensis:0.7.0",
     "linter-ui-default"
   ],
+  "activationCommands": {
+    "atom-workspace": [
+      "NSIS:convert-language-file",
+      "NSIS:create-.atom–build-file",
+      "NSIS:create-.atom–build-file-for-wine",
+      "NSIS:open-package-settings",
+      "NSIS:remove-default-runner",
+      "NSIS:satisfy-package-dependencies",
+      "NSIS:save-&-compile",
+      "NSIS:save-&-compile-strict",
+      "NSIS:set-default-runner",
+      "NSIS:show-compiler-flags",
+      "NSIS:show-version"
+    ]
+  },
   "activationHooks": [
     "language-nlf:grammar-used",
     "language-nsis:grammar-used"
