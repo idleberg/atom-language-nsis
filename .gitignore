@@ -6,7 +6,9 @@ shrinkwrap.yaml
 vendor/
 yarn-error.log
 
-# Project specific
+# Development Files
 *.d.ts
 *.map
+
+# Project-specific
 todo.md
