@@ -7,4 +7,6 @@ vendor/
 yarn-error.log
 
 # Project specific
+*.d.ts
+*.map
 todo.md
