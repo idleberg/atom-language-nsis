@@ -71,7 +71,6 @@
     "atom-read-manifest": "^0.3.0",
     "atom-select-list": "^0.7.2",
     "cson": "^5.1.0",
-    "getmac": "^1.4.6",
     "makensis": "^0.17.0",
     "open": "^6.3.0",
     "yaml-js": "^0.3.0"
