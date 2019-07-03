@@ -55,8 +55,7 @@
     ]
   },
   "activationHooks": [
-    "language-nlf:grammar-used",
-    "language-nsis:grammar-used"
+    "language-nlf:grammar-used"
   ],
   "consumedServices": {
     "console-panel": {
