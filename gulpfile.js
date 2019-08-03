@@ -9,7 +9,7 @@ const stylish = require('coffeelint-stylish');
 const coffeeFiles = [
     './grammars/*.cson',
     './keymaps/*.cson',
-    './lib/**/*.coffee',
+    './src/**/*.coffee',
     './menus/*.cson',
     './snippets/*.cson',
     '!./snippets/core.NLF.cson'
