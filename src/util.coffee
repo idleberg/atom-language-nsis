@@ -129,7 +129,7 @@ module.exports = Util =
     atom.workspace.open("atom://config/packages/#{meta.name}", options)
 
   openURL: (cmd) ->
-    opn = require "opn"
+    opn = require "open"
     opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference"
 
   revealInstaller: (outFile) ->
