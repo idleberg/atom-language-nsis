@@ -41,7 +41,7 @@ module.exports = Makensis =
           compilerArguments = getConfig("compilerArguments")?.trim().split(" ")
 
           # only add WX flag if not already specified
-          if strictMode is true and compilerArguments.indexOf("#{prefix}WX") is -1
+          if strictMode is true and !compilerArguments.includes("-WX") and !compilerArguments.includes("/WX")
             compilerArguments.push "#{prefix}WX"
           compilerArguments.push script
 
