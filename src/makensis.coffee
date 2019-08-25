@@ -12,7 +12,7 @@ module.exports = Makensis =
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
 
-    if getConfig("allowHeaderCompilation") is false and !script.endsWith "nsi"
+    if getConfig("allowHeaderCompilation") is false and script.endsWith "nsh"
       notification = atom.notifications.addWarning(
         "Compiling header files is blocked by default. You can allow it in the package settings.",
         dismissable: true,
