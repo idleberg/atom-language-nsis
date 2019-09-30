@@ -2477,6 +2477,18 @@
     descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/ManifestDPIAware.html?utm_source=atom&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
     prefix: 'ManifestDPIAware'
+  ManifestLongPathAware:
+    body: 'ManifestLongPathAware ${1:notset|true|false}$0'
+    description: 'Usage: ManifestLongPathAware notset|true|false'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/ManifestLongPathAware.html?utm_source=atom&utm_content=snippet'
+    leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
+    prefix: 'ManifestLongPathAware'
+  ManifestMaxVersionTested:
+    body: 'ManifestMaxVersionTested ${1:major}.${2:minor}.${3:build}.${3:revision}$0'
+    description: 'Usage: ManifestMaxVersionTested maj.min.bld.rev'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/ManifestMaxVersionTested.html?utm_source=atom&utm_content=snippet'
+    leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
+    prefix: 'ManifestMaxVersionTested'
   ManifestSupportedOS:
     body: 'ManifestSupportedOS ${1:none|all|WinVista|Win7|Win8|{GUID}}$0'
     description: 'Usage: ManifestSupportedOS none|all|WinVista|Win7|Win8|Win8.1|Win10|{GUID} [...]'
@@ -2513,12 +2525,24 @@
     descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/OutFile.html?utm_source=atom&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
     prefix: 'OutFile'
+  PEAddResource:
+    body: 'PEAddResource ${1:[/OVERWRITE|/REPLACE]} ${2:file} ${3:restype} ${4:resname}${5: ${6:reslang}}$0'
+    description: 'Usage: PEAddResource [/OVERWRITE|/REPLACE] file restype resname [reslang]'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/PEAddResource.html?utm_source=atom&utm_content=snippet'
+    leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
+    prefix: 'PEAddResource'
   PEDllCharacteristics:
     body: 'PEDllCharacteristics ${1:addbits} ${2:removebits}$0'
     description: 'Usage: PEDllCharacteristics addbits removebits'
     descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/PEDllCharacteristics.html?utm_source=atom&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
     prefix: 'PEDllCharacteristics'
+  PERemoveResource:
+    body: 'PERemoveResource ${1:[NOERRORS]} ${2:restype} ${3:resname} ${4:reslang|ALL}$0'
+    description: 'Usage: [/NOERRORS] restype resname reslang|ALL'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/PERemoveResource.html?utm_source=atom&utm_content=snippet'
+    leftLabelHTML: '<span class=\'syntax--keyword\'>K</span>'
+    prefix: 'PERemoveResource'
   PESubsysVer:
     body: 'PESubsysVer ${1:major}.${2:minor}$0'
     description: 'Usage: PESubsysVer major.minor'
