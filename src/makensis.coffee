@@ -38,7 +38,7 @@ module.exports = Makensis =
       editor.save().then ->
         getMakensisPath (pathToMakensis) ->
           prefix = getPrefix()
-          compilerArguments = getConfig("compilerArguments")?.trim().split(" ")
+          compilerArguments = getConfig("compilerArguments")
 
           # only add WX flag if not already specified
           if strictMode is true and !compilerArguments.includes("-WX") and !compilerArguments.includes("/WX")
