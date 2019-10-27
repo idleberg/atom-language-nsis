@@ -130,7 +130,7 @@ module.exports = Util =
 
   openURL: (cmd) ->
     opn = require "open"
-    opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference"
+    opn "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/#{cmd}.html?utm_source=atom&utm_content=reference", { url: true }
 
   revealInstaller: (outFile) ->
     { access, existsSync, F_OK } = require "fs"
