@@ -10,9 +10,13 @@ module.exports = NsisCore =
       order: 0
     compilerArguments:
       title: "Compiler Arguments"
-      description: "Specify the default arguments for `makensis` ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
-      type: "string"
-      default: "#{getPrefix()}V3"
+      description: "Specify the default arguments for `makensis`, separated by commas ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))"
+      type: "array"
+      default: [
+        "#{getPrefix()}V3"
+      ]
+      items:
+        type: "string"
       order: 1
     alwaysShowOutput:
       title: "Always Show Output"
