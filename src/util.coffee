@@ -142,12 +142,12 @@ module.exports = Util =
       shell.showItemInFolder(outFile)
 
   runInstaller: (outFile) ->
-    { spawn } = require "child_process"
+    { exec, spawn } = require "child_process"
     { platform } = require "os"
 
     if platform() is "win32"
       try
-        spawn outFile
+        exec "cmd /c \"#{outFile}\""
       catch error
         atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
 
