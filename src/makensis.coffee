@@ -53,27 +53,31 @@ module.exports = Makensis =
           outFile = ""
 
           makensis.stdout.on "data", (line) ->
+            lineString = line.toString()
+
             if hasWarning is false and line.indexOf("warning: ") isnt -1
               hasWarning = true
 
               try
-                consolePanel.warn(line.toString()) if getConfig("alwaysShowOutput")
+                consolePanel.warn(lineString) if getConfig("alwaysShowOutput")
               catch
-                console.warn line.toString()
+                console.warn lineString
             else
               try
-                consolePanel.log(line.toString()) if getConfig("alwaysShowOutput")
+                consolePanel.log(lineString) if getConfig("alwaysShowOutput")
               catch
-                console.log line.toString()
+                console.log lineString
 
             if outFile is ""
               outFile = detectOutfile line
 
           makensis.stderr.on "data", (line) ->
+            lineString = line.toString()
+
             try
-              consolePanel.error line.toString()
+              consolePanel.error lineString
             catch
-              console.error line.toString()
+              console.error lineString
 
           makensis.on "close", ( errorCode ) ->
             if errorCode is 0
