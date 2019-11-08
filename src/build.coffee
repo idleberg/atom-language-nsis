@@ -29,11 +29,11 @@ module.exports = Build =
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFileSyntax = getConfig("buildFileSyntax")
+      buildFileSyntax = getConfig("buildFileSyntax").toLowerCase()
 
-      if buildFileSyntax is "CSON"
+      if buildFileSyntax is "cson"
         buildFileBase = ".atom-build.cson"
-      else if buildFileSyntax is "YAML"
+      else if buildFileSyntax is "yaml"
         buildFileBase = ".atom-build.yml"
       else
         buildFileBase = ".atom-build.json"

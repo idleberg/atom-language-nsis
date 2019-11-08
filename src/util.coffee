@@ -65,7 +65,7 @@ module.exports = Util =
     else
       stdOut = output.stdout
 
-    if Util.getConfig("compilerOutput") is "Console"
+    if Util.getConfig("compilerOutput").toLowerCase() is "console"
       try
         consolePanel.raw(stdOut)
       catch

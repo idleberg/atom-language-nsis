@@ -98,7 +98,7 @@ module.exports = Makensis =
       clearConsole(consolePanel)
 
       version({pathToMakensis: pathToMakensis}).then((output) ->
-        if getConfig("compilerOutput") is "Console"
+        if getConfig("compilerOutput").toLowerCase() is "console"
           try
             consolePanel.log("makensis #{output.stdout} (#{pathToMakensis})")
           catch

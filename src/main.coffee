@@ -51,23 +51,38 @@ module.exports = NsisCore =
     buildFileSyntax:
       title: "Build File Syntax"
       description: "Specify the default syntax for your build file ([requires build](https://atom.io/packages/build))"
-      type: "string",
-      default: "JSON",
+      type: "string"
+      default: "json"
       enum: [
-        "CSON",
-        "JSON",
-        "YAML"
-      ],
+        {
+          value: "cson"
+          description: "CSON"
+        }
+        {
+          value: "json"
+          description: "JSON"
+        }
+        {
+          value: "yaml"
+          description: "YAML"
+        }
+      ]
       order: 7
     compilerOutput:
       title: "Compiler Output"
       description: "Specify whether `makensis` outputs its version or compiler flags to notifications the console"
-      type: "string",
-      default: "Notification",
+      type: "string"
+      default: "notification"
       enum: [
-        "Notification",
-        "Console"
-      ],
+        {
+          value: "notification"
+          description: "Notification"
+        }
+        {
+          value: "console"
+          description: "Console"
+        }
+      ]
       order: 8
     useWineToRun:
       title: "Use Wine to run"
