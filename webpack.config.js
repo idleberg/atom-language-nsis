@@ -3,6 +3,7 @@
 'use strict';
 
 const path = require('path');
+var nodeExternals = require('webpack-node-externals');
 
 /**@type {import('webpack').Configuration}*/
 const config = {
@@ -16,10 +17,11 @@ const config = {
     devtoolModuleFilenameTemplate: '../[resource-path]'
   },
   devtool: 'source-map',
-  externals: {
-    atom: 'atom',
-    electron: 'electron'
-  },
+  externals: [
+    'atom',
+    'electron',
+    nodeExternals()
+  ],
   resolve: {
     extensions: ['.coffee', '.js']
   },
