@@ -69,7 +69,7 @@
     "atom-package-deps": "^5.1.0",
     "atom-read-manifest": "^0.3.1",
     "atom-select-list": "^0.7.2",
-    "cson": "^5.1.0",
+    "cson-parser": "^4.0.3",
     "makensis": "^0.18.1",
     "open": "^7.0.0",
     "yaml-js": "^0.3.0"

@@ -12,7 +12,7 @@ module.exports = Build =
       return
 
     if editor.getGrammar().scopeName isnt "source.nsis"
-      atom.beep()
+      atom.notifications.addWarning("**language-nsis**: Unsupported document type", dismissable: false)
       return
 
     createFile = false
@@ -29,11 +29,11 @@ module.exports = Build =
     else
       successMsg = null
       currentPath = path.dirname(currentPath)
-      buildFileSyntax = getConfig("buildFileSyntax").toLowerCase()
+      buildFileSyntax = getConfig("buildFileSyntax")
 
-      if buildFileSyntax is "cson"
+      if buildFileSyntax is "CSON"
         buildFileBase = ".atom-build.cson"
-      else if buildFileSyntax is "yaml"
+      else if buildFileSyntax is "YAML"
         buildFileBase = ".atom-build.yml"
       else
         buildFileBase = ".atom-build.json"
@@ -74,14 +74,15 @@ module.exports = Build =
             errorMatch: "(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script \"(?<file>[^\"]+)\" on line (?<line>\\d+) -- aborting creation process",
             warningMatch: "[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)"
 
-          if buildFileSyntax is "CSON"
-            CSON = require "cson"
-            stringify = CSON.stringify(buildFile, null, 2)
-          if buildFileSyntax is "YAML"
-            YAML = require "yaml-js"
-            stringify = YAML.dump(buildFile)
-          else
-            stringify = JSON.stringify(buildFile, null, 2)
+          switch buildFileSyntax
+            when "CSON"
+              CSON = require "cson-parser"
+              stringify = CSON.stringify(buildFile, null, 2)
+            when "YAML"
+              YAML = require "yaml-js"
+              stringify = YAML.dump(buildFile)
+            else
+              stringify = JSON.stringify(buildFile, null, 2)
 
           # Save build file
           fs.writeFile buildFilePath, stringify, (error) ->
