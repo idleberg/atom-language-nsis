@@ -122,7 +122,7 @@ Fuzzy syntax completions are available through the “Drunken NSIS” snippets, 
 
 ### Building
 
-There are many ways to compile NSIS scripts in Atom. But before you read on, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953).
+There are many ways to compile NSIS scripts in Atom. But before you read on, make sure `makensis` is in your [PATH environment variable](http://superuser.com/a/284351/195953).
 
 As of recently, this package contains build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
