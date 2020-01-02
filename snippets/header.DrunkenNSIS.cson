@@ -14,7 +14,7 @@
   '%{CmdIf}':
     body: '${IfCmd} ${1:command} ${|} ${2:command} ${|}$0'
     description: 'Usage: ${IfCmd} expression statement'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfCmd.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfCmd.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'CmdIf'
   '%{CompareSText}':
@@ -44,13 +44,13 @@
   '%{DoExit}':
     body: '${ExitDo}$0'
     description: 'Usage: ${ExitDo}'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitDo.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitDo.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'DoExit'
   '%{ExistsFile}':
     body: '${FileExists} \"${1:file}\"$0'
     description: 'Usage: logic_lib_statement ${FileExists} file_path'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/FileExists.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/FileExists.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'ExistsFile'
   '%{FilterStrS}':
@@ -110,31 +110,31 @@
   '%{IfAnd}':
     body: '${AndIf} ${1:condition}$0'
     description: 'Usage: ${AndIfNot} expression'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'IfAnd'
   '%{IfElse}':
     body: '${ElseIf} ${1:condition}$0'
     description: 'Usage: ${ElseIf} expression'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIf.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIf.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'IfElse'
   '%{IfNotAnd}':
     body: '${AndIfNot} ${1:condition}$0'
     description: 'Usage: ${AndIfNot} expression'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/AndIfNot.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'IfNotAnd'
   '%{IfNotElse}':
     body: '${ElseIfNot} ${1:condition}$0'
     description: 'Usage: ${ElseIfNot} expression'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIfNot.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseIfNot.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'IfNotElse'
   '%{IfNotOr}':
     body: '${OrIfNot} ${1:condition}$0'
     description: 'Usage: '
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIfNot.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/OrIfNot.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'IfNotOr'
   '%{InsertWordS}':
@@ -212,31 +212,31 @@
   '%{ThenIf}':
     body: '${IfThen} ${1:condition} ${|} ${2:command} ${|}$0'
     description: 'Usage: ${IfThen} expression statement'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThen.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThen.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'ThenIf'
   '%{ThenNotIf}':
     body: '${IfThenNot} ${1:condition} ${|} ${2:command} ${|}$0'
     description: 'Usage: ${IfNotThen} expression statement'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThenNot.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/IfThenNot.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'ThenNotIf'
   '%{UnlessElse}':
     body: '${ElseUnless} ${1:condition}$0'
     description: 'Usage: ${ElseUnless} expression'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseUnless.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ElseUnless.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'UnlessElse'
   '%{WhileEnd}':
     body: '${EndWhile}$0'
     description: 'Usage: ${EndWhile}'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndWhile.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/EndWhile.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'WhileEnd'
   '%{WhileExit}':
     body: '${ExitWhile}$0'
     description: 'Usage: ${ExitWhile}'
-    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitWhile.md'
+    descriptionMoreURL: 'https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/ExitWhile.html?utm_source=vscode&utm_content=snippet'
     leftLabelHTML: '<span class=\'syntax--variable syntax-other\'>%</span>LogicLib.nsh'
     prefix: 'WhileExit'
   '%{WriteConfig}':
