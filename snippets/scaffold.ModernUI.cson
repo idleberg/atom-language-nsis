@@ -10,6 +10,7 @@
       Name "${1:installer_name}"
       OutFile "${2:${1:installer_name}}.exe"
       RequestExecutionLevel ${3:admin}
+Unicode true
       Unicode true
       InstallDir "$PROGRAMFILES\\\\${4:${1:installer_name}}"
 
