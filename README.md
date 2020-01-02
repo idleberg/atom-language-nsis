@@ -133,7 +133,7 @@ If you prefer working with specific compiler arguments, you can specify them in 
 ```cson
 "language-nsis":
   compilerArguments: ["/WX", "/V3"]
-  pathToMakensis: "/usr/local/bin/makensis"
+  pathToMakensis: "C:\\Program Files (x86)\\NSIS\\makensis.exe"
 ```
 
 #### Third-party Build Tools
