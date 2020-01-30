@@ -159,7 +159,7 @@ module.exports = Util =
 
   satisfyDependencies: (autoRun = false) ->
 
-    require("atom-package-deps").install(meta.name, true)
+    require("atom-package-deps").install(meta.name, autoRun)
 
     for k, v of meta["package-deps"]
       if atom.packages.isPackageDisabled(v)
