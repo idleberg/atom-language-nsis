@@ -1,4 +1,5 @@
-{ getConfig, getPrefix, openSettings, satisfyDependencies } = require "./util"
+{ getConfig, getPrefix, openSettings } = require "./util"
+{ satisfyDependencies } = require "atom-satisfy-dependencies"
 
 module.exports = NsisCore =
   config:
@@ -115,7 +116,7 @@ module.exports = NsisCore =
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-version": => Makensis.showVersion(@consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:show-compiler-flags": => Makensis.showCompilerFlags(@consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:open-package-settings": -> openSettings()
-    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": -> satisfyDependencies()
+    @subscriptions.add atom.commands.add "atom-workspace", "NSIS:satisfy-package-dependencies": -> satisfyDependencies('language-nsis')
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file": -> Build.createFile(false)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:create-.atom–build-file-for-wine": -> Build.createFile(true)
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:set-default-runner": -> Runner.set()
@@ -125,7 +126,7 @@ module.exports = NsisCore =
       Lookup.toggle()
     @subscriptions.add atom.commands.add "atom-workspace", "NSIS:convert-language-file": -> NLF.convert()
 
-    satisfyDependencies(true) if getConfig("manageDependencies") is true
+    satisfyDependencies(require('../package.json'), { showPrompt: true }) if getConfig("manageDependencies") is true
 
   deactivate: ->
     @subscriptions?.dispose()

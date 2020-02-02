@@ -71,6 +71,7 @@
     "@nsis/nlf": "^0.6.1",
     "atom-package-deps": "^5.1.0",
     "atom-read-manifest": "^0.3.2",
+    "atom-satisfy-dependencies": "^0.2.1",
     "atom-select-list": "^0.7.2",
     "cson-parser": "^4.0.3",
     "makensis": "^0.20.3",
