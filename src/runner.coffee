@@ -1,5 +1,5 @@
 { readManifestSync } = require("atom-read-manifest")
-meta = readManifestSync("language-nsis")
+meta = readManifestSync()
 
 # atom runner - https://atom.io/packages/atom-runner
 module.exports = Runner =

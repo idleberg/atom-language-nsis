@@ -1,3 +1,5 @@
+meta = readManifestSync()
+
 # build - https://atom.io/packages/build
 module.exports = Build =
   createFile: (wine) ->
@@ -8,11 +10,11 @@ module.exports = Build =
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-      atom.notifications.addWarning("**language-nsis**: No active editor", dismissable: false)
+      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
       return
 
     if editor.getGrammar().scopeName isnt "source.nsis"
-      atom.notifications.addWarning("**language-nsis**: Unsupported document type", dismissable: false)
+      atom.notifications.addWarning("**#{meta.name}**: Unsupported document type", dismissable: false)
       return
 
     createFile = false

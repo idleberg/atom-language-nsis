@@ -1,5 +1,5 @@
 { readManifestSync } = require("atom-read-manifest")
-meta = readManifestSync("language-nsis")
+meta = readManifestSync()
 
 module.exports = Makensis =
   compile: (strictMode, consolePanel) ->
@@ -21,7 +21,7 @@ module.exports = Makensis =
             text: "Open Settings"
             className: "icon icon-gear"
             onDidClick: ->
-              atom.workspace.open("atom://config/packages/language-nsis", {pending: true, searchAllPanes: true})
+              atom.workspace.open("atom://config/packages/#{meta.name}", {pending: true, searchAllPanes: true})
               notification.dismiss()
           }
           {

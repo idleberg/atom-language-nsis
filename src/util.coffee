@@ -1,5 +1,5 @@
 { readManifestSync } = require("atom-read-manifest")
-meta = readManifestSync('language-nsis')
+meta = readManifestSync()
 
 module.exports = Util =
   clearConsole: (consolePanel) ->
@@ -9,7 +9,7 @@ module.exports = Util =
       console.clear() if Util.getConfig("clearConsole")
 
   detectOutfile: (line) ->
-    if line.indexOf('Output: "') isnt -1
+    if line.indexOf("Output: \"") isnt -1
       regex = /Output: \"(.*\.exe)\"\r?\n/g
       result = regex.exec(line.toString())
 
@@ -36,12 +36,12 @@ module.exports = Util =
 
     which.stdout.on "data", ( data ) ->
       path = data.toString().trim()
-      atom.config.set("language-nsis.pathToMakensis", path)
+      atom.config.set("#{meta.name}.pathToMakensis", path)
       return callback(path)
 
     which.on "close", ( errorCode ) ->
       if errorCode > 0
-        atom.notifications.addError("**language-nsis**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+        atom.notifications.addError("**#{meta.name}**: makensis is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
   getPrefix: ->
     { platform } = require "os"
@@ -72,7 +72,7 @@ module.exports = Util =
         console.info stdOut
         atom.getCurrentWindow().openDevTools()
     else
-      atom.notifications.addInfo("**language-nsis**", detail: stdOut, dismissable: true)
+      atom.notifications.addInfo("**#{meta.name}**", detail: stdOut, dismissable: true)
 
   notifyOnCompletion: (type, openButton, outFile) ->
     buttons = []
@@ -149,13 +149,13 @@ module.exports = Util =
       try
         exec "cmd /c \"#{outFile}\""
       catch error
-        atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
+        atom.notifications.addWarning("**#{meta.name}**", detail: error, dismissable: true)
 
     else if Util.getConfig("useWineToRun") is true
       try
         spawn "wine", [ outFile ]
       catch error
-        atom.notifications.addWarning("**language-nsis**", detail: error, dismissable: true)
+        atom.notifications.addWarning("**#{meta.name}**", detail: error, dismissable: true)
 
   which: ->
     { platform } = require "os"
