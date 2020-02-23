@@ -1,5 +1,7 @@
 { getConfig, getPrefix, openSettings } = require "./util"
+{ readManifestSync } = require("atom-read-manifest")
 { satisfyDependencies } = require "atom-satisfy-dependencies"
+
 meta = readManifestSync()
 
 module.exports = NsisCore =

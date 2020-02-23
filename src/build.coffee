@@ -1,3 +1,4 @@
+{ readManifestSync } = require("atom-read-manifest")
 meta = readManifestSync()
 
 # build - https://atom.io/packages/build
