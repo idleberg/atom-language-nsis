@@ -501,10 +501,10 @@ atom-read-manifest@^0.3.3:
     find-up "^4.1.0"
     util "^0.12.1"
 
-atom-read-manifest@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/atom-read-manifest/-/atom-read-manifest-0.4.0.tgz#6bbb1cb7e5378b962b2ebbf7b51a631eaca590b6"
-  integrity sha512-uoXr2BYEFK9IaOY7zUV/CNU5NMCirK/wWATlLaVZd0+DYbuN3z25ipLu0jtUDYZyVoy5T+lSassnDcXyuSLCfA==
+atom-read-manifest@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/atom-read-manifest/-/atom-read-manifest-0.4.1.tgz#95b8de87c78ddc59e4cfbbc906e8549e4f3c96f3"
+  integrity sha512-BItj/nAJnVm0lGXzkGS2bFY2VV7c8zbQEXT7Zy7VcchTwTHeM+wpFUmG2KgAV6C3pCV5ZdRwp8kxfzxEVHcI0Q==
   dependencies:
     caller-callsite "^4.1.0"
     find-up "^4.1.0"
