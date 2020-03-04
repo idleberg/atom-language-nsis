@@ -42,7 +42,7 @@ module.exports = NsisCore =
       order: 4
     allowHeaderCompilation:
       title: "Allow Header Compilation"
-      description: "By default, only `.nsi` files will be compiled. This setting enables it for `.nsh` files as well."
+      description: "By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well."
       type: "boolean"
       default: false
       order: 5
