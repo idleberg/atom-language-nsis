@@ -70,12 +70,12 @@
   "dependencies": {
     "@nsis/nlf": "^0.6.1",
     "atom-package-deps": "^5.1.0",
-    "atom-read-manifest": "^0.4.1",
+    "atom-read-manifest": "^0.5.1",
     "atom-satisfy-dependencies": "^0.2.1",
     "atom-select-list": "^0.7.2",
     "cson-parser": "^4.0.4",
     "makensis": "^0.20.3",
-    "open": "^7.0.2",
+    "open": "^7.0.4",
     "yaml-js": "^0.3.0"
   },
   "devDependencies": {
@@ -85,9 +85,9 @@
     "gulp": "^4.0.2",
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^4.0.0",
-    "gulp-jsonlint": "^1.3.1",
-    "husky": "^4.2.3",
-    "webpack": "^4.41.6",
+    "gulp-jsonlint": "^1.3.2",
+    "husky": "^4.2.5",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
   },
