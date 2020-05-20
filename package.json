@@ -5,8 +5,9 @@
   "license": "MIT OR GPL-2.0",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode none --watch",
+    "dev": "npm run start",
     "lint": "gulp lint",
+    "start": "webpack --mode none --watch",
     "test": "npm run lint"
   },
   "author": {
