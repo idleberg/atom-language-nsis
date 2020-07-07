@@ -75,7 +75,7 @@
     "atom-satisfy-dependencies": "^0.2.1",
     "atom-select-list": "^0.7.2",
     "cson-parser": "^4.0.4",
-    "makensis": "^0.20.3",
+    "makensis": "^0.21.0",
     "open": "^7.0.4",
     "yaml-js": "^0.3.0"
   },
