@@ -19,14 +19,14 @@ function clearConsole(consolePanel: ConsolePanel): void {
 }
 
 function detectOutfile(line: string): string {
-  if (line.indexOf("Output: \"") !== -1) {
+  if (line.includes('Output: "')) {
     const regex = /Output: "(.*\.exe)"\r?\n/g;
     const result = regex.exec(line.toString());
 
     return result[1];
   }
 
-  return "";
+  return '';
 }
 
 async function fileExists(filePath: string): Promise<boolean> {
@@ -195,9 +195,9 @@ async function runInstaller(outFile) {
     }
 
     return;
-  } else if (getConfig("useWineToRun") === true) {
+  } else if (getConfig('useWineToRun') === true) {
     try {
-      await execa("wine", [ outFile ]);
+      await execa('wine', [ outFile ]);
     } catch (error) {
       atom.notifications.addWarning('Failed to run installer, see console for details', {
         dismissable: true

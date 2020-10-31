@@ -1,4 +1,5 @@
 import { getPrefix } from './util';
+import { platform } from 'os';
 
 export default {
   pathToMakensis: {
@@ -93,7 +94,7 @@ export default {
     title: 'Use Wine to run',
     description: 'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)',
     type: 'boolean',
-    default: false,
+    default: platform() === 'win32' ? false : true,
     order: 9
   },
   manageDependencies: {

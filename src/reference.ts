@@ -5,13 +5,13 @@ import SelectListView from 'atom-select-list';
 export default {
   init(): void {
     this.selectListView = new SelectListView({
-      emptyMessage: "No command matches your search.",
+      emptyMessage: 'No command matches your search.',
       items: [],
 
       filterKeyForItem(item) { return item; },
 
       elementForItem(item) {
-        const element = document.createElement("li");
+        const element = document.createElement('li');
         const html = item;
         element.innerHTML = html;
 
@@ -28,7 +28,7 @@ export default {
       }
     });
 
-    this.selectListView.element.classList.add("nsis-command-list");
+    this.selectListView.element.classList.add('nsis-command-list');
   },
 
   dispose(): void {

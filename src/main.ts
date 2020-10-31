@@ -5,7 +5,7 @@ import { createBuildFile } from './build';
 import { getConfig, manageDependencies } from './util';
 import commandReference from './reference';
 import configSchema from './config';
-import runner from './runner';
+import { setRunner, unsetRunner } from './runner';
 
 export default {
   config: configSchema,
@@ -80,13 +80,13 @@ export default {
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:set-default-runner': () => runner.set(),
+        'NSIS:set-default-runner': () => setRunner(),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:unset-default-runner': () => runner.unset(),
+        'NSIS:unset-default-runner': () => unsetRunner(),
       })
     );
 
