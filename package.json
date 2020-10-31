@@ -9,11 +9,11 @@
     "build": "NODE_ENV=production rollup -c",
     "clean": "rimraf ./lib",
     "dev": "npm run start",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint --fix ./src",
+    "eslint": "eslint --fix ./src",
+    "jsonlint": "jsonlint ./grammars/*.json ./keymaps/*.json menus/*.json snippets/*.json --quiet",
     "prepublishOnly": "npm run clean && npm run build",
     "start": "NODE_ENV=development rollup -w -c",
-    "test": "npm run lint"
+    "test": "npm run eslint"
   },
   "author": {
     "name": "Jan T. Sott",
@@ -121,6 +121,7 @@
     "eslint": "^7.11.0",
     "eslint-plugin-json": "^2.1.2",
     "husky": "^4.3.0",
+    "jsonlint": "^1.6.3",
     "lint-staged": "^10.5.0",
     "rollup": "^2.29.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -132,6 +133,7 @@
     }
   },
   "lint-staged": {
-    "./src/*.ts": "eslint --cache --fix"
+    "*.ts": "eslint --cache --fix",
+    "*.json": "npm run jsonlint"
   }
 }
