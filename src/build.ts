@@ -1,20 +1,20 @@
 import { fileExists, getConfig, getMakensisPath } from './util';
 import { promises as fs } from 'fs';
 import { basename, dirname, join } from 'path';
-import YAML from 'yaml-js';
+import YAML from "yaml-js";
 
 async function createBuildFile(): Promise<any> {
   const editor = atom.workspace.getActiveTextEditor();
 
   if (!editor) {
-    atom.notifications.addWarning(`No active editor`, {
-      dismissable: false,
+    atom.notifications.addWarning(`**language-nsis**: No active editor`, {
+      dismissable: false
     });
 
     return;
   } else if (editor.getGrammar().scopeName !== 'source.nsis') {
-    atom.notifications.addWarning(`Unsupported document type`, {
-      dismissable: false,
+    atom.notifications.addWarning(`**language-nsis**: Unsupported document type`, {
+      dismissable: false
     });
 
     return;
@@ -31,9 +31,9 @@ async function createBuildFile(): Promise<any> {
           text: 'OK',
           onDidClick() {
             notification.dismiss();
-          },
-        },
-      ],
+          }
+        }
+      ]
     });
 
     return;
@@ -53,17 +53,18 @@ async function createBuildFile(): Promise<any> {
         {
           text: 'Overwrite',
           async onDidClick() {
+
             fileExistsNotification.dismiss();
 
             saveBuildFile({
               script: scriptFile,
               syntax: buildFileSyntax,
               fileName: buildFileName,
-              filePath: buildFilePath,
+              filePath: buildFilePath
             });
 
             return;
-          },
+          }
         },
         {
           text: 'Abort',
@@ -71,9 +72,9 @@ async function createBuildFile(): Promise<any> {
             fileExistsNotification.dismiss();
 
             return;
-          },
-        },
-      ],
+          }
+        }
+      ]
     });
   }
 
@@ -81,7 +82,7 @@ async function createBuildFile(): Promise<any> {
     script: scriptFile,
     syntax: buildFileSyntax,
     fileName: buildFileName,
-    filePath: buildFilePath,
+    filePath: buildFilePath
   });
 }
 
@@ -89,13 +90,17 @@ async function saveBuildFile(options) {
   const buildFile = {
     name: options.scriptFile,
     cmd: await getMakensisPath(),
-    args: ['{FILE_ACTIVE}'],
+    args: [
+      '{FILE_ACTIVE}'
+    ],
     cwd: '{FILE_ACTIVE_PATH}',
     errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
-    warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)',
-  };
+    warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
+  }
 
-  const stringifier = options.syntax === 'yaml' ? YAML.dump(buildFile) : JSON.stringify(buildFile, null, 2);
+  const stringifier = options.syntax === 'yaml'
+    ? YAML.dump(buildFile)
+    : JSON.stringify(buildFile, null, 2);
 
   // Save build file
   try {
@@ -104,7 +109,7 @@ async function saveBuildFile(options) {
     console.log(error);
     atom.notifications.addError(`Failed to write ${options.fileName}`, {
       detail: error,
-      dismissable: false,
+      dismissable: false
     });
 
     return;
@@ -113,4 +118,6 @@ async function saveBuildFile(options) {
   atom.workspace.open(options.filePath);
 }
 
-export { createBuildFile };
+export {
+  createBuildFile
+};
