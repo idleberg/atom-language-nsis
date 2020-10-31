@@ -21,49 +21,43 @@ export default {
         'NSIS:command-reference': async () => {
           commandReference.init();
           commandReference.toggle();
-        }
+        },
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:compile': async () => await compile(false, this.consolePanel)
+        'NSIS:compile': async () => await compile(false, this.consolePanel),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:compile-strict': async () => await compile(true, this.consolePanel)
+        'NSIS:compile-strict': async () => await compile(true, this.consolePanel),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:create-.atom–build-file': async () => await createBuildFile(false)
+        'NSIS:create-.atom–build-file': async () => await createBuildFile(),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:create-.atom–build-file-for-wine': async () => await createBuildFile(true)
+        'NSIS:convert-language-file': async () => await convert(),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:convert-language-file': async () => await convert()
+        'NSIS:show-compiler-flags': async () => await showCompilerFlags(this.consolePanel),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:show-compiler-flags': async () => await showCompilerFlags(this.consolePanel)
-      })
-    );
-
-    this.subscriptions.add(
-      atom.commands.add('atom-workspace', {
-        'NSIS:show-version': async () => await showVersion(this.consolePanel)
+        'NSIS:show-version': async () => await showVersion(this.consolePanel),
       })
     );
 
@@ -72,27 +66,27 @@ export default {
         'NSIS:open-package-settings': () => {
           atom.workspace.open(`atom://config/packages/language-nsis`, {
             pending: true,
-            searchAllPanes: true
+            searchAllPanes: true,
           });
-        }
+        },
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:satisfy-dependencies': async () => await manageDependencies()
+        'NSIS:satisfy-dependencies': async () => await manageDependencies(),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:set-default-runner': () => runner.set()
+        'NSIS:set-default-runner': () => runner.set(),
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:unset-default-runner': () => runner.unset()
+        'NSIS:unset-default-runner': () => runner.unset(),
       })
     );
 
@@ -107,5 +101,5 @@ export default {
 
   consumeConsolePanel(consolePanel: ConsolePanel): void {
     this.consolePanel = consolePanel;
-  }
-}
+  },
+};

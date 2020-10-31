@@ -40,7 +40,8 @@ export default [
       'os',
       'path',
       'stream',
-      'util'
+      'util',
+      'yaml-js'
     ],
     plugins: plugins
   },

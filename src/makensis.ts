@@ -6,18 +6,17 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
   const editor = atom.workspace.getActiveTextEditor();
 
   if (!editor) {
-    atom.notifications.addWarning(`**language-nsis**: No active editor`, {
-      dismissable: false
+    atom.notifications.addWarning(`No active editor`, {
+      dismissable: false,
     });
     return;
   }
 
   const script = editor.getPath();
-  const scope  = editor.getGrammar().scopeName;
+  const scope = editor.getGrammar().scopeName;
 
   if (getConfig('allowHeaderCompilation') === false && isHeaderFile(script)) {
-    const notification = atom.notifications.addWarning(
-      'Compiling header files is blocked by default. You can allow it in the package settings.', {
+    const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow it in the package settings.', {
       dismissable: true,
       buttons: [
         {
@@ -27,13 +26,13 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
             // openPackageSettings();
             atom.workspace.open(`atom://config/packages/language-nsis`, {
               pending: true,
-              searchAllPanes: true
+              searchAllPanes: true,
             });
 
             notification.dismiss();
 
             return;
-          }
+          },
         },
         {
           text: 'Cancel',
@@ -41,9 +40,9 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
             notification.dismiss();
 
             return;
-          }
-        }
-      ]
+          },
+        },
+      ],
     });
 
     atom.beep();
@@ -65,7 +64,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
     const compilerArguments: string[] = Array(getConfig('compilerArguments'));
 
     // only add WX flag if not already specified
-    if ((strictMode === true) && !compilerArguments.includes("-WX") && !compilerArguments.includes("/WX")) {
+    if (strictMode === true && !compilerArguments.includes('-WX') && !compilerArguments.includes('/WX')) {
       compilerArguments.push(`${prefix}WX`);
     }
     compilerArguments.push(script);
@@ -75,33 +74,37 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
     // Let's go
     const makensis = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());
     let hasWarning = false;
-    let outFile = "";
+    let outFile = '';
 
-    makensis.stdout.on('data', line => {
+    makensis.stdout.on('data', (line) => {
       const lineString = line.toString();
 
-      if ((hasWarning === false) && (line.indexOf('warning: ') !== -1)) {
+      if (hasWarning === false && line.indexOf('warning: ') !== -1) {
         hasWarning = true;
 
         try {
-          if (getConfig('alwaysShowOutput')) { consolePanel.warn(lineString); }
+          if (getConfig('alwaysShowOutput')) {
+            consolePanel.warn(lineString);
+          }
         } catch (error) {
           console.warn(lineString);
         }
       } else {
         try {
-          if (getConfig('alwaysShowOutput')) { consolePanel.log(lineString); }
+          if (getConfig('alwaysShowOutput')) {
+            consolePanel.log(lineString);
+          }
         } catch (error) {
           console.log(lineString);
         }
       }
 
       if (outFile === '') {
-        return outFile = detectOutfile(line);
+        return (outFile = detectOutfile(line));
       }
     });
 
-    makensis.stderr.on('data', line => {
+    makensis.stderr.on('data', (line) => {
       const lineString = line.toString();
 
       try {
@@ -113,7 +116,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       return;
     });
 
-    makensis.on('close', function( errorCode ) {
+    makensis.on('close', function (errorCode) {
       if (errorCode === 0) {
         if (hasWarning && getConfig('showBuildNotifications')) {
           notifyOnCompletion('addWarning', outFile);
@@ -121,7 +124,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
           notifyOnCompletion('addSuccess', outFile);
         }
       } else if (getConfig('showBuildNotifications')) {
-        atom.notifications.addError('Compile Error', {dismissable: false});
+        atom.notifications.addError('Compile Error', { dismissable: false });
       }
     });
 
@@ -132,9 +135,12 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
 
 async function showVersion(consolePanel: ConsolePanel): Promise<void> {
   const pathToMakensis = await getMakensisPath();
-  const output = (await NSIS.version({
-    pathToMakensis
-  }, await getSpawnEnv()));
+  const output = await NSIS.version(
+    {
+      pathToMakensis,
+    },
+    await getSpawnEnv()
+  );
 
   clearConsole(consolePanel);
 
@@ -146,7 +152,7 @@ async function showVersion(consolePanel: ConsolePanel): Promise<void> {
       atom.openDevTools();
     }
   } else {
-    atom.notifications.addInfo(`**language-nsis**`, {detail: `makensis ${output.stdout} (${pathToMakensis})`, dismissable: true});
+    atom.notifications.addInfo(`NSIS Version`, { detail: `makensis ${output.stdout} (${pathToMakensis})`, dismissable: true });
   }
 }
 
@@ -154,10 +160,13 @@ async function showCompilerFlags(consolePanel: ConsolePanel): Promise<void> {
   const pathToMakensis = await getMakensisPath();
   const showFlagsAsObject = getConfig('showFlagsAsObject');
 
-  const output = await NSIS.hdrInfo({
-    pathToMakensis,
-    json: showFlagsAsObject
-  }, await getSpawnEnv());
+  const output = await NSIS.hdrInfo(
+    {
+      pathToMakensis,
+      json: showFlagsAsObject,
+    },
+    await getSpawnEnv()
+  );
 
   clearConsole(consolePanel);
 
@@ -169,7 +178,7 @@ async function showCompilerFlags(consolePanel: ConsolePanel): Promise<void> {
       atom.openDevTools();
     }
   } else {
-    atom.notifications.addInfo(`**language-nsis**`, {detail: JSON.stringify(output.stdout || output.stderr, null, 2), dismissable: true});
+    atom.notifications.addInfo(`Compiler Flags`, { detail: JSON.stringify(output.stdout || output.stderr, null, 2), dismissable: true });
   }
 }
 
@@ -180,17 +189,12 @@ async function showHelp(selectListView: any): Promise<void> {
     '',
     {
       json: true,
-      pathToMakensis
+      pathToMakensis,
     },
     await getSpawnEnv()
   );
 
-  selectListView.update({items: Object.keys(output.stdout)});
+  selectListView.update({ items: Object.keys(output.stdout) });
 }
 
-export {
-  compile,
-  showCompilerFlags,
-  showHelp,
-  showVersion
-}
+export { compile, showCompilerFlags, showHelp, showVersion };
