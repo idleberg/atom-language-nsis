@@ -48,6 +48,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
 * [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis)
 * [Build Tools](https://github.com/idleberg/atom-language-nsis#building)
 * [Linter](https://github.com/idleberg/atom-language-nsis#linting)
+* [Environment Variables](https://github.com/idleberg/atom-language-nsis#environment-variables)
 
 You can further extend this package with snippets for [third-party plug-ins](https://atom.io/packages/nsis-plugins).
 
@@ -158,12 +159,20 @@ There are several other, previously unmentioned commands available from the [com
 
 Command                              | Description
 -------------------------------------|-------------------------------------
-`NSIS: Look Up Command Online`       | Look up NSIS command online
+`NSIS: Command Reference`       | Look up NSIS command online
 `NSIS: Open Package Settings`        | Opens settings page
-`NSIS: Satisfy Package Dependencies` | Install missing package dependencies
 `NSIS: Show Version Info`            | Shows current version of NSIS
 `NSIS: Show Compiler Flags`          | Shows output of `makensis /HDRINFO`
 `NSIS: Convert Language File`        | Converts NLF to JSON and vice versa
+
+### Environment Variables
+
+This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`, using the following priority:
+
+1. `.env` files
+2. system-wide environment variables
+
+**Note:** Some operating systems require Atom to be launched from terminal in order to access system-wide environment variables.
 
 ## Related
 
