@@ -1,11 +1,6 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-import NLF from '@nsis/nlf';
 import { basename, extname } from 'path';
+import { TextEditor } from 'atom';
+import NLF from '@nsis/nlf';
 
 async function convert(): Promise<void> {
   const editor: TextEditor = atom.workspace.getActiveTextEditor();
@@ -31,7 +26,7 @@ async function convert(): Promise<void> {
   }
 }
 
-async function convertNLF(editor): void {
+async function convertNLF(editor): Promise<void> {
   let output;
 
   try {
@@ -47,7 +42,7 @@ async function convertNLF(editor): void {
   await openNewFile(editor, output, 'json');
 }
 
-async function convertJSON(editor: TextEditor) {
+async function convertJSON(editor: TextEditor): Promise<void> {
   let output;
 
   try {
@@ -63,8 +58,10 @@ async function convertJSON(editor: TextEditor) {
   await openNewFile(editor, output, 'nlf');
 }
 
-async function openNewFile(editor: TextEditor, input, targetExt) {
+async function openNewFile(editor: any, input: string, targetExt: string): Promise<void> {
   let newEditorTab;
+
+  // eslint-disable-next-line
   const fileName = editor.getFileName().toString();
   const newFileName = basename(fileName, extname(fileName));
 
