@@ -3,7 +3,7 @@
     "cmd-alt-m": "NSIS:compile",
     "cmd-alt-shift-m": "NSIS:compile-strict",
     "cmd-alt-l": "NSIS:command-reference",
-    "cmd-alt-k": "NSIS:create-.atom–build-file",
+    "cmd-alt-k": "NSIS:create-.atom–build-file"
   },
   ".platform-win32 atom-text-editor": {
     "shift-alt-m": "NSIS:compile",
