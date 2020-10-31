@@ -106,7 +106,6 @@
     "execa": "^4.0.3",
     "makensis": "^0.21.2",
     "open": "^7.3.0",
-    "vscode-get-config": "^0.3.0",
     "yaml-js": "^0.3.0"
   },
   "devDependencies": {
