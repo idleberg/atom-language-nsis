@@ -1,0 +1,36 @@
+'.source.nsis':
+  'Basic Script':
+    body: '''
+      # Scaffolding by https://atom.io/packages/language-nsis
+
+      # Settings ---------------------------------
+      Name "${1:installer_name}"
+      OutFile "${2:${1:installer_name}}.exe"
+      RequestExecutionLevel ${3:admin}
+      Unicode true
+      InstallDir "\\$PROGRAMFILES\\\\${4:${1:installer_name}}"
+
+      # Includes ---------------------------------
+      $5
+
+      # Pages ------------------------------------
+      Page components
+      Page directory
+      Page instfiles
+
+      # Sections ---------------------------------
+      Section "${6:section}" ${7:${6:section}_index}
+
+      \t${8:# your code here}
+
+      SectionEnd
+
+      # Functions --------------------------------
+      ${9:Function .onInit
+
+      \t${10:# your code here}
+
+      FunctionEnd$11}
+    '''
+    description: 'Creates a basic installer template'
+    prefix: 'scaffold'
