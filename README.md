@@ -131,10 +131,13 @@ If you prefer working with specific compiler arguments, you can specify them in 
 
 **Example:**
 
-```cson
-"language-nsis":
-  compilerArguments: ["/WX", "/V3"]
-  pathToMakensis: "C:\\Program Files (x86)\\NSIS\\makensis.exe"
+```json
+{
+  "language-nsis": {
+    compilerArguments: ["/WX", "/V3"],
+    pathToMakensis: "C:\\Program Files (x86)\\NSIS\\makensis.exe"
+  }
+}
 ```
 
 #### Third-party Build Tools
@@ -145,7 +148,7 @@ Should you prefer working with an existing third-party build system, the followi
 * [`script`](https://atom.io/packages/script)
 * [`atom-runner`](https://atom.io/packages/atom-runner)
 
-Project files for `build` can be created by executing *“NSIS: Create .atom-build file”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. An equivalent for [building on Wine](https://atom.io/packages/build-makensis-wine) is also available. You can specify your preferred build file syntax (CSON/JSON/YAML) in the package settings.
+Project files for `build` can be created by executing *“NSIS: Create .atom-build file”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. You can specify your preferred build file syntax (JSON/YAML) in the package settings.
 
 You can set up `atom-runner` by executing *“NSIS: Set default runner”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use *“NSIS: Remove default runner”*.
 
@@ -159,7 +162,7 @@ There are several other, previously unmentioned commands available from the [com
 
 Command                              | Description
 -------------------------------------|-------------------------------------
-`NSIS: Command Reference`       | Look up NSIS command online
+`NSIS: Command Reference`            | Look up NSIS command online
 `NSIS: Open Package Settings`        | Opens settings page
 `NSIS: Show Version Info`            | Shows current version of NSIS
 `NSIS: Show Compiler Flags`          | Shows output of `makensis /HDRINFO`
