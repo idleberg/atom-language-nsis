@@ -1,14 +1,9 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-let Lookup;
-const SelectListView = require("atom-select-list");
+import { openURL } from './util';
+import { showHelp } from './makensis';
+import SelectListView from 'atom-select-list';
 
-module.exports = (Lookup = {
-  init() {
+export default {
+  init(): void {
     this.selectListView = new SelectListView({
       emptyMessage: "No command matches your search.",
       items: [],
@@ -19,30 +14,29 @@ module.exports = (Lookup = {
         const element = document.createElement("li");
         const html = item;
         element.innerHTML = html;
+
         return element;
       },
 
       didConfirmSelection: item => {
-        const { openURL } = require("./util");
-
         this.cancel();
-        return openURL(item);
+        openURL(item);
       },
 
       didCancelSelection: () => {
-        return this.cancel();
+        this.cancel();
       }
     });
 
-    return this.selectListView.element.classList.add("nsis-command-list");
+    this.selectListView.element.classList.add("nsis-command-list");
   },
 
-  dispose() {
+  dispose(): void {
     this.cancel();
-    return this.selectListView.destroy();
+    this.selectListView.destroy();
   },
 
-  cancel() {
+  cancel(): void {
     if (this.panel != null) {
       this.panel.destroy();
     }
@@ -51,11 +45,11 @@ module.exports = (Lookup = {
 
     if (this.previouslyFocusedElement) {
       this.previouslyFocusedElement.focus();
-      return this.previouslyFocusedElement = null;
+      this.previouslyFocusedElement = null;
     }
   },
 
-  attach() {
+  attach(): void {
     this.previouslyFocusedElement = document.activeElement;
 
     if ((this.panel == null)) {
@@ -63,17 +57,15 @@ module.exports = (Lookup = {
     }
 
     this.selectListView.focus();
-    return this.selectListView.reset();
+    this.selectListView.reset();
   },
 
-  toggle() {
+  async toggle(): Promise<void>{
     if (this.panel != null) {
-      return this.cancel();
+      this.cancel();
     } else {
-      const { showHelp } = require("./makensis");
-
-      showHelp(this.selectListView);
-      return this.attach();
+      await showHelp(this.selectListView);
+      this.attach();
     }
   }
-});
+};

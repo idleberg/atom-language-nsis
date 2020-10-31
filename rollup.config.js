@@ -10,7 +10,11 @@ const plugins = [
   nodeResolve({
     preferBuiltins: true
   }),
-  terser(),
+  (
+    process.env.NODE_ENV === 'development'
+      ? undefined
+      : terser()
+  ),
   typescript({
     allowSyntheticDefaultImports: true
   })
@@ -18,7 +22,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/browse.ts',
+    input: 'src/main.ts',
     output: {
       dir: 'lib',
       exports: 'default',
@@ -26,12 +30,17 @@ export default [
       sourcemap: true
     },
     external: [
+      'assert',
       'atom',
+      'buffer',
       'child_process',
       'electron',
+      'events',
       'fs',
       'os',
-      'path'
+      'path',
+      'stream',
+      'util'
     ],
     plugins: plugins
   },
