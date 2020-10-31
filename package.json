@@ -78,6 +78,7 @@
       "NSIS:command-reference",
       "NSIS:compile",
       "NSIS:compile-strict",
+      "NSIS:convert-language-file",
       "NSIS:create-.atom–build-file",
       "NSIS:create-.atom–build-file-for-wine",
       "NSIS:open-package-settings",
@@ -85,8 +86,7 @@
       "NSIS:set-default-runner",
       "NSIS:show-compiler-flags",
       "NSIS:show-version",
-      "NSIS:unset-default-runner",
-      "NSIS:browse"
+      "NSIS:unset-default-runner"
     ]
   },
   "activationHooks": [
@@ -107,7 +107,7 @@
   },
   "dependencies": {
     "@atxm/open-package-settings": "^0.1.0",
-    "@nsis/nlf": "^0.7.1",
+    "@nsis/nlf": "^0.8.1",
     "atom-package-deps": "^7.0.2",
     "atom-read-manifest": "^0.5.2",
     "atom-satisfy-dependencies": "^0.3.0",
