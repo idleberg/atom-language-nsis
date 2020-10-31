@@ -4,14 +4,15 @@
   - rewrite in TypeScript
   - convert grammars/keymaps/menus/settings/snippets to JSON (excluding scaffolding snippets)
   - remove support for CSON build files
-- add support for DotEnv
+- add support for environment variables
+- add support for DotEnv files
 - build with Rollup
 - lint with ESLint
 - remove build files for Wine
 - rename commands
   - *NSIS: Save & Compile* ➞ *NSIS Compile*
   - *NSIS: Save & Compile Strict* ➞ *NSIS Compile Strict*
-  - *NSIS: Remove Default Runner* ➞ *NSIS Unset Runner*
+  - *NSIS: Remove Default Runner* ➞ *NSIS Unset Default Runner*
 - modify config defaults
 - update dependencies
 
