@@ -77,7 +77,7 @@ export default {
     title: 'Compiler Output',
     description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console',
     type: 'string',
-    default: 'notification',
+    default: 'console',
     enum: [
       {
         value: 'notification',
