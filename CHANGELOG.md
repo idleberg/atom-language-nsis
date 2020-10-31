@@ -1,3 +1,7 @@
+# v8.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.1)
+
+- fix: invalid JSON in keymap file
+
 # v8.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.0)
 
 - decaffeinate
