@@ -1,6 +1,6 @@
 # v8.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.1.0)
 
-- rename setting *Allow Header Compilation* ➞ *NSIS Headers*
+- rename setting *Allow Header Compilation* ➞ *Allow Headers*
 - respect *Allow Headers* setting when creating build files
 - wrap conditions around commands depending on third party packages
 
