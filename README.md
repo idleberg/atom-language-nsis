@@ -127,26 +127,15 @@ Fuzzy syntax completions are available through the “Drunken NSIS” snippets, 
 
 There are many ways to compile NSIS scripts in Atom. But before you read on, make sure `makensis` is in your [PATH environment variable](http://superuser.com/a/284351/195953).
 
-As of recently, this package contains build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
+This package contains a build system to compile your NSIS scripts. To trigger a build, select *“NSIS: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
-If you prefer working with specific compiler arguments, you can specify them in the [package settings](https://flight-manual.atom.io/using-atom/sections/atom-packages/#package-settings). Optionally, you can also specify the path to `makensis`.
-
-**Example:**
-
-```json
-{
-  "language-nsis": {
-    compilerArguments: ["/WX", "/V3"],
-    pathToMakensis: "C:\\Program Files (x86)\\NSIS\\makensis.exe"
-  }
-}
-```
+If you prefer working with custom compiler arguments, you can specify them in the [package settings](https://flight-manual.atom.io/using-atom/sections/atom-packages/#package-settings). Optionally, you can also specify the path to `makensis`.
 
 #### Third-party Build Tools
 
 Should you prefer working with an existing third-party build system, the following packages already have support for NSIS.
 
-* [`build`](https://atom.io/packages/build) – requires additional provider (e.g. [`build-makensis`](https://atom.io/packages/build-makensis)), supports [`linter`](https://atom.io/packages/linter) package
+* [`build`](https://atom.io/packages/build) – requires additional provider (e.g. [`build-makensis`](https://atom.io/packages/build-makensis))
 * [`script`](https://atom.io/packages/script)
 * [`atom-runner`](https://atom.io/packages/atom-runner)
 
@@ -156,7 +145,7 @@ You can set up `atom-runner` by executing *“NSIS: Set default runner”* from 
 
 ### Linting
 
-As of `v6.5.0`, a basic [Atom linter](https://github.com/idleberg/atom-linter-makensis/) provider for `makensis` is included. By default, NSIS documents get linted when opened or saved. Make sure to refer to the [`linter-makensis`](https://github.com/idleberg/atom-linter-makensis#settings) documentation to learn about available lint modes and other settings.
+This package will install an [Atom linter](https://github.com/idleberg/atom-linter-makensis/) provider for `makensis`. By default, NSIS documents get linted when opened or saved. Make sure to refer to the [`linter-makensis`](https://github.com/idleberg/atom-linter-makensis#settings) documentation to learn about available lint modes and other settings.
 
 ### Other Commands
 
