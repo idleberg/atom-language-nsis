@@ -7,6 +7,7 @@ import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import { shell } from 'electron';
 import execa from 'execa';
 import open from 'open';
+import which from 'which';
 
 function clearConsole(consolePanel: ConsolePanel): void {
   try {
@@ -99,12 +100,6 @@ async function getSpawnEnv(): Promise<unknown> {
       NSISCONFDIR: process.env.NSISCONFDIR || undefined,
     }
   };
-}
-
-function getWhich(): string {
-  return platform() === 'win32'
-    ? 'where'
-    : 'which';
 }
 
 async function initDotEnv(): Promise<void> {
@@ -207,10 +202,6 @@ async function runInstaller(outFile) {
   }
 }
 
-async function which(executable: string): Promise<unknown> {
-  return (await execa(getWhich(), [executable], {})).stdout.trim();
-}
-
 export {
   clearConsole,
   detectOutfile,
@@ -219,11 +210,9 @@ export {
   getMakensisPath,
   getPrefix,
   getSpawnEnv,
-  getWhich,
   isHeaderFile,
   isWindowsCompatible,
   manageDependencies,
   notifyOnCompletion,
-  openURL,
-  which
+  openURL
 }
