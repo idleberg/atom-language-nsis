@@ -1,4 +1,4 @@
-import { fileExists, getConfig, getMakensisPath } from './util';
+import { fileExists, getConfig, getMakensisPath, isHeaderFile } from './util';
 import { promises as fs } from 'fs';
 import { basename, dirname, join } from 'path';
 import YAML from 'yaml';
@@ -17,6 +17,41 @@ async function createBuildFile(): Promise<any> {
       dismissable: false
     });
 
+    return;
+  }
+
+  const script = editor.getPath();
+
+  if (getConfig('allowHeaderCompilation') === false && isHeaderFile(script)) {
+    const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow it in the package settings.', {
+      dismissable: true,
+      buttons: [
+        {
+          text: 'Open Settings',
+          className: 'icon icon-gear',
+          async onDidClick() {
+            await atom.workspace.open(`atom://config/packages/language-nsis`, {
+              pending: true,
+              searchAllPanes: true,
+            });
+
+            notification.dismiss();
+
+            return;
+          },
+        },
+        {
+          text: 'Cancel',
+          onDidClick() {
+            notification.dismiss();
+
+            return;
+          },
+        },
+      ],
+    });
+
+    atom.beep();
     return;
   }
 
@@ -115,7 +150,7 @@ async function saveBuildFile(options) {
     return;
   }
 
-  atom.workspace.open(options.filePath);
+  await atom.workspace.open(options.filePath);
 }
 
 export {
