@@ -7,7 +7,7 @@
 [![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsis)](https://david-dm.org/idleberg/atom-language-nsis)
 [![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/Atom)
 
-Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files (NLF).
+Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files.
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
@@ -45,10 +45,10 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
     * WinVer
     * WordFunc
     * x64
-* [Drunken NSIS](https://github.com/idleberg/atom-language-nsis#drunken-nsis)
-* [Build Tools](https://github.com/idleberg/atom-language-nsis#building)
-* [Linter](https://github.com/idleberg/atom-language-nsis#linting)
-* [Environment Variables](https://github.com/idleberg/atom-language-nsis#environment-variables)
+* [Drunken NSIS](#drunken-nsis)
+* [Build Tools](#building)
+* [Linter](#linting)
+* [Environment Variables](#environment-variables)
 
 You can further extend this package with snippets for [third-party plug-ins](https://atom.io/packages/nsis-plugins).
 
