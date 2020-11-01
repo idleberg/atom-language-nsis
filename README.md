@@ -67,6 +67,7 @@ Change to your Atom packages directory:
 ```powershell
 # Powershell
 cd $Env:USERPROFILES\.atom\packages
+
 # Windows Command Prompt
 $ cd %USERPROFILE%\.atom\packages
 ```
