@@ -117,6 +117,10 @@ function isHeaderFile(filePath: string): boolean {
   return Boolean(headerFiles.filter(fileExt => filePath?.endsWith(fileExt)).length);
 }
 
+function isLoadedAndActive(packageName) {
+  return atom.packages.isPackageLoaded(packageName) && atom.packages.isPackageActive(packageName);
+}
+
 function isWindowsCompatible(): boolean {
   return platform() === 'win32' || getConfig('useWineToRun')
     ? true
@@ -125,6 +129,35 @@ function isWindowsCompatible(): boolean {
 
 async function manageDependencies(): Promise<void> {
   await satisfyDependencies('language-nsis');
+}
+
+function missingPackageWarning(packageName: string): void {
+  const notification = atom.notifications.addWarning(`This command requires the \`${packageName}\` package to be installed`, {
+    dismissable: true,
+    buttons: [
+      {
+        text: 'Show Package',
+        async onDidClick() {
+          await atom.workspace.open(`atom://config/packages/${packageName}`, {
+            pending: true,
+            searchAllPanes: true,
+          });
+
+          notification.dismiss();
+
+          return;
+        },
+      },
+      {
+        text: 'Cancel',
+        onDidClick() {
+          notification.dismiss();
+
+          return;
+        },
+      },
+    ]
+  });
 }
 
 function notifyOnCompletion(type: string, outFile: string): void {
@@ -211,8 +244,10 @@ export {
   getPrefix,
   getSpawnEnv,
   isHeaderFile,
+  isLoadedAndActive,
   isWindowsCompatible,
   manageDependencies,
+  missingPackageWarning,
   notifyOnCompletion,
   openURL
 }

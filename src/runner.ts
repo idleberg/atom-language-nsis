@@ -1,3 +1,5 @@
+import { isLoadedAndActive } from './util';
+
 function setRunner(): void {
   if (!hasAtomRunner()) {
     atom.beep();
@@ -63,7 +65,7 @@ function unsetRunner(): void {
 }
 
 function hasAtomRunner(): boolean {
-  return atom.packages.isPackageLoaded('atom-runner')
+  return isLoadedAndActive('atom-runner');
 }
 
 export {

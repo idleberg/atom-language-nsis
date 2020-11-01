@@ -22,9 +22,8 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
         {
           text: 'Open Settings',
           className: 'icon icon-gear',
-          onDidClick() {
-            // openPackageSettings();
-            atom.workspace.open(`atom://config/packages/language-nsis`, {
+          async onDidClick() {
+            await atom.workspace.open(`atom://config/packages/language-nsis`, {
               pending: true,
               searchAllPanes: true,
             });
