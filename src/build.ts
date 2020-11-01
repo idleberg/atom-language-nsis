@@ -7,13 +7,13 @@ async function createBuildFile(): Promise<any> {
   const editor = atom.workspace.getActiveTextEditor();
 
   if (!editor) {
-    atom.notifications.addWarning(`**language-nsis**: No active editor`, {
+    atom.notifications.addWarning(`No active editor`, {
       dismissable: false
     });
 
     return;
   } else if (editor.getGrammar().scopeName !== 'source.nsis') {
-    atom.notifications.addWarning(`**language-nsis**: Unsupported document type`, {
+    atom.notifications.addWarning(`Unsupported document type`, {
       dismissable: false
     });
 
