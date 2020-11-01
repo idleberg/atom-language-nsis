@@ -1,4 +1,5 @@
-import { getPrefix } from './util';
+import { getPrefix, isLoadedAndActive } from './util';
+import { platform } from 'os';
 
 export default {
   pathToMakensis: {
@@ -55,7 +56,7 @@ export default {
     default: true,
     order: 6
   },
-  buildFileSyntax: atom.packages.isPackageLoaded('build') ? {
+  buildFileSyntax: isLoadedAndActive('build') ? {
     title: 'Build File Syntax',
     description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build))',
     type: 'string',
@@ -89,13 +90,13 @@ export default {
     ],
     order: 8
   },
-  useWineToRun: {
+  useWineToRun: platform() !== 'win32' ? {
     title: 'Use Wine to run',
     description: 'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)',
     type: 'boolean',
     default: false,
     order: 9
-  },
+  } : {},
   manageDependencies: {
     title: 'Manage Dependencies',
     description: 'When enabled, third-party dependencies will be installed automatically',
