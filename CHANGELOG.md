@@ -1,3 +1,7 @@
+# v8.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.2)
+
+- reset default value for `useWineToRun`
+
 # v8.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.1)
 
 - fix: invalid JSON in keymap file
