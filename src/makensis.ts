@@ -128,7 +128,6 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       }
     });
 
-    // consolePanel.log(output.stdout);
     return;
   }
 }
