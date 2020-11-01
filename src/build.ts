@@ -1,7 +1,7 @@
 import { fileExists, getConfig, getMakensisPath } from './util';
 import { promises as fs } from 'fs';
 import { basename, dirname, join } from 'path';
-import YAML from 'yaml-js';
+import YAML from 'yaml';
 
 async function createBuildFile(): Promise<any> {
   const editor = atom.workspace.getActiveTextEditor();
@@ -99,7 +99,7 @@ async function saveBuildFile(options) {
   }
 
   const stringifier = options.syntax === 'yaml'
-    ? YAML.dump(buildFile)
+    ? YAML.stringify(buildFile)
     : JSON.stringify(buildFile, null, 2);
 
   // Save build file
