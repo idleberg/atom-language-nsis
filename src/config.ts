@@ -42,8 +42,8 @@ export default {
     order: 4
   },
   allowHeaderCompilation: {
-    title: 'Allow Header Compilation',
-    description: 'By default, only `.nsi` files will be compiled. This setting enables compilation for `.nsh` files as well.',
+    title: 'Allow Headers',
+    description: 'By default, you can only compile (and create build-files) for `.nsi` files. This setting enables support for `.nsh` files as well.',
     type: 'boolean',
     default: false,
     order: 5
@@ -55,7 +55,7 @@ export default {
     default: true,
     order: 6
   },
-  buildFileSyntax: {
+  buildFileSyntax: atom.packages.isPackageLoaded('build') ? {
     title: 'Build File Syntax',
     description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build))',
     type: 'string',
@@ -71,7 +71,7 @@ export default {
       }
     ],
     order: 7
-  },
+  } : {},
   compilerOutput: {
     title: 'Compiler Output',
     description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console',
