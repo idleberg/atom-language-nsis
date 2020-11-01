@@ -117,7 +117,7 @@ function isHeaderFile(filePath: string): boolean {
   return Boolean(headerFiles.filter(fileExt => filePath?.endsWith(fileExt)).length);
 }
 
-function isLoadedAndActive(packageName) {
+function isLoadedAndActive(packageName: string): boolean {
   return atom.packages.isPackageLoaded(packageName) && atom.packages.isPackageActive(packageName);
 }
 
