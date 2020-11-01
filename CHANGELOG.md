@@ -1,3 +1,9 @@
+# v8.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.1.0)
+
+- rename setting *Allow Header Compilation* ➞ *NSIS Headers*
+- respect *Allow Headers* setting when creating build files
+- wrap conditions around commands depending on third party packages
+
 # v8.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.3)
 
 - use `which` module

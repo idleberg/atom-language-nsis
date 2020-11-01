@@ -6,7 +6,7 @@
   "main": "./lib/main",
   "typings": "./types/index.d.ts",
   "scripts": {
-    "build": "NODE_ENV=production rollup -c",
+    "build": "npm run clean && NODE_ENV=production rollup -c",
     "clean": "rimraf ./lib",
     "dev": "npm run start",
     "eslint": "eslint --fix ./src",
@@ -124,6 +124,7 @@
     "husky": "^4.3.0",
     "jsonlint": "^1.6.3",
     "lint-staged": "^10.5.0",
+    "rimraf": "^2.6.3",
     "rollup": "^2.29.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.0.3"
