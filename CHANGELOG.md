@@ -1,3 +1,8 @@
+# v8.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.3)
+
+- use `which` module
+- update package description
+
 # v8.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.2)
 
 - reset default value for `useWineToRun`
