@@ -1,6 +1,7 @@
 # v8.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.2.0)
 
 - add conditions around settings depending on third party packages or platform
+- replace YAML stringifier
 
 # v8.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.1.0)
 
