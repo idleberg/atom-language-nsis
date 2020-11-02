@@ -8,7 +8,9 @@ export default {
       emptyMessage: 'No command matches your search.',
       items: [],
 
-      filterKeyForItem(item) { return item; },
+      filterKeyForItem(item) {
+        return item;
+      },
 
       elementForItem(item) {
         const element = document.createElement('li');
