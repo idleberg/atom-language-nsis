@@ -1,6 +1,6 @@
-import { fileExists, getConfig, getMakensisPath, isHeaderFile } from './util';
+import { fileExists, findPackagePath, getConfig, getMakensisPath, isHeaderFile, isLoadedAndActive } from './util';
 import { promises as fs } from 'fs';
-import { basename, dirname, join } from 'path';
+import { basename, dirname, join, resolve } from 'path';
 import YAML from 'yaml';
 
 async function createBuildFile(): Promise<any> {
@@ -111,20 +111,27 @@ async function createBuildFile(): Promise<any> {
         }
       ]
     });
+  } else {
+    saveBuildFile({
+      script: scriptFile,
+      syntax: buildFileSyntax,
+      fileName: buildFileName,
+      filePath: buildFilePath
+    });
   }
-
-  saveBuildFile({
-    script: scriptFile,
-    syntax: buildFileSyntax,
-    fileName: buildFileName,
-    filePath: buildFilePath
-  });
 }
 
 async function saveBuildFile(options) {
+  const useWineToRun = getConfig('useWineToRun');
+  const hasWineProvider = isLoadedAndActive('build-makensis-wine');
+  const wineProviderPath = (await findPackagePath('build-makensis-wine'))[0];
+
   const buildFile = {
     name: options.scriptFile,
-    cmd: await getMakensisPath(),
+    cmd:  useWineToRun && hasWineProvider
+      ? resolve(wineProviderPath, 'lib', 'makensis-wine.sh')
+      : await getMakensisPath(),
+    sh: useWineToRun && hasWineProvider,
     args: [
       '{FILE_ACTIVE}'
     ],

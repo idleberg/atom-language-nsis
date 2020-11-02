@@ -68,6 +68,22 @@ async function findEnvFile() {
   return envFile;
 }
 
+async function findPackagePath(packageName: string): Promise<string[]> {
+  const packageDirPaths = atom.packages.getPackageDirPaths();
+
+  return (await Promise.all(packageDirPaths.map(async packageDirPath => {
+    const packageDir = resolve(packageDirPath, packageName);
+
+    if (await fileExists(resolve(packageDir, 'package.json'))) {
+      return packageDir;
+    }
+
+    return undefined;
+  }))).filter(item => item);
+}
+
+window['findPackagePath'] = findPackagePath;
+
 function getConfig(key: string): any {
     return key
       ? atom.config.get(`language-nsis.${key}`)
@@ -152,7 +168,7 @@ function migrateConfig(oldKey: string, newKey: string): void {
 }
 
 function missingPackageWarning(packageName: string): void {
-  const notification = atom.notifications.addWarning(`This command requires the \`${packageName}\` package to be installed`, {
+  const notification = atom.notifications.addWarning(`This command requires the \`${packageName}\` package to be installed and enabled`, {
     dismissable: true,
     buttons: [
       {
@@ -259,6 +275,7 @@ export {
   clearConsole,
   detectOutfile,
   fileExists,
+  findPackagePath,
   getConfig,
   getMakensisPath,
   getPrefix,

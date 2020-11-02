@@ -56,7 +56,7 @@ export default {
     default: true,
     order: 6
   },
-  buildFileSyntax: isLoadedAndActive('build') ? {
+  buildFileSyntax: {
     title: 'Build File Syntax',
     description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build))',
     type: 'string',
@@ -72,7 +72,7 @@ export default {
       }
     ],
     order: 7
-  } : {},
+  },
   compilerOutput: {
     title: 'Compiler Output',
     description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console',
