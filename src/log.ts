@@ -1,33 +1,33 @@
-function _console(type, ...args) {
+function __console(type: string, ...args: unknown[]): void {
   if (atom?.inDevMode()) {
     args.unshift('[language-nsis]')
 
-    return (global).console[type](...args);
+    global.console[type](...args);
   }
 }
 
 export default {
-  clear(...args: unknown[]): unknown {
-    return _console('clear', ...args);
+  clear(...args: unknown[]): void {
+    __console('clear', ...args);
   },
 
-  debug(...args: unknown[]): unknown {
-    return _console('debug', ...args);
+  debug(...args: unknown[]): void {
+    __console('debug', ...args);
   },
 
-  error(...args: unknown[]): unknown {
-    return _console('error', ...args);
+  error(...args: unknown[]): void {
+    __console('error', ...args);
   },
 
-  info(...args: unknown[]): unknown {
-    return _console('info', ...args);
+  info(...args: unknown[]): void {
+    __console('info', ...args);
   },
 
-  log(...args: unknown[]): unknown {
-    return _console('log', ...args);
+  log(...args: unknown[]): void {
+    __console('log', ...args);
   },
 
-  warn(...args: unknown[]): unknown {
-    return _console('warn', ...args);
+  warn(...args: unknown[]): void {
+    __console('warn', ...args);
   }
 }
