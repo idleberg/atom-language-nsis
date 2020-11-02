@@ -22,7 +22,7 @@ async function createBuildFile(): Promise<any> {
 
   const script = editor.getPath();
 
-  if (getConfig('allowHeaderCompilation') === false && isHeaderFile(script)) {
+  if (getConfig('processHeaders') === false && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow it in the package settings.', {
       dismissable: true,
       buttons: [

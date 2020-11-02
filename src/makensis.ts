@@ -15,7 +15,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
   const script = editor.getPath();
   const scope = editor.getGrammar().scopeName;
 
-  if (getConfig('allowHeaderCompilation') === false && isHeaderFile(script)) {
+  if (getConfig('processHeaders') === false && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow it in the package settings.', {
       dismissable: true,
       buttons: [

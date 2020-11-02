@@ -42,7 +42,7 @@ export default {
     default: true,
     order: 4
   },
-  allowHeaderCompilation: {
+  processHeaders: {
     title: 'Process Headers',
     description: 'By default, you can only compile (and create build-files) for `.nsi` files. This setting enables support for `.nsh` files.',
     type: 'boolean',
