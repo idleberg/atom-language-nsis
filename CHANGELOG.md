@@ -1,8 +1,12 @@
+# v8.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.2.0)
+
+- add conditions around settings depending on third party packages or platform
+
 # v8.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.1.0)
 
+- add conditions around commands depending on third party packages
 - rename setting *Allow Header Compilation* ➞ *Allow Headers*
 - respect *Allow Headers* setting when creating build files
-- wrap conditions around commands depending on third party packages
 
 # v8.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.3)
 
