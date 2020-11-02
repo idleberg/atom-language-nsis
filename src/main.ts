@@ -4,13 +4,14 @@ import { convert } from './nlf';
 import { getConfig, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
 import configSchema from './config';
+import devConsole from './log';
 
 export default {
   config: configSchema,
   subscriptions: null,
 
   async activate(): Promise<void> {
-    if (atom.inDevMode()) console.time('[language-nsis] Activating package');
+    devConsole.log('Activating package');
 
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();
@@ -116,12 +117,10 @@ export default {
     }
 
     migrateConfig('allowHeaderCompilation', 'processHeaders');
-
-    if (atom.inDevMode()) console.timeEnd('[language-nsis] Activating package');
   },
 
   deactivate(): void {
-    if (atom.inDevMode()) console.log('[language-nsis] Deactivating package');
+    devConsole.log('Deactivating package');
 
     this.subscriptions?.dispose();
   },

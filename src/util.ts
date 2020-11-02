@@ -5,6 +5,7 @@ import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import { shell } from 'electron';
+import devConsole from './log';
 import execa from 'execa';
 import open from 'open';
 import which from 'which';
@@ -62,7 +63,7 @@ async function findEnvFile() {
       break;
   }
 
-  if (envFile && atom.inDevMode()) console.log(`Found DotEnv file ${envFile}`);
+  if (envFile) devConsole.log(`Found DotEnv file ${envFile}`);
 
   return envFile;
 }
@@ -133,7 +134,7 @@ async function manageDependencies(): Promise<void> {
 
 function migrateConfig(oldKey: string, newKey: string): void {
   if (atom.config.get(`language-nsis.${newKey}`)) {
-    if (atom.inDevMode()) console.warn(`[language-nsis] Setting '${newKey}' already exists, skipping migration`);
+    devConsole.warn(`Setting '${newKey}' already exists, skipping migration`);
     return;
   }
 
@@ -146,7 +147,7 @@ function migrateConfig(oldKey: string, newKey: string): void {
     return;
   }
 
-  if (atom.inDevMode()) console.warn(`[language-nsis] Setting '${oldKey}' migrated successfully to '${newKey}'`);
+  devConsole.warn(`Setting '${oldKey}' migrated successfully to '${newKey}'`);
   atom.config.unset(`language-nsis.${oldKey}`);
 }
 
