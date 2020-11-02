@@ -1,4 +1,4 @@
-import { getPrefix, isLoadedAndActive } from './util';
+import { getPrefix } from './util';
 import { platform } from 'os';
 
 export default {
