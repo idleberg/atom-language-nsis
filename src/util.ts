@@ -1,5 +1,5 @@
-import { constants, promises as fs } from 'fs';
 import { config as dotenvConfig } from 'dotenv';
+import { constants, promises as fs } from 'fs';
 import { exec } from 'child_process';
 import { platform } from 'os';
 import { resolve } from 'path';
@@ -62,7 +62,7 @@ async function findEnvFile() {
       break;
   }
 
-  if (envFile) console.log(`Found DotEnv file ${envFile}`);
+  if (envFile && atom.inDevMode()) console.log(`Found DotEnv file ${envFile}`);
 
   return envFile;
 }
@@ -129,6 +129,25 @@ function isWindowsCompatible(): boolean {
 
 async function manageDependencies(): Promise<void> {
   await satisfyDependencies('language-nsis');
+}
+
+function migrateConfig(oldKey: string, newKey: string): void {
+  if (atom.config.get(`language-nsis.${newKey}`)) {
+    if (atom.inDevMode()) console.warn(`[language-nsis] Setting '${newKey}' already exists, skipping migration`);
+    return;
+  }
+
+  try {
+    atom.config.set(`language-nsis.${newKey}`, atom.config.get(`language-nsis.${oldKey}`));
+  } catch (error) {
+    console.log(error);
+    atom.notifications.addWarning(`Failed to migrate configuration, see console for details`);
+
+    return;
+  }
+
+  if (atom.inDevMode()) console.warn(`[language-nsis] Setting '${oldKey}' migrated successfully to '${newKey}'`);
+  atom.config.unset(`language-nsis.${oldKey}`);
 }
 
 function missingPackageWarning(packageName: string): void {
@@ -247,6 +266,7 @@ export {
   isLoadedAndActive,
   isWindowsCompatible,
   manageDependencies,
+  migrateConfig,
   missingPackageWarning,
   notifyOnCompletion,
   openURL
