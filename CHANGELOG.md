@@ -1,7 +1,7 @@
 # v8.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.3.0)
 
 - add configuration migration
-- add develompent logging
+- add development logging
 - re-add support for Wine build files
 - remove condition for `build` package config
 - rename option
