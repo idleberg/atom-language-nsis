@@ -1,3 +1,9 @@
+# v8.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.3.0)
+
+- add configuration migration
+- add logging module
+- rename option
+
 # v8.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.2.0)
 
 - add conditions around settings depending on third party packages or platform
