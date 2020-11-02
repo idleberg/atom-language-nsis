@@ -1,7 +1,6 @@
 function __console(type: string, ...args: unknown[]): void {
   if (atom?.inDevMode()) {
     args.unshift('[language-nsis]')
-
     global.console[type](...args);
   }
 }
