@@ -82,8 +82,6 @@ async function findPackagePath(packageName: string): Promise<string[]> {
   }))).filter(item => item);
 }
 
-window['findPackagePath'] = findPackagePath;
-
 function getConfig(key: string): any {
     return key
       ? atom.config.get(`language-nsis.${key}`)
@@ -109,8 +107,6 @@ function getPrefix(): string {
 }
 
 async function getSpawnEnv(): Promise<unknown> {
-  await initDotEnv();
-
   return {
     env: {
       NSISDIR: process.env.NSISDIR || undefined,
@@ -146,6 +142,18 @@ function isWindowsCompatible(): boolean {
 
 async function manageDependencies(): Promise<void> {
   await satisfyDependencies('language-nsis');
+}
+
+function mapDefinitions(): string[] {
+  return Object.keys(process.env).map(item => {
+    if (item.startsWith('NSIS_APP_')) {
+      const keyName = item.replace(/^NSIS_APP_/g, '')
+
+      if (keyName.length && /[a-z0-9]+/gi.test(keyName)) {
+        return `${getPrefix()}D${keyName}=${process.env[item]}`;
+      }
+    }
+  }).filter(item => item);
 }
 
 function migrateConfig(oldKey: string, newKey: string): void {
@@ -280,10 +288,12 @@ export {
   getMakensisPath,
   getPrefix,
   getSpawnEnv,
+  initDotEnv,
   isHeaderFile,
   isLoadedAndActive,
   isWindowsCompatible,
   manageDependencies,
+  mapDefinitions,
   migrateConfig,
   missingPackageWarning,
   notifyOnCompletion,

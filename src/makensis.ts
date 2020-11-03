@@ -1,4 +1,4 @@
-import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, notifyOnCompletion } from './util';
+import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
 import * as NSIS from 'makensis';
 
@@ -60,15 +60,18 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
 
     const pathToMakensis = await getMakensisPath();
     const prefix = getPrefix();
-    const compilerArguments: string[] = Array(getConfig('compilerArguments'));
+    const compilerArguments: string[] = getConfig('compilerArguments');
 
     // only add WX flag if not already specified
     if (strictMode === true && !compilerArguments.includes('-WX') && !compilerArguments.includes('/WX')) {
       compilerArguments.push(`${prefix}WX`);
     }
+
+    compilerArguments.push(...mapDefinitions());
     compilerArguments.push(script);
 
     clearConsole(consolePanel);
+
 
     // Let's go
     const makensis = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());

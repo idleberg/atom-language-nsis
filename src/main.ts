@@ -1,7 +1,7 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
 import { convert } from './nlf';
-import { getConfig, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
+import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
 import configSchema from './config';
 import devConsole from './log';
@@ -12,6 +12,8 @@ export default {
 
   async activate(): Promise<void> {
     devConsole.log('Activating package');
+
+    await initDotEnv()
 
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();
