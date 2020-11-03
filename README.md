@@ -164,12 +164,14 @@ Command                              | Description
 
 ### Environment Variables
 
-This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`, using the following priority:
+This extension supports a variety of ways to provide environment variables such as `NSISDIR` or `NSISCONFDIR`. The following precedence applies:
 
 1. `.env` files
 2. system-wide environment variables
 
 **Note:** Some operating systems require Atom to be launched from terminal in order to access system-wide environment variables.
+
+Additionally, you can pass special environment variables prefixed with `NSIS_APP_` to your installer script. For example, the variable `NSIS_APP_CUSTOM_MESSAGE` can be accessed via `${CUSTOM_MESSAGE}` in your installer script.
 
 ## Related
 
