@@ -1,7 +1,7 @@
 # v8.4.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.0)
 
 - add support for `NSIS_APP_*` environment variables
-- load dotEnv in package activation method
+- load dotEnv early in package activation
 - clean up dead code
 - update dependencies
 
