@@ -78,7 +78,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
     let hasWarning = false;
     let outFile = '';
 
-    makensis.stdout.on('data', (line) => {
+    makensis.stdout.on('data', line => {
       const lineString = line.toString();
 
       if (hasWarning === false && line.indexOf('warning: ') !== -1) {
@@ -106,7 +106,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       }
     });
 
-    makensis.stderr.on('data', (line) => {
+    makensis.stderr.on('data', line => {
       const lineString = line.toString();
 
       try {
@@ -118,7 +118,11 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       return;
     });
 
-    makensis.on('close', function (errorCode) {
+    makensis.on('error', errorMessage => {
+      console.error('[language-nsis]', errorMessage)
+    });
+
+    makensis.on('exit', errorCode => {
       if (errorCode === 0) {
         if (hasWarning && getConfig('showBuildNotifications')) {
           notifyOnCompletion('addWarning', outFile);
