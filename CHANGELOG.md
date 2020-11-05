@@ -1,3 +1,7 @@
+# v8.4.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.1)
+
+- improve `child_process` error logging
+
 # v8.4.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.0)
 
 - add support for `NSIS_APP_*` environment variables
