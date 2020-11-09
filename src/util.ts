@@ -45,25 +45,26 @@ async function findEnvFile() {
   let envFile = undefined;
   const projectPath: string = atom.project.getPaths()[0];
 
-  switch (true) {
-    case (await fileExists(resolve(projectPath, '.env.local'))):
-      envFile = resolve(projectPath, '.env.local');
-      break;
+  if (projectPath) {
+    switch (true) {
+      case (await fileExists(resolve(projectPath, '.env.local'))):
+        envFile = resolve(projectPath, '.env.local');
+        break;
 
-    case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
-      envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
-      break;
+      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
+        envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
+        break;
 
-    case (await fileExists(resolve(projectPath, '.env'))):
-      envFile = resolve(projectPath, '.env');
-      break;
+      case (await fileExists(resolve(projectPath, '.env'))):
+        envFile = resolve(projectPath, '.env');
+        break;
 
-    default:
-      envFile = undefined;
-      break;
+      default:
+        break;
+    }
+
+    if (envFile) devConsole.log(`Found DotEnv file ${envFile}`);
   }
-
-  if (envFile) devConsole.log(`Found DotEnv file ${envFile}`);
 
   return envFile;
 }
