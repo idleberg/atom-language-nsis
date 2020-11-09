@@ -1,3 +1,8 @@
+# v8.4.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.2)
+
+- fix `findEnvFile()` for single files
+- update dependencies
+
 # v8.4.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.1)
 
 - improve `child_process` error logging
