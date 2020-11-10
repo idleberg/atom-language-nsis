@@ -96,10 +96,8 @@
     }
   },
   "dependencies": {
-    "@atxm/open-package-settings": "^0.1.0",
     "@nsis/nlf": "^0.8.1",
     "atom-package-deps": "^7.0.2",
-    "atom-read-manifest": "^0.5.2",
     "atom-satisfy-dependencies": "^0.3.0",
     "atom-select-list": "^0.7.2",
     "dotenv": "^8.2.0",
