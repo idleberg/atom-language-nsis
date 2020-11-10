@@ -1,3 +1,7 @@
+# v8.5.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.5.0)
+
+- modify default behaviour for `NSIS_APP_*` environment variables
+
 # v8.4.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.4.2)
 
 - fix `findEnvFile()` for single files
