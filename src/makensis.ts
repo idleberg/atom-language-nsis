@@ -103,7 +103,7 @@ async function compile(strictMode: boolean): Promise<void> {
       }
 
       if (outFile === '') {
-        return (outFile = detectOutfile(line));
+        outFile = detectOutfile(line);
       }
     });
 
@@ -116,7 +116,9 @@ async function compile(strictMode: boolean): Promise<void> {
         console.error(lineString);
       }
 
-      return;
+      if (outFile === '') {
+        outFile = detectOutfile(line);
+      }
     });
 
     makensis.on('error', errorMessage => {
