@@ -128,9 +128,9 @@ async function compile(strictMode: boolean): Promise<void> {
     makensis.on('exit', errorCode => {
       if (errorCode === 0) {
         if (hasWarning && getConfig('showBuildNotifications')) {
-          notifyOnCompletion('addWarning', outFile);
+          notifyOnCompletion('addWarning', 'Compiled with warnings', outFile);
         } else if (getConfig('showBuildNotifications')) {
-          notifyOnCompletion('addSuccess', outFile);
+          notifyOnCompletion('addSuccess', 'Compiled successfully', outFile);
         }
       } else if (getConfig('showBuildNotifications')) {
         atom.notifications.addError('Compile Error', { dismissable: false });

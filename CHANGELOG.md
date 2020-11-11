@@ -1,5 +1,10 @@
+# v8.6.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.6.1)
+
+- improve success messages
+
 # v8.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.6.0)
 
+- add OutFile detection for `stderr`
 - refactor `console-panel` service usage
 - consume `browse` service
 - remove unused dependencies

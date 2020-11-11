@@ -204,8 +204,8 @@ function missingPackageWarning(packageName: string): void {
   });
 }
 
-function notifyOnCompletion(type: string, outFile: string): void {
-  const notification = atom.notifications[type]('Compiled successfully', {
+function notifyOnCompletion(type: string, messageText: string, outFile: string): void {
+  const notification = atom.notifications[type](messageText, {
     dismissable: true,
     buttons: outFile ? [
       isWindowsCompatible() ? {
