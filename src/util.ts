@@ -4,7 +4,7 @@ import { exec } from 'child_process';
 import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
-import { shell } from 'electron';
+import Browse from './browse';
 import devConsole from './log';
 import execa from 'execa';
 import open from 'open';
@@ -181,15 +181,15 @@ function missingPackageWarning(packageName: string): void {
       {
         text: 'Show Package',
         async onDidClick() {
+          notification.dismiss();
+
           await atom.workspace.open(`atom://config/packages/${packageName}`, {
             pending: true,
             searchAllPanes: true,
           });
 
-          notification.dismiss();
-
           return;
-        },
+        }
       },
       {
         text: 'Cancel',
@@ -197,8 +197,8 @@ function missingPackageWarning(packageName: string): void {
           notification.dismiss();
 
           return;
-        },
-      },
+        }
+      }
     ]
   });
 }
@@ -211,23 +211,23 @@ function notifyOnCompletion(type: string, outFile: string): void {
         text: 'Run',
         className: 'icon icon-playback-play',
         async onDidClick() {
-          await runInstaller(outFile);
           notification.dismiss();
+          await runInstaller(outFile);
 
           return;
         },
       } : undefined,
-      {
+      isLoadedAndActive('browse') ? {
         text: 'Reveal',
         className: 'icon icon-location',
 
         onDidClick() {
-          revealInstaller(outFile);
           notification.dismiss();
+          Browse.reveal(outFile);
 
           return;
         },
-      },
+      } : undefined,
       {
         text: 'Cancel',
 
@@ -245,12 +245,6 @@ function openURL(nsisCommand: string): void {
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${nsisCommand}.html?utm_source=atom&utm_content=reference`, {
     url: true
   });
-}
-
-function revealInstaller(outFile: string): void {
-  if (fileExists(outFile)) {
-    shell.showItemInFolder(outFile);
-  }
 }
 
 async function runInstaller(outFile) {

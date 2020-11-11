@@ -13,8 +13,8 @@ function setRunner(): void {
       {
         text: 'Set makensis',
         onDidClick() {
-          atom.config.set('runner.scopes.nsis', 'makensis -');
           notification.dismiss();
+          atom.config.set('runner.scopes.nsis', 'makensis -');
 
           return;
         }
@@ -45,8 +45,8 @@ function unsetRunner(): void {
       {
         text: 'Unset makensis',
         onDidClick() {
-          atom.config.unset('runner.scopes.nsis');
           notification.dismiss();
+          atom.config.unset('runner.scopes.nsis');
 
           return;
         }
@@ -54,8 +54,8 @@ function unsetRunner(): void {
       {
         text: 'Cancel',
         onDidClick() {
-          atom.beep();
           notification.dismiss();
+          atom.beep();
 
           return;
         }

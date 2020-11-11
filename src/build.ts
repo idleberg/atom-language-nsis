@@ -30,15 +30,15 @@ async function createBuildFile(): Promise<any> {
           text: 'Open Settings',
           className: 'icon icon-gear',
           async onDidClick() {
+            notification.dismiss();
+
             await atom.workspace.open(`atom://config/packages/language-nsis`, {
               pending: true,
               searchAllPanes: true,
             });
 
-            notification.dismiss();
-
             return;
-          },
+          }
         },
         {
           text: 'Cancel',
@@ -46,9 +46,9 @@ async function createBuildFile(): Promise<any> {
             notification.dismiss();
 
             return;
-          },
-        },
-      ],
+          }
+        }
+      ]
     });
 
     atom.beep();

@@ -1,5 +1,6 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
+import Browse from './browse';
 import { convert } from './nlf';
 import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
@@ -13,7 +14,7 @@ export default {
   async activate(): Promise<void> {
     devConsole.log('Activating package');
 
-    await initDotEnv()
+    await initDotEnv();
 
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();
@@ -128,6 +129,14 @@ export default {
   },
 
   consumeConsolePanel(consolePanel: ConsolePanel): void {
+    devConsole.log('Consuming Console Panel');
+
     this.consolePanel = consolePanel;
   },
+
+  consumeBrowse(browse: unknown): void {
+    devConsole.log('Consuming Console Browse');
+
+    Browse.consume(browse);
+  }
 };

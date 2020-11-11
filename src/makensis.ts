@@ -31,7 +31,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
             notification.dismiss();
 
             return;
-          },
+          }
         },
         {
           text: 'Cancel',
@@ -39,9 +39,9 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
             notification.dismiss();
 
             return;
-          },
-        },
-      ],
+          }
+        }
+      ]
     });
 
     atom.beep();
