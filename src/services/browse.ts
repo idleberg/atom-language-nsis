@@ -12,17 +12,6 @@ export default {
     });
   },
 
-  async open(target: string): Promise<void> {
-    try {
-      await this.browse({
-        action: 'open',
-        target
-      });
-    } catch (error) {
-      missingPackageWarning('browse');
-    }
-  },
-
   async reveal(target: string): Promise<void> {
     try {
       await this.browse({

@@ -1,5 +1,4 @@
 import { Disposable } from 'atom';
-// import { missingPackageWarning } from '../util';
 
 export default {
   consolePanel: null,

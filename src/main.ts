@@ -130,13 +130,13 @@ export default {
   },
 
   consumeConsolePanel(consolePanel: unknown): void {
-    devConsole.log('Consuming Console Panel');
+    devConsole.log('Consuming Console Panel service');
 
     ConsolePanel.consumer(consolePanel);
   },
 
   consumeBrowse(browse: unknown): void {
-    devConsole.log('Consuming Console Browse');
+    devConsole.log('Consuming Browse service');
 
     Browse.consumer(browse);
   }
