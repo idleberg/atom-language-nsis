@@ -40,6 +40,10 @@
   },
   "package-deps": [
     {
+      "name": "browse",
+      "minimumVersion": "3.1.0"
+    },
+    {
       "name": "console-panel"
     },
     {
@@ -89,7 +93,12 @@
     "language-nsis:grammar-used"
   ],
   "consumedServices": {
-    "console-panel": {
+    "browse": {
+      "versions": {
+        "^1.0.0": "consumeBrowse"
+      }
+    }
+    ,"console-panel": {
       "versions": {
         "^1.0.0": "consumeConsolePanel"
       }
