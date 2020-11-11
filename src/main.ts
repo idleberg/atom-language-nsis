@@ -1,6 +1,7 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
 import Browse from './services/browse';
+import ConsolePanel from './services/console-panel';
 import { convert } from './nlf';
 import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
@@ -31,13 +32,13 @@ export default {
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:compile': async () => await compile(false, this.consolePanel)
+        'NSIS:compile': async () => await compile(false)
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:compile-strict': async () => await compile(true, this.consolePanel)
+        'NSIS:compile-strict': async () => await compile(true)
       })
     );
 
@@ -62,13 +63,13 @@ export default {
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:show-compiler-flags': async () => await showCompilerFlags(this.consolePanel)
+        'NSIS:show-compiler-flags': async () => await showCompilerFlags()
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:show-version': async () => await showVersion(this.consolePanel)
+        'NSIS:show-version': async () => await showVersion()
       })
     );
 
@@ -128,15 +129,15 @@ export default {
     this.subscriptions?.dispose();
   },
 
-  consumeConsolePanel(consolePanel: ConsolePanel): void {
+  consumeConsolePanel(consolePanel: unknown): void {
     devConsole.log('Consuming Console Panel');
 
-    this.consolePanel = consolePanel;
+    ConsolePanel.consumer(consolePanel);
   },
 
   consumeBrowse(browse: unknown): void {
     devConsole.log('Consuming Console Browse');
 
-    Browse.consume(browse);
+    Browse.consumer(browse);
   }
 };

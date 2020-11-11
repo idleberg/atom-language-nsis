@@ -1,8 +1,9 @@
 import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
 import * as NSIS from 'makensis';
+import ConsolePanel from './services/console-panel';
 
-async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise<void> {
+async function compile(strictMode: boolean): Promise<void> {
   const editor = atom.workspace.getActiveTextEditor();
 
   if (!editor) {
@@ -70,7 +71,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
     compilerArguments.push(...mapDefinitions());
     compilerArguments.push(script);
 
-    clearConsole(consolePanel);
+    clearConsole();
 
 
     // Let's go
@@ -86,7 +87,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
 
         try {
           if (getConfig('alwaysShowOutput')) {
-            consolePanel.warn(lineString);
+            ConsolePanel.warn(lineString);
           }
         } catch (error) {
           console.warn(lineString);
@@ -94,7 +95,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       } else {
         try {
           if (getConfig('alwaysShowOutput')) {
-            consolePanel.log(lineString);
+            ConsolePanel.log(lineString);
           }
         } catch (error) {
           console.log(lineString);
@@ -110,7 +111,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
       const lineString = line.toString();
 
       try {
-        consolePanel.error(lineString);
+        ConsolePanel.error(lineString);
       } catch (error) {
         console.error(lineString);
       }
@@ -138,7 +139,7 @@ async function compile(strictMode: boolean, consolePanel: ConsolePanel): Promise
   }
 }
 
-async function showVersion(consolePanel: ConsolePanel): Promise<void> {
+async function showVersion(): Promise<void> {
   const pathToMakensis = await getMakensisPath();
   const output = await NSIS.version(
     {
@@ -147,11 +148,11 @@ async function showVersion(consolePanel: ConsolePanel): Promise<void> {
     await getSpawnEnv()
   );
 
-  clearConsole(consolePanel);
+  clearConsole();
 
   if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
     try {
-      consolePanel.log(`makensis ${output.stdout} (${pathToMakensis})`);
+      ConsolePanel.log(`makensis ${output.stdout} (${pathToMakensis})`);
     } catch (error) {
       console.info(`makensis ${output.stdout} (${pathToMakensis})`);
       atom.openDevTools();
@@ -161,7 +162,7 @@ async function showVersion(consolePanel: ConsolePanel): Promise<void> {
   }
 }
 
-async function showCompilerFlags(consolePanel: ConsolePanel): Promise<void> {
+async function showCompilerFlags(): Promise<void> {
   const pathToMakensis = await getMakensisPath();
   const showFlagsAsObject = getConfig('showFlagsAsObject');
 
@@ -173,11 +174,11 @@ async function showCompilerFlags(consolePanel: ConsolePanel): Promise<void> {
     await getSpawnEnv()
   );
 
-  clearConsole(consolePanel);
+  clearConsole();
 
   if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
     try {
-      consolePanel.log(JSON.stringify(output.stdout || output.stderr, null, 2));
+      ConsolePanel.log(JSON.stringify(output.stdout || output.stderr, null, 2));
     } catch (error) {
       console.info(output.stdout || output.stderr);
       atom.openDevTools();

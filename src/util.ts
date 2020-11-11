@@ -5,14 +5,15 @@ import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import Browse from './services/browse';
+import ConsolePanel from './services/console-panel';
 import devConsole from './log';
 import execa from 'execa';
 import open from 'open';
 import which from 'which';
 
-function clearConsole(consolePanel: ConsolePanel): void {
+function clearConsole(): void {
   try {
-    consolePanel.clear();
+    ConsolePanel.clear();
   } catch (error) {
     if (getConfig('clearConsole')) {
       console.clear();

@@ -1,9 +1,10 @@
 import { Disposable } from 'atom';
+import { missingPackageWarning } from '../util';
 
 export default {
   browse: null,
 
-  consume(browse: unknown): Disposable {
+  consumer(browse: unknown): Disposable {
     this.browse = browse;
 
     return new Disposable(() => {
@@ -18,7 +19,7 @@ export default {
         target
       });
     } catch (error) {
-      this.missingDependency();
+      missingPackageWarning('browse');
     }
   },
 
@@ -29,36 +30,7 @@ export default {
         target
       });
     } catch (error) {
-      this.missingDependency();
+      missingPackageWarning('browse');
     }
-  },
-
-  missingDependency(): void {
-    const notification = atom.notifications.addError('Missing package dependency `browse`, please install it now.', {
-      dismissable: true,
-      buttons: [
-        {
-          text: 'Show Package',
-          async onDidClick() {
-            notification.dismiss();
-
-            await atom.workspace.open(`atom://config/packages/browse`, {
-              pending: true,
-              searchAllPanes: true,
-            });
-
-            return;
-          }
-        },
-        {
-          text: 'Cancel',
-          onDidClick() {
-            notification.dismiss();
-
-            return;
-          }
-        }
-      ]
-    });
   }
 };
