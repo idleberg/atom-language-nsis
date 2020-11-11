@@ -4,7 +4,7 @@ import { exec } from 'child_process';
 import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
-import Browse from './browse';
+import Browse from './services/browse';
 import devConsole from './log';
 import execa from 'execa';
 import open from 'open';

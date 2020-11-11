@@ -1,6 +1,6 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
-import Browse from './browse';
+import Browse from './services/browse';
 import { convert } from './nlf';
 import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
