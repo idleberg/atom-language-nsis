@@ -1,6 +1,6 @@
 {
   "name": "language-nsis",
-  "version": "8.5.0",
+  "version": "8.6.0",
   "description": "Atom language support for NSIS, including grammar, snippets and build system",
   "license": "MIT OR GPL-2.0",
   "main": "./lib/main",
@@ -97,8 +97,8 @@
       "versions": {
         "^1.0.0": "consumeBrowse"
       }
-    }
-    ,"console-panel": {
+    },
+    "console-panel": {
       "versions": {
         "^1.0.0": "consumeConsolePanel"
       }
