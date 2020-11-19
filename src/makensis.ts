@@ -1,6 +1,7 @@
 import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
 import * as NSIS from 'makensis';
+import { basename } from 'path';
 
 import BusySignal from './services/busy-signal';
 import ConsolePanel from './services/console-panel';
@@ -76,7 +77,7 @@ async function compile(strictMode: boolean): Promise<void> {
     clearConsole();
 
     if (isLoadedAndActive('busy-signal')) {
-      BusySignal.add(`Compiling script`);
+      BusySignal.add(`Compiling ${basename(script)}`);
     }
 
     // Let's go
