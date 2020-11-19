@@ -44,6 +44,10 @@
       "minimumVersion": "3.1.0"
     },
     {
+      "name": "busy-signal",
+      "minimumVersion": "2.0.0"
+    },
+    {
       "name": "console-panel"
     },
     {
@@ -96,6 +100,11 @@
     "browse": {
       "versions": {
         "^1.0.0": "consumeBrowse"
+      }
+    },
+    "busy-signal": {
+      "versions": {
+        "1.0.0": "consumeSignal"
       }
     },
     "console-panel": {

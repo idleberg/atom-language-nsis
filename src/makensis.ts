@@ -1,6 +1,8 @@
-import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, mapDefinitions, notifyOnCompletion } from './util';
+import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
 import * as NSIS from 'makensis';
+
+import BusySignal from './services/busy-signal';
 import ConsolePanel from './services/console-panel';
 
 async function compile(strictMode: boolean): Promise<void> {
@@ -73,6 +75,9 @@ async function compile(strictMode: boolean): Promise<void> {
 
     clearConsole();
 
+    if (isLoadedAndActive('busy-signal')) {
+      BusySignal.add(`Compiling script`);
+    }
 
     // Let's go
     const makensis = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());
@@ -126,6 +131,10 @@ async function compile(strictMode: boolean): Promise<void> {
     });
 
     makensis.on('exit', errorCode => {
+      if (isLoadedAndActive('busy-signal')) {
+        BusySignal.clear();
+      }
+
       if (errorCode === 0) {
         if (hasWarning && getConfig('showBuildNotifications')) {
           notifyOnCompletion('addWarning', 'Compiled with warnings', outFile);
@@ -142,6 +151,10 @@ async function compile(strictMode: boolean): Promise<void> {
 }
 
 async function showVersion(): Promise<void> {
+  if (isLoadedAndActive('busy-signal')) {
+    BusySignal.add(`Showing version`);
+  }
+
   const pathToMakensis = await getMakensisPath();
   const output = await NSIS.version(
     {
@@ -162,9 +175,17 @@ async function showVersion(): Promise<void> {
   } else {
     atom.notifications.addInfo(`NSIS Version`, { detail: `makensis ${output.stdout} (${pathToMakensis})`, dismissable: true });
   }
+
+  if (isLoadedAndActive('busy-signal')) {
+    BusySignal.clear();
+  }
 }
 
 async function showCompilerFlags(): Promise<void> {
+  if (isLoadedAndActive('busy-signal')) {
+    BusySignal.add(`Showing compiler flags`);
+  }
+
   const pathToMakensis = await getMakensisPath();
   const showFlagsAsObject = getConfig('showFlagsAsObject');
 
@@ -187,6 +208,10 @@ async function showCompilerFlags(): Promise<void> {
     }
   } else {
     atom.notifications.addInfo(`Compiler Flags`, { detail: JSON.stringify(output.stdout || output.stderr, null, 2), dismissable: true });
+  }
+
+  if (isLoadedAndActive('busy-signal')) {
+    BusySignal.clear();
   }
 }
 

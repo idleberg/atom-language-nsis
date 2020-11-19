@@ -1,3 +1,7 @@
+# v8.7.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.7.0)
+
+- consume `busy-signal` service
+
 # v8.6.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.6.1)
 
 - improve success messages

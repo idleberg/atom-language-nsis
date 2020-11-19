@@ -1,12 +1,15 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
-import Browse from './services/browse';
-import ConsolePanel from './services/console-panel';
 import { convert } from './nlf';
 import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
 import configSchema from './config';
 import devConsole from './log';
+
+// Services
+import Browse from './services/browse';
+import ConsolePanel from './services/console-panel';
+import BusySignal from './services/busy-signal';
 
 export default {
   config: configSchema,
@@ -139,5 +142,11 @@ export default {
     devConsole.log('Consuming Browse service');
 
     Browse.consumer(browse);
+  },
+
+  consumeSignal(registry: unknown): void {
+    devConsole.log('Consuming Busy Signal service');
+
+    BusySignal.consumer(registry);
   }
 };
