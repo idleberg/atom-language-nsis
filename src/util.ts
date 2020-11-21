@@ -21,12 +21,18 @@ function clearConsole(): void {
   }
 }
 
-function detectOutfile(line: string): string {
-  if (line.includes('Output: "')) {
+function detectOutfile(str: string): string {
+  if (str.includes('Output: "')) {
     const regex = /Output: "(.*\.exe)"\r?\n/g;
-    const result = regex.exec(line.toString());
+    const result = regex.exec(str.toString());
 
-    return result[1];
+    if (typeof result === 'object') {
+      try {
+        return result['1'];
+      } catch (e) {
+        return '';
+      }
+    }
   }
 
   return '';
