@@ -20,7 +20,7 @@ async function compile(strictMode: boolean): Promise<void> {
   const scope = editor.getGrammar().scopeName;
 
   if (getConfig('processHeaders') === false && isHeaderFile(script)) {
-    const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow it in the package settings.', {
+    const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow this in the package settings.', {
       dismissable: true,
       buttons: [
         {
