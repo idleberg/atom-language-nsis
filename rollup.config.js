@@ -11,7 +11,7 @@ const plugins = [
     preferBuiltins: true
   }),
   (
-    process.env.NODE_ENV === 'development'
+    process.env.ROLLUP_WATCH
       ? undefined
       : terser()
   ),
