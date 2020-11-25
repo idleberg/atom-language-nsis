@@ -47,7 +47,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
     * x64
 * [Drunken NSIS](#drunken-nsis)
 * [Build Tools](#building)
-* [Linter](#linting)
+* [Linting](#linting)
 * [Environment Variables](#environment-variables)
 
 You can further extend this package with snippets for [third-party plug-ins](https://atom.io/packages/nsis-plugins).
