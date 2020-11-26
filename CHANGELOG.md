@@ -1,3 +1,7 @@
+# v8.8.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.0)
+
+- add `System::Int64Op` snippet
+
 # v8.7.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.7.1)
 
 - improve `detectOutfile()`
