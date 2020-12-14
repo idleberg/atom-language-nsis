@@ -1,7 +1,8 @@
+import { basename } from 'path';
 import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
+import { flagHandler, versionHandler } from './handler';
 import * as NSIS from 'makensis';
-import { basename } from 'path';
 
 import BusySignal from './services/busy-signal';
 import ConsolePanel from './services/console-panel';
@@ -157,25 +158,17 @@ async function showVersion(): Promise<void> {
   }
 
   const pathToMakensis = await getMakensisPath();
-  const output = await NSIS.version(
+
+  clearConsole();
+
+  NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
+
+  await NSIS.version(
     {
       pathToMakensis,
     },
     await getSpawnEnv()
   );
-
-  clearConsole();
-
-  if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
-    try {
-      ConsolePanel.log(`makensis ${output.stdout} (${pathToMakensis})`);
-    } catch (error) {
-      console.info(`makensis ${output.stdout} (${pathToMakensis})`);
-      atom.openDevTools();
-    }
-  } else {
-    atom.notifications.addInfo(`NSIS Version`, { detail: `makensis ${output.stdout} (${pathToMakensis})`, dismissable: true });
-  }
 
   if (isLoadedAndActive('busy-signal')) {
     BusySignal.clear();
@@ -188,28 +181,20 @@ async function showCompilerFlags(): Promise<void> {
   }
 
   const pathToMakensis = await getMakensisPath();
+
+  clearConsole();
+
+  NSIS.events.once('close', data => flagHandler(data));
+
   const showFlagsAsObject = getConfig('showFlagsAsObject');
 
-  const output = await NSIS.hdrInfo(
+  await NSIS.headerInfo(
     {
       pathToMakensis,
       json: showFlagsAsObject,
     },
     await getSpawnEnv()
   );
-
-  clearConsole();
-
-  if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
-    try {
-      ConsolePanel.log(JSON.stringify(output.stdout || output.stderr, null, 2));
-    } catch (error) {
-      console.info(output.stdout || output.stderr);
-      atom.openDevTools();
-    }
-  } else {
-    atom.notifications.addInfo(`Compiler Flags`, { detail: JSON.stringify(output.stdout || output.stderr, null, 2), dismissable: true });
-  }
 
   if (isLoadedAndActive('busy-signal')) {
     BusySignal.clear();
@@ -219,6 +204,7 @@ async function showCompilerFlags(): Promise<void> {
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
   const pathToMakensis = await getMakensisPath();
+
   const output = await NSIS.cmdHelp(
     '',
     {
