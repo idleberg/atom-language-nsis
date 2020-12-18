@@ -30,11 +30,14 @@ export default [
       sourcemap: true
     },
     external: [
-      'assert',
+      // Atom
       'atom',
+      'electron',
+
+      // Node
+      'assert',
       'buffer',
       'child_process',
-      'electron',
       'events',
       'fs',
       'os',
@@ -43,6 +46,5 @@ export default [
       'util'
     ],
     plugins: plugins
-  },
-
+  }
 ];
