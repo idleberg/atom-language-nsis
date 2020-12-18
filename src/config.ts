@@ -9,16 +9,33 @@ export default {
     default: 'makensis',
     order: 0
   },
-  compilerArguments: {
-    title: 'Compiler Arguments',
-    description: 'Specify the default arguments for `makensis`, separated by commas ([see documentation](http://nsis.sourceforge.net/Docs/Chapter3.html#usage))',
-    type: 'array',
-    default: [
-      `${getPrefix()}V3`
+  compilerVerbosity: {
+    title: 'Compiler Verbosity',
+    description: 'Specify the default verbosity for `makensis`',
+    type: 'string',
+    default: '3',
+    enum: [
+      {
+        value: '0',
+        description: '0 - none'
+      },
+      {
+        value: '1',
+        description: '1 - no warnings'
+      },
+      {
+        value: '2',
+        description: '2 - no info'
+      },
+      {
+        value: '3',
+        description: '3 - no script'
+      },
+      {
+        value: '4',
+        description: '4 - all'
+      }
     ],
-    items: {
-      type: 'string'
-    },
     order: 1
   },
   alwaysShowOutput: {
