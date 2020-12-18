@@ -11,6 +11,10 @@ export default {
     });
   },
 
+  toggle(): void {
+    this.consolePanel.toggle();
+  },
+
   clear(): void {
     this.consolePanel.clear();
   },
