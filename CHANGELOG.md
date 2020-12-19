@@ -4,6 +4,7 @@
 - add `System::Int64Op` snippet
 - add `compilerVerbosity` option
 - remove `compilerArguments` option
+- toggle console panel prior to logging
 - update dependencies
 
 # v8.7.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.7.1)
