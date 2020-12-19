@@ -152,14 +152,19 @@ async function manageDependencies(): Promise<void> {
   await satisfyDependencies('language-nsis');
 }
 
-function mapDefinitions(): string[] {
+function mapDefinitions(): unknown {
+  const definitions = {};
   const prefix = 'NSIS_APP_';
 
-  return Object.keys(process.env).map(item => {
+  Object.keys(process.env).map(item => {
     if (item.length && new RegExp(`${prefix}[a-z0-9]+`, 'gi').test(item)) {
-      return `${getPrefix()}D${item}=${process.env[item]}`;
+      definitions[item] = process.env[item];
     }
-  }).filter(item => item);
+  });
+
+  return Object.keys(definitions).length
+    ? definitions
+    : undefined;
 }
 
 function migrateConfig(oldKey: string, newKey: string): void {
