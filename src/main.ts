@@ -124,6 +124,7 @@ export default {
     }
 
     migrateConfig('allowHeaderCompilation', 'processHeaders');
+    atom.config.unset(`language-nsis.compilerArguments`);
   },
 
   deactivate(): void {

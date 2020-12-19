@@ -1,7 +1,7 @@
 import { basename } from 'path';
 import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions, notifyOnCompletion } from './util';
 import { spawn } from 'child_process';
-import { flagHandler, versionHandler } from './handler';
+import { compilerErrorHandler, compilerExitHandler, compilerOutputHandler, flagsHandler, versionHandler } from './handlers';
 import * as NSIS from 'makensis';
 
 import BusySignal from './services/busy-signal';
@@ -63,92 +63,30 @@ async function compile(strictMode: boolean): Promise<void> {
       return;
     }
 
-    const pathToMakensis = await getMakensisPath();
-    const prefix = getPrefix();
-    const compilerArguments: string[] = getConfig('compilerArguments');
-
-    // only add WX flag if not already specified
-    if (strictMode === true && !compilerArguments.includes('-WX') && !compilerArguments.includes('/WX')) {
-      compilerArguments.push(`${prefix}WX`);
-    }
-
-    compilerArguments.push(...mapDefinitions());
-    compilerArguments.push(script);
-
     clearConsole();
 
     if (isLoadedAndActive('busy-signal')) {
       BusySignal.add(`Compiling ${basename(script)}`);
     }
 
-    // Let's go
-    const makensis = spawn(pathToMakensis, compilerArguments, await getSpawnEnv());
-    let hasWarning = false;
-    let outFile = '';
+    NSIS.events.once('stdout', compilerOutputHandler);
+    NSIS.events.once('stderr', compilerErrorHandler);
+    NSIS.events.once('exit', compilerExitHandler);
 
-    makensis.stdout.on('data', line => {
-      const lineString = line.toString();
+    await NSIS.compile(
+      script,
+      {
+        json: getConfig('showFlagsAsObject'),
+        pathToMakensis: await getMakensisPath(),
+        strict: strictMode,
+        verbose: getConfig('compilerVerbosity')
+      },
+      await getSpawnEnv()
+    );
 
-      if (hasWarning === false && line.indexOf('warning: ') !== -1) {
-        hasWarning = true;
-
-        try {
-          if (getConfig('alwaysShowOutput')) {
-            ConsolePanel.warn(lineString);
-          }
-        } catch (error) {
-          console.warn(lineString);
-        }
-      } else {
-        try {
-          if (getConfig('alwaysShowOutput')) {
-            ConsolePanel.log(lineString);
-          }
-        } catch (error) {
-          console.log(lineString);
-        }
-      }
-
-      if (outFile === '') {
-        outFile = detectOutfile(line);
-      }
-    });
-
-    makensis.stderr.on('data', line => {
-      const lineString = line.toString();
-
-      try {
-        ConsolePanel.error(lineString);
-      } catch (error) {
-        console.error(lineString);
-      }
-
-      if (outFile === '') {
-        outFile = detectOutfile(line);
-      }
-    });
-
-    makensis.on('error', errorMessage => {
-      console.error('[language-nsis]', errorMessage)
-    });
-
-    makensis.on('exit', errorCode => {
-      if (isLoadedAndActive('busy-signal')) {
-        BusySignal.clear();
-      }
-
-      if (errorCode === 0) {
-        if (hasWarning && getConfig('showBuildNotifications')) {
-          notifyOnCompletion('addWarning', 'Compiled with warnings', outFile);
-        } else if (getConfig('showBuildNotifications')) {
-          notifyOnCompletion('addSuccess', 'Compiled successfully', outFile);
-        }
-      } else if (getConfig('showBuildNotifications')) {
-        atom.notifications.addError('Compile Error', { dismissable: false });
-      }
-    });
-
-    return;
+    if (isLoadedAndActive('busy-signal')) {
+      BusySignal.clear();
+    }
   }
 }
 
@@ -157,9 +95,8 @@ async function showVersion(): Promise<void> {
     BusySignal.add(`Showing version`);
   }
 
-  const pathToMakensis = await getMakensisPath();
-
   clearConsole();
+  const pathToMakensis = await getMakensisPath();
 
   NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
 
@@ -180,18 +117,14 @@ async function showCompilerFlags(): Promise<void> {
     BusySignal.add(`Showing compiler flags`);
   }
 
-  const pathToMakensis = await getMakensisPath();
-
   clearConsole();
 
-  NSIS.events.once('close', data => flagHandler(data));
-
-  const showFlagsAsObject = getConfig('showFlagsAsObject');
+  NSIS.events.once('exit', flagsHandler);
 
   await NSIS.headerInfo(
     {
-      pathToMakensis,
-      json: showFlagsAsObject,
+      json: getConfig('showFlagsAsObject'),
+      pathToMakensis: await getMakensisPath()
     },
     await getSpawnEnv()
   );
@@ -203,13 +136,12 @@ async function showCompilerFlags(): Promise<void> {
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
-  const pathToMakensis = await getMakensisPath();
 
   const output = await NSIS.cmdHelp(
     '',
     {
       json: true,
-      pathToMakensis,
+      pathToMakensis: await getMakensisPath()
     },
     await getSpawnEnv()
   );
