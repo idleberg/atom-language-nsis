@@ -1,6 +1,10 @@
 # v8.8.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.0)
 
+- use `makensis` to compile scripts
 - add `System::Int64Op` snippet
+- add `compilerVerbosity` option
+- remove `compilerArguments` option
+- update dependencies
 
 # v8.7.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.7.1)
 

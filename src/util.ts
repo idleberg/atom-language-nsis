@@ -108,12 +108,6 @@ async function getMakensisPath(): Promise<string> {
   return String(await which('makensis')) || 'makensis';
 }
 
-function getPrefix(): string {
-  return platform() === 'win32'
-    ? '/'
-    : '-';
-}
-
 async function getSpawnEnv(): Promise<unknown> {
   return {
     env: {
@@ -291,7 +285,6 @@ export {
   findPackagePath,
   getConfig,
   getMakensisPath,
-  getPrefix,
   getSpawnEnv,
   initDotEnv,
   isHeaderFile,
