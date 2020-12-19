@@ -3,6 +3,7 @@ import { missingPackageWarning } from '../util';
 
 export default {
   busySignal: null,
+  serviceName: 'busy-signal',
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   consumer(registry: any): Disposable {
@@ -17,7 +18,7 @@ export default {
     try {
       this.busySignal.add(message);
     } catch (error) {
-      missingPackageWarning('busy-signal');
+      missingPackageWarning(this.serviceName);
     }
   },
 
@@ -25,7 +26,7 @@ export default {
     try {
       this.busySignal.remove();
     } catch (error) {
-      missingPackageWarning('busy-signal');
+      missingPackageWarning(this.serviceName);
     }
   },
 
@@ -33,7 +34,7 @@ export default {
     try {
       this.busySignal.clear();
     } catch (error) {
-      missingPackageWarning('busy-signal');
+      missingPackageWarning(this.serviceName);
     }
   },
 
@@ -41,7 +42,7 @@ export default {
     try {
       this.busySignal.dispose();
     } catch (error) {
-      missingPackageWarning('busy-signal');
+      missingPackageWarning(this.serviceName);
     }
   }
 };
