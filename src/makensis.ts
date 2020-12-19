@@ -1,11 +1,9 @@
 import { basename } from 'path';
-import { clearConsole, detectOutfile, getConfig, getMakensisPath, getPrefix, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions, notifyOnCompletion } from './util';
-import { spawn } from 'child_process';
+import { clearConsole, getConfig, getMakensisPath, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions } from './util';
 import { compilerErrorHandler, compilerExitHandler, compilerOutputHandler, flagsHandler, versionHandler } from './handlers';
 import * as NSIS from 'makensis';
 
 import BusySignal from './services/busy-signal';
-import ConsolePanel from './services/console-panel';
 
 async function compile(strictMode: boolean): Promise<void> {
   const editor = atom.workspace.getActiveTextEditor();
@@ -76,6 +74,7 @@ async function compile(strictMode: boolean): Promise<void> {
     await NSIS.compile(
       script,
       {
+        define: mapDefinitions(),
         json: getConfig('showFlagsAsObject'),
         pathToMakensis: await getMakensisPath(),
         strict: strictMode,
