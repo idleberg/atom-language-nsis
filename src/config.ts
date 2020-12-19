@@ -1,4 +1,3 @@
-import { getPrefix } from './util';
 import { platform } from 'os';
 
 export default {
