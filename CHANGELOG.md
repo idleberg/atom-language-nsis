@@ -1,3 +1,9 @@
+# v8.8.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.1)
+
+- minor refactoring
+- update linting script
+- update dependencies
+
 # v8.8.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.0)
 
 - use `makensis` to compile scripts
