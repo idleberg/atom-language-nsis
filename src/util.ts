@@ -21,23 +21,6 @@ function clearConsole(): void {
   }
 }
 
-function detectOutfile(str: string): string {
-  if (str.includes('Output: "')) {
-    const regex = /Output: "(.*\.exe)"\r?\n/g;
-    const result = regex.exec(str.toString());
-
-    if (typeof result === 'object') {
-      try {
-        return result['1'];
-      } catch (e) {
-        return '';
-      }
-    }
-  }
-
-  return '';
-}
-
 async function fileExists(filePath: string): Promise<boolean> {
   try {
     await fs.access(filePath, constants.F_OK);

@@ -9,7 +9,7 @@
     "build": "npm run clean && rollup --config",
     "clean": "rimraf ./lib",
     "dev": "npm run start",
-    "eslint": "eslint --fix ./src",
+    "eslint": "eslint ./src",
     "jsonlint": "jsonlint ./grammars/*.json ./keymaps/*.json menus/*.json snippets/*.json --quiet",
     "prepublishOnly": "npm run clean && npm run build",
     "start": "rollup --watch --config",
@@ -153,6 +153,6 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
-    "*.json": "npm run jsonlint"
+    "*.json": "jsonlint --quiet"
   }
 }
