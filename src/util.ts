@@ -263,7 +263,6 @@ async function runInstaller(outFile) {
 
 export {
   clearConsole,
-  detectOutfile,
   fileExists,
   findPackagePath,
   getConfig,
