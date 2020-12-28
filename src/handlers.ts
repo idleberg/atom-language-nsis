@@ -26,7 +26,7 @@ function compilerErrorHandler(data: unknown): void {
 
 function compilerExitHandler(data: unknown): void {
   if (data['status'] === 0) {
-    if (data['hasWarning'] && getConfig('showBuildNotifications')) {
+    if (data['warnings'] && getConfig('showBuildNotifications')) {
       notifyOnCompletion('addWarning', 'Compiled with warnings', data['outFile']);
     } else if (getConfig('showBuildNotifications')) {
       notifyOnCompletion('addSuccess', 'Compiled successfully', data['outFile']);

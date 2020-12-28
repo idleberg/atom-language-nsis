@@ -67,8 +67,8 @@ async function compile(strictMode: boolean): Promise<void> {
       BusySignal.add(`Compiling ${basename(script)}`);
     }
 
-    NSIS.events.once('stdout', compilerOutputHandler);
-    NSIS.events.once('stderr', compilerErrorHandler);
+    NSIS.events.on('stdout', compilerOutputHandler);
+    NSIS.events.on('stderr', compilerErrorHandler);
     NSIS.events.once('exit', compilerExitHandler);
 
     await NSIS.compile(
@@ -82,6 +82,8 @@ async function compile(strictMode: boolean): Promise<void> {
       },
       await getSpawnEnv()
     );
+
+    NSIS.events.removeAllListeners();
 
     if (isLoadedAndActive('busy-signal')) {
       BusySignal.clear();
