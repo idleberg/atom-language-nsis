@@ -1,3 +1,8 @@
+# v8.8.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.2)
+
+- fix event handler
+- update dependencies
+
 # v8.8.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.1)
 
 - minor refactoring
