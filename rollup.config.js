@@ -43,7 +43,17 @@ export default [
       'os',
       'path',
       'stream',
-      'util'
+      'util',
+
+      // Dependencies
+      '@nsis/nlf',
+      'atom-satisfy-dependencies',
+      'atom-select-list',
+      'dotenv',
+      'execa',
+      'makensis',
+      'which',
+      'yaml'
     ],
     plugins: plugins
   }
