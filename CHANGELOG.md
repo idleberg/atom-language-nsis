@@ -1,3 +1,7 @@
+# v8.9.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.2)
+
+- fix linting script
+
 # v8.9.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.1)
 
 - fix verbosity config
