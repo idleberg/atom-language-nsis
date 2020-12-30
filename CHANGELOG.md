@@ -1,3 +1,9 @@
+# v8.9.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.1)
+
+- fix verbosity config
+- improve verbosity handling
+- update dependencies
+
 # v8.9.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.0)
 
 - group compiler settings
