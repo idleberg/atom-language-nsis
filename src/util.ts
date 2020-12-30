@@ -82,7 +82,7 @@ function getConfig(key: string): any {
 async function getMakensisPath(): Promise<string> {
 
   // If stored, return pathToMakensis
-  const pathToMakensis = String(getConfig('pathToMakensis'));
+  const pathToMakensis = String(getConfig('compilerOptions.pathToMakensis'));
 
   if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
     return pathToMakensis;

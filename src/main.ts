@@ -126,6 +126,7 @@ export default {
     migrateConfig('allowHeaderCompilation', 'processHeaders');
     migrateConfig('compilerArguments', 'compilerOptions.customArguments');
     migrateConfig('compilerVerbosity', 'compilerOptions.verbosity');
+    migrateConfig('pathToMakensis', 'compilerOptions.pathToMakensis');
   },
 
   deactivate(): void {
