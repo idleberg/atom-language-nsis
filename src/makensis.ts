@@ -77,8 +77,9 @@ async function compile(strictMode: boolean): Promise<void> {
         define: mapDefinitions(),
         json: getConfig('showFlagsAsObject'),
         pathToMakensis: await getMakensisPath(),
-        strict: strictMode,
-        verbose: getConfig('compilerVerbosity')
+        rawArguments: getConfig('compilerOptions.customArguments'),
+        strict: strictMode || getConfig('compilerOptions.strictMode'),
+        verbose: getConfig('compilerOptions.verbosity')
       },
       await getSpawnEnv()
     );
