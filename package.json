@@ -15,7 +15,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "prepublishOnly": "npm run clean && npm run build",
     "start": "rollup --watch --config",
-    "test": "npm run eslint"
+    "test": "npm run lint"
   },
   "author": {
     "name": "Jan T. Sott",
