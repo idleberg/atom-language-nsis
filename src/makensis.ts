@@ -79,7 +79,7 @@ async function compile(strictMode: boolean): Promise<void> {
         pathToMakensis: await getMakensisPath(),
         rawArguments: getConfig('compilerOptions.customArguments'),
         strict: strictMode || getConfig('compilerOptions.strictMode'),
-        verbose: getConfig('compilerOptions.verbosity')
+        verbose: parseInt(getConfig('compilerOptions.verbosity'))
       },
       await getSpawnEnv()
     );

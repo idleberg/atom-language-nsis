@@ -16,27 +16,27 @@ export default {
       verbosity: {
         title: 'Verbosity',
         description: 'Specify the default verbosity for `makensis`',
-        type: 'string',
-        default: '3',
+        type: 'number',
+        default: 3,
         enum: [
           {
-            value: '0',
+            value: 0,
             description: '0 - none'
           },
           {
-            value: '1',
+            value: 1,
             description: '1 - no warnings'
           },
           {
-            value: '2',
+            value: 2,
             description: '2 - no info'
           },
           {
-            value: '3',
+            value: 3,
             description: '3 - no script'
           },
           {
-            value: '4',
+            value: 4,
             description: '4 - all'
           }
         ],
