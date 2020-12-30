@@ -1,3 +1,11 @@
+# v8.9.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.0)
+
+- group compiler settings
+- add new compiler settings
+  - `strictMode`
+  - `customArguments`
+- re-order package settings
+
 # v8.8.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.8.3)
 
 - update rollup config
