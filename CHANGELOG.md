@@ -1,5 +1,7 @@
 # v8.9.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.3)
 
+- revert changes in rollup config
+
 # v8.9.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.2)
 
 - fix linting script
