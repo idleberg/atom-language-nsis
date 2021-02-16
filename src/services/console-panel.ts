@@ -11,6 +11,15 @@ export default {
     });
   },
 
+  show(clear = false): void {
+    if (clear) this.consolePanel.clear();
+    this.consolePanel.show();
+  },
+
+  hide(): void {
+    this.consolePanel.hide();
+  },
+
   toggle(): void {
     this.consolePanel.toggle();
   },

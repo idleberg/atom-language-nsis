@@ -8,7 +8,7 @@ function compilerOutputHandler(data: unknown): void {
 
   try {
     if (getConfig('alwaysShowOutput')) {
-      ConsolePanel.toggle();
+      ConsolePanel.show(true);
       ConsolePanel[logLevel](data['line']);
     }
   } catch (error) {
@@ -41,7 +41,7 @@ function flagsHandler(data: unknown): void {
 
   if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
     try {
-      ConsolePanel.toggle();
+      ConsolePanel.show(true);
       ConsolePanel.log(JSON.stringify(output, null, 2));
     } catch (error) {
       console.info(output);
@@ -57,7 +57,7 @@ function flagsHandler(data: unknown): void {
 function versionHandler(data: unknown, pathToMakensis: string): void {
   if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
     try {
-      ConsolePanel.toggle();
+      ConsolePanel.show(true);
       ConsolePanel.log(`makensis ${data['line']} (${pathToMakensis})`);
     } catch (error) {
       console.info(`makensis ${data['line']} (${pathToMakensis})`);
