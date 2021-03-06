@@ -231,9 +231,7 @@ function notifyOnCompletion(type: string, messageText: string, outFile: string):
 }
 
 function openURL(nsisCommand: string): void {
-  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${nsisCommand}.html?utm_source=atom&utm_content=reference`, {
-    url: true
-  });
+  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${nsisCommand}.html?utm_source=atom&utm_content=reference`);
 }
 
 async function runInstaller(outFile) {
