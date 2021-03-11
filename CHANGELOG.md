@@ -1,3 +1,8 @@
+# v8.9.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.4)
+
+- update `.eslintrc`
+- update dependencies
+
 # v8.9.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.3)
 
 - revert changes in rollup config
