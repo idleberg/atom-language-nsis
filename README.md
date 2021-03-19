@@ -65,10 +65,12 @@ Install `language-nsis` from Atom's [Package Manager](http://flight-manual.atom.
 Change to your Atom packages directory:
 
 ```powershell
-# Windows Powershell
-cd $Env:USERPROFILE\.atom\packages
+# Powershell
+$ cd $Env:USERPROFILE\.atom\packages
+```
 
-# Windows Command Prompt
+```cmd
+:: Command Prompt
 $ cd %USERPROFILE%\.atom\packages
 ```
 
