@@ -1,3 +1,9 @@
+# v8.9.5 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.5)
+
+- minor refactoring
+- modify `lint:ts` script
+- update dependencies
+
 # v8.9.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.4)
 
 - update `.eslintrc`
