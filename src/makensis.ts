@@ -139,7 +139,7 @@ async function showCompilerFlags(): Promise<void> {
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
 
-  const output = await NSIS.cmdHelp(
+  const output = await NSIS.commandHelp(
     '',
     {
       json: true,
