@@ -1,3 +1,8 @@
+# v8.9.6 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.6)
+
+- remove deprecation notice
+- update dependencies
+
 # v8.9.5 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.5)
 
 - minor refactoring
