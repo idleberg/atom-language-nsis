@@ -22,9 +22,9 @@ export default {
     }
   },
 
-  remove(): void {
+  remove(message = ''): void {
     try {
-      this.busySignal.remove();
+      this.busySignal.remove(message);
     } catch (error) {
       missingPackageWarning(this.serviceName);
     }
