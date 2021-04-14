@@ -1,3 +1,8 @@
+# v8.9.7 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.7)
+
+- replace logging module
+- fix: add missing parameter to `busySignal.remove()`
+
 # v8.9.6 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.6)
 
 - remove deprecation notice
