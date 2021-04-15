@@ -17,11 +17,8 @@ export default {
 
   async activate(): Promise<void> {
     devConsole.log('Activating package');
-    devConsole.log('Activating', 'package', 'again', 1, 2, true);
-    devConsole.time('Test');
 
     await initDotEnv();
-    devConsole.timeEnd('Test');
 
     // Register commands
     this.subscriptions.add(
