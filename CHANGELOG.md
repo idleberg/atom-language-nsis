@@ -1,3 +1,7 @@
+# v8.9.9 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.9.8)
+
+- remove failing debug messages
+
 # v8.9.8 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.8)
 
 - update markdown linting script
