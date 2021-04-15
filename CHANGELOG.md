@@ -1,4 +1,4 @@
-# v8.9.9 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.9.8)
+# v8.9.9 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.9)
 
 - remove failing debug messages
 
