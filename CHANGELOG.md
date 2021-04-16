@@ -1,3 +1,7 @@
+# v8.9.10 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.10)
+
+- fix `migrateConfig()`
+
 # v8.9.9 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.9)
 
 - remove failing debug messages
