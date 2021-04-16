@@ -1,6 +1,7 @@
 import { config as dotenvConfig } from 'dotenv';
 import { constants, promises as fs } from 'fs';
 import { exec } from 'child_process';
+import { name } from '../package.json';
 import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
@@ -75,8 +76,8 @@ async function findPackagePath(packageName: string): Promise<string[]> {
 
 function getConfig(key: string): any {
     return key
-      ? atom.config.get(`language-nsis.${key}`)
-      : atom.config.get(`language-nsis`);
+      ? atom.config.get(`${name}.${key}`)
+      : atom.config.get(`${name}`);
 }
 
 async function getMakensisPath(): Promise<string> {
@@ -126,7 +127,7 @@ function isWindowsCompatible(): boolean {
 }
 
 async function manageDependencies(): Promise<void> {
-  await satisfyDependencies('language-nsis');
+  await satisfyDependencies(name);
 }
 
 function mapDefinitions(): unknown {
@@ -145,13 +146,13 @@ function mapDefinitions(): unknown {
 }
 
 function migrateConfig(oldKey: string, newKey: string): void {
-  if (atom.config.get(`language-nsis.${newKey}`)) {
-    devConsole.warn(`Setting '${newKey}' already exists, skipping migration`);
+  if (!atom.config.get(`${name}.${oldKey}`) || atom.config.get(`${name}.${newKey}`)) {
+    devConsole.warn(`The setting '${newKey}' already exists, skipping migration`);
     return;
   }
 
   try {
-    atom.config.set(`language-nsis.${newKey}`, atom.config.get(`language-nsis.${oldKey}`));
+    atom.config.set(`${name}.${newKey}`, atom.config.get(`${name}.${oldKey}`));
   } catch (error) {
     console.log(error);
     atom.notifications.addWarning(`Failed to migrate configuration, see console for details`);
@@ -159,8 +160,8 @@ function migrateConfig(oldKey: string, newKey: string): void {
     return;
   }
 
-  devConsole.warn(`Setting '${oldKey}' migrated successfully to '${newKey}'`);
-  atom.config.unset(`language-nsis.${oldKey}`);
+  devConsole.warn(`The setting '${oldKey}' was migrated successfully to '${newKey}'`);
+  atom.config.unset(`${name}.${oldKey}`);
 }
 
 function missingPackageWarning(packageName: string): void {
