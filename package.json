@@ -119,6 +119,11 @@
       "versions": {
         "^1.0.0": "consumeConsolePanel"
       }
+    },
+    "console-panel": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
     }
   },
   "dependencies": {
