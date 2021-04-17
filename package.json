@@ -50,7 +50,8 @@
       "minimumVersion": "2.0.0"
     },
     {
-      "name": "console-panel"
+      "name": "console",
+      "minimumVersion": "0.4.0"
     },
     {
       "name": "atom-ide-hyperclick"
@@ -109,7 +110,7 @@
         "1.0.0": "consumeSignal"
       }
     },
-    "console-panel": {
+    "console": {
       "versions": {
         "^1.0.0": "consumeConsolePanel"
       }
