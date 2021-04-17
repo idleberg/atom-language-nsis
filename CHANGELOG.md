@@ -1,3 +1,7 @@
+# v8.10.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.1)
+
+- consume fallback console service
+
 # v8.10.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.0)
 
 - add `console` package dependency
