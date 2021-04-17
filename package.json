@@ -49,10 +49,15 @@
       "name": "busy-signal",
       "minimumVersion": "2.0.0"
     },
-    {
-      "name": "console",
-      "minimumVersion": "0.4.0"
-    },
+    [
+      {
+        "name": "console",
+        "minimumVersion": "0.4.0"
+      },
+      {
+        "name": "console-panel"
+      }
+    ],
     {
       "name": "atom-ide-hyperclick"
     },
