@@ -1,3 +1,8 @@
+# v8.10.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.0)
+
+- add `console` package dependency
+- remove unused `devDependency`
+
 # v8.9.10 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.9.10)
 
 - fix `migrateConfig()`
