@@ -11,8 +11,7 @@ export default {
     });
   },
 
-  show(clear = false): void {
-    if (clear) this.consolePanel.clear();
+  show(): void {
     this.consolePanel.show();
   },
 
