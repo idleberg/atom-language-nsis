@@ -1,3 +1,8 @@
+# v8.10.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.3)
+
+- fix order of arguments in build-file
+- extend build-file support to `buildium` package
+
 # v8.10.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.2)
 
 - fix multiple console clearing
