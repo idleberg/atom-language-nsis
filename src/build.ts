@@ -126,7 +126,7 @@ async function saveBuildFile(options) {
   const hasWineProvider = isLoadedAndActive('build-makensis-wine');
   const wineProviderPath = (await findPackagePath('build-makensis-wine'))[0];
 
-  const args = ['{FILE_ACTIVE}'];
+  const args = [];
 
   const verbosity = parseInt(getConfig('compilerOptions.verbosity'));
   if (verbosity) args.push(`-V${verbosity}`);
@@ -140,7 +140,7 @@ async function saveBuildFile(options) {
       ? resolve(wineProviderPath, 'lib', 'makensis-wine.sh')
       : await getMakensisPath(),
     sh: useWineToRun && hasWineProvider,
-    args,
+    args: [...args, '{FILE_ACTIVE}'],
     cwd: '{FILE_ACTIVE_PATH}',
     errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
     warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
