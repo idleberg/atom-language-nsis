@@ -45,11 +45,11 @@ export default {
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
         'NSIS:create-.atom–build-file': async () => {
-          if (isLoadedAndActive('build')) {
+          if (isLoadedAndActive('buildium') || isLoadedAndActive('build')) {
             const { createBuildFile } = await import('./build');
             await createBuildFile();
           } else {
-            missingPackageWarning('build');
+            missingPackageWarning('buildium');
           }
         },
       })
