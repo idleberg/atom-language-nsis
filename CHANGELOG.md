@@ -1,3 +1,7 @@
+# v8.11.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.11.0)
+
+- bump minimum Atom version to v1.52
+
 # v8.10.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.3)
 
 - fix order of arguments in build-file
