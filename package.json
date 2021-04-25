@@ -38,7 +38,7 @@
     "url": "https://github.com/idleberg/atom-language-nsis.git"
   },
   "engines": {
-    "atom": ">=1.19.0 <2.0.0"
+    "atom": ">=1.52.0 <2.0.0"
   },
   "package-deps": [
     {
