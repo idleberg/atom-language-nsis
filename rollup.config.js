@@ -4,22 +4,20 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 
+const production = !process.env.ROLLUP_WATCH;
+
 const plugins = [
   commonjs(),
   json(),
   nodeResolve({
     preferBuiltins: true
   }),
-  (
-    process.env.ROLLUP_WATCH
-      ? undefined
-      : terser()
-  ),
+  !process.env.ROLLUP_WATCH && terser(),
   typescript({
     allowSyntheticDefaultImports: true,
     moduleResolution: 'node',
     resolveJsonModule: true,
-    sourceMap: true
+    sourcemap: production ? false : true
   })
 ];
 
@@ -30,7 +28,7 @@ export default [
       dir: 'lib',
       exports: 'default',
       format: 'cjs',
-      sourcemap: true
+      sourcemap: production ? false : true
     },
     external: [
       // Atom
