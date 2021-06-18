@@ -8,6 +8,7 @@ import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import Browse from './services/browse';
 import ConsolePanel from './services/console-panel';
 import devConsole from './log';
+import dotenvExpand from 'dotenv-expand';
 import execa from 'execa';
 import open from 'open';
 import which from 'which';
@@ -102,9 +103,11 @@ async function getSpawnEnv(): Promise<unknown> {
 }
 
 async function initDotEnv(): Promise<void> {
-  dotenvConfig({
-    path: await findEnvFile()
-  });
+  dotenvExpand(
+    dotenvConfig({
+      path: await findEnvFile()
+    })
+  );
 }
 
 function isHeaderFile(filePath: string): boolean {
