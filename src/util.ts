@@ -103,11 +103,15 @@ async function getSpawnEnv(): Promise<unknown> {
 }
 
 async function initDotEnv(): Promise<void> {
+  const envFile =  await findEnvFile();
+
   dotenvExpand(
     dotenvConfig({
-      path: await findEnvFile()
+      path: envFile
     })
   );
+
+  if (envFile) devConsole.log('Loading environment variables', Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
 }
 
 function isHeaderFile(filePath: string): boolean {
