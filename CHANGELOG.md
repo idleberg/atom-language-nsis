@@ -1,3 +1,7 @@
+# v8.12.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.0)
+
+- add support for DotEnv variable expansion
+
 # v8.11.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.11.0)
 
 - bump minimum Atom version to v1.52
