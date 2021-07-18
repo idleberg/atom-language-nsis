@@ -6,18 +6,15 @@ import { platform } from 'os';
 import { resolve } from 'path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import Browse from './services/browse';
+import Config from './config';
 import ConsolePanel from './services/console-panel';
 import devConsole from './log';
-import dotenvExpand from 'dotenv-expand';
-import execa from 'execa';
-import open from 'open';
-import which from 'which';
 
 function clearConsole(): void {
   try {
     ConsolePanel.clear();
   } catch (error) {
-    if (getConfig('clearConsole')) {
+    if (Config.get('clearConsole')) {
       console.clear();
     }
   }
@@ -75,20 +72,15 @@ async function findPackagePath(packageName: string): Promise<string[]> {
   }))).filter(item => item);
 }
 
-function getConfig(key: string): any {
-    return key
-      ? atom.config.get(`${name}.${key}`)
-      : atom.config.get(`${name}`);
-}
-
 async function getMakensisPath(): Promise<string> {
-
   // If stored, return pathToMakensis
-  const pathToMakensis = String(getConfig('compilerOptions.pathToMakensis'));
+  const pathToMakensis = String(Config.get('compilerOptions.pathToMakensis'));
 
   if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
     return pathToMakensis;
   }
+
+  const which =(await import('which')).default;
 
   return String(await which('makensis')) || 'makensis';
 }
@@ -103,6 +95,7 @@ async function getSpawnEnv(): Promise<unknown> {
 }
 
 async function initDotEnv(): Promise<void> {
+  const dotenvExpand = (await import('dotenv-expand')).default;
   const envFile =  await findEnvFile();
 
   dotenvExpand(
@@ -128,7 +121,7 @@ function isLoadedAndActive(packageName: string): boolean {
 }
 
 function isWindowsCompatible(): boolean {
-  return platform() === 'win32' || getConfig('useWineToRun')
+  return platform() === 'win32' || Config.get('useWineToRun')
     ? true
     : false;
 }
@@ -238,7 +231,8 @@ function notifyOnCompletion(type: string, messageText: string, outFile: string):
   });
 }
 
-function openURL(nsisCommand: string): void {
+async function openURL(nsisCommand: string): Promise<void> {
+  const open = (await import('open')).default;
   open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${nsisCommand}.html?utm_source=atom&utm_content=reference`);
 }
 
@@ -255,7 +249,9 @@ async function runInstaller(outFile) {
     }
 
     return;
-  } else if (getConfig('useWineToRun') === true) {
+  } else if (Config.get('useWineToRun')) {
+    const execa = (await import('execa')).default;
+
     try {
       await execa('wine', [ outFile ]);
     } catch (error) {
@@ -271,7 +267,6 @@ export {
   clearConsole,
   fileExists,
   findPackagePath,
-  getConfig,
   getMakensisPath,
   getSpawnEnv,
   initDotEnv,

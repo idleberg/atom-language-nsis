@@ -1,6 +1,5 @@
 import { basename, extname } from 'path';
 import { TextEditor } from 'atom';
-import NLF from '@nsis/nlf';
 
 async function convert(): Promise<void> {
   const editor: TextEditor = atom.workspace.getActiveTextEditor();
@@ -27,6 +26,7 @@ async function convert(): Promise<void> {
 }
 
 async function convertNLF(editor): Promise<void> {
+  const NLF = await import('@nsis/nlf');
   let output;
 
   try {
@@ -43,6 +43,7 @@ async function convertNLF(editor): Promise<void> {
 }
 
 async function convertJSON(editor: TextEditor): Promise<void> {
+  const NLF = await import('@nsis/nlf');
   let output;
 
   try {

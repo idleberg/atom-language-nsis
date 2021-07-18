@@ -1,9 +1,9 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
 import { convert } from './nlf';
-import { getConfig, initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
+import { initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
-import configSchema from './config';
+import Config from './config';
 import devConsole from './log';
 
 // Services
@@ -12,7 +12,7 @@ import ConsolePanel from './services/console-panel';
 import BusySignal from './services/busy-signal';
 
 export default {
-  config: configSchema,
+  config: Config.schema,
   subscriptions: new CompositeDisposable(),
 
   async activate(): Promise<void> {
@@ -24,7 +24,7 @@ export default {
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
         'NSIS:command-reference': async () => {
-          commandReference.init();
+          await commandReference.init();
           commandReference.toggle();
         },
       })
@@ -116,7 +116,7 @@ export default {
       })
     );
 
-    if (getConfig('manageDependencies')) {
+    if (Config.get('manageDependencies')) {
       await manageDependencies();
     }
 

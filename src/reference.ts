@@ -1,28 +1,29 @@
 import { openURL } from './util';
 import { showHelp } from './makensis';
-import SelectListView from 'atom-select-list';
 
 export default {
-  init(): void {
+  async init(): Promise<void> {
+    const SelectListView = (await import('atom-select-list')).default;
+
     this.selectListView = new SelectListView({
       emptyMessage: 'No command matches your search.',
       items: [],
 
-      filterKeyForItem(item) {
+      filterKeyForItem(item: string): string {
         return item;
       },
 
-      elementForItem(item) {
+      elementForItem(item: string): HTMLElement {
         const element = document.createElement('li');
         const html = item;
-        element.innerHTML = html;
+        element['innerHTML'] = html;
 
         return element;
       },
 
-      didConfirmSelection: item => {
+      didConfirmSelection: async item => {
         this.cancel();
-        openURL(item);
+        await openURL(String(item));
       },
 
       didCancelSelection: () => {

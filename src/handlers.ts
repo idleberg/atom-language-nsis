@@ -1,4 +1,5 @@
-import { getConfig, notifyOnCompletion } from './util';
+import { notifyOnCompletion } from './util';
+import Config from './config';
 import ConsolePanel from './services/console-panel';
 
 function compilerOutputHandler(data: unknown): void {
@@ -7,7 +8,7 @@ function compilerOutputHandler(data: unknown): void {
     : 'log';
 
   try {
-    if (getConfig('alwaysShowOutput')) {
+    if (Config.get('alwaysShowOutput')) {
       ConsolePanel.show();
       ConsolePanel[logLevel](data['line']);
     }
@@ -26,12 +27,12 @@ function compilerErrorHandler(data: unknown): void {
 
 function compilerExitHandler(data: unknown): void {
   if (data['status'] === 0) {
-    if (data['warnings'] && getConfig('showBuildNotifications')) {
+    if (data['warnings'] && Config.get('showBuildNotifications')) {
       notifyOnCompletion('addWarning', 'Compiled with warnings', data['outFile']);
-    } else if (getConfig('showBuildNotifications')) {
+    } else if (Config.get('showBuildNotifications')) {
       notifyOnCompletion('addSuccess', 'Compiled successfully', data['outFile']);
     }
-  } else if (getConfig('showBuildNotifications')) {
+  } else if (Config.get('showBuildNotifications')) {
     atom.notifications.addError('Compile Error', { dismissable: false });
   }
 }
@@ -39,7 +40,7 @@ function compilerExitHandler(data: unknown): void {
 function flagsHandler(data: unknown): void {
   const output = data['stdout'] || data['stderr'];
 
-  if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
+  if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
     try {
       ConsolePanel.show();
       ConsolePanel.log(JSON.stringify(output, null, 2));
@@ -55,7 +56,7 @@ function flagsHandler(data: unknown): void {
   }
 }
 function versionHandler(data: unknown, pathToMakensis: string): void {
-  if (String(getConfig('compilerOutput')).toLowerCase() === 'console') {
+  if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
     try {
       ConsolePanel.show();
       ConsolePanel.log(`makensis ${data['line']} (${pathToMakensis})`);

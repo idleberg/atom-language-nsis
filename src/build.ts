@@ -1,7 +1,9 @@
-import { fileExists, findPackagePath, getConfig, getMakensisPath, isHeaderFile, isLoadedAndActive } from './util';
+import { fileExists, findPackagePath, getMakensisPath, isHeaderFile, isLoadedAndActive } from './util';
 import { promises as fs } from 'fs';
 import { basename, dirname, join, resolve } from 'path';
-import YAML from 'yaml';
+import Config from './config';
+
+let YAML;
 
 async function createBuildFile(): Promise<any> {
   const editor = atom.workspace.getActiveTextEditor();
@@ -22,7 +24,7 @@ async function createBuildFile(): Promise<any> {
 
   const script = editor.getPath();
 
-  if (getConfig('processHeaders') === false && isHeaderFile(script)) {
+  if (Config.get('processHeaders') && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow this in the package settings.', {
       dismissable: true,
       buttons: [
@@ -76,7 +78,7 @@ async function createBuildFile(): Promise<any> {
 
   const scriptFile = basename(currentFilePath);
   const currentPath = dirname(currentFilePath);
-  const buildFileSyntax = String(getConfig('buildFileSyntax'));
+  const buildFileSyntax = String(Config.get('buildFileSyntax'));
   const buildFileName = `.atom-build.${buildFileSyntax.toLowerCase()}`;
   const buildFilePath = join(currentPath, buildFileName);
 
@@ -122,16 +124,16 @@ async function createBuildFile(): Promise<any> {
 }
 
 async function saveBuildFile(options) {
-  const useWineToRun = getConfig('useWineToRun');
+  const useWineToRun = Config.get('useWineToRun');
   const hasWineProvider = isLoadedAndActive('build-makensis-wine');
   const wineProviderPath = (await findPackagePath('build-makensis-wine'))[0];
 
   const args = [];
 
-  const verbosity = parseInt(getConfig('compilerOptions.verbosity'));
+  const verbosity = parseInt(String(Config.get('compilerOptions.verbosity')));
   if (verbosity) args.push(`-V${verbosity}`);
 
-  const strictMode = getConfig('compilerOptions.strictMode');
+  const strictMode = Config.get('compilerOptions.strictMode');
   if (strictMode) args.push('-WX');
 
   const buildFile = {
@@ -144,6 +146,10 @@ async function saveBuildFile(options) {
     cwd: '{FILE_ACTIVE_PATH}',
     errorMatch: '(\\r?\\n)(?<message>.+)(\\r?\\n)Error in script "(?<file>[^"]+)" on line (?<line>\\d+) -- aborting creation process',
     warningMatch: '[^!]warning: (?<message>.*) \\((?<file>(\\w{1}:)?[^:]+):(?<line>\\d+)\\)'
+  }
+
+  if (options.syntax === 'yaml') {
+    YAML = await import('yaml');
   }
 
   const stringifier = options.syntax === 'yaml'

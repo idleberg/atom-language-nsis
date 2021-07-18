@@ -1,7 +1,9 @@
 import { basename } from 'path';
-import { clearConsole, getConfig, getMakensisPath, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions } from './util';
+import { clearConsole, getMakensisPath, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions } from './util';
 import { compilerErrorHandler, compilerExitHandler, compilerOutputHandler, flagsHandler, versionHandler } from './handlers';
-import * as NSIS from 'makensis';
+import Config from './config';
+
+let NSIS;
 
 import BusySignal from './services/busy-signal';
 
@@ -18,7 +20,7 @@ async function compile(strictMode: boolean): Promise<void> {
   const script = editor.getPath();
   const scope = editor.getGrammar().scopeName;
 
-  if (getConfig('processHeaders') === false && isHeaderFile(script)) {
+  if (Config.get('processHeaders') && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow this in the package settings.', {
       dismissable: true,
       buttons: [
@@ -67,6 +69,8 @@ async function compile(strictMode: boolean): Promise<void> {
       BusySignal.add(`Compiling ${basename(script)}`);
     }
 
+    NSIS = (await import('makensis')).default;
+
     NSIS.events.on('stdout', compilerOutputHandler);
     NSIS.events.on('stderr', compilerErrorHandler);
     NSIS.events.once('exit', compilerExitHandler);
@@ -75,11 +79,11 @@ async function compile(strictMode: boolean): Promise<void> {
       script,
       {
         define: mapDefinitions(),
-        json: getConfig('showFlagsAsObject'),
+        json: Config.get('showFlagsAsObject'),
         pathToMakensis: await getMakensisPath(),
-        rawArguments: getConfig('compilerOptions.customArguments'),
-        strict: strictMode || getConfig('compilerOptions.strictMode'),
-        verbose: parseInt(getConfig('compilerOptions.verbosity'))
+        rawArguments: Config.get('compilerOptions.customArguments'),
+        strict: strictMode || Config.get('compilerOptions.strictMode'),
+        verbose: parseInt(String((Config.get('compilerOptions.verbosity'))))
       },
       await getSpawnEnv()
     );
@@ -99,6 +103,8 @@ async function showVersion(): Promise<void> {
 
   clearConsole();
   const pathToMakensis = await getMakensisPath();
+
+  NSIS = (await import('makensis')).default;
 
   NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
 
@@ -121,11 +127,13 @@ async function showCompilerFlags(): Promise<void> {
 
   clearConsole();
 
+  NSIS = (await import('makensis')).default;
+
   NSIS.events.once('exit', flagsHandler);
 
   await NSIS.headerInfo(
     {
-      json: getConfig('showFlagsAsObject'),
+      json: Config.get('showFlagsAsObject'),
       pathToMakensis: await getMakensisPath()
     },
     await getSpawnEnv()
@@ -138,6 +146,7 @@ async function showCompilerFlags(): Promise<void> {
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
+  NSIS = (await import('makensis')).default;
 
   const output = await NSIS.commandHelp(
     '',
