@@ -27,7 +27,7 @@ export default [
       dir: 'lib',
       exports: 'default',
       format: 'cjs',
-      sourcemap: production ? false : true
+      sourcemap: true
     },
     external: [
       // Atom

@@ -1,5 +1,5 @@
 import { Disposable } from 'atom';
-import { missingPackageWarning } from '../util';
+let missingPackageWarning;
 
 export default {
   busySignal: null,
@@ -14,26 +14,29 @@ export default {
     });
   },
 
-  add(message: string): void {
+  async add(message: string): Promise<void> {
     try {
       this.busySignal.add(message);
     } catch (error) {
+      missingPackageWarning = (await import('../util')).missingPackageWarning;
       missingPackageWarning(this.serviceName);
     }
   },
 
-  remove(message = ''): void {
+  async remove(message = ''): Promise<void> {
     try {
       this.busySignal.remove(message);
     } catch (error) {
+      missingPackageWarning = (await import('../util')).missingPackageWarning;
       missingPackageWarning(this.serviceName);
     }
   },
 
-  clear(): void {
+  async clear(): Promise<void> {
     try {
       this.busySignal.clear();
     } catch (error) {
+      missingPackageWarning = (await import('../util')).missingPackageWarning;
       missingPackageWarning(this.serviceName);
     }
   },
@@ -42,7 +45,7 @@ export default {
     try {
       this.busySignal.dispose();
     } catch (error) {
-      missingPackageWarning(this.serviceName);
+      console.error(error);
     }
   }
 };

@@ -1,6 +1,4 @@
 import { basename } from 'path';
-import { clearConsole, getMakensisPath, getSpawnEnv, isHeaderFile, isLoadedAndActive, mapDefinitions } from './util';
-import { compilerErrorHandler, compilerExitHandler, compilerOutputHandler, flagsHandler, versionHandler } from './handlers';
 import Config from './config';
 
 let NSIS;
@@ -19,6 +17,8 @@ async function compile(strictMode: boolean): Promise<void> {
 
   const script = editor.getPath();
   const scope = editor.getGrammar().scopeName;
+
+  const { isHeaderFile } = await import('./util');
 
   if (Config.get('processHeaders') && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow this in the package settings.', {
@@ -63,17 +63,19 @@ async function compile(strictMode: boolean): Promise<void> {
       return;
     }
 
+    const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive, mapDefinitions } = await import('./util');
     clearConsole();
 
     if (isLoadedAndActive('busy-signal')) {
-      BusySignal.add(`Compiling ${basename(script)}`);
+      await BusySignal.add(`Compiling ${basename(script)}`);
     }
 
     NSIS = (await import('makensis')).default;
+    const { compilerOutputHandler, compilerErrorHandler, compilerExitHandler } = await import('./handlers');
 
     NSIS.events.on('stdout', compilerOutputHandler);
     NSIS.events.on('stderr', compilerErrorHandler);
-    NSIS.events.once('exit', compilerExitHandler);
+    NSIS.events.once('exit', async () => await compilerExitHandler);
 
     await NSIS.compile(
       script,
@@ -91,20 +93,23 @@ async function compile(strictMode: boolean): Promise<void> {
     NSIS.events.removeAllListeners();
 
     if (isLoadedAndActive('busy-signal')) {
-      BusySignal.clear();
+      await BusySignal.clear();
     }
   }
 }
 
 async function showVersion(): Promise<void> {
+  const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive} = await import('./util');
+
   if (isLoadedAndActive('busy-signal')) {
-    BusySignal.add(`Showing version`);
+    await BusySignal.add(`Showing version`);
   }
 
   clearConsole();
   const pathToMakensis = await getMakensisPath();
 
   NSIS = (await import('makensis')).default;
+  const { versionHandler } = await import('./handlers');
 
   NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
 
@@ -116,18 +121,21 @@ async function showVersion(): Promise<void> {
   );
 
   if (isLoadedAndActive('busy-signal')) {
-    BusySignal.clear();
+    await BusySignal.clear();
   }
 }
 
 async function showCompilerFlags(): Promise<void> {
+  const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive } = await import('./util');
+
   if (isLoadedAndActive('busy-signal')) {
-    BusySignal.add(`Showing compiler flags`);
+    await BusySignal.add(`Showing compiler flags`);
   }
 
   clearConsole();
 
   NSIS = (await import('makensis')).default;
+  const { flagsHandler } = await import('./handlers');
 
   NSIS.events.once('exit', flagsHandler);
 
@@ -140,13 +148,14 @@ async function showCompilerFlags(): Promise<void> {
   );
 
   if (isLoadedAndActive('busy-signal')) {
-    BusySignal.clear();
+    await BusySignal.clear();
   }
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
   NSIS = (await import('makensis')).default;
+  const { getMakensisPath, getSpawnEnv } = await import('./util');
 
   const output = await NSIS.commandHelp(
     '',

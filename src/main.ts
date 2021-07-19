@@ -1,7 +1,6 @@
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { CompositeDisposable } from 'atom';
 import { convert } from './nlf';
-import { initDotEnv, isLoadedAndActive, manageDependencies, migrateConfig, missingPackageWarning } from './util';
 import commandReference from './reference';
 import Config from './config';
 import devConsole from './log';
@@ -18,6 +17,7 @@ export default {
   async activate(): Promise<void> {
     devConsole.log('Activating package');
 
+    const { initDotEnv } = await import('./util');
     await initDotEnv();
 
     // Register commands
@@ -45,10 +45,13 @@ export default {
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
         'NSIS:create-.atom–build-file': async () => {
+          const { isLoadedAndActive } = await import('./util');
+
           if (isLoadedAndActive('buildium') || isLoadedAndActive('build')) {
             const { createBuildFile } = await import('./build');
             await createBuildFile();
           } else {
+            const { missingPackageWarning } = await import('./util');
             missingPackageWarning('buildium');
           }
         },
@@ -86,17 +89,23 @@ export default {
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
-        'NSIS:satisfy-dependencies': async () => await manageDependencies()
+        'NSIS:satisfy-dependencies': async () => {
+          const { manageDependencies } = await import('./util');
+          await manageDependencies();
+        }
       })
     );
 
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
         'NSIS:set-default-runner': async () => {
+          const { isLoadedAndActive } = await import('./util');
+
           if (isLoadedAndActive('atom-runner')) {
             const { setRunner } = await import('./runner');
             await setRunner();
           } else {
+            const { missingPackageWarning } = await import('./util');
             missingPackageWarning('runner');
           }
         }
@@ -106,10 +115,13 @@ export default {
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {
         'NSIS:unset-default-runner': async () => {
+          const { isLoadedAndActive } = await import('./util');
+
           if (isLoadedAndActive('atom-runner')) {
             const { unsetRunner } = await import('./runner');
             await unsetRunner();
           } else {
+            const { missingPackageWarning } = await import('./util');
             missingPackageWarning('runner');
           }
         }
@@ -117,8 +129,11 @@ export default {
     );
 
     if (Config.get('manageDependencies')) {
+      const { manageDependencies } = await import('./util');
       await manageDependencies();
     }
+
+    const { migrateConfig } = await import('./util');
 
     migrateConfig('allowHeaderCompilation', 'processHeaders');
     migrateConfig('compilerArguments', 'compilerOptions.customArguments');

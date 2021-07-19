@@ -19,6 +19,7 @@ export default {
         target
       });
     } catch (error) {
+      const missingPackageWarning = (await import('../util')).missingPackageWarning;
       missingPackageWarning('browse');
     }
   }

@@ -1,4 +1,3 @@
-import { notifyOnCompletion } from './util';
 import Config from './config';
 import ConsolePanel from './services/console-panel';
 
@@ -25,8 +24,10 @@ function compilerErrorHandler(data: unknown): void {
   }
 }
 
-function compilerExitHandler(data: unknown): void {
+async function compilerExitHandler(data: unknown): Promise<void> {
   if (data['status'] === 0) {
+    const { notifyOnCompletion } = await import('./util');
+
     if (data['warnings'] && Config.get('showBuildNotifications')) {
       notifyOnCompletion('addWarning', 'Compiled with warnings', data['outFile']);
     } else if (Config.get('showBuildNotifications')) {

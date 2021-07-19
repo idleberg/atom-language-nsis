@@ -1,4 +1,3 @@
-import { openURL } from './util';
 import { showHelp } from './makensis';
 
 export default {
@@ -23,6 +22,8 @@ export default {
 
       didConfirmSelection: async item => {
         this.cancel();
+
+        const { openURL } = await import('./util');
         await openURL(String(item));
       },
 

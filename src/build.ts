@@ -1,4 +1,3 @@
-import { fileExists, findPackagePath, getMakensisPath, isHeaderFile, isLoadedAndActive } from './util';
 import { promises as fs } from 'fs';
 import { basename, dirname, join, resolve } from 'path';
 import Config from './config';
@@ -23,6 +22,7 @@ async function createBuildFile(): Promise<any> {
   }
 
   const script = editor.getPath();
+  const { isHeaderFile } = await import('./util');
 
   if (Config.get('processHeaders') && isHeaderFile(script)) {
     const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow this in the package settings.', {
@@ -82,6 +82,8 @@ async function createBuildFile(): Promise<any> {
   const buildFileName = `.atom-build.${buildFileSyntax.toLowerCase()}`;
   const buildFilePath = join(currentPath, buildFileName);
 
+  const { fileExists } = await import('./util');
+
   if (await fileExists(buildFilePath)) {
     const fileExistsNotification = atom.notifications.addWarning('File exists', {
       dismissable: true,
@@ -124,6 +126,7 @@ async function createBuildFile(): Promise<any> {
 }
 
 async function saveBuildFile(options) {
+  const { findPackagePath , getMakensisPath, isLoadedAndActive} = await import('./util');
   const useWineToRun = Config.get('useWineToRun');
   const hasWineProvider = isLoadedAndActive('build-makensis-wine');
   const wineProviderPath = (await findPackagePath('build-makensis-wine'))[0];
