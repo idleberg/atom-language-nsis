@@ -68,7 +68,7 @@ async function compile(strictMode: boolean): Promise<void> {
       await BusySignal.add(`Compiling ${basename(script)}`);
     }
 
-    const NSIS = (await import('makensis'));
+    const NSIS = await import('makensis');
     const { compilerOutputHandler, compilerErrorHandler, compilerExitHandler } = await import('./handlers');
 
     NSIS.events.on('stdout', compilerOutputHandler);
@@ -106,7 +106,7 @@ async function showVersion(): Promise<void> {
   clearConsole();
   const pathToMakensis = await getMakensisPath();
 
-  const NSIS = (await import('makensis'));
+  const NSIS = await import('makensis');
   const { versionHandler } = await import('./handlers');
 
   NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
@@ -132,7 +132,7 @@ async function showCompilerFlags(): Promise<void> {
 
   clearConsole();
 
-  const NSIS = (await import('makensis'));
+  const NSIS = await import('makensis');
   const { flagsHandler } = await import('./handlers');
 
   NSIS.events.once('exit', flagsHandler);
@@ -152,7 +152,7 @@ async function showCompilerFlags(): Promise<void> {
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function showHelp(selectListView: any): Promise<void> {
-  const NSIS = (await import('makensis'));
+  const NSIS = await import('makensis');
   const { getMakensisPath, getSpawnEnv } = await import('./util');
 
   const output = await NSIS.commandHelp(
