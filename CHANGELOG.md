@@ -1,3 +1,12 @@
+# v8.12.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.2)
+
+- update `makensis`
+- improve debugging
+
+# v8.12.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.1)
+
+- improve bundle size
+
 # v8.12.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.0)
 
 - add support for DotEnv variable expansion
@@ -17,11 +26,7 @@
 
 - fix multiple console clearing
 
-# v8.10.2[#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.2)
-
-- update `makensis`
-
-# v8.10.1[#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.1)
+# v8.10.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.1)
 
 - consume fallback console service
 
