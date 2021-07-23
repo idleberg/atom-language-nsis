@@ -17,7 +17,11 @@
 
 - fix multiple console clearing
 
-# v8.10.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.1)
+# v8.10.2[#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.2)
+
+- update `makensis`
+
+# v8.10.1[#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.10.1)
 
 - consume fallback console service
 
