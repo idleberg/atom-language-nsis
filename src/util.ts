@@ -90,6 +90,8 @@ async function getSpawnEnv(): Promise<unknown> {
     env: {
       NSISDIR: process.env.NSISDIR || undefined,
       NSISCONFDIR: process.env.NSISCONFDIR || undefined,
+      LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
+      LC_ALL: !isWindows() && !process.env.LC_ALL ? 'en_US.UTF-8' : undefined,
     }
   };
 }
@@ -120,8 +122,12 @@ function isLoadedAndActive(packageName: string): boolean {
   return atom.packages.isPackageLoaded(packageName) && atom.packages.isPackageActive(packageName);
 }
 
+function isWindows(): boolean {
+  return platform() === 'win32'
+}
+
 function isWindowsCompatible(): boolean {
-  return platform() === 'win32' || Config.get('useWineToRun')
+  return isWindows() || Config.get('useWineToRun')
     ? true
     : false;
 }
@@ -238,7 +244,7 @@ async function openURL(nsisCommand: string): Promise<void> {
 
 async function runInstaller(outFile) {
 
-  if (platform() === 'win32') {
+  if (isWindows()) {
     try {
       exec(`cmd /c "${outFile}"`);
     } catch (error) {
@@ -272,6 +278,7 @@ export {
   initDotEnv,
   isHeaderFile,
   isLoadedAndActive,
+  isWindows,
   isWindowsCompatible,
   manageDependencies,
   mapDefinitions,

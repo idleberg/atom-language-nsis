@@ -1,6 +1,6 @@
 import { ConfigValues } from 'atom';
+import { isWindows } from './util';
 import { name } from '../package.json';
-import { platform } from 'os';
 
 export default {
   schema: {
@@ -130,7 +130,7 @@ export default {
       ],
       order: 7
     },
-    useWineToRun: platform() !== 'win32' ? {
+    useWineToRun: !isWindows() ? {
       title: 'Use Wine to run',
       description: 'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)',
       type: 'boolean',

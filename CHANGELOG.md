@@ -1,3 +1,8 @@
+# v8.12.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.3)
+
+- implement workaround for missing locale settings
+- update dependencies
+
 # v8.12.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.2)
 
 - update `makensis`
