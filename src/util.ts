@@ -151,25 +151,6 @@ function mapDefinitions(): unknown {
     : undefined;
 }
 
-function migrateConfig(oldKey: string, newKey: string): void {
-  if (!atom.config.get(`${name}.${oldKey}`) || atom.config.get(`${name}.${newKey}`)) {
-    devConsole.warn(`The setting '${newKey}' already exists, skipping migration`);
-    return;
-  }
-
-  try {
-    atom.config.set(`${name}.${newKey}`, atom.config.get(`${name}.${oldKey}`));
-  } catch (error) {
-    console.log(error);
-    atom.notifications.addWarning(`Failed to migrate configuration, see console for details`);
-
-    return;
-  }
-
-  devConsole.warn(`The setting '${oldKey}' was migrated successfully to '${newKey}'`);
-  atom.config.unset(`${name}.${oldKey}`);
-}
-
 function missingPackageWarning(packageName: string): void {
   const notification = atom.notifications.addWarning(`This command requires the \`${packageName}\` package to be installed and enabled`, {
     dismissable: true,
@@ -282,7 +263,6 @@ export {
   isWindowsCompatible,
   manageDependencies,
   mapDefinitions,
-  migrateConfig,
   missingPackageWarning,
   notifyOnCompletion,
   openURL

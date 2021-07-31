@@ -132,13 +132,6 @@ export default {
       const { manageDependencies } = await import('./util');
       await manageDependencies();
     }
-
-    const { migrateConfig } = await import('./util');
-
-    migrateConfig('allowHeaderCompilation', 'processHeaders');
-    migrateConfig('compilerArguments', 'compilerOptions.customArguments');
-    migrateConfig('compilerVerbosity', 'compilerOptions.verbosity');
-    migrateConfig('pathToMakensis', 'compilerOptions.pathToMakensis');
   },
 
   deactivate(): void {
