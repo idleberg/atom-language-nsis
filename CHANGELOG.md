@@ -1,3 +1,7 @@
+# v8.13.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.0)
+
+- remove config migration
+
 # v8.12.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.12.3)
 
 - implement workaround for missing locale settings
