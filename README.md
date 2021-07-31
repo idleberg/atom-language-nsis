@@ -93,6 +93,12 @@ Inside the cloned directory, install dependencies using your preferred Node pack
 $ yarn || npm install
 ```
 
+Build the source:
+
+```bash
+npm run build
+```
+
 ### Package Dependencies
 
 This package automatically installs third-party packages it depends on. You can prevent this by disabling the _Manage Dependencies_ option in the package settings.
