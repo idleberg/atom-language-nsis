@@ -96,7 +96,7 @@ $ yarn || npm install
 Build the source:
 
 ```bash
-npm run build
+yarn build || npm run build
 ```
 
 ### Package Dependencies
