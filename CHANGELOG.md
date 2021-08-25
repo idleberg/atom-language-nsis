@@ -1,6 +1,4 @@
-# v8.14.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/
-
-v8.14.0)
+# v8.13.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.1)
 
 - update dependencies
 
