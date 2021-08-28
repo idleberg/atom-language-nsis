@@ -1,3 +1,7 @@
+# v8.13.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.3)
+
+- downgrade TypeScript to fix build
+
 # v8.13.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.2)
 
 - remove `jsonlint`
