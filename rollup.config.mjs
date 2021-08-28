@@ -12,7 +12,7 @@ const plugins = [
   nodeResolve({
     preferBuiltins: true
   }),
-  !process.env.ROLLUP_WATCH && terser(),
+  production && terser(),
   typescript({
     allowSyntheticDefaultImports: true,
     moduleResolution: 'node',
