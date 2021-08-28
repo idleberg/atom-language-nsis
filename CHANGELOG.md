@@ -1,5 +1,6 @@
 # v8.13.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.2)
 
+- remove `jsonlint`
 - update dependencies
 
 # v8.13.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.1)
