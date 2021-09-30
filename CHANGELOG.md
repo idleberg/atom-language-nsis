@@ -1,3 +1,7 @@
+# v8.14.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.14.0)
+
+- add NSIS v3.08 support
+
 # v8.13.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.13.3)
 
 - downgrade TypeScript to fix build
