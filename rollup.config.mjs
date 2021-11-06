@@ -13,11 +13,7 @@ const plugins = [
     preferBuiltins: true
   }),
   production && terser(),
-  typescript({
-    allowSyntheticDefaultImports: true,
-    moduleResolution: 'node',
-    resolveJsonModule: true
-  })
+  typescript()
 ];
 
 export default [
