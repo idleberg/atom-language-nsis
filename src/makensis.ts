@@ -61,7 +61,7 @@ async function compile(strictMode: boolean): Promise<void> {
       return;
     }
 
-    const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive, mapDefinitions } = await import('./util');
+    const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive } = await import('./util');
     clearConsole();
 
     if (isLoadedAndActive('busy-signal')) {
@@ -78,7 +78,7 @@ async function compile(strictMode: boolean): Promise<void> {
     await NSIS.compile(
       script,
       {
-        define: mapDefinitions(),
+        env: atom.project.getPaths()[0] || false,
         json: Config.get('showFlagsAsObject'),
         pathToMakensis: await getMakensisPath(),
         rawArguments: Config.get('compilerOptions.customArguments'),

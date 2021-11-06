@@ -17,9 +17,6 @@ export default {
   async activate(): Promise<void> {
     devConsole.log('Activating package');
 
-    const { initDotEnv } = await import('./util');
-    await initDotEnv();
-
     // Register commands
     this.subscriptions.add(
       atom.commands.add('atom-workspace', {

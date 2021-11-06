@@ -1,4 +1,3 @@
-import { config as dotenvConfig } from 'dotenv';
 import { constants, promises as fs } from 'fs';
 import { exec } from 'child_process';
 import { name } from '../package.json';
@@ -8,7 +7,6 @@ import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import Browse from './services/browse';
 import Config from './config';
 import ConsolePanel from './services/console-panel';
-import devConsole from './log';
 
 function clearConsole(): void {
   try {
@@ -28,34 +26,6 @@ async function fileExists(filePath: string): Promise<boolean> {
   }
 
   return true;
-}
-
-async function findEnvFile() {
-  let envFile = undefined;
-  const projectPath: string = atom.project.getPaths()[0];
-
-  if (projectPath) {
-    switch (true) {
-      case (await fileExists(resolve(projectPath, '.env.local'))):
-        envFile = resolve(projectPath, '.env.local');
-        break;
-
-      case (process.env.NODE_ENV && await fileExists(resolve(projectPath, `.env.[${process.env.NODE_ENV}]`))):
-        envFile = resolve(projectPath, `.env.[${process.env.NODE_ENV}]`);
-        break;
-
-      case (await fileExists(resolve(projectPath, '.env'))):
-        envFile = resolve(projectPath, '.env');
-        break;
-
-      default:
-        break;
-    }
-
-    if (envFile) devConsole.log(`Found DotEnv file ${envFile}`);
-  }
-
-  return envFile;
 }
 
 async function findPackagePath(packageName: string): Promise<string[]> {
@@ -96,19 +66,6 @@ async function getSpawnEnv(): Promise<unknown> {
   };
 }
 
-async function initDotEnv(): Promise<void> {
-  const dotenvExpand = (await import('dotenv-expand')).default;
-  const envFile =  await findEnvFile();
-
-  dotenvExpand(
-    dotenvConfig({
-      path: envFile
-    })
-  );
-
-  if (envFile) devConsole.log('Loading environment variables', Object.entries(process.env).filter(([key]) => key.startsWith('NSIS_APP_')))
-}
-
 function isHeaderFile(filePath: string): boolean {
   const headerFiles = [
     '.bnsh',
@@ -135,22 +92,6 @@ function isWindowsCompatible(): boolean {
 async function manageDependencies(): Promise<void> {
   await satisfyDependencies(name);
 }
-
-function mapDefinitions(): unknown {
-  const definitions = {};
-  const prefix = 'NSIS_APP_';
-
-  Object.keys(process.env).map(item => {
-    if (item.length && new RegExp(`${prefix}[a-z0-9]+`, 'gi').test(item)) {
-      definitions[item] = process.env[item];
-    }
-  });
-
-  return Object.keys(definitions).length
-    ? definitions
-    : undefined;
-}
-
 function missingPackageWarning(packageName: string): void {
   const notification = atom.notifications.addWarning(`This command requires the \`${packageName}\` package to be installed and enabled`, {
     dismissable: true,
@@ -256,13 +197,11 @@ export {
   findPackagePath,
   getMakensisPath,
   getSpawnEnv,
-  initDotEnv,
   isHeaderFile,
   isLoadedAndActive,
   isWindows,
   isWindowsCompatible,
   manageDependencies,
-  mapDefinitions,
   missingPackageWarning,
   notifyOnCompletion,
   openURL

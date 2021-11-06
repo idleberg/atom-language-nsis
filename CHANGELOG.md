@@ -1,3 +1,8 @@
+# v8.15.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.0)
+
+- consume magic environmental feature from `makensis`
+- update dependencies
+
 # v8.14.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.14.0)
 
 - add NSIS v3.08 support
