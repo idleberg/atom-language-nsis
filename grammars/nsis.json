@@ -98,7 +98,7 @@
       "name": "constant.other.nsis"
     },
     {
-      "match": "\\$[\\w\\.]+",
+      "match": "\\$\\w[\\w\\.]+",
       "name": "variable.other.nsis"
     },
     {
@@ -137,7 +137,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$[\\w\\.]+",
+          "match": "\\$\\w[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
@@ -178,7 +178,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$[\\w\\.]+",
+          "match": "\\$\\w[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
@@ -219,7 +219,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$[\\w\\.]+",
+          "match": "\\$\\w[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
