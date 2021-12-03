@@ -62,7 +62,7 @@
       "name": "constant.numeric.nsis"
     },
     {
-      "match": "\\${[\\w\\.:\\^-]+}",
+      "match": "\\${[\\!\\w\\.:\\^-]+}",
       "name": "constant.other.nsis"
     },
     {
@@ -98,7 +98,7 @@
       "name": "constant.other.nsis"
     },
     {
-      "match": "\\$\\w+",
+      "match": "\\$[\\w\\.]+",
       "name": "variable.other.nsis"
     },
     {
@@ -129,7 +129,7 @@
           "name": "constant.character.escape.nsis"
         },
         {
-          "match": "\\${[\\w\\.:\\^-]+}",
+          "match": "\\${[\\!\\w\\.:\\^-]+}",
           "name": "constant.other.nsis"
         },
         {
@@ -137,7 +137,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\w+",
+          "match": "\\$[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
@@ -170,7 +170,7 @@
           "name": "constant.character.escape.nsis"
         },
         {
-          "match": "\\${[\\w\\.:\\^-]+}",
+          "match": "\\${[\\!\\w\\.:\\^-]+}",
           "name": "constant.other.nsis"
         },
         {
@@ -178,7 +178,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\w+",
+          "match": "\\$[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
@@ -211,7 +211,7 @@
           "name": "constant.character.escape.nsis"
         },
         {
-          "match": "\\${[\\w\\.:\\^-]+}",
+          "match": "\\${[\\!\\w\\.:\\^-]+}",
           "name": "constant.other.nsis"
         },
         {
@@ -219,7 +219,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\w+",
+          "match": "\\$[\\w\\.]+",
           "name": "variable.other.nsis"
         },
         {
