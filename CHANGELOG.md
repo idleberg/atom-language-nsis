@@ -1,3 +1,7 @@
+# v8.15.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.1)
+
+- update regex pattern for variables and defines
+
 # v8.15.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.0)
 
 - consume magic environmental feature from `makensis`
