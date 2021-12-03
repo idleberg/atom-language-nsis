@@ -1,3 +1,7 @@
+# v8.15.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.25.1)
+
+- fix variables regex pattern
+
 # v8.15.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.1)
 
 - update regex pattern for variables and defines
