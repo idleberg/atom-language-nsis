@@ -1,4 +1,9 @@
-# v8.15.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.25.1)
+# v8.15.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.3)
+
+- fix bad escaping in `LangString` and `LicenseLangString` snippets
+- fix variables regex pattern to support single-character names
+
+# v8.15.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.15.2)
 
 - fix variables regex pattern
 
