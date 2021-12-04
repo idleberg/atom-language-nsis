@@ -94,7 +94,7 @@
       "name": "constant.language.nsis"
     },
     {
-      "match": "\\$\\([\\w\\.:\\^-]+\\)",
+      "match": "\\$\\([\\!\\!\\w\\.:\\^-]+\\)",
       "name": "constant.other.nsis"
     },
     {
@@ -133,7 +133,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\([\\w\\.:\\^-]+\\)",
+          "match": "\\$\\([\\!\\!\\w\\.:\\^-]+\\)",
           "name": "constant.other.nsis"
         },
         {
@@ -174,7 +174,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\([\\w\\.:\\^-]+\\)",
+          "match": "\\$\\([\\!\\w\\.:\\^-]+\\)",
           "name": "constant.other.nsis"
         },
         {
