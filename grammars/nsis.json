@@ -215,7 +215,7 @@
           "name": "constant.other.nsis"
         },
         {
-          "match": "\\$\\([\\w\\.:\\^-]+\\)",
+          "match": "\\$\\([\\!\\w\\.:\\^-]+\\)",
           "name": "constant.other.nsis"
         },
         {
