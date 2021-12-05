@@ -47,7 +47,7 @@ export default {
         },
         strictMode: {
           title: 'Strict Mode',
-          description: 'Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will override the setting',
+          description: 'Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will ignore the setting',
           type: 'boolean',
           default: false,
           order: 3
