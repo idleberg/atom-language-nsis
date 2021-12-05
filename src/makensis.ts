@@ -1,6 +1,5 @@
 import { basename } from 'path';
 import Config from './config';
-
 import BusySignal from './services/busy-signal';
 
 async function compile(strictMode: boolean): Promise<void> {
@@ -73,7 +72,7 @@ async function compile(strictMode: boolean): Promise<void> {
 
     NSIS.events.on('stdout', compilerOutputHandler);
     NSIS.events.on('stderr', compilerErrorHandler);
-    NSIS.events.once('exit', async () => await compilerExitHandler);
+    NSIS.events.once('exit', compilerExitHandler);
 
     await NSIS.compile(
       script,
