@@ -179,9 +179,10 @@ async function runInstaller(outFile) {
     return;
   } else if (Config.get('useWineToRun')) {
     const execa = (await import('execa')).default;
+    const pathToWine = Config.get('pathToWine') || 'wine';
 
     try {
-      await execa('wine', [ outFile ]);
+      await execa(pathToWine, [ outFile ]);
     } catch (error) {
       atom.notifications.addWarning('Failed to run installer, see console for details', {
         dismissable: true

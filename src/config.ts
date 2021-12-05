@@ -131,18 +131,25 @@ export default {
       order: 7
     },
     useWineToRun: !isWindows() ? {
-      title: 'Use Wine to run',
+      title: 'Run with Wine',
       description: 'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)',
       type: 'boolean',
       default: false,
       order: 8
+    } : {},
+    pathToWine: !isWindows() ? {
+      title: 'Path To Wine',
+      description: 'Specifies a custom path to `wine`, e.g. with `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)',
+      type: 'string',
+      default: 'wine',
+      order: 9
     } : {},
     manageDependencies: {
       title: 'Manage Dependencies',
       description: 'When enabled, third-party dependencies will be installed automatically',
       type: 'boolean',
       default: true,
-      order: 9
+      order: 10
     }
   },
 
