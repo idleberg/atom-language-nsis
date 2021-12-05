@@ -179,7 +179,7 @@ async function runInstaller(outFile) {
     return;
   } else if (Config.get('useWineToRun')) {
     const execa = (await import('execa')).default;
-    const pathToWine = Config.get('pathToWine') || 'wine';
+    const pathToWine = String(Config.get('pathToWine')) || 'wine';
 
     try {
       await execa(pathToWine, [ outFile ]);
