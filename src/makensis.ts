@@ -72,7 +72,7 @@ async function compile(strictMode: boolean): Promise<void> {
 
     NSIS.events.on('stdout', compilerOutputHandler);
     NSIS.events.on('stderr', compilerErrorHandler);
-    NSIS.events.once('exit', compilerExitHandler);
+    NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
     await NSIS.compile(
       script,

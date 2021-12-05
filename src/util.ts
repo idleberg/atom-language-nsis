@@ -171,9 +171,6 @@ async function runInstaller(outFile) {
       exec(`cmd /c "${outFile}"`);
     } catch (error) {
       console.error(error);
-      atom.notifications.addWarning('Failed to run installer, see console for details', {
-        dismissable: true
-      });
     }
 
     return;
@@ -184,9 +181,6 @@ async function runInstaller(outFile) {
     try {
       await execa(pathToWine, [ outFile ]);
     } catch (error) {
-      atom.notifications.addWarning('Failed to run installer, see console for details', {
-        dismissable: true
-      });
       console.error(error);
     }
   }
