@@ -1,3 +1,7 @@
+# v8.17.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.17.0)
+
+- add option to disable `processHeaders` warning
+
 # v8.16.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.16.0)
 
 - add option to specify `pathToWine`

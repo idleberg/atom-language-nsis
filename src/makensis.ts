@@ -17,37 +17,44 @@ async function compile(strictMode: boolean): Promise<void> {
 
   const { isHeaderFile } = await import('./util');
 
-  if (Config.get('processHeaders') && isHeaderFile(script)) {
-    const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow this in the package settings.', {
-      dismissable: true,
-      buttons: [
-        {
-          text: 'Open Settings',
-          className: 'icon icon-gear',
-          async onDidClick() {
-            await atom.workspace.open(`atom://config/packages/language-nsis`, {
-              pending: true,
-              searchAllPanes: true,
-            });
+  if (isHeaderFile(script)) {
+    const processHeaders = String(Config.get('processHeaders'));
 
-            notification.dismiss();
+    if (processHeaders === 'Disallow') {
+      const notification = atom.notifications.addWarning('Compiling header files is blocked by default. You can allow this in the package settings, or mute this warning.', {
+        dismissable: true,
+        buttons: [
+          {
+            text: 'Open Settings',
+            className: 'icon icon-gear',
+            async onDidClick() {
+              await atom.workspace.open(`atom://config/packages/language-nsis`, {
+                pending: true,
+                searchAllPanes: true,
+              });
 
-            return;
+              notification.dismiss();
+
+              return;
+            }
+          },
+          {
+            text: 'Cancel',
+            onDidClick() {
+              notification.dismiss();
+
+              return;
+            }
           }
-        },
-        {
-          text: 'Cancel',
-          onDidClick() {
-            notification.dismiss();
+        ]
+      });
 
-            return;
-          }
-        }
-      ]
-    });
-
-    atom.beep();
-    return;
+      atom.beep();
+      return;
+    } else if (processHeaders === 'Disallow & Never Ask Me') {
+      atom.beep();
+      return;
+    }
   }
 
   if (script && scope.startsWith('source.nsis')) {

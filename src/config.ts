@@ -64,8 +64,13 @@ export default {
     processHeaders: {
       title: 'Process Headers',
       description: 'By default, you can only compile (and create build-files) for `.nsi` files. This setting enables support for `.nsh` files.',
-      type: 'boolean',
-      default: false,
+      type: 'string',
+      enum: [
+        'Allow',
+        'Disallow',
+        'Disallow & Never Ask Me'
+      ],
+      default: 'Disallow',
       order: 1
     },
     showBuildNotifications: {

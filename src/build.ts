@@ -24,37 +24,44 @@ async function createBuildFile(): Promise<any> {
   const script = editor.getPath();
   const { isHeaderFile } = await import('./util');
 
-  if (Config.get('processHeaders') && isHeaderFile(script)) {
-    const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow this in the package settings.', {
-      dismissable: true,
-      buttons: [
-        {
-          text: 'Open Settings',
-          className: 'icon icon-gear',
-          async onDidClick() {
-            notification.dismiss();
+  if (isHeaderFile(script)) {
+    const processHeaders = String(Config.get('processHeaders'));
 
-            await atom.workspace.open(`atom://config/packages/language-nsis`, {
-              pending: true,
-              searchAllPanes: true,
-            });
+    if (processHeaders === 'Disallow') {
+      const notification = atom.notifications.addWarning('Creating build-files for headers is blocked by default. You can allow this in the package settings, or mute this warning.', {
+        dismissable: true,
+        buttons: [
+          {
+            text: 'Open Settings',
+            className: 'icon icon-gear',
+            async onDidClick() {
+              notification.dismiss();
 
-            return;
+              await atom.workspace.open(`atom://config/packages/language-nsis`, {
+                pending: true,
+                searchAllPanes: true,
+              });
+
+              return;
+            }
+          },
+          {
+            text: 'Cancel',
+            onDidClick() {
+              notification.dismiss();
+
+              return;
+            }
           }
-        },
-        {
-          text: 'Cancel',
-          onDidClick() {
-            notification.dismiss();
+        ]
+      });
 
-            return;
-          }
-        }
-      ]
-    });
-
-    atom.beep();
-    return;
+      atom.beep();
+      return;
+    } else if (processHeaders === 'Disallow & Never Ask Me') {
+      atom.beep();
+      return;
+    }
   }
 
   const currentFilePath = atom.workspace?.getActiveTextEditor()?.getPath() || null;
