@@ -1,3 +1,7 @@
+# v8.17.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.17.1)
+
+- fix unescaped snippets
+
 # v8.17.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.17.0)
 
 - add option to disable `processHeaders` warning
