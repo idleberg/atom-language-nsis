@@ -144,7 +144,7 @@ export default {
     } : {},
     pathToWine: !isWindows() ? {
       title: 'Path To Wine',
-      description: 'Specifies a custom path to `wine`, e.g. with `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)',
+      description: 'Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)',
       type: 'string',
       default: 'wine',
       order: 9
