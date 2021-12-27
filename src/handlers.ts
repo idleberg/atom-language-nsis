@@ -25,16 +25,26 @@ function compilerErrorHandler(data: unknown): void {
 }
 
 async function compilerExitHandler(data: unknown): Promise<void> {
-  if (data['status'] === 0) {
-    const { notifyOnCompletion } = await import('./util');
+  if (Config.get('showBuildNotifications')) {
+    if (data['status'] === 0) {
+      const { notifyOnCompletion } = await import('./util');
 
-    if (data['warnings'] && Config.get('showBuildNotifications')) {
-      notifyOnCompletion('addWarning', 'Compiled with warnings', data['outFile']);
-    } else if (Config.get('showBuildNotifications')) {
-      notifyOnCompletion('addSuccess', 'Compiled successfully', data['outFile']);
+      if (data['warnings']) {
+        notifyOnCompletion({
+          level: 'warning',
+          message: 'Compiled with warnings',
+          outFile: data['outFile']
+        });
+      } else {
+        notifyOnCompletion({
+          level: 'success',
+          message: 'Compiled successfully',
+          outFile: data['outFile']
+        });
+      }
+    } else {
+      atom.notifications.addError('Compile Error', { dismissable: false });
     }
-  } else if (Config.get('showBuildNotifications')) {
-    atom.notifications.addError('Compile Error', { dismissable: false });
   }
 }
 

@@ -8,6 +8,14 @@ import Browse from './services/browse';
 import Config from './config';
 import ConsolePanel from './services/console-panel';
 
+interface NotificationParams {
+  dismissable?: boolean;
+  level?: string;
+  message: string;
+  outFile?: string;
+  type?: string;
+}
+
 function clearConsole(): void {
   try {
     ConsolePanel.clear();
@@ -121,16 +129,38 @@ function missingPackageWarning(packageName: string): void {
   });
 }
 
-function notifyOnCompletion(type: string, messageText: string, outFile: string): void {
-  const notification = atom.notifications[type](messageText, {
-    dismissable: true,
-    buttons: outFile ? [
+function getNotificationLevel(level: string): string {
+  switch(level.toLowerCase()) {
+    case 'success':
+       return 'addSuccess';
+
+    case 'warning':
+       return 'addWarning';
+
+    case 'error':
+       return 'addError';
+
+    case 'fatal':
+    case 'fatalerror':
+       return 'addFatalError';
+
+    default:
+      return 'addInfo';
+  }
+}
+
+function notifyOnCompletion(params: NotificationParams): void {
+  const type = getNotificationLevel(params.level);
+
+  const notification = atom.notifications[type](params.message, {
+    dismissable: params.dismissable || true,
+    buttons: params.outFile ? [
       isWindowsCompatible() ? {
         text: 'Run',
         className: 'icon icon-playback-play',
         async onDidClick() {
           notification.dismiss();
-          await runInstaller(outFile);
+          await runInstaller(params.level);
 
           return;
         },
@@ -141,7 +171,7 @@ function notifyOnCompletion(type: string, messageText: string, outFile: string):
 
         onDidClick() {
           notification.dismiss();
-          Browse.reveal(outFile);
+          Browse.reveal(params.outFile);
 
           return;
         },
