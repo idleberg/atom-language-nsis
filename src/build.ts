@@ -140,7 +140,7 @@ async function saveBuildFile(options) {
 
   const args = [];
 
-  const verbosity = parseInt(String(Config.get('compilerOptions.verbosity')));
+  const verbosity = parseInt(String(Config.get('compilerOptions.verbosity')), 10);
   if (verbosity) args.push(`-V${verbosity}`);
 
   const strictMode = Config.get('compilerOptions.strictMode');

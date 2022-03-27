@@ -14,10 +14,7 @@ export default {
 
   async reveal(target: string): Promise<void> {
     try {
-      await this.browse({
-        action: 'reveal',
-        target
-      });
+      await this.browse(target);
     } catch (error) {
       Logger.debug(error);
 
