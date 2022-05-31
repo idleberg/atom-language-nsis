@@ -1,3 +1,8 @@
+# v8.18.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.18.0)
+
+- add option to unset default verbosity
+- update dependencies
+
 # v8.17.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.17.1)
 
 - fix unescaped snippets
