@@ -1,3 +1,4 @@
+import './prototypes';
 import { basename } from 'path';
 import Config from './config';
 import BusySignal from './services/busy-signal';
@@ -81,6 +82,8 @@ async function compile(strictMode: boolean): Promise<void> {
     NSIS.events.on('stderr', compilerErrorHandler);
     NSIS.events.once('exit', async data => await compilerExitHandler(data));
 
+    const verbosity = parseInt(String((Config.get('compilerOptions.verbosity'))), 10);
+
     await NSIS.compile(
       script,
       {
@@ -89,7 +92,7 @@ async function compile(strictMode: boolean): Promise<void> {
         pathToMakensis: await getMakensisPath(),
         rawArguments: Config.get('compilerOptions.customArguments'),
         strict: strictMode || Config.get('compilerOptions.strictMode'),
-        verbose: parseInt(String((Config.get('compilerOptions.verbosity'))), 10)
+        verbose: verbosity.inRange(0, 4) ? verbosity : undefined
       },
       await getSpawnEnv()
     );

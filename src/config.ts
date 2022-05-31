@@ -23,24 +23,28 @@ export default {
           default: 3,
           enum: [
             {
+              value: -1,
+              description: '(not set)'
+            },
+            {
               value: 0,
-              description: '0 - none'
+              description: '0: none'
             },
             {
               value: 1,
-              description: '1 - no warnings'
+              description: '1: no warnings'
             },
             {
               value: 2,
-              description: '2 - no info'
+              description: '2: no info'
             },
             {
               value: 3,
-              description: '3 - no script'
+              description: '3: no script'
             },
             {
               value: 4,
-              description: '4 - all'
+              description: '4: all'
             }
           ],
           order: 2
