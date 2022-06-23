@@ -3480,35 +3480,35 @@
       "prefix": "SubCaption"
     },
     "Target": {
-      "body": "Target \"${1:cpu-charset}\"$0",
+      "body": "Target ${1:cpu-charset}$0",
       "description": "Usage: Target cpu-charset",
       "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
       "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
       "prefix": "Target"
     },
     "Target amd64-ansi": {
-      "body": "Target amd64-ansi}\"$0",
+      "body": "Target amd64-ansi$0",
       "description": "Usage: Target amd64-ansi",
       "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
       "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
       "prefix": "Target amd64-ansi"
     },
     "Target amd64-unicode": {
-      "body": "Target amd64-unicode}\"$0",
+      "body": "Target amd64-unicode$0",
       "description": "Usage: Target amd64-unicode",
       "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
       "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
       "prefix": "Target amd64-unicode"
     },
     "Target x86-ansi": {
-      "body": "Target x86-ansi}\"$0",
+      "body": "Target x86-ansi$0",
       "description": "Usage: Target x86-ansi",
       "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
       "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
       "prefix": "Target x86-ansi"
     },
     "Target x86-unicode": {
-      "body": "Target x86-unicode}\"$0",
+      "body": "Target x86-unicode$0",
       "description": "Usage: Target x86-unicode",
       "descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/Target.html?utm_source=vscode&utm_content=snippet",
       "leftLabelHTML": "<span class='syntax--keyword'>K</span>",
