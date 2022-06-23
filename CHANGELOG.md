@@ -1,3 +1,7 @@
+# v8.19.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.1)
+
+- remove unused `Target` attribute
+
 # v8.19.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.0)
 
 - add support for undocumented `Target` keyword
