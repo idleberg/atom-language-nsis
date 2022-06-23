@@ -1,3 +1,7 @@
+# v8.19.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.0)
+
+- add support for undocumented `Target` keyword
+
 # v8.18.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.18.1)
 
 - update `makensis` to fix compiler flags output
