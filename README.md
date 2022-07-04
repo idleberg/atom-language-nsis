@@ -151,7 +151,7 @@ Should you prefer working with an existing third-party build system, the followi
 - [`script`](https://atom.io/packages/script)
 - [`atom-runner`](https://atom.io/packages/atom-runner)
 
-Project files for `buildium` can be created by executing _“NSIS: Create .atom-build file”_ from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. You can specify your preferred build file syntax (JSON/YAML) in the package settings.
+Project files for `build-makensis` can be created by executing _“NSIS: Create .atom-build file”_ from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. You can specify your preferred build file syntax (JSON/YAML) in the package settings.
 
 You can set up `atom-runner` by executing _“NSIS: Set default runner”_ from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or packages menu. To remove it, use _“NSIS: Remove default runner”_.
 
