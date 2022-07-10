@@ -1,3 +1,7 @@
+# v8.19.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.2)
+
+- update dependencies, fixes NLF conversion
+
 # v8.19.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.1)
 
 - remove unused `Target` attribute
