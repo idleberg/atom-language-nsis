@@ -1,3 +1,9 @@
+# v8.19.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.3)
+
+- fix UTM parameters
+- update links to online documentation
+- update dependencies
+
 # v8.19.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.2)
 
 - update dependencies, fixes NLF conversion
