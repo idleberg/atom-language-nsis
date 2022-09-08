@@ -1,3 +1,7 @@
+# v8.19.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.4)
+
+- add support for `${Case}` variants
+
 # v8.19.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.3)
 
 - fix UTM parameters
