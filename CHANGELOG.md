@@ -1,3 +1,8 @@
+# v9.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.0)
+
+- license change
+- update dependencies
+
 # v8.19.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.19.4)
 
 - add support for `${Case}` variants
