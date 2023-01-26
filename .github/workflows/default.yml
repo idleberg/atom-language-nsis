@@ -16,13 +16,13 @@ on:
     branches:
     - master
     paths:
-- 'grammars/**'
-- 'keymaps/**'
-- 'settings/**'
-- 'snippets/**'
-- 'src/**'
-- 'package.json'
-- 'package-lock-json'
+    - 'grammars/**'
+    - 'keymaps/**'
+    - 'settings/**'
+    - 'snippets/**'
+    - 'src/**'
+    - 'package.json'
+    - 'package-lock-json'
 
 jobs:
   default:
