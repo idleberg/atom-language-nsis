@@ -5,31 +5,33 @@ on:
     branches:
     - master
     paths:
+    - '.github/workflows/*'
     - 'grammars/**'
     - 'keymaps/**'
     - 'settings/**'
     - 'snippets/**'
     - 'src/**'
     - 'package.json'
-    - 'package-lock-json'
+    - 'package-lock.json'
   pull_request:
     branches:
     - master
     paths:
+    - '.github/workflows/*'
     - 'grammars/**'
     - 'keymaps/**'
     - 'settings/**'
     - 'snippets/**'
     - 'src/**'
     - 'package.json'
-    - 'package-lock-json'
+    - 'package-lock.json'
 
 jobs:
   default:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: ['lts/*', '*']
         os: [ubuntu-latest]
 
     steps:
@@ -37,7 +39,7 @@ jobs:
       with:
         fetch-depth: 1
 
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
