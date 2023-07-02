@@ -4,7 +4,7 @@ import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
-const production = !process.env.ROLLUP_WATCH;
+const isProduction = !process.env.ROLLUP_WATCH;
 
 const plugins = [
   commonjs(),
@@ -12,7 +12,7 @@ const plugins = [
   nodeResolve({
     preferBuiltins: true
   }),
-  production && terser(),
+  isProduction && terser(),
   typescript()
 ];
 
@@ -23,7 +23,7 @@ export default [
       dir: 'lib',
       exports: 'default',
       format: 'cjs',
-      sourcemap: true
+      sourcemap: !isProduction
     },
     external: [
       // Atom
