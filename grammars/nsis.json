@@ -22,7 +22,7 @@
       "name": "invalid.illegal.nsis"
     },
     {
-      "match": "^\\s*(?i)\\!(addincludedir|addplugindir|appendfile|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|uninstfinalize|verbose|warning)\\b",
+      "match": "^\\s*(?i)\\!(addincludedir|addplugindir|appendfile|assert|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|uninstfinalize|verbose|warning)\\b",
       "name": "keyword.other.nsis"
     },
     {
