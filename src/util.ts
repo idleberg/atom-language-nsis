@@ -191,7 +191,7 @@ function notifyOnCompletion(params: NotificationParams): void {
 
 async function openURL(nsisCommand: string): Promise<void> {
   const open = (await import('open')).default;
-  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Reference/${nsisCommand}.html?utm_source=atom&utm_content=reference`);
+  open(`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/${nsisCommand}.html?utm_source=atom&utm_content=reference`);
 }
 
 async function runInstaller(outFile) {
