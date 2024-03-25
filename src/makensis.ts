@@ -1,5 +1,5 @@
-import './prototypes';
 import { basename } from 'path';
+import { inRange } from './util';
 import Config from './config';
 import BusySignal from './services/busy-signal';
 
@@ -76,28 +76,25 @@ async function compile(strictMode: boolean): Promise<void> {
     }
 
     const NSIS = await import('makensis');
-    const { compilerOutputHandler, compilerErrorHandler, compilerExitHandler } = await import('./handlers');
-
-    NSIS.events.on('stdout', compilerOutputHandler);
-    NSIS.events.on('stderr', compilerErrorHandler);
-    NSIS.events.once('exit', async data => await compilerExitHandler(data));
+    const { compilerOutput, compilerError, compilerClose } = await import('./callbacks');
 
     const verbosity = parseInt(String((Config.get('compilerOptions.verbosity'))), 10);
 
     await NSIS.compile(
       script,
       {
-        env: atom.project.getPaths()[0] || false,
-        json: Config.get('showFlagsAsObject'),
+        env: false,
+        json: Boolean(Config.get('showFlagsAsObject')),
         pathToMakensis: await getMakensisPath(),
-        rawArguments: Config.get('compilerOptions.customArguments'),
-        strict: strictMode || Config.get('compilerOptions.strictMode'),
-        verbose: verbosity.inRange(0, 4) ? verbosity : undefined
+        onData: compilerError,
+        onError: compilerOutput,
+        onClose: compilerClose,
+        rawArguments: String(Config.get('compilerOptions.customArguments')),
+        strict: strictMode || Boolean(Config.get('compilerOptions.strictMode')),
+        verbose: inRange(verbosity, { min: 0, max: 4 }) ? verbosity as 0 | 1 | 2 | 3 | 4 : 3
       },
       await getSpawnEnv()
     );
-
-    NSIS.events.removeAllListeners();
 
     if (isLoadedAndActive('busy-signal')) {
       await BusySignal.clear();
@@ -116,12 +113,11 @@ async function showVersion(): Promise<void> {
   const pathToMakensis = await getMakensisPath();
 
   const NSIS = await import('makensis');
-  const { versionHandler } = await import('./handlers');
-
-  NSIS.events.once('stdout', (data) => versionHandler(data, pathToMakensis));
+  const { versionCallback } = await import('./callbacks');
 
   await NSIS.version(
     {
+      onData: data => versionCallback(data, pathToMakensis),
       pathToMakensis,
     },
     await getSpawnEnv()
@@ -142,13 +138,12 @@ async function showCompilerFlags(): Promise<void> {
   clearConsole();
 
   const NSIS = await import('makensis');
-  const { flagsHandler } = await import('./handlers');
-
-  NSIS.events.once('exit', flagsHandler);
+  const { flagsCallback } = await import('./callbacks');
 
   await NSIS.headerInfo(
     {
-      json: Config.get('showFlagsAsObject'),
+      json: Boolean(Config.get('showFlagsAsObject')),
+      onClose: flagsCallback,
       pathToMakensis: await getMakensisPath()
     },
     await getSpawnEnv()

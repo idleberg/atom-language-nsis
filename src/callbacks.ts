@@ -1,7 +1,7 @@
 import Config from './config';
 import ConsolePanel from './services/console-panel';
 
-function compilerOutputHandler(data: unknown): void {
+function compilerOutput(data: unknown): void {
   const logLevel = data['hasWarning']
     ? 'warn'
     : 'log';
@@ -16,7 +16,7 @@ function compilerOutputHandler(data: unknown): void {
   }
 }
 
-function compilerErrorHandler(data: unknown): void {
+function compilerError(data: unknown): void {
   try {
     ConsolePanel.error(data['line']);
   } catch (error) {
@@ -24,7 +24,7 @@ function compilerErrorHandler(data: unknown): void {
   }
 }
 
-async function compilerExitHandler(data: unknown): Promise<void> {
+async function compilerClose(data: unknown): Promise<void> {
   if (Config.get('showBuildNotifications')) {
     if (data['status'] === 0) {
       const { notifyOnCompletion } = await import('./util');
@@ -48,7 +48,7 @@ async function compilerExitHandler(data: unknown): Promise<void> {
   }
 }
 
-function flagsHandler(data: unknown): void {
+function flagsCallback(data: unknown): void {
   const output = data['stdout'] || data['stderr'];
 
   if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
@@ -66,7 +66,7 @@ function flagsHandler(data: unknown): void {
     });
   }
 }
-function versionHandler(data: unknown, pathToMakensis: string): void {
+function versionCallback(data: unknown, pathToMakensis: string): void {
   if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
     try {
       ConsolePanel.show();
@@ -84,9 +84,9 @@ function versionHandler(data: unknown, pathToMakensis: string): void {
 }
 
 export {
-  compilerErrorHandler,
-  compilerExitHandler,
-  compilerOutputHandler,
-  flagsHandler,
-  versionHandler
+  compilerClose,
+  compilerError,
+  compilerOutput,
+  flagsCallback,
+  versionCallback
 };

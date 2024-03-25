@@ -216,12 +216,17 @@ async function runInstaller(outFile) {
   }
 }
 
+function inRange(value: number, options: {min: number, max: number}): boolean {
+  return value >= options.min && value <= options.max;
+}
+
 export {
   clearConsole,
   fileExists,
   findPackagePath,
   getMakensisPath,
   getSpawnEnv,
+  inRange,
   isHeaderFile,
   isLoadedAndActive,
   isWindows,
