@@ -1,4 +1,5 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
@@ -7,6 +8,13 @@ import typescript from '@rollup/plugin-typescript';
 const isProduction = !process.env.ROLLUP_WATCH;
 
 const plugins = [
+  // Pulsar is still based on Node 14 :(
+  alias({
+    entries: {
+      'node:child_process': 'child_process',
+      'node:os': 'os',
+    }
+  }),
   commonjs(),
   json(),
   nodeResolve({
@@ -29,17 +37,6 @@ export default [
       // Atom
       'atom',
       'electron',
-
-      // Node
-      'assert',
-      'buffer',
-      'child_process',
-      'events',
-      'fs',
-      'os',
-      'path',
-      'stream',
-      'util'
     ],
     plugins: plugins
   }
