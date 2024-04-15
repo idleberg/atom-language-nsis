@@ -1,4 +1,4 @@
-# v9.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.0)
+# v8.20.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.20.0)
 
 - add `!assert` keyword
 - license change
