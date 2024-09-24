@@ -1,9 +1,9 @@
 # atom-language-nsis
 
-[![apm](https://flat.badgen.net/apm/license/language-nsis)](https://atom.io/packages/language-nsis)
-[![apm](https://flat.badgen.net/apm/v/language-nsis)](https://atom.io/packages/language-nsis)
-[![apm](https://flat.badgen.net/apm/dl/language-nsis)](https://atom.io/packages/language-nsis)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsis/default.yml?style=flat-square)](https://github.com/idleberg/atom-language-nsis/actions)
+[![License](https://img.shields.io/github/license/idleberg/atom-language-nsis?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/idleberg/atom-language-nsis?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/releases)
+![Downloads](https://img.shields.io/pulsar/dt/language-nsis?style=for-the-badge&color=slateblue)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/actions)
 
 Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files.
 
