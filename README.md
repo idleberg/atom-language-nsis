@@ -9,7 +9,7 @@ Language syntax, auto-completions and build system for Nullsoft Scriptable Insta
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
 
-_Screenshot of NSIS in Atom with [Fira Mono](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://atom.io/themes/hopscotch) theme_
+_Screenshot of NSIS in Atom with [Fira Mono](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://web.pulsar-edit.dev/packages/hopscotch) theme_
 
 ## Features
 
@@ -89,7 +89,7 @@ $ git clone https://github.com/idleberg/atom-language-nsis language-nsis
 Inside the cloned directory, install its dependencies:
 
 ```bash
-$ npm install
+$ npm ci
 ```
 
 Build the source:
