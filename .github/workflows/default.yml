@@ -25,6 +25,7 @@ on:
     - 'src/**'
     - 'package.json'
     - 'package-lock.json'
+  workflow_dispatch:
 
 jobs:
   default:
