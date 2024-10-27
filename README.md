@@ -95,7 +95,7 @@ $ ppm ci || apm ci
 Build the source:
 
 ```bash
-ppm run build || apm build
+$ ppm run build || apm build
 ```
 
 ### Package Dependencies
