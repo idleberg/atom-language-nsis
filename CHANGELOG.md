@@ -1,4 +1,9 @@
-# v9.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.1.0)
+# v9.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.2)
+
+- update tooling
+- update dependencies
+
+# v9.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.1)
 
 - update dependencies
 
