@@ -1,41 +1,41 @@
 import { Disposable } from 'atom';
 
 export default {
-  consolePanel: null,
+	consolePanel: null,
 
-  consumer(consolePanel: unknown): Disposable {
-    this.consolePanel = consolePanel;
+	consumer(consolePanel: unknown): Disposable {
+		this.consolePanel = consolePanel;
 
-    return new Disposable(() => {
-      this.consolePanel = null;
-    });
-  },
+		return new Disposable(() => {
+			this.consolePanel = null;
+		});
+	},
 
-  show(): void {
-    this.consolePanel.show();
-  },
+	show(): void {
+		this.consolePanel.show();
+	},
 
-  hide(): void {
-    this.consolePanel.hide();
-  },
+	hide(): void {
+		this.consolePanel.hide();
+	},
 
-  toggle(): void {
-    this.consolePanel.toggle();
-  },
+	toggle(): void {
+		this.consolePanel.toggle();
+	},
 
-  clear(): void {
-    this.consolePanel.clear();
-  },
+	clear(): void {
+		this.consolePanel.clear();
+	},
 
-  log(...message: unknown[]): void {
-    this.consolePanel.log(...message);
-  },
+	log(...message: unknown[]): void {
+		this.consolePanel.log(...message);
+	},
 
-  error(...message: unknown[]): void {
-    this.consolePanel.error(...message);
-  },
+	error(...message: unknown[]): void {
+		this.consolePanel.error(...message);
+	},
 
-  warn(...message: unknown[]): void {
-    this.consolePanel.warn(...message);
-  }
+	warn(...message: unknown[]): void {
+		this.consolePanel.warn(...message);
+	},
 };

@@ -1,360 +1,360 @@
 {
-  ".source.nlf": {
-    "Branding": {
-      "body": "# ^Branding\n${1:Nullsoft Install System %s}$0",
-      "prefix": "Branding"
-    },
-    "SetupCaption": {
-      "body": "# ^SetupCaption\n${1:$(^Name) Setup}$0",
-      "prefix": "SetupCaption"
-    },
-    "UninstallCaption": {
-      "body": "# ^UninstallCaption\n${1:$(^Name) Uninstall}$0",
-      "prefix": "UninstallCaption"
-    },
-    "LicenseSubCaption": {
-      "body": "# ^LicenseSubCaption\n${1:: License Agreement}$0",
-      "prefix": "LicenseSubCaption"
-    },
-    "ComponentsSubCaption": {
-      "body": "# ^ComponentsSubCaption\n${1:: Installation Options}$0",
-      "prefix": "ComponentsSubCaption"
-    },
-    "DirSubCaption": {
-      "body": "# ^DirSubCaption\n${1:: Installation Folder}$0",
-      "prefix": "DirSubCaption"
-    },
-    "InstallingSubCaption": {
-      "body": "# ^InstallingSubCaption\n${1:: Installing}$0",
-      "prefix": "InstallingSubCaption"
-    },
-    "CompletedSubCaption": {
-      "body": "# ^CompletedSubCaption\n${1:: Completed}$0",
-      "prefix": "CompletedSubCaption"
-    },
-    "UnComponentsSubCaption": {
-      "body": "# ^UnComponentsSubCaption\n${1:: Uninstallation Options}$0",
-      "prefix": "UnComponentsSubCaption"
-    },
-    "UnDirSubCaption": {
-      "body": "# ^UnDirSubCaption\n${1:: Uninstallation Folder}$0",
-      "prefix": "UnDirSubCaption"
-    },
-    "ConfirmSubCaption": {
-      "body": "# ^ConfirmSubCaption\n${1:: Confirmation}$0",
-      "prefix": "ConfirmSubCaption"
-    },
-    "UninstallingSubCaption": {
-      "body": "# ^UninstallingSubCaption\n${1:: Uninstalling}$0",
-      "prefix": "UninstallingSubCaption"
-    },
-    "UnCompletedSubCaption": {
-      "body": "# ^UnCompletedSubCaption\n${1:: Completed}$0",
-      "prefix": "UnCompletedSubCaption"
-    },
-    "BackBtn": {
-      "body": "# ^BackBtn\n${1:< &Back}$0",
-      "prefix": "BackBtn"
-    },
-    "NextBtn": {
-      "body": "# ^NextBtn\n${1:&Next >}$0",
-      "prefix": "NextBtn"
-    },
-    "AgreeBtn": {
-      "body": "# ^AgreeBtn\n${1:I &Agree}$0",
-      "prefix": "AgreeBtn"
-    },
-    "AcceptBtn": {
-      "body": "# ^AcceptBtn\n${1:I &accept the terms of the License Agreement}$0",
-      "prefix": "AcceptBtn"
-    },
-    "DontAcceptBtn": {
-      "body": "# ^DontAcceptBtn\n${1:I &do not accept the terms of the License Agreement}$0",
-      "prefix": "DontAcceptBtn"
-    },
-    "InstallBtn": {
-      "body": "# ^InstallBtn\n${1:&Install}$0",
-      "prefix": "InstallBtn"
-    },
-    "UninstallBtn": {
-      "body": "# ^UninstallBtn\n${1:&Uninstall}$0",
-      "prefix": "UninstallBtn"
-    },
-    "CancelBtn": {
-      "body": "# ^CancelBtn\n${1:Cancel}$0",
-      "prefix": "CancelBtn"
-    },
-    "CloseBtn": {
-      "body": "# ^CloseBtn\n${1:&Close}$0",
-      "prefix": "CloseBtn"
-    },
-    "BrowseBtn": {
-      "body": "# ^BrowseBtn\n${1:B&rowse...}$0",
-      "prefix": "BrowseBtn"
-    },
-    "ShowDetailsBtn": {
-      "body": "# ^ShowDetailsBtn\n${1:Show &details}$0",
-      "prefix": "ShowDetailsBtn"
-    },
-    "ClickNext": {
-      "body": "# ^ClickNext\n${1:Click Next to continue.}$0",
-      "prefix": "ClickNext"
-    },
-    "ClickInstall": {
-      "body": "# ^ClickInstall\n${1:Click Install to start the installation.}$0",
-      "prefix": "ClickInstall"
-    },
-    "ClickUninstall": {
-      "body": "# ^ClickUninstall\n${1:Click Uninstall to start the uninstallation.}$0",
-      "prefix": "ClickUninstall"
-    },
-    "Name": {
-      "body": "# ^Name\n${1:Name}$0",
-      "prefix": "Name"
-    },
-    "Completed": {
-      "body": "# ^Completed\n${1:Completed}$0",
-      "prefix": "Completed"
-    },
-    "LicenseText": {
-      "body": "# ^LicenseText\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click I Agree.}$0",
-      "prefix": "LicenseText"
-    },
-    "LicenseTextCB": {
-      "body": "# ^LicenseTextCB\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK}$0",
-      "prefix": "LicenseTextCB"
-    },
-    "LicenseTextRB": {
-      "body": "# ^LicenseTextRB\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK}$0",
-      "prefix": "LicenseTextRB"
-    },
-    "UnLicenseText": {
-      "body": "# ^UnLicenseText\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click I Agree.}$0",
-      "prefix": "UnLicenseText"
-    },
-    "UnLicenseTextCB": {
-      "body": "# ^UnLicenseTextCB\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK}$0",
-      "prefix": "UnLicenseTextCB"
-    },
-    "UnLicenseTextRB": {
-      "body": "# ^UnLicenseTextRB\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK}$0",
-      "prefix": "UnLicenseTextRB"
-    },
-    "Custom": {
-      "body": "# ^Custom\n${1:Custom}$0",
-      "prefix": "Custom"
-    },
-    "ComponentsText": {
-      "body": "# ^ComponentsText\n${1:Check the components you want to install and uncheck the components you don't want to install. $_CLICK}$0",
-      "prefix": "ComponentsText"
-    },
-    "ComponentsSubText1": {
-      "body": "# ^ComponentsSubText1\n${1:Select the type of install:}$0",
-      "prefix": "ComponentsSubText1"
-    },
-    "ComponentsSubText2_NoInstTypes": {
-      "body": "# ^ComponentsSubText2_NoInstTypes\n${1:Select components to install:}$0",
-      "prefix": "ComponentsSubText2_NoInstTypes"
-    },
-    "ComponentsSubText2": {
-      "body": "# ^ComponentsSubText2\n${1:Or, select the optional components you wish to install:}$0",
-      "prefix": "ComponentsSubText2"
-    },
-    "UnComponentsText": {
-      "body": "# ^UnComponentsText\n${1:Check the components you want to uninstall and uncheck the components you don't want to uninstall. $_CLICK}$0",
-      "prefix": "UnComponentsText"
-    },
-    "UnComponentsSubText1": {
-      "body": "# ^UnComponentsSubText1\n${1:Select the type of uninstall:}$0",
-      "prefix": "UnComponentsSubText1"
-    },
-    "UnComponentsSubText2_NoInstTypes": {
-      "body": "# ^UnComponentsSubText2_NoInstTypes\n${1:Select components to uninstall:}$0",
-      "prefix": "UnComponentsSubText2_NoInstTypes"
-    },
-    "UnComponentsSubText2": {
-      "body": "# ^UnComponentsSubText2\n${1:Or, select the optional components you wish to uninstall:}$0",
-      "prefix": "UnComponentsSubText2"
-    },
-    "DirText": {
-      "body": "# ^DirText\n${1:Setup will install $(^NameDA) in the following folder. To install in a different folder, click Browse and select another folder. $_CLICK}$0",
-      "prefix": "DirText"
-    },
-    "DirSubText": {
-      "body": "# ^DirSubText\n${1:Destination Folder}$0",
-      "prefix": "DirSubText"
-    },
-    "DirBrowseText": {
-      "body": "# ^DirBrowseText\n${1:Select the folder to install $(^NameDA) in:}$0",
-      "prefix": "DirBrowseText"
-    },
-    "UnDirText": {
-      "body": "# ^UnDirText\n${1:Setup will uninstall $(^NameDA) from the following folder. To uninstall from a different folder, click Browse and select another folder. $_CLICK}$0",
-      "prefix": "UnDirText"
-    },
-    "UnDirSubText": {
-      "body": "# ^UnDirSubText\n${1:\"\"}$0",
-      "prefix": "UnDirSubText"
-    },
-    "UnDirBrowseText": {
-      "body": "# ^UnDirBrowseText\n${1:Select the folder to uninstall $(^NameDA) from:}$0",
-      "prefix": "UnDirBrowseText"
-    },
-    "SpaceAvailable": {
-      "body": "# ^SpaceAvailable\n${1:\"Space available: \"}$0",
-      "prefix": "SpaceAvailable"
-    },
-    "SpaceRequired": {
-      "body": "# ^SpaceRequired\n${1:\"Space required: \"}$0",
-      "prefix": "SpaceRequired"
-    },
-    "UninstallingText": {
-      "body": "# ^UninstallingText\n${1:$(^NameDA) will be uninstalled from the following folder. $_CLICK}$0",
-      "prefix": "UninstallingText"
-    },
-    "UninstallingSubText": {
-      "body": "# ^UninstallingSubText\n${1:Uninstalling from:}$0",
-      "prefix": "UninstallingSubText"
-    },
-    "FileError": {
-      "body": "# ^FileError\n${1:Error opening file for writing: \\r\\n\\r\\n$0\\r\\n\\r\\nClick Abort to stop the installation,\\r\\nRetry to try again, or\\r\\nIgnore to skip this file.}$0",
-      "prefix": "FileError"
-    },
-    "FileError_NoIgnore": {
-      "body": "# ^FileError_NoIgnore\n${1:Error opening file for writing: \\r\\n\\r\\n$0\\r\\n\\r\\nClick Retry to try again, or\\r\\nCancel to stop the installation.}$0",
-      "prefix": "FileError_NoIgnore"
-    },
-    "CantWrite": {
-      "body": "# ^CantWrite\n${1:\"Can't write: \"}$0",
-      "prefix": "CantWrite"
-    },
-    "CopyFailed": {
-      "body": "# ^CopyFailed\n${1:Copy failed}$0",
-      "prefix": "CopyFailed"
-    },
-    "CopyTo": {
-      "body": "# ^CopyTo\n${1:\"Copy to \"}$0",
-      "prefix": "CopyTo"
-    },
-    "Registering": {
-      "body": "# ^Registering\n${1:\"Registering: \"}$0",
-      "prefix": "Registering"
-    },
-    "Unregistering": {
-      "body": "# ^Unregistering\n${1:\"Unregistering: \"}$0",
-      "prefix": "Unregistering"
-    },
-    "SymbolNotFound": {
-      "body": "# ^SymbolNotFound\n${1:\"Could not find symbol: \"}$0",
-      "prefix": "SymbolNotFound"
-    },
-    "CouldNotLoad": {
-      "body": "# ^CouldNotLoad\n${1:\"Could not load: \"}$0",
-      "prefix": "CouldNotLoad"
-    },
-    "CreateFolder": {
-      "body": "# ^CreateFolder\n${1:\"Create folder: \"}$0",
-      "prefix": "CreateFolder"
-    },
-    "CreateShortcut": {
-      "body": "# ^CreateShortcut\n${1:\"Create shortcut: \"}$0",
-      "prefix": "CreateShortcut"
-    },
-    "CreatedUninstaller": {
-      "body": "# ^CreatedUninstaller\n${1:\"Created uninstaller: \"}$0",
-      "prefix": "CreatedUninstaller"
-    },
-    "Delete": {
-      "body": "# ^Delete\n${1:\"Delete file: \"}$0",
-      "prefix": "Delete"
-    },
-    "DeleteOnReboot": {
-      "body": "# ^DeleteOnReboot\n${1:\"Delete on reboot: \"}$0",
-      "prefix": "DeleteOnReboot"
-    },
-    "ErrorCreatingShortcut": {
-      "body": "# ^ErrorCreatingShortcut\n${1:\"Error creating shortcut: \"}$0",
-      "prefix": "ErrorCreatingShortcut"
-    },
-    "ErrorCreating": {
-      "body": "# ^ErrorCreating\n${1:\"Error creating: \"}$0",
-      "prefix": "ErrorCreating"
-    },
-    "ErrorDecompressing": {
-      "body": "# ^ErrorDecompressing\n${1:Error decompressing data! Corrupted installer?}$0",
-      "prefix": "ErrorDecompressing"
-    },
-    "ErrorRegistering": {
-      "body": "# ^ErrorRegistering\n${1:Error registering DLL}$0",
-      "prefix": "ErrorRegistering"
-    },
-    "ExecShell": {
-      "body": "# ^ExecShell\n${1:\"ExecShell: \"}$0",
-      "prefix": "ExecShell"
-    },
-    "Exec": {
-      "body": "# ^Exec\n${1:\"Execute: \"}$0",
-      "prefix": "Exec"
-    },
-    "Extract": {
-      "body": "# ^Extract\n${1:\"Extract: \"}$0",
-      "prefix": "Extract"
-    },
-    "ErrorWriting": {
-      "body": "# ^ErrorWriting\n${1:\"Extract: error writing to file \"}$0",
-      "prefix": "ErrorWriting"
-    },
-    "InvalidOpcode": {
-      "body": "# ^InvalidOpcode\n${1:Installer corrupted: invalid opcode}$0",
-      "prefix": "InvalidOpcode"
-    },
-    "NoOLE": {
-      "body": "# ^NoOLE\n${1:\"No OLE for: \"}$0",
-      "prefix": "NoOLE"
-    },
-    "OutputFolder": {
-      "body": "# ^OutputFolder\n${1:\"Output folder: \"}$0",
-      "prefix": "OutputFolder"
-    },
-    "RemoveFolder": {
-      "body": "# ^RemoveFolder\n${1:\"Remove folder: \"}$0",
-      "prefix": "RemoveFolder"
-    },
-    "RenameOnReboot": {
-      "body": "# ^RenameOnReboot\n${1:\"Rename on reboot: \"}$0",
-      "prefix": "RenameOnReboot"
-    },
-    "Rename": {
-      "body": "# ^Rename\n${1:\"Rename: \"}$0",
-      "prefix": "Rename"
-    },
-    "Skipped": {
-      "body": "# ^Skipped\n${1:\"Skipped: \"}$0",
-      "prefix": "Skipped"
-    },
-    "CopyDetails": {
-      "body": "# ^CopyDetails\n${1:Copy Details To Clipboard}$0",
-      "prefix": "CopyDetails"
-    },
-    "LogInstall": {
-      "body": "# ^LogInstall\n${1:Log install process}$0",
-      "prefix": "LogInstall"
-    },
-    "Byte": {
-      "body": "# ^Byte\n${1:B}$0",
-      "prefix": "Byte"
-    },
-    "Kilo": {
-      "body": "# ^Kilo\n${1: K}$0",
-      "prefix": "Kilo"
-    },
-    "Mega": {
-      "body": "# ^Mega\n${1: M}$0",
-      "prefix": "Mega"
-    },
-    "Giga": {
-      "body": "# ^Giga\n${1: G}$0",
-      "prefix": "Giga"
-    }
-  }
+	".source.nlf": {
+		"Branding": {
+			"body": "# ^Branding\n${1:Nullsoft Install System %s}$0",
+			"prefix": "Branding"
+		},
+		"SetupCaption": {
+			"body": "# ^SetupCaption\n${1:$(^Name) Setup}$0",
+			"prefix": "SetupCaption"
+		},
+		"UninstallCaption": {
+			"body": "# ^UninstallCaption\n${1:$(^Name) Uninstall}$0",
+			"prefix": "UninstallCaption"
+		},
+		"LicenseSubCaption": {
+			"body": "# ^LicenseSubCaption\n${1:: License Agreement}$0",
+			"prefix": "LicenseSubCaption"
+		},
+		"ComponentsSubCaption": {
+			"body": "# ^ComponentsSubCaption\n${1:: Installation Options}$0",
+			"prefix": "ComponentsSubCaption"
+		},
+		"DirSubCaption": {
+			"body": "# ^DirSubCaption\n${1:: Installation Folder}$0",
+			"prefix": "DirSubCaption"
+		},
+		"InstallingSubCaption": {
+			"body": "# ^InstallingSubCaption\n${1:: Installing}$0",
+			"prefix": "InstallingSubCaption"
+		},
+		"CompletedSubCaption": {
+			"body": "# ^CompletedSubCaption\n${1:: Completed}$0",
+			"prefix": "CompletedSubCaption"
+		},
+		"UnComponentsSubCaption": {
+			"body": "# ^UnComponentsSubCaption\n${1:: Uninstallation Options}$0",
+			"prefix": "UnComponentsSubCaption"
+		},
+		"UnDirSubCaption": {
+			"body": "# ^UnDirSubCaption\n${1:: Uninstallation Folder}$0",
+			"prefix": "UnDirSubCaption"
+		},
+		"ConfirmSubCaption": {
+			"body": "# ^ConfirmSubCaption\n${1:: Confirmation}$0",
+			"prefix": "ConfirmSubCaption"
+		},
+		"UninstallingSubCaption": {
+			"body": "# ^UninstallingSubCaption\n${1:: Uninstalling}$0",
+			"prefix": "UninstallingSubCaption"
+		},
+		"UnCompletedSubCaption": {
+			"body": "# ^UnCompletedSubCaption\n${1:: Completed}$0",
+			"prefix": "UnCompletedSubCaption"
+		},
+		"BackBtn": {
+			"body": "# ^BackBtn\n${1:< &Back}$0",
+			"prefix": "BackBtn"
+		},
+		"NextBtn": {
+			"body": "# ^NextBtn\n${1:&Next >}$0",
+			"prefix": "NextBtn"
+		},
+		"AgreeBtn": {
+			"body": "# ^AgreeBtn\n${1:I &Agree}$0",
+			"prefix": "AgreeBtn"
+		},
+		"AcceptBtn": {
+			"body": "# ^AcceptBtn\n${1:I &accept the terms of the License Agreement}$0",
+			"prefix": "AcceptBtn"
+		},
+		"DontAcceptBtn": {
+			"body": "# ^DontAcceptBtn\n${1:I &do not accept the terms of the License Agreement}$0",
+			"prefix": "DontAcceptBtn"
+		},
+		"InstallBtn": {
+			"body": "# ^InstallBtn\n${1:&Install}$0",
+			"prefix": "InstallBtn"
+		},
+		"UninstallBtn": {
+			"body": "# ^UninstallBtn\n${1:&Uninstall}$0",
+			"prefix": "UninstallBtn"
+		},
+		"CancelBtn": {
+			"body": "# ^CancelBtn\n${1:Cancel}$0",
+			"prefix": "CancelBtn"
+		},
+		"CloseBtn": {
+			"body": "# ^CloseBtn\n${1:&Close}$0",
+			"prefix": "CloseBtn"
+		},
+		"BrowseBtn": {
+			"body": "# ^BrowseBtn\n${1:B&rowse...}$0",
+			"prefix": "BrowseBtn"
+		},
+		"ShowDetailsBtn": {
+			"body": "# ^ShowDetailsBtn\n${1:Show &details}$0",
+			"prefix": "ShowDetailsBtn"
+		},
+		"ClickNext": {
+			"body": "# ^ClickNext\n${1:Click Next to continue.}$0",
+			"prefix": "ClickNext"
+		},
+		"ClickInstall": {
+			"body": "# ^ClickInstall\n${1:Click Install to start the installation.}$0",
+			"prefix": "ClickInstall"
+		},
+		"ClickUninstall": {
+			"body": "# ^ClickUninstall\n${1:Click Uninstall to start the uninstallation.}$0",
+			"prefix": "ClickUninstall"
+		},
+		"Name": {
+			"body": "# ^Name\n${1:Name}$0",
+			"prefix": "Name"
+		},
+		"Completed": {
+			"body": "# ^Completed\n${1:Completed}$0",
+			"prefix": "Completed"
+		},
+		"LicenseText": {
+			"body": "# ^LicenseText\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click I Agree.}$0",
+			"prefix": "LicenseText"
+		},
+		"LicenseTextCB": {
+			"body": "# ^LicenseTextCB\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK}$0",
+			"prefix": "LicenseTextCB"
+		},
+		"LicenseTextRB": {
+			"body": "# ^LicenseTextRB\n${1:Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK}$0",
+			"prefix": "LicenseTextRB"
+		},
+		"UnLicenseText": {
+			"body": "# ^UnLicenseText\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click I Agree.}$0",
+			"prefix": "UnLicenseText"
+		},
+		"UnLicenseTextCB": {
+			"body": "# ^UnLicenseTextCB\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK}$0",
+			"prefix": "UnLicenseTextCB"
+		},
+		"UnLicenseTextRB": {
+			"body": "# ^UnLicenseTextRB\n${1:Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK}$0",
+			"prefix": "UnLicenseTextRB"
+		},
+		"Custom": {
+			"body": "# ^Custom\n${1:Custom}$0",
+			"prefix": "Custom"
+		},
+		"ComponentsText": {
+			"body": "# ^ComponentsText\n${1:Check the components you want to install and uncheck the components you don't want to install. $_CLICK}$0",
+			"prefix": "ComponentsText"
+		},
+		"ComponentsSubText1": {
+			"body": "# ^ComponentsSubText1\n${1:Select the type of install:}$0",
+			"prefix": "ComponentsSubText1"
+		},
+		"ComponentsSubText2_NoInstTypes": {
+			"body": "# ^ComponentsSubText2_NoInstTypes\n${1:Select components to install:}$0",
+			"prefix": "ComponentsSubText2_NoInstTypes"
+		},
+		"ComponentsSubText2": {
+			"body": "# ^ComponentsSubText2\n${1:Or, select the optional components you wish to install:}$0",
+			"prefix": "ComponentsSubText2"
+		},
+		"UnComponentsText": {
+			"body": "# ^UnComponentsText\n${1:Check the components you want to uninstall and uncheck the components you don't want to uninstall. $_CLICK}$0",
+			"prefix": "UnComponentsText"
+		},
+		"UnComponentsSubText1": {
+			"body": "# ^UnComponentsSubText1\n${1:Select the type of uninstall:}$0",
+			"prefix": "UnComponentsSubText1"
+		},
+		"UnComponentsSubText2_NoInstTypes": {
+			"body": "# ^UnComponentsSubText2_NoInstTypes\n${1:Select components to uninstall:}$0",
+			"prefix": "UnComponentsSubText2_NoInstTypes"
+		},
+		"UnComponentsSubText2": {
+			"body": "# ^UnComponentsSubText2\n${1:Or, select the optional components you wish to uninstall:}$0",
+			"prefix": "UnComponentsSubText2"
+		},
+		"DirText": {
+			"body": "# ^DirText\n${1:Setup will install $(^NameDA) in the following folder. To install in a different folder, click Browse and select another folder. $_CLICK}$0",
+			"prefix": "DirText"
+		},
+		"DirSubText": {
+			"body": "# ^DirSubText\n${1:Destination Folder}$0",
+			"prefix": "DirSubText"
+		},
+		"DirBrowseText": {
+			"body": "# ^DirBrowseText\n${1:Select the folder to install $(^NameDA) in:}$0",
+			"prefix": "DirBrowseText"
+		},
+		"UnDirText": {
+			"body": "# ^UnDirText\n${1:Setup will uninstall $(^NameDA) from the following folder. To uninstall from a different folder, click Browse and select another folder. $_CLICK}$0",
+			"prefix": "UnDirText"
+		},
+		"UnDirSubText": {
+			"body": "# ^UnDirSubText\n${1:\"\"}$0",
+			"prefix": "UnDirSubText"
+		},
+		"UnDirBrowseText": {
+			"body": "# ^UnDirBrowseText\n${1:Select the folder to uninstall $(^NameDA) from:}$0",
+			"prefix": "UnDirBrowseText"
+		},
+		"SpaceAvailable": {
+			"body": "# ^SpaceAvailable\n${1:\"Space available: \"}$0",
+			"prefix": "SpaceAvailable"
+		},
+		"SpaceRequired": {
+			"body": "# ^SpaceRequired\n${1:\"Space required: \"}$0",
+			"prefix": "SpaceRequired"
+		},
+		"UninstallingText": {
+			"body": "# ^UninstallingText\n${1:$(^NameDA) will be uninstalled from the following folder. $_CLICK}$0",
+			"prefix": "UninstallingText"
+		},
+		"UninstallingSubText": {
+			"body": "# ^UninstallingSubText\n${1:Uninstalling from:}$0",
+			"prefix": "UninstallingSubText"
+		},
+		"FileError": {
+			"body": "# ^FileError\n${1:Error opening file for writing: \\r\\n\\r\\n$0\\r\\n\\r\\nClick Abort to stop the installation,\\r\\nRetry to try again, or\\r\\nIgnore to skip this file.}$0",
+			"prefix": "FileError"
+		},
+		"FileError_NoIgnore": {
+			"body": "# ^FileError_NoIgnore\n${1:Error opening file for writing: \\r\\n\\r\\n$0\\r\\n\\r\\nClick Retry to try again, or\\r\\nCancel to stop the installation.}$0",
+			"prefix": "FileError_NoIgnore"
+		},
+		"CantWrite": {
+			"body": "# ^CantWrite\n${1:\"Can't write: \"}$0",
+			"prefix": "CantWrite"
+		},
+		"CopyFailed": {
+			"body": "# ^CopyFailed\n${1:Copy failed}$0",
+			"prefix": "CopyFailed"
+		},
+		"CopyTo": {
+			"body": "# ^CopyTo\n${1:\"Copy to \"}$0",
+			"prefix": "CopyTo"
+		},
+		"Registering": {
+			"body": "# ^Registering\n${1:\"Registering: \"}$0",
+			"prefix": "Registering"
+		},
+		"Unregistering": {
+			"body": "# ^Unregistering\n${1:\"Unregistering: \"}$0",
+			"prefix": "Unregistering"
+		},
+		"SymbolNotFound": {
+			"body": "# ^SymbolNotFound\n${1:\"Could not find symbol: \"}$0",
+			"prefix": "SymbolNotFound"
+		},
+		"CouldNotLoad": {
+			"body": "# ^CouldNotLoad\n${1:\"Could not load: \"}$0",
+			"prefix": "CouldNotLoad"
+		},
+		"CreateFolder": {
+			"body": "# ^CreateFolder\n${1:\"Create folder: \"}$0",
+			"prefix": "CreateFolder"
+		},
+		"CreateShortcut": {
+			"body": "# ^CreateShortcut\n${1:\"Create shortcut: \"}$0",
+			"prefix": "CreateShortcut"
+		},
+		"CreatedUninstaller": {
+			"body": "# ^CreatedUninstaller\n${1:\"Created uninstaller: \"}$0",
+			"prefix": "CreatedUninstaller"
+		},
+		"Delete": {
+			"body": "# ^Delete\n${1:\"Delete file: \"}$0",
+			"prefix": "Delete"
+		},
+		"DeleteOnReboot": {
+			"body": "# ^DeleteOnReboot\n${1:\"Delete on reboot: \"}$0",
+			"prefix": "DeleteOnReboot"
+		},
+		"ErrorCreatingShortcut": {
+			"body": "# ^ErrorCreatingShortcut\n${1:\"Error creating shortcut: \"}$0",
+			"prefix": "ErrorCreatingShortcut"
+		},
+		"ErrorCreating": {
+			"body": "# ^ErrorCreating\n${1:\"Error creating: \"}$0",
+			"prefix": "ErrorCreating"
+		},
+		"ErrorDecompressing": {
+			"body": "# ^ErrorDecompressing\n${1:Error decompressing data! Corrupted installer?}$0",
+			"prefix": "ErrorDecompressing"
+		},
+		"ErrorRegistering": {
+			"body": "# ^ErrorRegistering\n${1:Error registering DLL}$0",
+			"prefix": "ErrorRegistering"
+		},
+		"ExecShell": {
+			"body": "# ^ExecShell\n${1:\"ExecShell: \"}$0",
+			"prefix": "ExecShell"
+		},
+		"Exec": {
+			"body": "# ^Exec\n${1:\"Execute: \"}$0",
+			"prefix": "Exec"
+		},
+		"Extract": {
+			"body": "# ^Extract\n${1:\"Extract: \"}$0",
+			"prefix": "Extract"
+		},
+		"ErrorWriting": {
+			"body": "# ^ErrorWriting\n${1:\"Extract: error writing to file \"}$0",
+			"prefix": "ErrorWriting"
+		},
+		"InvalidOpcode": {
+			"body": "# ^InvalidOpcode\n${1:Installer corrupted: invalid opcode}$0",
+			"prefix": "InvalidOpcode"
+		},
+		"NoOLE": {
+			"body": "# ^NoOLE\n${1:\"No OLE for: \"}$0",
+			"prefix": "NoOLE"
+		},
+		"OutputFolder": {
+			"body": "# ^OutputFolder\n${1:\"Output folder: \"}$0",
+			"prefix": "OutputFolder"
+		},
+		"RemoveFolder": {
+			"body": "# ^RemoveFolder\n${1:\"Remove folder: \"}$0",
+			"prefix": "RemoveFolder"
+		},
+		"RenameOnReboot": {
+			"body": "# ^RenameOnReboot\n${1:\"Rename on reboot: \"}$0",
+			"prefix": "RenameOnReboot"
+		},
+		"Rename": {
+			"body": "# ^Rename\n${1:\"Rename: \"}$0",
+			"prefix": "Rename"
+		},
+		"Skipped": {
+			"body": "# ^Skipped\n${1:\"Skipped: \"}$0",
+			"prefix": "Skipped"
+		},
+		"CopyDetails": {
+			"body": "# ^CopyDetails\n${1:Copy Details To Clipboard}$0",
+			"prefix": "CopyDetails"
+		},
+		"LogInstall": {
+			"body": "# ^LogInstall\n${1:Log install process}$0",
+			"prefix": "LogInstall"
+		},
+		"Byte": {
+			"body": "# ^Byte\n${1:B}$0",
+			"prefix": "Byte"
+		},
+		"Kilo": {
+			"body": "# ^Kilo\n${1: K}$0",
+			"prefix": "Kilo"
+		},
+		"Mega": {
+			"body": "# ^Mega\n${1: M}$0",
+			"prefix": "Mega"
+		},
+		"Giga": {
+			"body": "# ^Giga\n${1: G}$0",
+			"prefix": "Giga"
+		}
+	}
 }

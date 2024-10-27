@@ -1,9 +1,9 @@
 {
-  ".source.nsis": {
-    "editor": {
-      "commentStart": "; ",
-      "increaseIndentPattern": "(?x)\n^\\s*\n(\n(!(if(n?def)?|ifmacron?def|macro))\\b .*\n|(Function|PageEx|Section(Group)?)\\b .*\n)\\s*?$",
-      "decreaseIndentPattern": "(?x)\n^\\s*(\n(!(else|endif|macroend))\n|((Function|PageEx|Section(Group)?)End)\n)\\b .*$"
-    }
-  }
+	".source.nsis": {
+		"editor": {
+			"commentStart": "; ",
+			"increaseIndentPattern": "(?x)\n^\\s*\n(\n(!(if(n?def)?|ifmacron?def|macro))\\b .*\n|(Function|PageEx|Section(Group)?)\\b .*\n)\\s*?$",
+			"decreaseIndentPattern": "(?x)\n^\\s*(\n(!(else|endif|macroend))\n|((Function|PageEx|Section(Group)?)End)\n)\\b .*$"
+		}
+	}
 }

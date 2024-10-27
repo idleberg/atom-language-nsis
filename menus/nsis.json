@@ -1,71 +1,71 @@
 {
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "NSIS",
-          "submenu": [
-            {
-              "label": "Compile script",
-              "command": "NSIS:compile"
-            },
-            {
-              "label": "Compile script (strict)",
-              "command": "NSIS:compile-strict"
-            },
-            {
-              "label": "Command Reference",
-              "command": "NSIS:command-reference"
-            },
-            {
-              "type": "separator"
-            },
-            {
-              "label": "Set default runner for NSIS",
-              "command": "NSIS:set-default-runner"
-            },
-            {
-              "label": "Unset default runner for NSIS",
-              "command": "NSIS:unset-default-runner"
-            },
-            {
-              "type": "separator"
-            },
-            {
-              "label": "Create .atom–build.cson",
-              "command": "NSIS:create-.atom–build-file"
-            },
-            {
-              "type": "separator"
-            },
-            {
-              "label": "Open Package Settings",
-              "command": "NSIS:open-package-settings"
-            },
-            {
-              "label": "Setup Package Dependencies",
-              "command": "NSIS:satisfy-package-dependencies"
-            },
-            {
-              "type": "separator"
-            },
-            {
-              "label": "Developer",
-              "submenu": [
-                {
-                  "label": "Show NSIS Version",
-                  "command": "NSIS:show-version"
-                },
-                {
-                  "label": "Show Compiler Flags",
-                  "command": "NSIS:show-compiler-flags"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"menu": [
+		{
+			"label": "Packages",
+			"submenu": [
+				{
+					"label": "NSIS",
+					"submenu": [
+						{
+							"label": "Compile script",
+							"command": "NSIS:compile"
+						},
+						{
+							"label": "Compile script (strict)",
+							"command": "NSIS:compile-strict"
+						},
+						{
+							"label": "Command Reference",
+							"command": "NSIS:command-reference"
+						},
+						{
+							"type": "separator"
+						},
+						{
+							"label": "Set default runner for NSIS",
+							"command": "NSIS:set-default-runner"
+						},
+						{
+							"label": "Unset default runner for NSIS",
+							"command": "NSIS:unset-default-runner"
+						},
+						{
+							"type": "separator"
+						},
+						{
+							"label": "Create .atom–build.cson",
+							"command": "NSIS:create-.atom–build-file"
+						},
+						{
+							"type": "separator"
+						},
+						{
+							"label": "Open Package Settings",
+							"command": "NSIS:open-package-settings"
+						},
+						{
+							"label": "Setup Package Dependencies",
+							"command": "NSIS:satisfy-package-dependencies"
+						},
+						{
+							"type": "separator"
+						},
+						{
+							"label": "Developer",
+							"submenu": [
+								{
+									"label": "Show NSIS Version",
+									"command": "NSIS:show-version"
+								},
+								{
+									"label": "Show Compiler Flags",
+									"command": "NSIS:show-compiler-flags"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
 }
