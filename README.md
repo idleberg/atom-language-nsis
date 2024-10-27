@@ -7,46 +7,46 @@
 
 Language syntax, auto-completions and build system for Nullsoft Scriptable Install System (NSIS), as well as language syntax for NSIS Language Files.
 
-![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/screenshot.gif)
+![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/resources/screenshot.gif)
 
 _Screenshot of NSIS with [Fira Mono](http://mozilla.github.io/Fira/) font & the [Hopscotch](https://web.pulsar-edit.dev/packages/hopscotch) theme_
 
 ## Features
 
--   syntax grammar for NSIS and NSIS Language Files (.nlf)
--   auto-complete core NSIS commands, variables and predefines
--   auto-complete core Plugins:
-    -   AdvSplash
-    -   Banner
-    -   BgImage
-    -   Dialer
-    -   InstallOptions
-    -   LangDLL
-    -   Math
-    -   nsDialogs
-    -   nsExec
-    -   NSISdl
-    -   Splash
-    -   StartMenu
-    -   System
-    -   UserInfo
-    -   VPatch
--   auto-complete core libraries (“Useful Headers”):
-    -   FileFunc
-    -   LogicLib
-    -   Memento
-    -   Modern UI
-    -   MultiUser
-    -   Sections
-    -   StrFunc
-    -   WinMessages
-    -   WinVer
-    -   WordFunc
-    -   x64
--   [Drunken NSIS](#drunken-nsis)
--   [Build Tools](#building)
--   [Linting](#linting)
--   [Environment Variables](#environment-variables)
+- syntax grammar for NSIS and NSIS Language Files (.nlf)
+- auto-complete core NSIS commands, variables and predefines
+- auto-complete core Plugins:
+  - AdvSplash
+  - Banner
+  - BgImage
+  - Dialer
+  - InstallOptions
+  - LangDLL
+  - Math
+  - nsDialogs
+  - nsExec
+  - NSISdl
+  - Splash
+  - StartMenu
+  - System
+  - UserInfo
+  - VPatch
+- auto-complete core libraries (“Useful Headers”):
+  - FileFunc
+  - LogicLib
+  - Memento
+  - Modern UI
+  - MultiUser
+  - Sections
+  - StrFunc
+  - WinMessages
+  - WinVer
+  - WordFunc
+  - x64
+- [Drunken NSIS](#drunken-nsis)
+- [Build Tools](#building)
+- [Linting](#linting)
+- [Environment Variables](#environment-variables)
 
 You can further extend this package with snippets for [third-party plug-ins](https://web.pulsar-edit.dev/packages/nsis-plugins).
 
@@ -113,17 +113,17 @@ With most commands, you can specify available options before completion. For ins
 
 To complete [compile time commands](http://nsis.sourceforge.net/Docs/Chapter5.html#), [variables](http://nsis.sourceforge.net/Docs/Chapter4.html#varother) or [predefines](http://nsis.sourceforge.net/Docs/Chapter5.html#comppredefines), make sure to _omit special characters_ like `!`, `$` and brackets:
 
--   `include` completes to `!include`
--   `INSTDIR` completes to `$INSTDIR`
--   `NSIS_VERSION` completes to `${NSIS_VERSION}`
+- `include` completes to `!include`
+- `INSTDIR` completes to `$INSTDIR`
+- `NSIS_VERSION` completes to `${NSIS_VERSION}`
 
 However, you have to type `__LINE__` to complete to `${__LINE__}`.
 
 There are several special cases for your convenience:
 
--   `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
--   `onInit` completes to a `Function .onInit` block
--   `LogicLib` completes to `!include "LogicLib.nsh"`
+- `MB_OK` completes to `MessageBox MB_OK "messagebox_text"`
+- `onInit` completes to a `Function .onInit` block
+- `LogicLib` completes to `!include "LogicLib.nsh"`
 
 #### Drunken NSIS
 
@@ -131,12 +131,12 @@ Fuzzy syntax completions are available through the “Drunken NSIS” snippets, 
 
 **Example:**
 
--   `FileRead` equals `ReadFile`
--   `ReadINIStr` equals `INIStrRead`
--   `SectionSetText` equals `SetSectionText`
--   `LogSet` equals `SetLog`
--   `FindFirst` equals `FirstFind`
--   `${FindLine}` equals `${LineFind}`
+- `FileRead` equals `ReadFile`
+- `ReadINIStr` equals `INIStrRead`
+- `SectionSetText` equals `SetSectionText`
+- `LogSet` equals `SetLog`
+- `FindFirst` equals `FirstFind`
+- `${FindLine}` equals `${LineFind}`
 
 ### Building
 
@@ -150,9 +150,9 @@ If you prefer working with custom compiler arguments, you can specify them in th
 
 Should you prefer working with an existing third-party build system, the following packages already have support for NSIS.
 
--   [`build-makensis`](https://web.pulsar-edit.dev/packages/build-makensis)
--   [`script`](https://web.pulsar-edit.dev/packages/script)
--   [`atom-runner`](https://web.pulsar-edit.dev/packages/atom-runner)
+- [`build-makensis`](https://web.pulsar-edit.dev/packages/build-makensis)
+- [`script`](https://web.pulsar-edit.dev/packages/script)
+- [`atom-runner`](https://web.pulsar-edit.dev/packages/atom-runner)
 
 Project files for `build-makensis` can be created by executing _“NSIS: Create .atom-build file”_ from the [command-palette](https://atom-editor.cc/docs/latest/getting-started-atom-basics#command-palette) or using the keyboard shortcut. You can specify your preferred build file syntax (JSON/YAML) in the package settings.
 
@@ -204,8 +204,8 @@ NSIS_APP_ENVIRONMENT=development
 
 ## Related
 
--   [node-makensis](https://www.npmjs.com/package/makensis) - Node wrapper for `makensis`
--   [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
+- [node-makensis](https://www.npmjs.com/package/makensis) - Node wrapper for `makensis`
+- [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
 
 ## License
 
