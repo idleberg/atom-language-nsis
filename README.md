@@ -58,9 +58,6 @@ Install `language-nsis` from the editor's [Package Manager](http://flight-manual
 
 `$ ppm install language-nsis || apm install language-nsis`
 
-> [!TIP]
-> Users of the Pulsar fork can use `ppm` instead
-
 ### Using Git
 
 Change to your Atom packages directory:
@@ -98,7 +95,7 @@ $ ppm ci || apm ci
 Build the source:
 
 ```bash
-npm run build
+ppm run build || apm build
 ```
 
 ### Package Dependencies
