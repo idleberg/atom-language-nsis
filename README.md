@@ -56,7 +56,10 @@ You can further extend this package with snippets for [third-party plug-ins](htt
 
 Install `language-nsis` from the editor's [Package Manager](http://flight-manual.atom-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
 
-`$ ppm install language-nsis || apm install language-nsis`
+`bash
+$ ppm install language-nsis
+
+````
 
 ### Using Git
 
@@ -66,12 +69,12 @@ Change to your Atom packages directory:
 
 ```powershell
 # Powershell
-$ cd $Env:USERPROFILE\.atom\packages
-```
+$ cd $Env:USERPROFILE\.pulsar\packages
+````
 
 ```cmd
 :: Command Prompt
-$ cd %USERPROFILE%\.atom\packages
+$ cd %USERPROFILE%\.pulsar\packages
 ```
 
 **Linux & macOS**
@@ -89,13 +92,13 @@ $ git clone https://github.com/idleberg/atom-language-nsis language-nsis
 Inside the cloned directory, install its dependencies:
 
 ```bash
-$ ppm ci || apm ci
+$ ppm ci
 ```
 
 Build the source:
 
 ```bash
-$ ppm run build || apm build
+$ ppm run build
 ```
 
 ### Package Dependencies
