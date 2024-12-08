@@ -53,7 +53,7 @@ You can further extend this package with snippets for [third-party plug-ins](htt
 ## Installation
 
 > [!NOTE]  
-> The following assumes that you're by now using Pulsar, a community-driven fork of the Atom editor. Should you still be using Atom, use `apm` command instead of `ppm`.
+> The following guide assumes that you're by now using Pulsar, a community-driven fork of the Atom editor. Should you still be using Atom, use `apm` command instead of `ppm`.
 
 ### Package Manager
 
