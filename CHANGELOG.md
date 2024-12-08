@@ -1,3 +1,7 @@
+# v9.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.3)
+
+- pass `process.env` to spawned processes
+
 # v9.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.2)
 
 - update tooling
