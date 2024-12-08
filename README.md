@@ -52,6 +52,9 @@ You can further extend this package with snippets for [third-party plug-ins](htt
 
 ## Installation
 
+> [!NOTE]  
+> The following assumes that you're by now using Pulsar, a community-driven fork of the Atom editor. Should you still be using Atom, use `apm` command instead of `ppm`.
+
 ### Package Manager
 
 Install `language-nsis` from the editor's [Package Manager](http://flight-manual.atom-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
