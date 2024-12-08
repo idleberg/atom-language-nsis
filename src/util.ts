@@ -73,6 +73,8 @@ export async function getMakensisPath(): Promise<string> {
 export async function getSpawnEnv(): Promise<unknown> {
 	return {
 		env: {
+			// start with calling process env (this provides e.g. %PATH% on Windows)
+			...process.env,
 			NSISDIR: process.env.NSISDIR || undefined,
 			NSISCONFDIR: process.env.NSISCONFDIR || undefined,
 			LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
@@ -172,7 +174,7 @@ export function notifyOnCompletion(params: NotificationParams): void {
 
 									return;
 								},
-						  }
+							}
 						: undefined,
 					isLoadedAndActive('browse')
 						? {
@@ -185,7 +187,7 @@ export function notifyOnCompletion(params: NotificationParams): void {
 
 									return;
 								},
-						  }
+							}
 						: undefined,
 					{
 						text: 'Cancel',
@@ -196,7 +198,7 @@ export function notifyOnCompletion(params: NotificationParams): void {
 							return;
 						},
 					},
-			  ].filter((item) => item)
+				].filter((item) => item)
 			: [],
 	});
 }
