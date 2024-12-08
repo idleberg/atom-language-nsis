@@ -1,3 +1,7 @@
+# v9.0.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.4)
+
+- fix `README.md`
+
 # v9.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.3)
 
 - pass `process.env` to spawned processes
