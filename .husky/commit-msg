@@ -1,1 +1,1 @@
-npx --no -- commitlint --edit $1
+env | grep PPM_PUBLISH && exit 0 || npx --no -- commitlint --edit $1
