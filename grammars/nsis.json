@@ -23,14 +23,8 @@
 			"match": "^\\s*(?i)\\!(ifdef|ifndef|if|ifmacrodef|ifmacrondef|else|endif)\\b",
 			"name": "keyword.control.nsis"
 		},
-		{
-			"match": "^\\s*(?i)\\w+\\:\\:\\w+",
-			"name": "support.class.nsis"
-		},
-		{
-			"match": "[!<>]?=|<>|<|>",
-			"name": "keyword.operator.comparison.nsis"
-		},
+		{ "match": "^\\s*(?i)\\w+\\:\\:\\w+", "name": "support.class.nsis" },
+		{ "match": "[!<>]?=|<>|<|>", "name": "keyword.operator.comparison.nsis" },
 		{
 			"match": "\\b(?i)(ARCHIVE|FILE_ATTRIBUTE_ARCHIVE|FILE_ATTRIBUTE_HIDDEN|FILE_ATTRIBUTE_NORMAL|FILE_ATTRIBUTE_OFFLINE|FILE_ATTRIBUTE_READONLY|FILE_ATTRIBUTE_SYSTEM|FILE_ATTRIBUTE_TEMPORARY|HIDDEN|HKCC|HKCR(32|64)?|HKCU(32|64)?|HKDD|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_DYN_DATA|HKEY_LOCAL_MACHINE|HKEY_PERFORMANCE_DATA|HKEY_USERS|HKLM(32|64)?|HKPD|HKU|IDABORT|IDCANCEL|IDD_DIR|IDD_INST|IDD_INSTFILES|IDD_LICENSE|IDD_SELCOM|IDD_UNINST|IDD_VERIFY|IDIGNORE|IDNO|IDOK|IDRETRY|IDYES|MB_ABORTRETRYIGNORE|MB_DEFBUTTON1|MB_DEFBUTTON2|MB_DEFBUTTON3|MB_DEFBUTTON4|MB_ICONEXCLAMATION|MB_ICONINFORMATION|MB_ICONQUESTION|MB_ICONSTOP|MB_OK|MB_OKCANCEL|MB_RETRYCANCEL|MB_RIGHT|MB_RTLREADING|MB_SETFOREGROUND|MB_TOPMOST|MB_USERICON|MB_YESNO|MB_YESNOCANCEL|NORMAL|OFFLINE|READONLY|SHCTX|SHELL_CONTEXT|SW_HIDE|SW_SHOWDEFAULT|SW_SHOWMAXIMIZED|SW_SHOWMINIMIZED|SW_SHOWNORMAL|SYSTEM|TEMPORARY)\\b",
 			"name": "entity.other.attribute-name.nsis"
@@ -55,10 +49,7 @@
 			"match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
 			"name": "constant.numeric.nsis"
 		},
-		{
-			"match": "\\${[\\!\\w\\.:\\^-]+}",
-			"name": "constant.other.nsis"
-		},
+		{ "match": "\\${[\\!\\w\\.:\\^-]+}", "name": "constant.other.nsis" },
 		{
 			"match": "(?:^s*)(?i)${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?:s+)",
 			"name": "constant.language.nsis"
@@ -87,14 +78,8 @@
 			"match": "(?:^s*)(?i)${((Disable|Enable)X64FSRedirection|RunningX64)}(?:s+)",
 			"name": "constant.language.nsis"
 		},
-		{
-			"match": "\\$\\([\\!\\!\\w\\.:\\^-]+\\)",
-			"name": "constant.other.nsis"
-		},
-		{
-			"match": "\\$\\w[\\w\\.]*",
-			"name": "variable.other.nsis"
-		},
+		{ "match": "\\$\\([\\!\\!\\w\\.:\\^-]+\\)", "name": "constant.other.nsis" },
+		{ "match": "\\$\\w[\\w\\.]*", "name": "variable.other.nsis" },
 		{
 			"match": "\\b(?i)\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b",
 			"name": "constant.language.nsis"
@@ -102,38 +87,22 @@
 		{
 			"begin": "\"",
 			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.begin.nsis" }
 			},
 			"end": "\"",
 			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.end.nsis" }
 			},
 			"name": "string.quoted.double.nsis",
 			"patterns": [
-				{
-					"match": "\\${2}\\w*",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\$\\\\.",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\${[\\!\\w\\.:\\^-]+}",
-					"name": "constant.other.nsis"
-				},
+				{ "match": "\\${2}\\w*", "name": "constant.character.escape.nsis" },
+				{ "match": "\\$\\\\.", "name": "constant.character.escape.nsis" },
+				{ "match": "\\${[\\!\\w\\.:\\^-]+}", "name": "constant.other.nsis" },
 				{
 					"match": "\\$\\([\\!\\!\\w\\.:\\^-]+\\)",
 					"name": "constant.other.nsis"
 				},
-				{
-					"match": "\\$\\w[\\w\\.]*",
-					"name": "variable.other.nsis"
-				},
+				{ "match": "\\$\\w[\\w\\.]*", "name": "variable.other.nsis" },
 				{
 					"match": "\\b(?i)\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b",
 					"name": "constant.language.nsis"
@@ -143,38 +112,22 @@
 		{
 			"begin": "'",
 			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.begin.nsis" }
 			},
 			"end": "'",
 			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.end.nsis" }
 			},
 			"name": "string.quoted.single.nsis",
 			"patterns": [
-				{
-					"match": "\\${2}\\w*",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\$\\\\.",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\${[\\!\\w\\.:\\^-]+}",
-					"name": "constant.other.nsis"
-				},
+				{ "match": "\\${2}\\w*", "name": "constant.character.escape.nsis" },
+				{ "match": "\\$\\\\.", "name": "constant.character.escape.nsis" },
+				{ "match": "\\${[\\!\\w\\.:\\^-]+}", "name": "constant.other.nsis" },
 				{
 					"match": "\\$\\([\\!\\w\\.:\\^-]+\\)",
 					"name": "constant.other.nsis"
 				},
-				{
-					"match": "\\$\\w[\\w\\.]*",
-					"name": "variable.other.nsis"
-				},
+				{ "match": "\\$\\w[\\w\\.]*", "name": "variable.other.nsis" },
 				{
 					"match": "\\b(?i)\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b",
 					"name": "constant.language.nsis"
@@ -184,38 +137,22 @@
 		{
 			"begin": "`",
 			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.begin.nsis" }
 			},
 			"end": "`",
 			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.nsis"
-				}
+				"0": { "name": "punctuation.definition.string.end.nsis" }
 			},
 			"name": "string.quoted.back.nsis",
 			"patterns": [
-				{
-					"match": "\\${2}\\w*",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\$\\\\.",
-					"name": "constant.character.escape.nsis"
-				},
-				{
-					"match": "\\${[\\!\\w\\.:\\^-]+}",
-					"name": "constant.other.nsis"
-				},
+				{ "match": "\\${2}\\w*", "name": "constant.character.escape.nsis" },
+				{ "match": "\\$\\\\.", "name": "constant.character.escape.nsis" },
+				{ "match": "\\${[\\!\\w\\.:\\^-]+}", "name": "constant.other.nsis" },
 				{
 					"match": "\\$\\([\\!\\w\\.:\\^-]+\\)",
 					"name": "constant.other.nsis"
 				},
-				{
-					"match": "\\$\\w[\\w\\.]*",
-					"name": "variable.other.nsis"
-				},
+				{ "match": "\\$\\w[\\w\\.]*", "name": "variable.other.nsis" },
 				{
 					"match": "\\b(?i)\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b",
 					"name": "constant.language.nsis"
@@ -223,21 +160,13 @@
 			]
 		},
 		{
-			"captures": {
-				"1": {
-					"name": "punctuation.definition.comment.nsis"
-				}
-			},
+			"captures": { "1": { "name": "punctuation.definition.comment.nsis" } },
 			"match": "(;|#).*$\\n?",
 			"name": "comment.line.nsis"
 		},
 		{
 			"begin": "/\\*",
-			"captures": {
-				"0": {
-					"name": "punctuation.definition.comment.nsis"
-				}
-			},
+			"captures": { "0": { "name": "punctuation.definition.comment.nsis" } },
 			"end": "\\*/",
 			"name": "comment.block.nsis"
 		}
