@@ -1,3 +1,8 @@
+# v9.0.5 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.5)
+
+- update tooling
+- update dependencies
+
 # v9.0.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.0.4)
 
 - fix `README.md`
@@ -204,8 +209,8 @@
 
 - group compiler settings
 - add new compiler settings
-  - `strictMode`
-  - `customArguments`
+    - `strictMode`
+    - `customArguments`
 - re-order package settings
 - add prettier support
 - update linting script
@@ -310,18 +315,18 @@
 # v8.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.0)
 
 - decaffeinate
-  - rewrite in TypeScript
-  - convert grammars/keymaps/menus/settings/snippets to JSON (excluding scaffolding snippets)
-  - remove support for CSON build files
+    - rewrite in TypeScript
+    - convert grammars/keymaps/menus/settings/snippets to JSON (excluding scaffolding snippets)
+    - remove support for CSON build files
 - add support for environment variables
 - add support for DotEnv files
 - build with Rollup
 - lint with ESLint
 - remove build files for Wine
 - rename commands
-  - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
-  - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
-  - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
+    - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
+    - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
+    - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
 - modify config defaults
 - update dependencies
 
@@ -853,10 +858,10 @@
 # v5.7.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.7.0)
 
 - update syntax grammar
-  - add support for variables/constants in quotes
-  - add core libraries
-  - add highlighting of deprecated commands
-  - modify scopes
+    - add support for variables/constants in quotes
+    - add core libraries
+    - add highlighting of deprecated commands
+    - modify scopes
 
 # v5.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.6.0)
 
@@ -943,9 +948,9 @@
 # v5.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.0.0)
 
 - add additional fields to snippets
-  - descriptions
-  - description links
-  - labels
+    - descriptions
+    - description links
+    - labels
 - move “drunken” header completions to `header.DrunkenNSIS.cson`
 - update `header.WinVer.cson`
 - modified `variable` and `constant` grammar
@@ -1158,9 +1163,9 @@
 # v3.5.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.5.0)
 
 - add commands
-  - set default runner
-  - remove default runner
-  - create `.atom-builder-json`
+    - set default runner
+    - remove default runner
+    - create `.atom-builder-json`
 - remove automatic check for atom-runner
 
 # v3.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.6.0)
