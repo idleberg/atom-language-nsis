@@ -3,28 +3,28 @@ name: CI
 on:
   push:
     branches:
-    - master
+      - master
     paths:
-    - '.github/workflows/*'
-    - 'grammars/**'
-    - 'keymaps/**'
-    - 'settings/**'
-    - 'snippets/**'
-    - 'src/**'
-    - 'package.json'
-    - 'package-lock.json'
+      - ".github/workflows/*"
+      - "grammars/**"
+      - "keymaps/**"
+      - "settings/**"
+      - "snippets/**"
+      - "src/**"
+      - "package.json"
+      - "package-lock.json"
   pull_request:
     branches:
-    - master
+      - master
     paths:
-    - '.github/workflows/*'
-    - 'grammars/**'
-    - 'keymaps/**'
-    - 'settings/**'
-    - 'snippets/**'
-    - 'src/**'
-    - 'package.json'
-    - 'package-lock.json'
+      - ".github/workflows/*"
+      - "grammars/**"
+      - "keymaps/**"
+      - "settings/**"
+      - "snippets/**"
+      - "src/**"
+      - "package.json"
+      - "package-lock.json"
   workflow_dispatch:
 
 jobs:
@@ -32,38 +32,44 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['lts/*', '*']
+        node-version: ["lts/*", "*"]
         os: [ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 1
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.0.3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+      - name: Enable Corepack
+        run: |
+          npm install --global corepack@latest
+          corepack enable
 
-    - name: Install Packages Dependencies
-      run: npm ci
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - name: Lint Source
-      run: npm run lint --if-present
+      - uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Build Source
-      run: npm run build --if-present
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
-    - name: Run Tests
-      run: npm run test --if-present
+      - name: Lint Source
+        run: pnpm run --if-present lint
+
+      - name: Build Source
+        run: pnpm run --if-present build
+
+      - name: Run Tests
+        run: pnpm run --if-present test
