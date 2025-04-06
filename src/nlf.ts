@@ -1,5 +1,5 @@
-import { basename, extname } from 'path';
-import { TextEditor } from 'atom';
+import { basename, extname } from "path";
+import { TextEditor } from "atom";
 
 export async function convert(): Promise<void> {
 	const editor: TextEditor = atom.workspace.getActiveTextEditor();
@@ -10,12 +10,12 @@ export async function convert(): Promise<void> {
 	}
 
 	switch (editor.getGrammar().scopeName) {
-		case 'source.nlf':
+		case "source.nlf":
 			await convertNLF(editor);
 			break;
 
-		case 'source.json':
-		case 'source.json5':
+		case "source.json":
+		case "source.json5":
 			await convertJSON(editor);
 			break;
 
@@ -26,7 +26,7 @@ export async function convert(): Promise<void> {
 }
 
 async function convertNLF(editor): Promise<void> {
-	const NLF = await import('@nsis/nlf');
+	const NLF = await import("@nsis/nlf");
 	let output;
 
 	try {
@@ -34,16 +34,19 @@ async function convertNLF(editor): Promise<void> {
 		output = NLF.parse(input, { stringify: true });
 	} catch (e) {
 		console.error(e);
-		atom.notifications.addError('Conversion Failed', { detail: e, dismissable: true });
+		atom.notifications.addError("Conversion Failed", {
+			detail: e,
+			dismissable: true,
+		});
 
 		return;
 	}
 
-	await openNewFile(editor, output, 'json');
+	await openNewFile(editor, output, "json");
 }
 
 async function convertJSON(editor: TextEditor): Promise<void> {
-	const NLF = await import('@nsis/nlf');
+	const NLF = await import("@nsis/nlf");
 	let output;
 
 	try {
@@ -51,15 +54,22 @@ async function convertJSON(editor: TextEditor): Promise<void> {
 		output = NLF.stringify(input);
 	} catch (e) {
 		console.error(e);
-		atom.notifications.addError('Conversion Failed', { detail: e, dismissable: true });
+		atom.notifications.addError("Conversion Failed", {
+			detail: e,
+			dismissable: true,
+		});
 
 		return;
 	}
 
-	await openNewFile(editor, output, 'nlf');
+	await openNewFile(editor, output, "nlf");
 }
 
-async function openNewFile(editor: any, input: string, targetExt: string): Promise<void> {
+async function openNewFile(
+	editor: any,
+	input: string,
+	targetExt: string,
+): Promise<void> {
 	let newEditorTab;
 
 	const fileName = editor.getFileName().toString();

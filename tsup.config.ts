@@ -1,18 +1,18 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from "tsup";
 
 export default defineConfig({
 	bundle: true,
 	clean: true,
-	entry: ['src/main.ts'],
+	entry: ["src/main.ts"],
 	external: [
 		// Atom
-		'atom',
-		'electron',
+		"atom",
+		"electron",
 	],
-	format: 'cjs',
+	format: "cjs",
 	minify: true,
-	outDir: 'lib',
-	platform: 'node',
-	target: 'node14',
+	outDir: "lib",
+	platform: "node",
+	target: "node14",
 	treeshake: true,
 });

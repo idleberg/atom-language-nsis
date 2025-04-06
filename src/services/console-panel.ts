@@ -1,4 +1,4 @@
-import { Disposable } from 'atom';
+import { Disposable } from "atom";
 
 export default {
 	consolePanel: null,

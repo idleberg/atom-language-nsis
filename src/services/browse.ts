@@ -1,5 +1,5 @@
-import { Disposable } from 'atom';
-import Logger from '../log';
+import { Disposable } from "atom";
+import Logger from "../log";
 
 export default {
 	browse: null,
@@ -18,8 +18,9 @@ export default {
 		} catch (error) {
 			Logger.debug(error);
 
-			const missingPackageWarning = (await import('../util')).missingPackageWarning;
-			missingPackageWarning('browse');
+			const missingPackageWarning = (await import("../util"))
+				.missingPackageWarning;
+			missingPackageWarning("browse");
 		}
 	},
 };

@@ -6,21 +6,21 @@ export async function setRunner(): Promise<void> {
 	}
 
 	const notification = atom.notifications.addInfo(
-		'Do you want to set `makensis` as the default runner for NSIS files?',
+		"Do you want to set `makensis` as the default runner for NSIS files?",
 		{
 			dismissable: true,
 			buttons: [
 				{
-					text: 'Set makensis',
+					text: "Set makensis",
 					onDidClick() {
 						notification.dismiss();
-						atom.config.set('runner.scopes.nsis', 'makensis -');
+						atom.config.set("runner.scopes.nsis", "makensis -");
 
 						return;
 					},
 				},
 				{
-					text: 'Cancel',
+					text: "Cancel",
 					onDidClick() {
 						atom.beep();
 						notification.dismiss();
@@ -41,21 +41,21 @@ export async function unsetRunner(): Promise<void> {
 	}
 
 	const notification = atom.notifications.addWarning(
-		'Do you want to unset `makensis` as the default runner for NSIS files?',
+		"Do you want to unset `makensis` as the default runner for NSIS files?",
 		{
 			dismissable: true,
 			buttons: [
 				{
-					text: 'Unset makensis',
+					text: "Unset makensis",
 					onDidClick() {
 						notification.dismiss();
-						atom.config.unset('runner.scopes.nsis');
+						atom.config.unset("runner.scopes.nsis");
 
 						return;
 					},
 				},
 				{
-					text: 'Cancel',
+					text: "Cancel",
 					onDidClick() {
 						notification.dismiss();
 						atom.beep();
@@ -69,7 +69,7 @@ export async function unsetRunner(): Promise<void> {
 }
 
 async function hasAtomRunner(): Promise<boolean> {
-	const { isLoadedAndActive } = await import('./util');
+	const { isLoadedAndActive } = await import("./util");
 
-	return isLoadedAndActive('atom-runner');
+	return isLoadedAndActive("atom-runner");
 }
