@@ -13,6 +13,7 @@
 		"lint": "concurrently --prefix '{name}' -c 'blue,green' 'npm:lint:*'",
 		"prepare": "husky",
 		"prepublishOnly": "npm run build",
+		"publish:ppm": "PPM_PUBLISH=1 ppm publish",
 		"test": "echo \"no tests yet\" && exit 0"
 	},
 	"author": {
