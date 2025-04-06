@@ -40,36 +40,30 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.0.3
+      - uses: ctions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.0.3
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Enable Corepack
-        run: |
-          npm install --global corepack@latest
-          corepack enable
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
-        name: Setup pnpm cache
+      - name: Cache node modules
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
+        env:
+          cache-name: cache-node-modules
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --strict-peer-dependencies
+      - name: Install Packages Dependencies
+        run: npm ci
 
       - name: Lint Source
-        run: pnpm run --if-present lint
+        run: npm run lint --if-present
 
       - name: Build Source
-        run: pnpm run --if-present build
+        run: npm run build --if-present
 
       - name: Run Tests
-        run: pnpm run --if-present test
+        run: npm run test --if-present
