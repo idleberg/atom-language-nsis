@@ -81,6 +81,10 @@
 			"name": "constant.language.nsis"
 		},
 		{
+			"match": "\\\\(?=\\n)",
+			"name": "constant.character.escape.line-continuation.nsis"
+		},
+		{
 			"begin": "\"",
 			"beginCaptures": {
 				"0": { "name": "punctuation.definition.string.begin.nsis" }
