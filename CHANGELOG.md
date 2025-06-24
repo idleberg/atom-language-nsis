@@ -1,3 +1,7 @@
+# v9.1.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.1.1)
+
+- update dependencies
+
 # v9.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.1.0)
 
 - add highlighting for line-continuation character
