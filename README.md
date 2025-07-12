@@ -16,33 +16,33 @@ _Screenshot of NSIS with [Fira Mono](http://mozilla.github.io/Fira/) font & the 
 - syntax grammar for NSIS and NSIS Language Files (.nlf)
 - auto-complete core NSIS commands, variables and predefines
 - auto-complete core Plugins:
-  - AdvSplash
-  - Banner
-  - BgImage
-  - Dialer
-  - InstallOptions
-  - LangDLL
-  - Math
-  - nsDialogs
-  - nsExec
-  - NSISdl
-  - Splash
-  - StartMenu
-  - System
-  - UserInfo
-  - VPatch
+    - AdvSplash
+    - Banner
+    - BgImage
+    - Dialer
+    - InstallOptions
+    - LangDLL
+    - Math
+    - nsDialogs
+    - nsExec
+    - NSISdl
+    - Splash
+    - StartMenu
+    - System
+    - UserInfo
+    - VPatch
 - auto-complete core libraries (“Useful Headers”):
-  - FileFunc
-  - LogicLib
-  - Memento
-  - Modern UI
-  - MultiUser
-  - Sections
-  - StrFunc
-  - WinMessages
-  - WinVer
-  - WordFunc
-  - x64
+    - FileFunc
+    - LogicLib
+    - Memento
+    - Modern UI
+    - MultiUser
+    - Sections
+    - StrFunc
+    - WinMessages
+    - WinVer
+    - WordFunc
+    - x64
 - [Drunken NSIS](#drunken-nsis)
 - [Build Tools](#building)
 - [Linting](#linting)
@@ -211,4 +211,4 @@ NSIS_APP_ENVIRONMENT=development
 
 ## License
 
-This work is dual-licensed under [The MIT License](https://opensource.org/licenses/MIT).
+This work is under [The MIT License](https://opensource.org/licenses/MIT).
