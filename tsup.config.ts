@@ -1,16 +1,14 @@
-import { defineConfig } from 'tsdown';
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
 	bundle: true,
 	clean: true,
 	entry: ['src/main.ts'],
-	noExternal: ['atom-package-deps', 'atom-satisfy-dependencies'],
 	external: ['atom', 'electron'],
 	format: 'cjs',
-	minify: false,
+	minify: true,
 	outDir: 'lib',
 	platform: 'node',
-	nodeProtocol: 'strip',
 	target: 'node14',
 	treeshake: true,
 });
