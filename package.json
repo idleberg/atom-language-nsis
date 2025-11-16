@@ -4,7 +4,14 @@
 	"description": "Atom language support for NSIS, including grammar, snippets and build system",
 	"license": "MIT",
 	"main": "./lib/main.js",
-	"typings": "./types/index.d.ts",
+	"types": "./lib/main.d.ts",
+	"type": "commonjs",
+	"exports": {
+		".": {
+			"types": "./lib/main.d.ts",
+			"require": "./lib/main.js"
+		}
+	},
 	"scripts": {
 		"build": "tsup",
 		"dev": "npm run build -- --watch",
@@ -34,7 +41,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/idleberg/atom-language-nsis.git"
+		"url": "git+https://github.com/idleberg/atom-language-nsis.git"
 	},
 	"engines": {
 		"atom": ">=1.52.0 <2.0.0",
@@ -130,6 +137,7 @@
 		"@atxm/developer-console": "^0.6.1",
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
+		"@e18e/cli": "^0.3.1",
 		"@idleberg/configs": "^0.3.3",
 		"@nsis/nlf": "^0.13.0",
 		"@types/atom": "^1.40.18",
@@ -141,7 +149,6 @@
 		"execa": "^5.1.1",
 		"makensis": "3.0.3",
 		"open": "^8.4.1",
-		"tsdown": "^0.16.4",
 		"tslib": "^2.8.1",
 		"tsup": "^8.5.1",
 		"typescript": "^5.9.3",

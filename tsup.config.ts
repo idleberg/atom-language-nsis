@@ -3,6 +3,7 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
 	bundle: true,
 	clean: true,
+	dts: true,
 	entry: ['src/main.ts'],
 	external: ['atom', 'electron'],
 	format: 'cjs',
