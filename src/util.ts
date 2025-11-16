@@ -51,7 +51,7 @@ export async function findPackagePath(packageName: string): Promise<string[]> {
 					return packageDir;
 				}
 
-				return undefined;
+				return '';
 			}),
 		)
 	).filter((item) => item);

@@ -2,7 +2,7 @@ import { basename, extname } from 'node:path';
 import type { TextEditor } from 'atom';
 
 export async function convert(): Promise<void> {
-	const editor: TextEditor = atom.workspace.getActiveTextEditor();
+	const editor = atom.workspace.getActiveTextEditor();
 
 	if (!editor) {
 		atom.beep();
@@ -77,10 +77,11 @@ async function openNewFile(editor: any, input: string, targetExt: string): Promi
 		});
 	} catch (error) {
 		console.error(error);
-		atom.notifications.addError(error, { dismissable: true });
+		atom.notifications.addError((error as Error).message, { dismissable: true });
 
 		return;
 	}
 
+	// @ts-expect-error: provided types are incorrect or incomplete
 	newEditorTab.setText(input);
 }
