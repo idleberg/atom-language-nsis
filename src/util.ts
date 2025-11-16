@@ -1,4 +1,4 @@
-import { exec } from 'node:child_process';
+import { exec, type SpawnOptions } from 'node:child_process';
 import { constants, promises as fs } from 'node:fs';
 import { platform } from 'node:os';
 import { resolve } from 'node:path';
@@ -70,7 +70,7 @@ export async function getMakensisPath(): Promise<string> {
 	return String(await which('makensis')) || 'makensis';
 }
 
-export async function getSpawnEnv(): Promise<unknown> {
+export async function getSpawnEnv(): Promise<SpawnOptions> {
 	return {
 		env: {
 			// start with calling process env (this provides e.g. %PATH% on Windows)

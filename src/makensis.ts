@@ -18,7 +18,7 @@ export async function compile(strictMode: boolean): Promise<void> {
 
 	const { isHeaderFile } = await import('./util');
 
-	if (isHeaderFile(script)) {
+	if (script && isHeaderFile(script)) {
 		const processHeaders = String(Config.get('processHeaders'));
 
 		if (processHeaders === 'Disallow') {
@@ -170,5 +170,5 @@ export async function showHelp(selectListView: any): Promise<void> {
 		await getSpawnEnv(),
 	);
 
-	selectListView.update({ items: Object.keys(output.stdout) });
+	selectListView.update({ items: Object.keys(output.stdout!) });
 }
