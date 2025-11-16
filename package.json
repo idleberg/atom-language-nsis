@@ -5,7 +5,6 @@
 	"license": "MIT",
 	"main": "./lib/main.js",
 	"types": "./lib/main.d.ts",
-	"type": "commonjs",
 	"exports": {
 		".": {
 			"types": "./lib/main.d.ts",
