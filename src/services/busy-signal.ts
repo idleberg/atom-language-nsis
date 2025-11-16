@@ -1,9 +1,9 @@
-import { Disposable } from "atom";
-import Logger from "../log";
+import { Disposable } from 'atom';
+import Logger from '../log';
 
 export default {
 	busySignal: null,
-	serviceName: "busy-signal",
+	serviceName: 'busy-signal',
 
 	consumer(registry: any): Disposable {
 		this.busySignal = registry.create();
@@ -19,20 +19,18 @@ export default {
 		} catch (error) {
 			Logger.debug(error);
 
-			const missingPackageWarning = (await import("../util"))
-				.missingPackageWarning;
+			const missingPackageWarning = (await import('../util')).missingPackageWarning;
 			missingPackageWarning(this.serviceName);
 		}
 	},
 
-	async remove(message = ""): Promise<void> {
+	async remove(message = ''): Promise<void> {
 		try {
 			this.busySignal.remove(message);
 		} catch (error) {
 			Logger.debug(error);
 
-			const missingPackageWarning = (await import("../util"))
-				.missingPackageWarning;
+			const missingPackageWarning = (await import('../util')).missingPackageWarning;
 			missingPackageWarning(this.serviceName);
 		}
 	},
@@ -43,8 +41,7 @@ export default {
 		} catch (error) {
 			Logger.debug(error);
 
-			const missingPackageWarning = (await import("../util"))
-				.missingPackageWarning;
+			const missingPackageWarning = (await import('../util')).missingPackageWarning;
 			missingPackageWarning(this.serviceName);
 		}
 	},

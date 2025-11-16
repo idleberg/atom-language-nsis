@@ -1,8 +1,8 @@
+import { exec } from 'node:child_process';
+import { constants, promises as fs } from 'node:fs';
+import { platform } from 'node:os';
+import { resolve } from 'node:path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
-import { exec } from 'child_process';
-import { constants, promises as fs } from 'fs';
-import { platform } from 'os';
-import { resolve } from 'path';
 import { name } from '../package.json';
 import Config from './config';
 import Browse from './services/browse';
@@ -21,7 +21,7 @@ export function clearConsole(): void {
 		ConsolePanel.clear();
 
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch (error) {
+	} catch {
 		if (Config.get('clearConsole')) {
 			console.clear();
 		}
@@ -32,7 +32,7 @@ export async function fileExists(filePath: string): Promise<boolean> {
 	try {
 		await fs.access(filePath, constants.F_OK);
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch (error) {
+	} catch {
 		return false;
 	}
 
@@ -98,7 +98,7 @@ export function isWindows(): boolean {
 }
 
 function isWindowsCompatible(): boolean {
-	return isWindows() || Config.get('useWineToRun') ? true : false;
+	return !!(isWindows() || Config.get('useWineToRun'));
 }
 
 export async function manageDependencies(): Promise<void> {
