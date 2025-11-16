@@ -3,10 +3,10 @@
 	"version": "9.1.1",
 	"description": "Atom language support for NSIS, including grammar, snippets and build system",
 	"license": "MIT",
-	"main": "./lib/main.cjs",
+	"main": "./lib/main.js",
 	"typings": "./types/index.d.ts",
 	"scripts": {
-		"build": "tsdown",
+		"build": "tsup",
 		"dev": "npm run build -- --watch",
 		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
 		"lint:biome": "biome check",
@@ -138,15 +138,13 @@
 		"atom-satisfy-dependencies": "^0.3.0",
 		"atom-select-list": "^0.8.1",
 		"concurrently": "^9.2.1",
-		"execa": "^9.6.0",
+		"execa": "^5.1.1",
 		"makensis": "3.0.3",
-		"open": "^11.0.0",
-		"rimraf": "^6.1.0",
-		"stylelint": "^14.16.1",
-		"tsdown": "^0.16.4",
+		"open": "^8.4.1",
 		"tslib": "^2.8.1",
+		"tsup": "^8.5.1",
 		"typescript": "^5.9.3",
-		"which": "^6.0.0",
+		"which": "^3.0.1",
 		"yaml": "^2.8.1"
 	}
 }
