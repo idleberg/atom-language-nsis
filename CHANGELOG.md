@@ -1,3 +1,18 @@
+# v9.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.2.0)
+
+- add new commands and snippets:
+  - `GetRegView`
+  - `GetShellVarContext`
+  - `IfAltRegView`
+  - `ManifestAppendCustomString`
+  - `ManifestDisableWindowFiltering`
+  - `ManifestGdiScaling`
+  - `ReadMemory`
+  - `UnsafeStrCpy`
+- update dependencies
+- update tooling
+- improve types
+
 # v9.1.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.1.1)
 
 - update dependencies
@@ -218,8 +233,8 @@
 
 - group compiler settings
 - add new compiler settings
-    - `strictMode`
-    - `customArguments`
+  - `strictMode`
+  - `customArguments`
 - re-order package settings
 - add prettier support
 - update linting script
@@ -324,18 +339,19 @@
 # v8.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.0)
 
 - decaffeinate
-    - rewrite in TypeScript
-    - convert grammars/keymaps/menus/settings/snippets to JSON (excluding scaffolding snippets)
-    - remove support for CSON build files
+  - rewrite in TypeScript
+  - convert grammars/keymaps/menus/settings/snippets to JSON (excluding
+    scaffolding snippets)
+  - remove support for CSON build files
 - add support for environment variables
 - add support for DotEnv files
 - build with Rollup
 - lint with ESLint
 - remove build files for Wine
 - rename commands
-    - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
-    - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
-    - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
+  - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
+  - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
+  - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
 - modify config defaults
 - update dependencies
 
@@ -711,7 +727,8 @@
 
 # v5.20.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.20.2)
 
-- update class-names in snippet pane ([read more](http://blog.atom.io/2016/11/14/removing-shadow-dom-boundary-from-text-editor-elements.html))
+- update class-names in snippet pane
+  ([read more](http://blog.atom.io/2016/11/14/removing-shadow-dom-boundary-from-text-editor-elements.html))
 
 # v5.20.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.20.1)
 
@@ -765,7 +782,8 @@
 
 # v5.14.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.14.4)
 
-- extend highlighting support to transpiled [BridleNSIS](https://github.com/henrikor2/bridlensis) scripts
+- extend highlighting support to transpiled
+  [BridleNSIS](https://github.com/henrikor2/bridlensis) scripts
 
 # v5.14.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.14.3)
 
@@ -852,7 +870,8 @@
 
 # v5.8.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.8.0)
 
-- merge with [language-nlf](https://github.com/idleberg/atom-language-nlf) package
+- merge with [language-nlf](https://github.com/idleberg/atom-language-nlf)
+  package
 - modify grammar order
 
 # v5.7.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.7.2)
@@ -867,10 +886,10 @@
 # v5.7.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.7.0)
 
 - update syntax grammar
-    - add support for variables/constants in quotes
-    - add core libraries
-    - add highlighting of deprecated commands
-    - modify scopes
+  - add support for variables/constants in quotes
+  - add core libraries
+  - add highlighting of deprecated commands
+  - modify scopes
 
 # v5.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.6.0)
 
@@ -957,9 +976,9 @@
 # v5.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.0.0)
 
 - add additional fields to snippets
-    - descriptions
-    - description links
-    - labels
+  - descriptions
+  - description links
+  - labels
 - move “drunken” header completions to `header.DrunkenNSIS.cson`
 - update `header.WinVer.cson`
 - modified `variable` and `constant` grammar
@@ -1088,7 +1107,8 @@
 - asynchronous `makensis` detection, fixes not building on the first try
 - add check for NSIS scope
 - modify default keymap (again)
-- rename setting (`compilerArgs` to `compilerArguments`), looks better in the GUI
+- rename setting (`compilerArgs` to `compilerArguments`), looks better in the
+  GUI
 
 # v4.1.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v4.1.4)
 
@@ -1172,9 +1192,9 @@
 # v3.5.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.5.0)
 
 - add commands
-    - set default runner
-    - remove default runner
-    - create `.atom-builder-json`
+  - set default runner
+  - remove default runner
+  - create `.atom-builder-json`
 - remove automatic check for atom-runner
 
 # v3.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.6.0)
