@@ -31,7 +31,7 @@ async function convertNLF(editor: TextEditor): Promise<void> {
 
 	try {
 		const input = editor.getText();
-		output = JSON.stringify(NLF.parse(input));
+		output = JSON.stringify(NLF.parse(input), null, 2);
 	} catch (e) {
 		console.error(e);
 		atom.notifications.addError('Conversion Failed', {
