@@ -2689,11 +2689,18 @@
 			"prefix": "Icon"
 		},
 		"IfAbort": {
-			"body": "IfAbort ${1:label_to_goto_if_abort} ${2:[label_to_goto_if_no_abort]}$0",
-			"description": "Usage: IfAbort label_to_goto_if_abort [label_to_goto_if_no_abort]",
+			"body": "IfAbort ${1:goto_true} ${2:[goto_false]}$0",
+			"description": "Usage: IfAbort goto_true [goto_false]",
 			"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/IfAbort.html?utm_source=atom&utm_content=snippet",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "IfAbort"
+		},
+		"IfAltRegView": {
+			"body": "IfAltRegView ${1:label_to_goto_if_abort} ${2:[label_to_goto_if_no_abort]}$0",
+			"description": "Usage: IfAltRegView label_to_goto_if_abort [label_to_goto_if_no_abort]",
+			"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/IfAltRegView.html?utm_source=atom&utm_content=snippet",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "IfAltRegView"
 		},
 		"IfErrors": {
 			"body": "IfErrors ${1:jump_to_if_error} ${2:[jump_to_if_no_error]}$0",
