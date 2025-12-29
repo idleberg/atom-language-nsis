@@ -4,6 +4,13 @@ import Config from './config';
 
 let YAML: any;
 
+type BuildOptions = {
+	script: string;
+	syntax: 'json' | 'yaml';
+	fileName: string;
+	filePath: string;
+};
+
 export async function createBuildFile(): Promise<void> {
 	const editor = atom.workspace.getActiveTextEditor();
 
@@ -88,7 +95,7 @@ export async function createBuildFile(): Promise<void> {
 
 	const scriptFile = basename(currentFilePath);
 	const currentPath = dirname(currentFilePath);
-	const buildFileSyntax = String(Config.get('buildFileSyntax'));
+	const buildFileSyntax = String(Config.get('buildFileSyntax')) as 'json' | 'yaml';
 	const buildFileName = `.atom-build.${buildFileSyntax.toLowerCase()}`;
 	const buildFilePath = join(currentPath, buildFileName);
 
@@ -134,7 +141,7 @@ export async function createBuildFile(): Promise<void> {
 	}
 }
 
-async function saveBuildFile(options) {
+async function saveBuildFile(options: BuildOptions) {
 	const { findPackagePath, getMakensisPath, isLoadedAndActive } = await import('./util');
 	const useWineToRun = Config.get('useWineToRun');
 	const hasWineProvider = isLoadedAndActive('build-makensis-wine');
@@ -149,9 +156,11 @@ async function saveBuildFile(options) {
 	if (strictMode) args.push('-WX');
 
 	const buildFile = {
-		name: options.scriptFile,
+		name: options.script,
 		cmd:
-			useWineToRun && hasWineProvider ? resolve(wineProviderPath, 'lib', 'makensis-wine.sh') : await getMakensisPath(),
+			useWineToRun && hasWineProvider
+				? resolve(wineProviderPath as string, 'lib', 'makensis-wine.sh')
+				: await getMakensisPath(),
 		sh: useWineToRun && hasWineProvider,
 		args: [...args, '{FILE_ACTIVE}'],
 		cwd: '{FILE_ACTIVE_PATH}',

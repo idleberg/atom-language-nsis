@@ -1,7 +1,8 @@
+import type { CompilerData, CompilerOutput } from 'makensis';
 import Config from './config';
 import ConsolePanel from './services/console-panel';
 
-export function compilerOutput(data: unknown): void {
+export function compilerOutput(data: CompilerData): void {
 	const logLevel = data.hasWarning ? 'warn' : 'log';
 
 	try {
@@ -15,16 +16,16 @@ export function compilerOutput(data: unknown): void {
 	}
 }
 
-export function compilerError(data: unknown): void {
+export function compilerError(data: string): void {
 	try {
-		ConsolePanel.error(data.line);
+		ConsolePanel.error(data);
 		// eslint-disable-next-line  @typescript-eslint/no-unused-vars
 	} catch (_error) {
-		console.error(data.line);
+		console.error(data);
 	}
 }
 
-export async function compilerClose(data: unknown): Promise<void> {
+export async function compilerClose(data: CompilerOutput): Promise<void> {
 	if (Config.get('showBuildNotifications')) {
 		if (data.status === 0) {
 			const { notifyOnCompletion } = await import('./util');
@@ -48,7 +49,7 @@ export async function compilerClose(data: unknown): Promise<void> {
 	}
 }
 
-export function flagsCallback(data: unknown): void {
+export function flagsCallback(data: CompilerOutput): void {
 	const output = data.stdout || data.stderr;
 
 	if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
@@ -68,7 +69,7 @@ export function flagsCallback(data: unknown): void {
 	}
 }
 
-export function versionCallback(data: unknown, pathToMakensis: string): void {
+export function versionCallback(data: CompilerData, pathToMakensis: string): void {
 	if (String(Config.get('compilerOutput')).toLowerCase() === 'console') {
 		try {
 			ConsolePanel.show();
