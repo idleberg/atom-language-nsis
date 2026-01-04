@@ -8,7 +8,7 @@
 			"name": "keyword.nsis"
 		},
 		{
-			"match": "^\\s*(?i)(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|GetWinampInstPath|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\\b",
+			"match": "^\\s*(?i)(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|GetWinampInstPath|LangStringUP|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\\b",
 			"name": "invalid.illegal.nsis"
 		},
 		{
