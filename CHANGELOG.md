@@ -1,3 +1,9 @@
+# v9.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.3.0)
+
+- add new commands and snippets:
+  - `CPU`
+  - `LangStringUp`
+
 # v9.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.2.0)
 
 - add new commands and snippets:
