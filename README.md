@@ -90,7 +90,7 @@ $ cd %USERPROFILE%\.pulsar\packages
 **Linux & macOS**
 
 ```bash
-$ cd ~/.atom/packages/
+$ cd ~/.pulsar/packages/
 ```
 
 Clone repository as `language-nsis`:
