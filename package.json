@@ -108,7 +108,7 @@
 	"consumedServices": {
 		"browse": {
 			"versions": {
-				"^1.0.0": "consumeBrowse"
+				"^2.0.0": "consumeBrowse"
 			}
 		},
 		"busy-signal": {
