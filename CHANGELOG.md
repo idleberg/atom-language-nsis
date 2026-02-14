@@ -1,3 +1,8 @@
+# v10.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.0)
+
+- require `browse>=4.0.0`
+- update dependencies
+
 # v9.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.3.0)
 
 - add new commands and snippets:
