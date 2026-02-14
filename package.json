@@ -44,7 +44,7 @@
 	"package-deps": [
 		{
 			"name": "browse",
-			"minimumVersion": "3.1.0"
+			"minimumVersion": "4.0.0"
 		},
 		{
 			"name": "busy-signal",
