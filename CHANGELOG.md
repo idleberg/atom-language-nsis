@@ -1,8 +1,8 @@
 # v10.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.1)
 
 - improve syntax highlighting grammar
-	- adjust priorities for variables/defines
-	- update supported WinVer versions
+  - adjust priorities for variables/defines
+  - update supported WinVer versions
 - update WinVer snippets to support missing Windows versions
 
 # v10.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.0)
