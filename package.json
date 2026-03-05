@@ -4,10 +4,10 @@
 	"description": "Atom language support for NSIS, including grammar, snippets and build system",
 	"license": "MIT",
 	"type": "commonjs",
-	"main": "lib/main.js",
-	"types": "lib/main.d.ts",
+	"main": "lib/main.cjs",
+	"types": "lib/main.d.cts",
 	"scripts": {
-		"build": "tsup",
+		"build": "tsdown",
 		"dev": "npm run build -- --watch",
 		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
 		"lint:biome": "biome check",
@@ -142,8 +142,8 @@
 		"execa": "^5.1.1",
 		"makensis": "3.0.3",
 		"open": "^8.4.2",
+		"tsdown": "^0.20.3",
 		"tslib": "^2.8.1",
-		"tsup": "^8.5.1",
 		"typescript": "^5.9.3",
 		"which": "^6.0.1",
 		"yaml": "^2.8.2"
