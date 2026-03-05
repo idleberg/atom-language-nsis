@@ -4,6 +4,7 @@
   - adjust priorities for variables/defines
   - update supported WinVer versions
 - update WinVer snippets to support missing Windows versions
+- change bundler to `tsdown`
 
 # v10.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.0)
 
