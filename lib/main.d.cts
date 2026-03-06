@@ -133,6 +133,55 @@ declare const _default: {
       default: boolean;
       order: number;
     };
+    formatter: {
+      title: string;
+      type: string;
+      order: number;
+      properties: {
+        formatOnSave: {
+          title: string;
+          description: string;
+          type: string;
+          default: boolean;
+          order: number;
+        };
+        endOfLine: {
+          title: string;
+          description: string;
+          type: string;
+          default: string;
+          enum: ({
+            value: undefined;
+            description: string;
+          } | {
+            value: string;
+            description: string;
+          })[];
+          order: number;
+        };
+        trimLines: {
+          title: string;
+          description: string;
+          type: string;
+          default: boolean;
+          order: number;
+        };
+        useTabs: {
+          title: string;
+          description: string;
+          type: string;
+          default: boolean;
+          order: number;
+        };
+        indentSize: {
+          title: string;
+          description: string;
+          type: string;
+          minimum: number;
+          order: number;
+        };
+      };
+    };
   };
   subscriptions: CompositeDisposable;
   activate(): Promise<void>;
