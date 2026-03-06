@@ -1,3 +1,7 @@
+# v10.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.0)
+
+- add formatter for NSIS scripts
+
 # v10.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.1)
 
 - improve syntax highlighting grammar
