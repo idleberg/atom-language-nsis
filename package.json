@@ -147,5 +147,8 @@
 		"typescript": "^5.9.3",
 		"which": "^6.0.1",
 		"yaml": "^2.8.2"
+	},
+	"dependencies": {
+		"@nsis/dent": "^0.5.1"
 	}
 }
