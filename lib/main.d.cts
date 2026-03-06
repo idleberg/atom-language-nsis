@@ -150,13 +150,10 @@ declare const _default: {
           description: string;
           type: string;
           default: string;
-          enum: ({
-            value: undefined;
-            description: string;
-          } | {
+          enum: {
             value: string;
             description: string;
-          })[];
+          }[];
           order: number;
         };
         trimLines: {
@@ -177,6 +174,7 @@ declare const _default: {
           title: string;
           description: string;
           type: string;
+          default: number;
           minimum: number;
           order: number;
         };
