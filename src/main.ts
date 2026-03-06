@@ -125,6 +125,33 @@ export default {
 			}),
 		);
 
+		this.subscriptions.add(
+			atom.commands.add('atom-workspace', {
+				'NSIS:format-document': () => {
+					const { formatDocument } = require('./formatter');
+					formatDocument();
+				},
+			}),
+		);
+
+		this.subscriptions.add(
+			atom.workspace.observeTextEditors((editor) => {
+				const { isNsisEditor, applyFormatter } = require('./formatter');
+
+				if (isNsisEditor(editor)) {
+					const buffer = editor.getBuffer();
+
+					this.subscriptions.add(
+						buffer.onWillSave(() => {
+							if (Config.get('formatter.formatOnSave')) {
+								applyFormatter(editor);
+							}
+						}),
+					);
+				}
+			}),
+		);
+
 		if (Config.get('manageDependencies')) {
 			const { manageDependencies } = await import('./util');
 			await manageDependencies();

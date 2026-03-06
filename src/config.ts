@@ -11,14 +11,14 @@ export default {
 			properties: {
 				pathToMakensis: {
 					title: 'Path To MakeNSIS',
-					description: 'Specify the full path to `makensis`',
+					description: 'Specify the full path to `makensis`.',
 					type: 'string',
 					default: 'makensis',
 					order: 1,
 				},
 				verbosity: {
 					title: 'Verbosity',
-					description: 'Specify the default verbosity for `makensis`',
+					description: 'Specify the default verbosity for `makensis`.',
 					type: 'number',
 					default: 3,
 					enum: [
@@ -52,7 +52,7 @@ export default {
 				strictMode: {
 					title: 'Strict Mode',
 					description:
-						'Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will ignore the setting',
+						'Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will ignore the setting.',
 					type: 'boolean',
 					default: false,
 					order: 3,
@@ -78,21 +78,21 @@ export default {
 		},
 		showBuildNotifications: {
 			title: 'Show Build Notifications',
-			description: 'Displays color-coded notifications that close automatically after 5 seconds',
+			description: 'Displays color-coded notifications that close automatically after 5 seconds.',
 			type: 'boolean',
 			default: true,
 			order: 2,
 		},
 		showFlagsAsObject: {
 			title: 'Show Flags as Object',
-			description: 'Displays compiler flags as JSON',
+			description: 'Displays compiler flags as JSON.',
 			type: 'boolean',
 			default: true,
 			order: 3,
 		},
 		alwaysShowOutput: {
 			title: 'Always Show Output',
-			description: 'Displays compiler output in console panel. When deactivated, it will only show on errors',
+			description: 'Displays compiler output in console panel. When deactivated, it will only show on errors-',
 			type: 'boolean',
 			default: true,
 			order: 4,
@@ -107,7 +107,7 @@ export default {
 		},
 		compilerOutput: {
 			title: 'Compiler Output',
-			description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console',
+			description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console.',
 			type: 'string',
 			default: 'console',
 			enum: [
@@ -124,7 +124,7 @@ export default {
 		},
 		buildFileSyntax: {
 			title: 'Build File Syntax',
-			description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build))',
+			description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build)).',
 			type: 'string',
 			default: 'json',
 			enum: [
@@ -143,7 +143,7 @@ export default {
 			? {
 					title: 'Run with Wine',
 					description:
-						'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/)',
+						'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/).',
 					type: 'boolean',
 					default: false,
 					order: 8,
@@ -153,7 +153,7 @@ export default {
 			? {
 					title: 'Path To Wine',
 					description:
-						'Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine)',
+						'Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine).',
 					type: 'string',
 					default: 'wine',
 					order: 9,
@@ -161,10 +161,68 @@ export default {
 			: {},
 		manageDependencies: {
 			title: 'Manage Dependencies',
-			description: 'When enabled, third-party dependencies will be installed automatically',
+			description: 'When enabled, third-party dependencies will be installed automatically.',
 			type: 'boolean',
 			default: true,
 			order: 10,
+		},
+		formatter: {
+			title: 'Formatter',
+			type: 'object',
+			order: 11,
+			properties: {
+				formatOnSave: {
+					title: 'Format on Save',
+					description: 'Automatically format NSIS files before saving.',
+					type: 'boolean',
+					default: false,
+					order: 1,
+				},
+				endOfLine: {
+					title: 'End of Line',
+					description:
+						'Specify the end of line character. Defaults to the current operating system EOL character, which is LF for POSIX and CRLF for Windows',
+					type: 'string',
+					default: 'auto',
+					enum: [
+						{
+							value: undefined,
+							description: '(auto)',
+						},
+						{
+							value: 'lf',
+							description: 'LF',
+						},
+						{
+							value: 'crlf',
+							description: 'CRLF',
+						},
+					],
+					order: 2,
+				},
+				trimLines: {
+					title: 'Trim',
+					description: 'Compact empty lines and trim whitespace.',
+					type: 'boolean',
+					default: true,
+					order: 3,
+				},
+				useTabs: {
+					title: 'Use Tabs',
+					description:
+						'Indent using tabs instead of spaces. Keep in mind that using tabs is [good for accessibility](https://github.com/prettier/prettier/issues/7475#issuecomment-668544890).',
+					type: 'boolean',
+					default: true,
+					order: 4,
+				},
+				indentSize: {
+					title: 'Indent Size',
+					description: 'Number of spaces per indentation level. This only applies when not using tabs.',
+					type: 'integer',
+					minimum: 0,
+					order: 5,
+				},
+			},
 		},
 	},
 
