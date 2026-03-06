@@ -1,6 +1,9 @@
+import { platform } from 'node:os';
 import type { ConfigValues } from 'atom';
 import { name } from '../package.json';
 import { isWindows } from './util';
+
+const defaultEOL = platform() === 'win32' ? 'crlf' : 'lf';
 
 export default {
 	schema: {
@@ -183,10 +186,10 @@ export default {
 					description:
 						'Specify the end of line character. Defaults to the current operating system EOL character, which is LF for POSIX and CRLF for Windows',
 					type: 'string',
-					default: 'auto',
+					default: defaultEOL,
 					enum: [
 						{
-							value: undefined,
+							value: defaultEOL,
 							description: '(auto)',
 						},
 						{
@@ -218,7 +221,8 @@ export default {
 				indentSize: {
 					title: 'Indent Size',
 					description: 'Number of spaces per indentation level. This only applies when not using tabs.',
-					type: 'integer',
+					type: 'number',
+					default: 4,
 					minimum: 0,
 					order: 5,
 				},
