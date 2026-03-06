@@ -1,3 +1,8 @@
+# v10.1.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.1)
+
+- add missing LogicLib operator
+- add missing default values for formatter config
+
 # v10.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.0)
 
 - add formatter for NSIS scripts
