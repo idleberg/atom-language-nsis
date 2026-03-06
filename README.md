@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/pulsar/dt/language-nsis?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/language-nsis)
 [![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/actions)
 
-Language syntax, auto-completions and build system for Nullsoft Scriptable
+Language syntax, auto-completions, formatter and build system for Nullsoft Scriptable
 Install System (NSIS), as well as language syntax for NSIS Language Files.
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsis/master/resources/screenshot.gif)
@@ -46,6 +46,7 @@ _Screenshot of NSIS with [Fira Mono](http://mozilla.github.io/Fira/) font & the
   - WordFunc
   - x64
 - [Drunken NSIS](#drunken-nsis)
+- [Formatting](#formatting)
 - [Build Tools](#building)
 - [Linting](#linting)
 - [Environment Variables](#environment-variables)
@@ -158,6 +159,10 @@ word order.
 - `LogSet` equals `SetLog`
 - `FindFirst` equals `FirstFind`
 - `${FindLine}` equals `${LineFind}`
+
+### Formatting
+
+Scripts can be formatted using the experimental [`@nsis/dent`](https://www.npmjs.com/package/@nsis/dent) package. To do so, run *Format Document* or adjust your settings for auto-formatting.
 
 ### Building
 
