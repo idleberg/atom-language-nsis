@@ -40,6 +40,13 @@
 							"type": "separator"
 						},
 						{
+							"label": "Format Document",
+							"command": "NSIS:format-document"
+						},
+						{
+							"type": "separator"
+						},
+						{
 							"label": "Open Package Settings",
 							"command": "NSIS:open-package-settings"
 						},
