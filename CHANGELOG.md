@@ -1,3 +1,7 @@
+# v10.1.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.2)
+
+- update formatter library
+
 # v10.1.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.1)
 
 - add missing LogicLib operator
