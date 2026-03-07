@@ -180,20 +180,6 @@ the
 [package settings](https://flight-manual.atom-editor.cc/using-atom/sections/atom-packages/#package-settings).
 Optionally, you can also specify the path to `makensis`.
 
-#### Third-party Build Tools
-
-Should you prefer working with an existing third-party build system, the
-following packages already have support for NSIS.
-
-- [`build-makensis`](https://web.pulsar-edit.dev/packages/build-makensis)
-- [`script`](https://web.pulsar-edit.dev/packages/script)
-
-Project files for `build-makensis` can be created by executing _“NSIS: Create
-.atom-build file”_ from the
-[command-palette](https://atom-editor.cc/docs/latest/getting-started-atom-basics#command-palette)
-or using the keyboard shortcut. You can specify your preferred build file syntax
-(JSON/YAML) in the package settings.
-
 ### Linting
 
 This package will install an

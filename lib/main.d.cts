@@ -89,17 +89,6 @@ declare const _default: {
       }[];
       order: number;
     };
-    buildFileSyntax: {
-      title: string;
-      description: string;
-      type: string;
-      default: string;
-      enum: {
-        value: string;
-        description: string;
-      }[];
-      order: number;
-    };
     useWineToRun: {
       title: string;
       description: string;
