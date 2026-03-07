@@ -3,7 +3,8 @@ import { constants, promises as fs } from 'node:fs';
 import { platform } from 'node:os';
 import { resolve } from 'node:path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
-import open from 'open';
+// @ts-expect-error Electron is globally available in Atom
+import { shell } from 'electron';
 import which from 'which';
 import { name } from '../package.json';
 import Config from './config';
@@ -204,7 +205,7 @@ export function notifyOnCompletion(params: NotificationParams): void {
 }
 
 export async function openURL(nsisCommand: string): Promise<void> {
-	open(
+	shell.openExternal(
 		`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/${nsisCommand}.html?utm_source=atom&utm_content=reference`,
 	);
 }
