@@ -10,7 +10,7 @@ import commandReference from './reference';
 import Browse from './services/browse';
 import BusySignal from './services/busy-signal';
 import ConsolePanel from './services/console-panel';
-import { isLoadedAndActive, manageDependencies, missingPackageWarning } from './util';
+import { manageDependencies } from './util';
 
 export default {
 	config: Config.schema,
@@ -38,19 +38,6 @@ export default {
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
 				'NSIS:compile-strict': async () => await compile(true),
-			}),
-		);
-
-		this.subscriptions.add(
-			atom.commands.add('atom-workspace', {
-				'NSIS:create-.atom–build-file': async () => {
-					if (isLoadedAndActive('buildium') || isLoadedAndActive('build')) {
-						const { createBuildFile } = await import('./build');
-						await createBuildFile();
-					} else {
-						missingPackageWarning('buildium');
-					}
-				},
 			}),
 		);
 
@@ -87,32 +74,6 @@ export default {
 			atom.commands.add('atom-workspace', {
 				'NSIS:satisfy-dependencies': async () => {
 					await manageDependencies();
-				},
-			}),
-		);
-
-		this.subscriptions.add(
-			atom.commands.add('atom-workspace', {
-				'NSIS:set-default-runner': async () => {
-					if (isLoadedAndActive('atom-runner')) {
-						const { setRunner } = await import('./runner');
-						await setRunner();
-					} else {
-						missingPackageWarning('runner');
-					}
-				},
-			}),
-		);
-
-		this.subscriptions.add(
-			atom.commands.add('atom-workspace', {
-				'NSIS:unset-default-runner': async () => {
-					if (isLoadedAndActive('atom-runner')) {
-						const { unsetRunner } = await import('./runner');
-						await unsetRunner();
-					} else {
-						missingPackageWarning('runner');
-					}
 				},
 			}),
 		);

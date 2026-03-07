@@ -125,23 +125,6 @@ export default {
 			],
 			order: 6,
 		},
-		buildFileSyntax: {
-			title: 'Build File Syntax',
-			description: 'Specify the default syntax for your build file (requires [build](https://atom.io/packages/build)).',
-			type: 'string',
-			default: 'json',
-			enum: [
-				{
-					value: 'json',
-					description: 'JSON',
-				},
-				{
-					value: 'yaml',
-					description: 'YAML',
-				},
-			],
-			order: 7,
-		},
 		useWineToRun: !isWindows()
 			? {
 					title: 'Run with Wine',
@@ -149,7 +132,7 @@ export default {
 						'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/).',
 					type: 'boolean',
 					default: false,
-					order: 8,
+					order: 7,
 				}
 			: {},
 		pathToWine: !isWindows()
@@ -159,7 +142,7 @@ export default {
 						'Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine).',
 					type: 'string',
 					default: 'wine',
-					order: 9,
+					order: 8,
 				}
 			: {},
 		manageDependencies: {
@@ -167,12 +150,12 @@ export default {
 			description: 'When enabled, third-party dependencies will be installed automatically.',
 			type: 'boolean',
 			default: true,
-			order: 10,
+			order: 9,
 		},
 		formatter: {
 			title: 'Formatter',
 			type: 'object',
-			order: 11,
+			order: 10,
 			properties: {
 				formatOnSave: {
 					title: 'Format on Save',

@@ -1,3 +1,8 @@
+# v11.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.0)
+
+- remove support for third-party build packages
+- update dependencies
+
 # v10.1.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.3)
 
 - notify about feature
