@@ -1,4 +1,5 @@
 import { Disposable } from 'atom';
+import { missingPackageWarning } from '@/util';
 import Logger from '../log';
 
 export default {
@@ -18,7 +19,6 @@ export default {
 		} catch (error) {
 			Logger.debug(error);
 
-			const missingPackageWarning = (await import('../util')).missingPackageWarning;
 			missingPackageWarning('browse');
 		}
 	},

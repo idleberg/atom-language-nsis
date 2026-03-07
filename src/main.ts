@@ -10,6 +10,7 @@ import commandReference from './reference';
 import Browse from './services/browse';
 import BusySignal from './services/busy-signal';
 import ConsolePanel from './services/console-panel';
+import { isLoadedAndActive, manageDependencies, missingPackageWarning } from './util';
 
 export default {
 	config: Config.schema,
@@ -43,13 +44,10 @@ export default {
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
 				'NSIS:create-.atom–build-file': async () => {
-					const { isLoadedAndActive } = await import('./util');
-
 					if (isLoadedAndActive('buildium') || isLoadedAndActive('build')) {
 						const { createBuildFile } = await import('./build');
 						await createBuildFile();
 					} else {
-						const { missingPackageWarning } = await import('./util');
 						missingPackageWarning('buildium');
 					}
 				},
@@ -88,7 +86,6 @@ export default {
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
 				'NSIS:satisfy-dependencies': async () => {
-					const { manageDependencies } = await import('./util');
 					await manageDependencies();
 				},
 			}),
@@ -97,13 +94,10 @@ export default {
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
 				'NSIS:set-default-runner': async () => {
-					const { isLoadedAndActive } = await import('./util');
-
 					if (isLoadedAndActive('atom-runner')) {
 						const { setRunner } = await import('./runner');
 						await setRunner();
 					} else {
-						const { missingPackageWarning } = await import('./util');
 						missingPackageWarning('runner');
 					}
 				},
@@ -113,13 +107,10 @@ export default {
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
 				'NSIS:unset-default-runner': async () => {
-					const { isLoadedAndActive } = await import('./util');
-
 					if (isLoadedAndActive('atom-runner')) {
 						const { unsetRunner } = await import('./runner');
 						await unsetRunner();
 					} else {
-						const { missingPackageWarning } = await import('./util');
 						missingPackageWarning('runner');
 					}
 				},
@@ -154,7 +145,6 @@ export default {
 		);
 
 		if (Config.get('manageDependencies')) {
-			const { manageDependencies } = await import('./util');
 			await manageDependencies();
 		}
 

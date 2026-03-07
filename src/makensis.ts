@@ -1,7 +1,7 @@
 import { basename } from 'node:path';
 import Config from './config';
 import BusySignal from './services/busy-signal';
-import { inRange } from './util';
+import { clearConsole, getMakensisPath, getSpawnEnv, inRange, isHeaderFile, isLoadedAndActive } from './util';
 
 export async function compile(strictMode: boolean): Promise<void> {
 	const editor = atom.workspace.getActiveTextEditor();
@@ -15,8 +15,6 @@ export async function compile(strictMode: boolean): Promise<void> {
 
 	const script = editor.getPath();
 	const scope = editor.getGrammar().scopeName;
-
-	const { isHeaderFile } = await import('./util');
 
 	if (script && isHeaderFile(script)) {
 		const processHeaders = String(Config.get('processHeaders'));
@@ -71,7 +69,6 @@ export async function compile(strictMode: boolean): Promise<void> {
 			return;
 		}
 
-		const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive } = await import('./util');
 		clearConsole();
 
 		if (isLoadedAndActive('busy-signal')) {
@@ -106,8 +103,6 @@ export async function compile(strictMode: boolean): Promise<void> {
 }
 
 export async function showVersion(): Promise<void> {
-	const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive } = await import('./util');
-
 	if (isLoadedAndActive('busy-signal')) {
 		await BusySignal.add('Showing version');
 	}
@@ -132,8 +127,6 @@ export async function showVersion(): Promise<void> {
 }
 
 export async function showCompilerFlags(): Promise<void> {
-	const { clearConsole, getMakensisPath, getSpawnEnv, isLoadedAndActive } = await import('./util');
-
 	if (isLoadedAndActive('busy-signal')) {
 		await BusySignal.add('Showing compiler flags');
 	}
@@ -159,8 +152,6 @@ export async function showCompilerFlags(): Promise<void> {
 
 export async function showHelp(selectListView: any): Promise<void> {
 	const NSIS = await import('makensis');
-	const { getMakensisPath, getSpawnEnv } = await import('./util');
-
 	const output = await NSIS.commandHelp(
 		'',
 		{

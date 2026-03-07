@@ -1,8 +1,9 @@
-import { exec, type SpawnOptions } from 'node:child_process';
+import { exec, type SpawnOptions, spawn } from 'node:child_process';
 import { constants, promises as fs } from 'node:fs';
 import { platform } from 'node:os';
 import { resolve } from 'node:path';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
+import which from 'which';
 import { name } from '../package.json';
 import Config from './config';
 import Browse from './services/browse';
@@ -64,8 +65,6 @@ export async function getMakensisPath(): Promise<string> {
 	if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
 		return pathToMakensis;
 	}
-
-	const which = (await import('which')).default;
 
 	return String(await which('makensis')) || 'makensis';
 }
@@ -170,7 +169,7 @@ export function notifyOnCompletion(params: NotificationParams): void {
 								className: 'icon icon-playback-play',
 								async onDidClick() {
 									notification.dismiss();
-									await runInstaller(params.level);
+									await runInstaller(params.outFile);
 
 									return;
 								},
@@ -220,11 +219,10 @@ async function runInstaller(outFile: string): Promise<void> {
 
 		return;
 	} else if (Config.get('useWineToRun')) {
-		const execa = (await import('execa')).default;
 		const pathToWine = String(Config.get('pathToWine')) || 'wine';
 
 		try {
-			await execa(pathToWine, [outFile]);
+			exec(`${pathToWine} ${outFile}`);
 		} catch (error) {
 			console.error(error);
 		}

@@ -1,6 +1,7 @@
 import { promises as fs } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import Config from './config';
+import { fileExists, findPackagePath, getMakensisPath, isHeaderFile, isLoadedAndActive } from './util';
 
 let YAML: any;
 
@@ -29,8 +30,6 @@ export async function createBuildFile(): Promise<void> {
 	}
 
 	const script = editor.getPath();
-	const { isHeaderFile } = await import('./util');
-
 	if (script && isHeaderFile(script)) {
 		const processHeaders = String(Config.get('processHeaders'));
 
@@ -99,8 +98,6 @@ export async function createBuildFile(): Promise<void> {
 	const buildFileName = `.atom-build.${buildFileSyntax.toLowerCase()}`;
 	const buildFilePath = join(currentPath, buildFileName);
 
-	const { fileExists } = await import('./util');
-
 	if (await fileExists(buildFilePath)) {
 		const fileExistsNotification = atom.notifications.addWarning('File exists', {
 			dismissable: true,
@@ -142,7 +139,6 @@ export async function createBuildFile(): Promise<void> {
 }
 
 async function saveBuildFile(options: BuildOptions) {
-	const { findPackagePath, getMakensisPath, isLoadedAndActive } = await import('./util');
 	const useWineToRun = Config.get('useWineToRun');
 	const hasWineProvider = isLoadedAndActive('build-makensis-wine');
 	const wineProviderPath = (await findPackagePath('build-makensis-wine'))[0];

@@ -1,4 +1,5 @@
 import { showHelp } from './makensis';
+import { openURL } from './util';
 
 export default {
 	async init(): Promise<void> {
@@ -23,7 +24,6 @@ export default {
 			didConfirmSelection: async (item) => {
 				this.cancel();
 
-				const { openURL } = await import('./util');
 				await openURL(String(item));
 			},
 

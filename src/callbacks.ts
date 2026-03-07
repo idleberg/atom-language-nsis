@@ -1,6 +1,7 @@
 import type { CompilerData, CompilerOutput } from 'makensis';
 import Config from './config';
 import ConsolePanel from './services/console-panel';
+import { notifyOnCompletion } from './util';
 
 export function compilerOutput(data: CompilerData): void {
 	const logLevel = data.hasWarning ? 'warn' : 'log';
@@ -28,8 +29,6 @@ export function compilerError(data: string): void {
 export async function compilerClose(data: CompilerOutput): Promise<void> {
 	if (Config.get('showBuildNotifications')) {
 		if (data.status === 0) {
-			const { notifyOnCompletion } = await import('./util');
-
 			if (data.warnings) {
 				notifyOnCompletion({
 					level: 'warning',

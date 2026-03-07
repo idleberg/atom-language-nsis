@@ -1,3 +1,5 @@
+import { isLoadedAndActive } from './util';
+
 export async function setRunner(): Promise<void> {
 	if (!(await hasAtomRunner())) {
 		atom.beep();
@@ -69,7 +71,5 @@ export async function unsetRunner(): Promise<void> {
 }
 
 async function hasAtomRunner(): Promise<boolean> {
-	const { isLoadedAndActive } = await import('./util');
-
 	return isLoadedAndActive('atom-runner');
 }
