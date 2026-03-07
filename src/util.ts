@@ -1,4 +1,4 @@
-import { exec, type SpawnOptions, spawn } from 'node:child_process';
+import { exec, type SpawnOptions } from 'node:child_process';
 import { constants, promises as fs } from 'node:fs';
 import { platform } from 'node:os';
 import { resolve } from 'node:path';
