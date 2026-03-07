@@ -210,7 +210,7 @@ export async function openURL(nsisCommand: string): Promise<void> {
 	);
 }
 
-async function runInstaller(outFile) {
+async function runInstaller(outFile: string): Promise<void> {
 	if (isWindows()) {
 		try {
 			exec(`cmd /c "${outFile}"`);
