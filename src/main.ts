@@ -93,32 +93,6 @@ export default {
 
 		this.subscriptions.add(
 			atom.commands.add('atom-workspace', {
-				'NSIS:set-default-runner': async () => {
-					if (isLoadedAndActive('atom-runner')) {
-						const { setRunner } = await import('./runner');
-						await setRunner();
-					} else {
-						missingPackageWarning('runner');
-					}
-				},
-			}),
-		);
-
-		this.subscriptions.add(
-			atom.commands.add('atom-workspace', {
-				'NSIS:unset-default-runner': async () => {
-					if (isLoadedAndActive('atom-runner')) {
-						const { unsetRunner } = await import('./runner');
-						await unsetRunner();
-					} else {
-						missingPackageWarning('runner');
-					}
-				},
-			}),
-		);
-
-		this.subscriptions.add(
-			atom.commands.add('atom-workspace', {
 				'NSIS:format-document': () => {
 					const { formatDocument } = require('./formatter');
 					formatDocument();
