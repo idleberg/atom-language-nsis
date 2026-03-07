@@ -13,7 +13,6 @@ export default defineConfig({
 		'@nsis/dent',
 		'@nsis/nlf',
 		'atom-select-list',
-		'execa',
 		'makensis',
 		'open',
 		'yaml',
