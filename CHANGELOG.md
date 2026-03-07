@@ -1,3 +1,8 @@
+# v10.1.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.3)
+
+- notify about feature
+- update dependencies
+
 # v10.1.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.1.2)
 
 - update formatter library
