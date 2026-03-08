@@ -2,13 +2,15 @@ import { defineConfig } from 'tsdown';
 
 export default defineConfig({
 	clean: true,
+	deps: {
+		alwaysBundle: ['@atxm/developer-console', '@nsis/dent', '@nsis/nlf', 'atom-select-list', 'makensis', 'which'],
+		neverBundle: ['atom', 'electron'],
+		onlyAllowBundle: false,
+	},
 	entry: ['src/main.ts'],
-	external: ['atom', 'electron'],
 	format: 'cjs',
-	inlineOnly: false,
 	minify: true,
 	nodeProtocol: 'strip',
-	noExternal: ['@atxm/developer-console', '@nsis/dent', '@nsis/nlf', 'atom-select-list', 'makensis', 'which'],
 	outDir: 'lib',
 	platform: 'node',
 	target: 'node14',
