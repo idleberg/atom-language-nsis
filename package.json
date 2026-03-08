@@ -91,13 +91,10 @@
 			"NSIS:compile",
 			"NSIS:compile-strict",
 			"NSIS:convert-language-file",
-			"NSIS:create-.atom-build-file",
 			"NSIS:open-package-settings",
 			"NSIS:satisfy-dependencies",
-			"NSIS:set-default-runner",
 			"NSIS:show-compiler-flags",
-			"NSIS:show-version",
-			"NSIS:unset-default-runner"
+			"NSIS:show-version"
 		]
 	},
 	"activationHooks": [

@@ -22,24 +22,6 @@
 							"type": "separator"
 						},
 						{
-							"label": "Set default runner for NSIS",
-							"command": "NSIS:set-default-runner"
-						},
-						{
-							"label": "Unset default runner for NSIS",
-							"command": "NSIS:unset-default-runner"
-						},
-						{
-							"type": "separator"
-						},
-						{
-							"label": "Create .atom–build.cson",
-							"command": "NSIS:create-.atom–build-file"
-						},
-						{
-							"type": "separator"
-						},
-						{
 							"label": "Format Document",
 							"command": "NSIS:format-document"
 						},
