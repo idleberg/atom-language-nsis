@@ -1,3 +1,7 @@
+# v11.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.1)
+
+- update formatting library
+
 # v11.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.0)
 
 - remove support for third-party build packages
