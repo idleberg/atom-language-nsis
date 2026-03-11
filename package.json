@@ -1,6 +1,6 @@
 {
 	"name": "language-nsis",
-	"version": "11.0.1",
+	"version": "11.0.0",
 	"description": "Atom language support for NSIS, including grammar, snippets and build system",
 	"license": "MIT",
 	"type": "commonjs",
