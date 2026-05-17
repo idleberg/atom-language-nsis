@@ -19,6 +19,13 @@
 			"leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
 			"prefix": "AndIf"
 		},
+		"${Break}": {
+			"body": "\\${Break}$0",
+			"description": "Usage: ${Break[2|3|4|5]} value(s)",
+			"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Break.html?utm_source=atom&utm_content=snippet",
+			"leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+			"prefix": "Break"
+		},
 		"${Case}": {
 			"body": "\\${Case$1} ${2:value}$0",
 			"description": "Usage: ${Case[2|3|4|5]} value(s)",
@@ -58,6 +65,13 @@
 			"body": "\\${Cmd} `${1:statement}`$0",
 			"leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
 			"prefix": "Cmd"
+		},
+		"${Default}": {
+			"body": "\\${Default}$0",
+			"description": "Usage: ${Default[2|3|4|5]} value(s)",
+			"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Default.html",
+			"leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
+			"prefix": "Default"
 		},
 		"${DoUntil…LoopUntil}": {
 			"body": "\\${DoUntil} ${1:statement}\n\t${3:# your code here}\n\\${LoopUntil} ${2:statement}$4",
@@ -320,7 +334,7 @@
 			"prefix": "Silent"
 		},
 		"${Switch}": {
-			"body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n$\\{EndSwitch}$3",
+			"body": "\\${Switch} $${1:var}\n\t${2:# your code here}\n\\${EndSwitch}$3",
 			"description": "Usage: ${Switch} expression",
 			"descriptionMoreURL": "https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Includes/LogicLib/Switch.html?utm_source=atom&utm_content=snippet",
 			"leftLabelHTML": "<span class='syntax--constant syntax--other'>LogicLib.nsh</span>",
