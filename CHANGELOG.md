@@ -1,3 +1,8 @@
+# v11.0.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.4)
+
+- fix syntax error in `${Switch}` snippet
+- add missing `${Break}` and `${Default}` snippets
+
 # v11.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.3)
 
 - fix formatter creation
