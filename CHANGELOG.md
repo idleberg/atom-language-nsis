@@ -1,3 +1,7 @@
+# v11.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.3)
+
+- fix formatter creation
+
 # v11.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.2)
 
 - update dependencies

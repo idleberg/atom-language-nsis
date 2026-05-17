@@ -40,7 +40,7 @@ export function formatDocument(): void {
 }
 
 export function applyFormatter(editor: TextEditor): void {
-	const format = createFormatter(getFormatterOptions());
+	const { format } = createFormatter(getFormatterOptions());
 	const text = editor.getText();
 	const formatted = format(text);
 
