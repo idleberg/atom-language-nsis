@@ -1,3 +1,7 @@
+# v11.0.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.2)
+
+- update dependencies
+
 # v11.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.1)
 
 - update formatting library
@@ -28,8 +32,8 @@
 # v10.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v10.0.1)
 
 - improve syntax highlighting grammar
-  - adjust priorities for variables/defines
-  - update supported WinVer versions
+    - adjust priorities for variables/defines
+    - update supported WinVer versions
 - update WinVer snippets to support missing Windows versions
 - change bundler to `tsdown`
 
@@ -41,20 +45,20 @@
 # v9.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.3.0)
 
 - add new commands and snippets:
-  - `CPU`
-  - `LangStringUp`
+    - `CPU`
+    - `LangStringUp`
 
 # v9.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v9.2.0)
 
 - add new commands and snippets:
-  - `GetRegView`
-  - `GetShellVarContext`
-  - `IfAltRegView`
-  - `ManifestAppendCustomString`
-  - `ManifestDisableWindowFiltering`
-  - `ManifestGdiScaling`
-  - `ReadMemory`
-  - `UnsafeStrCpy`
+    - `GetRegView`
+    - `GetShellVarContext`
+    - `IfAltRegView`
+    - `ManifestAppendCustomString`
+    - `ManifestDisableWindowFiltering`
+    - `ManifestGdiScaling`
+    - `ReadMemory`
+    - `UnsafeStrCpy`
 - update dependencies
 - update tooling
 - improve types
@@ -279,8 +283,8 @@
 
 - group compiler settings
 - add new compiler settings
-  - `strictMode`
-  - `customArguments`
+    - `strictMode`
+    - `customArguments`
 - re-order package settings
 - add prettier support
 - update linting script
@@ -385,19 +389,19 @@
 # v8.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v8.0.0)
 
 - decaffeinate
-  - rewrite in TypeScript
-  - convert grammars/keymaps/menus/settings/snippets to JSON (excluding
-    scaffolding snippets)
-  - remove support for CSON build files
+    - rewrite in TypeScript
+    - convert grammars/keymaps/menus/settings/snippets to JSON (excluding
+      scaffolding snippets)
+    - remove support for CSON build files
 - add support for environment variables
 - add support for DotEnv files
 - build with Rollup
 - lint with ESLint
 - remove build files for Wine
 - rename commands
-  - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
-  - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
-  - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
+    - _NSIS: Save & Compile_ ➞ _NSIS: Compile_
+    - _NSIS: Save & Compile Strict_ ➞ _NSIS: Compile Strict_
+    - _NSIS: Remove Default Runner_ ➞ _NSIS: Unset Default Runner_
 - modify config defaults
 - update dependencies
 
@@ -932,10 +936,10 @@
 # v5.7.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.7.0)
 
 - update syntax grammar
-  - add support for variables/constants in quotes
-  - add core libraries
-  - add highlighting of deprecated commands
-  - modify scopes
+    - add support for variables/constants in quotes
+    - add core libraries
+    - add highlighting of deprecated commands
+    - modify scopes
 
 # v5.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.6.0)
 
@@ -1022,9 +1026,9 @@
 # v5.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v5.0.0)
 
 - add additional fields to snippets
-  - descriptions
-  - description links
-  - labels
+    - descriptions
+    - description links
+    - labels
 - move “drunken” header completions to `header.DrunkenNSIS.cson`
 - update `header.WinVer.cson`
 - modified `variable` and `constant` grammar
@@ -1238,9 +1242,9 @@
 # v3.5.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.5.0)
 
 - add commands
-  - set default runner
-  - remove default runner
-  - create `.atom-builder-json`
+    - set default runner
+    - remove default runner
+    - create `.atom-builder-json`
 - remove automatic check for atom-runner
 
 # v3.6.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v3.6.0)
