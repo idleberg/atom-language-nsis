@@ -2,6 +2,7 @@
 
 - fix syntax error in `${Switch}` snippet
 - add missing `${Break}` and `${Default}` snippets
+- update formatting library
 
 # v11.0.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.3)
 
