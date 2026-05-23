@@ -1,3 +1,7 @@
+# v11.0.5 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.5)
+
+- update formatting library
+
 # v11.0.4 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.4)
 
 - fix syntax error in `${Switch}` snippet
