@@ -190,7 +190,7 @@ export default {
 					title: 'Print Width',
 					description: 'Specify the line length that the formatter will wrap on. Use `0` to disable.',
 					type: 'number',
-					default: 120,
+					default: atom.config.get('editor.preferredLineLength') || 120,
 					order: 3,
 				},
 				trimLines: {
