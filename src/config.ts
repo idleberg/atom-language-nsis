@@ -186,12 +186,19 @@ export default {
 					],
 					order: 2,
 				},
+				printWidth: {
+					title: 'Print Width',
+					description: 'Specify the line length that the formatter will wrap on. Use `0` to disable.',
+					type: 'number',
+					default: 120,
+					order: 3,
+				},
 				trimLines: {
 					title: 'Trim',
 					description: 'Compact empty lines and trim whitespace.',
 					type: 'boolean',
 					default: true,
-					order: 3,
+					order: 4,
 				},
 				useTabs: {
 					title: 'Use Tabs',
@@ -199,7 +206,7 @@ export default {
 						'Indent using tabs instead of spaces. Keep in mind that using tabs is [good for accessibility](https://github.com/prettier/prettier/issues/7475#issuecomment-668544890).',
 					type: 'boolean',
 					default: true,
-					order: 4,
+					order: 5,
 				},
 				indentSize: {
 					title: 'Indent Size',
@@ -207,7 +214,7 @@ export default {
 					type: 'number',
 					default: 4,
 					minimum: 0,
-					order: 5,
+					order: 6,
 				},
 			},
 		},
