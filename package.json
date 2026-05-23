@@ -133,7 +133,7 @@
 		"@atxm/developer-console": "^0.6.1",
 		"@commitlint/cli": "^21.0.1",
 		"@commitlint/config-conventional": "^21.0.1",
-		"@idleberg/configs": "^0.4.2",
+		"@idleberg/configs": "^0.4.3",
 		"@types/atom": "^1.40.18",
 		"@types/node": "^24.12.4",
 		"@types/which": "^3.0.4",
