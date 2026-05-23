@@ -1,3 +1,7 @@
+# v11.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.1.0)
+
+- support `printWidth` option for formatter
+
 # v11.0.5 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.0.5)
 
 - update formatting library
