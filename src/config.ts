@@ -161,7 +161,7 @@ export default {
 					title: 'Format on Save',
 					description: 'Automatically format NSIS files before saving.',
 					type: 'boolean',
-					default: false,
+					default: true,
 					order: 1,
 				},
 				endOfLine: {

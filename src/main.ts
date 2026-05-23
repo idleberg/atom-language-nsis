@@ -3,7 +3,6 @@ import Config from './config';
 import devConsole from './log';
 import { compile, showCompilerFlags, showVersion } from './makensis';
 import { convert } from './nlf';
-import { featureNotifier } from './notifier';
 import commandReference from './reference';
 
 // Services
