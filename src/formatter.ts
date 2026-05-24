@@ -8,7 +8,7 @@ function getFormatterOptions(): DentOptions {
 	const endOfLine = String(Config.get('formatter.endOfLine'));
 
 	if (endOfLine === 'lf' || endOfLine === 'crlf') {
-		options.endOfLines = endOfLine;
+		options.endOfLine = endOfLine;
 	}
 
 	options.trimEmptyLines = Boolean(Config.get('formatter.trimLines'));
