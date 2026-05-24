@@ -1,6 +1,7 @@
 # v11.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.0)
 
 - enable formatter by default
+- rename eol option
 
 # v11.1.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.1.0)
 
