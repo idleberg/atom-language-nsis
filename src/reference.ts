@@ -41,10 +41,7 @@ export default {
 	},
 
 	cancel(): void {
-		if (this.panel != null) {
-			this.panel.destroy();
-		}
-
+		this.panel?.destroy();
 		this.panel = null;
 
 		if (this.previouslyFocusedElement) {
@@ -56,16 +53,14 @@ export default {
 	attach(): void {
 		this.previouslyFocusedElement = document.activeElement;
 
-		if (this.panel == null) {
-			this.panel = atom.workspace.addModalPanel({ item: this.selectListView });
-		}
+		this.panel ??= atom.workspace.addModalPanel({ item: this.selectListView });
 
 		this.selectListView.focus();
 		this.selectListView.reset();
 	},
 
 	async toggle(): Promise<void> {
-		if (this.panel != null) {
+		if (this.panel) {
 			this.cancel();
 		} else {
 			await showHelp(this.selectListView);
