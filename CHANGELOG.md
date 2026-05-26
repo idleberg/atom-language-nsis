@@ -1,3 +1,7 @@
+# v11.2.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.1)
+
+- update formatting library
+
 # v11.2.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.0)
 
 - enable formatter by default
