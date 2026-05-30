@@ -1,3 +1,7 @@
+# v11.2.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.3)
+
+- update formatting library
+
 # v11.2.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.2)
 
 - update formatting library
