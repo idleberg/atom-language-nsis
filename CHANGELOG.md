@@ -1,3 +1,8 @@
+# v11.3.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.0)
+
+- add `formatter.singleQuote` option
+- update formatting library
+
 # v11.2.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.2.3)
 
 - update formatting library

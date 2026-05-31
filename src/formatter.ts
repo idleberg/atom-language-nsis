@@ -11,6 +11,7 @@ function getFormatterOptions(): DentOptions {
 		options.endOfLine = endOfLine;
 	}
 
+	options.singleQuote = Boolean(Config.get('formatter.singleQuote'));
 	options.trimEmptyLines = Boolean(Config.get('formatter.trimLines'));
 	options.useTabs = Boolean(Config.get('formatter.useTabs'));
 

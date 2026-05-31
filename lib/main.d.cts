@@ -145,11 +145,26 @@ declare const _default: {
           }[];
           order: number;
         };
+        indentSize: {
+          title: string;
+          description: string;
+          type: string;
+          default: number;
+          minimum: number;
+          order: number;
+        };
         printWidth: {
           title: string;
           description: string;
           type: string;
           default: number;
+          order: number;
+        };
+        singleQuote: {
+          title: string;
+          description: string;
+          type: string;
+          default: boolean;
           order: number;
         };
         trimLines: {
@@ -164,14 +179,6 @@ declare const _default: {
           description: string;
           type: string;
           default: boolean;
-          order: number;
-        };
-        indentSize: {
-          title: string;
-          description: string;
-          type: string;
-          default: number;
-          minimum: number;
           order: number;
         };
       };
