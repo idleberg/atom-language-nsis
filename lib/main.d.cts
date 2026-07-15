@@ -1,5 +1,4 @@
 import { CompositeDisposable } from "atom";
-
 //#region src/main.d.ts
 declare const _default: {
   config: {
