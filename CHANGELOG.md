@@ -1,3 +1,7 @@
+# v11.3.3 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.3)
+
+- fix positional highlighting issue in definitions
+
 # v11.3.2 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.2)
 
 - update dependencies

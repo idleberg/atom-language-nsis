@@ -46,31 +46,31 @@
 			"name": "constant.numeric.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\\s|$)",
+			"match": "(?i)\\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\\s|$)",
+			"match": "(?i)\\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Next|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\\s|$)",
+			"match": "(?i)\\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\\s|$)",
+			"match": "(?i)\\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${((At(Least|Most)|Is)(ServicePack|Win(7|8\\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\\s|$)",
+			"match": "(?i)\\${((At(Least|Most)|Is)(ServicePack|Win(7|8\\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\\s|$)",
+			"match": "(?i)\\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{
-			"match": "(?:^\\s*)(?i)\\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\\s|$)",
+			"match": "(?i)\\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\\s|$)",
 			"name": "constant.language.nsis"
 		},
 		{ "match": "\\${[\\!\\w\\.:\\^-]+}", "name": "constant.other.nsis" },
