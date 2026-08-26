@@ -1,3 +1,7 @@
+# v11.3.8 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.8)
+
+- add missing formatter config for `commentStyle`
+
 # v11.3.7 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.7)
 
 - update formatting library

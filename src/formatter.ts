@@ -11,6 +11,12 @@ function getFormatterOptions(): DentOptions {
 		options.endOfLine = endOfLine;
 	}
 
+	const commentStyle = String(Config.get('formatter.commentStyle'));
+
+	if (commentStyle === 'hash' || commentStyle === 'semi') {
+		options.commentStyle = commentStyle;
+	}
+
 	options.singleQuote = Boolean(Config.get('formatter.singleQuote'));
 	options.trimEmptyLines = Boolean(Config.get('formatter.trimLines'));
 	options.useTabs = Boolean(Config.get('formatter.useTabs'));

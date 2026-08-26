@@ -186,6 +186,27 @@ export default {
 					],
 					order: 2,
 				},
+				commentStyle: {
+					title: 'Comment Style',
+					description: 'Specify the comment style for NSIS files.',
+					type: 'string',
+					default: 'preserve',
+					enum: [
+						{
+							value: 'preserve',
+							description: '(preserve)',
+						},
+						{
+							value: 'hash',
+							description: 'Hash (#)',
+						},
+						{
+							value: 'semi',
+							description: 'Semicolon (;)',
+						},
+					],
+					order: 2,
+				},
 				indentSize: {
 					title: 'Indent Size',
 					description: 'Number of spaces per indentation level. This only applies when not using tabs.',
