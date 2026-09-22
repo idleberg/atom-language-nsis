@@ -1,235 +1,58 @@
-import { exec, type SpawnOptions } from 'node:child_process';
-import { constants, promises as fs } from 'node:fs';
-import { platform } from 'node:os';
-import { resolve } from 'node:path';
-import { satisfyDependencies } from 'atom-satisfy-dependencies';
-// @ts-expect-error Electron is globally available in Atom
-import { shell } from 'electron';
-import which from 'which';
-import { name } from '../package.json';
-import Config from './config';
-import Browse from './services/browse';
-import ConsolePanel from './services/console-panel';
-
-interface NotificationParams {
-	dismissable?: boolean;
-	level?: string;
-	message: string;
-	outFile?: string;
-	type?: string;
-}
-
-export function clearConsole(): void {
-	try {
-		ConsolePanel.clear();
-
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch {
-		if (Config.get('clearConsole')) {
-			console.clear();
-		}
-	}
-}
+import { accessSync, constants } from 'node:fs';
+import { access } from 'node:fs/promises';
+import { delimiter, join, resolve } from 'node:path';
 
 export async function fileExists(filePath: string): Promise<boolean> {
 	try {
-		await fs.access(filePath, constants.F_OK);
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		await access(filePath, constants.F_OK);
+
+		return true;
 	} catch {
 		return false;
 	}
-
-	return true;
 }
 
-export async function findPackagePath(packageName: string): Promise<string[]> {
-	const packageDirPaths = atom.packages.getPackageDirPaths();
+/**
+ * Turns whatever the user configured into an absolute path. A bare command name
+ * is looked up on the `PATH`, so `"nsis-lsp"` keeps working as a setting instead
+ * of resolving against an arbitrary working directory.
+ */
+export function locate(input: string): string | undefined {
+	const home = process.env.HOME ?? process.env.USERPROFILE;
 
-	return (
-		await Promise.all(
-			packageDirPaths.map(async (packageDirPath) => {
-				const packageDir = resolve(packageDirPath, packageName);
-
-				if (await fileExists(resolve(packageDir, 'package.json'))) {
-					return packageDir;
-				}
-
-				return '';
-			}),
-		)
-	).filter((item) => item);
-}
-
-export async function getMakensisPath(): Promise<string> {
-	// If stored, return pathToMakensis
-	const pathToMakensis = String(Config.get('compilerOptions.pathToMakensis'));
-
-	if (pathToMakensis?.length && pathToMakensis !== 'makensis') {
-		return pathToMakensis;
+	if (input.startsWith('~/') && home) {
+		return join(home, input.slice(2));
 	}
 
-	return String(await which('makensis')) || 'makensis';
-}
-
-export async function getSpawnEnv(): Promise<SpawnOptions> {
-	return {
-		env: {
-			// start with calling process env (this provides e.g. %PATH% on Windows)
-			...process.env,
-			NSISDIR: process.env.NSISDIR || undefined,
-			NSISCONFDIR: process.env.NSISCONFDIR || undefined,
-			LANGUAGE: !isWindows() && !process.env.LANGUAGE ? 'en_US.UTF-8' : undefined,
-			LC_ALL: !isWindows() && !process.env.LC_ALL ? 'en_US.UTF-8' : undefined,
-		},
-	};
-}
-
-export function isHeaderFile(filePath: string): boolean {
-	const headerFiles = ['.bnsh', '.nsh'];
-
-	return Boolean(headerFiles.filter((fileExt) => filePath?.endsWith(fileExt)).length);
-}
-
-export function isLoadedAndActive(packageName: string): boolean {
-	return atom.packages.isPackageLoaded(packageName) && atom.packages.isPackageActive(packageName);
-}
-
-export function isWindows(): boolean {
-	return platform() === 'win32';
-}
-
-function isWindowsCompatible(): boolean {
-	return !!(isWindows() || Config.get('useWineToRun'));
-}
-
-export async function manageDependencies(): Promise<void> {
-	await satisfyDependencies(name);
-}
-
-export function missingPackageWarning(packageName: string): void {
-	const notification = atom.notifications.addWarning(
-		`This command requires the \`${packageName}\` package to be installed and enabled`,
-		{
-			dismissable: true,
-			buttons: [
-				{
-					text: 'Show Package',
-					async onDidClick() {
-						notification.dismiss();
-
-						await atom.workspace.open(`atom://config/packages/${packageName}`, {
-							pending: true,
-							searchAllPanes: true,
-						});
-
-						return;
-					},
-				},
-				{
-					text: 'Cancel',
-					onDidClick() {
-						notification.dismiss();
-
-						return;
-					},
-				},
-			],
-		},
-	);
-}
-
-function getNotificationLevel(level: string): string {
-	switch (level.toLowerCase()) {
-		case 'success':
-			return 'addSuccess';
-
-		case 'warning':
-			return 'addWarning';
-
-		case 'error':
-			return 'addError';
-
-		case 'fatal':
-		case 'fatalerror':
-			return 'addFatalError';
-
-		default:
-			return 'addInfo';
+	if (input.includes('/') || input.includes('\\')) {
+		return resolve(input);
 	}
+
+	return findOnPath(input);
 }
 
-export function notifyOnCompletion(params: NotificationParams): void {
-	const type = getNotificationLevel(params.level);
+/**
+ * A `which`, minus the dependency. Windows needs the `PATHEXT` dance because
+ * `nsis-lsp.exe` is only one of several names the shell would have accepted.
+ */
+export function findOnPath(binaryName: string): string | undefined {
+	const paths = (process.env.PATH ?? '').split(delimiter).filter(Boolean);
+	const extensions =
+		process.platform === 'win32' ? (process.env.PATHEXT ?? '.EXE').split(delimiter).filter(Boolean) : [''];
 
-	const notification = atom.notifications[type](params.message, {
-		dismissable: params.dismissable || true,
-		buttons: params.outFile
-			? [
-					isWindowsCompatible()
-						? {
-								text: 'Run',
-								className: 'icon icon-playback-play',
-								async onDidClick() {
-									notification.dismiss();
-									await runInstaller(params.outFile);
+	for (const directory of paths) {
+		for (const extension of extensions) {
+			const candidate = join(directory, binaryName.replace(/\.exe$/i, '') + extension);
 
-									return;
-								},
-							}
-						: undefined,
-					isLoadedAndActive('browse')
-						? {
-								text: 'Reveal',
-								className: 'icon icon-location',
+			try {
+				accessSync(candidate, constants.X_OK);
 
-								onDidClick() {
-									notification.dismiss();
-									Browse.reveal(params.outFile);
-
-									return;
-								},
-							}
-						: undefined,
-					{
-						text: 'Cancel',
-
-						onDidClick() {
-							notification.dismiss();
-
-							return;
-						},
-					},
-				].filter((item) => item)
-			: [],
-	});
-}
-
-export async function openURL(nsisCommand: string): Promise<void> {
-	shell.openExternal(
-		`https://idleberg.github.io/NSIS.docset/Contents/Resources/Documents/html/Commands/${nsisCommand}.html?utm_source=atom&utm_content=reference`,
-	);
-}
-
-async function runInstaller(outFile: string): Promise<void> {
-	if (isWindows()) {
-		try {
-			exec(`cmd /c "${outFile}"`);
-		} catch (error) {
-			console.error(error);
-		}
-
-		return;
-	} else if (Config.get('useWineToRun')) {
-		const pathToWine = String(Config.get('pathToWine')) || 'wine';
-
-		try {
-			exec(`${pathToWine} ${outFile}`);
-		} catch (error) {
-			console.error(error);
+				return candidate;
+			} catch {
+				// Not here, try the next one.
+			}
 		}
 	}
-}
 
-export function inRange(value: number, options: { min: number; max: number }): boolean {
-	return value >= options.min && value <= options.max;
+	return undefined;
 }

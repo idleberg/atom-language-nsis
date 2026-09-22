@@ -1,7 +1,7 @@
 '.source.nsis':
   ModernUI:
     body: '''
-      # Scaffolding by https://atom.io/packages/language-nsis
+      # Scaffolding by https://web.pulsar-edit.dev/packages/language-nsis-lsp
 
       # Includes ---------------------------------
       !include "MUI2.nsh"

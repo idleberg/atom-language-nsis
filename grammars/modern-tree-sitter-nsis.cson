@@ -1,0 +1,16 @@
+name: 'NSIS'
+scopeName: 'source.nsis'
+type: 'modern-tree-sitter'
+parser: 'tree-sitter-nsis'
+fileTypes: [
+  'nsi'
+  'nsh'
+  'bnsi'
+  'bnsh'
+  'nsdinc'
+]
+treeSitter:
+  grammar: 'tree-sitter/tree-sitter-nsis.wasm'
+  highlightsQuery: 'tree-sitter/queries/highlights.scm'
+  foldsQuery: 'tree-sitter/queries/folds.scm'
+  indentsQuery: 'tree-sitter/queries/indents.scm'

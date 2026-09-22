@@ -1,7 +1,7 @@
 '.source.nsis':
   'Basic Script':
     body: '''
-      # Scaffolding by https://atom.io/packages/language-nsis
+      # Scaffolding by https://web.pulsar-edit.dev/packages/language-nsis-lsp
 
       # Settings ---------------------------------
       Name "${1:installer_name}"

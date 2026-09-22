@@ -1,11 +1,12 @@
 {
 	"extends": "@idleberg/configs/tsc",
+	"include": ["src"],
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"paths": {
-			"@/*": ["./src/*"]
+			"atom": ["./node_modules/@pulsar-edit/types"]
 		},
 		"resolveJsonModule": true,
 		"verbatimModuleSyntax": false

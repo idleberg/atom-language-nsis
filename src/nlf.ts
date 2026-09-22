@@ -1,87 +1,69 @@
-import { basename, extname } from 'node:path';
-import type { TextEditor } from 'atom';
+import { parse, stringify } from '@nsis/nlf';
+import { getConfig } from './config.ts';
 
-export async function convert(): Promise<void> {
+/**
+ * `stringify` accepts JSON5, so every JSON dialect Pulsar ships a grammar for is
+ * valid input.
+ */
+const JSON_SCOPES = ['source.json', 'source.json.jsonc', 'source.json5'];
+
+/**
+ * Converts the active document between the NSIS language file format and JSON,
+ * in whichever direction its grammar implies.
+ *
+ * The result opens in a new editor rather than replacing the original, so a
+ * conversion that is not what was wanted costs nothing to discard.
+ */
+export async function convertLanguageFile(): Promise<void> {
 	const editor = atom.workspace.getActiveTextEditor();
+	const scopeName = editor?.getGrammar().scopeName;
+	const toJson = scopeName === 'source.nlf';
 
-	if (!editor) {
-		atom.beep();
-		return;
-	}
-
-	switch (editor.getGrammar().scopeName) {
-		case 'source.nlf':
-			await convertNLF(editor);
-			break;
-
-		case 'source.json':
-		case 'source.json5':
-			await convertJSON(editor);
-			break;
-
-		default:
-			atom.beep();
-			break;
-	}
-}
-
-async function convertNLF(editor: TextEditor): Promise<void> {
-	const NLF = await import('@nsis/nlf');
-	let output: string;
-
-	try {
-		const input = editor.getText();
-		output = JSON.stringify(NLF.parse(input), null, 2);
-	} catch (e) {
-		console.error(e);
-		atom.notifications.addError('Conversion Failed', {
-			detail: (e as Error).message,
-			dismissable: true,
-		});
+	if (!editor || (!toJson && !JSON_SCOPES.includes(scopeName ?? ''))) {
+		atom.notifications.addError('Open an NSIS language file or a JSON document to convert');
 
 		return;
 	}
 
-	await openNewFile(editor, output, 'json');
-}
+	const text = editor.getText();
 
-async function convertJSON(editor: TextEditor): Promise<void> {
-	const NLF = await import('@nsis/nlf');
-	let output: string;
-
-	try {
-		const input = editor.getText();
-		output = NLF.stringify(input);
-	} catch (e) {
-		console.error(e);
-		atom.notifications.addError('Conversion Failed', {
-			detail: (e as Error).message,
-			dismissable: true,
-		});
+	if (!text.trim()) {
+		atom.notifications.addError('The document is empty');
 
 		return;
 	}
 
-	await openNewFile(editor, output, 'nlf');
-}
-
-async function openNewFile(editor: any, input: string, targetExt: string): Promise<void> {
-	let newEditorTab: object;
-
-	const fileName = editor.getFileName().toString();
-	const newFileName = basename(fileName, extname(fileName));
+	let content: string;
 
 	try {
-		newEditorTab = await atom.workspace.open(`${newFileName}.${targetExt}`, {
-			pending: true,
-		});
+		content = toJson ? JSON.stringify(parse(text), null, 2) : stringify(text, getStringifierOptions());
 	} catch (error) {
-		console.error(error);
-		atom.notifications.addError((error as Error).message, { dismissable: true });
+		// The parser reports the offending line, so the message is worth showing
+		// rather than pointing at a console the user has to go find.
+		console.error('[language-nsis-lsp]', error);
+
+		atom.notifications.addError('Conversion failed', {
+			description: error instanceof Error ? error.message : String(error),
+			dismissable: true,
+		});
 
 		return;
 	}
 
-	// @ts-expect-error: provided types are incorrect or incomplete
-	newEditorTab.setText(input);
+	// No URI, so Pulsar opens an empty editor rather than looking for an opener.
+	const converted = await atom.workspace.open();
+
+	converted.setText(content);
+	atom.grammars.assignLanguageMode(converted.getBuffer(), toJson ? 'source.json' : 'source.nlf');
+}
+
+/**
+ * Language files are consumed by `makensis` on Windows, so the line endings are
+ * worth being deliberate about. `(auto)` is left to the library, which picks by
+ * platform.
+ */
+function getStringifierOptions(): { eol?: 'crlf' | 'lf' } {
+	const endOfLine = getConfig<string>('formatter.endOfLine', '(auto)');
+
+	return endOfLine === 'crlf' || endOfLine === 'lf' ? { eol: endOfLine } : {};
 }

@@ -1,165 +1,125 @@
-import { basename } from 'node:path';
-import Config from './config';
-import BusySignal from './services/busy-signal';
-import { clearConsole, getMakensisPath, getSpawnEnv, inRange, isHeaderFile, isLoadedAndActive } from './util';
+import type { SpawnOptions } from 'node:child_process';
+import { shell } from 'electron';
+import type { CompilerOptions } from 'makensis';
+import { getConfig, PACKAGE_NAME } from './config.ts';
+import { findOnPath, locate } from './util.ts';
 
-export async function compile(strictMode: boolean): Promise<void> {
-	const editor = atom.workspace.getActiveTextEditor();
+const BINARY_NAME = isWindows() ? 'makensis.exe' : 'makensis';
 
-	if (!editor) {
-		atom.notifications.addWarning('No active editor', {
-			dismissable: false,
-		});
+let warnedAboutPath = false;
+
+export function isWindows(): boolean {
+	return process.platform === 'win32';
+}
+
+/**
+ * Wine is how NSIS is compiled on macOS and Linux when only a Windows build of
+ * `makensis` is available. It is never used on Windows itself, whatever the
+ * setting says.
+ */
+export function useWine(): boolean {
+	return !isWindows() && getConfig('wine.runWithWine', false);
+}
+
+/**
+ * Resolves the `makensis` binary from the `makensis.path` setting — the same one
+ * the server uses for diagnostics — falling back to the `PATH`. The configured
+ * path is returned unresolved when it cannot be located, so that Wine prefix
+ * paths, which mean nothing to this process, still reach the compiler.
+ */
+export function getMakensisPath(): string {
+	const configured = stripQuotes(getConfig('makensis.path', '').trim());
+
+	if (configured && configured !== 'makensis') {
+		return locate(configured) ?? configured;
+	}
+
+	const found = findOnPath(BINARY_NAME);
+
+	if (found) {
+		return found;
+	}
+
+	// Under Wine the compiler lives inside a prefix and is never on the `PATH`,
+	// so let it through and let the spawn fail with something more useful.
+	if (!useWine()) {
+		warnAboutMissingBinary();
+	}
+
+	return 'makensis';
+}
+
+/**
+ * The options every `makensis` invocation shares: which binary to run, and
+ * whether to run it through Wine.
+ */
+export function getCompilerOptions(): CompilerOptions {
+	const pathToMakensis = getMakensisPath();
+
+	return useWine()
+		? { pathToMakensis, pathToWine: getConfig('wine.pathToWine', 'wine'), wine: true }
+		: { pathToMakensis };
+}
+
+/**
+ * `makensis` reads `NSISDIR` and `NSISCONFDIR` from the environment, which it
+ * inherits from Pulsar's own. The locale is pinned because the compiler
+ * otherwise mangles non-ASCII output.
+ */
+export function getSpawnEnv(): SpawnOptions {
+	const env: NodeJS.ProcessEnv = { ...process.env };
+
+	if (!isWindows()) {
+		env.LANG ||= 'en_US.UTF-8';
+		env.LANGUAGE ||= 'en_US.UTF-8';
+		env.LC_ALL ||= 'en_US.UTF-8';
+	}
+
+	return { env };
+}
+
+/**
+ * Drops everything derived from the compiler settings. Called when those change,
+ * so a corrected path warns again rather than staying silent.
+ */
+export function resetCompilerState(): void {
+	warnedAboutPath = false;
+}
+
+/**
+ * Windows paths are routinely pasted into settings with their surrounding quotes
+ * still attached.
+ */
+function stripQuotes(input: string): string {
+	return input.startsWith('"') && input.endsWith('"') ? input.slice(1, -1).trim() : input;
+}
+
+function warnAboutMissingBinary(): void {
+	if (warnedAboutPath) {
 		return;
 	}
 
-	const script = editor.getPath();
-	const scope = editor.getGrammar().scopeName;
+	warnedAboutPath = true;
 
-	if (script && isHeaderFile(script)) {
-		const processHeaders = String(Config.get('processHeaders'));
-
-		if (processHeaders === 'Disallow') {
-			const notification = atom.notifications.addWarning(
-				'Compiling header files is blocked by default. You can allow this in the package settings, or mute this warning.',
-				{
-					dismissable: true,
-					buttons: [
-						{
-							text: 'Open Settings',
-							className: 'icon icon-gear',
-							async onDidClick() {
-								await atom.workspace.open('atom://config/packages/language-nsis', {
-									pending: true,
-									searchAllPanes: true,
-								});
-
-								notification.dismiss();
-
-								return;
-							},
-						},
-						{
-							text: 'Cancel',
-							onDidClick() {
-								notification.dismiss();
-
-								return;
-							},
-						},
-					],
-				},
-			);
-
-			atom.beep();
-			return;
-		} else if (processHeaders === 'Disallow & Never Ask Me') {
-			atom.beep();
-			return;
-		}
-	}
-
-	if (script && scope.startsWith('source.nsis')) {
-		try {
-			await editor.save();
-		} catch (error) {
-			console.log(error);
-			atom.beep();
-
-			return;
-		}
-
-		clearConsole();
-
-		if (isLoadedAndActive('busy-signal')) {
-			await BusySignal.add(`Compiling ${basename(script)}`);
-		}
-
-		const NSIS = await import('makensis');
-		const { compilerOutput, compilerError, compilerClose } = await import('./callbacks');
-
-		const verbosity = Number.parseInt(String(Config.get('compilerOptions.verbosity')), 10);
-
-		await NSIS.compile(
-			script,
+	atom.notifications.addWarning('makensis was not found in your PATH', {
+		description: 'Install NSIS, or point the **MakeNSIS Path** setting at an existing compiler.',
+		dismissable: true,
+		buttons: [
 			{
-				env: false,
-				json: Boolean(Config.get('showFlagsAsObject')),
-				pathToMakensis: await getMakensisPath(),
-				onData: compilerOutput,
-				onError: compilerError,
-				onClose: compilerClose,
-				rawArguments: String(Config.get('compilerOptions.customArguments')),
-				strict: strictMode || Boolean(Config.get('compilerOptions.strictMode')),
-				verbose: inRange(verbosity, { min: 0, max: 4 }) ? (verbosity as 0 | 1 | 2 | 3 | 4) : 3,
+				text: 'Open Settings',
+				onDidClick: () => void openPackageSettings(),
 			},
-			await getSpawnEnv(),
-		);
-
-		if (isLoadedAndActive('busy-signal')) {
-			await BusySignal.clear();
-		}
-	}
+			{
+				text: 'Download NSIS',
+				onDidClick: () => void shell.openExternal('https://nsis.sourceforge.io/Download'),
+			},
+		],
+	});
 }
 
-export async function showVersion(): Promise<void> {
-	if (isLoadedAndActive('busy-signal')) {
-		await BusySignal.add('Showing version');
-	}
-
-	clearConsole();
-	const pathToMakensis = await getMakensisPath();
-
-	const NSIS = await import('makensis');
-	const { versionCallback } = await import('./callbacks');
-
-	await NSIS.version(
-		{
-			onData: (data) => versionCallback(data, pathToMakensis),
-			pathToMakensis,
-		},
-		await getSpawnEnv(),
-	);
-
-	if (isLoadedAndActive('busy-signal')) {
-		await BusySignal.clear();
-	}
-}
-
-export async function showCompilerFlags(): Promise<void> {
-	if (isLoadedAndActive('busy-signal')) {
-		await BusySignal.add('Showing compiler flags');
-	}
-
-	clearConsole();
-
-	const NSIS = await import('makensis');
-	const { flagsCallback } = await import('./callbacks');
-
-	await NSIS.headerInfo(
-		{
-			json: Boolean(Config.get('showFlagsAsObject')),
-			onClose: flagsCallback,
-			pathToMakensis: await getMakensisPath(),
-		},
-		await getSpawnEnv(),
-	);
-
-	if (isLoadedAndActive('busy-signal')) {
-		await BusySignal.clear();
-	}
-}
-
-export async function showHelp(selectListView: any): Promise<void> {
-	const NSIS = await import('makensis');
-	const output = await NSIS.commandHelp(
-		'',
-		{
-			json: true,
-			pathToMakensis: await getMakensisPath(),
-		},
-		await getSpawnEnv(),
-	);
-
-	selectListView.update({ items: Object.keys(output.stdout!) });
+export async function openPackageSettings(): Promise<void> {
+	await atom.workspace.open(`atom://config/packages/${PACKAGE_NAME}`, {
+		pending: true,
+		searchAllPanes: true,
+	});
 }

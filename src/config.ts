@@ -1,287 +1,264 @@
-import { platform } from 'node:os';
-import type { ConfigValues } from 'atom';
-import { name } from '../package.json';
-import { isWindows } from './util';
+export const PACKAGE_NAME = 'language-nsis-lsp';
 
-const defaultEOL = platform() === 'win32' ? 'crlf' : 'lf';
-
-export default {
-	schema: {
-		compilerOptions: {
-			title: 'Compiler Options',
-			type: 'object',
-			order: 1,
-			properties: {
-				pathToMakensis: {
-					title: 'Path To MakeNSIS',
-					description: 'Specify the full path to `makensis`.',
-					type: 'string',
-					default: 'makensis',
-					order: 1,
-				},
-				verbosity: {
-					title: 'Verbosity',
-					description: 'Specify the default verbosity for `makensis`.',
-					type: 'number',
-					default: 3,
-					enum: [
-						{
-							value: -1,
-							description: '(not set)',
-						},
-						{
-							value: 0,
-							description: '0: none',
-						},
-						{
-							value: 1,
-							description: '1: no warnings',
-						},
-						{
-							value: 2,
-							description: '2: no info',
-						},
-						{
-							value: 3,
-							description: '3: no script',
-						},
-						{
-							value: 4,
-							description: '4: all',
-						},
-					],
-					order: 2,
-				},
-				strictMode: {
-					title: 'Strict Mode',
-					description:
-						'Enabling strict mode will treat warnings as errors. Note that when disabled, running *NSIS: Compile Strict* will ignore the setting.',
-					type: 'boolean',
-					default: false,
-					order: 3,
-				},
-				customArguments: {
-					title: 'Custom Arguments',
-					description:
-						'Specify any of the default [compiler arguments](http://nsis.sourceforge.net/Docs/Chapter3.html#usage). Note that these will have precedence over the settings above',
-					type: 'string',
-					default: '',
-					order: 4,
-				},
-			},
-		},
-		processHeaders: {
-			title: 'Process Headers',
-			description:
-				'By default, you can only compile (and create build-files) for `.nsi` files. This setting enables support for `.nsh` files.',
-			type: 'string',
-			enum: ['Allow', 'Disallow', 'Disallow & Never Ask Me'],
-			default: 'Disallow',
-			order: 1,
-		},
-		showBuildNotifications: {
-			title: 'Show Build Notifications',
-			description: 'Displays color-coded notifications that close automatically after 5 seconds.',
-			type: 'boolean',
-			default: true,
-			order: 2,
-		},
-		showFlagsAsObject: {
-			title: 'Show Flags as Object',
-			description: 'Displays compiler flags as JSON.',
-			type: 'boolean',
-			default: true,
-			order: 3,
-		},
-		alwaysShowOutput: {
-			title: 'Always Show Output',
-			description: 'Displays compiler output in console panel. When deactivated, it will only show on errors-',
-			type: 'boolean',
-			default: true,
-			order: 4,
-		},
-		clearConsole: {
-			title: 'Clear Console',
-			description:
-				"When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building.",
-			type: 'boolean',
-			default: true,
-			order: 5,
-		},
-		compilerOutput: {
-			title: 'Compiler Output',
-			description: 'Specify whether `makensis` outputs its version or compiler flags to notifications the console.',
-			type: 'string',
-			default: 'console',
-			enum: [
-				{
-					value: 'notification',
-					description: 'Notification',
-				},
-				{
-					value: 'console',
-					description: 'Console',
-				},
-			],
-			order: 6,
-		},
-		useWineToRun: !isWindows()
-			? {
-					title: 'Run with Wine',
-					description:
-						'When on a non-Windows platform, you can run compiled installers using [Wine](https://www.winehq.org/).',
-					type: 'boolean',
-					default: false,
-					order: 7,
-				}
-			: {},
-		pathToWine: !isWindows()
-			? {
-					title: 'Path To Wine',
-					description:
-						'Specifies a custom path to `wine`, useful when relying on alternatives such as `wine32` or [`wine32on64`](https://github.com/Gcenx/homebrew-wine).',
-					type: 'string',
-					default: 'wine',
-					order: 8,
-				}
-			: {},
-		manageDependencies: {
-			title: 'Manage Dependencies',
-			description: 'When enabled, third-party dependencies will be installed automatically.',
-			type: 'boolean',
-			default: true,
-			order: 9,
-		},
-		formatter: {
-			title: 'Formatter',
-			type: 'object',
-			order: 10,
-			properties: {
-				formatOnSave: {
-					title: 'Format on Save',
-					description: 'Automatically format NSIS files before saving.',
-					type: 'boolean',
-					default: true,
-					order: 1,
-				},
-				endOfLine: {
-					title: 'End of Line',
-					description:
-						'Specify the end of line character. Defaults to the current operating system EOL character, which is LF for POSIX and CRLF for Windows',
-					type: 'string',
-					default: defaultEOL,
-					enum: [
-						{
-							value: defaultEOL,
-							description: '(auto)',
-						},
-						{
-							value: 'lf',
-							description: 'LF',
-						},
-						{
-							value: 'crlf',
-							description: 'CRLF',
-						},
-					],
-					order: 2,
-				},
-				commentStyle: {
-					title: 'Comment Style',
-					description: 'Specify the comment style for NSIS files.',
-					type: 'string',
-					default: 'preserve',
-					enum: [
-						{
-							value: 'preserve',
-							description: '(preserve)',
-						},
-						{
-							value: 'hash',
-							description: 'Hash (#)',
-						},
-						{
-							value: 'semi',
-							description: 'Semicolon (;)',
-						},
-					],
-					order: 2,
-				},
-				indentSize: {
-					title: 'Indent Size',
-					description: 'Number of spaces per indentation level. This only applies when not using tabs.',
-					type: 'number',
-					default: 4,
-					minimum: 0,
-					order: 3,
-				},
-				printWidth: {
-					title: 'Print Width',
-					description: 'Specify the line length that the formatter will wrap on. Use `0` to disable.',
-					type: 'number',
-					default: atom.config.get('editor.preferredLineLength') || 120,
-					order: 4,
-				},
-				singleQuote: {
-					title: 'Single Quote',
-					description: 'Prefer single quotes instead of double quotes.',
-					type: 'boolean',
-					default: false,
-					order: 5,
-				},
-				trimLines: {
-					title: 'Trim Lines',
-					description: 'Compact empty lines and trim whitespace.',
-					type: 'boolean',
-					default: true,
-					order: 6,
-				},
-				useTabs: {
-					title: 'Use Tabs',
-					description:
-						'Indent using tabs instead of spaces. Keep in mind that using tabs is [good for accessibility](https://github.com/prettier/prettier/issues/7475#issuecomment-668544890).',
-					type: 'boolean',
-					default: true,
-					order: 7,
-				},
+/**
+ * The Pulsar-facing settings. Everything the server understands is here, minus
+ * indentation: the formatter takes `tabSize`/`insertSpaces` off each formatting
+ * request, so there is nothing to configure.
+ */
+export const schema = {
+	serverPath: {
+		title: 'Server Path',
+		description:
+			'Path to the `nsis-lsp` binary. Leave empty to use the binary installed with this package, then your `PATH`.',
+		type: 'string',
+		default: '',
+		order: 1,
+	},
+	makensis: {
+		title: 'MakeNSIS',
+		type: 'object',
+		order: 2,
+		properties: {
+			path: {
+				title: 'Path',
+				description: 'Path to `makensis`. Leave empty to search your `PATH`.',
+				type: 'string',
+				default: '',
+				order: 1,
 			},
 		},
 	},
-
-	get(key = ''): ConfigValues {
-		return key?.length ? atom.config.get(`${name}.${key}`) : atom.config.get(`${name}`);
+	compiler: {
+		title: 'Compiler',
+		type: 'object',
+		order: 3,
+		properties: {
+			verbosity: {
+				title: 'Verbosity',
+				description: 'How much the compiler reports while building.',
+				type: 'string',
+				default: '3',
+				enum: [
+					{ value: '(default)', description: 'Leave the choice to makensis' },
+					{ value: '0', description: '0: none' },
+					{ value: '1', description: '1: no warnings' },
+					{ value: '2', description: '2: no info' },
+					{ value: '3', description: '3: no script' },
+					{ value: '4', description: '4: all' },
+				],
+				order: 1,
+			},
+			strictMode: {
+				title: 'Strict Mode',
+				description: 'Treat compiler warnings as errors, as though every build used *NSIS: Compile Script (strict)*.',
+				type: 'boolean',
+				default: false,
+				order: 2,
+			},
+			customArguments: {
+				title: 'Custom Arguments',
+				description: 'Additional arguments passed to `makensis`, for example `-DVERSION=1.0.0`.',
+				type: 'array',
+				default: [],
+				items: { type: 'string' },
+				order: 3,
+			},
+			processHeaders: {
+				title: 'Process Headers',
+				description: 'Whether header files can be compiled directly.',
+				type: 'string',
+				default: 'Disallow',
+				enum: [
+					{ value: 'Allow', description: 'Compile both scripts and header files' },
+					{ value: 'Disallow', description: 'Ask before compiling a header file' },
+					{ value: 'Disallow & Never Ask Me', description: 'Skip header files without asking' },
+				],
+				order: 4,
+			},
+			showNotifications: {
+				title: 'Show Notifications',
+				description: 'Show a notification indicating whether a build succeeded or failed.',
+				type: 'boolean',
+				default: true,
+				order: 5,
+			},
+			showOutputView: {
+				title: 'Show Output View',
+				description: 'When to reveal the console with the compiler output.',
+				type: 'string',
+				default: 'On Errors',
+				enum: [
+					{ value: 'Always', description: 'Whenever a script is compiled' },
+					{ value: 'On Warnings & Errors', description: 'Only when the build has warnings or errors' },
+					{ value: 'On Errors', description: 'Only when the build has errors' },
+					{ value: 'Never', description: 'Never' },
+				],
+				order: 6,
+			},
+			showFlagsAsObject: {
+				title: 'Show Flags as Object',
+				description: "Format the output of *Show Compiler Flags* as JSON rather than as the compiler's raw output.",
+				type: 'boolean',
+				default: true,
+				order: 7,
+			},
+			showVersionAsNotification: {
+				title: 'Show Version as Notification',
+				description: 'Report *Show Compiler Version* as a notification rather than in the console.',
+				type: 'boolean',
+				default: false,
+				order: 8,
+			},
+		},
 	},
-
-	migrate(oldKey: string, newKey: string): void {
-		if (!atom.config.get(`${name}.${oldKey}`) || atom.config.get(`${name}.${newKey}`)) {
-			return;
-		}
-
-		try {
-			atom.config.set(`${name}.${newKey}`, atom.config.get(`${name}.${oldKey}`));
-			// eslint-disable-next-line  @typescript-eslint/no-unused-vars
-		} catch (_error) {
-			atom.notifications.addWarning('Failed to migrate configuration, see console for details');
-
-			return;
-		}
-
-		atom.config.unset(`${name}.${oldKey}`);
+	wine: {
+		title: 'Wine',
+		type: 'object',
+		order: 4,
+		properties: {
+			runWithWine: {
+				title: 'Run with Wine',
+				description: 'Run `makensis` through [Wine](https://www.winehq.org/). Ignored on Windows.',
+				type: 'boolean',
+				default: false,
+				order: 1,
+			},
+			pathToWine: {
+				title: 'Path to Wine',
+				description:
+					'Path to the `wine` binary, useful for alternatives such as `wine32` or `wine64`. Leave empty to search your `PATH`.',
+				type: 'string',
+				default: 'wine',
+				order: 2,
+			},
+		},
 	},
-
-	unset(key = ''): void {
-		const unsetKey = key?.length ? `${name}.${key}` : name;
-
-		atom.config.unset(unsetKey);
+	diagnostics: {
+		title: 'Diagnostics',
+		type: 'object',
+		order: 5,
+		properties: {
+			enabledOnSave: {
+				title: 'Enabled on Save',
+				description: 'Run compiler diagnostics when a script is saved.',
+				type: 'boolean',
+				default: true,
+				order: 1,
+			},
+			preprocessMode: {
+				title: 'Preprocess Mode',
+				description: 'How the compiler is invoked for diagnostics.',
+				type: 'string',
+				default: 'ppo',
+				enum: [
+					{ value: 'ppo', description: 'Preprocess only' },
+					{ value: 'safe_ppo', description: 'Preprocess only, without executing instructions' },
+					{ value: 'none', description: 'Full compilation' },
+				],
+				order: 2,
+			},
+		},
 	},
-
-	async open(options = {}): Promise<void> {
-		const finalOptions = {
-			pending: true,
-			searchAllPanes: true,
-			...options,
-		};
-
-		await atom.workspace.open(`atom://config/packages/${name}`, finalOptions);
+	formatter: {
+		title: 'Formatter',
+		type: 'object',
+		order: 6,
+		properties: {
+			commentStyle: {
+				title: 'Comment Style',
+				description: 'Line comment style the formatter normalises to. Block comments are never rewritten.',
+				type: 'string',
+				default: '(preserve)',
+				enum: [
+					{ value: '(preserve)', description: 'Leave line comments as they are' },
+					{ value: 'hash', description: 'Rewrite `; comment` as `# comment`' },
+					{ value: 'semi', description: 'Rewrite `# comment` as `; comment`' },
+				],
+				order: 1,
+			},
+			endOfLine: {
+				title: 'End of Line',
+				description: 'End of line sequence for formatted output.',
+				type: 'string',
+				default: '(auto)',
+				enum: [
+					{ value: '(auto)', description: '(auto)' },
+					{ value: 'lf', description: 'LF' },
+					{ value: 'crlf', description: 'CRLF' },
+				],
+				order: 2,
+			},
+			printWidth: {
+				title: 'Print Width',
+				description: 'Line width before breaking with `\\` continuations. `0` disables wrapping.',
+				type: 'number',
+				default: 0,
+				minimum: 0,
+				order: 3,
+			},
+			singleQuote: {
+				title: 'Single Quote',
+				description: 'Prefer single quotes over double quotes.',
+				type: 'boolean',
+				default: false,
+				order: 4,
+			},
+			trimEmptyLines: {
+				title: 'Trim Empty Lines',
+				description: 'Collapse runs of blank lines.',
+				type: 'boolean',
+				default: true,
+				order: 5,
+			},
+		},
 	},
 };
+
+/**
+ * Reads one setting, with the schema default as the fallback for the case where
+ * a setting predates the user's `config.cson` — Pulsar returns `undefined` for
+ * a key it has never seen.
+ */
+export function getConfig<T>(key: string, fallback: T): T {
+	return (atom.config.get(`${PACKAGE_NAME}.${key}`) as T | undefined) ?? fallback;
+}
+
+export type Configuration = {
+	serverPath?: string;
+	makensis?: { path?: string };
+	diagnostics?: { enabledOnSave?: boolean; preprocessMode?: string };
+	formatter?: {
+		commentStyle?: string;
+		endOfLine?: string;
+		printWidth?: number;
+		singleQuote?: boolean;
+		trimEmptyLines?: boolean;
+	};
+};
+
+/**
+ * Maps the settings onto the server's `InitOptions`. Note the case change:
+ * Pulsar settings are camelCase, the server reads snake_case. The placeholder
+ * values `(auto)`, `(preserve)` and `none` become `null`, which is what the
+ * server treats as "leave it alone".
+ */
+export function mapConfiguration(configuration: Configuration): Record<string, unknown> {
+	const { diagnostics = {}, formatter = {}, makensis = {} } = configuration;
+
+	return {
+		diagnostics: {
+			enabled_on_save: diagnostics.enabledOnSave ?? true,
+			preprocess_mode: diagnostics.preprocessMode === 'none' ? null : (diagnostics.preprocessMode ?? 'ppo'),
+		},
+		formatter: {
+			comment_style: formatter.commentStyle === '(preserve)' ? null : (formatter.commentStyle ?? null),
+			end_of_line: formatter.endOfLine === '(auto)' ? null : (formatter.endOfLine ?? null),
+			print_width: formatter.printWidth ?? 0,
+			single_quote: formatter.singleQuote ?? false,
+			trim_empty_lines: formatter.trimEmptyLines ?? true,
+		},
+		makensis: {
+			path: makensis.path ?? '',
+		},
+	};
+}

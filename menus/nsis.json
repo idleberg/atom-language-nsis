@@ -7,23 +7,19 @@
 					"label": "NSIS",
 					"submenu": [
 						{
-							"label": "Compile script",
+							"label": "Compile Script",
 							"command": "NSIS:compile"
 						},
 						{
-							"label": "Compile script (strict)",
+							"label": "Compile Script (strict)",
 							"command": "NSIS:compile-strict"
-						},
-						{
-							"label": "Command Reference",
-							"command": "NSIS:command-reference"
 						},
 						{
 							"type": "separator"
 						},
 						{
-							"label": "Format Document",
-							"command": "NSIS:format-document"
+							"label": "Convert Language File",
+							"command": "NSIS:convert-language-file"
 						},
 						{
 							"type": "separator"
@@ -33,17 +29,13 @@
 							"command": "NSIS:open-package-settings"
 						},
 						{
-							"label": "Setup Package Dependencies",
-							"command": "NSIS:satisfy-package-dependencies"
-						},
-						{
 							"type": "separator"
 						},
 						{
 							"label": "Developer",
 							"submenu": [
 								{
-									"label": "Show NSIS Version",
+									"label": "Show Compiler Version",
 									"command": "NSIS:show-version"
 								},
 								{
@@ -56,5 +48,13 @@
 				}
 			]
 		}
-	]
+	],
+	"context-menu": {
+		"atom-text-editor[data-grammar='source nsis']": [
+			{
+				"label": "Compile Script",
+				"command": "NSIS:compile"
+			}
+		]
+	}
 }

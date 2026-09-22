@@ -1,0 +1,7 @@
+{
+	"name": "zadeh",
+	"version": "3.0.0-beta.4",
+	"description": "Pure-JS stand-in for zadeh, which ships no darwin-arm64 prebuild",
+	"license": "MIT",
+	"main": "index.js"
+}

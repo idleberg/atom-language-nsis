@@ -7,14 +7,12 @@
 	"main": "lib/main.cjs",
 	"types": "lib/main.d.cts",
 	"scripts": {
-		"build": "tsdown",
+		"build": "tsdown && node scripts/fetch-grammar.mjs",
 		"dev": "npm run build -- --watch",
-		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
-		"lint:biome": "biome check",
-		"lint:e18e": "e18e-cli analyze --log-level error",
+		"lint": "biome check",
 		"prepublishOnly": "npm run build",
 		"publish:ppm": "PPM_PUBLISH=1 ppm publish",
-		"test": "echo \"no tests yet\" && exit 0"
+		"test": "node scripts/smoke.mjs"
 	},
 	"author": {
 		"name": "Jan T. Sott",
@@ -37,112 +35,156 @@
 		"url": "https://github.com/idleberg/atom-language-nsis.git"
 	},
 	"engines": {
-		"atom": ">=1.52.0 <2.0.0",
-		"pulsar": ">=1.102.0 <2.0.0"
+		"pulsar": ">=1.131.0 <2.0.0"
 	},
 	"package-deps": [
-		{
-			"name": "browse",
-			"minimumVersion": "4.0.0"
-		},
-		{
-			"name": "busy-signal",
-			"minimumVersion": "2.0.0"
-		},
-		[
-			{
-				"name": "console",
-				"minimumVersion": "0.4.0"
-			},
-			{
-				"name": "console-panel"
-			}
-		],
-		{
-			"name": "atom-ide-hyperclick"
-		},
-		{
-			"name": "hyperclick-nsis",
-			"minimumVersion": "0.5.0"
-		},
 		{
 			"name": "linter",
 			"minimumVersion": "2.0.0"
 		},
 		{
-			"name": "linter-makensis",
-			"minimumVersion": "0.7.0"
-		},
-		{
 			"name": "linter-ui-default"
 		},
-		[
-			{
-				"name": "linter"
-			},
-			{
-				"name": "atom-ide-ui"
-			}
-		]
+		{
+			"name": "atom-ide-datatip"
+		},
+		{
+			"name": "atom-ide-definitions"
+		},
+		{
+			"name": "atom-ide-outline"
+		},
+		{
+			"name": "busy-signal",
+			"minimumVersion": "2.0.0"
+		},
+		{
+			"name": "console",
+			"minimumVersion": "0.7.0"
+		}
+	],
+	"activationHooks": [
+		"source.nsis:root-scope-used",
+		"source.nlf:root-scope-used"
 	],
 	"activationCommands": {
 		"atom-workspace": [
-			"NSIS:command-reference",
 			"NSIS:compile",
 			"NSIS:compile-strict",
 			"NSIS:convert-language-file",
 			"NSIS:open-package-settings",
-			"NSIS:satisfy-dependencies",
 			"NSIS:show-compiler-flags",
 			"NSIS:show-version"
 		]
 	},
-	"activationHooks": [
-		"language-nlf:grammar-used",
-		"language-nsis:grammar-used"
-	],
-	"consumedServices": {
-		"browse": {
+	"providedServices": {
+		"autocomplete.provider": {
 			"versions": {
-				"^2.0.0": "consumeBrowse"
+				"4.0.0": "provideAutocomplete"
 			}
 		},
-		"busy-signal": {
+		"code-actions": {
 			"versions": {
-				"1.0.0": "consumeSignal"
+				"0.1.0": "provideCodeActions"
+			}
+		},
+		"code-format.file": {
+			"versions": {
+				"0.1.0": "provideFileCodeFormat"
+			}
+		},
+		"code-format.onSave": {
+			"versions": {
+				"0.1.0": "provideOnSaveCodeFormat"
+			}
+		},
+		"code-format.range": {
+			"versions": {
+				"0.1.0": "provideRangeCodeFormat"
+			}
+		},
+		"definitions": {
+			"versions": {
+				"0.1.0": "provideDefinitions"
+			}
+		},
+		"find-references": {
+			"versions": {
+				"0.1.0": "provideFindReferences"
+			}
+		},
+		"outline-view": {
+			"versions": {
+				"0.1.0": "provideOutlines"
+			}
+		},
+		"refactor": {
+			"versions": {
+				"0.1.0": "provideRefactor"
+			}
+		}
+	},
+	"consumedServices": {
+		"atom-ide-busy-signal": {
+			"versions": {
+				"0.1.0": "consumeBusySignal"
 			}
 		},
 		"console": {
 			"versions": {
-				"^1.0.0": "consumeConsolePanel"
+				"0.1.0": "consumeConsole"
 			}
 		},
 		"console-panel": {
 			"versions": {
 				"^1.0.0": "consumeConsolePanel"
 			}
+		},
+		"datatip": {
+			"versions": {
+				"0.1.0": "consumeDatatip"
+			}
+		},
+		"linter-indie": {
+			"versions": {
+				"2.0.0": "consumeLinterV2"
+			}
+		},
+		"signature-help": {
+			"versions": {
+				"0.1.0": "consumeSignatureHelp"
+			}
 		}
 	},
 	"dependencies": {
-		"@nsis/dent": "^0.16.0",
+		"@nsis/lsp": "0.5.7",
 		"@nsis/nlf": "^0.14.2",
-		"makensis": "^3.0.6",
-		"which": "^6.0.1"
+		"atom-languageclient": "^1.16.1",
+		"makensis": "^3.0.3"
+	},
+	"optionalDependencies": {
+		"@nsis/lsp-darwin-arm64": "0.5.7",
+		"@nsis/lsp-darwin-x64": "0.5.7",
+		"@nsis/lsp-linux-arm64": "0.5.7",
+		"@nsis/lsp-linux-arm64-musl": "0.5.7",
+		"@nsis/lsp-linux-x64": "0.5.7",
+		"@nsis/lsp-linux-x64-musl": "0.5.7",
+		"@nsis/lsp-win32-arm64": "0.5.7",
+		"@nsis/lsp-win32-x64": "0.5.7"
 	},
 	"devDependencies": {
-		"@atxm/developer-console": "^0.6.1",
-		"@commitlint/cli": "^21.2.2",
-		"@commitlint/config-conventional": "^21.2.2",
-		"@idleberg/configs": "^0.4.6",
-		"@types/atom": "^1.40.18",
-		"@types/node": "^24.13.3",
-		"@types/which": "^3.0.4",
+		"@commitlint/cli": "^21.2.3",
+		"@commitlint/config-conventional": "^21.2.3",
+		"@idleberg/configs": "^0.4.2",
+		"@pulsar-edit/types": "^1.131.0",
+		"@types/node": "^26.6.2",
 		"atom-package-deps": "^8.0.0",
-		"atom-satisfy-dependencies": "^0.3.0",
-		"atom-select-list": "^0.8.1",
-		"concurrently": "^10.0.5",
-		"tsdown": "^0.22.14",
+		"tree-sitter-nsis": "0.4.1",
+		"tsdown": "^0.23.0",
 		"tslib": "^2.8.1",
-		"typescript": "^6.0.3"
+		"typescript": "^5.9.3"
+	},
+	"overrides": {
+		"zadeh": "file:./shims/zadeh"
 	}
 }

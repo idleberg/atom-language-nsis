@@ -1,3 +1,9 @@
+# v12.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v12.0.0)
+
+- integrate `nsis-lsp`
+- remove command reference lookup
+- update dependencies
+
 # v11.3.8 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v11.3.8)
 
 - add missing formatter config for `commentStyle`
