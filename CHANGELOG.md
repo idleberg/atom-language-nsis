@@ -1,3 +1,7 @@
+# v12.0.1 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v12.0.1)
+
+- bump `nsis-lsp` to v0.5.8
+
 # v12.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v12.0.0)
 
 - integrate `nsis-lsp`
