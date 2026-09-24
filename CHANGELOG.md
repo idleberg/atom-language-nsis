@@ -4,6 +4,7 @@
 
 # v12.0.0 [#](https://github.com/idleberg/atom-language-nsis/releases/tag/v12.0.0)
 
+- **Breaking Change:** drop Atom support, require `pulsar>=1.131.0`
 - integrate `nsis-lsp`
 - remove command reference lookup
 - update dependencies
