@@ -1,4 +1,4 @@
-# atom-language-nsis
+# language-nsis
 
 [![License](https://img.shields.io/github/license/idleberg/atom-language-nsis?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/idleberg/atom-language-nsis?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/releases)
@@ -55,12 +55,6 @@ You can further extend this package with snippets for
 [third-party plug-ins](https://web.pulsar-edit.dev/packages/nsis-plugins).
 
 ## Installation
-
-> [!NOTE]
->
-> The following guide assumes that you're by now using Pulsar, a
-> community-driven fork of the Atom editor. Should you still be using Atom, use
-> `apm` command instead of `ppm`.
 
 ### Package Manager
 
