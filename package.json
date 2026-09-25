@@ -157,20 +157,20 @@
 		}
 	},
 	"dependencies": {
-		"@nsis/lsp": "0.5.8",
+		"@nsis/lsp": "0.5.9",
 		"@nsis/nlf": "^0.14.2",
 		"atom-languageclient": "^1.16.1",
 		"makensis": "^3.0.3"
 	},
 	"optionalDependencies": {
-		"@nsis/lsp-darwin-arm64": "0.5.8",
-		"@nsis/lsp-darwin-x64": "0.5.8",
-		"@nsis/lsp-linux-arm64": "0.5.8",
-		"@nsis/lsp-linux-arm64-musl": "0.5.8",
-		"@nsis/lsp-linux-x64": "0.5.8",
-		"@nsis/lsp-linux-x64-musl": "0.5.8",
-		"@nsis/lsp-win32-arm64": "0.5.8",
-		"@nsis/lsp-win32-x64": "0.5.8"
+		"@nsis/lsp-darwin-arm64": "0.5.9",
+		"@nsis/lsp-darwin-x64": "0.5.9",
+		"@nsis/lsp-linux-arm64": "0.5.9",
+		"@nsis/lsp-linux-arm64-musl": "0.5.9",
+		"@nsis/lsp-linux-x64": "0.5.9",
+		"@nsis/lsp-linux-x64-musl": "0.5.9",
+		"@nsis/lsp-win32-arm64": "0.5.9",
+		"@nsis/lsp-win32-x64": "0.5.9"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^21.2.3",
