@@ -1,7 +1,7 @@
 {
 	"fileTypes": ["nlf"],
 	"name": "NSIS Language File",
-	"comment": "https://github.com/idleberg/atom-language-nsis",
+	"comment": "https://github.com/idleberg/pulsar-language-nsis",
 	"patterns": [
 		{
 			"match": "^\\s*#.*$\\n?",

@@ -1,9 +1,9 @@
 # language-nsis
 
-[![License](https://img.shields.io/github/license/idleberg/atom-language-nsis?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/blob/master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/idleberg/atom-language-nsis?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/releases)
+[![License](https://img.shields.io/github/license/idleberg/atom-language-nsis?color=blue&style=for-the-badge)](https://github.com/idleberg/pulsar-language-nsis/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/idleberg/atom-language-nsis?style=for-the-badge)](https://github.com/idleberg/pulsar-language-nsis/releases)
 [![Downloads](https://img.shields.io/pulsar/dt/language-nsis?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/language-nsis)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-language-nsis/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsis/default.yml?style=for-the-badge)](https://github.com/idleberg/pulsar-language-nsis/actions)
 
 Language syntax, auto-completions, formatter and build system for Nullsoft Scriptable
 Install System (NSIS), as well as language syntax for NSIS Language Files.
@@ -91,7 +91,7 @@ $ cd ~/.pulsar/packages/
 Clone repository as `language-nsis`:
 
 ```bash
-$ git clone https://github.com/idleberg/atom-language-nsis language-nsis
+$ git clone https://github.com/idleberg/pulsar-language-nsis language-nsis
 ```
 
 Inside the cloned directory, install its dependencies:
